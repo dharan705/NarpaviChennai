@@ -2,16 +2,6 @@ $primary-color: #1c3879;
 $accent-color: #2a9d8f;
 $background-color: #f9fafc;
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: $background-color;
-}
-
 .EEEProjectDevelopmentCenter {
   display: flex;
   min-height: 100vh;
@@ -72,12 +62,6 @@ body {
     gap: 2rem;
     align-items: start;
     max-width: 1600px;
-
-    @media (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-left: 0;
-    }
   }
 
   .EEEProjectDevelopmentCenter-left {
@@ -103,11 +87,6 @@ body {
         margin-bottom: 0.5rem;
         color: $primary-color;
       }
-    }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      position: static;
     }
   }
 
@@ -143,11 +122,6 @@ body {
           }
         }
       }
-    }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      position: static;
     }
   }
 
@@ -229,51 +203,97 @@ body {
     }
   }
 
-  @media (max-width: 1024px) {
-    .EEEProjectDevelopmentCenter-main {
-      margin-left: 0;
+  @media (max-width: 1200px) {
+    .EEEProjectDevelopmentCenter-grid {
+      grid-template-columns: 1fr 2fr;
+      gap: 1.5rem;
+    }
+
+    .EEEProjectDevelopmentCenter-right {
+      display: none; 
+    }
+  }
+
+  @media (max-width: 992px) {
+    margin-left: 0;
+
+    .EEEProjectDevelopmentCenter-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .EEEProjectDevelopmentCenter-left,
+    .EEEProjectDevelopmentCenter-right {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      position: static; 
+    }
+
+    .EEEProjectDevelopmentCenter-right {
+      display: block; 
+    }
+
+    .EEEProjectDevelopmentCenter-center {
+      padding: 1.5rem;
     }
   }
 
   @media (max-width: 768px) {
-    .EEEProjectDevelopmentCenter {
-      flex-direction: column;
-      padding-left: 0;
-      padding-top: 0;
+    padding: 1rem;
+    margin-left: 2rem;
+
+    h1 {
+      font-size: 2rem;
     }
 
-    .EEEProjectDevelopmentCenter-main {
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    .EEEProjectDevelopmentCenter-left,
+    .EEEProjectDevelopmentCenter-right {
       padding: 1rem;
-      margin-left: 0;
-      width: 100%;
+      margin-left: 2rem;
+      //margin-top: 4rem;
+    }
 
-      h1 {
-        font-size: 1.8rem;
-      }
+    .EEEProjectDevelopmentCenter-center {
+      //width: 69%;
+      //margin-left: -4rem;
+      padding: 1.25rem;
+    }
+  }
 
-      h2 {
-        font-size: 1.4rem;
-      }
+  @media (max-width: 480px) {
 
-      h3 {
-        font-size: 1.2rem;
-      }
-
+    .EEEProjectDevelopmentCenter-left,
+    .EEEProjectDevelopmentCenter-right {
+      padding: 1rem;
+      margin-left: -2rem;
+      margin-top: 2rem;
+    }
       .EEEProjectDevelopmentCenter-center {
-        padding: 1rem;
-      }
+      width: 69%;
+      margin-left: -4rem;
+      padding: 1.25rem;
+    }
+    padding: 0.75rem;
 
-      .EEEProjectDevelopmentCenter-table-container {
-        table {
-          font-size: 0.8rem;
-          min-width: auto;
+    h1 {
+      font-size: 1.8rem;
+    }
 
-          th, td {
-            padding: 0.5rem;
-            word-wrap: break-word;
-            max-width: 150px;
-          }
-        }
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .EEEProjectDevelopmentCenter-table-container {
+      padding: 0.5rem;
+
+      th, td {
+        padding: 0.5rem;
+        font-size: 0.85rem;
       }
     }
   }

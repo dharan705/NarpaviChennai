@@ -1,4 +1,5 @@
 import './Phdservices.scss';
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is an SCI-indexed journal?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const SciPaperService = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="sci-service-container">
       <h2 className="sci-service-title">SCI / Annexture Paper Writing Services Help</h2>
       <p className="sci-service-intro">
@@ -95,6 +98,7 @@ const SciPaperService = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

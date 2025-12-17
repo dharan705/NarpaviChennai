@@ -17,9 +17,8 @@ body {
   min-height: 100vh;
   padding-top: 80px;
   width: 100%;
+  text-align: justify;
 }
-
- 
 
 .CEProjectDevelopmentCenter-main {
   padding: 2rem;
@@ -74,12 +73,7 @@ body {
     gap: 2rem;
     align-items: start;
     max-width: 1600px;
-
-    @media (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-      margin-left: 0;
-    }
+    margin: 0 auto; // Centers the grid on large screens
   }
 
   .CEProjectDevelopmentCenter-left {
@@ -105,11 +99,6 @@ body {
         margin-bottom: 0.5rem;
         color: $primary-color;
       }
-    }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      position: static;
     }
   }
 
@@ -145,11 +134,6 @@ body {
           }
         }
       }
-    }
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      position: static;
     }
   }
 
@@ -231,52 +215,132 @@ body {
     }
   }
 
+  /* ===============================
+     RESPONSIVE MEDIA QUERIES
+  ================================= */
+
+  @media (max-width: 1200px) {
+    margin-left: 80px;
+
+    .CEProjectDevelopmentCenter-grid {
+      gap: 1.5rem;
+    }
+
+    .CEProjectDevelopmentCenter-left,
+    .CEProjectDevelopmentCenter-right {
+      width: 260px;
+    }
+  }
+
   @media (max-width: 1024px) {
-    .CEProjectDevelopmentCenter-main {
-      margin-left: 0;
+    margin-left: 0;
+    padding: 1.5rem;
+
+    .CEProjectDevelopmentCenter-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .CEProjectDevelopmentCenter-left,
+    .CEProjectDevelopmentCenter-right {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      position: static;
+      top: auto;
+    }
+
+    .CEProjectDevelopmentCenter-center {
+      padding: 1.5rem;
     }
   }
 
   @media (max-width: 768px) {
-    .CEProjectDevelopmentCenter {
-      flex-direction: column;
-      padding-left: 0;
-      padding-top: 0;
+    padding: 1rem;
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
     }
 
-    
-    .CEProjectDevelopmentCenter-main {
-      padding: 1rem;
-      margin-left: 0;
-      width: 100%;
+    h2 {
+      font-size: 1.6rem;
+    }
 
-      h1 {
-        font-size: 1.8rem;
-      }
+    h3 {
+      font-size: 1.25rem;
+    }
 
-      h2 {
-        font-size: 1.4rem;
-      }
+    .CEProjectDevelopmentCenter-left,
+    .CEProjectDevelopmentCenter-right {
+      padding: 1.25rem;
+      margin-left: 2rem;
+      font-size: 1rem;
+    }
 
-      h3 {
-        font-size: 1.2rem;
-      }
+    .CEProjectDevelopmentCenter-center {
+      width: 95%;
+      margin-left: 2.5rem;
+      padding: 1.25rem;
+     p{
+        font-size: 1rem;
+     }
+    }
 
-      .CEProjectDevelopmentCenter-center {
-        padding: 1rem;
-      }
+    .CEProjectDevelopmentCenter-table-container {
+      padding: 0.75rem;
 
-      .CEProjectDevelopmentCenter-table-container {
-        table {
-          font-size: 0.8rem;
-          min-width: auto;
+      table {
+        font-size: 0.9rem;
+        min-width: 600px; 
 
-          th, td {
-            padding: 0.5rem;
-            word-wrap: break-word;
-            max-width: 150px;
-          }
+        th, td {
+          padding: 0.6rem;
         }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.75rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .CEProjectDevelopmentCenter-table-container {
+      padding: 0.5rem;
+
+      table {
+        font-size: 0.85rem;
+        min-width: 500px;
+
+        th, td {
+          padding: 0.5rem;
+        }
+      }
+    }
+
+    .CEProjectDevelopmentCenter-left,
+    .CEProjectDevelopmentCenter-right{
+      padding: 1rem;
+      margin-left: -2rem;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+    .CEProjectDevelopmentCenter-center {
+      width: 69%;
+      margin-left: -2rem;
+      padding: 1.25rem;
+      h1{
+        font-size: 1.3rem;
+      }
+      p{
+        font-size: 0.9rem;
       }
     }
   }

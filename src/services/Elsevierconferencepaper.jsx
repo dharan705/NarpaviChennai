@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "Does Elsevier publish conference papers?",
@@ -25,6 +25,8 @@ const faqs = [
 
 const ElsevierConferencePublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h2 className="title">Elsevier Conference Paper Publication Services</h2>
       <p>
@@ -81,6 +83,7 @@ const ElsevierConferencePublication = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

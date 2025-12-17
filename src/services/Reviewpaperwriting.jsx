@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is a review paper in academic research?",
@@ -25,6 +25,8 @@ const faqs = [
 
 const ReviewPaper = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
        <h2 className="title">Review Paper Writing Services Help</h2>
       <p>
@@ -101,6 +103,7 @@ const ReviewPaper = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

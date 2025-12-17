@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is a Scopus-indexed journal?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const ConferenceWritingGuide = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="conference-container">
       <h2 className="conference-title">
         Writing a Paper for Scopus-Indexed Journals
@@ -135,6 +138,7 @@ const ConferenceWritingGuide = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

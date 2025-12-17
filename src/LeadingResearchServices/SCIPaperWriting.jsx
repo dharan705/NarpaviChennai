@@ -1,6 +1,7 @@
 import React from "react";
 import "./SCIPaperWriting.scss";
 import { CheckCircle, BookOpenCheck, Brain, ClipboardCheck, FileEdit } from "lucide-react";
+import Subsidebar from "../pages/Subsidebar";
 
 const faqs = [
   {
@@ -33,6 +34,8 @@ const faqs = [
 const SCIPaperWriting = () => {
   return (
     <section className="sci-writing">
+      <Subsidebar />
+      <div className="sci-layout">
       <div className="container">
         <h2>📘 SCI Journal Paper Writing</h2>
         <p className="intro">
@@ -126,12 +129,19 @@ CopyEdit
           <li><ClipboardCheck size={20} /> 94% acceptance in first 2 submissions</li>
           <li><FileEdit size={20} /> 45+ research domains handled</li>
         </ul>
-
-        <div className="cta-box">
-          <h4>🖋️ Let Narpavi lead your research to global recognition through elite SCI Journal Paper Writing.</h4>
-          <a href="#" className="cta-button">📩 Get Started Now</a>
-        </div>
       </div>
+      <aside className="right-sidebar">
+          <h4>📌 SCI Writing Guides</h4>
+          <ul className="relative-services">
+            <li><a href="/sci-journal-paper-writing/sci-writing-guide">SCI Writing Guide</a></li>
+            <li><a href="/sci-journal-paper-writing/trending-engineering-topics-for-scopus">Trending Engineering Topics</a></li>
+            <li><a href="/sci-journal-paper-writing/novelty-in-engineering">Novelty in Engineering</a></li>
+            <li><a href="/sci-journal-paper-writing/sci-vs-scopus">SCI vs Scopus</a></li>
+            <li><a href="/sci-journal-paper-writing/sci-benefits">Benefits of SCI Journals</a></li>
+            <li><a href="/sci-journal-paper-writing/sci-journal-selection">SCI Journal Selection</a></li>
+          </ul>
+        </aside>
+</div>
         <section className="faq-section">
         <h2>FAQs on Topic Selection</h2>
         <div className="faq-items">
@@ -156,7 +166,9 @@ CopyEdit
             }))
           })}
         </script>
+        
           </section>
+          
     </section>
   );
 };

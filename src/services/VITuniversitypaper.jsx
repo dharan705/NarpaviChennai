@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "Which indexing databases are accepted by VIT for PhD publications?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const VitPublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <section className="phd-guidance-container">
       <h1 className="title">VIT University Paper Publication Services</h1>
 
@@ -107,6 +110,7 @@ const VitPublication = () => {
   />
 </section>
     </section>
+    </div>
   );
 };
 

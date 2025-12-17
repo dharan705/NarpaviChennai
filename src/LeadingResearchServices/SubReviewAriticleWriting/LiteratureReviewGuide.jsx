@@ -129,15 +129,16 @@ const LiteratureReviewGuide = () => {
 
       {/* Right Sidebar */}
       <aside className="right-sidebar">
-        <h3>Related Services</h3>
-        <ul>
-          <li><a href="#">Research Gap Identification</a></li>
-          <li><a href="#">Journal Paper Drafting</a></li>
-          <li><a href="#">Thesis Literature Review</a></li>
-          <li><a href="#">Turnitin Checking</a></li>
-        </ul>
-
-        
+       <h4>📌 Related Review Services Link</h4>
+          <ul >
+            <li><a href="/review-article-writing">Review Article Writing</a></li>
+            <li><a href="/review-ariticle-writing/engineering-literature-guide">Engineering Literature Guide</a></li>
+            <li><a href="/review-ariticle-writing/medical-review-writing">Medical Review Writing</a></li>
+            <li><a href="/review-ariticle-writing/literature-review-guide">Literature Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/sci-review-guide">SCI Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/scopus-review-guide">Scopus Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/systematic-review-guide">Systematic Review Guide</a></li>
+          </ul>        
       </aside>
     </div>
   );

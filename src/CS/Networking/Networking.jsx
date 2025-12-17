@@ -1,7 +1,6 @@
 import "./Networking.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 
-
 const faqs = [
   {
     question: "What services does the Networking Project Development Center offer?",

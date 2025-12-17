@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What kind of journals should I target for my PhD publication?",
@@ -29,6 +30,8 @@ const faqs = [
 
 const ResearchPublicationHelp = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h1 className="title">Research Paper Publication Help / Services</h1>
       <p>
@@ -80,6 +83,7 @@ const ResearchPublicationHelp = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

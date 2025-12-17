@@ -1,4 +1,6 @@
+import { div } from "framer-motion/client";
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is a conference paper writing service?",
@@ -24,6 +26,8 @@ const faqs = [
 
 const ConferencePaper = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <p>
         Conference paper writing services are professional services that assist
@@ -144,6 +148,7 @@ const ConferencePaper = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

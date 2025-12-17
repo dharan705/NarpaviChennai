@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "How do I find Springer-affiliated conferences?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const SpringerConferencePublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <section className="phd-guidance-container">
       <h1 className="title">Springer Conference Paper Publication Services</h1>
 
@@ -109,6 +112,7 @@ const SpringerConferencePublication = () => {
   />
 </section>
     </section>
+    </div>
   );
 };
 

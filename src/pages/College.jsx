@@ -15,6 +15,7 @@ const College1 = [
     description: 'Explore now',
     link: '/mgr-institute',
   },
+  
   {
     title: 'Vels Institute of Science, Technology & Advanced Studies (VISTAS)',
     description: 'Visit page',

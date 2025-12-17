@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./LeadingResearchServices.scss";
 import {
@@ -8,7 +7,6 @@ import {
   BarChart3,
 } from "lucide-react";
 
-
 const services = [
   {
     icon: <FileText size={30} strokeWidth={1.8} />,
@@ -16,7 +14,7 @@ const services = [
     description:
       "Craft high-impact IEEE papers with technical precision and reviewer-ready formatting.",
     cta: "Read More",
-    link: "/leading-research-services/ieee-conference-paper-writing ",
+    link: "/ieee-conference-paper-writing ",
   },
   {
     icon: <Microscope size={30} strokeWidth={1.8} />,
@@ -24,7 +22,7 @@ const services = [
     description:
       "Scientific and technical articles tailored for high-impact SCI-indexed journals.",
     cta: "Read More",
-    link: "/leading-research-services/sci-journal-paper-writing",
+    link: "/sci-journal-paper-writing",
   },
   {
     icon: <Globe size={30} strokeWidth={1.8} />,
@@ -32,7 +30,7 @@ const services = [
     description:
       "Customized manuscripts that meet Scopus standards with proper referencing and formatting.",
     cta: "Read More",
-    link: "/leading-research-services/scopus-journal-paper-writing",
+    link: "/scopus-journal-paper-writing",
   },
   {
     icon: <BarChart3 size={30} strokeWidth={1.8} />,
@@ -40,7 +38,7 @@ const services = [
     description:
       "Well-structured, literature-rich review articles showing domain expertise and scholarly depth.",
     cta: "Read More",
-    link: "/leading-research-services/review-article-writing",
+    link: "/review-article-writing",
   },
 ];
 

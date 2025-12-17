@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is an international conference paper?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const InternationalConferencePublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h2 className="title">International Conference Paper Publication Services</h2>
       <p>
@@ -74,6 +77,7 @@ const InternationalConferencePublication = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

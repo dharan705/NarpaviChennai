@@ -21,7 +21,7 @@ body {
 
 .ImageProcessingProjectDevelopmentCenter-main {
   padding: 2rem;
-  background-color: #f9fafc;
+  background-color: $background-color;
   color: #222;
   flex: 1;
 
@@ -70,14 +70,10 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
     gap: 2rem;
     margin-top: 2rem;
-    margin-left: 130px;
     align-items: start;
     max-width: 1600px;
-
-    @media (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .ImageProcessingProjectDevelopmentCenter-left {
@@ -159,7 +155,6 @@ body {
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 600px;
 
       thead {
         background-color: $primary-color;
@@ -171,6 +166,7 @@ body {
         padding: 0.75rem;
         text-align: center;
         font-size: 0.95rem;
+        word-wrap: break-word;
       }
 
       td:first-child {
@@ -206,42 +202,120 @@ body {
     }
   }
 
+  /* ===============================
+     RESPONSIVE MEDIA QUERIES
+  ================================= */
+
+  @media (max-width: 1200px) {
+    .ImageProcessingProjectDevelopmentCenter-grid {
+      gap: 1.5rem;
+    }
+
+    .ImageProcessingProjectDevelopmentCenter-left,
+    .ImageProcessingProjectDevelopmentCenter-right {
+      width: 260px;
+    }
+  }
+
   @media (max-width: 1024px) {
+    padding: 1.5rem;
+
+    .ImageProcessingProjectDevelopmentCenter-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 0;
+    }
+
     .ImageProcessingProjectDevelopmentCenter-left,
     .ImageProcessingProjectDevelopmentCenter-right {
       width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
       position: static;
+      top: auto;
+    }
+
+    .ImageProcessingProjectDevelopmentCenter-center {
+      padding: 1.5rem;
     }
   }
 
   @media (max-width: 768px) {
-    .ImageProcessingProjectDevelopmentCenter {
-      flex-direction: column;
-      padding-left: 0;
-      padding-top: 0;
+    padding: 1rem;
+
+    h1 {
+      font-size: 2.1rem;
+      text-align: center;
     }
 
-    .ImageProcessingProjectDevelopmentCenter-main {
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .ImageProcessingProjectDevelopmentCenter-left,
+    .ImageProcessingProjectDevelopmentCenter-right {
       padding: 1rem;
-      margin-left: 0;
-      width: 100%;
+      margin-left: 2rem;
+    }
 
-      h1 {
-        font-size: 2rem;
+    .ImageProcessingProjectDevelopmentCenter-center {
+      padding: 1.25rem;
+      width: 95%;
+      margin-left: 2.5rem;
+    }
+
+    .ImageProcessingProjectDevelopmentCenter-table-container {
+      padding: 0.75rem;
+
+      table {
+        font-size: 0.9rem;
+        min-width: 600px; // Horizontal scroll on small screens
+
+        th, td {
+          padding: 0.6rem;
+        }
       }
+    }
+  }
 
-      h2 {
-        font-size: 1.5rem;
-      }
+  @media (max-width: 480px) {
+    padding: 0.75rem;
 
-      .ImageProcessingProjectDevelopmentCenter-center {
-        padding: 1rem;
-      }
+    h1 {
+      font-size: 1.9rem;
+    }
 
-      .ImageProcessingProjectDevelopmentCenter-table-container table {
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .ImageProcessingProjectDevelopmentCenter-table-container {
+      padding: 0.5rem;
+
+      table {
         font-size: 0.85rem;
-        min-width: 100%;
+        min-width: 500px;
+
+        th, td {
+          padding: 0.5rem;
+        }
       }
+    }
+
+    .ImageProcessingProjectDevelopmentCenter-left,
+    .ImageProcessingProjectDevelopmentCenter-right{
+        padding: 1rem;
+      margin-left: -2rem;
+      margin-top: 2rem;
+    }
+    .ImageProcessingProjectDevelopmentCenter-center {
+      width: 72%;
+      margin-left: -2rem;
+      padding: 1.25rem;
     }
   }
 }

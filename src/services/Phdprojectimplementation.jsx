@@ -34,6 +34,8 @@ const faqs = [
 
 const PhdProjectImplementation = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h2 className="title">PhD Project Implementation Services Help</h2>
       <p>
@@ -149,6 +151,7 @@ const PhdProjectImplementation = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

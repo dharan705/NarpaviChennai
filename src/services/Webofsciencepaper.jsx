@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
     {
       question: "What is Web of Science?",
@@ -29,6 +30,8 @@ const faqs = [
 
 const WebOfSciencePublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <section className="phd-guidance-container">
       <h1 className="title">Web of Science Paper Publication Services</h1>
 
@@ -117,6 +120,7 @@ const WebOfSciencePublication = () => {
   />
 </section>
     </section>
+    </div>
   );
 };
 

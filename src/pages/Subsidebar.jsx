@@ -9,7 +9,7 @@ const navItems = [
   { id: '2', label: 'PhD Topic Selection', path: '/phd-topic-selection' },
   { id: '3', label: 'PhD Application', path: '/phd-application' },
   { id: '4', label: 'Proposal', path: '/phd-proposal' },
-  { id: '5', label: 'University Selection', path: '/universi  ty-selection' },
+  { id: '5', label: 'University Selection', path: '/university-selection' },
 ];
 
 const Subsidebar = () => {

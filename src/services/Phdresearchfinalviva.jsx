@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is the purpose of a PhD viva?",
@@ -34,6 +35,8 @@ const faqs = [
 
 const PhdVivaHelp = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <section className="phd-guidance-container">
       <h1 className="title">
         PhD Research Final Viva Preparation Help Services
@@ -113,6 +116,7 @@ const PhdVivaHelp = () => {
   />
 </section>
     </section>
+    </div>
   );
 };
 

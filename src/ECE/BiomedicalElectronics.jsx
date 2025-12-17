@@ -34,7 +34,21 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
         <div className="ECEProjectDevelopmentCenter-grid">
           {/* Left: Keywords */}
           <div className="ECEProjectDevelopmentCenter-left">
-            
+             <h3>🔑 Keywords</h3>
+            <ul>
+              <li>Biomedical Electronics Project Development</li>
+              <li>IEEE Biomedical Projects</li>
+              <li>ECG Signal Processing Projects</li>
+              <li>EEG BCI Development</li>
+              <li>Wearable Health Monitoring</li>
+              <li>Medical Imaging Projects</li>
+              <li>IoT Healthcare Devices</li>
+              <li>AI in Biomedical Engineering</li>
+              <li>B.Tech Biomedical Projects</li>
+              <li>M.Tech Biomedical Projects</li>
+              <li>Ph.D. Biomedical Research Support</li>
+              <li>Narpavi Research Institute</li>
+            </ul> 
           </div>
 
           {/* Center: Main Content */}
@@ -263,22 +277,7 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
                   <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
                   <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
                 </ul>
-                
-                <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Biomedical Electronics Project Development</li>
-              <li>IEEE Biomedical Projects</li>
-              <li>ECG Signal Processing Projects</li>
-              <li>EEG BCI Development</li>
-              <li>Wearable Health Monitoring</li>
-              <li>Medical Imaging Projects</li>
-              <li>IoT Healthcare Devices</li>
-              <li>AI in Biomedical Engineering</li>
-              <li>B.Tech Biomedical Projects</li>
-              <li>M.Tech Biomedical Projects</li>
-              <li>Ph.D. Biomedical Research Support</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
+            
           </div>
         </div>
       </div>

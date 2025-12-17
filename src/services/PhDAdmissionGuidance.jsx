@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is PhD admission guidance?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const PhDAdmissionGuidance= () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
         <h1 className="title">PhD Admission Guidance Help & Services</h1>
       <p>
@@ -111,6 +114,7 @@ const PhDAdmissionGuidance= () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

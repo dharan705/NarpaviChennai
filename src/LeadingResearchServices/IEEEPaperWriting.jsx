@@ -1,10 +1,12 @@
 import React from "react";
 import "./IEEEPaperWriting.scss";
 import { CheckCircle, FileText, SlidersHorizontal, Presentation, UserCheck } from "lucide-react";
+import Subsiderbar from ".././pages/Subsidebar"
 
 const IEEEPaperWriting = () => {
   return (
     <section className="ieee-paper">
+      <Subsiderbar />
       <div className="container">
         <h2>📘 IEEE Conference Paper Writing</h2>
         <p className="intro">
@@ -123,12 +125,6 @@ const IEEEPaperWriting = () => {
             “From title to PPT – everything was perfectly done. Thanks to your IEEE Paper Writing team!”
             <footer>— S. Manikandan, Final Year M.Tech</footer>
           </blockquote>
-        </div>
-
-        <div className="cta-box">
-          <h4>🚀 Let’s Write Your IEEE Conference Paper</h4>
-          <p>Stand out in top IEEE events with professionally written, reviewed, and formatted papers.</p>
-          <a href="#" className="cta-button">📩 Get IEEE Paper Help</a>
         </div>
       </div>
     </section>

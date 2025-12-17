@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What are IEEE Conference Paper Publication Services?",
@@ -25,6 +26,8 @@ const faqs = [
 
 const IEEEConferencePublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h2 className="title">IEEE Conference Paper Publication Services</h2>
       <p>
@@ -87,6 +90,7 @@ const IEEEConferencePublication = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

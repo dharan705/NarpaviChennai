@@ -1,181 +1,192 @@
 import React from "react";
 import "./ReviewArticleWriting.scss";
 import { BookOpen, ListChecks, CheckCircle2, FileText } from "lucide-react";
+import Subsidebar from "../pages/Subsidebar";
 
 const faqs = [
   {
     question: "What is a Review Article?",
     answer:
-      "A review article summarizes and synthesizes previous research on a topic, offering critical insights, gaps, and future directions. It doesn't involve new experiments or data collection.",
+      "A review article summarizes and synthesizes previous research on a topic, offering critical insights, gaps, and future directions.",
   },
   {
     question: "How is a review article different from a research article?",
     answer:
-      "Review articles provide an overview of existing research, while research articles present original experimental results or findings from new studies.",
+      "Review articles analyze existing studies, while research articles present original experimental results.",
   },
   {
-    question: "How many references are typically included in a review article?",
+    question: "How many references are included?",
     answer:
-      "Our review articles include 50–150+ citations from reputed sources like PubMed, Scopus, and Web of Science to ensure academic depth and credibility.",
+      "Typically 50–150+ citations from reputed databases such as Scopus, PubMed, and Web of Science.",
   },
   {
-    question: "Can I choose my preferred journal formatting style?",
+    question: "Do you follow journal formats?",
     answer:
-      "Yes. We support various styles such as APA, IEEE, Elsevier, and Springer. Just let us know your target journal, and we’ll format accordingly.",
+      "Yes, APA, IEEE, Elsevier, Springer, and journal-specific formats are supported.",
   },
   {
-    question: "How long does it take to complete a review article?",
+    question: "What is the delivery time?",
     answer:
-      "It usually takes 7–10 working days, depending on the topic complexity and literature availability.",
+      "Usually 7–10 working days depending on topic complexity.",
   },
 ];
 
 const ReviewArticleWriting = () => {
   return (
     <section className="review-article">
-      <div className="container">
-        <h2>📖 Review Article Writing</h2>
-        <p className="intro">
-          At <strong>Narpavi Research Institute</strong>, we specialize in <strong>Review Article Writing</strong> that meets the highest academic and publishing standards. Whether you're submitting to Scopus, SCI, or IEEE-indexed journals, our review articles are crafted with depth, extensive literature, and critical analysis.
-        </p>
+      <Subsidebar />
 
-        <div className="features-grid">
-          <div className="feature-card">
-            <BookOpen size={28} />
-            <h4>📚 Literature-Rich Content</h4>
-            <p>Includes 50+ citations from PubMed, Scopus, Web of Science, and other top databases.</p>
+      {/* GRID LAYOUT */}
+      <div className="review-layout">
+        {/* MAIN CONTENT */}
+        <div className="container">
+          <h2>📖 Review Article Writing</h2>
+
+          <p className="intro">
+            At <strong>Narpavi Research Institute</strong>, we specialize in
+            <strong> Review Article Writing</strong> for Scopus, SCI, IEEE, and
+            Springer-indexed journals with deep analysis and extensive citations.
+          </p>
+
+          {/* FEATURES */}
+          <div className="features-grid">
+            <div className="feature-card">
+              <BookOpen size={28} />
+              <h4>📚 Literature-Rich Content</h4>
+              <p>50+ citations from reputed academic databases.</p>
+            </div>
+
+            <div className="feature-card">
+              <ListChecks size={28} />
+              <h4>🧠 Domain-Centric Analysis</h4>
+              <p>Prepared by subject-matter experts.</p>
+            </div>
+
+            <div className="feature-card">
+              <CheckCircle2 size={28} />
+              <h4>🧾 Publication Ready</h4>
+              <p>Formatted as per journal guidelines.</p>
+            </div>
+
+            <div className="feature-card">
+              <FileText size={28} />
+              <h4>✍️ End-to-End Support</h4>
+              <p>From topic selection to submission.</p>
+            </div>
           </div>
-          <div className="feature-card">
-            <ListChecks size={28} />
-            <h4>🧠 Domain-Centric Analysis</h4>
-            <p>Domain-specific experts ensure accuracy and scholarly insight.</p>
+
+          {/* COMPARISON TABLE */}
+          <h3>🔍 Review vs Research Article</h3>
+          <div className="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Review Article</th>
+                  <th>Research Article</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Purpose</td>
+                  <td>Summarize existing research</td>
+                  <td>Present new findings</td>
+                </tr>
+                <tr>
+                  <td>References</td>
+                  <td>50–150+</td>
+                  <td>Limited</td>
+                </tr>
+                <tr>
+                  <td>Data</td>
+                  <td>Secondary</td>
+                  <td>Primary</td>
+                </tr>
+                <tr>
+                  <td>Timeline</td>
+                  <td>7–10 days</td>
+                  <td>10–15 days</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div className="feature-card">
-            <CheckCircle2 size={28} />
-            <h4>🧾 Publication-Ready Formatting</h4>
-            <p>Articles comply with APA, IEEE, Elsevier, and other journal formats.</p>
-          </div>
-          <div className="feature-card">
-            <FileText size={28} />
-            <h4>✍️ Customized Writing Support</h4>
-            <p>From ideation to final draft, we support every phase of your article.</p>
+
+        <h3>🔧 Review Article Writing Workflow</h3>
+
+<div className="architecture-steps">
+  <div className="step">
+    <span className="step-number">1</span>
+    <p>Topic Selection</p>
+  </div>
+
+  <div className="step">
+    <span className="step-number">2</span>
+    <p>Literature Collection (Scopus, PubMed, Web of Science)</p>
+  </div>
+
+  <div className="step">
+    <span className="step-number">3</span>
+    <p>Theme-Based Organization</p>
+  </div>
+
+  <div className="step">
+    <span className="step-number">4</span>
+    <p>Critical Analysis & Research Gap Identification</p>
+  </div>
+
+  <div className="step">
+    <span className="step-number">5</span>
+    <p>Structured Drafting</p>
+  </div>
+
+  <div className="step">
+    <span className="step-number">6</span>
+    <p>Plagiarism Check & Quality Assurance</p>
+  </div>
+
+  <div className="step">
+    <span className="step-number">7</span>
+    <p>Journal Formatting & Submission Support</p>
+  </div>
+</div>
+
+
+          {/* HIGHLIGHTS */}
+          <div className="highlights">
+            <h3>✅ Service Highlights</h3>
+            <ul>
+              <li>SEO-optimized academic content</li>
+              <li>100% plagiarism-free</li>
+              <li>Unlimited revisions</li>
+              <li>Engineering & Medical domains</li>
+            </ul>
           </div>
         </div>
 
-        <h3>🔍 Comparative Table: Review vs Research Article</h3>
-        <div className="comparison-table">
-          <table>
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>Review Article Writing</th>
-                <th>Research Article Writing</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Purpose</td>
-                <td>Summarize and evaluate existing research</td>
-                <td>Present novel findings or experiments</td>
-              </tr>
-              <tr>
-                <td>Literature Involvement</td>
-                <td>Extensive (50–150+ citations)</td>
-                <td>Limited to relevant background</td>
-              </tr>
-              <tr>
-                <td>Data/Experimentation</td>
-                <td>Secondary research only</td>
-                <td>Requires original data and analysis</td>
-              </tr>
-              <tr>
-                <td>Journal Preference</td>
-                <td>Scopus, SCI, Springer</td>
-                <td>Scopus, SCI, IEEE, ACM</td>
-              </tr>
-              <tr>
-                <td>Writing Time Frame</td>
-                <td>7–10 working days</td>
-                <td>10–15 working days</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <h3>🔧 Review Article Writing Architecture</h3>
-        <pre className="architecture">
-CopyEdit
-  +-----------------------------+
-  |   Topic Identification      |
-  +-------------+---------------+
-                ↓
-  +-----------------------------+
-  | Literature Collection       |
-  | (Databases, Journals)       |
-  +-------------+---------------+
-                ↓
-  +-----------------------------+
-  | Theme-Based Organization    |
-  +-------------+---------------+
-                ↓
-  +-----------------------------+
-  | Critical Analysis & Gaps    |
-  +-------------+---------------+
-                ↓
-  +-----------------------------+
-  | Structured Drafting         |
-  +-------------+---------------+
-                ↓
-  +-----------------------------+
-  | Plagiarism Check & QA       |
-  +-------------+---------------+
-                ↓
-  +-----------------------------+
-  | Journal Formatting & Submit |
-  +-----------------------------+
-        </pre>
-
-        <div className="highlights">
-          <h3>✅ Highlights of Our Review Article Writing Service</h3>
-          <ul>
-            <li>📌 SEO Optimized: “Review Article Writing” included 4+ times</li>
-            <li>📈 100% Plagiarism-free, Grammarly-enhanced manuscripts</li>
-            <li>🔄 Free revisions until journal acceptance</li>
-            <li>🌐 Supports Engineering, Medical, Management, Tech & more</li>
+        {/* RIGHT SIDEBAR */}
+        <aside className="right-sidebar">
+          <h4>📌 Related Review Services Link</h4>
+          <ul className="relative-services">
+            <li><a href="/review-ariticle-writing/engineering-literature-guide">Engineering Literature Guide</a></li>
+            <li><a href="/review-ariticle-writing/medical-review-writing">Medical Review Writing</a></li>
+            <li><a href="/review-ariticle-writing/literature-review-guide">Literature Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/sci-review-guide">SCI Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/scopus-review-guide">Scopus Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/systematic-review-guide">Systematic Review Guide</a></li>
           </ul>
-        </div>
-
-        <div className="cta-section">
-          <p>🔗 Ready to Publish?<br />
-            Let our experts transform your research idea into a publication-worthy review article.</p>
-          <a href="#" className="cta-button">👉 Write a Review Article</a>
-        </div>
+        </aside>
       </div>
-        <section className="faq-section">
-        <h2>FAQs on Topic Selection</h2>
-        <div className="faq-items">
-          {faqs.map((faq, index) => (
-            <details key={index}>
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
-            </details>
-          ))}
-        </div>
-         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-          </section>
+
+      {/* FAQ */}
+      <section className="faq-section">
+        <h2>FAQs</h2>
+        {faqs.map((faq, i) => (
+          <details key={i}>
+            <summary>{faq.question}</summary>
+            <p>{faq.answer}</p>
+          </details>
+        ))}
+      </section>
     </section>
   );
 };

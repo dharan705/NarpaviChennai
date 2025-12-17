@@ -19,10 +19,9 @@ body {
   width: 100%;
 }
 
-
 .CybersecurityProjectDevelopmentCenter-main {
   padding: 2rem;
-  background-color: #f9fafc;
+  background-color: $background-color;
   color: #222;
   flex: 1;
 
@@ -71,14 +70,10 @@ body {
     grid-template-columns: 1fr 3fr 1fr;
     gap: 2rem;
     margin-top: 2rem;
-    margin-left: 130px;
     align-items: start;
     max-width: 1600px;
-
-    @media (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .CybersecurityProjectDevelopmentCenter-left {
@@ -160,7 +155,6 @@ body {
     table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 600px;
 
       thead {
         background-color: $primary-color;
@@ -172,6 +166,7 @@ body {
         padding: 0.75rem;
         text-align: center;
         font-size: 0.95rem;
+        word-wrap: break-word;
       }
 
       td:first-child {
@@ -220,42 +215,120 @@ body {
     }
   }
 
+  /* ===============================
+     RESPONSIVE MEDIA QUERIES
+  ================================= */
+
+  @media (max-width: 1200px) {
+    .CybersecurityProjectDevelopmentCenter-grid {
+      gap: 1.5rem;
+    }
+
+    .CybersecurityProjectDevelopmentCenter-left,
+    .CybersecurityProjectDevelopmentCenter-right {
+      width: 260px;
+    }
+  }
+
   @media (max-width: 1024px) {
+    padding: 1.5rem;
+
+    .CybersecurityProjectDevelopmentCenter-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 0;
+    }
+
     .CybersecurityProjectDevelopmentCenter-left,
     .CybersecurityProjectDevelopmentCenter-right {
       width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
       position: static;
+      top: auto;
+    }
+
+    .CybersecurityProjectDevelopmentCenter-center {
+      padding: 1.5rem;
     }
   }
 
   @media (max-width: 768px) {
-    .CybersecurityProjectDevelopmentCenter {
-      flex-direction: column;
-      padding-left: 0;
-      padding-top: 0;
+    padding: 1rem;
+
+    h1 {
+      font-size: 2.1rem;
+      text-align: center;
     }
 
-    .CybersecurityProjectDevelopmentCenter-main {
-      padding: 1rem;
-      margin-left: 0;
-      width: 100%;
+    h2 {
+      font-size: 1.6rem;
+    }
 
-      h1 {
-        font-size: 2rem;
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    .CybersecurityProjectDevelopmentCenter-left,
+    .CybersecurityProjectDevelopmentCenter-right {
+       padding: 1rem;
+      margin-left: 2rem;
+    }
+
+    .CybersecurityProjectDevelopmentCenter-center {
+      padding: 1.25rem;
+      width: 95%;
+      margin-left: 2.5rem;
+    }
+
+    .CybersecurityProjectDevelopmentCenter-table-container {
+      padding: 0.75rem;
+
+      table {
+        font-size: 0.9rem;
+        min-width: 600px; // Horizontal scroll on small screens
+
+        th, td {
+          padding: 0.6rem;
+        }
       }
+    }
+  }
 
-      h2 {
-        font-size: 1.5rem;
-      }
+  @media (max-width: 480px) {
+    padding: 0.75rem;
 
-      .CybersecurityProjectDevelopmentCenter-center {
-        padding: 1rem;
-      }
+    h1 {
+      font-size: 1.9rem;
+    }
 
-      .CybersecurityProjectDevelopmentCenter-table-container table {
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    .CybersecurityProjectDevelopmentCenter-table-container {
+      padding: 0.5rem;
+
+      table {
         font-size: 0.85rem;
-        min-width: 100%;
+        min-width: 500px;
+
+        th, td {
+          padding: 0.5rem;
+        }
       }
+    }
+
+    .CybersecurityProjectDevelopmentCenter-left,
+    .CybersecurityProjectDevelopmentCenter-right{
+       padding: 1rem;
+      margin-left: -2rem;
+      margin-top: 2rem;
+    }
+    .CybersecurityProjectDevelopmentCenter-center {
+      width: 72%;
+      margin-left: -2rem;
+      padding: 1.25rem;
     }
   }
 }

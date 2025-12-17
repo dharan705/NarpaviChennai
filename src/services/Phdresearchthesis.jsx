@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is the ideal length of a PhD thesis?",
@@ -29,6 +30,8 @@ const faqs = [
 
 const PhdThesisWriting = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h1 className="title">PhD Research Thesis Writing Services Help</h1>
       <p>
@@ -89,6 +92,7 @@ const PhdThesisWriting = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

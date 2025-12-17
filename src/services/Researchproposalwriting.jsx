@@ -25,6 +25,8 @@ const faqs = [
 
 const ResearchProposal = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
         <h1 className="title"> Research Proposal Writing Help & Services</h1>
       <p>
@@ -90,6 +92,7 @@ const ResearchProposal = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

@@ -112,19 +112,18 @@ const SCIReviewGuide = () => {
 
       {/* Right Sidebar */}
       <aside className="right-sidebar">
-        <h3>Related Services</h3>
-        <ul>
-          <li><a href="#">Journal Selection & Submission</a></li>
-          <li><a href="#">SCI Paper Editing Support</a></li>
-          <li><a href="#">Literature Gap Identification</a></li>
-          <li><a href="#">Proposal to Review Conversion</a></li>
-        </ul>
+         <h4>📌 Related Review Services Link</h4>
+          <ul >
+            <li><a href="/review-article-writing">Review Article Writing</a></li>
+            <li><a href="/review-ariticle-writing/engineering-literature-guide">Engineering Literature Guide</a></li>
+            <li><a href="/review-ariticle-writing/medical-review-writing">Medical Review Writing</a></li>
+            <li><a href="/review-ariticle-writing/literature-review-guide">Literature Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/sci-review-guide">SCI Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/scopus-review-guide">Scopus Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/systematic-review-guide">Systematic Review Guide</a></li>
+          </ul>   
 
-        <div className="cta-box">
-          <h4>Need SCI Journal Support?</h4>
-          <p>We’ll craft a journal-ready, impactful review article for SCI publication.</p>
-          <a href="#" className="cta-button">Start Your SCI Review Project</a>
-        </div>
+         
       </aside>
     </div>
   );

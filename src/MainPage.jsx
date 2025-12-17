@@ -218,7 +218,6 @@ import ImageProcessing from './CS/Processing/Ipp'
 import NLP from './CS/Processing/Nlp'
 import CloudComputing from './CS/Cloud/Cloud'
 
-
  //ECE
 import BiomedicalElectronicsProjectDevelopmentCenter from './ECE/BiomedicalElectronics'
        //sub
@@ -487,6 +486,9 @@ import Flip from "./flip"
 import Design from './pages/Design';
 import Footer from './Footer';
 import Departments from './pages/DepartmentList';
+import SCIReviewGuide from './LeadingResearchServices/SubReviewAriticleWriting/SCIReviewGuide';
+import ScopusReviewGuide from './LeadingResearchServices/SubReviewAriticleWriting/ScopusReviewGuide';
+import SystematicReviewGuide from './LeadingResearchServices/SubReviewAriticleWriting/SystematicReviewGuide';
 
 function MainPage() {
   return(
@@ -561,16 +563,26 @@ function MainPage() {
         <Route path="/research-proposal-services/trending-research-topics" element={<TrendingResearchTopics />} />
         <Route path="/research-proposal-services/research-proposal-for-funding" element={<ResearchFundingGuide />} />
         <Route path="/research-proposal-services/engineering-research-proposal-guide" element={<ProposalStepGuide />} />
+        {/* Leading research Services */}
+        <Route path="/review-article-writing" element={<ReviewArticleWriting />} />
+                <Route path="/review-ariticle-writing/engineering-literature-guide" element={<EngineeringLiteratureGuide />} />
+                <Route path="/review-ariticle-writing/medical-review-writing" element={<MedicalReviewWriting />} />
+                <Route path="/review-ariticle-writing/literature-review-guide" element={<LiteratureReviewGuide />} />
+                <Route path="/review-ariticle-writing/sci-review-guide" element={<SCIReviewGuide />} />
+                <Route path="/review-ariticle-writing/scopus-review-guide" element={<ScopusReviewGuide />} />
+                <Route path="/review-ariticle-writing/systematic-review-guide" element={<SystematicReviewGuide />} />
+   
+        <Route path="/sci-journal-paper-writing" element={<SCIPaperWriting />} />
+                 <Route path="sci-journal-paper-writing/sci-writing-guide" element={<SCIWritingGuide />} />
+                 <Route path="sci-journal-paper-writing/trending-engineering-topics-for-scopus" element={<TrendingEngineeringTopicsForScopus />} />
+                 <Route path="sci-journal-paper-writing/novelty-in-engineering" element={<NoveltyInEngineering />} />
+                 <Route path="sci-journal-paper-writing/sci-vs-scopus" element={<SCIvsScopus />} />
+                 <Route path="sci-journal-paper-writing/sci-benefits" element={<SCIBenefits />} />
+                 <Route path="sci-journal-paper-writing/sci-journal-selection" element={<SCIJournalSelection />} />
+        <Route path="/scopus-journal-paper-writing" element={<ScopusPaperWriting />} />
+        <Route path="/ieee-conference-paper-writing" element={<IEEEPaperWriting />} />
 
-        <Route path="/leading-research-services/review-article-writing" element={<ReviewArticleWriting />} />
-        <Route path="/leading-research-services/sci-journal-paper-writing" element={<SCIPaperWriting />} />
-        <Route path="/leading-research-services/scopus-journal-paper-writing" element={<ScopusPaperWriting />} />
-        <Route path="/leading-research-services/ieee-conference-paper-writing" element={<IEEEPaperWriting />} />
-
-        <Route path="/review-ariticle-writing/engineering-literature-guide" element={<EngineeringLiteratureGuide />} />
-        <Route path="/review-ariticle-writing/medical-review-writing" element={<MedicalReviewWriting />} />
-        <Route path="/review-ariticle-writing/literature-review-guide" element={<LiteratureReviewGuide />} />
-
+    
         {/* main publication service */}
         <Route path="/publication-services" element={<MainPublicationServices />} />
               {/* conference-paper-publication-services */}
@@ -630,14 +642,6 @@ function MainPage() {
        <Route path="scopus-journal-paper-writing/scopus-paper-benefits" element={<ScopusPaperBenefits />} />
        <Route path="scopus-journal-paper-writing/scopus-paper-drafting" element={<ScopusPaperDrafting />} />
        
-       {/* Subscipaper writing */}
-       <Route path="sci-paper-writing/sci-writing-guide" element={<SCIWritingGuide />} />
-       <Route path="sci-paper-writing/trending-engineering-topics-for-scopus" element={<TrendingEngineeringTopicsForScopus />} />
-       <Route path="sci-paper-writing/novelty-in-engineering" element={<NoveltyInEngineering />} />
-       <Route path="sci-paper-writing/sci-vs-scopus" element={<SCIvsScopus />} />
-       <Route path="sci-paper-writing/sci-benefits" element={<SCIBenefits />} />
-       <Route path="sci-paper-writing/sci-journal-selection" element={<SCIJournalSelection />} />
-
       {/* kerala university */}
        <Route path="kerala/phd-admission-in-university-of-kerala" element={<UniversityOfKerala />} />
        <Route path="kerala/phd-admission-amrita-vishwa-vidyapeetham-amritapuri-campus" element={<AmritaAmritapuri />} />

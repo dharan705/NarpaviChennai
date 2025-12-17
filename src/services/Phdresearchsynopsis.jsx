@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is a PhD synopsis?",
@@ -29,7 +30,10 @@ const faqs = [
 
 const PhdSynopsisHelp = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <section className="phd-guidance-container">
+
       <h1 className="title">PhD Research Synopsis Writing Services Help</h1>
       <p>
         Writing a synopsis can be a challenging task, but with a structured
@@ -136,6 +140,7 @@ const PhdSynopsisHelp = () => {
   />
 </section>
     </section>
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import './Phdservices.scss';
-
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "What is Anna University's Annexure list?",
@@ -25,8 +25,10 @@ const faqs = [
 
 const AnnaUniversityPublication = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
-   
+     
       <h2 className="title">Anna University Annexure Paper Publication Services</h2>
       <p>
         Anna University in India maintains a list of approved journals that are eligible for inclusion in their Annexure. Getting acceptance for a research paper in one of these journals requires careful preparation and adherence to the university's guidelines. Here's how you can increase your chances of acceptance:
@@ -83,7 +85,7 @@ const AnnaUniversityPublication = () => {
   />
 </section>
 
-      
+      </div>
     </div>
   );
 };

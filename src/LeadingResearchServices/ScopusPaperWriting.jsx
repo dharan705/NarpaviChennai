@@ -1,6 +1,7 @@
 import React from "react";
 import "./ScopusPaperWriting.scss";
 import { CheckCircle, BookCheck, Table, FileText, RefreshCcw, PenLine } from "lucide-react";
+import Subsidebar from "../pages/Subsidebar";
 
 const faqs = [
   {
@@ -33,6 +34,7 @@ const faqs = [
 const ScopusPaperWriting = () => {
   return (
     <section className="scopus-writing">
+      <Subsidebar />
       <div className="container">
         <h2>📘 Scopus Journal Paper Writing</h2>
         <p className="intro">
@@ -134,11 +136,6 @@ CopyEdit
           <li>📚 Assistance with journal selection, submission & reviewer responses</li>
         </ul>
 
-        <div className="cta-box">
-          <h4>🔗 Let’s Get Your Paper Scopus-Ready!</h4>
-          <p>Tap into Narpavi's publishing expertise and let your research reach global databases with confidence.</p>
-          <a href="#" className="cta-button">👉 Write My Scopus Paper</a>
-        </div>
       </div>
         <section className="faq-section">
         <h2>FAQs on Topic Selection</h2>

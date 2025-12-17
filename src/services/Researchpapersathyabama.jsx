@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "Which indexing databases are accepted by Sathyabama University for PhD publications?",
@@ -30,6 +30,8 @@ const faqs = [
 
 const SathyabamaResearch = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
       <h1 className="title">Research Paper Publication Services for PhD Students from Sathyabama University</h1>
       <p>
@@ -78,6 +80,7 @@ const SathyabamaResearch = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

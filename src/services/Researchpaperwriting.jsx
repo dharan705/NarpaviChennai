@@ -1,4 +1,5 @@
 import "./Phdservices.scss";
+import SubSiderbar from "../pages/Subsidebar"
 const faqs = [
   {
     question: "Are research paper writing services legal for PhD students?",
@@ -24,6 +25,8 @@ const faqs = [
 
 const ResearchPaper = () => {
   return (
+    <div className="phd-service">
+      <SubSiderbar />
     <div className="phd-guidance-container">
         <h1 className="title"> Research Paper Writing Help / Services </h1>
 
@@ -100,6 +103,7 @@ const ResearchPaper = () => {
     }}
   />
 </section>
+    </div>
     </div>
   );
 };

@@ -120,19 +120,18 @@ const ScopusReviewGuide = () => {
 
       {/* Right Sidebar */}
       <aside className="right-sidebar">
-        <h3>Related Services</h3>
-        <ul>
-          <li><a href="#">Journal Selection Assistance</a></li>
-          <li><a href="#">Thesis to Review Article Conversion</a></li>
-          <li><a href="#">Research Gap Identification</a></li>
-          <li><a href="#">Scopus Journal Formatting</a></li>
-        </ul>
+          <h4>📌 Related Review Services Link</h4>
+          <ul >
+            <li><a href="/review-article-writing">Review Article Writing</a></li>
+            <li><a href="/review-ariticle-writing/engineering-literature-guide">Engineering Literature Guide</a></li>
+            <li><a href="/review-ariticle-writing/medical-review-writing">Medical Review Writing</a></li>
+            <li><a href="/review-ariticle-writing/literature-review-guide">Literature Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/sci-review-guide">SCI Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/scopus-review-guide">Scopus Review Guide</a></li>
+            <li><a href="/review-ariticle-writing/systematic-review-guide">Systematic Review Guide</a></li>
+          </ul>   
 
-        <div className="cta-box">
-          <h4>Ready to Publish in Scopus?</h4>
-          <p>Let our experts craft a journal-ready, citation-rich review article for you.</p>
-          <a href="#" className="cta-button">Get Scopus Review Support</a>
-        </div>
+        
       </aside>
     </div>
   );
