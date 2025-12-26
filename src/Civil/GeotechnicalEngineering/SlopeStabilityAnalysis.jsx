@@ -1,5 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,25 @@ const faqs = [
 const CESlopeStabilityAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+       <SEO
+        title="Slope Stability Analysis IEEE Projects (2023–2025)"
+        description="Slope Stability Analysis IEEE project development for B.Tech, M.Tech & PhD scholars focusing on PLAXIS/FLAC modeling, IoT monitoring, AI landslide prediction, geosynthetics reinforcement, and sustainable slope stabilization."
+        url="/department/geotechnical-engineering/slope-stability-analysis"
+        type="article"
+        keywords={[
+          "Slope Stability Analysis Projects",
+          "Geotechnical Engineering IEEE Projects",
+          "IoT-Enabled Slope Monitoring",
+          "Machine Learning Landslide Prediction",
+          "PLAXIS FLAC Slope Modeling",
+          "Reinforced Soil Slope Projects",
+          "Sustainable Slope Stabilization",
+          "B.Tech M.Tech PhD Slope Projects",
+          "Narpavi Research Institute Civil Projects",
+          "Advanced Slope Safety Analysis"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -216,36 +236,36 @@ const CESlopeStabilityAnalysisProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+              
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/soil-stabilization-techniques-project-development">Soil Stabilization Techniques Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/remote-sensing-gis-project-development">Remote Sensing & GIS Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/geotechnical-engineering">
+      Geotechnical Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+      Soil Stabilization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/foundation-design">
+      Foundation Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/slope-stability-analysis">
+      Slope Stability Analysis
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

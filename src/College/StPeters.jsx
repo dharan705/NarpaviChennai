@@ -1,132 +1,187 @@
-import '../pages/Subheading.scss';
-import Subsidebar from '../pages/Subsidebar';
+import "../pages/Subheading.scss";
+import Subsidebar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What are the eligibility criteria for PhD admission at St. Peter's Institute?",
-    answer: "Candidates must have a Master’s degree (e.g., M.Tech, M.Sc, M.A, MBA, etc.) with at least 55% marks or a CGPA of 6.0/10."
+    answer:
+      "Candidates must have a Master’s degree with at least 55% marks or CGPA 6.0/10 from a recognized university.",
   },
   {
     question: "Is work experience required for applying to the PhD program?",
-    answer: "Professional experience is usually required for part-time PhD applicants, and an experience certificate is mandatory."
+    answer:
+      "Professional experience is usually required for part-time PhD applicants, and an experience certificate is mandatory.",
   },
   {
     question: "What is the mode and duration of the PhD program?",
-    answer: "St. Peter’s Institute offers both Full-Time (minimum 3 years) and Part-Time (minimum 4 years) PhD programs."
+    answer:
+      "St. Peter’s Institute offers Full-Time PhD (minimum 3 years) and Part-Time PhD (minimum 4 years).",
   },
   {
     question: "When can I apply for the PhD program?",
-    answer: "There are two admission sessions each year:\n• January Session: Applications open in January and close by April\n• July Session: Applications open in July and close by October"
+    answer:
+      "Admissions are conducted twice a year: January Session (January–April) and July Session (July–October).",
   },
   {
     question: "Is there an entrance exam for PhD admission?",
-    answer: "Yes, an entrance exam is mandatory for all applicants unless exempted under specific conditions."
+    answer:
+      "Yes, an entrance examination is mandatory unless exempted under specific eligibility conditions.",
   },
   {
     question: "What documents are required for PhD admission?",
-    answer: "You need academic certificates, ID proof, photographs, research proposal, experience certificate (for part-time), NOC (for working candidates), qualifying exam scorecard (if any), caste certificate (if applicable), and fee payment proof."
+    answer:
+      "Applicants must submit academic certificates, ID proof, photographs, research proposal, experience certificate and NOC for part-time candidates, and fee payment proof.",
   },
   {
-    question: "What is the approximate fee structure for PhD at St. Peter’s Institute?",
-    answer: "The annual fee ranges from ₹54,000 to ₹60,000. The per-semester fee is approximately ₹27,000 to ₹30,000."
+    question: "What is the fee structure for PhD at St. Peter’s Institute?",
+    answer:
+      "The annual fee ranges from ₹54,000 to ₹60,000, with a per-semester fee of approximately ₹27,000 to ₹30,000.",
   },
   {
     question: "Are scholarships or fellowships available?",
-    answer: "Yes, the institute offers scholarships or financial aid depending on eligibility and availability."
+    answer:
+      "Yes, scholarships and financial assistance are available based on eligibility and institutional norms.",
   },
   {
-    question: "Why should I choose St. Peter's Institute for my PhD?",
-    answer: "The university offers strong research support, experienced faculty, dedicated research centers, and is ideal for working professionals seeking part-time PhDs."
-  }
+    question: "Why choose St. Peter’s Institute for PhD studies?",
+    answer:
+      "The institute offers strong research infrastructure, experienced faculty, and flexible options for working professionals.",
+  },
 ];
 
-
 const universityData = {
-  fullName: "PhD Admission in Chennai St. Peter’s Institute of Higher Education and Research",
+  fullName:
+    "PhD Admission in Chennai St. Peter’s Institute of Higher Education and Research",
   shortName: "St. Peter's University",
-  phdEntranceExam: 'Mandatory',
+  phdEntranceExam: "Mandatory",
   qualificationRequired:
-    'Master’s Degree (e.g., M.Tech, M.Sc, M.A, MBA, etc.) with 55% marks or CGPA 6.0/10',
+    "Master’s Degree with 55% marks or CGPA 6.0/10",
   workExperience:
-    'Professional experience may be mandatory for part-time Ph.D. applicants',
-  modeOfPhd: 'Full-Time: 3 years / Part-Time: 4 years',
+    "Professional experience required for Part-Time PhD candidates",
+  modeOfPhd: "Full-Time: 3 Years / Part-Time: 4 Years",
   documentsRequired: [
-    'Completed Application Form (downloaded or online submission)',
-    'Proof of Identity: Aadhaar Card / Passport / Voter ID / Driving License',
-    'Passport-sized Photographs (usually 3–4 copies)',
-    'UG Degree Certificate and Mark Sheets',
-    'PG Degree Certificate and Mark Sheets',
-    'Transfer Certificate (TC) or Migration Certificate (if applicable)',
-    'Character Certificate from the last studied institution',
-    'Research Proposal / Statement of Purpose (SOP)',
-    'Experience Certificate (mandatory for part-time Ph.D. candidates)',
-    'No Objection Certificate (NOC) from employer (for employed part-time candidates)',
-    'Qualifying Exam Score Card: UGC-NET / CSIR-NET / GATE (if applicable)',
-    'Caste/Community Certificate (if applicable)',
-    'Demand Draft / Payment Proof of the application fee',
+    "Completed Application Form",
+    "UG & PG Degree Certificates and Mark Sheets",
+    "Research Proposal / SOP",
+    "Experience Certificate (Part-Time)",
+    "No Objection Certificate (NOC)",
+    "Government-issued ID Proof",
+    "Passport-size Photographs",
+    "Entrance Exam Scorecard (if applicable)",
+    "Community / Caste Certificate (if applicable)",
+    "Application Fee Payment Proof",
   ],
-  applicationTimeline: `January Session: Applications open in January and close by April\nJuly Session: Applications open in July and close by October`,
+  applicationTimeline:
+    "January Session (Jan–Apr) | July Session (Jul–Oct)",
   approxFee:
-    'Approx. Annual Fee: ₹54,000 – ₹60,000\nApprox. Fee Per Semester: ₹27,000 – ₹30,000',
-  scholarshipAvailability: 'Yes',
+    "₹54,000 – ₹60,000 per year | ₹27,000 – ₹30,000 per semester",
+  scholarshipAvailability: "Yes",
 };
 
 const Subheading = () => {
   return (
     <div className="main">
+      {/* ✅ SEO + Dynamic FAQ Schema */}
+      <SEO
+        title="PhD Admission in St. Peter’s University Chennai | Eligibility, Fees & Research"
+        description="Apply for PhD admission at St. Peter’s Institute of Higher Education and Research, Chennai. Check eligibility, entrance exam, fees, documents, and scholarship details."
+        url="/st-peters-university-phd-admission"
+        keywords={[
+          "PhD Admission in St Peter's University",
+          "St Peter's University PhD admission",
+          "PhD admission in Chennai",
+          "Part time PhD in St Peter's University",
+          "St Peter's PhD eligibility",
+        ]}
+        faqs={faqs}
+      />
+
       <Subsidebar />
 
       <div className="university-details-wrapper">
         <div className="content-layout">
-          {/* Left Sidebar Box */}
+          {/* Left Sidebar */}
           <div className="side-box left-box">
-           <h3>About St. Peter’s Institute of Higher Education and Research</h3>
-<ul>
-  <li><b>Year of Establishment:</b> Established in 2008, St. Peter’s Institute is recognized for its commitment to advanced education and innovation.</li>
-  <li><b>Year of PhD Admission Establishment:</b><br/>PhD programs were introduced soon after establishment to promote academic and industrial research.</li>
-  <li><b>Annual PhD Enrolment and Exit Details:</b><br/>Approximately 80–120 PhD scholars enroll each year across Engineering, Science, Management, and Humanities.</li>
-  <li><b>Why this University is a Premier Choice for PhD Studies:</b><br/>PhD Admission in Chennai St. Peter’s Institute is preferred for its dedicated research centers, expert faculty, and industry-linked projects.</li>
-</ul>
-
+            <h3>About St. Peter’s Institute of Higher Education and Research</h3>
+            <ul>
+              <li>
+                <b>Year of Establishment:</b> Established in 2008.
+              </li>
+              <li>
+                <b>PhD Programs:</b> Introduced shortly after establishment to
+                promote academic and industry research.
+              </li>
+              <li>
+                <b>Annual Intake:</b> Around 80–120 PhD scholars annually.
+              </li>
+              <li>
+                <b>Why Choose St. Peter’s:</b> Dedicated research centers,
+                experienced faculty, and flexible options for working
+                professionals.
+              </li>
+            </ul>
           </div>
 
           {/* Main Content */}
           <div className="university-details-container">
             <div className="phdimg" />
-            <h2 className="university-title">{universityData.fullName}</h2>
+
+            {/* ✅ Single H1 for SEO */}
+            <h1 className="university-title">
+              {universityData.fullName}
+            </h1>
+
             <div className="details-grid">
               <div className="detail-item">
                 <span className="detail-label">Popularly Known As</span>
-                <span className="detail-value">{universityData.shortName}</span>
+                <span className="detail-value">
+                  {universityData.shortName}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">PhD Entrance Exam</span>
-                <span className="detail-value">{universityData.phdEntranceExam}</span>
+                <span className="detail-value">
+                  {universityData.phdEntranceExam}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Qualification Required</span>
-                <span className="detail-value">{universityData.qualificationRequired}</span>
+                <span className="detail-value">
+                  {universityData.qualificationRequired}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Work Experience</span>
-                <span className="detail-value">{universityData.workExperience}</span>
+                <span className="detail-value">
+                  {universityData.workExperience}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Mode of PhD</span>
-                <span className="detail-value">{universityData.modeOfPhd}</span>
+                <span className="detail-value">
+                  {universityData.modeOfPhd}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Application Timeline</span>
-                <span className="detail-value" style={{ whiteSpace: 'pre-wrap' }}>
+                <span className="detail-value">
                   {universityData.applicationTimeline}
                 </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Approx. Fee</span>
-                <span className="detail-value" style={{ whiteSpace: 'pre-wrap' }}>
+                <span className="detail-value">
                   {universityData.approxFee}
                 </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Documents Required</span>
                 <ul className="detail-list">
@@ -135,28 +190,33 @@ const Subheading = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="detail-item">
-                <span className="detail-label">Scholarship/Fellowship</span>
-                <span className="detail-value">{universityData.scholarshipAvailability}</span>
+                <span className="detail-label">Scholarship / Fellowship</span>
+                <span className="detail-value">
+                  {universityData.scholarshipAvailability}
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Right Sidebar Box */}
+          {/* Right Sidebar */}
           <div className="side-box right-box">
             <h3>Key Highlights</h3>
             <ul>
-              <li>Admits students twice a year – January and July sessions</li>
-              <li>Strong focus on applied and interdisciplinary research</li>
-              <li>Well-structured application process and support system</li>
-              <li>Ideal for working professionals pursuing part-time research</li>
-              <li>Urban campus with good research infrastructure</li>
+              <li>Two admission cycles every year</li>
+              <li>Strong applied and interdisciplinary research focus</li>
+              <li>Flexible part-time PhD for working professionals</li>
+              <li>Urban Chennai campus with good research facilities</li>
+              <li>Structured and transparent admission process</li>
             </ul>
           </div>
         </div>
       </div>
-       <section className="alluniversityfaq-section">
-        <h2>FAQs on Topic Selection</h2>
+
+      {/* FAQ UI */}
+      <section className="alluniversityfaq-section">
+        <h2>FAQs on PhD Admission</h2>
         <div className="faq-items">
           {faqs.map((faq, index) => (
             <details key={index}>
@@ -165,46 +225,7 @@ const Subheading = () => {
             </details>
           ))}
         </div>
-
-
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the eligibility for PhD admission at Anna University?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A Master’s Degree with at least 55% marks or 5.5 CGPA is required. Candidates with GATE/NET/SLET/M.Phil. may be exempted from the written test."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for PhD admission?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Essential documents include PG and UG certificates, community certificate, experience certificate (if part-time), research proposal, and ID proof."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Anna University provide any fellowship for PhD?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, fellowships like University Research Fellowship, UGC JRF/SRF, DST-INSPIRE, and industry-sponsored schemes are available."
-                }
-              }
-            ]
-          }),
-        }}
-      />
-    </section>
-
+      </section>
     </div>
   );
 };

@@ -1,10 +1,11 @@
 import "./Ai.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the AI Project Development Center offer?",
-    answer: "Narpavi Research Institute’s AI Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) AI projects, focusing on machine learning, deep learning, NLP, and computer vision for real-world applications."
+    answer: "Narpavi Research Institute's AI Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) AI projects, focusing on machine learning, deep learning, NLP, and computer vision for real-world applications."
   },
   {
     question: "What types of AI projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const ArtificialIntelligenceProjectDevelopmentCenter = () => {
   return (
     <div className="ArtificialIntelligenceProjectDevelopmentCenter">
+      <SEO 
+        title="AI IEEE Projects | B.Tech M.Tech Ph.D. Artificial Intelligence | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) AI projects for B.Tech, M.Tech, Ph.D. Deep learning, computer vision, NLP, transformers, GANs, YOLO for healthcare, smart cities, cybersecurity."
+        keywords="Artificial Intelligence – Project Development Center, AI IEEE Projects 2023–2025, B.Tech M.Tech Ph.D. AI Projects, Deep Learning IEEE Project Titles, Computer Vision Research Support, NLP Project Development Center, GAN Project Development, AI-based Smart System Projects, Transformer NLP IEEE Projects, Narpavi Research Institute AI Services"
+        url="/ai-project-development"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ArtificialIntelligenceProjectDevelopmentCenter-main">
         <div className="ArtificialIntelligenceProjectDevelopmentCenter-grid">
@@ -155,7 +163,7 @@ const ArtificialIntelligenceProjectDevelopmentCenter = () => {
             <section className="ArtificialIntelligenceProjectDevelopmentCenter-excellence">
               <h2>Excellence in AI Project Development</h2>
               <p>
-                Narpavi Research Institute’s Artificial Intelligence – Project Development Center integrates cutting-edge IEEE research with hands-on AI project development, fostering scalable and innovative solutions.
+                Narpavi Research Institute's Artificial Intelligence – Project Development Center integrates cutting-edge IEEE research with hands-on AI project development, fostering scalable and innovative solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful AI systems for academia and industry, from healthcare analytics to smart city applications.
@@ -172,47 +180,28 @@ const ArtificialIntelligenceProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="ArtificialIntelligenceProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

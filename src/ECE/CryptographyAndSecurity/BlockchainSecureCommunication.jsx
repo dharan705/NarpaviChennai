@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What is the role of blockchain in secure communication?",
@@ -27,6 +27,13 @@ const faqs = [
 const BlockchainSecureCommunicationProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Blockchain in Secure Communication IEEE Projects | IoT, 5G/6G, Embedded | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) blockchain secure communication projects on IoT, vehicular networks, 5G/6G, wireless, healthcare, and UAV/satellite systems using Ethereum, Hyperledger, FPGA, Raspberry Pi, and ARM platforms."
+        keywords="Blockchain in Secure Communication, Blockchain IoT Security Projects, Blockchain Vehicular Communication, Lightweight Blockchain Protocols, Blockchain in Embedded Systems, Blockchain-based Healthcare Data Security, Secure IoT Communication Projects, B.Tech Blockchain Projects, M.Tech Blockchain Research, Ph.D. Blockchain Communication Projects, IEEE Blockchain Projects, Narpavi Research Institute Blockchain"
+        url="/department/cryptography-security/blockchain-secure-communication"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -170,23 +177,7 @@ const BlockchainSecureCommunicationProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+            
             </section>
           </div>
 
@@ -194,12 +185,14 @@ const BlockchainSecureCommunicationProject = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
+  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+</ul>
           </div>
         </div>
       </div>

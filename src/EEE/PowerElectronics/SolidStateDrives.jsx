@@ -1,5 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,14 @@ const faqs = [
 const EEESolidStateDrivesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Solid State Drives IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Solid-State Drives projects for B.Tech, M.Tech, Ph.D. High-speed drives, AI-based control, energy-efficient design using MATLAB/Simulink, PSIM, TensorFlow for industrial automation, EVs, renewable energy systems."
+  keywords="Solid State Drives IEEE Projects 2023–2025, High-Speed Drives Research, B.Tech Solid-State Drive Projects, M.Tech AI Drive Control, Ph.D. Fault-Tolerant Drives, IoT Drive Monitoring, Energy-Efficient Drives, High-Performance Industrial Drives, Intelligent Drive Systems, Narpavi Research Institute"
+  url="/department/power-electronics/solid-state-drives"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -196,36 +205,88 @@ const EEESolidStateDrivesProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+              <ul>
+  <li>
+    <a href="/department/power-electronics">
+      Power Electronics – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/dc-dc-converters">
+      DC–DC Converters & Applications
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/multilevel-inverters">
+      Multilevel Inverters
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/renewable-energy-controllers">
+      Power Electronic Controllers for Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/power-factor-correction">
+      Power Factor Correction Circuits
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/solid-state-drives">
+      Solid State Drives
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/wireless-power-transfer">
+      Wireless Power Transfer Circuits
+    </a>
+  </li>
+</ul>
+
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/advanced-drives-controllers-project-development">Advanced Drives & Controllers Project Development</a></li>
-              <li><a href="/dc-dc-converters-applications-project-development">DC-DC Converters & Applications Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">IoT in EEE Project Development</a></li>
-            </ul>
+          <ul>
+  <li>
+    <a href="/department/power-electronics">
+      Power Electronics – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/dc-dc-converters">
+      DC–DC Converters & Applications
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/multilevel-inverters">
+      Multilevel Inverters
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/renewable-energy-controllers">
+      Power Electronic Controllers for Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/power-factor-correction">
+      Power Factor Correction Circuits
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/solid-state-drives">
+      Solid State Drives
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/wireless-power-transfer">
+      Wireless Power Transfer Circuits
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

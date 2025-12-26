@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Steel & RCC Design Optimization Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CESteelRCCDesignOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+       <SEO
+        title="Steel & RCC Design Optimization IEEE Projects (2023–2025)"
+        description="Steel & RCC Design Optimization IEEE project development for B.Tech, M.Tech & PhD scholars using STAAD.Pro, ETABS, ANSYS, genetic algorithms, AI optimization, FEM modeling for cost-effective sustainable structures."
+        url="/department/structural-engineering/steel-rcc-design-optimization"
+        type="article"
+        keywords={[
+          "Steel RCC Design Optimization IEEE 2023–2025",
+          "Genetic Algorithm RCC Design",
+          "AI-based Structural Engineering Optimization",
+          "RCC Slab Beam Optimization",
+          "Cost-effective Tall Building Design",
+          "Finite Element Steel RCC Modeling",
+          "Sustainable RCC Steel Design Research",
+          "Narpavi Research Institute Structural Projects",
+          "PhD Steel RCC Composite Optimization",
+          "Civil Engineering Optimization Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -263,13 +282,34 @@ const CESteelRCCDesignOptimizationProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/earthquake-resistant-structures-project-development">Earthquake Resistant Structures Project Development</a></li>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/structural-engineering">
+      Structural Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/earthquake-resistant-structures">
+      Earthquake Resistant Structures
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/steel-rcc-design-optimization">
+      Steel & RCC Design Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/tall-building-analysis">
+      Tall Building Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/bridge-design-monitoring">
+      Bridge Design & Monitoring
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

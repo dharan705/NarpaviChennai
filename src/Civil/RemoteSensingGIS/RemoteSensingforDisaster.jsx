@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -28,6 +28,25 @@ const faqs = [
 const CERemoteSensingDisasterManagementProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+      <SEO
+        title="Remote Sensing for Disaster Management IEEE Projects (2023–2025)"
+        description="Remote Sensing for Disaster Management IEEE project development for B.Tech, M.Tech & PhD scholars using Google Earth Engine, SAR, UAVs, AI, Cloud GIS for flood mapping, earthquake assessment, cyclone prediction, and landslide monitoring."
+        url="/department/remote-sensing-gis/remote-sensing-for-disaster"
+        type="article"
+        keywords={[
+          "Remote Sensing Disaster Management",
+          "Satellite Disaster Monitoring IEEE 2023–2025",
+          "UAV GIS Disaster Risk Mapping",
+          "Flood Landslide Remote Sensing Projects",
+          "AI Remote Sensing Disaster Forecasting",
+          "Cloud GIS Disaster Mitigation",
+          "Civil Engineering Disaster Projects",
+          "Remote Sensing PhD Projects",
+          "GIS Disaster Management Research",
+          "Narpavi Research Institute Civil Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -212,23 +231,6 @@ const CERemoteSensingDisasterManagementProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -236,12 +238,23 @@ const CERemoteSensingDisasterManagementProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/remote-sensing-gis-project-development">Remote Sensing & GIS Project Development</a></li>
-              <li><a href="/gis-based-urban-planning-project-development">GIS-Based Urban Planning Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/earthquake-resistant-structures-project-development">Earthquake Resistant Structures Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/remote-sensing-gis">
+      Remote Sensing & GIS
+    </a>
+  </li>
+  <li>
+    <a href="/department/remote-sensing-gis/gis-based-urban-planning">
+      GIS-Based Urban Planning
+    </a>
+  </li>
+  <li>
+    <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
+      Remote Sensing for Disaster Management
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,5 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO";
+
 const faqs = [
   {
     question: "What services does the MIMO and Massive MIMO Antenna Techniques Project Development Center offer?",
@@ -26,6 +28,13 @@ const faqs = [
 const ECEMIMOMassiveMIMOAntennaTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="MIMO & Massive MIMO Antenna Techniques IEEE Projects | 5G 6G Beamforming | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) projects on conventional MIMO, massive MIMO, mmWave MIMO, AI-based beamforming, and RIS-assisted MIMO using MATLAB, NS-3, CST, and HFSS for 5G, 6G, and IoT applications."
+        keywords="MIMO and Massive MIMO Antenna Techniques, 5G MIMO Projects, 6G Massive MIMO Research, AI-Based Beamforming, Hybrid MIMO Systems, Millimeter-Wave MIMO, Reconfigurable Intelligent Surfaces, Narpavi Research Institute"
+        url="/department/communication-systems/mimo-massive-mimo-antenna-techniques"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -200,37 +209,21 @@ const ECEMIMOMassiveMIMOAntennaTechniquesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-             
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/communication-systems">Communication Systems </a></li>
+  <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
+  <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
+  <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
+  <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
+  <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
+  <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,23 @@ const faqs = [
 const SecureDataTransmissionWSNProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="Secure WSN Data Transmission IEEE Projects | AES ECC Blockchain AI | B.Tech M.Tech PhD"
+  description="Secure data transmission in Wireless Sensor Networks projects (2023–2025) using AES ECC RSA SHA blockchain, AI intrusion detection, NS2 NS3 OMNeT++ MATLAB for healthcare military IoT."
+  url="/department/wireless-sensor-networks/secure-data-transmission-wsn"
+  type="article"
+  keywords={[
+    "Secure Data Transmission WSN",
+    "Cryptography WSN Projects",
+    "AES ECC Blockchain WSN",
+    "AI Intrusion Detection WSN",
+    "IEEE WSN Security Projects",
+    "NS2 NS3 WSN Security Simulation",
+    "Military Healthcare WSN Security"
+  ]}
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -156,35 +174,21 @@ const SecureDataTransmissionWSNProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+              
             </section>
           </div>
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
+  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+  </ul>
           </div>
         </div>
       </div>

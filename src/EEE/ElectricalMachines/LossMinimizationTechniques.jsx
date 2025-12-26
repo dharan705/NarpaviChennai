@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +28,14 @@ const faqs = [
 const EEELossMinimizationTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Loss Minimization Techniques IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Loss Minimization Techniques projects for B.Tech, M.Tech, Ph.D. Copper/core loss reduction, high-efficiency machine design, AI-based optimization, energy-saving control using MATLAB/Simulink, ANSYS Maxwell, TensorFlow for industrial automation, EVs, renewable energy."
+  keywords="Loss Minimization Techniques IEEE Projects 2023–2025, Copper Core Loss Reduction, B.Tech High-Efficiency Machine Projects, M.Tech AI Drive Optimization, Ph.D. Electrical Machine Efficiency Research, Energy-Efficient Motor Drives, IoT Energy Monitoring, Industrial Loss Optimization, Smart Drive Solutions, Narpavi Research Institute"
+  url="/department/electrical-machines/loss-minimization-techniques"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -197,36 +205,50 @@ const EEELossMinimizationTechniquesProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/special-electrical-machines-project-development">Special Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">IoT in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/electrical-machines">
+      Electrical Machines – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/electrical-machines">
+      Advanced Drives & Controllers
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/condition-monitoring-machines">
+      Condition Monitoring of Machines
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/energy-efficient-motors">
+      Energy Efficient Motors
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
+      Fault Diagnosis of Motors & Generators
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/loss-minimization-techniques">
+      Loss Minimization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/special-electrical-machines">
+      Special Electrical Machines
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the IoT-based Mechatronics Systems Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEIoTBasedMechatronicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="IoT-based Mechatronics Systems IEEE Projects (2023–2025)"
+        description="IoT Mechatronics IEEE project development for B.Tech, M.Tech & PhD using Arduino, ESP32, Raspberry Pi, AWS IoT, AI-driven automation, predictive maintenance, digital twins for manufacturing, healthcare, smart cities."
+        url="/department/robotics-mechatronics/iot-based-mechatronics"
+        type="article"
+        keywords={[
+          "IoT Mechatronics IEEE 2023–2025",
+          "Smart Mechatronic Systems",
+          "IoT Enabled Robotics Projects",
+          "Digital Twin Mechatronics",
+          "Industry 4.0 IoT Mechatronics",
+          "AI Driven IoT Automation",
+          "Predictive Maintenance IoT",
+          "Embedded IoT Mechatronic Systems",
+          "Edge Computing Mechatronics",
+          "Narpavi Research Institute IoT"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -248,12 +267,38 @@ const MEIoTBasedMechatronicsProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/cad-modeling-simulation-project-development">CAD Modeling & Simulation Project Development</a></li>
-              <li><a href="/robotics-mechatronics-project-development">Robotics & Mechatronics Project Development</a></li>
-              <li><a href="/industrial-robotics-systems-project-development">Industrial Robotics Systems Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/robotics-mechatronics">
+      Robotics & Mechatronics
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
+      Industrial Robotics Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
+      IoT-Based Mechatronics
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
+      Autonomous Vehicles & Drones
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
+      Robotic Manipulator Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/embedded-control-systems">
+      Embedded Control Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Smart Grid & Microgrid Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Grid & Microgrid Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart energy management, renewable integration, and AI-driven grid intelligence for applications in smart cities, rural electrification, and industrial power systems."
+    answer: "Narpavi Research Institute's Smart Grid & Microgrid Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart energy management, renewable integration, and AI-driven grid intelligence for applications in smart cities, rural electrification, and industrial power systems."
   },
   {
     question: "What types of smart grid and microgrid projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEESmartGridMicrogridProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Smart Grid & Microgrid IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Smart Grid & Microgrid projects for B.Tech, M.Tech, Ph.D. Smart meters, hybrid microgrids, blockchain energy trading, AI forecasting for smart cities."
+        keywords="Smart Grid IEEE Projects 2023–2025, Microgrid IEEE Projects, Smart Energy Management Systems, Blockchain in Smart Grid IEEE Projects, IoT Smart Grid IEEE Research, B.Tech Smart Grid Projects, M.Tech Microgrid Projects, Ph.D. Smart Energy IEEE Thesis, AI in Smart Grid Projects, Narpavi Research Institute"
+        url="/smart-grid-microgrid-project-development"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -220,46 +228,50 @@ const EEESmartGridMicrogridProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/smart-grid-microgrid">
+      Smart Grid & Microgrid – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
+      Cybersecurity for Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
+      EV Charging & Microgrids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
+      Integration of Distributed Generation
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
+      Microgrid Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
+      Real-Time Monitoring & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
+      Smart Metering & Demand Response
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

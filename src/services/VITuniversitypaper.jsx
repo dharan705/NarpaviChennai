@@ -1,5 +1,7 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar"
+import SubSiderbar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
+
 const faqs = [
   {
     question: "Which indexing databases are accepted by VIT for PhD publications?",
@@ -26,90 +28,79 @@ const faqs = [
 const VitPublication = () => {
   return (
     <div className="phd-service">
+      <SEO 
+        title="VIT University Paper Publication Services | Accepted Indexing Databases"
+        description="Complete list of indexing databases accepted by VIT University for PhD publications: SCI, Scopus, IEEE Xplore, PubMed, ESCI, ACM, INSPEC, DBLP, ERIC."
+        keywords="VIT publication requirements, VIT accepted indexing, SCI Scopus VIT, IEEE Xplore VIT, PhD publication VIT, Vellore Institute of Technology journals"
+        faqs={faqs}
+        url="/service/vit-university-paper-publication-services"
+      />
       <SubSiderbar />
-    <section className="phd-guidance-container">
-      <h1 className="title">VIT University Paper Publication Services</h1>
+      <section className="phd-guidance-container">
+        <h1 className="title">VIT University Paper Publication Services</h1>
 
-      <p>
-        VIT University Vellore, now known as Vellore Institute of Technology (VIT), encourages the publication of
-        research papers in reputed, indexed journals. While exact requirements may differ by department, these
-        are the most commonly accepted indexing databases affiliated with VIT standards:
-      </p>
+        <p>
+          VIT University Vellore, now known as Vellore Institute of Technology (VIT), encourages the publication of
+          research papers in reputed, indexed journals. While exact requirements may differ by department, these
+          are the most commonly accepted indexing databases affiliated with VIT standards:
+        </p>
 
-      <ol>
-        <li>
-          <strong>SCI (Science Citation Index):</strong> Maintained by Web of Science, SCI journals are recognized
-          for high-quality, impactful research across scientific fields.
-        </li>
-        <li>
-          <strong>Scopus:</strong> A multidisciplinary citation database widely accepted for academic indexing.
-        </li>
-        <li>
-          <strong>IEEE Xplore:</strong> Ideal for papers in engineering, technology, and computer science disciplines.
-        </li>
-        <li>
-          <strong>PubMed:</strong> Recommended for life sciences and medical research papers.
-        </li>
-        <li>
-          <strong>Emerging Sources Citation Index (ESCI):</strong> Journals under evaluation for SCI inclusion,
-          still considered credible.
-        </li>
-        <li>
-          <strong>ACM Digital Library:</strong> Excellent for computer science and information technology research.
-        </li>
-        <li>
-          <strong>INSPEC:</strong> Valuable for physics, electrical engineering, and computing disciplines.
-        </li>
-        <li>
-          <strong>DBLP:</strong> Popular in computer science, especially for database research.
-        </li>
-        <li>
-          <strong>ERIC (Education Resources Information Center):</strong> Best suited for education-related research.
-        </li>
-        <li>
-          <strong>Google Scholar:</strong> While not a traditional indexer, it's widely used for discovery and
-          visibility of research work.
-        </li>
-      </ol>
+        <ol>
+          <li>
+            <strong>SCI (Science Citation Index):</strong> Maintained by Web of Science, SCI journals are recognized
+            for high-quality, impactful research across scientific fields.
+          </li>
+          <li>
+            <strong>Scopus:</strong> A multidisciplinary citation database widely accepted for academic indexing.
+          </li>
+          <li>
+            <strong>IEEE Xplore:</strong> Ideal for papers in engineering, technology, and computer science disciplines.
+          </li>
+          <li>
+            <strong>PubMed:</strong> Recommended for life sciences and medical research papers.
+          </li>
+          <li>
+            <strong>Emerging Sources Citation Index (ESCI):</strong> Journals under evaluation for SCI inclusion,
+            still considered credible.
+          </li>
+          <li>
+            <strong>ACM Digital Library:</strong> Excellent for computer science and information technology research.
+          </li>
+          <li>
+            <strong>INSPEC:</strong> Valuable for physics, electrical engineering, and computing disciplines.
+          </li>
+          <li>
+            <strong>DBLP:</strong> Popular in computer science, especially for database research.
+          </li>
+          <li>
+            <strong>ERIC (Education Resources Information Center):</strong> Best suited for education-related research.
+          </li>
+          <li>
+            <strong>Google Scholar:</strong> While not a traditional indexer, it's widely used for discovery and
+            visibility of research work.
+          </li>
+        </ol>
 
-      <p>
-        Before selecting a journal for submission, it's crucial to verify the indexing status of the journal through the respective database's official website. Additionally, consider discussing with your advisors, mentors, or colleagues to get insights into the most suitable indexing options for your specific field of research.
-      </p>
+        <p>
+          Before selecting a journal for submission, it's crucial to verify the indexing status of the journal through the respective database's official website. Additionally, consider discussing with your advisors, mentors, or colleagues to get insights into the most suitable indexing options for your specific field of research.
+        </p>
 
-      <p>
-       Remember that the quality and significance of your research are paramount, regardless of the indexing database. Choose a journal that aligns with your research area and provides the best platform to showcase your work to the relevant academic community.
-      </p>
-         <section className="servicefaq-section">
-  <h2>📘 FAQs on Annexure Journal Publications</h2>
-  <div className="faq-items">
-    {faqs.map((faq, index) => (
-      <details key={index}>
-        <summary>{faq.question}</summary>
-        <p>{faq.answer}</p>
-      </details>
-    ))}
-  </div>
-
-  {/* Proper way to include JSON-LD schema in React */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      })
-    }}
-  />
-</section>
-    </section>
+        <p>
+          Remember that the quality and significance of your research are paramount, regardless of the indexing database. Choose a journal that aligns with your research area and provides the best platform to showcase your work to the relevant academic community.
+        </p>
+        
+        <section className="servicefaq-section">
+          <h2>📘 FAQs on VIT University Publications</h2>
+          <div className="faq-items">
+            {faqs.map((faq, index) => (
+              <details key={index}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      </section>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What is Post-Quantum Cryptography (PQC)?",
@@ -27,6 +27,13 @@ const faqs = [
 const PostQuantumCryptographyProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="Post-Quantum Cryptography IEEE Projects | Lattice, Hash, Code-Based PQC | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) post-quantum cryptography projects on lattice-based, hash-based, and hybrid PQC for IoT, embedded, WSN, 5G/6G, and blockchain systems with FPGA, ARM, and OQS tools."
+        keywords="Post-Quantum Cryptography in Electronics, Quantum-Safe Cryptography Projects, Lattice-Based PQC, Hash-Based PQC, Post-Quantum Cryptography IoT, FPGA PQC Implementation, Secure Communication PQC Projects, PQC Wireless Sensor Networks, Hybrid PQC Protocols, B.Tech PQC Projects, M.Tech PQC Research, Ph.D. Post-Quantum Cryptography, IEEE PQC Projects, Narpavi Research Institute PQC"
+        url="/department/cryptography-security/post-quantum-cryptography"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -196,12 +203,14 @@ const PostQuantumCryptographyProject = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
+  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -388,7 +388,7 @@ import GeotechnicalEngineering from './Civil/GeotechnicalEngineering'
 import RemoteSensingGIS from './Civil/RemoteSensingGIS'
         //sub
         import GISbasedUrbanPlanning from './Civil/RemoteSensingGIS/GISbasedUrbanPlanning'
-        //import RemoteSensingforDisaster from './Civil/RemoteSensingGIS/RemoteSensingforDisaster'
+        import RemoteSensingforDisaster from './Civil/RemoteSensingGIS/RemoteSensingforDisaster'
 
 import StructuralEngineering from './Civil/StructuralEngineering'    
         //sub 
@@ -481,7 +481,6 @@ import IndustrialProductionOptimization from './Mechanical/IndustrialProductionO
         import SmartFactorySystems from './Mechanical/IndustrialProductionOptimization/SmartFactorySystems'
         import CostTimeOptimization from './Mechanical/IndustrialProductionOptimization/CostTimeOptimization'
 
-import Flip from "./flip"
 // import Header from './Header'
 import Design from './pages/Design';
 import Footer from './Footer';
@@ -489,6 +488,66 @@ import Departments from './pages/DepartmentList';
 import SCIReviewGuide from './LeadingResearchServices/SubReviewAriticleWriting/SCIReviewGuide';
 import ScopusReviewGuide from './LeadingResearchServices/SubReviewAriticleWriting/ScopusReviewGuide';
 import SystematicReviewGuide from './LeadingResearchServices/SubReviewAriticleWriting/SystematicReviewGuide';
+import EEEDistributedGenerationIntegrationProjectDevelopmentCenter from './EEE/PowerSystem/DistributedGenerationIntegration';
+import EEEFACTSPowerSystemsProjectDevelopmentCenter from './EEE/PowerSystem/FactsDevicesPowerSystems';
+import EEEPowerSystemProtectionRelaysProjectDevelopmentCenter from './EEE/PowerSystem/PowerSystemProtectionRelays';
+import EEEPowerSystemStabilityControlProjectDevelopmentCenter from './EEE/PowerSystem/PowerSystemStabilityControl';
+import EEEAdvancedDrivesControllersProjectDevelopmentCenter from './EEE/ElectricalMachines/AdvancedDrivesControllers';
+import EEEConditionMonitoringMachinesProjectDevelopmentCenter from './EEE/ElectricalMachines/ConditionMonitoringMachines';
+import EEEEnergyEfficientMotorsProjectDevelopmentCenter from './EEE/ElectricalMachines/EnergyEfficientMotors';
+import EEEFaultDiagnosisMotorsGeneratorsProjectDevelopmentCenter from './EEE/ElectricalMachines/FaultDiagnosisMotors';
+import EEELossMinimizationTechniquesProjectDevelopmentCenter from './EEE/ElectricalMachines/LossMinimizationTechniques';
+import EEESpecialElectricalMachinesProjectDevelopmentCenter from './EEE/ElectricalMachines/SpecialElectricalMachines';
+import EEEDcDcConvertersApplicationsProjectDevelopmentCenter from './EEE/PowerElectronics/DCConvertersApp';
+import EEEMultilevelInvertersProjectDevelopmentCenter from './EEE/PowerElectronics/MultilevelInverters';
+import EEEPowerElectronicControllersRenewableEnergyProjectDevelopmentCenter from './EEE/PowerElectronics/PowerElectronicControllers';
+import EEEPowerFactorCorrectionCircuitsProjectDevelopmentCenter from './EEE/PowerElectronics/PowerFactorCorrection';
+import EEESolidStateDrivesProjectDevelopmentCenter from './EEE/PowerElectronics/SolidStateDrives';
+import EEEWirelessPowerTransferCircuitsProjectDevelopmentCenter from './EEE/PowerElectronics/WirelessPowerTransfer';
+import EEEBiomassFuelCellTechnologiesProjectDevelopmentCenter from './EEE/RenewableEnergySystems/BiomassFuelCell';
+import EEEEnergyStorageRenewableIntegrationProjectDevelopmentCenter from './EEE/RenewableEnergySystems/EnergyStorageRenewable';
+import EEEHybridRenewableEnergySystemsProjectDevelopmentCenter from './EEE/RenewableEnergySystems/HybridRenewableEnergy';
+import EEEGridIntegrationOfRenewablesProjectDevelopmentCenter from './EEE/RenewableEnergySystems/GridIntegrationRenewables';
+import EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter from './EEE/EmbeddedSystems/ARM_PIC_AVRMicrocontroller';
+import EEEAutomotiveEmbeddedSystemsProjectDevelopmentCenter from './EEE/EmbeddedSystems/AutomotiveEmbeddedSystems';
+import EEEEmbeddedRoboticsProjectDevelopmentCenter from './EEE/EmbeddedSystems/EmbeddedSystemsRobotics';
+import EEEFpgaControlApplicationsProjectDevelopmentCenter from './EEE/EmbeddedSystems/FPGABasedControl';
+import EEEIoTEmbeddedHardwareDesignProjectDevelopmentCenter from './EEE/EmbeddedSystems/IoTEmbedded';
+import EEERtosProjectDevelopmentCenter from './EEE/EmbeddedSystems/RealTimeOperatingSystems';
+import EEEGISProjectDevelopmentCenter from './EEE/HighVoltageEngineering/GasInsulatedSubstations';
+import EEEHighVoltageTestingEquipmentProjectDevelopmentCenter from './EEE/HighVoltageEngineering/HighVoltageTestingEquipment';
+import EEEHVDCTransmissionSystemsProjectDevelopmentCenter from './EEE/HighVoltageEngineering/HVDCTransmissionSystems';
+import EEEInsulationMaterialsTechniquesProjectDevelopmentCenter from './EEE/HighVoltageEngineering/InsulationMaterialsTechniques';
+import EEEOvervoltageSurgeProtectionProjectDevelopmentCenter from './EEE/HighVoltageEngineering/OvervoltageSurgeProtection';
+import EEEPartialDischargeAnalysisProjectDevelopmentCenter from './EEE/HighVoltageEngineering/PartialDischargeAnalysis';
+import EEECybersecuritySmartGridsProjectDevelopmentCenter from './EEE/SmartAndMicrogrid/CybersecuritySmartGrids';
+import EEEEVChargingMicrogridsProjectDevelopmentCenter from './EEE/SmartAndMicrogrid/Electric VehicleChargingMicrogrids';
+import EEEIntegrationDistributedGenerationProjectDevelopmentCenter from './EEE/SmartAndMicrogrid/IntegrationDistributedGeneration';
+import EEEMicrogridEnergyManagementProjectDevelopmentCenter from './EEE/SmartAndMicrogrid/MicrogridEnergyManagement';
+import EEERealtimeMonitoringSCADAProjectDevelopmentCenter from './EEE/SmartAndMicrogrid/RealTimeMonitoringSCADA';
+import EEESmartMeteringDemandResponseProjectDevelopmentCenter from './EEE/SmartAndMicrogrid/SmartMeteringDemand';
+import EEEAdaptiveRobustControlProjectDevelopmentCenter from './EEE/ControlSystems/AdaptiveRobustControl';
+import EEEIntelligentControlAiMlProjectDevelopmentCenter from './EEE/ControlSystems/IntelligentControlAIandML';
+import EEENonlinearControlSystemsProjectDevelopmentCenter from './EEE/ControlSystems/NonlinearControlSystems';
+import EEEOptimalControlSystemsProjectDevelopmentCenter from './EEE/ControlSystems/OptimalControlSystems';
+import EEEPidAdvancedControllersProjectDevelopmentCenter from './EEE/ControlSystems/PIDandAdvancedControllers';
+import EEEProcessControlIndustriesProjectDevelopmentCenter from './EEE/ControlSystems/ProcessControlIndustries';
+import EEEDcsProjectDevelopmentCenter from './EEE/IndustrialAutomation/DistributedControlSystems';
+import EEEHmiProjectDevelopmentCenter from './EEE/IndustrialAutomation/HumanMachineInterface';
+import EEEIndustrialIiotApplicationsProjectDevelopmentCenter from './EEE/IndustrialAutomation/IndustrialIoTApplications';
+import EEEPlcScadaSystemsProjectDevelopmentCenter from './EEE/IndustrialAutomation/PLCAndSCADASystems';
+import EEEPredictiveMaintenanceProjectDevelopmentCenter from './EEE/IndustrialAutomation/PredictiveMaintenanceSystems';
+import EEERpaProjectDevelopmentCenter from './EEE/IndustrialAutomation/RoboticProcessAutomation';
+import EEEBmsProjectDevelopmentCenter from './EEE/ElectricVehicles/BatteryManagementSystems';
+import EEEEvChargingInfrastructureProjectDevelopmentCenter from './EEE/ElectricVehicles/EVChargingInfrastructure';
+import EeeEvMotorDriveSystemsProjectDevelopmentCenter from './EEE/ElectricVehicles/EVMotorDriveSystems';
+import EeeHevProjectDevelopmentCenter from './EEE/ElectricVehicles/HybridElectricVehicles';
+import EEEPowerElectronicsEvsProjectDevelopmentCenter from './EEE/ElectricVehicles/PowerElectronicsforEVs';
+import EEERegenerativeBrakingSystemsProjectDevelopmentCenter from './EEE/ElectricVehicles/RegenerativeBrakingSystems';
+
+import Design2 from "./Design2"
+
+import ServicesCategories from "./pages/ServiceCategories"
 
 function MainPage() {
   return(
@@ -526,7 +585,7 @@ function MainPage() {
         <Route path="/vinayaka-missions" element={<VinayakaMission />} />
         <Route path="/prist-university" element={<PonnaiyahRamajayam />} />
         <Route path="/periyar-maniammai-university" element={<PeriyarManiammai />} />
-        <Route path="/st.peter’s-institute" element={<StPeters />} />
+        <Route path="/st-peter’s-institute" element={<StPeters />} />
         <Route path="/sri-chandrasekharendra-saraswathi" element={<Srichandrasekharendra />} />
         <Route path="/karpagam-academy" element={<Karpagam />} />
         <Route path="/karunya" element={<Karunya />} />
@@ -538,7 +597,8 @@ function MainPage() {
         <Route path="/phd-application" element={<PhDApplication />} />
         <Route path="/phd-proposal" element={<Proposal />} />
         <Route path="/university-selection" element={<UniversitySelection />} />
-          {/* services */}
+
+         {/* services */}
         <Route path="/service/phd-admission-guidance" element={<PhDAdmissionGuidance />} />
         <Route path="/service/research-proposal-writing" element={<Researchproposalwriting />} />
         <Route path="/service/research-paper-writing" element={<Researchpaperwriting />} />
@@ -553,7 +613,7 @@ function MainPage() {
         <Route path="/service/phd-research-thesis-writing-services-help" element={<Phdresearchthesis />} />
         <Route path="/service/research-paper-publication-services-for-phd-students-from-srm-university" element={<Researchpaperforsrm />} />
         <Route path="/service/research-paper-publication-help-and-services" element={<Researchpaperpublication />} />
-        <Route path="/service/research-paper-publication-help-and-services" element={<Researchpapersathyabama />} />
+        <Route path="/service/research-paper-sathyabama" element={<Researchpapersathyabama />} />
         <Route path="/service/science-citation-indexed-sci-paper-publication-services" element={<Sciencecitationindexed />} />
         <Route path="/service/springer-conference-paper-publication-services" element={<Springerconferencepaper />} />
         <Route path="/service/vit-university-paper-publication-services" element={<VITuniversitypaper />} />
@@ -563,7 +623,7 @@ function MainPage() {
         <Route path="/research-proposal-services/trending-research-topics" element={<TrendingResearchTopics />} />
         <Route path="/research-proposal-services/research-proposal-for-funding" element={<ResearchFundingGuide />} />
         <Route path="/research-proposal-services/engineering-research-proposal-guide" element={<ProposalStepGuide />} />
-        {/* Leading research Services */}
+        {/* Leading research Services */} 
         <Route path="/review-article-writing" element={<ReviewArticleWriting />} />
                 <Route path="/review-ariticle-writing/engineering-literature-guide" element={<EngineeringLiteratureGuide />} />
                 <Route path="/review-ariticle-writing/medical-review-writing" element={<MedicalReviewWriting />} />
@@ -659,13 +719,13 @@ function MainPage() {
        <Route path="kerala/phd-admission-at-chinmaya-vishwa-vidyapeet" element={<CvvErnakulam />} />
       {/* telangana */}
         <Route path="telangana/phd-admission-in-university-of-hyderabad" element={<UniversityOfHyderabad />} />
-        <Route path="telangana/phd-admission-in-international-institute-of-information-technology-hyderabad" element={<IIITHyderabad />} />
-        <Route path="telangana/phd-admission-in-indian-institute-of-technology-hyderabad" element={<IITHyderabad />} />
+        <Route path="telangana/phd-admission-in-iiit-hyderabad" element={<IIITHyderabad />} />
+        <Route path="telangana/phd-admission-in-iit-hyderabad" element={<IITHyderabad />} />
         <Route path="telangana/phd-admission-in-kakatiya-university" element={<KakatiyaUniversity />} />
-        <Route path="telangana/phd-admission-in-jawaharlal-nehru-technological-university" element={<JNTHyderabad />} />
-        <Route path="telangana/phd-admission-in-national-institute-of-technology-warangal" element={<NITWarangal />} />
-        <Route path="telangana/phd-admission-in-icfai-foundation-for-higher-education-hyderabad" element={<IFHEHyderabad />} />
-        <Route path="telangana/phd-admission-in-mahatma-gandhi-university-nalgonda" element={<MGUNalgonda />} />
+        <Route path="telangana/phd-admission-in-jntu-hyderabad" element={<JNTHyderabad />} />
+        <Route path="telangana/phd-admission-in-nit-warangal" element={<NITWarangal />} />
+        <Route path="telangana/phd-admission-in-ifhe-hyderabad" element={<IFHEHyderabad />} />
+        <Route path="telangana/phd-admission-in-mgu-nalgonda" element={<MGUNalgonda />} />
         <Route path="telangana/phd-admission-in-satavahana-university" element={<SatavahanaUniversity />} />
         <Route path="telangana/phd-admission-in-palamuru-university" element={<PalamuruUniversity />} />
         <Route path="telangana/phd-admission-in-telangana-university" element={<TelanganaUniversity />} />
@@ -722,237 +782,309 @@ function MainPage() {
           
     {/* ECE */}
 <Route path="department/biomedical-electronics" element={<BiomedicalElectronicsProjectDevelopmentCenter />} />
-                <Route path="/1-1" element={<AIBiomedicalDiagnosticsProject />} />
-                <Route path="/1-2" element={<BiomedicalSignalAcquisitionProject />} />
-                <Route path="/1-3" element={<BrainComputerInterfaceProject />} />
-                <Route path="/1-4" element={<IoTEnabledHealthcareDevicesProject />} />
-                <Route path="/1-5" element={<ImplantableMedicalElectronicsProject />} />  
-                <Route path="/1-6" element={<WearableBiomedicalDevicesProject />} />
+                <Route path="/department/biomedical-electronics/ai-biomedical-diagnostics" element={<AIBiomedicalDiagnosticsProject />} />
+                <Route path="/department/biomedical-electronics/biomedical-signal-acquisition" element={<BiomedicalSignalAcquisitionProject />} />
+                <Route path="/department/biomedical-electronics/brain-computer-interface" element={<BrainComputerInterfaceProject />} />
+                <Route path="/department/biomedical-electronics/iot-enabled-healthcare-devices" element={<IoTEnabledHealthcareDevicesProject />} />
+                <Route path="/department/biomedical-electronics/implantable-medical-electronics" element={<ImplantableMedicalElectronicsProject />} />  
+                <Route path="/department/biomedical-electronics/wearable-biomedical-devices" element={<WearableBiomedicalDevicesProject />} />
 
-<Route path="department/communication-systems" element={<CommunicationSystemsProjectDevelopmentCenter />} />
-                <Route path="2-1" element={<ECE5G6GWirelessCommunication />} />
-                <Route path="2-2" element={<ECEErrorControlCoding />} />
-                <Route path="2-3" element={<ECEMIMOMassiveMIMOAntennaTechniques />} />
-                <Route path="2-4" element={<ECEOpticalFiberCommunication />} />
-                <Route path="2-5" element={<ECESoftwareDefinedRadio />} />
-                <Route path="2-6" element={<ECECognitiveRadioNetworks />} /> 
+<Route path="/department/communication-systems" element={<CommunicationSystemsProjectDevelopmentCenter />} />
+
+                <Route path="/department/communication-systems/5g-6g-wireless-communication" element={<ECE5G6GWirelessCommunication />} />
+                <Route path="/department/communication-systems/error-control-coding" element={<ECEErrorControlCoding />}/>
+                <Route path="/department/communication-systems/mimo-massive-mimo-antenna-techniques" element={<ECEMIMOMassiveMIMOAntennaTechniques />} />
+                <Route path="/department/communication-systems/optical-fiber-communication" element={<ECEOpticalFiberCommunication />} />
+                <Route path="/department/communication-systems/software-defined-radio" element={<ECESoftwareDefinedRadio />} />
+                <Route path="/department/communication-systems/cognitive-radio-networks" element={<ECECognitiveRadioNetworks />}/>
 
 <Route path="department/control-systems-robotics" element={<ControlSystemsAndRoboticsProjectDevelopmentCenter />} />
-               <Route path="3-1" element={<ECEAdaptiveNonlinearControlSystems />} />
-               <Route path="3-2" element={<ECEAIPoweredRoboticControlSystems />} />
-               <Route path="3-3" element={<ECEAutonomousRobotNavigationPathPlanning />} />
-               <Route path="3-4" element={<ECESwarmRoboticsMultiAgentSystems />} />
-               <Route path="3-5" element={<ECEControlCyberPhysicalSystems />} />
-               <Route path="3-6" element={<ECERoboticVisionSensorFusion />} />
+               <Route path="/department/control-systems-robotics/adaptive-nonlinear-control-systems" element={<ECEAdaptiveNonlinearControlSystems />} />
+               <Route path="/department/control-systems-robotics/ai-powered-robotic-control-systems" element={<ECEAIPoweredRoboticControlSystems />} />
+               <Route path="/department/control-systems-robotics/autonomous-robot-navigation-path-planning" element={<ECEAutonomousRobotNavigationPathPlanning />} />
+               <Route path="/department/control-systems-robotics/swarm-robotics-multi-agent-systems" element={<ECESwarmRoboticsMultiAgentSystems />} />
+               <Route path="/department/control-systems-robotics/control-cyber-physical-systems" element={<ECEControlCyberPhysicalSystems />} />
+               <Route path="/department/control-systems-robotics/robotic-vision-sensor-fusion" element={<ECERoboticVisionSensorFusion />} />
 
 <Route path="department/cryptography-security" element={<CryptographyAndSecurityProjectDevelopmentCenter />} />
-                <Route path="4-1" element={<BiometricSecuritySystems />} />
-                <Route path="4-2" element={<BlockchainSecureCommunication />} />
-                <Route path="4-3" element={<CryptographicAlgorithmsEmbedded />} />
-                <Route path="4-4" element={<SideChannelAttackResistance />} />
-                <Route path="4-5" element={<HardwareSecurityTrustedComputing />} />
-                <Route path="4-6" element={<PostQuantumCryptography />} />
+                <Route path="/department/cryptography-security/biometric-security-systems" element={<BiometricSecuritySystems />} />
+                <Route path="/department/cryptography-security/blockchain-secure-communication" element={<BlockchainSecureCommunication />} />
+                <Route path="/department/cryptography-security/cryptographic-algorithms-embedded" element={<CryptographicAlgorithmsEmbedded />} />
+                <Route path="/department/cryptography-security/side-channel-attack-resistance" element={<SideChannelAttackResistance />} />
+                <Route path="/department/cryptography-security/hardware-security-trusted-computing" element={<HardwareSecurityTrustedComputing />} />
+                <Route path="/department/cryptography-security/post-quantum-cryptography" element={<PostQuantumCryptography />} />
 
 <Route path="department/embedded-systems" element={<EmbeddedSystemsProjectDevelopmentCenter />} />
-                <Route path="5-1" element={<ECEARMRISCVSystem />} />
-                <Route path="5-2" element={<ECEEmbeddedSystemSecurityCryptography />} />
-                <Route path="5-3" element={<ECEEnergyEfficientEmbedded />} />
-                <Route path="5-4" element={<ECEIoTEnabledEmbeddedDevices />} />
-                <Route path="5-5" element={<ECEMachineLearningEmbeddedPlatforms />} />
-                <Route path="5-6" element={<ECERTOSinEmbeddedApplications />} />
+                <Route path="/department/embedded-systems/arm-risc-v-system" element={<ECEARMRISCVSystem />} />
+                <Route path="/department/embedded-systems/embedded-system-security-cryptography" element={<ECEEmbeddedSystemSecurityCryptography />} />
+                <Route path="/department/embedded-systems/energy-efficient-embedded" element={<ECEEnergyEfficientEmbedded />} />
+                <Route path="/department/embedded-systems/iot-enabled-embedded-devices" element={<ECEIoTEnabledEmbeddedDevices />} />
+                <Route path="/department/embedded-systems/machine-learning-embedded-platforms" element={<ECEMachineLearningEmbeddedPlatforms />} />
+                <Route path="/department/embedded-systems/rtos-in-embedded-applications" element={<ECERTOSinEmbeddedApplications />} />
 
 <Route path="department/iot-projects" element={<IoTProjectDevelopmentCenter />} />
-                <Route path="6-1" element={<ECEEdgeFogComputingIoT />} />
-                <Route path="6-2" element={<ECEIndustrialIoTIndustry4 />} />
-                <Route path="6-3" element={<ECEIoTPrecisionAgriculture />} />
-                <Route path="6-4" element={<ECEIoTHealthcareMonitoring />} />
-                <Route path="6-5" element={<ECESecureIoTArchitectures />} />
-                <Route path="6-6" element={<ECEIoTbasedSmartHome />} />
+                <Route path="/department/iot-projects/edge-fog-computing-iot" element={<ECEEdgeFogComputingIoT />} />
+                <Route path="/department/iot-projects/industrial-iot-industry-4" element={<ECEIndustrialIoTIndustry4 />} />
+                <Route path="/department/iot-projects/iot-precision-agriculture" element={<ECEIoTPrecisionAgriculture />} />
+                <Route path="/department/iot-projects/iot-healthcare-monitoring" element={<ECEIoTHealthcareMonitoring />} />
+                <Route path="/department/iot-projects/secure-iot-architectures" element={<ECESecureIoTArchitectures />} />
+                <Route path="department/iot-projects/iot-based-smart-home" element={<ECEIoTbasedSmartHome />} />
 
 <Route path="department/signal-processing" element={<SignalProcessingProjectDevelopmentCenter />} />
-                 <Route path="7-1" element={<ECEAdaptiveFilteringApplications />} />
-                 <Route path="7-2" element={<ECEAIDrivenSignalEnhancement />} />
-                 <Route path="7-3" element={<ECEBiomedicalSignalProcessing />} />
-                 <Route path="7-4" element={<ECECompressiveSensingSignalProcessing />} />
-                 <Route path="7-5" element={<ECEDigitalImageVideoSignalProcessing />} />
-                 <Route path="7-6" element={<ECESpeechAudioSignalProcessing />} />
+                 <Route path="/department/signal-processing/adaptive-filtering-applications" element={<ECEAdaptiveFilteringApplications />} />
+                 <Route path="/department/signal-processing/ai-driven-signal-enhancement" element={<ECEAIDrivenSignalEnhancement />} />
+                 <Route path="/department/signal-processing/biomedical-signal-processing" element={<ECEBiomedicalSignalProcessing />} />
+                 <Route path="/department/signal-processing/compressive-sensing-signal-processing" element={<ECECompressiveSensingSignalProcessing />} />
+                 <Route path="/department/signal-processing/digital-image-video-signal-processing" element={<ECEDigitalImageVideoSignalProcessing />} />
+                 <Route path="/department/signal-processing/speech-audio-signal-processing" element={<ECESpeechAudioSignalProcessing />} />
 
 <Route path="department/vlsi-design" element={<VLSIDesignAndEmbeddedSystemsProjectDevelopmentCenter />} />
-                 <Route path="8-1" element={<ECELowPowerVLSI />} />
-                 <Route path="8-2" element={<ECEFPGASystemPrototyping />} />
-                 <Route path="8-3" element={<ECEEmbeddedVLSISignalProcessing />} />
-                 <Route path="8-4" element={<ECEHardwareSoftwareCoDesign />} />
-                 <Route path="8-5" element={<ECENanoelectronicsEmergingDevices />} />
-                 <Route path="8-6" element={<ECEVLSIAI />} />
+                 <Route path="/department/vlsi-design/low-power-vlsi" element={<ECELowPowerVLSI />} />
+                 <Route path="/department/vlsi-design/fpga-system-prototyping" element={<ECEFPGASystemPrototyping />} />
+                 <Route path="/department/vlsi-design/embedded-vlsi-signal-processing" element={<ECEEmbeddedVLSISignalProcessing />} />
+                 <Route path="/department/vlsi-design/hardware-software-co-design" element={<ECEHardwareSoftwareCoDesign />} />
+                 <Route path="/department/vlsi-design/nanoelectronics-emerging-devices" element={<ECENanoelectronicsEmergingDevices />} />
+                 <Route path="/department/vlsi-design/vlsi-ai" element={<ECEVLSIAI />} />
 
 <Route path="department/wireless-sensor-networks" element={<WirelessSensorNetworksProjectDevelopmentCenter />} />
-                <Route path="9-1" element={<ECEEnergyEfficientRoutingWSN />} />
-                <Route path="9-2" element={<ECESecureDataTransmissionWSN />} />
-                <Route path="9-3" element={<ECEIoTWSN />} />
-                <Route path="9-4" element={<ECEWSNEnvironmentalDisasterMonitoring />} />
-                <Route path="9-5" element={<ECEUnderwaterWirelessSensorNetworks />} />
-                <Route path="9-6" element={<ECEAiBasedWSNOptimizationProject />} />
+                <Route path="department/wireless-sensor-networks/energy-eff-routing-wsn" element={<ECEEnergyEfficientRoutingWSN />} />
+                <Route path="department/wireless-sensor-networks/secure-data-transmission-wsn" element={<ECESecureDataTransmissionWSN />} />
+                <Route path="department/wireless-sensor-networks/iot-wsn" element={<ECEIoTWSN />} />
+                <Route path="department/wireless-sensor-networks/environmental-disaster-monitoring" element={<ECEWSNEnvironmentalDisasterMonitoring />} />
+                <Route path="department/wireless-sensor-networks/underwater-wireless-sensor-networks" element={<ECEUnderwaterWirelessSensorNetworks />} />
+                <Route path="department/wireless-sensor-networks/ai-based-wsn-optimization" element={<ECEAiBasedWSNOptimizationProject />} />
 
 <Route path="department/satellite-communication" element={<SatelliteSpaceCommunicationProjectDevelopmentCenter />} />
-               <Route path="10-1" element={<AntennaSystemsSpaceApplications />} />
-               <Route path="10-2" element={<CubeSatNanosatellite />} />
-               <Route path="10-3" element={<DeepSpaceCommunication />} />
-               <Route path="10-4" element={<GnssProject />} />
-               <Route path="10-5" element={<SatelliteCommunication5G6G />} />
-               <Route path="10-6" element={<SatelliteIoTApplications />} />
+               <Route path="/department/satellite-communication/antenna-systems-space-applications" element={<AntennaSystemsSpaceApplications />} />
+               <Route path="/department/satellite-communication/cubesat-nanosatellite" element={<CubeSatNanosatellite />} />
+               <Route path="/department/satellite-communication/deep-space-communication" element={<DeepSpaceCommunication />} />
+               <Route path="/department/satellite-communication/gnss-project" element={<GnssProject />} />
+               <Route path="/department/satellite-communication/satellite-communication-5g-6g" element={<SatelliteCommunication5G6G />} />
+               <Route path="/department/satellite-communication/satellite-iot-applications" element={<SatelliteIoTApplications />} />
 
 <Route path="department/antenna-design" element={<AntennasProjectDevelopmentCenter />} />
-              <Route path="11-1" element={<AntennasIoTWearableDevices />} />
-              <Route path="11-2" element={<MimoAntennaSystemsProject />} />
-              <Route path="11-3" element={<AntennaMiniaturizationProject />} />
-              <Route path="11-4" element={<ReconfigurableAntennaDesignProject />} />
-              <Route path="11-5" element={<SatelliteSpaceAntennaTechProject />} />
-              <Route path="11-6" element={<SmartAntennas5G6G />} />
+              <Route path="/department/antenna-design/iot-wearable-antennas" element={<AntennasIoTWearableDevices />} />
+              <Route path="/department/antenna-design/mimo-antenna-systems" element={<MimoAntennaSystemsProject />} />
+              <Route path="/department/antenna-design/antenna-miniaturization" element={<AntennaMiniaturizationProject />} />
+              <Route path="/department/antenna-design/reconfigurable-antenna-design" element={<ReconfigurableAntennaDesignProject />} />
+              <Route path="/department/antenna-design/satellite-space-antenna-technology" element={<SatelliteSpaceAntennaTechProject />} />
+              <Route path="/department/antenna-design/smart-antennas-5g-6g" element={<SmartAntennas5G6G />} />
         
         {/*EEE  */}
 <Route path="department/power-systems" element={<EEEPowerSystemsProjectDevelopmentCenter />} />
-                 <Route path="eee1-1-1" element={<EEELoadFlowAnalysis />} />
+                 <Route path="/department/power-systems/distributed-generation-integration" element={<EEEDistributedGenerationIntegrationProjectDevelopmentCenter />} />
+                 <Route path="/department/power-systems/facts-power-systems" element={<EEEFACTSPowerSystemsProjectDevelopmentCenter />} />
+                 <Route path="/department/power-systems/load-flow-analysis" element={<EEELoadFlowAnalysis />} />
+                 <Route path="/department/power-systems/power-system-protection-relays" element={<EEEPowerSystemProtectionRelaysProjectDevelopmentCenter />} />
+                 <Route path="/department/power-systems/power-system-stability-control" element={<EEEPowerSystemStabilityControlProjectDevelopmentCenter />} />
 
 <Route path="department/electrical-machines" element={<EEEElectricalMachinesProjectDevelopmentCenter />} />
+                <Route path="department/electrical-machines/electrical-machines" element={<EEEAdvancedDrivesControllersProjectDevelopmentCenter />} />
+                <Route path="department/electrical-machines/condition-monitoring-machines" element={<EEEConditionMonitoringMachinesProjectDevelopmentCenter />} />
+                <Route path="department/electrical-machines/energy-efficient-motors" element={<EEEEnergyEfficientMotorsProjectDevelopmentCenter />} />
+                <Route path="department/electrical-machines/fault-diagnosis-motor-generators" element={<EEEFaultDiagnosisMotorsGeneratorsProjectDevelopmentCenter />} />
+                <Route path="department/electrical-machines/loss-minimization-techniques" element={<EEELossMinimizationTechniquesProjectDevelopmentCenter />} />
+                <Route path="department/electrical-machines/special-electrical-machines" element={<EEESpecialElectricalMachinesProjectDevelopmentCenter />} />
+              
 <Route path="department/power-electronics" element={<EEEPowerElectronicsProjectDevelopmentCenter />} />
+                <Route path="department/power-electronics/dc-dc-converters" element={<EEEDcDcConvertersApplicationsProjectDevelopmentCenter />} />
+                <Route path="department/power-electronics/multilevel-inverters" element={<EEEMultilevelInvertersProjectDevelopmentCenter />} />
+                <Route path="department/power-electronics/renewable-energy-controllers" element={<EEEPowerElectronicControllersRenewableEnergyProjectDevelopmentCenter />} />
+                <Route path="department/power-electronics/power-factor-correction" element={<EEEPowerFactorCorrectionCircuitsProjectDevelopmentCenter />} />
+                <Route path="department/power-electronics/solid-state-drives" element={<EEESolidStateDrivesProjectDevelopmentCenter />} />
+                <Route path="department/power-electronics/wireless-power-transfer       " element={<EEEWirelessPowerTransferCircuitsProjectDevelopmentCenter />} />
+
 <Route path="department/renewable-energy-systems" element={<EEERenewableEnergySystemsProjectDevelopmentCenter />} />
-                 <Route path="eee4-4-1" element={<EEESolarPhotovoltaicSystems />} />
-                 <Route path="eee4-4-2" element={<EEEWindEnergyConversionSystems   />} />
+                 <Route path="/department/renewable-energy-systems/solar-photovoltaic" element={<EEESolarPhotovoltaicSystems />} />
+                 <Route path="/department/renewable-energy-systems/wind-energy-conversion" element={<EEEWindEnergyConversionSystems />} />
+                 <Route path="/department/renewable-energy-systems/biomass-fuel-cell" element={<EEEBiomassFuelCellTechnologiesProjectDevelopmentCenter />} />
+                 <Route path="/department/renewable-energy-systems/energy-storage-integration" element={<EEEEnergyStorageRenewableIntegrationProjectDevelopmentCenter/>} />
+                 <Route path="/department/renewable-energy-systems/hybrid-renewable-systems" element={<EEEHybridRenewableEnergySystemsProjectDevelopmentCenter />} />
+                 <Route path="/department/renewable-energy-systems/grid-integration-renewables" element={<EEEGridIntegrationOfRenewablesProjectDevelopmentCenter />} />
 
 <Route path="department/embedded-systems-electrical" element={<EEEEmbeddedSystemsProjectDevelopmentCenter />} />
+                <Route path="department/embedded-systems-electrical/arm-pic-avr-microcontroller" element={<EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter />} />
+                <Route path="department/embedded-systems-electrical/automotive-embedded-systems" element={<EEEAutomotiveEmbeddedSystemsProjectDevelopmentCenter />} />
+                <Route path="department/embedded-systems-electrical/embedded-robotics" element={<EEEEmbeddedRoboticsProjectDevelopmentCenter />} />
+                <Route path="department/embedded-systems-electrical/fpga-control-applications" element={<EEEFpgaControlApplicationsProjectDevelopmentCenter />} />
+                <Route path="department/embedded-systems-electrical/iot-embedded-hardware-design" element={<EEEIoTEmbeddedHardwareDesignProjectDevelopmentCenter />} />
+                <Route path="department/embedded-systems-electrical/rtos" element={<EEERtosProjectDevelopmentCenter />} />
+
 <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+                <Route path="department/high-voltage-engineering/gis" element={<EEEGISProjectDevelopmentCenter />} />
+                <Route path="department/high-voltage-engineering/high-voltage-testing" element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />} />
+                <Route path="department/high-voltage-engineering/hvdc-transmission" element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />} />
+                <Route path="department/high-voltage-engineering/insulation-materials" element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />} />
+                <Route path="department/high-voltage-engineering/overvoltage-surge-protection" element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />} />
+                <Route path="department/high-voltage-engineering/partial-discharge-analysis" element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />} />
+
 <Route path="department/smart-grid-microgrid" element={<EEESmartGridMicrogridProjectDevelopmentCenter />} />
+                <Route path="department/smart-grid-microgrid/cybersecurity-smart-grids" element={<EEECybersecuritySmartGridsProjectDevelopmentCenter />} />
+                <Route path="department/smart-grid-microgrid/ev-charging-microgrids" element={<EEEEVChargingMicrogridsProjectDevelopmentCenter />} />
+                <Route path="department/smart-grid-microgrid/integration-distributed-generation" element={<EEEIntegrationDistributedGenerationProjectDevelopmentCenter />} />
+                <Route path="department/smart-grid-microgrid/microgrid-energy-management" element={<EEEMicrogridEnergyManagementProjectDevelopmentCenter />} />
+                <Route path="department/smart-grid-microgrid/real-time-monitoring-scada" element={<EEERealtimeMonitoringSCADAProjectDevelopmentCenter />} />
+                <Route path="department/smart-grid-microgrid/smart-metering-demand-response" element={<EEESmartMeteringDemandResponseProjectDevelopmentCenter />} />
+
 <Route path="department/control-systems-electrical" element={<EEEControlSystemsProjectDevelopmentCenter />} />
+                <Route path="department/control-systems-electrical/adaptive-robust-control" element={<EEEAdaptiveRobustControlProjectDevelopmentCenter />} />
+                <Route path="department/control-systems-electrical/intelligent-control-ai-ml" element={<EEEIntelligentControlAiMlProjectDevelopmentCenter />} />
+                <Route path="department/control-systems-electrical/nonlinear-control-systems" element={<EEENonlinearControlSystemsProjectDevelopmentCenter />} />
+                <Route path="department/control-systems-electrical/optimal-control-systems" element={<EEEOptimalControlSystemsProjectDevelopmentCenter />} />
+                <Route path="department/control-systems-electrical/pid-advanced-controllers" element={<EEEPidAdvancedControllersProjectDevelopmentCenter />} />
+                <Route path="department/control-systems-electrical/process-control-industries" element={<EEEProcessControlIndustriesProjectDevelopmentCenter />} />
+
 <Route path="department/industrial-automation" element={<EEEIndustrialAutomationProjectDevelopmentCenter />} />
+                <Route path="department/industrial-automation/dcs" element={<EEEDcsProjectDevelopmentCenter />} />
+                <Route path="department/industrial-automation/hmi" element={<EEEHmiProjectDevelopmentCenter />} />
+                <Route path="department/industrial-automation/iiot-applications" element={<EEEIndustrialIiotApplicationsProjectDevelopmentCenter />} />
+                <Route path="department/industrial-automation/plc-scada" element={<EEEPlcScadaSystemsProjectDevelopmentCenter />} />
+                <Route path="department/industrial-automation/predictive-maintenance" element={<EEEPredictiveMaintenanceProjectDevelopmentCenter />} />
+                <Route path="department/industrial-automation/rpa" element={<EEERpaProjectDevelopmentCenter />} />
+
 <Route path="department/electric-vehicles" element={<EEEElectricVehiclesProjectDevelopmentCenter />} />
+                <Route path="department/electric-vehicles/bms" element={<EEEBmsProjectDevelopmentCenter />} />
+                <Route path="department/electric-vehicles/ev-charging-infrastructure" element={<EEEEvChargingInfrastructureProjectDevelopmentCenter />} />
+                <Route path="department/electric-vehicles/ev-motor-drive-systems" element={<EeeEvMotorDriveSystemsProjectDevelopmentCenter />} />
+                <Route path="department/electric-vehicles/hev" element={<EeeHevProjectDevelopmentCenter />} />
+                <Route path="department/electric-vehicles/power-electronics-evs" element={<EEEPowerElectronicsEvsProjectDevelopmentCenter />} />
+                <Route path="department/electric-vehicles/regenerative-braking-systems" element={<EEERegenerativeBrakingSystemsProjectDevelopmentCenter />} />
+
 <Route path="department/ai-electrical-engineering" element={<EEEArtificialIntelligenceProjectDevelopmentCenter />} />
-                <Route path="eee11-1" element={<EEEAiPowerLoadForecasting />} />
-                <Route path="eee11-2" element={<EEEMachineLearningforfault />} />
-                <Route path="eee11-3" element={<EEEDeepLearninginRenewable />} />
-                <Route path="eee11-4" element={<EEEAIinsmartGrids />} />
-                <Route path="eee11-5" element={<EEENeuralNetworksforMotor />} />
-                <Route path="eee11-6" element={<EEEAIbasedEnergyOptimization />} />      
+                <Route path="/department/ai-electrical-engineering/power-load-forecasting" element={<EEEAiPowerLoadForecasting />} />
+                <Route path="/department/ai-electrical-engineering/machine-learning-fault-detection" element={<EEEMachineLearningforfault />} />
+                <Route path="/department/ai-electrical-engineering/deep-learning-renewables" element={<EEEDeepLearninginRenewable />} />
+                <Route path="/department/ai-electrical-engineering/ai-smart-grids" element={<EEEAIinsmartGrids />} />
+                <Route path="/department/ai-electrical-engineering/neural-networks-motor" element={<EEENeuralNetworksforMotor />} />
+                <Route path="/department/ai-electrical-engineering/ai-energy-optimization" element={<EEEAIbasedEnergyOptimization />} />      
 
 <Route path="department/iot-electrical-systems" element={<EEEIoTProjectDevelopmentCenter />} />
-                <Route path="eee12-1" element={<EEEIoTforSmartGrids />} />    
-                <Route path="eee12-2" element={<EEEIoTRenewableEnergy />} />
-                <Route path="eee12-3" element={<EEEIoTPredictiveMaintenance />} />
-                <Route path="eee12-4" element={<EEESmartHomeAutomation />} />
-                <Route path="eee12-5" element={<EEEIoTEnabledSmartMeters />} />
-                <Route path="eee12-6" element={<EEEIoTBasedHealthMonitoring />} />
+                <Route path="/department/iot-electrical-systems/smart-grids" element={<EEEIoTforSmartGrids />} />    
+                <Route path="/department/iot-electrical-systems/renewable-energy" element={<EEEIoTRenewableEnergy />} />
+                <Route path="/department/iot-electrical-systems/predictive-maintenance" element={<EEEIoTPredictiveMaintenance />} />
+                <Route path="/department/iot-electrical-systems/smart-home-automation" element={<EEESmartHomeAutomation />} />
+                <Route path="/department/iot-electrical-systems/smart-meters" element={<EEEIoTEnabledSmartMeters />} />
+                <Route path="/department/iot-electrical-systems/health-monitoring" element={<EEEIoTBasedHealthMonitoring />} />
 
 <Route path="department/energy-management-systems" element={<EEEEnergyManagementSystemsProjectDevelopmentCenter />} />
-                <Route path="eee13-1" element={<EEESmartBuildingEnergy />} />   
-                <Route path="eee13-2" element={<EEEDemandSideManagement />} /> 
-                <Route path="eee13-3" element={<EEEEnergyEfficiencyinIndustries />} />
-                <Route path="eee13-4" element={<EEERenewableEnergyScheduling />} />
-                <Route path="eee13-5" element={<EEEHomeEnergyManagement />} />
-                <Route path="eee13-6" element={<EEEDataAnalyticsforEnergySavings />} />
+                <Route path="/department/energy-management-systems/smart-building-energy" element={<EEESmartBuildingEnergy />} />   
+                <Route path="/department/energy-management-systems/demand-side-management" element={<EEEDemandSideManagement />} /> 
+                <Route path="/department/energy-management-systems/energy-efficiency-industries" element={<EEEEnergyEfficiencyinIndustries />} />
+                <Route path="/department/energy-management-systems/renewable-energy-scheduling" element={<EEERenewableEnergyScheduling />} />
+                <Route path="/department/energy-management-systems/home-energy-management" element={<EEEHomeEnergyManagement />} />
+                <Route path="/department/energy-management-systems/data-analytics-energy-savings" element={<EEEDataAnalyticsforEnergySavings />} />
      {/* Civil */}
 <Route path="department/construction-project-management" element={<ConstructionProjectManagement />} />
-                <Route path="civil-1-1" element={<SmartConstructionTechniques />} />
-                <Route path="civil-1-2" element={<CostOptimizationinProjects />} />
-                <Route path="civil-1-3" element={<ProjectSchedulingPlanning />} />
+                <Route path="/department/construction-project-management/smart-construction-techniques" element={<SmartConstructionTechniques />} />
+                <Route path="/department/construction-project-management/cost-optimization-in-projects" element={<CostOptimizationinProjects />} />
+                <Route path="/department/construction-project-management/project-scheduling-planning" element={<ProjectSchedulingPlanning />} />
 
 <Route path="department/environmental-engineering" element={<EnvironmentalEngineering />} />
-                <Route path="civil-2-1" element={<WaterTreatmentRecycling />} />
-                <Route path="civil-2-2" element={<AirPollutionModeling />} />
-                <Route path="civil-2-3" element={<WasteManagementSystem />} />
+                <Route path="/department/environmental-engineering/water-treatment-recycling" element={<WaterTreatmentRecycling />} />
+                <Route path="/department/environmental-engineering/air-pollution-modeling" element={<AirPollutionModeling />} />
+                <Route path="/department/environmental-engineering/waste-management-system" element={<WasteManagementSystem />} />
 
-<Route path="department/geotechnical-engineering" element={<GeotechnicalEngineering />} />
-                <Route path="civil-3-1" element={<SoilStabilizationTechniques />} />
-                <Route path="civil-3-2" element={<FoundationDesign />} />
-                <Route path="civil-3-3" element={<SlopeStabilityAnalysis />} />
+<Route path="department/geotechnical-engineering" element={<GeotechnicalEngineering />}/>
+                 <Route path="/department/geotechnical-engineering/soil-stabilization-techniques" element={<SoilStabilizationTechniques />}/>
+                 <Route path="/department/geotechnical-engineering/foundation-design" element={<FoundationDesign />} />
+                 <Route path="/department/geotechnical-engineering/slope-stability-analysis" element={<SlopeStabilityAnalysis />}/>
 
 <Route path="department/remote-sensing-gis" element={<RemoteSensingGIS />} />
-                <Route path="civil-4-1" element={<GISbasedUrbanPlanning />} />
-                {/* <Route path="civil-4-2" element={<RemoteSensingforDisaster />} /> */}
+                <Route path="/department/remote-sensing-gis/gis-based-urban-planning" element={<GISbasedUrbanPlanning />} />
+                <Route path="/department/remote-sensing-gis/remote-sensing-for-disaster" element={<RemoteSensingforDisaster />} />
 
 <Route path="department/structural-engineering" element={<StructuralEngineering />} />
-                <Route path="civil-5-1" element={<EarthquakeResistantStructures />} />
-                <Route path="civil-5-2" element={<SteelRCCDesignOptimization />} />
-                <Route path="civil-5-3" element={<TallBuildingAnalysis />} /> 
-                <Route path="civil-5-4" element={<BridgeDesignMonitoring />} />
+                <Route path="/department/structural-engineering/earthquake-resistant-structures" element={<EarthquakeResistantStructures />} />
+                <Route path="/department/structural-engineering/steel-rcc-design-optimization" element={<SteelRCCDesignOptimization />} />
+                <Route path="/department/structural-engineering/tall-building-analysis" element={<TallBuildingAnalysis />} /> 
+                <Route path="/department/structural-engineering/bridge-design-monitoring" element={<BridgeDesignMonitoring />} />
 
 <Route path="department/transportation-engineering" element={<TransportationEngineering />} />
-                <Route path="civil-6-1" element={<SmartTrafficManagement />} />
-                <Route path="civil-6-2" element={<PavementAnalysisDesign />} />
-                <Route path="civil-6-3" element={<HighwaySafetyOptimization />} /> 
+                <Route path="/department/transportation-engineering/smart-traffic-management" element={<SmartTrafficManagement />} />
+                <Route path="/department/transportation-engineering/pavement-analysis-design" element={<PavementAnalysisDesign />} />
+                <Route path="/department/transportation-engineering/highway-safety-optimization" element={<HighwaySafetyOptimization />} /> 
 
         {/* Mech */}
 <Route path="department/thermal-engineering" element={<METhermalEngineeringHeat />} />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
-                <Route path="mech-1-1" element={<HeatExchangerDesign />} />
-                <Route path="mech-1-2" element={<SolarThermalSystems />} />
-                <Route path="mech-1-3" element={<WasteHeatRecovery />} />
-                <Route path="mech-1-4" element={<HVACSystemAnalysis />} />
-                <Route path="mech-1-5" element={<EnergyEfficiencyinThermal />} />
+                <Route path="/department/thermal-engineering/heat-exchanger-design" element={<HeatExchangerDesign />} />
+                <Route path="/department/thermal-engineering/solar-thermal-systems" element={<SolarThermalSystems />} />
+                <Route path="/department/thermal-engineering/waste-heat-recovery" element={<WasteHeatRecovery />} />
+                <Route path="/department/thermal-engineering/hvac-system-analysis" element={<HVACSystemAnalysis />} />
+                <Route path="/department/thermal-engineering/energy-efficiency-in-thermal" element={<EnergyEfficiencyinThermal />} />
 
 <Route path="department/fluid-mechanics-dynamics" element={<FluidMechanicsFluidDynamics />} />
-                <Route path="mech-2-1" element={<ComputationalFluidDynamics />} />
-                <Route path="mech-2-2" element={<TurbomachineryDesign />} />
-                <Route path="mech-2-3" element={<AerodynamicsWindTunnel />} />
-                <Route path="mech-2-4" element={<PumpValveOptimization />} />
-                <Route path="mech-2-5" element={<MicrofluidicsLab />} /> 
+                <Route path="/department/fluid-mechanics-dynamics/computational-fluid-dynamics" element={<ComputationalFluidDynamics />} />
+                <Route path="/department/fluid-mechanics-dynamics/turbomachinery-design" element={<TurbomachineryDesign />} />
+                <Route path="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel" element={<AerodynamicsWindTunnel />} />
+                <Route path="/department/fluid-mechanics-dynamics/pump-valve-optimization" element={<PumpValveOptimization />} />
+                <Route path="/department/fluid-mechanics-dynamics/microfluidics-lab" element={<MicrofluidicsLab />} /> 
 
 <Route path="department/manufacturing-production" element={<ManufacturingProductionEngineering />} />
-                <Route path="mech-3-1" element={<CNCMachiningOptimization />} />
-                <Route path="mech-3-2" element={<AdditiveManufacturing />} />
-                <Route path="mech-3-3" element={<IndustriaAutomationRobotics />} />
-                <Route path="mech-3-4" element={<SmartManufacturingSystems />} />
-                <Route path="mech-3-5" element={<ToolDesignProcess />} />
+                <Route path="/department/manufacturing-production/cnc-machining-optimization" element={<CNCMachiningOptimization />} />
+                <Route path="/department/manufacturing-production/additive-manufacturing" element={<AdditiveManufacturing />} />
+                <Route path="/department/manufacturing-production/industrial-automation-robotics" element={<IndustriaAutomationRobotics />} />
+                <Route path="/department/manufacturing-production/smart-manufacturing-systems" element={<SmartManufacturingSystems />} />
+                <Route path="/department/manufacturing-production/tool-design-process" element={<ToolDesignProcess />} />
 
 <Route path="department/design-engineering-cad" element={<DesignEngineerCAD />} />
-                <Route path="mech-4-1" element={<FiniteElementAnalysis />} />
-                <Route path="mech-4-2" element={<CADModelingSimulation />} />
-                <Route path="mech-4-3" element={<MechanismDesign />} />
-                <Route path="mech-4-4" element={<TopologyOptimization />} />
-                <Route path="mech-4-5" element={<ProductLifecycleManagement />} />
+                <Route path="/department/design-engineering-cad/finite-element-analysis" element={<FiniteElementAnalysis />} />
+                <Route path="/department/design-engineering-cad/cad-modeling-simulation" element={<CADModelingSimulation />} />
+                <Route path="/department/design-engineering-cad/mechanism-design" element={<MechanismDesign />} />
+                <Route path="/department/design-engineering-cad/topology-optimization" element={<TopologyOptimization />} />
+                <Route path="/department/design-engineering-cad/product-lifecycle-management" element={<ProductLifecycleManagement />} />
 
 <Route path="department/robotics-mechatronics" element={<RoboticsMechatronics />} />
-                <Route path="mech-5-1" element={<IndustrialRoboticsSystems />} />
-                <Route path="mech-5-2" element={<IoTbasedMechatronics />} />
-                <Route path="mech-5-3" element={<AutonomousVehiclesDrones />} />
-                <Route path="mech-5-4" element={<RoboticManipulatorControl />} />
-                <Route path="mech-5-5" element={<EmbeddedControlSystems />} />
+                <Route path="/department/robotics-mechatronics/industrial-robotics-systems" element={<IndustrialRoboticsSystems />} />
+                <Route path="/department/robotics-mechatronics/iot-based-mechatronics" element={<IoTbasedMechatronics />} />
+                <Route path="/department/robotics-mechatronics/autonomous-vehicles-drones" element={<AutonomousVehiclesDrones />} />
+                <Route path="/department/robotics-mechatronics/robotic-manipulator-control" element={<RoboticManipulatorControl />} />
+                <Route path="/department/robotics-mechatronics/embedded-control-systems" element={<EmbeddedControlSystems />} />
 
 <Route path="department/renewable-thermal-energy" element={<RenewableEnergyThermal />} />
-                <Route path="mech-6-1" element={<SolarPVThermal />} />
-                <Route path="mech-6-2" element={<WindTurbineDesign />} />
-                <Route path="mech-6-3" element={<BiomassBiofuelEnergy />} />
-                <Route path="mech-6-4" element={<EnergyStorageRecovery />} />
-                <Route path="mech-6-5" element={<SmartGridIntegration />} />
+                <Route path="/department/renewable-thermal-energy/solar-pv-thermal" element={<SolarPVThermal />} />
+                <Route path="/department/renewable-thermal-energy/wind-turbine-design" element={<WindTurbineDesign />} />
+                <Route path="/department/renewable-thermal-energy/biomass-biofuel-energy" element={<BiomassBiofuelEnergy />} />
+                <Route path="/department/renewable-thermal-energy/energy-storage-recovery" element={<EnergyStorageRecovery />} />
+                <Route path="/department/renewable-thermal-energy/smart-grid-integration" element={<SmartGridIntegration />} />
 
 <Route path="department/automotive-vehicle-engineering" element={<AutomotiveVehicleEngineering />} />
-                <Route path="mech-7-1" element={<ElectricVehicleDesign />} />
-                <Route path="mech-7-2" element={<HybridVehiclePowertrains />} />
-                <Route path="mech-7-3" element={<VehicleDynamicsStability />} />
-                <Route path="mech-7-4" element={<EnginePerformanceOptimization />} />
-                <Route path="mech-7-5" element={<EmissionControlFuelEfficiency />} />
+                <Route path="/department/automotive-vehicle-engineering/electric-vehicle-design" element={<ElectricVehicleDesign />} />
+                <Route path="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains" element={<HybridVehiclePowertrains />} />
+                <Route path="/department/automotive-vehicle-engineering/vehicle-dynamics-stability" element={<VehicleDynamicsStability />} />
+                <Route path="/department/automotive-vehicle-engineering/engine-performance-optimization" element={<EnginePerformanceOptimization />} />
+                <Route path="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency" element={<EmissionControlFuelEfficiency />} />
 
 <Route path="department/mechatronics-control-systems" element={<MechatronicsControlSystems />} />
-                <Route path="mech-8-1" element={<PIDAdvancedControl />} />
-                <Route path="mech-8-2" element={<AutomationManufacturing />} />
-                <Route path="mech-8-3" element={<PLCSystems />} />
-                <Route path="mech-8-4" element={<SensorIntegration />} />
-                <Route path="mech-8-5" element={<SmartActuatorSystems />} />
+                <Route path="/department/mechatronics-control-systems/pid-advanced-control" element={<PIDAdvancedControl />} />
+                <Route path="/department/mechatronics-control-systems/automation-manufacturing" element={<AutomationManufacturing />} />
+                <Route path="/department/mechatronics-control-systems/plc-systems" element={<PLCSystems />} />
+                <Route path="/department/mechatronics-control-systems/sensor-integration" element={<SensorIntegration />} />
+                <Route path="/department/mechatronics-control-systems/smart-actuator-systems" element={<SmartActuatorSystems />} />
 
 <Route path="department/mechanical-properties-materials" element={<MechanicalProperties />} />
-                <Route path="mech-9-1" element={<CompositeMaterialsAnalysis />} />
-                <Route path="mech-9-2" element={<AdvancedAlloyDevelopment />} />
-                <Route path="mech-9-3" element={<TribologyWearAnalysis />} />
-                <Route path="mech-9-4" element={<NanomaterialsMechanical />} />
-                <Route path="mech-9-5" element={<FatigueFractureAnalysis />} />
+                <Route path="/department/mechanical-properties-materials/composite-materials-analysis" element={<CompositeMaterialsAnalysis />} />
+                <Route path="/department/mechanical-properties-materials/advanced-alloy-development" element={<AdvancedAlloyDevelopment />} />
+                <Route path="/department/mechanical-properties-materials/tribology-wear-analysis" element={<TribologyWearAnalysis />} />
+                <Route path="/department/mechanical-properties-materials/nanomaterials-mechanical" element={<NanomaterialsMechanical />} />
+                <Route path="/department/mechanical-properties-materials/fatigue-fracture-analysis" element={<FatigueFractureAnalysis />} />
 
 <Route path="department/industrial-production-optimization" element={<IndustrialProductionOptimization />} />
-                <Route path="mech-10-1" element={<LeanManufacturing />} />
-                <Route path="mech-10-2" element={<SupplyChainProcess />} />
-                <Route path="mech-10-3" element={<IndustrialSafetyErgonomics />} />
-                <Route path="mech-10-4" element={<SmartFactorySystems />} />
-                <Route path="mech-10-5" element={<CostTimeOptimization />} />
+                <Route path="/department/industrial-production-optimization/lean-manufacturing" element={<LeanManufacturing />} />
+                <Route path="/department/industrial-production-optimization/supply-chain-process" element={<SupplyChainProcess />} />
+                <Route path="/department/industrial-production-optimization/industrial-safety-ergonomics" element={<IndustrialSafetyErgonomics />} />
+                <Route path="/department/industrial-production-optimization/smart-factory-systems" element={<SmartFactorySystems />} />
+                <Route path="/department/industrial-production-optimization/cost-time-optimization" element={<CostTimeOptimization />} />
 
-        <Route path="f" element={<Flip/>} /> 
         <Route path="department" element={<Departments/>} /> 
-                
+
+        <Route path="/d2" element={<Design2/>} /> 
+
+        <Route path="/se" element={<ServicesCategories/>} /> 
+
+
+
+
+
       </Routes>
       <Footer />
    

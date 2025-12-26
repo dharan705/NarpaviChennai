@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Power Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Power Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart grids, renewable energy integration, and AI-driven power management for applications in utilities, smart cities, and sustainable energy."
+    answer: "Narpavi Research Institute's Power Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart grids, renewable energy integration, and AI-driven power management for applications in utilities, smart cities, and sustainable energy."
   },
   {
     question: "What types of power systems projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEEPowerSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Power Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Power Systems projects for B.Tech, M.Tech, Ph.D. Smart grids, renewable energy, HVDC, AI power management, FACTS devices for utilities, smart cities."
+        keywords="Power Systems Project Development, Power Systems IEEE Projects 2023–2025, Smart Grid IEEE Projects, Renewable Energy IEEE Projects, Power Electronics in Power Systems Projects, HVDC IEEE Project Development, B.Tech Power Systems Projects, M.Tech Power Systems Thesis Support, Ph.D. Power Systems Research Assistance, Narpavi Research Institute"
+        url="/department/power-systems"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -213,24 +221,6 @@ const EEEPowerSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -238,17 +228,38 @@ const EEEPowerSystemsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/power-systems">
+      Power Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/distributed-generation-integration">
+      Distributed Generation Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/facts-power-systems">
+      FACTS Power Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/load-flow-analysis">
+      Load Flow Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/power-system-protection-relays">
+      Power System Protection & Relays
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/power-system-stability-control">
+      Power System Stability & Control
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Cybersecurity in Smart Grids Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEECybersecuritySmartGridsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Cybersecurity Smart Grids IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Cybersecurity in Smart Grids projects for B.Tech, M.Tech, Ph.D. Intrusion detection, blockchain energy transactions, AI threat prediction, secure SCADA/IoT using MATLAB/Simulink, NS-3, TensorFlow for utility grids, microgrids."
+  keywords="Cybersecurity Smart Grids IEEE Projects 2023–2025, Smart Grid Intrusion Detection, B.Tech Secure Smart Meters, M.Tech AI Cybersecurity Grids, Ph.D. Blockchain Energy Security, IoT SCADA Security, Predictive Cyber Threat Detection, Smart Grid Protection, Narpavi Research Institute"
+  url="/department/smart-grid-microgrid/cybersecurity-smart-grids"
+  faqs={faqs}
+/>
+
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -185,37 +193,50 @@ const EEECybersecuritySmartGridsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* JSON-LD FAQ Schema */}
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right Column: Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/smart-metering-demand-response-project-development">Smart Metering & Demand Response</a></li>
-              <li><a href="/grid-integration-of-renewables-project-development">Grid Integration of Renewables</a></li>
-              <li><a href="/microgrid-energy-management-project-development">Microgrid Energy Management</a></li>
-              <li><a href="/energy-storage-renewable-integration-project-development">Energy Storage with Renewables</a></li>
-              <li><a href="/iot-eee-project-development">IoT in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/smart-grid-microgrid">
+      Smart Grid & Microgrid – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
+      Cybersecurity for Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
+      EV Charging & Microgrids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
+      Integration of Distributed Generation
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
+      Microgrid Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
+      Real-Time Monitoring & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
+      Smart Metering & Demand Response
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

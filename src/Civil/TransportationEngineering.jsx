@@ -1,35 +1,61 @@
 import "./CEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Transportation Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Transportation Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on traffic optimization, pavement design, intelligent transportation systems, and IoT-based smart mobility solutions."
+    answer:
+      "Narpavi Research Institute’s Transportation Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on traffic optimization, pavement design, intelligent transportation systems, and IoT-based smart mobility solutions."
   },
   {
     question: "What types of Transportation Engineering projects are supported?",
-    answer: "We support B.Tech projects (traffic engineering and pavement design), M.Tech projects (smart traffic systems and sustainable pavements), and Ph.D. projects (AI-driven traffic prediction and autonomous vehicle integration) for highways, railways, and urban transit."
+    answer:
+      "We support B.Tech projects (traffic engineering and pavement design), M.Tech projects (smart traffic systems and sustainable pavements), and Ph.D. projects (AI-driven traffic prediction and autonomous vehicle integration) for highways, railways, and urban transit."
   },
   {
     question: "Which tools and technologies are used in Transportation Engineering projects?",
-    answer: "Our stack includes VISSIM, AIMSUN, TransCAD, MX Roads, AutoCAD, IoT sensors (GPS, UAVs), and AI frameworks (TensorFlow, Keras) for traffic simulation and pavement analysis."
+    answer:
+      "Our stack includes VISSIM, AIMSUN, TransCAD, MX Roads, AutoCAD, IoT sensors (GPS, UAVs), and AI frameworks (TensorFlow, Keras) for traffic simulation and pavement analysis."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Intelligent Transportation Systems and Civil Engineering, focusing on smart traffic, EV infrastructure, and sustainable pavements."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Intelligent Transportation Systems and Civil Engineering, focusing on smart traffic, EV infrastructure, and sustainable pavements."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
   }
 ];
 
 const CETransportationEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO */}
+      <SEO
+        title="Transportation Engineering IEEE Projects (2023–2025)"
+        description="Transportation Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on traffic optimization, intelligent transportation systems, pavement design, EV infrastructure, AI-driven traffic prediction, and smart mobility solutions."
+        url="department/transportation-engineering"
+        type="article"
+        keywords={[
+          "Transportation Engineering Projects",
+          "Traffic Optimization IEEE Projects",
+          "Intelligent Transportation Systems",
+          "Pavement Design Projects",
+          "AI in Transportation Engineering",
+          "PhD Transportation Engineering Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="CEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -49,6 +75,14 @@ const CETransportationEngineeringProjectDevelopmentCenter = () => {
           {/* Center: Main Content */}
           <div className="CEProjectDevelopmentCenter-center">
             <h1>Transportation Engineering – Project Development Support</h1>
+
+            {/* Internal SEO Links */}
+            <p className="seo-internal-links">
+              Related services:
+              <a href="/civil-engineering-project-development"> Civil Engineering Projects</a>,
+              <a href="/phd-project-development"> PhD Project Guidance</a>,
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
+            </p>
 
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
@@ -200,6 +234,7 @@ const CETransportationEngineeringProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
+            {/* FAQ UI (Schema via SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -210,24 +245,6 @@ const CETransportationEngineeringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -235,13 +252,30 @@ const CETransportationEngineeringProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/iot-enabled-smart-meters-project-development">IoT-enabled Smart Meters Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/transportation-engineering">
+      Transportation Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/smart-traffic-management">
+      Smart Traffic Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/pavement-analysis-design">
+      Pavement Analysis & Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/highway-safety-optimization">
+      Highway Safety Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

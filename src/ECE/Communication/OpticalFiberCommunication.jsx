@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Optical Fiber Communication Technologies Project Development Center offer?",
@@ -26,6 +27,13 @@ const faqs = [
 const ECEOpticalFiberCommunicationProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Optical Fiber Communication Technologies IEEE Projects | WDM, PICs, Quantum | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) optical fiber communication projects on single-/multi-mode fibers, WDM, optical amplifiers, photonic integrated circuits, and quantum-safe optical systems using MATLAB, OptiSystem, Lumerical, and VPI Photonics."
+        keywords="Optical Fiber Communication Technologies, Wavelength Division Multiplexing Projects, Photonic Integrated Circuits Research, Optical Fiber Projects for B.Tech, Optical Communication Systems IEEE 2023–2025, Quantum Optical Communication, Narpavi Research Institute"
+        url="/department/communication-systems/optical-fiber-communication"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -224,15 +232,15 @@ const ECEOpticalFiberCommunicationProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-            
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+                  <ul>
+  <li><a href="/department/communication-systems">Communication Systems </a></li>
+  <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
+  <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
+  <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
+  <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
+  <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
+  <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
+</ul>
           </div>
         </div>
       </div>

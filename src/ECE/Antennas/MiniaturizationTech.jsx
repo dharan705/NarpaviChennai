@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,23 @@ const faqs = [
 const AntennaMiniaturizationProject = () => {
   return (
     <div className="ECEProjectDevelopment">
+        <SEO
+        title="Antenna Miniaturization IEEE Projects 2025 | Fractal Metamaterial SIW | B.Tech M.Tech PhD"
+        description="Antenna miniaturization techniques projects (2023–2025) using CST HFSS MATLAB for fractal geometry, metamaterial antennas, dielectric loading, slot antennas, substrate integrated waveguide SIW."
+        url="/antenna-miniaturization-project-development"
+        type="article"
+        keywords={[
+          "Antenna Miniaturization Techniques",
+          "Fractal Antenna Design IEEE",
+          "Metamaterial Antennas",
+          "Dielectric Loading Antennas",
+          "Slot Antenna Miniaturization",
+          "Substrate Integrated Antennas SIW",
+          "CST HFSS Antenna Simulation",
+          "CubeSat Compact Antennas"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
@@ -152,13 +170,15 @@ const AntennaMiniaturizationProject = () => {
 
           <div className="ECEProjectDevelopment-right">
             <h3>Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing">Energy-Efficient Routing</a></li>
-              <li><a href="/adaptive-control">Adaptive Control</a></li>
-              <li><a href="/iot-security">IoT Security</a></li>
-              <li><a href="/edge-computing">Edge Computing</a></li>
-              <li><a href="/cyber-physical">Cyber-Physical Systems</a></li>
-            </ul>
+              <ul>
+  <li><a href="/department/antenna-design">Antenna Design</a></li>
+  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+</ul>
           </div>
 
         </div>

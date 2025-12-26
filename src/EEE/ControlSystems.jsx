@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in classical, modern, and AI-assisted control systems for applications in smart grids, electric vehicles, and industrial automation."
+    answer: "Narpavi Research Institute's Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in classical, modern, and AI-assisted control systems for applications in smart grids, electric vehicles, and industrial automation."
   },
   {
     question: "What types of control systems projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEEControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Control Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Control Systems projects for B.Tech, M.Tech, Ph.D. students. MATLAB/Simulink, PSCAD, FPGA projects in smart grids, EVs, industrial automation."
+        keywords="Control Systems IEEE Projects, Adaptive Control IEEE Projects, Robust Control IEEE Projects, Fuzzy Logic IEEE Projects, PID Control IEEE Projects, Model Predictive Control IEEE Projects, B.Tech Control IEEE Projects, M.Tech Control IEEE Projects, Ph.D. Control IEEE Thesis, Narpavi Research Institute"
+        faqs={faqs}
+        url="/department/control-systems-electrical "
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -228,47 +236,50 @@ const EEEControlSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/control-systems-electrical">
+      Control Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/adaptive-robust-control">
+      Adaptive & Robust Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
+      Intelligent Control (AI/ML)
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/nonlinear-control-systems">
+      Nonlinear Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/optimal-control-systems">
+      Optimal Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/pid-advanced-controllers">
+      PID & Advanced Controllers
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/process-control-industries">
+      Process Control in Industries
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

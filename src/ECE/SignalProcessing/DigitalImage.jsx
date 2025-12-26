@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Digital Image and Video Signal Processing Project Development Center offer?",
@@ -27,6 +27,30 @@ const faqs = [
 const ECEDigitalImageVideoSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="Digital Image Video Processing IEEE Projects | CNN GAN FPGA B.Tech M.Tech PhD (2023–2025)"
+  description="Digital Image and Video Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on wavelet coding, deep CNNs, video stabilization, GAN restoration, FPGA implementations, and IEEE-aligned research (2023–2025)."
+  url="/department/signal-processing/digital-image-video-signal-processing"
+  type="article"
+  keywords={[
+    "Digital Image Processing Projects",
+    "IEEE Video Signal Processing",
+    "CNN Image Processing Projects",
+    "GAN Video Restoration IEEE",
+    "FPGA Image Processing Projects",
+    "Video Stabilization Projects",
+    "Wavelet Transform Image Coding",
+    "Medical Imaging CNN Projects",
+    "OpenCV Video Processing",
+    "B.Tech Image Enhancement",
+    "M.Tech Video Motion Estimation",
+    "Ph.D. GAN Image Restoration",
+    "Narpavi Research Institute Image Processing",
+    "Real-time Video Processing FPGA",
+    "Autonomous Vehicle Video Processing"
+  ]}
+  faqs={faqs}
+/>
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -226,16 +250,15 @@ const ECEDigitalImageVideoSignalProcessingProjectDevelopmentCenter = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-             
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+</ul>
+
           </div>
         </div>
       </div>

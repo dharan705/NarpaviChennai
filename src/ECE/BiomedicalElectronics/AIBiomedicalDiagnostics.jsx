@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +29,13 @@ const faqs = [
 const AIBiomedicalDiagnosticsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="AI Biomedical Diagnostics IEEE Projects | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) AI in Biomedical Diagnostics projects using deep learning, signal processing, and federated learning for medical imaging, biosignals, and wearable healthcare."
+        keywords="AI in Biomedical Diagnostics, Artificial Intelligence in Healthcare Projects, Deep Learning in Medical Imaging, IEEE AI Biomedical Projects 2023–2025, Machine Learning for Disease Prediction, Ph.D. research in Biomedical AI, Explainable AI in Healthcare, Narpavi Research Institute biomedical AI support, AI-based wearable diagnostic devices, AI-enabled personalized medicine"
+        url="/department/biomedical-electronics/ai-biomedical-diagnostics"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -53,10 +61,10 @@ const AIBiomedicalDiagnosticsProject = () => {
             <h1>AI in Biomedical Diagnostics – Project Development Center</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> leads in AI-powered biomedical diagnostics research and project development aligned with IEEE standards (2023–2025), providing end-to-end support for B.Tech, M.Tech, and Ph.D. students.
+                <strong>Narpavi Research Institute</strong> leads in AI-powered biomedical diagnostics research and project development aligned with IEEE standards (2023–2025), providing end-to-end support for B.Tech, M.Tech, and Ph.D. students.[web:4][web:24]
               </p>
               <p>
-                Our projects incorporate machine learning, deep learning, and signal processing applied to medical imaging, pathology, genomics, and wearable healthcare, empowering real-time disease prediction and diagnostic imaging interpretation.
+                Projects integrate machine learning, deep learning, and signal processing across medical imaging, pathology, genomics, and wearable healthcare, enabling real-time disease prediction and high-accuracy diagnostic image interpretation.[web:11][web:24]
               </p>
             </section>
 
@@ -113,21 +121,21 @@ const AIBiomedicalDiagnosticsProject = () => {
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Projects in AI Biomedical Diagnostics</h2>
               <p>
-                Focus on fundamental AI applications such as tumor detection, ECG/EEG anomaly classification, and diabetes prediction using machine learning with MATLAB and Python.
+                Focus on fundamental AI applications such as tumor detection, ECG/EEG anomaly classification, and diabetes prediction using machine learning with MATLAB and Python.[web:4][web:11]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Projects in AI Biomedical Diagnostics</h2>
               <p>
-                Advanced design in AI algorithms, deep learning-based cancer detection, medical image segmentation, and multimodal biomedical data fusion ensuring accuracy and clinical relevance.
+                Emphasize advanced algorithm design, deep learning-based cancer detection, MRI/CT image segmentation, and multimodal biomedical data fusion with careful model validation and clinical relevance.[web:11][web:17]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Research in AI Biomedical Diagnostics</h2>
               <p>
-                Focus on novel AI architectures, explainable AI, federated learning, multi-omics analysis, and predictive diagnostics integrated with IoT-enabled healthcare aligned with IEEE publication standards.
+                Explore novel architectures, explainable AI, federated learning, multi-omics analysis, and predictive diagnostics integrated with IoT-enabled healthcare and aligned with emerging IEEE and healthcare AI guidelines.[web:25][web:30][web:31]
               </p>
             </section>
 
@@ -148,7 +156,7 @@ const AIBiomedicalDiagnosticsProject = () => {
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute is a global leader in biomedical AI research support, guiding students and researchers through innovative AI diagnostics projects designed for prime IEEE, Scopus, and SCI journal publications.
+                Narpavi Research Institute provides structured support for AI biomedical diagnostics projects targeting leading IEEE, Scopus, and SCI venues, aligning topics with current research trends in deep learning, explainable AI, and privacy-preserving medical AI.[web:24][web:33]
               </p>
             </section>
 
@@ -163,37 +171,21 @@ const AIBiomedicalDiagnosticsProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                            <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
+            <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
           </div>
         </div>
       </div>

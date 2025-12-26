@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the CAD Modeling & Simulation Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MECADModelingSimulationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="CAD Modeling & Simulation IEEE Projects (2023–2025)"
+        description="CAD Modeling Simulation IEEE project development for B.Tech, M.Tech & PhD using SolidWorks, CATIA, ANSYS, AI-driven CAD, generative design, digital twins, VR/AR integration for automotive, aerospace, biomedical."
+        url="/department/design-engineering-cad/cad-modeling-simulation"
+        type="article"
+        keywords={[
+          "CAD Modeling Simulation 2023–2025",
+          "IEEE CAD Project Topics",
+          "Generative CAD Projects",
+          "AI Driven CAD Design",
+          "Cloud Based CAD Simulation",
+          "VR AR CAD Applications",
+          "Digital Twin CAD Projects",
+          "Automotive CAD Simulation",
+          "Aerospace CAD Optimization",
+          "Narpavi Research Institute CAD"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -223,23 +242,6 @@ const MECADModelingSimulationProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -247,12 +249,38 @@ const MECADModelingSimulationProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/additive-manufacturing-project-development">Additive Manufacturing / 3D Printing Project Development</a></li>
-              <li><a href="/design-engineering-cad-cam-project-development">Design Engineering / CAD & CAM Project Development</a></li>
-              <li><a href="/smart-manufacturing-systems-project-development">Smart Manufacturing Systems (Industry 4.0) Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/design-engineering-cad">
+      Design Engineering & CAD
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/finite-element-analysis">
+      Finite Element Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/cad-modeling-simulation">
+      CAD Modeling & Simulation
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/mechanism-design">
+      Mechanism Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/topology-optimization">
+      Topology Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/product-lifecycle-management">
+      Product Lifecycle Management
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

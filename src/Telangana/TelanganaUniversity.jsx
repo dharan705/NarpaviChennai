@@ -1,27 +1,32 @@
 import "../telangana/Telangana.scss";
 import Subsidebar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What is the eligibility for PhD admission at Telangana University?",
-    answer: "Candidates should possess a Master’s degree with at least 55% marks (50% for SC/ST/OBC/PwD) in a relevant discipline."
+    answer:
+      "Candidates should possess a Master’s degree with at least 55% marks (50% for SC/ST/OBC/PwD) in a relevant discipline.",
   },
   {
     question: "Is an entrance exam required for PhD at Telangana University?",
-    answer: "Yes, the university conducts a PhD entrance test. UGC-NET/JRF qualified candidates may be exempted."
+    answer:
+      "Yes, the university conducts a PhD entrance test. UGC-NET/JRF qualified candidates may be exempted.",
   },
   {
     question: "What disciplines are available for PhD at Telangana University?",
-    answer: "PhD is offered in disciplines such as English, Economics, Chemistry, Commerce, Biotechnology, and others under Arts & Science."
+    answer:
+      "PhD is offered in disciplines such as English, Economics, Chemistry, Commerce, Biotechnology, and others under Arts & Science.",
   },
   {
     question: "Is a research proposal mandatory during the application?",
-    answer: "Yes, applicants are usually required to submit a brief research proposal or SOP."
+    answer:
+      "Yes, applicants are usually required to submit a brief research proposal or SOP.",
   },
   {
     question: "When does the admission process generally begin?",
-    answer: "Admissions usually begin between May and July each year."
-  }
+    answer: "Admissions usually begin between May and July each year.",
+  },
 ];
 
 const universityData = {
@@ -37,16 +42,30 @@ const universityData = {
     "PhD Entrance Exam Scorecard (if applicable)",
     "Caste Certificate (if applicable)",
     "Government ID Proof",
-    "Research Proposal or SOP"
+    "Research Proposal or SOP",
   ],
   applicationTimeline: "May – July (Tentative)",
   approxFee: "₹20,000 – ₹30,000 per year",
-  scholarshipAvailability: "Available for eligible candidates"
+  scholarshipAvailability: "Available for eligible candidates",
 };
 
 const TelanganaUniversity = () => {
   return (
     <div className="telangana-main">
+      <SEO
+        title="PhD Admission in Telangana University"
+        description="PhD admission guidance for Telangana University – eligibility, university PhD entrance/UGC-NET, full-time and part-time options, timelines, fee range, required documents, and scholarship details."
+        url="/telangana/phd-admission-in-telangana-university"
+        keywords={[
+          "PhD admission Telangana University",
+          "Telangana University PhD eligibility",
+          "Telangana University PhD entrance test",
+          "part-time PhD Telangana University",
+          "Telangana University PhD scholarship",
+        ]}
+        faqs={faqs}
+      />
+
       <Subsidebar />
 
       <div className="telangana-university-details-wrapper">
@@ -55,50 +74,93 @@ const TelanganaUniversity = () => {
           <div className="telangana-side-box telangana-left-box">
             <h3>About Telangana University</h3>
             <ul>
-              <li><b>Established:</b> 2006</li>
-              <li><b>Type:</b> State University</li>
-              <li><b>Location:</b> Nizamabad, Telangana</li>
-              <li><b>Recognized By:</b> UGC</li>
-              <li><b>Faculties:</b> Arts, Science, Commerce, Social Sciences</li>
-              <li><b>Research Areas:</b><br /> English, Chemistry, Biotechnology, Economics, Commerce, Public Administration</li>
+              <li>
+                <b>Established:</b> 2006
+              </li>
+              <li>
+                <b>Type:</b> State University
+              </li>
+              <li>
+                <b>Location:</b> Nizamabad, Telangana
+              </li>
+              <li>
+                <b>Recognized By:</b> UGC
+              </li>
+              <li>
+                <b>Faculties:</b> Arts, Science, Commerce, Social Sciences
+              </li>
+              <li>
+                <b>Research Areas:</b>
+                <br />
+                English, Chemistry, Biotechnology, Economics, Commerce,
+                Public Administration
+              </li>
             </ul>
           </div>
 
           {/* Main Content */}
           <div className="telangana-university-details-container">
             <div className="telangana-phdimg" />
-            <h2 className="telangana-university-title">{universityData.fullName}</h2>
+            <h2 className="telangana-university-title">
+              {universityData.fullName}
+            </h2>
             <div className="telangana-details-grid">
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">Popularly Known As</span>
-                <span className="telangana-detail-value">{universityData.shortName}</span>
+                <span className="telangana-detail-label">
+                  Popularly Known As
+                </span>
+                <span className="telangana-detail-value">
+                  {universityData.shortName}
+                </span>
               </div>
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">PhD Entrance Exam</span>
-                <span className="telangana-detail-value">{universityData.phdEntranceExam}</span>
+                <span className="telangana-detail-label">
+                  PhD Entrance Exam
+                </span>
+                <span className="telangana-detail-value">
+                  {universityData.phdEntranceExam}
+                </span>
               </div>
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">Qualification Required</span>
-                <span className="telangana-detail-value">{universityData.qualificationRequired}</span>
+                <span className="telangana-detail-label">
+                  Qualification Required
+                </span>
+                <span className="telangana-detail-value">
+                  {universityData.qualificationRequired}
+                </span>
               </div>
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">Work Experience</span>
-                <span className="telangana-detail-value">{universityData.workExperience}</span>
+                <span className="telangana-detail-label">
+                  Work Experience
+                </span>
+                <span className="telangana-detail-value">
+                  {universityData.workExperience}
+                </span>
               </div>
               <div className="telangana-detail-item">
                 <span className="telangana-detail-label">Mode of PhD</span>
-                <span className="telangana-detail-value">{universityData.modeOfPhd}</span>
+                <span className="telangana-detail-value">
+                  {universityData.modeOfPhd}
+                </span>
               </div>
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">Application Timeline</span>
-                <span className="telangana-detail-value">{universityData.applicationTimeline}</span>
+                <span className="telangana-detail-label">
+                  Application Timeline
+                </span>
+                <span className="telangana-detail-value">
+                  {universityData.applicationTimeline}
+                </span>
               </div>
               <div className="telangana-detail-item">
                 <span className="telangana-detail-label">Approx. Fee</span>
-                <span className="telangana-detail-value">{universityData.approxFee}</span>
+                <span className="telangana-detail-value">
+                  {universityData.approxFee}
+                </span>
               </div>
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">Documents Required</span> 
+                <span className="telangana-detail-label">
+                  Documents Required
+                </span>
                 <ul className="telangana-detail-list">
                   {universityData.documentsRequired.map((doc, index) => (
                     <li key={index}>{doc}</li>
@@ -106,8 +168,12 @@ const TelanganaUniversity = () => {
                 </ul>
               </div>
               <div className="telangana-detail-item">
-                <span className="telangana-detail-label">Scholarship/Fellowship</span>
-                <span className="telangana-detail-value">{universityData.scholarshipAvailability}</span>
+                <span className="telangana-detail-label">
+                  Scholarship/Fellowship
+                </span>
+                <span className="telangana-detail-value">
+                  {universityData.scholarshipAvailability}
+                </span>
               </div>
             </div>
 
@@ -121,24 +187,6 @@ const TelanganaUniversity = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -146,17 +194,61 @@ const TelanganaUniversity = () => {
           <div className="telangana-side-box telangana-right-box">
             <h3>All Telangana Universities List</h3>
             <ul>
-              <li><a href="/telangana/phd-admission-in-iiit-hyderabad">IIIT Hyderabad</a></li>
-              <li><a href="/telangana/phd-admission-in-iit-hyderabad">IIT Hyderabad</a></li>
-              <li><a href="/telangana/phd-admission-in-kakatiya-university">Kakatiya University</a></li>
-              <li><a href="/telangana/phd-admission-in-university-of-hyderabad">University of Hyderabad</a></li>
-              <li><a href="/telangana/phd-admission-in-jntu-hyderabad">JNTU Hyderabad</a></li>
-              <li><a href="/telangana/phd-admission-in-nit-warangal">NIT Warangal</a></li>
-              <li><a href="/telangana/phd-admission-in-ifhe-hyderabad">IFHE Hyderabad</a></li>
-              <li><a href="/telangana/phd-admission-in-mgu-nalgonda">MGU Nalgonda</a></li>
-              <li><a href="/telangana/phd-admission-in-satavahana-university">Satavahana University</a></li>
-              <li><a href="/telangana/phd-admission-in-palamuru-university">Palamuru University</a></li>
-              <li><a href="/telangana/phd-admission-in-telangana-university">Telangana University</a></li>
+              <li>
+                <a href="/telangana/phd-admission-in-iiit-hyderabad">
+                  IIIT Hyderabad
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-iit-hyderabad">
+                  IIT Hyderabad
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-kakatiya-university">
+                  Kakatiya University
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-university-of-hyderabad">
+                  University of Hyderabad
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-jntu-hyderabad">
+                  JNTU Hyderabad
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-nit-warangal">
+                  NIT Warangal
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-ifhe-hyderabad">
+                  IFHE Hyderabad
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-mgu-nalgonda">
+                  MGU Nalgonda
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-satavahana-university">
+                  Satavahana University
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-palamuru-university">
+                  Palamuru University
+                </a>
+              </li>
+              <li>
+                <a href="/telangana/phd-admission-in-telangana-university">
+                  Telangana University
+                </a>
+              </li>
             </ul>
 
             <h3>Key Highlights</h3>

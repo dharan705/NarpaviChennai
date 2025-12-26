@@ -1,35 +1,62 @@
 import "./CEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Geotechnical Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Geotechnical Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on soil mechanics, foundation design, slope stability, and IoT-based geotechnical monitoring for robust infrastructure solutions."
+    answer:
+      "Narpavi Research Institute’s Geotechnical Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on soil mechanics, foundation design, slope stability, and IoT-based geotechnical monitoring for robust infrastructure solutions."
   },
   {
     question: "What types of Geotechnical Engineering projects are supported?",
-    answer: "We support B.Tech projects (basic soil mechanics and foundation design), M.Tech projects (advanced geotechnical simulations), and Ph.D. projects (AI and IoT-driven geotechnical systems) for applications in tunnels, embankments, and dams."
+    answer:
+      "We support B.Tech projects (basic soil mechanics and foundation design), M.Tech projects (advanced geotechnical simulations), and Ph.D. projects (AI and IoT-driven geotechnical systems) for applications in tunnels, embankments, and dams."
   },
   {
     question: "Which tools and technologies are used in Geotechnical Engineering projects?",
-    answer: "Our stack includes Plaxis 2D/3D, GeoStudio, FLAC3D, ANSYS, IoT sensors (piezometers, accelerometers), and AI frameworks (TensorFlow, Keras) for soil-structure analysis and monitoring."
+    answer:
+      "Our stack includes Plaxis 2D/3D, GeoStudio, FLAC3D, ANSYS, IoT sensors (piezometers, accelerometers), and AI frameworks (TensorFlow, Keras) for soil-structure analysis and monitoring."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering and Civil Infrastructure, focusing on soil stabilization, seismic geotechnics, and smart monitoring."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering and Civil Infrastructure, focusing on soil stabilization, seismic geotechnics, and smart monitoring."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, numerical modeling, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "We offer end-to-end guidance, including topic selection, numerical modeling, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
   }
 ];
 
 const CEGeotechnicalEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO (added – content untouched) */}
+      <SEO
+        title="Geotechnical Engineering IEEE Projects (2023–2025)"
+        description="Geotechnical Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on soil mechanics, foundation design, slope stability, AI, IoT monitoring, and resilient infrastructure."
+        url="/department/geotechnical-engineering"
+        type="article"
+        keywords={[
+          "Geotechnical Engineering Projects",
+          "Soil Mechanics IEEE Projects",
+          "Slope Stability Analysis Projects",
+          "Foundation Design Projects",
+          "AI in Geotechnical Engineering",
+          "IoT Geotechnical Monitoring",
+          "PhD Geotechnical Engineering Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="CEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -48,6 +75,15 @@ const CEGeotechnicalEngineeringProjectDevelopmentCenter = () => {
           {/* Center: Main Content */}
           <div className="CEProjectDevelopmentCenter-center">
             <h1>Geotechnical Engineering – Project Development Support</h1>
+
+            {/* Internal links (added, content preserved) */}
+            <p className="seo-internal-links">
+              Explore our
+              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
+              <a href="/phd-project-development"> PhD Project Guidance</a>, and
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
+              for complete academic support.
+            </p>
 
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
@@ -192,6 +228,7 @@ const CEGeotechnicalEngineeringProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
+            {/* FAQ UI (schema handled by SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -202,38 +239,37 @@ const CEGeotechnicalEngineeringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right: Related Services */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-              <li><a href="/iot-enabled-smart-meters-project-development">IoT-enabled Smart Meters Project Development</a></li>
-              <li><a href="/data-analytics-energy-savings-project-development">Data Analytics for Energy Savings Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/geotechnical-engineering">
+      Geotechnical Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+      Soil Stabilization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/foundation-design">
+      Foundation Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/slope-stability-analysis">
+      Slope Stability Analysis
+    </a>
+  </li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

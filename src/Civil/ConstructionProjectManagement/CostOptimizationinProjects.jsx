@@ -27,6 +27,23 @@ const faqs = [
 const CECostOptimizationInProjectsProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+       <SEO
+        title="Cost Optimization in Construction Projects IEEE (2023–2025)"
+        description="Cost Optimization in Projects IEEE development for B.Tech, M.Tech & PhD using AI, IoT, BIM, predictive analytics & Primavera at Narpavi Research Institute."
+        url="/department/construction-project-management/cost-optimization-in-projects"
+        type="article"
+        keywords={[
+          "Cost Optimization Construction Projects",
+          "AI Project Cost Management IEEE 2023-2025",
+          "IoT Real-Time Cost Monitoring",
+          "BIM Cost Optimization",
+          "Predictive Budgeting Civil Projects",
+          "Primavera MS Project Cost Simulation",
+          "PhD Construction Cost Management",
+          "B.Tech M.Tech Cost Estimation Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -236,12 +253,28 @@ const CECostOptimizationInProjectsProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/smart-construction-techniques-project-development">Smart Construction Techniques Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/waste-management-systems-project-development">Waste Management Systems Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/construction-project-management">
+      Construction Project Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/smart-construction-techniques">
+      Smart Construction Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/cost-optimization-in-projects">
+      Cost Optimization in Projects
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/project-scheduling-planning">
+      Project Scheduling & Planning
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

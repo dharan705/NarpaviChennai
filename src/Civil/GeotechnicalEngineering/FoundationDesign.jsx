@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Foundation Design Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CEFoundationDesignProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+       <SEO
+        title="Foundation Design IEEE Projects (2023–2025)"
+        description="Foundation Design IEEE project development for B.Tech, M.Tech & PhD scholars focusing on shallow/deep foundations, FEM analysis (PLAXIS, ANSYS), soil-structure interaction, AI settlement prediction, and IoT monitoring."
+        url="/department/geotechnical-engineering/foundation-design"
+        type="article"
+        keywords={[
+          "Foundation Design Projects",
+          "Shallow Deep Foundations IEEE 2023–2025",
+          "Pile-Raft Optimization Projects",
+          "AI-Based Foundation Settlement Prediction",
+          "FEM-Based Foundation Analysis",
+          "Sustainable Foundation Design",
+          "IoT-Enabled Foundation Monitoring",
+          "Civil Engineering Geotechnical Projects",
+          "Narpavi Research Institute Civil Projects",
+          "Advanced Geotechnical Engineering Research"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -217,36 +236,35 @@ const CEFoundationDesignProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/soil-stabilization-techniques-project-development">Soil Stabilization Techniques Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/geotechnical-engineering">
+      Geotechnical Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+      Soil Stabilization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/foundation-design">
+      Foundation Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/slope-stability-analysis">
+      Slope Stability Analysis
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

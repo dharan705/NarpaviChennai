@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the Bridge Design & Monitoring Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CEBridgeDesignMonitoringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+      <SEO
+        title="Bridge Design & Monitoring IEEE Projects (2023–2025)"
+        description="Bridge Design & Monitoring IEEE project development for B.Tech, M.Tech & PhD scholars using STAAD.Pro, ANSYS, SAP2000, IoT sensors, AI, digital twins for smart bridge health monitoring and structural analysis."
+        url="/department/structural-engineering/bridge-design-monitoring"
+        type="article"
+        keywords={[
+          "Bridge Design Projects IEEE 2023–2025",
+          "Smart Bridge Health Monitoring",
+          "IoT-based Bridge Monitoring",
+          "Digital Twin for Bridges",
+          "Seismic Bridge Design Projects",
+          "RCC Steel Bridge Analysis",
+          "Structural Engineering Research",
+          "Civil Engineering Projects IEEE",
+          "Narpavi Research Institute Civil Projects",
+          "Structural Monitoring Systems"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -227,13 +246,34 @@ const CEBridgeDesignMonitoringProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/earthquake-resistant-structures-project-development">Earthquake Resistant Structures Project Development</a></li>
-              <li><a href="/steel-rcc-design-optimization-project-development">Steel & RCC Design Optimization Project Development</a></li>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/structural-engineering">
+      Structural Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/earthquake-resistant-structures">
+      Earthquake Resistant Structures
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/steel-rcc-design-optimization">
+      Steel & RCC Design Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/tall-building-analysis">
+      Tall Building Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/bridge-design-monitoring">
+      Bridge Design & Monitoring
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,129 +1,172 @@
-import '../pages/Subheading.scss';
-import Subsidebar from '../pages/Subsidebar';
+import "../pages/Subheading.scss";
+import Subsidebar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
+
 const faqs = [
   {
     question: "Is an entrance exam mandatory for PhD admission at SCSVMV?",
-    answer: "Yes, candidates are required to take a PhD entrance exam conducted by the university or recognized bodies."
+    answer:
+      "Yes, candidates must appear for a PhD entrance exam conducted by the university or recognized bodies.",
   },
   {
     question: "What qualifications are needed for applying to the PhD program?",
-    answer: "You need a Master’s degree such as ME, M.Tech, M.Sc, M.A, MBA, or MCA with a minimum of 55% marks or CGPA of 6.0/10."
+    answer:
+      "Applicants must hold a Master’s degree with at least 55% marks or CGPA 6.0/10.",
   },
   {
     question: "Does SCSVMV offer both full-time and part-time PhD modes?",
-    answer: "Yes, full-time (3 years) and part-time (4–6 years) PhD modes are available to suit academic or working candidates."
+    answer:
+      "Yes, SCSVMV offers Full-Time (3 years) and Part-Time (4–6 years) PhD programs.",
   },
   {
     question: "What documents are needed for the PhD application?",
-    answer: "You must submit academic transcripts, a research proposal, entrance exam scorecard (if any), CV, photographs, ID proof, and experience/NOC for part-time applicants."
+    answer:
+      "Documents include academic transcripts, research proposal, CV, ID proof, photographs, entrance exam scorecard, and NOC/experience certificate for part-time applicants.",
   },
   {
     question: "Are scholarships or fellowships available?",
-    answer: "Yes, SCSVMV offers scholarships and fellowships based on merit, research grants, and other university norms."
-  }
+    answer:
+      "Yes, SCSVMV provides scholarships and fellowships based on merit and university norms.",
+  },
 ];
 
-
 const universityData = {
-  fullName: 'PhD Admission in Kanchipuram Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya',
-  shortName: 'SCSVMV',
-  phdEntranceExam: 'Mandatory',
+  fullName:
+    "PhD Admission in Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya, Kanchipuram",
+  shortName: "SCSVMV",
+  phdEntranceExam: "Mandatory",
   qualificationRequired:
-    'Master’s Degree (e.g., ME, M.Tech, M.Sc, M.A, MBA, MCA, etc.) with 55% marks or CGPA 6.0/10',
+    "Master’s Degree with minimum 55% marks or CGPA 6.0/10",
   workExperience:
-    'Professional experience may be mandatory for part-time Ph.D. applicants',
-  modeOfPhd: 'Full-Time: 3 years / Part-Time: 4–6 years',
+    "Professional experience may be mandatory for Part-Time PhD candidates",
+  modeOfPhd: "Full-Time (3 Years) / Part-Time (4–6 Years)",
   documentsRequired: [
-    'Completed Application Form (online or offline)',
-    'Master’s Degree Certificate and Mark Sheets',
-    'UG Degree Certificate and Mark Sheets',
-    'Research Proposal / Statement of Purpose (SOP)',
-    'Curriculum Vitae (CV) / Resume',
-    'Entrance Exam Score Card (if applicable, e.g., UGC NET, CSIR NET, GATE)',
-    'Passport-sized Photographs (usually 4 copies)',
-    'Transfer Certificate (TC) or Migration Certificate (if applicable)',
-    'Character Certificate from the last studied institution',
-    'No Objection Certificate (NOC) from employer (for part-time candidates)',
-    'Caste/Community Certificate (if applicable)',
-    'Proof of Identity (Aadhaar Card / Passport / Voter ID)',
-    'Proof of Address',
-    'Experience Certificate (mandatory for part-time candidates)',
+    "Completed PhD Application Form",
+    "PG Degree Certificate and Mark Sheets",
+    "UG Degree Certificate and Mark Sheets",
+    "Research Proposal / Statement of Purpose",
+    "Curriculum Vitae (CV)",
+    "Entrance Exam Scorecard (if applicable)",
+    "No Objection Certificate (for Part-Time candidates)",
+    "Experience Certificate (for Part-Time candidates)",
+    "Transfer / Migration Certificate",
+    "Character Certificate",
+    "Community / Caste Certificate (if applicable)",
+    "Photo ID Proof",
+    "Passport Size Photographs",
   ],
-  applicationTimeline: `January Session:
-- Application Start: December of the previous year
-- Application End: January
-- Entrance Exam & Interview: Typically in January
-- Admission Notification: Released in December
-
-July Session:
-- Application Start: June
-- Application End: July
-- Entrance Exam & Interview: Typically in July
-- Admission Notification: Released in June`,
-  approxFee: `Admission Fee: ₹2,000
-Course Fee: ₹40,000 (first year)
-Doctoral Committee Fee: ₹15,000 (first year)
-Laboratory / Library Fee: ₹2,000 (first year)
-**Total Fees: ₹59,000 (first year)**`,
-  scholarshipAvailability: 'Yes',
+  applicationTimeline:
+    "January Session (Dec–Jan) and July Session (Jun–Jul)",
+  approxFee:
+    "First Year Approx. Fee: ₹59,000 (Admission, Course, DC, Library & Lab fees)",
+  scholarshipAvailability: "Yes",
 };
 
 const Subheading = () => {
   return (
     <div className="main">
+      {/* ✅ SEO + FAQ Schema */}
+      <SEO
+        title="PhD Admission in SCSVMV Kanchipuram | Eligibility, Fees & Entrance Exam"
+        description="Apply for PhD admission at Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV), Kanchipuram. Check eligibility, entrance exam, fees, documents, and scholarships."
+        url="/scsvmv"
+        keywords={[
+          "PhD Admission in SCSVMV",
+          "SCSVMV PhD admission",
+          "PhD admission in Kanchipuram",
+          "SCSVMV PhD eligibility",
+          "SCSVMV entrance exam",
+          "Part time PhD in SCSVMV",
+        ]}
+        faqs={faqs}
+      />
+
       <Subsidebar />
 
       <div className="university-details-wrapper">
         <div className="content-layout">
-          {/* Left Sidebar Box */}
+          {/* Left Sidebar */}
           <div className="side-box left-box">
-            <h3>About Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV)</h3>
-<ul>
-  <li><b>Year of Establishment:</b> Established in 1993, SCSVMV is known for its blend of traditional values and modern academic excellence.</li>
-  <li><b>Year of PhD Admission Establishment:</b><br/>PhD programs were launched early on, fostering a strong research culture across faculties.</li>
-  <li><b>Annual PhD Enrolment and Exit Details:</b><br/>Around 60–90 PhD scholars are admitted annually in streams like Engineering, Science, Management, and Sanskrit.</li>
-  <li><b>Why this University is a Premier Choice for PhD Studies:</b><br/>PhD Admission in Kanchipuram SCSVMV is sought for its experienced guides, serene campus, and research-friendly environment.</li>
-</ul>
-
+            <h3>
+              About Sri Chandrasekharendra Saraswathi Viswa Mahavidyalaya (SCSVMV)
+            </h3>
+            <ul>
+              <li>
+                <b>Year of Establishment:</b> Established in 1993, SCSVMV blends
+                traditional values with modern academic excellence.
+              </li>
+              <li>
+                <b>PhD Programs:</b> Doctoral programs were introduced early to
+                strengthen research across disciplines.
+              </li>
+              <li>
+                <b>Annual Intake:</b> Around 60–90 PhD scholars are admitted each
+                year.
+              </li>
+              <li>
+                <b>Why Choose SCSVMV:</b> Experienced research guides, peaceful
+                campus environment, and strong doctoral committee support.
+              </li>
+            </ul>
           </div>
 
           {/* Main Content */}
           <div className="university-details-container">
             <div className="phdimg" />
-            <h2 className="university-title">{universityData.fullName}</h2>
+
+            {/* ✅ SINGLE H1 */}
+            <h1 className="university-title">
+              {universityData.fullName}
+            </h1>
+
             <div className="details-grid">
               <div className="detail-item">
                 <span className="detail-label">Popularly Known As</span>
                 <span className="detail-value">{universityData.shortName}</span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">PhD Entrance Exam</span>
-                <span className="detail-value">{universityData.phdEntranceExam}</span>
+                <span className="detail-value">
+                  {universityData.phdEntranceExam}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Qualification Required</span>
-                <span className="detail-value">{universityData.qualificationRequired}</span>
+                <span className="detail-value">
+                  {universityData.qualificationRequired}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Work Experience</span>
-                <span className="detail-value">{universityData.workExperience}</span>
+                <span className="detail-value">
+                  {universityData.workExperience}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Mode of PhD</span>
-                <span className="detail-value">{universityData.modeOfPhd}</span>
+                <span className="detail-value">
+                  {universityData.modeOfPhd}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Application Timeline</span>
-                <span className="detail-value" style={{ whiteSpace: 'pre-wrap' }}>
+                <span className="detail-value">
                   {universityData.applicationTimeline}
                 </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Approx. Fee</span>
-                <span className="detail-value" style={{ whiteSpace: 'pre-wrap' }}>
+                <span className="detail-value">
                   {universityData.approxFee}
                 </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Documents Required</span>
                 <ul className="detail-list">
@@ -132,28 +175,33 @@ const Subheading = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="detail-item">
-                <span className="detail-label">Scholarship/Fellowship</span>
-                <span className="detail-value">{universityData.scholarshipAvailability}</span>
+                <span className="detail-label">Scholarship / Fellowship</span>
+                <span className="detail-value">
+                  {universityData.scholarshipAvailability}
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Right Sidebar Box */}
+          {/* Right Sidebar */}
           <div className="side-box right-box">
             <h3>Key Highlights</h3>
             <ul>
-              <li>Two admission cycles per year: January & July</li>
-              <li>Balanced focus on tradition and innovation in research</li>
-              <li>Recognized doctoral committee and guides</li>
-              <li>Ideal for working professionals via part-time mode</li>
-              <li>Located in spiritual and historic town of Kanchipuram</li>
+              <li>Two PhD admission cycles every year</li>
+              <li>Traditional values blended with modern research</li>
+              <li>Experienced doctoral committee & guides</li>
+              <li>Ideal for working professionals</li>
+              <li>Located in historic Kanchipuram</li>
             </ul>
           </div>
         </div>
       </div>
-       <section className="alluniversityfaq-section">
-        <h2>FAQs on Topic Selection</h2>
+
+      {/* FAQ UI */}
+      <section className="alluniversityfaq-section">
+        <h2>FAQs on PhD Admission</h2>
         <div className="faq-items">
           {faqs.map((faq, index) => (
             <details key={index}>
@@ -162,46 +210,7 @@ const Subheading = () => {
             </details>
           ))}
         </div>
-
-
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the eligibility for PhD admission at Anna University?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A Master’s Degree with at least 55% marks or 5.5 CGPA is required. Candidates with GATE/NET/SLET/M.Phil. may be exempted from the written test."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for PhD admission?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Essential documents include PG and UG certificates, community certificate, experience certificate (if part-time), research proposal, and ID proof."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Anna University provide any fellowship for PhD?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, fellowships like University Research Fellowship, UGC JRF/SRF, DST-INSPIRE, and industry-sponsored schemes are available."
-                }
-              }
-            ]
-          }),
-        }}
-      />
-    </section>
-
+      </section>
     </div>
   );
 };

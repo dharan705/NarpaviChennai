@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Intelligent Control using AI/ML Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEIntelligentControlAiMlProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Intelligent Control AI ML IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Intelligent Control using AI/ML projects for B.Tech, M.Tech, Ph.D. Neural networks, fuzzy logic, reinforcement learning, deep learning controllers using MATLAB/Simulink, Python TensorFlow PyTorch, ROS for robotics, smart grids."
+  keywords="Intelligent Control AI ML IEEE Projects 2023–2025, B.Tech Fuzzy Logic Control, M.Tech Deep Reinforcement Learning, Ph.D. AI Nonlinear Control, Neural Network Controllers, Reinforcement Learning Control, Robotics AI Control, Narpavi Research Institute"
+  url="/department/control-systems-electrical/intelligent-control-ai-ml"
+  faqs={faqs}
+/>
+
       <Sidebar/>
       
       <div className="EEEProjectDevelopmentCenter-main">
@@ -167,35 +175,51 @@ const EEEIntelligentControlAiMlProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              
-              {/* SEO Schema */}
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                      "@context":"https://schema.org",
-                      "@type":"FAQPage",
-                      "mainEntity": faqs.map(f=>({
-                        "@type":"Question",
-                        "name": f.question,
-                        "acceptedAnswer":{ "@type":"Answer","text": f.answer }
-                      }))
-                  })
-                }}
-              />
+
             </section>
           </div>
 
           {/* 🔗 Right Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/nonlinear-control-systems-project-development">Nonlinear Control Systems</a></li>
-              <li><a href="/adaptive-robust-control-project-development">Adaptive & Robust Control</a></li>
-              <li><a href="/pid-advanced-controllers-project-development">PID & Advanced Controllers</a></li>
-              <li><a href="/embedded-robotics-project-development">Embedded Systems for Robotics</a></li>
-              <li><a href="/optimal-control-systems-project-development">Optimal Control Systems</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/control-systems-electrical">
+      Control Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/adaptive-robust-control">
+      Adaptive & Robust Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
+      Intelligent Control (AI/ML)
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/nonlinear-control-systems">
+      Nonlinear Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/optimal-control-systems">
+      Optimal Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/pid-advanced-controllers">
+      PID & Advanced Controllers
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/process-control-industries">
+      Process Control in Industries
+    </a>
+  </li>
+</ul>
+
           </div>
         
         </div>

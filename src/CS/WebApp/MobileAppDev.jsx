@@ -1,10 +1,11 @@
 import "./MobileAppDev.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Mobile App Development Center offer?",
-    answer: "Narpavi Research Institute’s Mobile App Development Center supports B.Tech, M.Tech, and Ph.D. students in creating IEEE-aligned (2023–2025) mobile applications for Android, iOS, and hybrid platforms, focusing on scalability, real-time engagement, and research-driven solutions."
+    answer: "Narpavi Research Institute's Mobile App Development Center supports B.Tech, M.Tech, and Ph.D. students in creating IEEE-aligned (2023–2025) mobile applications for Android, iOS, and hybrid platforms, focusing on scalability, real-time engagement, and research-driven solutions."
   },
   {
     question: "What types of mobile app projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const MobileAppDevelopmentCenter = () => {
   return (
     <div className="MobileAppDevelopmentCenter">
+      <SEO 
+        title="Mobile App IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Mobile App projects for B.Tech, M.Tech, Ph.D. Flutter, React Native, Firebase, AI mobile apps for healthcare, agriculture, smart cities."
+        keywords="Mobile App Development – Project Development Center, IEEE 2023–2025 Mobile App Project Topics, Mobile Application Development for B.Tech M.Tech Ph.D., Flutter Firebase Mobile Apps, AI-based Mobile Applications, Android Development Projects, Cross-Platform Mobile App Projects, Real-Time Mobile Computing IEEE Projects, Secure Mobile Apps with Blockchain, Narpavi Research Institute Mobile App Project Services"
+        url="/department/mobile-app"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MobileAppDevelopmentCenter-main">
         <div className="MobileAppDevelopmentCenter-grid">
@@ -53,13 +61,13 @@ const MobileAppDevelopmentCenter = () => {
 
             <section className="MobileAppDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> provides an elite platform for students and scholars to explore, develop, and showcase high-quality animation-based academic projects aligned with recent innovations published in IEEE Transactions (2023–2025). Our center offers technical and creative guidance in developing 2D/3D animations, motion graphics, interactive animations, AR/VR simulations, and AI-powered animation systems.
+                <strong>Narpavi Research Institute</strong> provides an elite platform for students and scholars to develop cutting-edge mobile applications aligned with IEEE Transactions (2023–2025). Our Mobile App Development Center offers comprehensive technical guidance for Android, iOS, and cross-platform solutions that deliver scalability, real-time functionality, and research innovation.
               </p>
               <p>
-               With the rising integration of animation across education, entertainment, healthcare, defense, marketing, and simulations, the Animations – Project Development Center bridges the gap between technical innovation and visual storytelling. Every project we deliver is benchmarked to IEEE quality, ensuring global academic relevance and industry scalability.
+                With mobile technology transforming industries from healthcare to smart cities, our center bridges academic research with practical deployment. We empower B.Tech, M.Tech, and Ph.D. students to create production-ready apps using modern frameworks and cloud services.
               </p>
               <p>
-                We empower B.Tech, M.Tech, and Ph.D. candidates with cutting-edge tools like Unity, Blender, Maya, Unreal Engine, Adobe After Effects, and OpenGL—providing complete project development, simulation, and IEEE-format documentation support.
+                Our methodology integrates IEEE research with industry best practices, utilizing tools like Flutter, React Native, Firebase, and TensorFlow Lite. From concept to Play Store deployment, we provide complete lifecycle support including testing, optimization, and publication-ready documentation.
               </p>
             </section>
 
@@ -157,7 +165,7 @@ const MobileAppDevelopmentCenter = () => {
             <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Mobile App Development</h2>
               <p>
-                Narpavi Research Institute’s Mobile App Development – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative mobile solutions.
+                Narpavi Research Institute's Mobile App Development – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative mobile solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful apps for academia and industry, from healthcare monitoring to smart city solutions.
@@ -174,47 +182,28 @@ const MobileAppDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MobileAppDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

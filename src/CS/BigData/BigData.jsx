@@ -1,10 +1,11 @@
 import "./BigData.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Big Data Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Big Data Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) Big Data projects, focusing on real-time analytics, machine learning, and distributed architectures."
+    answer: "Narpavi Research Institute's Big Data Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) Big Data projects, focusing on real-time analytics, machine learning, and distributed architectures."
   },
   {
     question: "What types of Big Data projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const BigDataProjectDevelopmentCenter = () => {
   return (
     <div className="BigDataProjectDevelopmentCenter">
+      <SEO 
+        title="Big Data IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Big Data projects for B.Tech, M.Tech, Ph.D. Hadoop, Spark, Kafka, NoSQL, real-time analytics, federated learning for healthcare, smart cities, finance."
+        keywords="Big Data Project Development, Narpavi Technology, Narpavi Research Institute, IEEE Big Data Projects 2023–2025, B.Tech Big Data Projects, M.Tech Big Data Projects, Ph.D. Big Data Research, Hadoop Projects, Apache Spark Projects, NoSQL Big Data Applications, Cloud Big Data Solutions, Industry 4.0 Data Analytics, Real-Time Big Data Processing, AI in Big Data, IEEE Big Data Paper Support"
+        url="/department/big-data"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="BigDataProjectDevelopmentCenter-main">
         <div className="BigDataProjectDevelopmentCenter-grid">
@@ -58,7 +66,7 @@ const BigDataProjectDevelopmentCenter = () => {
 
             <section className="BigDataProjectDevelopmentCenter-intro">
               <p>
-             <strong> Big Data – Project Development Center</strong> is at the forefront of innovation, guiding aspiring engineers and researchers toward excellence in data-driven solutions. At Narpavi Research Institute, we support B.Tech, M.Tech, and Ph.D. students from across the globe in crafting impactful projects that integrate both software and hardware dimensions of Big Data. Our specialized training and mentorship are rooted in IEEE Transactions topics from 2023 to 2025, ensuring that every project aligns with the most recent technological trends.
+                <strong>Big Data – Project Development Center</strong> is at the forefront of innovation, guiding aspiring engineers and researchers toward excellence in data-driven solutions. At Narpavi Research Institute, we support B.Tech, M.Tech, and Ph.D. students from across the globe in crafting impactful projects that integrate both software and hardware dimensions of Big Data. Our specialized training and mentorship are rooted in IEEE Transactions topics from 2023 to 2025, ensuring that every project aligns with the most recent technological trends.
               </p>
               <p>
                 With data growing at an unprecedented scale, Big Data – Project Development Center plays a pivotal role in bridging academic learning with industrial needs. Our expertise covers real-time analytics, machine learning integration, and large-scale distributed architectures, allowing students to transform theoretical concepts into industry-ready solutions. Whether the objective is developing a sentiment analysis engine for e-commerce or deploying predictive maintenance systems for manufacturing, our approach ensures that each project is both technically advanced and practically relevant.
@@ -95,7 +103,7 @@ const BigDataProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-              <section className="BigDataProjectDevelopmentCenter-btech">
+            <section className="BigDataProjectDevelopmentCenter-btech">
               <h2>B.Tech Big Data Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on practical Big Data projects like sentiment analysis or predictive modeling, aligned with IEEE topics.
@@ -161,7 +169,7 @@ const BigDataProjectDevelopmentCenter = () => {
             <section className="BigDataProjectDevelopmentCenter-excellence">
               <h2>Excellence in Big Data Project Development</h2>
               <p>
-                Narpavi Research Institute’s Big Data – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative data-driven solutions.
+                Narpavi Research Institute's Big Data – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative data-driven solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful Big Data systems for academia and industry, from real-time analytics to privacy-preserving frameworks.
@@ -178,47 +186,28 @@ const BigDataProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="BigDataProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

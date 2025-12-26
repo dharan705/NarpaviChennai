@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the IoT-enabled Smart Meters Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEIoTEnabledSmartMetersProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="IoT Smart Meters IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) IoT-enabled Smart Meters projects for B.Tech, M.Tech, Ph.D. Real-time monitoring, AI demand forecasting, blockchain security using Arduino ESP32 Raspberry Pi ESP8266 LoRa Wi-Fi, AWS Azure Google Cloud, TensorFlow Keras."
+  keywords="IoT Smart Meters IEEE Projects 2023–2025, B.Tech Smart Energy Meters, M.Tech AI Demand Response Cloud Analytics, Ph.D. Blockchain 6G Smart Metering, Smart Grid Energy Management, Narpavi Research Institute"
+  url="/department/iot-electrical-systems/smart-meters"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -204,23 +212,7 @@ const EEEIoTEnabledSmartMetersProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+   
             </section>
           </div>
 

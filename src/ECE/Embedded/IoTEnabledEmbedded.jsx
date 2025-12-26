@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,13 @@ const faqs = [
 const ECEIoTEnabledEmbeddedDevicesProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="IoT-enabled Embedded Devices IEEE Projects | ESP32, LoRa/NB-IoT, AIoT | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) IoT-enabled embedded devices projects using ESP32, ARM Cortex-M, LoRaWAN, NB-IoT, FreeRTOS, and TensorFlow Lite for smart healthcare, industrial automation, smart cities, and agriculture with secure, low-power IoT architectures."
+        keywords="IoT-enabled Embedded Devices, Embedded IoT Projects, IoT Gateways and Edge Devices, IEEE IoT Projects 2023–2025, Secure IoT Embedded Systems, AI IoT Devices, Low-Power IoT Development, Narpavi Research Institute IoT Projects"
+        url="/department/embedded-systems/iot-enabled-embedded-devices"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -226,11 +234,14 @@ const ECEIoTEnabledEmbeddedDevicesProjectDevelopmentCenter = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-            
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

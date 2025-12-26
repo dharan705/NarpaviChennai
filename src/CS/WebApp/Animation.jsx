@@ -1,10 +1,11 @@
 import "./Animation.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Animations Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Animations Project Development Center supports B.Tech, M.Tech, and Ph.D. students in creating IEEE-aligned (2023–2025) animation projects, including 2D/3D animations, AR/VR simulations, and AI-powered animation systems."
+    answer: "Narpavi Research Institute's Animations Project Development Center supports B.Tech, M.Tech, and Ph.D. students in creating IEEE-aligned (2023–2025) animation projects, including 2D/3D animations, AR/VR simulations, and AI-powered animation systems."
   },
   {
     question: "What types of animation projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const AnimationsProjectDevelopmentCenter = () => {
   return (
     <div className="AnimationsProjectDevelopmentCenter">
+      <SEO 
+        title="Animations IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Animation projects for B.Tech, M.Tech, Ph.D. Unity, Blender, Unreal Engine, AR/VR, AI animation for education, healthcare, simulations."
+        keywords="Animations – Project Development Center, IEEE Animation Project Topics 2023–2025, Unity Animation Projects for B.Tech M.Tech Ph.D., Blender 3D Animation Projects, OpenGL Shader Projects, AI-based Animation Generation, Real-Time 3D Animation IEEE Projects, AR/VR Animation Project Development, Narpavi Research Institute Animation Services, IEEE Academic Animation Development Center"
+        url="/department/animations-project"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="AnimationsProjectDevelopmentCenter-main">
         <div className="AnimationsProjectDevelopmentCenter-grid">
@@ -56,7 +64,7 @@ const AnimationsProjectDevelopmentCenter = () => {
                 <strong>Narpavi Research Institute</strong> - Project Development Center at Narpavi Research Institute provides an elite platform for students and scholars to explore, develop, and showcase high-quality animation-based academic projects aligned with recent innovations published in IEEE Transactions (2023–2025). Our center offers technical and creative guidance in developing 2D/3D animations, motion graphics, interactive animations, AR/VR simulations, and AI-powered animation systems.
               </p>
               <p>
-               With the rising integration of animation across education, entertainment, healthcare, defense, marketing, and simulations, the Animations – Project Development Center bridges the gap between technical innovation and visual storytelling. Every project we deliver is benchmarked to IEEE quality, ensuring global academic relevance and industry scalability.
+                With the rising integration of animation across education, entertainment, healthcare, defense, marketing, and simulations, the Animations – Project Development Center bridges the gap between technical innovation and visual storytelling. Every project we deliver is benchmarked to IEEE quality, ensuring global academic relevance and industry scalability.
               </p>
               <p>
                 We empower B.Tech, M.Tech, and Ph.D. candidates with cutting-edge tools like Unity, Blender, Maya, Unreal Engine, Adobe After Effects, and OpenGL—providing complete project development, simulation, and IEEE-format documentation support.
@@ -157,7 +165,7 @@ const AnimationsProjectDevelopmentCenter = () => {
             <section className="AnimationsProjectDevelopmentCenter-excellence">
               <h2>Excellence in Animations Project Development</h2>
               <p>
-                Narpavi Research Institute’s Animations – Project Development Center integrates cutting-edge IEEE research with hands-on animation development, fostering scalable and innovative visual solutions.
+                Narpavi Research Institute's Animations – Project Development Center integrates cutting-edge IEEE research with hands-on animation development, fostering scalable and innovative visual solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful animations for academia and industry, from educational modules to advanced AR/VR simulations.
@@ -174,47 +182,28 @@ const AnimationsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="AnimationsProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

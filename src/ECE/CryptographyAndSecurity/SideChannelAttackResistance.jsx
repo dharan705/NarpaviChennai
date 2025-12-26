@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What is Side-Channel Attack (SCA) Resistance in Hardware?",
@@ -27,6 +27,13 @@ const faqs = [
 const SideChannelAttackResistanceProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Side-Channel Attack Resistance in Hardware IEEE Projects | DPA, EM, AI-Based SCA | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) side-channel attack resistance projects on power, timing, and EM attacks, DPA-resistant FPGA AES, AI-based leakage detection, and post-quantum SCA-resilient hardware for IoT and embedded systems."
+        keywords="Side-Channel Attack Resistance in Hardware, Power Analysis Attack Mitigation, Electromagnetic SCA Countermeasures, Timing Attack Resistance in Embedded Devices, AI-Based SCA Detection, Post-Quantum SCA-Resistant Hardware, DPA-Resistant FPGA Design, Leakage-Resilient VLSI, Hardware Security Projects IEEE, Cryptographic Hardware Research, IoT Device Hardware Security, FPGA Security Projects, Narpavi Research Institute Hardware Security"
+        url="/department/cryptography-security/side-channel-attack-resistance"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -195,12 +202,14 @@ const SideChannelAttackResistanceProject = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
+  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+</ul>
           </div>
         </div>
       </div>

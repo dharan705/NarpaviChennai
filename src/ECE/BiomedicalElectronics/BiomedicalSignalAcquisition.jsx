@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +29,13 @@ const faqs = [
 const BiomedicalSignalAcquisitionProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Biomedical Signal Processing IEEE Projects | ECG EEG EMG | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) biomedical signal acquisition and processing projects using ECG, EEG, EMG, PPG, AI, IoT, and edge computing for real-time healthcare monitoring."
+        keywords="Biomedical Signal Processing Projects, ECG EEG EMG Signal Projects, AI in Biomedical Signal Processing, IoT Biomedical Signal Acquisition, Real-Time Healthcare Monitoring Projects, Blockchain in Biomedical Data, Wearable Biomedical Signal Devices, IEEE Biomedical Signal Projects, Narpavi Research Institute"
+        url="/department/biomedical-electronics/biomedical-signal-acquisition"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -52,12 +60,13 @@ const BiomedicalSignalAcquisitionProject = () => {
             <h1>Biomedical Signal Acquisition and Processing – Project Development Center</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> empowers students and researchers to develop biomedical signal acquisition and processing projects aligned with IEEE standards (2023–2025), focusing on capturing and analyzing physiological signals for healthcare applications.
+                <strong>Narpavi Research Institute</strong> supports IEEE-aligned (2023–2025) projects in biomedical signal acquisition and processing, focusing on capturing ECG, EEG, EMG, PPG, GSR, SpO₂, and blood pressure signals for advanced healthcare monitoring and diagnostics.[web:40][web:45]
               </p>
               <p>
-                Emphasis is placed on signal acquisition systems, noise reduction, real-time processing, and AI-driven analytics to enhance healthcare monitoring technologies.
+                Emphasis is placed on robust acquisition hardware, noise reduction, real-time processing, and AI-driven analytics to enhance the reliability of wearable and IoT-based healthcare technologies.[web:44][web:47]
               </p>
             </section>
+
             {/* Comparative Table */}
             <section className="ECEProjectDevelopmentCenter-table">
               <h2>Comparative Table – Biomedical Signal Acquisition & Processing</h2>
@@ -112,27 +121,31 @@ const BiomedicalSignalAcquisitionProject = () => {
                 </table>
               </div>
             </section>
+
             {/* B.Tech Cycle */}
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Project Development Cycle</h2>
               <p>
-                Basic signal acquisition and simple processing projects such as ECG noise removal, EEG stress detection, wearable PPG sensors, and EMG muscle monitoring using Arduino, Raspberry Pi, MATLAB, Proteus, and LabVIEW.
+                Projects focus on basic acquisition and processing such as ECG noise removal, EEG stress detection, wearable PPG heart-rate monitoring, and EMG muscle activity tracking using Arduino, Raspberry Pi, MATLAB, Proteus, and LabVIEW.[web:40][web:51]
               </p>
             </section>
+
             {/* M.Tech Cycle */}
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Project Development Cycle</h2>
               <p>
-                Advanced AI-integrated signal processing including seizure prediction, ECG classification, prosthetic control, and multisensor cardiovascular monitoring using MATLAB Simulink, TensorFlow, Python, and COMSOL.
+                Advanced AI-integrated signal processing includes seizure prediction, ECG classification, prosthetic control, and multisensor cardiovascular monitoring with MATLAB Simulink, TensorFlow, Python, and COMSOL.[web:45][web:52]
               </p>
             </section>
+
             {/* Ph.D. Cycle */}
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Project Development Cycle</h2>
               <p>
-                Innovations in AI-driven signal processing, blockchain-secured data transmission, multimodal fusion, real-time edge computing, and advanced noise cancellation targeting top IEEE and Elsevier journals.
+                Research explores AI-driven processing pipelines, blockchain-secured biomedical data, multimodal fusion, edge computing for real-time monitoring, and sophisticated denoising algorithms aimed at top IEEE and Elsevier journals.[web:43][web:49][web:55]
               </p>
             </section>
+
             {/* IEEE Project Titles */}
             <section className="ECEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Style Project Titles (2023–2025)</h2>
@@ -147,13 +160,15 @@ const BiomedicalSignalAcquisitionProject = () => {
                 <li>Multisensor Fusion for Cardiovascular and Neurological Disease Diagnosis (2025)</li>
               </ul>
             </section>
+
             {/* About Section */}
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute provides end-to-end project guidance in biomedical signal acquisition and processing, empowering healthcare innovation through expert hardware integration, AI modeling, and publication support.
+                Narpavi Research Institute delivers end-to-end guidance in biomedical signal acquisition and processing, from hardware design to AI modeling and publication, helping students build wearable, IoT, and edge-computing healthcare systems aligned with current research.[web:44][web:47][web:53]
               </p>
             </section>
+
             {/* FAQs */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
@@ -165,36 +180,21 @@ const BiomedicalSignalAcquisitionProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
+
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                           <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
+             <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
           </div>
         </div>
       </div>

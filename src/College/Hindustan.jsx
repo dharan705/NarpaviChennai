@@ -1,110 +1,168 @@
-import '../pages/Subheading.scss';
-import Subsidebar from '../pages/Subsidebar';
+import "../pages/Subheading.scss";
+import Subsidebar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "Is the entrance exam mandatory for a PhD at Hindustan University?",
-    answer: "Yes, a PhD entrance exam is required unless you have qualified in UGC-NET, CSIR-NET, or GATE."
+    answer:
+      "Yes. A PhD entrance exam is required unless the candidate has qualified in UGC-NET, CSIR-NET, or GATE.",
   },
   {
     question: "What qualifications are needed to apply for a PhD at HITS?",
-    answer: "You need a Master’s Degree such as M.E., M.Tech., M.Sc., M.A., M.C.A., or MBA with at least 55% marks or equivalent CGPA from a recognized university."
+    answer:
+      "Applicants must have a Master’s Degree with at least 55% marks or equivalent CGPA from a recognized university.",
   },
   {
-    question: "Can working professionals apply for a part-time PhD at Hindustan University?",
-    answer: "Yes, part-time PhD candidates must be employed and submit a No Objection Certificate from their employer."
+    question: "Can working professionals apply for a part-time PhD at HITS?",
+    answer:
+      "Yes. Working professionals can apply for part-time PhD programs with a valid No Objection Certificate (NOC).",
   },
   {
     question: "What documents are required for the PhD application at HITS?",
-    answer: "You need to submit a completed application form, UG and PG certificates, research proposal, passport-size photos, ID proof, and an NOC (for part-time candidates)."
+    answer:
+      "Required documents include UG & PG certificates, research proposal, ID proof, photographs, and NOC for part-time candidates.",
   },
   {
     question: "What is the application timeline for the PhD program at HITS?",
-    answer: "Applications are typically accepted in January and July sessions."
+    answer:
+      "PhD applications are usually accepted during January and July sessions.",
   },
   {
     question: "How much is the PhD fee at Hindustan University?",
-    answer: "The tuition fee is approximately ₹40,000 per annum."
+    answer:
+      "The approximate tuition fee is ₹40,000 per annum.",
   },
   {
-    question: "Are scholarships available for PhD students at Hindustan University?",
-    answer: "Yes, scholarships include Research Fellowships for full-time scholars, Merit-Based Scholarships, Sports Scholarships, and Corporate Scholarships like the KEB Hana Bank Scholarship."
-  }
+    question: "Are scholarships available for PhD students at HITS?",
+    answer:
+      "Yes. HITS offers research fellowships, merit-based scholarships, sports scholarships, and corporate-funded scholarships.",
+  },
 ];
 
-
 const universityData = {
-  fullName: 'Hindustan Institute of Technology and Science (HITS), Chennai',
-  shortName: 'Hindustan University',
-  phdEntranceExam: 'Required (Exemptions: Have qualified in UGC-NET, CSIR-NET, or GATE)',
-  qualificationRequired: 'Master’s Degree (e.g. M.E., M.Tech., M.Sc., M.A., M.C.A., MBA, etc.) with a minimum of 55% marks or equivalent CGPA from a recognized university',
-  workExperience: 'For part-time Ph.D., candidates should be employed',
-  modeOfPhd: 'Full-Time / Part-Time',
+  fullName:
+    "PhD Admission in Hindustan Institute of Technology and Science Chennai",
+  shortName: "Hindustan University (HITS)",
+  phdEntranceExam:
+    "Entrance Exam Required (NET / CSIR-NET / GATE candidates exempted)",
+  qualificationRequired:
+    "Master’s Degree with minimum 55% marks or equivalent CGPA",
+  workExperience: "Required for part-time PhD candidates",
+  modeOfPhd: "Full-Time / Part-Time",
   documentsRequired: [
-    'Completed application form',
-    'Attested copies of UG and PG degree certificates and mark sheets',
-    'Research proposal',
-    'Passport-size photographs',
-    'Government-issued ID proof',
-    'No Objection Certificate (NOC) from employer (for part-time candidates)'
+    "Completed application form",
+    "UG & PG degree certificates and mark sheets",
+    "Research proposal",
+    "Passport-size photographs",
+    "Government-issued ID proof",
+    "No Objection Certificate (for part-time candidates)",
   ],
-  applicationTimeline: 'January Session (opens and closes in January) / July Session (opens and closes in June)',
-  approxFee: '₹40,000 per annum (Tuition Fee)',
-  scholarshipAvailability: 'Research Fellowship (Full-Time: stipends are provided based on merit) / Merit-Based Scholarships (Dr. KCG Verghese Merit Cum Means Scholarship and Dr. Elizabeth Verghese Founder Chancellor Scholarship) / Sports Scholarship / Corporate Scholarships (KEB Hana Bank Scholarship, providing up to $10,000)'
+  applicationTimeline:
+    "January Session / July Session",
+  approxFee: "₹40,000 per annum",
+  scholarshipAvailability:
+    "Research Fellowships, Merit-Based Scholarships, Sports & Corporate Scholarships",
 };
 
 const Subheading = () => {
   return (
     <div className="main">
+      {/* ✅ SEO META + FAQ SCHEMA */}
+      <SEO
+        title="PhD Admission in Hindustan University Chennai"
+        description="Complete PhD admission guidance for Hindustan Institute of Technology and Science (HITS) Chennai including eligibility, entrance exam, part-time options, fee structure, scholarships, and application timeline."
+        url="/hits"
+        keywords={[
+          "PhD Admission in Hindustan University",
+          "HITS Chennai PhD",
+          "Hindustan University PhD eligibility",
+          "Part time PhD HITS",
+          "Hindustan Institute of Technology PhD",
+        ]}
+        faqs={faqs}
+      />
+
       <Subsidebar />
 
       <div className="university-details-wrapper">
         <div className="content-layout">
-          {/* Left Sidebar Box */}
+          {/* Left Sidebar */}
           <div className="side-box left-box">
             <h3>About Hindustan University</h3>
             <ul>
-  <li><b>Year of Establishment:</b> Established in 1985, Hindustan Institute of Technology & Science (HITS) is a reputed institution fostering innovation and learning.</li>
-  <li><b>Year of PhD Admission Establishment:</b><br/>PhD programs began in the early 2000s to advance research contributions and academic excellence.</li>
-  <li><b>Annual PhD Enrolment and Exit Details:</b><br/>Nearly 700 PhD scholars enroll and graduate annually across diverse disciplines and research areas.</li>
-  <li><b>Why this University is a Premier Choice for PhD Studies:</b><br/>PhD Admission in Chennai Hindustan Institute of Technology & Science is preferred for its cutting-edge labs, global collaborations, and a strong focus on research-driven education.</li>
-</ul>
-
+              <li>
+                <b>Year of Establishment:</b> Established in 1985, Hindustan Institute of Technology & Science is a reputed private university.
+              </li>
+              <li>
+                <b>PhD Programs:</b> Introduced in the early 2000s to promote advanced research.
+              </li>
+              <li>
+                <b>Research Strength:</b> Nearly 700 PhD scholars across multiple disciplines.
+              </li>
+              <li>
+                <b>Why Choose HITS:</b> Advanced laboratories, global collaborations, and strong research culture.
+              </li>
+            </ul>
           </div>
 
           {/* Main Content */}
           <div className="university-details-container">
             <div className="phdimg" />
-            <h2 className="university-title">{universityData.fullName}</h2>
+            <h1 className="university-title">
+              {universityData.fullName}
+            </h1>
+
             <div className="details-grid">
               <div className="detail-item">
                 <span className="detail-label">Popularly Known As</span>
-                <span className="detail-value">{universityData.shortName}</span>
+                <span className="detail-value">
+                  {universityData.shortName}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">PhD Entrance Exam</span>
-                <span className="detail-value">{universityData.phdEntranceExam}</span>
+                <span className="detail-value">
+                  {universityData.phdEntranceExam}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Qualification Required</span>
-                <span className="detail-value">{universityData.qualificationRequired}</span>
+                <span className="detail-value">
+                  {universityData.qualificationRequired}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Work Experience</span>
-                <span className="detail-value">{universityData.workExperience}</span>
+                <span className="detail-value">
+                  {universityData.workExperience}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Mode of PhD</span>
-                <span className="detail-value">{universityData.modeOfPhd}</span>
+                <span className="detail-value">
+                  {universityData.modeOfPhd}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Application Timeline</span>
-                <span className="detail-value">{universityData.applicationTimeline}</span>
+                <span className="detail-value">
+                  {universityData.applicationTimeline}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Approx. Fee</span>
-                <span className="detail-value">{universityData.approxFee}</span>
+                <span className="detail-value">
+                  {universityData.approxFee}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Documents Required</span>
                 <ul className="detail-list">
@@ -113,33 +171,33 @@ const Subheading = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="detail-item">
-                <span className="detail-label">Scholarship/Fellowship</span>
-                <span className="detail-value">{universityData.scholarshipAvailability}</span>
+                <span className="detail-label">Scholarship / Fellowship</span>
+                <span className="detail-value">
+                  {universityData.scholarshipAvailability}
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Right Sidebar Box */}
+          {/* Right Sidebar */}
           <div className="side-box right-box">
             <h3>Key Highlights</h3>
             <ul>
-              <li>HITS Chennai Ph.D. admission eligibility</li>
-              <li>Hindustan University Ph.D. entrance exam details</li>
-              <li>HITS Chennai Ph.D. application form download</li>
-              <li>Hindustan Institute of Technology and Science Ph.D. part-time program requirements</li>
-              <li>HITS Chennai Ph.D. scholarship opportunities</li>
-              <li>Hindustan University Ph.D. fee structure</li>
-              <li>HITS Chennai Ph.D. admission notification</li>
-              <li>Hindustan University Ph.D. required documents list</li>
-              <li>HITS Chennai Ph.D. work experience criteria</li>
-              <li>Hindustan University Ph.D. full-time and part-time modes</li>
+              <li>UGC-recognized deemed university</li>
+              <li>Full-time & part-time PhD options</li>
+              <li>Entrance exam with exemptions</li>
+              <li>Merit & research-based scholarships</li>
+              <li>Strong industry & international collaborations</li>
             </ul>
           </div>
         </div>
       </div>
-       <section className="alluniversityfaq-section">
-        <h2>FAQs on Topic Selection</h2>
+
+      {/* FAQ Section */}
+      <section className="alluniversityfaq-section">
+        <h2>FAQs on PhD Admission</h2>
         <div className="faq-items">
           {faqs.map((faq, index) => (
             <details key={index}>
@@ -148,46 +206,7 @@ const Subheading = () => {
             </details>
           ))}
         </div>
-
-
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the eligibility for PhD admission at Anna University?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A Master’s Degree with at least 55% marks or 5.5 CGPA is required. Candidates with GATE/NET/SLET/M.Phil. may be exempted from the written test."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for PhD admission?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Essential documents include PG and UG certificates, community certificate, experience certificate (if part-time), research proposal, and ID proof."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Anna University provide any fellowship for PhD?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, fellowships like University Research Fellowship, UGC JRF/SRF, DST-INSPIRE, and industry-sponsored schemes are available."
-                }
-              }
-            ]
-          }),
-        }}
-      />
-    </section>
-
+      </section>
     </div>
   );
 };

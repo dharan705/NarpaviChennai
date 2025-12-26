@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
- 
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -28,6 +28,14 @@ const faqs = [
 const EEEMultilevelInvertersProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Multilevel Inverters IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Multilevel Inverters projects for B.Tech, M.Tech, Ph.D. Cascaded H-bridge, diode-clamped, flying capacitor, modular MLI with AI control, harmonic reduction using MATLAB/Simulink, PSIM, TensorFlow for renewable energy, smart grids, EVs."
+  keywords="Multilevel Inverters IEEE Projects 2023–2025, Cascaded H-Bridge Inverters, B.Tech Multilevel Inverter Projects, M.Tech AI Inverter Control, Ph.D. Modular Multilevel Inverters, Diode-Clamped Inverters, Flying Capacitor Inverters, IoT Inverter Monitoring, Harmonic Reduction Power Electronics, Narpavi Research Institute"
+  url="/department/power-electronics/multilevel-inverters"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -197,23 +205,6 @@ const EEEMultilevelInvertersProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -221,12 +212,43 @@ const EEEMultilevelInvertersProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/dc-dc-converters-applications-project-development">DC-DC Converters & Applications Project Development</a></li>
-              <li><a href="/advanced-drives-controllers-project-development">Advanced Drives & Controllers Project Development</a></li>
-              <li><a href="/iot-eee-project-development">IoT in EEE Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/power-electronics">
+      Power Electronics – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/dc-dc-converters">
+      DC–DC Converters & Applications
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/multilevel-inverters">
+      Multilevel Inverters
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/renewable-energy-controllers">
+      Power Electronic Controllers for Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/power-factor-correction">
+      Power Factor Correction Circuits
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/solid-state-drives">
+      Solid State Drives
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/wireless-power-transfer">
+      Wireless Power Transfer Circuits
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

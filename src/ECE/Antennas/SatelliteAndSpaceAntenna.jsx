@@ -1,5 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
+
 const faqs = [
   {
     question: "What are Satellite and Space Antenna Technologies?",
@@ -26,6 +28,23 @@ const faqs = [
 const SatelliteSpaceAntennaTechProject = () => {
   return (
     <div className="ECEProjectDevelopment">
+       <SEO
+        title="Satellite Space Antenna IEEE Projects 2025 | Phased Array Deployable CubeSat | B.Tech M.Tech PhD"
+        description="Satellite space antenna technologies projects (2023–2025) using HFSS CST for patch reflector phased array, deployable antennas, MIMO satellite, deep-space communication, CubeSat missions."
+        url="/satellite-space-antenna-technologies-project-development"
+        type="article"
+        keywords={[
+          "Satellite Space Antenna Technologies",
+          "Phased Array Satellite Antennas",
+          "Deployable Antennas CubeSat",
+          "Deep Space Antennas IEEE",
+          "MIMO Satellite Communication",
+          "HFSS CST Satellite Antenna Design",
+          "LEO GEO Satellite Antennas",
+          "AI Optimized Space Antennas"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
@@ -160,13 +179,15 @@ const SatelliteSpaceAntennaTechProject = () => {
 
           <div className="ECEProjectDevelopment-right">
             <h3>Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing">Energy-Efficient Routing</a></li>
-              <li><a href="/adaptive-control">Adaptive Control Systems</a></li>
-              <li><a href="/secure-iot">Secure IoT Architectures</a></li>
-              <li><a href="/edge-computing">Edge Computing</a></li>
-              <li><a href="/cyber-physical">Cyber-Physical Systems</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/antenna-design">Antenna Design</a></li>
+  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+</ul>
           </div>
 
         </div>

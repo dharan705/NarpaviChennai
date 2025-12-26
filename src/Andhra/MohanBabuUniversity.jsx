@@ -1,35 +1,44 @@
 import "./Andhra.scss";
 import Subsidebar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "Does Mohan Babu University offer a PhD in Engineering?",
-    answer: "Yes, MBU offers PhD programs in various engineering disciplines including CSE, ECE, EEE, Mechanical, and Civil Engineering."
+    answer:
+      "Yes, MBU offers PhD programs in various engineering disciplines including CSE, ECE, EEE, Mechanical, and Civil Engineering.",
   },
   {
     question: "What is the eligibility for PhD at MBU?",
-    answer: "Candidates must have a Master's degree with at least 55% marks. A 5% relaxation is provided for reserved category candidates."
+    answer:
+      "Candidates must have a Master's degree with at least 55% marks. A 5% relaxation is provided for reserved category candidates.",
   },
   {
     question: "Does MBU conduct its own entrance exam for PhD?",
-    answer: "Yes, MBU conducts a written test and interview. Candidates with valid GATE/NET scores may be exempted from the written test."
+    answer:
+      "Yes, MBU conducts a written test and interview. Candidates with valid GATE/NET scores may be exempted from the written test.",
   },
   {
     question: "Is part-time PhD available at MBU?",
-    answer: "Yes, working professionals with at least 2 years of experience in academia, research, or industry can apply for part-time PhD."
+    answer:
+      "Yes, working professionals with at least 2 years of experience in academia, research, or industry can apply for part-time PhD.",
   },
   {
     question: "Are any scholarships or stipends available?",
-    answer: "Yes, eligible full-time scholars may receive fellowships/stipends as per university or funding agency norms."
-  }
+    answer:
+      "Yes, eligible full-time scholars may receive fellowships/stipends as per university or funding agency norms.",
+  },
 ];
 
 const universityData = {
   fullName: "PhD Admission at Mohan Babu University (MBU), Tirupati",
   shortName: "MBU",
-  phdEntranceExam: "MBU Written Test + Interview; GATE/NET qualified candidates may get exemption",
-  qualificationRequired: "Master’s degree with at least 55% marks; 5% relaxation for reserved categories",
-  workExperience: "Mandatory for part-time mode; minimum 2 years in teaching/research/industry",
+  phdEntranceExam:
+    "MBU Written Test + Interview; GATE/NET qualified candidates may get exemption",
+  qualificationRequired:
+    "Master’s degree with at least 55% marks; 5% relaxation for reserved categories",
+  workExperience:
+    "Mandatory for part-time mode; minimum 2 years in teaching/research/industry",
   modeOfPhd: "Full-Time / Part-Time",
   documentsRequired: [
     "UG and PG degree certificates and mark sheets",
@@ -37,55 +46,87 @@ const universityData = {
     "Experience certificate (for part-time applicants)",
     "Research proposal or SOP",
     "Government ID (Aadhaar/PAN)",
-    "Caste/Community certificate (if applicable)"
+    "Caste/Community certificate (if applicable)",
   ],
-  applicationTimeline: "Admissions open biannually – typically in January and July",
+  applicationTimeline:
+    "Admissions open biannually – typically in January and July",
   approxFee: "₹70,000 per year (Engineering PhD tuition)",
-  scholarshipAvailability: "Stipends available for full-time PhD scholars as per eligibility and funding"
+  scholarshipAvailability:
+    "Stipends available for full-time PhD scholars as per eligibility and funding",
 };
 
 const MohanBabuUniversityPhD = () => {
   return (
     <div className="andhra-main">
+      <SEO
+        title="PhD Admission at Mohan Babu University (MBU), Tirupati"
+        description="PhD admission guidance for Mohan Babu University, Tirupati, including eligibility, MBU written test and interview, part-time options, fees, documents, and scholarship/stipend details."
+        url="/andhra/phd-admission-in-mohan-babu-university"
+        keywords={[
+          "PhD admission at Mohan Babu University",
+          "MBU Tirupati PhD eligibility",
+          "MBU PhD entrance test",
+          "part-time PhD MBU Tirupati",
+          "Mohan Babu University PhD admission",
+        ]}
+        faqs={faqs}
+      />
+
       <Subsidebar />
       <div className="andhra-university-details-wrapper">
         <div className="andhra-content-layout">
-          
           {/* Left Sidebar */}
           <div className="andhra-side-box andhra-left-box">
             <h3>About Mohan Babu University</h3>
             <ul>
-              <li><b>Established:</b> 1992 (as Sree Vidyanikethan); University status in 2022</li>
-              <li><b>Type:</b> Private University</li>
-              <li><b>Location:</b> Tirupati, Andhra Pradesh</li>
-              <li><b>Recognized By:</b> UGC, AICTE, NAAC</li>
-              <li><b>PhD Disciplines:</b> CSE, ECE, EEE, Mechanical, Civil, Science, Management</li>
+              <li>
+                <b>Established:</b> 1992 (as Sree Vidyanikethan); University
+                status in 2022
+              </li>
+              <li>
+                <b>Type:</b> Private University
+              </li>
+              <li>
+                <b>Location:</b> Tirupati, Andhra Pradesh
+              </li>
+              <li>
+                <b>Recognized By:</b> UGC, AICTE, NAAC
+              </li>
+              <li>
+                <b>PhD Disciplines:</b> CSE, ECE, EEE, Mechanical, Civil,
+                Science, Management
+              </li>
             </ul>
           </div>
 
           {/* Main Content */}
           <div className="andhra-university-details-container">
             <div className="andhra-phdimg" />
-            <h2 className="andhra-university-title">{universityData.fullName}</h2>
+            <h2 className="andhra-university-title">
+              {universityData.fullName}
+            </h2>
             <div className="andhra-details-grid">
-              {Object.entries(universityData).map(([key, value]) => (
-                key !== "shortName" &&
-                <div className="andhra-detail-item" key={key}>
-                  <span className="andhra-detail-label">
-                    {key
-                      .replace(/([A-Z])/g, ' $1')
-                      .replace(/^./, str => str.toUpperCase())
-                      .replace("Phd", "PhD")}
-                  </span>
-                  {Array.isArray(value) ? (
-                    <ul className="andhra-detail-list">
-                      {value.map((item, idx) => <li key={idx}>{item}</li>)}
-                    </ul>
-                  ) : (
-                    <span className="andhra-detail-value">{value}</span>
-                  )}
-                </div>
-              ))}
+              {Object.entries(universityData).map(([key, value]) =>
+                key !== "shortName" ? (
+                  <div className="andhra-detail-item" key={key}>
+                    <span className="andhra-detail-label">
+                      {key
+                        .replace(/([A-Z])/g, " $1")
+                        .replace(/^./, (str) => str.toUpperCase())
+                        .replace("Phd", "PhD")}
+                    </span>
+                    {Array.isArray(value) ? (
+                      <ul className="andhra-detail-list">
+                        {value.map((item, idx) => (
+                          <li key={idx}>{item}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <span className="andhra-detail-value">{value}</span>
+                    )}
+                  </div>
+                ) : null
+              )}
             </div>
 
             <section className="andhra-alluniversityfaq-section">
@@ -98,23 +139,6 @@ const MohanBabuUniversityPhD = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(faq => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -122,21 +146,43 @@ const MohanBabuUniversityPhD = () => {
           <div className="andhra-side-box andhra-right-box">
             <h3>All Andhra Universities List</h3>
             <ul>
-              <li><a href="/andhra/phd-admission-in-vignan-university">VFSTR University</a></li>
-              <li><a href="/andhra/phd-admission-in-nit-andhra-pradesh">NIT Andhra Pradesh</a></li>
-              <li><a href="/andhra/phd-admission-in-siddhartha-academy-vijayawada">Siddhartha Academy (SAHE)</a></li>
-              <li><a href="/andhra/phd-admission-in-mohan-babu-university">Mohan Babu University</a></li>
-              <li><a href="/andhra/phd-admission-in-central-university-of-andhra-pradesh">Central University AP</a></li>
+              <li>
+                <a href="/andhra/phd-admission-in-vignan-university">
+                  VFSTR University
+                </a>
+              </li>
+              <li>
+                <a href="/andhra/phd-admission-in-nit-andhra-pradesh">
+                  NIT Andhra Pradesh
+                </a>
+              </li>
+              <li>
+                <a href="/andhra/phd-admission-in-siddhartha-academy-vijayawada">
+                  Siddhartha Academy (SAHE)
+                </a>
+              </li>
+              <li>
+                <a href="/andhra/phd-admission-in-mohan-babu-university">
+                  Mohan Babu University
+                </a>
+              </li>
+              <li>
+                <a href="/andhra/phd-admission-in-central-university-of-andhra-pradesh">
+                  Central University AP
+                </a>
+              </li>
             </ul>
             <h3>Key Highlights</h3>
             <ul>
               <li>Modern university with advanced engineering research facilities</li>
               <li>Multiple entry points: GATE/NET or university test</li>
-              <li>Scholarships and assistantships available for full-time PhD scholars</li>
+              <li>
+                Scholarships and assistantships available for full-time PhD
+                scholars
+              </li>
               <li>Industry-relevant research and strong academic support</li>
             </ul>
           </div>
-
         </div>
       </div>
     </div>

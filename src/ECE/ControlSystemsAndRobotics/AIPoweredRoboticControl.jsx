@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the AI-Powered Robotic Control Systems Project Development Center offer?",
@@ -27,6 +27,13 @@ const faqs = [
 const ECEAIPoweredRoboticControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="AI-Powered Robotic Control Systems IEEE Projects | RL, DNN, XAI | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) AI-powered robotic control systems projects using reinforcement learning, deep learning, fuzzy logic, and hybrid AI architectures for autonomous vehicles, healthcare robots, and smart manufacturing with ROS, Python, TensorFlow, and embedded platforms."
+        keywords="AI Robotic Control Projects, Machine Learning Robotics Projects, Deep Reinforcement Learning Robotics, IEEE AI Robotics Projects 2023–2025, Intelligent Robot Navigation, AI in Humanoid Robots, Adaptive Robotic Control Systems, Explainable AI Robotics, ROS and AI Projects, Narpavi Research Institute Robotics"
+        url="/department/control-systems-robotics/ai-powered-robotic-control-systems"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -237,13 +244,15 @@ const ECEAIPoweredRoboticControlSystemsProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/swarm-robotics-multi-agent-systems-project-development">Swarm Robotics and Multi-Agent Systems Project Development</a></li>
-              <li><a href="/autonomous-robot-navigation-path-planning-project-development">Autonomous Robot Navigation and Path Planning Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/machine-learning-embedded-platforms-project-development">Machine Learning in Embedded Platforms Project Development</a></li>
-              <li><a href="/iot-embedded-devices-project-development">IoT-enabled Embedded Devices Project Development</a></li>
-            </ul>
+              <ul>
+  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
+  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -27,6 +28,14 @@ const faqs = [
 const EEEEnergyEfficientMotorsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Energy Efficient Motors IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Energy-Efficient Motors projects for B.Tech, M.Tech, Ph.D. High-efficiency motor design, loss minimization, AI-based optimization, advanced control strategies using MATLAB/Simulink, ANSYS Maxwell, TensorFlow for industrial, EV, renewable energy applications."
+  keywords="Energy Efficient Motors IEEE Projects 2023–2025, High-Efficiency Motor Design, B.Tech Energy Saving Motor Projects, M.Tech Motor Optimization Research, Ph.D. Intelligent Motor Control, Loss Minimization Motors, IoT Motor Monitoring, Industrial Energy Efficient Drives, Power Factor Improvement Motors, Narpavi Research Institute"
+  url="/department/electrical-machines/energy-efficient-motors"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -196,23 +205,6 @@ const EEEEnergyEfficientMotorsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -220,12 +212,43 @@ const EEEEnergyEfficientMotorsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/special-electrical-machines-project-development">Special Electrical Machines Project Development</a></li>
-              <li><a href="/loss-minimization-techniques-project-development">Loss Minimization Techniques Project Development</a></li>
-              <li><a href="/advanced-drives-controllers-project-development">Advanced Drives & Controllers Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/electrical-machines">
+      Electrical Machines – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/electrical-machines">
+      Advanced Drives & Controllers
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/condition-monitoring-machines">
+      Condition Monitoring of Machines
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/energy-efficient-motors">
+      Energy Efficient Motors
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
+      Fault Diagnosis of Motors & Generators
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/loss-minimization-techniques">
+      Loss Minimization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/special-electrical-machines">
+      Special Electrical Machines
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

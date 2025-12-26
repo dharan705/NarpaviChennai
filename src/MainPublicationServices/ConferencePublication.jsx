@@ -44,11 +44,28 @@ const ConferencePublication = () => {
       <div className="conference-container">
         {/* Left Box */}
         <div className="conference-left">
-          <h2>Conference Publication Support</h2>
-          <p>
-            Expert writing, formatting, and submission services for IEEE, Springer,
-            Elsevier, and National Conference papers. Fast-track options available.
-          </p>
+          <h3>Related Services</h3>
+      <ul>
+        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/ieee-conference-paper-publication")}>
+          IEEE Conference Paper Publication Services
+        </li>
+        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/springer-conference-paper-assistance")}>
+          Springer Conference Paper Publication Assistance
+        </li>
+        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/elsevier-conference-paper-support")}>
+          Elsevier Conference Paper Publication Support
+        </li>
+        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/national-conference-paper-support")}>
+          National Conference Paper Publication Support
+        </li>
+        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/fast-track-conference-paper-services")}>
+          Fast-Track Conference Paper Publication Services
+        </li>
+        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/ieee-review-article-support")}>
+          Review Article Publication Support for IEEE Conferences
+        </li>
+      </ul>
+   
         </div>
 
         {/* Main Content */}
@@ -231,48 +248,14 @@ const ConferencePublication = () => {
                 </details>
               ))}
             </div>
-            <script type="application/ld+json">
-              {JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": faqs.map((faq) => ({
-                  "@type": "Question",
-                  "name": faq.question,
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": faq.answer,
-                  },
-                })),
-              })}
-            </script>
+            
           </section>
         </div>
 
         {/* Right Box */}
         <div className="Conference-right-highlights">
           
-      <h3>Related Services</h3>
-      <ul>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/ieee-conference-paper-publication")}>
-          IEEE Conference Paper Publication Services
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/springer-conference-paper-assistance")}>
-          Springer Conference Paper Publication Assistance
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/elsevier-conference-paper-support")}>
-          Elsevier Conference Paper Publication Support
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/national-conference-paper-support")}>
-          National Conference Paper Publication Support
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/fast-track-conference-paper-services")}>
-          Fast-Track Conference Paper Publication Services
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/ieee-review-article-support")}>
-          Review Article Publication Support for IEEE Conferences
-        </li>
-      </ul>
-   
+     
           <h3>Keywords</h3>
           <ul>
             {keywords.map((keyword, idx) => (

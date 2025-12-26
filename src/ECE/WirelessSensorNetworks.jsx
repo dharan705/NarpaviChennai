@@ -1,7 +1,6 @@
-
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../assets/SEO"
 const faqs = [
   {
     question: "What services does the Wireless Sensor Networks Project Development Center offer?",
@@ -28,6 +27,25 @@ const faqs = [
 const ECEWirelessSensorNetworksProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="Wireless Sensor Networks IEEE Projects | NS2 NS3 MATLAB Contiki | B.Tech M.Tech PhD"
+        description="Wireless Sensor Networks (WSN) project development center for B.Tech, M.Tech, Ph.D. IEEE projects (2023–2025) in energy-efficient routing, secure WSNs, AI-driven sensor networks using NS2, NS3, MATLAB, OMNeT++, Contiki."
+        url="/department/wireless-sensor-networks"
+        type="article"
+        keywords={[
+          "Wireless Sensor Networks Projects",
+          "WSN IEEE Projects 2025",
+          "IoT WSN Research Support",
+          "Energy-Efficient WSN Projects",
+          "Secure Wireless Sensor Networks",
+          "NS2 NS3 WSN Simulation",
+          "MATLAB WSN Projects",
+          "Blockchain WSN Projects",
+          "AI-Driven WSN",
+          "B.Tech M.Tech PhD WSN"
+        ]}
+        faqs={faqs}  // Reuse existing faqs array
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -231,40 +249,22 @@ const ECEWirelessSensorNetworksProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-            </ul>
+  <ul>
+  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
+  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+  </ul>
+
           </div>
         </div>
       </div>

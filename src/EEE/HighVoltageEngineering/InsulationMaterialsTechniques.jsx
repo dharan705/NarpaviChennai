@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Insulation Materials & Techniques Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEInsulationMaterialsTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Insulation Materials Techniques IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Insulation Materials & Techniques projects for B.Tech, M.Tech, Ph.D. Dielectric materials, nanocomposite insulation, AI predictive diagnostics using MATLAB/Simulink, COMSOL Multiphysics, ANSYS for HV transformers, cables, switchgear."
+  keywords="Insulation Materials IEEE Projects 2023–2025, High Voltage Insulation Techniques, B.Tech Dielectric Testing, M.Tech Composite Insulation Systems, Ph.D. AI Insulation Diagnostics, Nanocomposite Insulation, Thermal-Resistant Insulation, Partial Discharge Insulation, Electrical Equipment Safety, Narpavi Research Institute"
+  url="/department/high-voltage-engineering/insulation-materials"
+  faqs={faqs}
+/>
+
       <Sidebar />
       
       <div className="EEEProjectDevelopmentCenter-main">
@@ -194,38 +202,45 @@ const EEEInsulationMaterialsTechniquesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              
-              {/* Schema for FAQ SEO */}
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(faq => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+ 
             </section>
           </div>
 
           {/* 🔗 Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-storage-renewable-integration-project-development">Energy Storage & Renewable Integration</a></li>
-              <li><a href="/cybersecurity-smart-grids-project-development">Cybersecurity in Smart Grids</a></li>
-              <li><a href="/real-time-monitoring-scada-project-development">Real-Time Monitoring & SCADA</a></li>
-              <li><a href="/microgrid-energy-management-project-development">Microgrid Energy Management</a></li>
-              <li><a href="/grid-integration-of-renewables-project-development">Grid Integration of Renewables</a></li>
-            </ul>
+            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+
+<Route
+  path="department/high-voltage-engineering/gis"
+  element={<EEEGISProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/high-voltage-testing"
+  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/hvdc-transmission"
+  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/insulation-materials"
+  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/overvoltage-surge-protection"
+  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/partial-discharge-analysis"
+  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
+/>
+
           </div>
 
         </div>

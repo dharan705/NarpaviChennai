@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the IoT-based Health Monitoring of Machines Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEIoTBasedHealthMonitoringMachinesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="IoT Machine Health Monitoring IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) IoT-based Health Monitoring of Machines projects for B.Tech, M.Tech, Ph.D. Predictive maintenance, condition monitoring using Arduino ESP32 Raspberry Pi Jetson Nano sensors, AWS Azure Google Cloud, TensorFlow Keras blockchain."
+  keywords="IoT Machine Health Monitoring IEEE Projects 2023–2025, B.Tech IoT Condition Monitoring, M.Tech AI Predictive Maintenance, Ph.D. Blockchain 5G 6G Machine Health, Industrial IoT Edge Computing, Narpavi Research Institute"
+  url="/department/iot-electrical-systems/health-monitoring"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -203,36 +211,50 @@ const EEEIoTBasedHealthMonitoringMachinesProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/iot-predictive-maintenance-project-development">IoT for Predictive Maintenance Project Development</a></li>
-              <li><a href="/iot-enabled-smart-meters-project-development">IoT-enabled Smart Meters Project Development</a></li>
-              <li><a href="/iot-smart-grids-project-development">IoT for Smart Grids Project Development</a></li>
-              <li><a href="/data-analytics-energy-savings-project-development">Data Analytics for Energy Savings Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/iot-electrical-systems">
+      IoT in Electrical Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/smart-grids">
+      IoT for Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/renewable-energy">
+      IoT in Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/predictive-maintenance">
+      IoT for Predictive Maintenance
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/smart-home-automation">
+      Smart Home Automation with IoT
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/smart-meters">
+      IoT-Enabled Smart Meters
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/health-monitoring">
+      IoT-Based Health Monitoring
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

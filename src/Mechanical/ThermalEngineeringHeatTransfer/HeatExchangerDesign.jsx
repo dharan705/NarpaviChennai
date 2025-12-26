@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Heat Exchanger Design & Optimization Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEHeatExchangerDesignOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+        <SEO
+        title="Heat Exchanger Design & Optimization IEEE Projects (2023–2025)"
+        description="Heat Exchanger Design Optimization IEEE project development for B.Tech, M.Tech & PhD using ANSYS, COMSOL, CFD simulation, nanofluids, AI optimization, microchannel design for thermal systems."
+        url="/department/thermal-engineering/heat-exchanger-design"
+        type="article"
+        keywords={[
+          "Heat Exchanger Design Optimization IEEE 2023–2025",
+          "Shell Tube Heat Exchanger Projects",
+          "Plate Heat Exchanger Simulation",
+          "CFD Heat Transfer Projects",
+          "Nanofluid Heat Exchanger Research",
+          "Microchannel Heat Exchanger Projects",
+          "AI Heat Exchanger Optimization",
+          "HVAC Heat Exchanger Design",
+          "Thermal Engineering Heat Exchanger Projects",
+          "Narpavi Research Institute Thermal Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -225,23 +244,6 @@ const MEHeatExchangerDesignOptimizationProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -249,12 +251,38 @@ const MEHeatExchangerDesignOptimizationProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/thermal-engineering">
+      Thermal Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/heat-exchanger-design">
+      Heat Exchanger Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/solar-thermal-systems">
+      Solar Thermal Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/waste-heat-recovery">
+      Waste Heat Recovery
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/hvac-system-analysis">
+      HVAC System Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
+      Energy Efficiency in Thermal Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

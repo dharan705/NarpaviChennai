@@ -1,10 +1,11 @@
 import "./Networking.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Networking Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Networking Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) networking projects, focusing on 5G/6G, SDN, NFV, IoT, and AI-driven network security for industries like telecom, cloud services, and cybersecurity."
+    answer: "Narpavi Research Institute's Networking Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) networking projects, focusing on 5G/6G, SDN, NFV, IoT, and AI-driven network security for industries like telecom, cloud services, and cybersecurity."
   },
   {
     question: "What types of networking projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const NetworkingProjectDevelopmentCenter = () => {
   return (
     <div className="NetworkingProjectDevelopmentCenter">
+      <SEO 
+        title="Networking IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Networking projects for B.Tech, M.Tech, Ph.D. 5G/6G, SDN, NFV, IoT networking, AI-driven security for telecom, cloud services, cybersecurity."
+        keywords="Networking Project Development Center, IEEE Networking Projects 2023–2025, Software Defined Networking Projects, NFV Networking Projects, IoT Networking IEEE Topics, 5G Networking IEEE Papers, Edge Computing Networking Projects, Narpavi Research Institute Networking Support, IEEE Networking Conference Papers, AI in Networking Projects"
+        url="/department/networking"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="NetworkingProjectDevelopmentCenter-main">
         <div className="NetworkingProjectDevelopmentCenter-grid">
@@ -56,7 +64,7 @@ const NetworkingProjectDevelopmentCenter = () => {
                 <strong>Narpavi Research Institute</strong>, we are proud to offer Networking – Project Development Center services to engineering students and researchers across the globe. Through our commitment to innovation and research excellence, our Networking – Project Development Center ensures that every project aligns with the most recent IEEE Transactions (2023–2025), empowering students to develop robust, scalable, and industry-relevant networking solutions.
               </p>
               <p>
-                Our Networking – Project Development Center supports projects in both software and hardware, covering advanced areas such as 5G/6G networks, software-defined networking (SDN), network function virtualization (NFV), edge computing, IoT-based networking, and high-performance data transfer protocols. With strong expertise in IEEE standards and trends, we ensure that our students’ work meets both academic excellence and real-world application demands.
+                Our Networking – Project Development Center supports projects in both software and hardware, covering advanced areas such as 5G/6G networks, software-defined networking (SDN), network function virtualization (NFV), edge computing, IoT-based networking, and high-performance data transfer protocols. With strong expertise in IEEE standards and trends, we ensure that our students' work meets both academic excellence and real-world application demands.
               </p>
               <p>
                 By collaborating with Narpavi Research Institute, students gain access to structured project development cycles designed for B.Tech, M.Tech, and Ph.D. levels. This targeted approach enables learners to master technical skills, research methodologies, and presentation standards — making their work publication-ready for IEEE conferences and journals.
@@ -215,7 +223,6 @@ const NetworkingProjectDevelopmentCenter = () => {
               <p>
                 Excellence in Networking Project Development with Narpavi Technology stands as a benchmark for world-class academic and industrial project execution. At Narpavi Research Institute, we specialize in guiding engineering students across B.Tech, M.Tech, and Ph.D. programs worldwide in creating both software and hardware networking solutions. We source our topics exclusively from IEEE Transactions (2023–2025), ensuring every project aligns with cutting-edge research and global standards. Excellence in Networking Project Development with Narpavi Technology is not just about completing a project — it is about delivering innovation that resonates with industry needs, from cloud-based networking architectures to 5G/6G communication frameworks.
               </p>
-             
             </section>
 
             <section className="kerala-alluniversityfaq-section">
@@ -228,47 +235,28 @@ const NetworkingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="NetworkingProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

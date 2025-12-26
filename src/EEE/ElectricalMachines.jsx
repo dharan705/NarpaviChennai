@@ -1,11 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Electrical Machines Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Electrical Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in motor design, control strategies, and energy-efficient systems for applications in electric vehicles, smart manufacturing, and renewable energy."
+    answer: "Narpavi Research Institute's Electrical Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in motor design, control strategies, and energy-efficient systems for applications in electric vehicles, smart manufacturing, and renewable energy."
   },
   {
     question: "What types of electrical machines projects are supported?",
@@ -28,6 +28,13 @@ const faqs = [
 const EEEElectricalMachinesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Electrical Machines IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Electrical Machines projects for B.Tech, M.Tech, Ph.D. MATLAB/Simulink, ANSYS Maxwell, Motor-CAD projects in EVs, smart manufacturing, renewable energy."
+        keywords="Electrical Machines IEEE Projects 2023–2025, Electrical Machines Project Development, B.Tech Electrical Machines Projects, M.Tech Motor Drive Research, Ph.D. Electrical Machines IEEE Thesis Support, Energy-Efficient Motor IEEE Projects, Fault-Tolerant Motor Drives Research, Permanent Magnet Motor IEEE Projects, AI in Electrical Machines, Narpavi Research Institute"
+        url="/department/electrical-machines"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -214,43 +221,50 @@ const EEEElectricalMachinesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/electrical-machines">
+      Electrical Machines – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/electrical-machines">
+      Advanced Drives & Controllers
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/condition-monitoring-machines">
+      Condition Monitoring of Machines
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/energy-efficient-motors">
+      Energy Efficient Motors
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
+      Fault Diagnosis of Motors & Generators
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/loss-minimization-techniques">
+      Loss Minimization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/electrical-machines/special-electrical-machines">
+      Special Electrical Machines
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

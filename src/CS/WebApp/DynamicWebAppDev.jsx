@@ -1,10 +1,11 @@
 import "./DynamicWebAppDev.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Dynamic Web Applications Development Center offer?",
-    answer: "Narpavi Research Institute’s Dynamic Web Applications Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) dynamic web applications, focusing on real-time, database-driven, and API-integrated solutions."
+    answer: "Narpavi Research Institute's Dynamic Web Applications Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) dynamic web applications, focusing on real-time, database-driven, and API-integrated solutions."
   },
   {
     question: "What types of dynamic web projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const DynamicWebApplicationsDevelopmentCenter = () => {
   return (
     <div className="DynamicWebApplicationsDevelopmentCenter">
+      <SEO 
+        title="Dynamic Web Apps IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Dynamic Web Applications for B.Tech, M.Tech, Ph.D. React, Node.js, MERN stack, REST APIs, Firebase for education, healthcare, smart cities."
+        keywords="Dynamic Web Applications Development – Project Development Center, IEEE 2023–2025 Dynamic Web Project Topics, Dynamic Website Development for B.Tech M.Tech Ph.D., REST API-based Web Development, MERN Stack Student Projects, JWT Authentication Projects, Firebase Web App Development, Angular Spring Boot Projects, Narpavi Research Institute Project Services, Full-Stack Web Development IEEE-based Projects, Academic Dynamic Web Application Development Center"
+        url="/department/dynamic-web-applications"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="DynamicWebApplicationsDevelopmentCenter-main">
         <div className="DynamicWebApplicationsDevelopmentCenter-grid">
@@ -156,7 +164,7 @@ const DynamicWebApplicationsDevelopmentCenter = () => {
             <section className="DynamicWebApplicationsDevelopmentCenter-excellence">
               <h2>Excellence in Dynamic Web Applications Development</h2>
               <p>
-                Narpavi Research Institute’s Dynamic Web Applications Development – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative web solutions.
+                Narpavi Research Institute's Dynamic Web Applications Development – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative web solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful systems for academia and industry, from interactive dashboards to secure multi-user platforms.
@@ -173,47 +181,28 @@ const DynamicWebApplicationsDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="DynamicWebApplicationsDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

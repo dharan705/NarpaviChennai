@@ -1,5 +1,6 @@
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
@@ -27,9 +28,34 @@ const faqs = [
 const ECEEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Embedded Systems IEEE Projects | B.Tech M.Tech PhD (2023–2025)"
+        description="Embedded Systems project development for B.Tech, M.Tech, and Ph.D. students focusing on ARM Cortex, FPGA, RTOS, Embedded Linux, IoT, embedded AI, and IEEE-aligned research projects (2023–2025)."
+        url="/department/embedded-systems"
+        type="article"
+        keywords={[
+          "Embedded Systems Projects",
+          "ARM Cortex Embedded Projects",
+          "FPGA Embedded Design",
+          "RTOS Embedded Systems",
+          "IoT Embedded Projects",
+          "Embedded AI Projects",
+          "IEEE Embedded Systems Projects 2023",
+          "MTech Embedded Systems Research",
+          "PhD Embedded Systems Projects",
+          "Narpavi Research Institute Embedded Systems"
+        ]}
+        faqs={faqs}
+      />
+      {/* ======================================= */}
+
       <Sidebar />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="ECEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -172,7 +198,7 @@ const ECEEmbeddedSystemsProjectDevelopmentCenter = () => {
                 The style emphasizes innovation, research rigor, and publication-ready outcomes.
               </p>
             </section>
-            
+
             <section className="ECEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Embedded Systems Project Titles (2023–2025)</h2>
               <ul>
@@ -204,6 +230,7 @@ const ECEEmbeddedSystemsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
+            {/* FAQ UI (schema handled by SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -214,38 +241,24 @@ const ECEEmbeddedSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/natural-language-processing-project-development">Natural Language Processing Project Development</a></li>
-            </ul>
+  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

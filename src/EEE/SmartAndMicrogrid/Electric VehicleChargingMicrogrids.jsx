@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Electric Vehicle Charging in Microgrids Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEEVChargingMicrogridsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="EV Charging Microgrids IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) EV Charging in Microgrids projects for B.Tech, M.Tech, Ph.D. Smart charging stations, V2G frameworks, AI predictive load optimization using MATLAB/Simulink, HOMER Pro, PSIM, TensorFlow for renewable-integrated microgrids."
+  keywords="EV Charging Microgrids IEEE Projects 2023–2025, Smart EV Charging Stations, B.Tech Microgrid EV Projects, M.Tech V2G Integration, Ph.D. AI EV Load Management, IoT EV Monitoring, Renewable EV Charging, Predictive Charging Optimization, Narpavi Research Institute"
+  url="/department/smart-grid-microgrid/ev-charging-microgrids"
+  faqs={faqs}
+/>
+
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -208,12 +216,43 @@ const EEEEVChargingMicrogridsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/microgrid-energy-management-project-development">Microgrid Energy Management</a></li>
-              <li><a href="/grid-integration-of-renewables-project-development">Grid Integration of Renewables</a></li>
-              <li><a href="/energy-storage-renewable-integration-project-development">Energy Storage with Renewables</a></li>
-              <li><a href="/smart-metering-demand-response-project-development">Smart Metering & Demand Response</a></li>
-              <li><a href="/cybersecurity-smart-grids-project-development">Cybersecurity in Smart Grids</a></li>
-            </ul>
+  <li>
+    <a href="/department/smart-grid-microgrid">
+      Smart Grid & Microgrid – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
+      Cybersecurity for Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
+      EV Charging & Microgrids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
+      Integration of Distributed Generation
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
+      Microgrid Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
+      Real-Time Monitoring & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
+      Smart Metering & Demand Response
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

@@ -171,35 +171,51 @@ const EEEPidAdvancedControllersProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              
-              {/* JSON-LD Schema.org for FAQ SEO */}
-              <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context":"https://schema.org",
-                    "@type":"FAQPage",
-                    "mainEntity": faqs.map(f=>({
-                      "@type":"Question",
-                      "name": f.question,
-                      "acceptedAnswer": { "@type":"Answer", "text": f.answer }
-                    }))
-                  })
-                }} 
-              />
+      
             </section>
           </div>
 
           {/* Right Column – Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/power-electronics-project-development">Power Electronics Projects</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Projects</a></li>
-              <li><a href="/robotics-automation-project-development">Robotics & Automation Projects</a></li>
-              <li><a href="/fpga-control-applications-project-development">FPGA-Based Control Applications</a></li>
-              <li><a href="/real-time-operating-systems-project-development">Real-Time Operating Systems (RTOS)</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/control-systems-electrical">
+      Control Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/adaptive-robust-control">
+      Adaptive & Robust Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
+      Intelligent Control (AI/ML)
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/nonlinear-control-systems">
+      Nonlinear Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/optimal-control-systems">
+      Optimal Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/pid-advanced-controllers">
+      PID & Advanced Controllers
+    </a>
+  </li>
+  <li>
+    <a href="/department/control-systems-electrical/process-control-industries">
+      Process Control in Industries
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

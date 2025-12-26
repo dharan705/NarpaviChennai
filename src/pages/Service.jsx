@@ -21,7 +21,7 @@ const serviceRoutes = {
   "Anna University Annexture Paper Publication Services": "/service/anna-university-annexture",
   "VIT University Paper Publication Services": "/service/vit-university-paper-publication-services",
   "Research Paper Publication Services for PhD students from SRM University": "/service/research-paper-publication-services-for-phd-students-from-srm-university",
-  "Research Paper Publication Services for PhD students from Sathyabama University": "/service/research-paper-publication-help-and-services",
+  "Research Paper Publication Services for PhD students from Sathyabama University": "/service/research-paper-sathyabama",
   "PhD Research Thesis Writing Services Help": "/service/phd-research-thesis-writing-services-help",
   "PhD Research Synopsis Writing Services Help": "/service/phd-research-synopsis-writing-services-help",
   "PhD Research Final Viva Preparation Help Services": "/service/phd-research-final-viva-preparation-help-services",

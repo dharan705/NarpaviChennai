@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";  
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the PLC & SCADA Systems Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEPlcScadaSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="PLC SCADA Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) PLC & SCADA Systems projects for B.Tech, M.Tech, Ph.D. Industrial automation, IoT-SCADA integration, AI predictive monitoring using Siemens Allen Bradley Delta PLC, Wonderware WinCC Ignition, Modbus OPC-UA for smart grids, manufacturing."
+  keywords="PLC SCADA IEEE Projects 2023–2025, B.Tech PLC Automation Projects, M.Tech IoT SCADA Energy Monitoring, Ph.D. AI Cyber-Secure SCADA, Industry 4.0 PLC SCADA, Smart Grid SCADA Systems, Industrial Control Projects, Narpavi Research Institute"
+  url="/department/industrial-automation/plc-scada"
+  faqs={faqs}
+/>
+
       <Sidebar/>
       
       <div className="EEEProjectDevelopmentCenter-main">
@@ -174,34 +182,50 @@ const EEEPlcScadaSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* SEO JSON-LD */}
-              <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                      "@context":"https://schema.org",
-                      "@type":"FAQPage",
-                      "mainEntity": faqs.map(f=>({
-                        "@type":"Question",
-                        "name":f.question,
-                        "acceptedAnswer":{ "@type":"Answer","text":f.answer }
-                      }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* 🔗 Right – Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/process-control-in-industries-project-development">Process Control in Industries</a></li>
-              <li><a href="/real-time-monitoring-scada-project-development">Real-Time Monitoring & SCADA</a></li>
-              <li><a href="/iot-embedded-hardware-design-project-development">IoT-Embedded Hardware Design</a></li>
-              <li><a href="/cybersecurity-smart-grids-project-development">Cybersecurity in Smart Grids</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Projects</a></li>
-            </ul>
+<ul>
+  <li>
+    <a href="/department/industrial-automation">
+      Industrial Automation – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/dcs">
+      DCS (Distributed Control Systems)
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/hmi">
+      HMI (Human-Machine Interface)
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/iiot-applications">
+      IIoT Applications in Industrial Automation
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/plc-scada">
+      PLC & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/predictive-maintenance">
+      Predictive Maintenance Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/rpa">
+      RPA (Robotic Process Automation)
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

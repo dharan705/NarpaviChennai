@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the HVAC System Analysis Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEHVACSystemAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="HVAC System Analysis IEEE Projects (2023–2025)"
+        description="HVAC System Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, COMSOL, CFD airflow analysis, IoT smart HVAC, AI control, energy efficiency, renewable integration."
+        url="/department/thermal-engineering/hvac-system-analysis"
+        type="article"
+        keywords={[
+          "HVAC System Analysis IEEE 2023–2025",
+          "CFD HVAC Projects",
+          "Smart HVAC System Research",
+          "IoT HVAC Optimization Projects",
+          "Energy-Efficient HVAC Projects",
+          "AI HVAC Control Systems",
+          "Renewable Energy HVAC Integration",
+          "HVAC Airflow Distribution Analysis",
+          "Narpavi Research Institute Thermal Projects",
+          "Net-Zero Energy HVAC Buildings"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -189,36 +208,45 @@ const MEHVACSystemAnalysisProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-              <li><a href="/heat-exchanger-design-optimization-project-development">Heat Exchanger Design & Optimization Project Development</a></li>
-              <li><a href="/solar-thermal-systems-project-development">Solar Thermal Systems Project Development</a></li>
-              <li><a href="/waste-heat-recovery-systems-project-development">Waste Heat Recovery Systems Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/thermal-engineering">
+      Thermal Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/heat-exchanger-design">
+      Heat Exchanger Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/solar-thermal-systems">
+      Solar Thermal Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/waste-heat-recovery">
+      Waste Heat Recovery
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/hvac-system-analysis">
+      HVAC System Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
+      Energy Efficiency in Thermal Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

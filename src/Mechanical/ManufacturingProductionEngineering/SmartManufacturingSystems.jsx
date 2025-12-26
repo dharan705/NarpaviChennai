@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Smart Manufacturing Systems (Industry 4.0) Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MESmartManufacturingSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="Smart Manufacturing Systems Industry 4.0 IEEE Projects (2023–2025)"
+        description="Smart Manufacturing Industry 4.0 IEEE project development for B.Tech, M.Tech & PhD using IoT, AI optimization, digital twins, predictive maintenance, cyber-physical systems for automotive, aerospace, electronics smart factories."
+        url="/department/manufacturing-production/smart-manufacturing-systems"
+        type="article"
+        keywords={[
+          "Smart Manufacturing IEEE 2023–2025",
+          "Industry 4.0 Student Projects",
+          "IoT Smart Factory Projects",
+          "AI Manufacturing Optimization",
+          "Digital Twin Smart Factory",
+          "Predictive Maintenance Industry 4.0",
+          "Cyber Physical Systems Manufacturing",
+          "Cloud Integrated Production Systems",
+          "Narpavi Research Institute Industry 4.0",
+          "Sustainable Smart Manufacturing"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -248,12 +267,38 @@ const MESmartManufacturingSystemsProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/cnc-machining-optimization-project-development">CNC Machining Optimization Project Development</a></li>
-              <li><a href="/additive-manufacturing-project-development">Additive Manufacturing / 3D Printing Project Development</a></li>
-              <li><a href="/industrial-automation-robotics-project-development">Industrial Automation & Robotics Project Development</a></li>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/manufacturing-production">
+      Manufacturing & Production Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/cnc-machining-optimization">
+      CNC Machining Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/additive-manufacturing">
+      Additive Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/industrial-automation-robotics">
+      Industrial Automation & Robotics
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/smart-manufacturing-systems">
+      Smart Manufacturing Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/tool-design-process">
+      Tool Design & Process
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

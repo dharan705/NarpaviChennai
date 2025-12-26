@@ -67,7 +67,7 @@ const College1 = [
   }, {
     title: 'St.Peter’s Institute of Higher Education and Research, Chennai',
     description: 'See info',
-    link: '/st.peter’s-institute',
+    link: '/st-peter’s-institute',
   }, {
     title: 'Periyar Maniammai Institute of Science & Technology, Thanjavur',
     description: 'See info',

@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the EV Motor Drive Systems Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EeeEvMotorDriveSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="EV Motor Drive Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) EV Motor Drive Systems projects for B.Tech, M.Tech, Ph.D. BLDC PMSM IM SRM drives, inverter design, regenerative braking, AI predictive control using MATLAB/Simulink, PSCAD, PLECS, FPGA DSP for EV propulsion."
+  keywords="EV Motor Drive Systems IEEE Projects 2023–2025, B.Tech BLDC PMSM Drives, M.Tech EV Inverter Regenerative Braking, Ph.D. AI ML EV Drive Control, EV Propulsion Systems, Electric Vehicle Motor Control, Narpavi Research Institute"
+  url="/department/electric-vehicles/ev-motor-drive-systems"
+  faqs={faqs}
+/>
+
       <Sidebar/>
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -166,34 +174,88 @@ const EeeEvMotorDriveSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
+<ul>
+  <li>
+    <a href="/department/electric-vehicles">
+      Electric Vehicles – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/bms">
+      Battery Management Systems (BMS)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-charging-infrastructure">
+      EV Charging Infrastructure
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-motor-drive-systems">
+      EV Motor Drive Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/hev">
+      Hybrid Electric Vehicles (HEV)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/power-electronics-evs">
+      Power Electronics for EVs
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/regenerative-braking-systems">
+      Regenerative Braking Systems
+    </a>
+  </li>
+</ul>
 
-              {/* JSON-LD FAQ Schema */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context":"https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(f=>({
-                      "@type":"Question",
-                      "name":f.question,
-                      "acceptedAnswer":{"@type":"Answer","text":f.answer}
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* 🔗 Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/power-electronics-project-development">Power Electronics Projects</a></li>
-              <li><a href="/automotive-embedded-systems-project-development">Automotive Embedded Systems</a></li>
-              <li><a href="/adaptive-robust-control-project-development">Adaptive & Robust Control</a></li>
-              <li><a href="/optimal-control-systems-project-development">Optimal Control Systems</a></li>
-              <li><a href="/intelligent-control-ai-ml-project-development">AI/ML Intelligent Control</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/electric-vehicles">
+      Electric Vehicles – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/bms">
+      Battery Management Systems (BMS)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-charging-infrastructure">
+      EV Charging Infrastructure
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-motor-drive-systems">
+      EV Motor Drive Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/hev">
+      Hybrid Electric Vehicles (HEV)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/power-electronics-evs">
+      Power Electronics for EVs
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/regenerative-braking-systems">
+      Regenerative Braking Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         
         </div>

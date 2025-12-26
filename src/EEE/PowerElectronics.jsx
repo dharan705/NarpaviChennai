@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Power Electronics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Power Electronics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power converters, inverters, and AI-driven control systems for applications in renewable energy, electric vehicles, and smart grids."
+    answer: "Narpavi Research Institute's Power Electronics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power converters, inverters, and AI-driven control systems for applications in renewable energy, electric vehicles, and smart grids."
   },
   {
     question: "What types of power electronics projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEEPowerElectronicsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Power Electronics IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Power Electronics projects for B.Tech, M.Tech, Ph.D. DC-DC converters, multilevel inverters, SiC/GaN, solid-state transformers in renewable energy, EVs, smart grids."
+        keywords="Power Electronics IEEE Projects 2023–2025, DC–DC Converter Projects, Multilevel Inverter IEEE Research, B.Tech Power Electronics Projects, M.Tech Renewable Energy Power Electronics, Ph.D. IEEE Thesis Power Electronics, Solid-State Drive Projects, Wide Bandgap Device IEEE Projects, AI in Power Electronics, Narpavi Research Institute"
+        url="/department/power-electronics"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -216,24 +224,6 @@ const EEEPowerElectronicsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -241,19 +231,43 @@ const EEEPowerElectronicsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/power-electronics">
+      Power Electronics – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/dc-dc-converters">
+      DC–DC Converters & Applications
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/multilevel-inverters">
+      Multilevel Inverters
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/renewable-energy-controllers">
+      Power Electronic Controllers for Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/power-factor-correction">
+      Power Factor Correction Circuits
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/solid-state-drives">
+      Solid State Drives
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-electronics/wireless-power-transfer">
+      Wireless Power Transfer Circuits
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

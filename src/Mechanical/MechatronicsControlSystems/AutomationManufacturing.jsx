@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Automation in Manufacturing Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEAutomationInManufacturingProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Automation in Manufacturing IEEE Projects (2023–2025)"
+        description="Automation in Manufacturing IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PLC SCADA, AI predictive maintenance, IoT smart factories, digital twins, Industry 4.0 robotics, cybersecure IIoT for automotive & aerospace."
+        url="/department/mechatronics-control-systems/automation-manufacturing"
+        type="article"
+        keywords={[
+          "Automation in Manufacturing IEEE 2023–2025",
+          "Industry 4.0 Automation Projects",
+          "Smart Factory IoT Projects",
+          "AI Driven Manufacturing Automation",
+          "PLC SCADA Student Projects",
+          "Predictive Maintenance IEEE Projects",
+          "Digital Twin Automation Projects",
+          "Robotics in Manufacturing Projects",
+          "Cybersecure Smart Factory Projects",
+          "Narpavi Research Institute Industry 4.0 Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -257,12 +276,38 @@ const MEAutomationInManufacturingProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/mechatronics-control-systems-project-development">Mechatronics & Control Systems Project Development</a></li>
-              <li><a href="/pid-advanced-control-systems-project-development">PID & Advanced Control Systems Project Development</a></li>
-              <li><a href="/automotive-vehicle-engineering-project-development">Automotive & Vehicle Engineering Project Development</a></li>
-              <li><a href="/electric-vehicle-design-control-project-development">Electric Vehicle Design & Control Project Development</a></li>
-              <li><a href="/hybrid-vehicle-powertrains-project-development">Hybrid Vehicle Powertrains Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/mechatronics-control-systems">
+      Mechatronics & Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/pid-advanced-control">
+      PID & Advanced Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/automation-manufacturing">
+      Automation in Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/plc-systems">
+      PLC Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/sensor-integration">
+      Sensor Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
+      Smart Actuator Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

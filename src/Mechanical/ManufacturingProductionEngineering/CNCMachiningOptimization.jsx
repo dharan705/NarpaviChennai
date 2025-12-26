@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the CNC Machining Optimization Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MECNCMachiningOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+        <SEO
+        title="CNC Machining Optimization IEEE Projects (2023–2025)"
+        description="CNC Machining Optimization IEEE project development for B.Tech, M.Tech & PhD using AI toolpath optimization, IoT monitoring, chatter suppression, digital twins, hybrid machining for aerospace, automotive, biomedical applications."
+        url="/department/manufacturing-production/cnc-machining-optimization"
+        type="article"
+        keywords={[
+          "CNC Machining Optimization IEEE 2023–2025",
+          "AI CNC Toolpath Optimization",
+          "IoT Enabled CNC Monitoring",
+          "Chatter Suppression CNC Projects",
+          "Digital Twin CNC Machining",
+          "Multi-Axis CNC Optimization",
+          "Sustainable CNC Machining Projects",
+          "Tool Wear Prediction CNC",
+          "Hybrid CNC Additive Manufacturing",
+          "Narpavi Research Institute CNC Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -247,12 +266,38 @@ const MECNCMachiningOptimizationProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/fluid-mechanics-fluid-dynamics-project-development">Fluid Mechanics / Fluid Dynamics Project Development</a></li>
-              <li><a href="/cfd-simulations-project-development">CFD Simulations Project Development</a></li>
-              <li><a href="/pump-valve-optimization-project-development">Pump & Valve Optimization Project Development</a></li>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/manufacturing-production">
+      Manufacturing & Production Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/cnc-machining-optimization">
+      CNC Machining Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/additive-manufacturing">
+      Additive Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/industrial-automation-robotics">
+      Industrial Automation & Robotics
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/smart-manufacturing-systems">
+      Smart Manufacturing Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/tool-design-process">
+      Tool Design & Process
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

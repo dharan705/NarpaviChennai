@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the Smart Building Energy Management Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEESmartBuildingEnergyManagementProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Smart Building Energy Management IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Smart Building Energy Management projects for B.Tech, M.Tech, Ph.D. HVAC lighting optimization, predictive analytics using MATLAB Simulink Python TensorFlow PyTorch Scikit-learn Arduino Raspberry Pi IoT SCADA BACnet AWS Azure."
+  keywords="Smart Building Energy Management IEEE Projects 2023–2025, B.Tech AI HVAC Lighting, M.Tech CNN LSTM RL Building Control, Ph.D. GAN Transformer Smart Cities, IoT Building Energy Optimization, Narpavi Research Institute"
+  url="/department/energy-management-systems/smart-building-energy"
+  faqs={faqs}
+/>
+
       <Sidebar/>
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -174,34 +182,51 @@ const EEESmartBuildingEnergyManagementProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              
-              {/* Schema FAQ SEO */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                 __html: JSON.stringify({
-                   "@context":"https://schema.org",
-                   "@type":"FAQPage",
-                   "mainEntity": faqs.map(f=>({
-                     "@type":"Question",
-                     "name": f.question,
-                     "acceptedAnswer": { "@type":"Answer", "text": f.answer }
-                   }))
-                 })
-                }}
-              />
+    
             </section>
           </div>
 
           {/* 🔗 Related Centers */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/ai-energy-optimization-project-development">AI-based Energy Optimization</a></li>
-              <li><a href="/dl-renewable-systems-project-development">Deep Learning in Renewable Systems</a></li>
-              <li><a href="/ai-smart-grids-project-development">AI in Smart Grids</a></li>
-              <li><a href="/predictive-maintenance-systems-project-development">Predictive Maintenance Systems</a></li>
-              <li><a href="/ml-fault-detection-project-development">ML for Fault Detection</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/energy-management-systems">
+      Energy Management Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/smart-building-energy">
+      Smart Building Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/demand-side-management">
+      Demand-Side Management (DSM)
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/energy-efficiency-industries">
+      Energy Efficiency in Industries
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/renewable-energy-scheduling">
+      Renewable Energy Scheduling
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/home-energy-management">
+      Home Energy Management Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/data-analytics-energy-savings">
+      Data Analytics for Energy Savings
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

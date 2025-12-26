@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What is Hardware Security and Trusted Computing?",
@@ -26,6 +27,13 @@ const faqs = [
 const HardwareSecurityTrustedComputingProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="Hardware Security and Trusted Computing IEEE Projects | FPGA, TPM, ARM TrustZone | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) hardware security and trusted computing projects on TPM, PUFs, TEEs, FPGA/ASIC crypto engines, AI-driven intrusion detection, and post-quantum secure hardware for IoT and embedded systems."
+        keywords="Hardware Security Projects in ECE, Trusted Computing IEEE Projects 2023–2025, FPGA Security Projects, Cryptographic Hardware Design, PUF-Based Authentication Research, Tamper-Resistant Hardware Systems, ARM TrustZone Security Projects, Post-Quantum Hardware Security, B.Tech Hardware Security Projects, Ph.D. Research in Trusted Computing, Narpavi Research Institute Security Support"
+        url="/department/cryptography-security/hardware-security-trusted-computing"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -191,13 +199,15 @@ const HardwareSecurityTrustedComputingProject = () => {
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
+  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+</ul>
           </div>
         </div>
       </div>

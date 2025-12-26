@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What are Deep Space Communication Systems?",
@@ -26,6 +27,13 @@ const faqs = [
 const DeepSpaceCommunicationProject = () => {
   return (
     <div className="ECEProjectDeveloperCenter">
+      <SEO
+        title="Deep Space Communication Systems IEEE Projects | Ka-Band, Optical, DTN, AI & Quantum | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) deep space communication projects on X/Ka-band RF links, optical laser communication, LDPC/turbo coding, delay-tolerant networking, AI-based modulation recognition, and quantum key distribution using MATLAB, Simulink, STK, GNU Radio, HFSS, NS3, TensorFlow, and Qiskit."
+        keywords="Deep Space Communication Systems, Interplanetary Communication, X-band and Ka-band Links, Optical Laser Communication, Error Correction Codes, Delay-Tolerant Networking, AI-Driven Space Communication, Quantum Space Links, NASA Artemis Communication, ESA Mars Communications, IEEE Deep Space Projects, Nanosatellite Space Communications"
+        url="/department/satellite-communication/deep-space-communication"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDeveloperCenter-main">
         <div className="ECEProjectDeveloperCenter-grid">
@@ -161,13 +169,15 @@ const DeepSpaceCommunicationProject = () => {
 
           <div className="ECEProjectDeveloperCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing">Energy-Efficient Routing</a></li>
-              <li><a href="/adaptive-control">Adaptive Control Systems</a></li>
-              <li><a href="/secure-iot">Secure IoT Architectures</a></li>
-              <li><a href="/edge-fog-computing">Edge and Fog Computing</a></li>
-              <li><a href="/cyber-physical-systems">Cyber-Physical Systems Control</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

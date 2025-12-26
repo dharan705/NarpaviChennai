@@ -1,6 +1,6 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO"
 const faqs = [
   {
     question: "What services does the Thermal Engineering / Heat Transfer Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const METhermalEngineeringHeatTransferProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+        <SEO
+        title="Thermal Engineering / Heat Transfer IEEE Projects (2023–2025)"
+        description="Thermal Engineering Heat Transfer IEEE project development for B.Tech, M.Tech & PhD using ANSYS, COMSOL, CFD modeling, nanofluids, PCM, AI thermal prediction, waste heat recovery for energy systems."
+        url="department/thermal-engineering"
+        type="article"
+        keywords={[
+          "Thermal Engineering Projects IEEE 2023–2025",
+          "Heat Transfer Projects",
+          "CFD Thermal Analysis Projects",
+          "Nanofluid Heat Transfer",
+          "Phase Change Material Projects",
+          "Waste Heat Recovery Projects",
+          "Renewable Energy Thermal Storage",
+          "Thermal Engineering PhD Projects",
+          "Narpavi Research Institute Mechanical Projects",
+          "AI Thermal Management Systems"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -235,12 +254,38 @@ const METhermalEngineeringHeatTransferProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/gis-based-urban-planning-project-development">GIS-Based Urban Planning Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/thermal-engineering">
+      Thermal Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/heat-exchanger-design">
+      Heat Exchanger Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/solar-thermal-systems">
+      Solar Thermal Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/waste-heat-recovery">
+      Waste Heat Recovery
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/hvac-system-analysis">
+      HVAC System Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
+      Energy Efficiency in Thermal Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -28,6 +28,30 @@ const faqs = [
 const ECESpeechAudioSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="Speech Audio Processing IEEE Projects | MFCC LPC Neural Synthesis B.Tech M.Tech PhD (2023–2025)"
+  description="Speech and Audio Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on MFCC/LPC features, deep learning speech synthesis, noise cancellation, audio watermarking, FPGA/DSP implementations, and IEEE-aligned research (2023–2025)."
+  url="/speech-audio-signal-processing-project-development"
+  type="article"
+  keywords={[
+    "Speech Audio Signal Processing Projects",
+    "IEEE Speech Recognition Projects",
+    "MFCC LPC Feature Extraction",
+    "Neural Speech Synthesis IEEE",
+    "Audio Noise Cancellation Projects",
+    "FPGA Speech Enhancement",
+    "Librosa Audio Processing",
+    "Transformer Speech Recognition",
+    "Audio Watermarking Projects",
+    "B.Tech Speech Enhancement",
+    "M.Tech Real-time Speech Translation",
+    "Ph.D. Audio Cryptography Research",
+    "Narpavi Research Institute Speech Processing",
+    "Deep Learning Speech Synthesis",
+    "IoT Audio Processing Systems"
+  ]}
+  faqs={faqs}
+/>
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -226,13 +250,16 @@ const ECESpeechAudioSignalProcessingProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/digital-image-video-signal-processing-project-development">Digital Image and Video Signal Processing Project Development</a></li>
-              <li><a href="/machine-learning-embedded-platforms-project-development">Machine Learning in Embedded Platforms Project Development</a></li>
-              <li><a href="/embedded-vlsi-signal-processing-project-development">Embedded VLSI Signal Processing Project Development</a></li>
-              <li><a href="/fpga-system-prototyping-project-development">FPGA-Based System Prototyping Project Development</a></li>
-            </ul>
+           <ul>
+  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+</ul>
+
           </div>
         </div>
       </div>

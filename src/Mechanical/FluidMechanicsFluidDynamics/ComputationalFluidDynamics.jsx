@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the CFD Simulations Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MECFDSimulationsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="CFD Simulations IEEE Projects (2023–2025)"
+        description="Computational Fluid Dynamics IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, OpenFOAM, turbulence modeling, multiphysics FSI, AI-driven CFD, HPC simulations for aerospace, biomedical, energy systems."
+        url="/department/fluid-mechanics-dynamics/computational-fluid-dynamics"
+        type="article"
+        keywords={[
+          "CFD Simulations IEEE 2023–2025",
+          "ANSYS Fluent Student Projects",
+          "OpenFOAM CFD Projects",
+          "Turbulence Modeling IEEE Projects",
+          "Fluid Structure Interaction CFD",
+          "Machine Learning CFD Optimization",
+          "Multiphysics CFD Simulations",
+          "High Performance CFD Computing",
+          "Narpavi Research Institute CFD Projects",
+          "Aerospace Biomedical CFD Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -213,36 +232,45 @@ const MECFDSimulationsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/fluid-mechanics-fluid-dynamics-project-development">Fluid Mechanics / Fluid Dynamics Project Development</a></li>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-              <li><a href="/heat-exchanger-design-optimization-project-development">Heat Exchanger Design & Optimization Project Development</a></li>
-              <li><a href="/solar-thermal-systems-project-development">Solar Thermal Systems Project Development</a></li>
-              <li><a href="/hvac-system-analysis-project-development">HVAC System Analysis Project Development</a></li>
-            </ul>
+          <ul>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics">
+      Fluid Mechanics & Dynamics
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
+      Computational Fluid Dynamics
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
+      Turbomachinery Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
+      Aerodynamics & Wind Tunnel
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
+      Pump & Valve Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
+      Microfluidics Lab
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

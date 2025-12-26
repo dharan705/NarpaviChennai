@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Embedded Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in microcontroller systems, FPGA-based control, and IoT-enabled embedded platforms for applications in smart grids, EVs, and industrial automation."
+    answer: "Narpavi Research Institute's Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in microcontroller systems, FPGA-based control, and IoT-enabled embedded platforms for applications in smart grids, EVs, and industrial automation."
   },
   {
     question: "What types of embedded systems projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEEEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Embedded Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Embedded Systems projects for B.Tech, M.Tech, Ph.D. MATLAB/Simulink, FPGA, VHDL/Verilog, Arduino, Raspberry Pi projects in smart grids, EVs, automation."
+        keywords="Embedded Systems IEEE Projects, FPGA IEEE Projects, IoT Embedded IEEE Projects, Real-Time Systems IEEE Projects, B.Tech Embedded IEEE Projects, M.Tech FPGA IEEE Projects, Ph.D. Embedded IEEE Thesis, Industrial Automation Embedded IEEE Projects, EV Embedded Systems IEEE Projects, Narpavi Research Institute"
+        url="/department/embedded-systems-electrical"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -227,24 +235,6 @@ const EEEEmbeddedSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -252,22 +242,43 @@ const EEEEmbeddedSystemsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/embedded-systems-electrical">
+      Embedded Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
+      ARM, PIC & AVR Microcontroller Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
+      Automotive Embedded Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/embedded-robotics">
+      Embedded Robotics
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/fpga-control-applications">
+      FPGA Control Applications
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
+      IoT Embedded Hardware Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/rtos">
+      RTOS Project Development Center
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

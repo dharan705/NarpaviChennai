@@ -1,10 +1,11 @@
 import "./Nlp.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Natural Language Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Natural Language Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) NLP projects, focusing on speech recognition, sentiment analysis, machine translation, and conversational AI for industries like healthcare, finance, and e-commerce."
+    answer: "Narpavi Research Institute's Natural Language Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) NLP projects, focusing on speech recognition, sentiment analysis, machine translation, and conversational AI for industries like healthcare, finance, and e-commerce."
   },
   {
     question: "What types of NLP projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="NaturalLanguageProcessingProjectDevelopmentCenter">
+      <SEO 
+        title="NLP IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Natural Language Processing projects for B.Tech, M.Tech, Ph.D. Transformers, spaCy, sentiment analysis, chatbots, machine translation for healthcare, finance."
+        keywords="Natural Language Processing Project Development, NLP IEEE Projects 2023–2025, B.Tech NLP Project Guidance, M.Tech NLP Research, Ph.D. NLP Dissertation Support, Sentiment Analysis Projects, Chatbot Development, Machine Translation IEEE Projects, Narpavi Research Institute NLP, AI-driven Language Processing Projects"
+        url="/department/nlp"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="NaturalLanguageProcessingProjectDevelopmentCenter-main">
         <div className="NaturalLanguageProcessingProjectDevelopmentCenter-grid">
@@ -56,7 +64,7 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
                 Natural Language Processing – Project Development Center is a cutting-edge initiative designed to empower engineering students and research scholars worldwide in developing both software and hardware projects. At Narpavi Research Institute, we specialize in delivering world-class guidance and project execution support that aligns with IEEE Transactions' latest advancements from 2023 to 2025. Whether for B.Tech, M.Tech, or Ph.D. levels, our Natural Language Processing – Project Development Center provides tailored solutions to ensure technical precision and industry relevance.
               </p>
               <p>
-                In today’s AI-driven world, Natural Language Processing – Project Development Center plays a transformative role in bridging human communication and machine understanding. Our expertise encompasses speech recognition, sentiment analysis, machine translation, conversational AI, and intelligent document processing. We focus on producing impactful, innovation-driven outcomes that meet global standards.
+                In today's AI-driven world, Natural Language Processing – Project Development Center plays a transformative role in bridging human communication and machine understanding. Our expertise encompasses speech recognition, sentiment analysis, machine translation, conversational AI, and intelligent document processing. We focus on producing impactful, innovation-driven outcomes that meet global standards.
               </p>
             </section>
 
@@ -227,47 +235,28 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="NaturalLanguageProcessingProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

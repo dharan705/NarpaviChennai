@@ -1,10 +1,11 @@
 import "./StaticWebAppDev.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What are Static Web Application Development Services?",
-    answer: "Narpavi Research Institute’s Static Web Application Development Services support B.Tech, M.Tech, and Ph.D. students in developing innovative static web applications aligned with IEEE transactions (2023–2025), focusing on responsive design, optimized performance, and academic excellence for educational and research purposes."
+    answer: "Narpavi Research Institute's Static Web Application Development Services support B.Tech, M.Tech, and Ph.D. students in developing innovative static web applications aligned with IEEE transactions (2023–2025), focusing on responsive design, optimized performance, and academic excellence for educational and research purposes."
   },
   {
     question: "What types of static web projects are supported?",
@@ -19,6 +20,13 @@ const faqs = [
 const StaticWebApplicationDevelopmentServices = () => {
   return (
     <div className="StaticWebApplicationDevelopmentServices">
+      <SEO 
+        title="Static Web IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Static Web projects for B.Tech, M.Tech, Ph.D. HTML5, CSS3, GatsbyJS, Jekyll, Hugo for education, research, responsive static websites."
+        keywords="Excellence in Static Web Application Development Services, IEEE 2023–2025 Static Web Project Topics, Static Website Project Support for B.Tech, M.Tech Static Web Project Development, Ph.D. Static Web Research Guidance, GatsbyJS Student Projects, Jekyll Academic Projects, Hugo Static Site for Research, IEEE-based Web Application Development, HTML/CSS Project Development Services, Global Project Center for Static Web Applications, Narpavi Research Institute Project Services, Academic Static Web Applications IEEE 2023 2024 2025"
+        url="/department/static-web-application"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="StaticWebApplicationDevelopmentServices-main">
         <div className="StaticWebApplicationDevelopmentServices-grid">
@@ -48,7 +56,7 @@ const StaticWebApplicationDevelopmentServices = () => {
 
             <section className="StaticWebApplicationDevelopmentServices-intro">
               <p>
-               At <strong>Narpavi Research Institute</strong>, we embody Excellence in Static Web Application Development Services by empowering engineering students and researchers to build innovative, future-ready static web applications. Our solutions are rigorously aligned with topics published in IEEE Transactions from 2023 to 2025, ensuring every project reflects the latest global research trends and technological standards.
+                At <strong>Narpavi Research Institute</strong>, we embody Excellence in Static Web Application Development Services by empowering engineering students and researchers to build innovative, future-ready static web applications. Our solutions are rigorously aligned with topics published in IEEE Transactions from 2023 to 2025, ensuring every project reflects the latest global research trends and technological standards.
               </p>
               <p>
                 The foundation of Excellence in Static Web Application Development Services lies in structured planning, responsive design, optimized performance, and long-term maintainability. We specialize in providing expert support for static web application development across B.Tech, M.Tech, and Ph.D. levels. Whether it's a lightweight educational website or a research-grade publication platform, we ensure quality at every stage—from conceptualization to final delivery.
@@ -57,7 +65,7 @@ const StaticWebApplicationDevelopmentServices = () => {
                 Our team meticulously selects IEEE-verified research problems from recent years and transforms them into project-ready static applications using technologies such as HTML5, CSS3, JavaScript, and advanced static site generators like Jekyll, Hugo, and GatsbyJS. These tools are integrated into student and researcher workflows with full documentation, version control, and optimized deployment for real-world use.
               </p>
               <p>
-                By championing Excellence in Static Web Application Development Services, Narpavi Research Institute enables global academic excellence and real-time application, bridging the gap between IEEE research and implementable solutions.Students and scholars working with us experience seamless project cycles supported by our technical mentors, professional developers, and research consultants—making Excellence in Static Web Application Development Services not just a service, but an academic and industrial asset.
+                By championing Excellence in Static Web Application Development Services, Narpavi Research Institute enables global academic excellence and real-time application, bridging the gap between IEEE research and implementable solutions. Students and scholars working with us experience seamless project cycles supported by our technical mentors, professional developers, and research consultants—making Excellence in Static Web Application Development Services not just a service, but an academic and industrial asset.
               </p>
             </section>
 
@@ -160,7 +168,7 @@ const StaticWebApplicationDevelopmentServices = () => {
             <section className="StaticWebApplicationDevelopmentServices-excellence">
               <h2>Excellence in Static Web Application Development Services</h2>
               <p>
-                Narpavi Research Institute’s Static Web Application Development Services integrate cutting-edge IEEE research with hands-on project development, fostering scalable and innovative static web solutions.
+                Narpavi Research Institute's Static Web Application Development Services integrate cutting-edge IEEE research with hands-on project development, fostering scalable and innovative static web solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful systems for academia and industry, from educational websites to research-grade dashboards.
@@ -177,47 +185,28 @@ const StaticWebApplicationDevelopmentServices = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="StaticWebApplicationDevelopmentServices-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

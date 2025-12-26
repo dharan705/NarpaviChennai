@@ -3,206 +3,210 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ECE Domains</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  <title>Preloader Demo</title>
   <style>
-    body {
-      font-family: "Cinzel", serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 30px;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-    h1 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    /* ---------------- SLIDER ---------------- */
-    .slider {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto 50px auto;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      overflow: hidden;
-    }
-
-    .slide {
-      display: none;
-      padding: 30px;
-      text-align: center;
-    }
-
-    .slide.active {
-      display: block;
-      animation: fadeIn 1s;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    .slide h2 {
-      font-size: 1.6rem;
-      color: #0077b6;
-      margin-bottom: 15px;
-    }
-
-    .slide p {
-      font-size: 1rem;
-      color: #555;
-    }
-
-    /* ---------------- DOMAIN LIST ---------------- */
-    .domains {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .domain {
-      background: #fff;
-      margin-bottom: 15px;
-      padding: 15px 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: relative;
-      transition: background 0.3s;
-    }
-
-    .domain:hover {
-      background: #f0f8ff;
-    }
-
-    .domain h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #0077b6;
-      cursor: pointer;
-    }
-
-    .subtopics {
-      display: none;
-      margin-top: 10px;
-    }
-
-    .domain:hover .subtopics {
-      display: block;
-    }
-
-    .subtopics ul {
-      list-style: none;
+    /* Base Reset */
+    *, *:before, *:after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
       padding: 0;
       margin: 0;
     }
 
-    .subtopics li {
-      margin: 6px 0;
+    html, body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 150%;
+      height: 100vh;
+      overflow: hidden;
     }
 
-    .subtopics a {
-      text-decoration: none;
-      color: #0077b6;
-      transition: color 0.3s;
+    /* Typography */
+    h3, .mil-h3 {
+      font-family: 'Outfit', sans-serif;
+      color: rgb(0, 0, 0);
+      font-weight: 500;
+      line-line: 120%;
+      font-size: 42px;
+      margin: 0;
     }
 
-    .subtopics a:hover {
-      color: #023e8a;
-      text-decoration: underline;
+    @media screen and (max-width: 1200px) { .mil-h3 { font-size: 39px; } }
+    @media screen and (max-width: 992px) { .mil-h3 { font-size: 36px; } }
+    @media screen and (max-width: 768px) { .mil-h3 { font-size: 30px; } }
+
+    .mil-muted { color: rgba(255, 255, 255, 0.9); }
+    .mil-thin { font-weight: 100; }
+
+    /* Preloader */
+    .mil-preloader {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgb(0, 0, 0);
+    }
+
+    .mil-preloader-animation {
+      opacity: 0;
+      position: relative;
+      height: 100vh;
+      color: rgb(255, 255, 255);
+    }
+
+    .mil-pos-abs {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mil-pos-abs p {
+      opacity: 0;
+      margin-right: 15px;
+    }
+
+    @media screen and (max-width: 992px) {
+      .mil-pos-abs {
+        flex-direction: column;
+      }
+      .mil-pos-abs p {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+
+    .mil-reveal-frame {
+      position: relative;
+      padding: 0 30px;
+    }
+
+    .mil-reveal-box {
+      z-index: 4;
+      position: absolute;
+      opacity: 0;
+      height: 100%;
+      background-color: rgb(255, 152, 0);
+      left: 0;
+      top: 0;
+      width: 0;
+    }
+
+    .mil-preloader.mil-hidden {
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s ease-out;
+    }
+
+    /* Main Content (appears after preloader) */
+    .main-content {
+      position: relative;
+      z-index: 1;
+      height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 24px;
+      opacity: 0;
+      transition: opacity 0.8s ease-out 0.5s;
+    }
+
+    .main-content.show {
+      opacity: 1;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes revealExpand {
+      0% { 
+        opacity: 0; 
+        transform: scaleX(0); 
+        width: 0;
+      }
+      100% { 
+        opacity: 1; 
+        transform: scaleX(1); 
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Electronics and Communication Engineering (ECE)</h1>
-
-  <!-- SLIDER -->
-  <div class="slider">
-    <div class="slide active">
-      <h2>VLSI Design & Embedded Systems</h2>
-      <p>Explore low power VLSI, FPGA, Nanoelectronics, and AI-based VLSI applications.</p>
-    </div>
-    <div class="slide">
-      <h2>Embedded Systems</h2>
-      <p>Learn RTOS, Security, ARM & RISC-V, IoT devices, and energy-efficient embedded designs.</p>
-    </div>
-    <div class="slide">
-      <h2>Communication Systems</h2>
-      <p>Dive into 5G/6G, MIMO, Optical Fiber, SDR, and Cognitive Radio technologies.</p>
-    </div>
-    <div class="slide">
-      <h2>Signal Processing</h2>
-      <p>Focus on image, speech, biomedical, adaptive filtering, and AI-driven enhancements.</p>
-    </div>
-    <div class="slide">
-      <h2>IoT (Internet of Things)</h2>
-      <p>Study Smart Homes, IIoT, Healthcare, Precision Agriculture, and Secure IoT.</p>
+  <!-- Preloader -->
+  <div class="mil-preloader" id="preloader">
+    <div class="mil-preloader-animation">
+      <div class="mil-pos-abs mil-animation-1">
+        <p class="mil-h3 mil-muted mil-thin">Pioneering</p>
+        <p class="mil-h3 mil-muted">Creative</p>
+        <p class="mil-h3 mil-muted mil-thin">Excellence</p>
+      </div>
+      <div class="mil-pos-abs mil-animation-2">
+        <div class="mil-reveal-frame">
+          <p class="mil-reveal-box"></p>
+          <p class="mil-h3 mil-muted mil-thin">classicclicks.in</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- DOMAIN LIST -->
-  <div class="domains">
-
-    <div class="domain">
-      <h3>VLSI Design & Embedded Systems</h3>
-      <div class="subtopics">
-        <ul>
-          <li><a href="#">Low Power VLSI Architectures</a></li>
-          <li><a href="#">FPGA-based System Design</a></li>
-          <li><a href="#">VLSI for Artificial Intelligence Applications</a></li>
-          <li><a href="#">Hardware-Software Co-Design</a></li>
-          <li><a href="#">Nanoelectronics and Emerging Devices</a></li>
-          <li><a href="#">Embedded VLSI Signal Processing</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="domain">
-      <h3>Embedded Systems</h3>
-      <div class="subtopics">
-        <ul>
-          <li><a href="#">Real-Time Operating Systems (RTOS)</a></li>
-          <li><a href="#">Embedded System Security and Cryptography</a></li>
-          <li><a href="#">ARM & RISC-V Based Development</a></li>
-          <li><a href="#">IoT-enabled Embedded Devices</a></li>
-          <li><a href="#">Machine Learning in Embedded Platforms</a></li>
-          <li><a href="#">Energy-Efficient Embedded Systems</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="domain">
-      <h3>Communication Systems</h3>
-      <div class="subtopics">
-        <ul>
-          <li><a href="#">5G and 6G Wireless Communication Systems</a></li>
-          <li><a href="#">MIMO and Massive MIMO Techniques</a></li>
-          <li><a href="#">Optical Fiber Communication Technologies</a></li>
-          <li><a href="#">Software Defined Radio (SDR)</a></li>
-          <li><a href="#">Cognitive Radio Networks</a></li>
-          <li><a href="#">Error Control Coding</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Add more domains here the same way (Signal Processing, IoT, Robotics, etc.) -->
-
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <h1>🎉 Preloader Complete!</h1>
+    <p>Your content loads here after 3 seconds</p>
   </div>
 
   <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll(".slide");
+    // Auto-start preloader animation
+    window.addEventListener('load', () => {
+      const preloader = document.getElementById('preloader');
+      const preloaderAnim = preloader.querySelector('.mil-preloader-animation');
+      const mainContent = document.getElementById('mainContent');
 
-    function showSlides() {
-      slides.forEach((slide, index) => slide.classList.remove("active"));
-      slideIndex = (slideIndex + 1) % slides.length;
-      slides[slideIndex].classList.add("active");
-    }
+      // Start preloader animations
+      preloaderAnim.style.animation = 'fadeIn 1.2s ease-out forwards';
 
-    setInterval(showSlides, 3000); // Change every 3 seconds
+      document.querySelector('.mil-animation-1').style.animation = 'slideInUp 1s 0.3s ease-out forwards';
+      document.querySelector('.mil-animation-2').style.animation = 'slideInDown 1s 0.6s ease-out forwards';
+      
+      setTimeout(() => {
+        document.querySelector('.mil-reveal-box').style.animation = 'revealExpand 1s 0.9s ease-out forwards';
+      }, 900);
+
+      // Hide preloader after 3 seconds
+      setTimeout(() => {
+        preloader.classList.add('mil-hidden');
+        mainContent.classList.add('show');
+      }, 3000);
+    });
   </script>
 </body>
 </html>

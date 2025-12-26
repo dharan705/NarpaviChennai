@@ -1,6 +1,6 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO"
 const faqs = [
   {
     question: "What services does the Robotics & Mechatronics Project Development Center offer?",
@@ -27,6 +27,43 @@ const faqs = [
 const MERoboticsMechatronicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="Robotics & Mechatronics IEEE Projects (2023–2025)"
+        description="Robotics Mechatronics IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI-driven robotics, IoT mechatronics, autonomous vehicles, swarm robotics for manufacturing, healthcare, aerospace."
+        url="/department/robotics-mechatronics"
+        type="article"
+        keywords={[
+          "Robotics Mechatronics IEEE 2023–2025",
+          "Industrial Robotics Projects",
+          "IoT Based Mechatronics",
+          "Autonomous Vehicle Student Projects",
+          "Robotic Manipulator Control",
+          "Embedded Control Systems Research",
+          "Smart Manufacturing Robotics",
+          "Swarm Robotics PhD Projects",
+          "AI Driven Robotics Systems",
+          "Narpavi Research Institute Robotics"
+        ]}
+        faqs={faqs}
+      /> <SEO
+        title="Robotics & Mechatronics IEEE Projects (2023–2025)"
+        description="Robotics Mechatronics IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI-driven robotics, IoT mechatronics, autonomous vehicles, swarm robotics for manufacturing, healthcare, aerospace."
+        url="/department/robotics-mechatronics"
+        type="article"
+        keywords={[
+          "Robotics Mechatronics IEEE 2023–2025",
+          "Industrial Robotics Projects",
+          "IoT Based Mechatronics",
+          "Autonomous Vehicle Student Projects",
+          "Robotic Manipulator Control",
+          "Embedded Control Systems Research",
+          "Smart Manufacturing Robotics",
+          "Swarm Robotics PhD Projects",
+          "AI Driven Robotics Systems",
+          "Narpavi Research Institute Robotics"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -248,12 +285,38 @@ const MERoboticsMechatronicsProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/cad-modeling-simulation-project-development">CAD Modeling & Simulation Project Development</a></li>
-              <li><a href="/mechanism-design-kinematics-project-development">Mechanism Design & Kinematics Project Development</a></li>
-              <li><a href="/product-lifecycle-management-project-development">Product Lifecycle Management (PLM) Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/robotics-mechatronics">
+      Robotics & Mechatronics
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
+      Industrial Robotics Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
+      IoT-Based Mechatronics
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
+      Autonomous Vehicles & Drones
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
+      Robotic Manipulator Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/robotics-mechatronics/embedded-control-systems">
+      Embedded Control Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

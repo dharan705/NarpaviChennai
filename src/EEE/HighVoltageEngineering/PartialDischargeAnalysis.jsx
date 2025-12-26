@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Partial Discharge Analysis Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEPartialDischargeAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Partial Discharge Analysis IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Partial Discharge PD Analysis projects for B.Tech, M.Tech, Ph.D. PD detection, insulation diagnostics, AI predictive maintenance using MATLAB/Simulink, COMSOL, PSCAD, TensorFlow for transformers, GIS, high-voltage systems."
+  keywords="Partial Discharge Analysis IEEE Projects 2023–2025, PD Detection Projects, B.Tech PD Insulation Diagnostics, M.Tech AI PD Analysis, Ph.D. IoT PD Monitoring, High Voltage PD Research, Transformers PD Analysis, GIS Partial Discharge, Predictive Maintenance PD, Narpavi Research Institute"
+  url="/department/high-voltage-engineering/partial-discharge-analysis"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -183,34 +191,44 @@ const EEEPartialDischargeAnalysisProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* FAQ Schema for SEO */}
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context":"https://schema.org",
-                    "@type":"FAQPage",
-                    "mainEntity":faqs.map(f=>({
-                      "@type":"Question",
-                      "name":f.question,
-                      "acceptedAnswer":{ "@type":"Answer","text":f.answer }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* 🔗 Right Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/high-voltage-testing-equipment-project-development">High Voltage Testing of Equipment</a></li>
-              <li><a href="/insulation-materials-techniques-project-development">Insulation Materials & Techniques</a></li>
-              <li><a href="/overvoltage-surge-protection-project-development">Overvoltage & Surge Protection</a></li>
-              <li><a href="/gas-insulated-substations-project-development">Gas Insulated Substations (GIS)</a></li>
-              <li><a href="/hvdc-transmission-systems-project-development">HVDC Transmission Systems</a></li>
-            </ul>
+            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+
+<Route
+  path="department/high-voltage-engineering/gis"
+  element={<EEEGISProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/high-voltage-testing"
+  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/hvdc-transmission"
+  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/insulation-materials"
+  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/overvoltage-surge-protection"
+  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/partial-discharge-analysis"
+  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
+/>
+
           </div>
 
         </div>

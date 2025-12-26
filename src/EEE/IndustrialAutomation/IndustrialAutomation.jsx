@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Industrial Automation Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEIndustrialAutomationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Industrial Automation IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Industrial Automation projects for B.Tech, M.Tech, Ph.D. PLC/SCADA, robotics, IoT Industry 4.0, AI-driven smart factories using MATLAB/Simulink, LabVIEW, AWS IoT for manufacturing, predictive maintenance."
+  keywords="Industrial Automation IEEE Projects 2023–2025, PLC SCADA IEEE Projects, B.Tech Industrial Automation, M.Tech IoT Smart Factory, Ph.D. Cyber-Physical Systems, Industry 4.0 IEEE Projects, Machine Vision Predictive Maintenance, Narpavi Research Institute"
+  url="/department/industrial-automation"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -230,47 +238,51 @@ const EEEIndustrialAutomationProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+          
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/industrial-automation">
+      Industrial Automation – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/dcs">
+      DCS (Distributed Control Systems)
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/hmi">
+      HMI (Human-Machine Interface)
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/iiot-applications">
+      IIoT Applications in Industrial Automation
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/plc-scada">
+      PLC & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/predictive-maintenance">
+      Predictive Maintenance Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/rpa">
+      RPA (Robotic Process Automation)
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Automotive & Vehicle Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Automotive & Vehicle Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on electric vehicles, hybrid powertrains, autonomous driving, smart grid integration, and emission control for sustainable mobility and smart city applications."
+    answer: "Narpavi Research Institute's Automotive & Vehicle Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on electric vehicles, hybrid powertrains, autonomous driving, smart grid integration, and emission control for sustainable mobility and smart city applications."
   },
   {
     question: "What types of Automotive & Vehicle Engineering projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const MEAutomotiveVehicleEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO 
+        title="Automotive IEEE Projects | EV, Autonomous Vehicles | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023-2025) Automotive & Vehicle Engineering projects. MATLAB, Simulink, AI, IoT for electric vehicles, hybrid powertrains, autonomous driving, smart grid integration."
+        keywords="Automotive IEEE Projects 2023–2025, Electric Vehicle Projects for Students, Hybrid Vehicle IEEE Projects, Vehicle Dynamics MATLAB Projects, AI in Automotive Engineering, Smart Grid EV Integration, Emission Control Projects, Autonomous Vehicle IEEE Projects, IoT-Based Automotive Projects, Narpavi Research Institute Automotive Projects"
+        url="/department/automotive-vehicle-engineering"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -223,37 +231,45 @@ const MEAutomotiveVehicleEngineeringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/smart-grid-integration-project-development">Smart Grid Integration for Automotive & Vehicle Engineering</a></li>
-              <li><a href="/renewable-energy-thermal-mechanical-systems-project-development">Renewable Energy / Thermal & Mechanical Systems Project Development</a></li>
-              <li><a href="/solar-pv-thermal-systems-project-development">Solar PV & Thermal Systems Project Development</a></li>
-              <li><a href="/wind-turbine-design-optimization-project-development">Wind Turbine Design & Optimization Project Development</a></li>
-              <li><a href="/embedded-control-systems-project-development">Embedded Control Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/automotive-vehicle-engineering">
+      Automotive & Vehicle Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
+      Electric Vehicle Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
+      Hybrid Vehicle Powertrains
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
+      Vehicle Dynamics & Stability
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
+      Engine Performance Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
+      Emission Control & Fuel Efficiency
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

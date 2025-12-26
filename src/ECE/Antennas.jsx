@@ -1,37 +1,63 @@
-
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What is the focus of the Antennas – Project Development Center?",
-    answer: "The center emphasizes antenna design and development for 5G/6G, IoT, wearable devices, satellite communications, combining software simulation and hardware prototyping to prepare students for both academic and industrial careers."
+    answer:
+      "The center emphasizes antenna design and development for 5G/6G, IoT, wearable devices, satellite communications, combining software simulation and hardware prototyping to prepare students for both academic and industrial careers."
   },
   {
     question: "What do B.Tech projects in antennas involve?",
-    answer: "B.Tech students select IEEE-aligned topics, design basic antenna structures, simulate parameters, prototype hardware if needed, and test for gain, efficiency, and radiation pattern."
+    answer:
+      "B.Tech students select IEEE-aligned topics, design basic antenna structures, simulate parameters, prototype hardware if needed, and test for gain, efficiency, and radiation pattern."
   },
   {
     question: "What is the M.Tech project development cycle?",
-    answer: "M.Tech projects involve literature reviews of recent IEEE work, advanced modeling and optimization using MATLAB, CST, and HFSS, integration with IoT and 5G/6G systems, hardware validation, and journal-ready documentation."
+    answer:
+      "M.Tech projects involve literature reviews of recent IEEE work, advanced modeling and optimization using MATLAB, CST, and HFSS, integration with IoT and 5G/6G systems, hardware validation, and journal-ready documentation."
   },
   {
     question: "What research areas do Ph.D. projects cover?",
-    answer: "Ph.D. candidates conduct original research on reconfigurable, MIMO, and satellite-grade antennas with multi-physics simulations, AI optimization, hardware-software co-design, and experimental validation targeting IEEE publications."
+    answer:
+      "Ph.D. candidates conduct original research on reconfigurable, MIMO, and satellite-grade antennas with multi-physics simulations, AI optimization, hardware-software co-design, and experimental validation targeting IEEE publications."
   },
   {
     question: "Which tools are commonly used in antenna projects?",
-    answer: "Common tools include CST Microwave Studio, HFSS, MATLAB, and ADS for simulation and prototyping."
+    answer:
+      "Common tools include CST Microwave Studio, HFSS, MATLAB, and ADS for simulation and prototyping."
   }
 ];
 
 const AntennasProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopment">
+
+      {/* ✅ SEO */}
+      <SEO
+        title="Antennas IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        description="Antennas project development for B.Tech, M.Tech & PhD scholars focusing on smart antennas, MIMO, reconfigurable, satellite, IoT, and 5G/6G antenna systems using CST, HFSS, MATLAB, and ADS."
+        url="/antennas-project-development"
+        type="article"
+        keywords={[
+          "Antennas Project Development",
+          "Smart Antennas IEEE Projects",
+          "MIMO Antenna Projects",
+          "Reconfigurable Antenna Design",
+          "5G 6G Antenna Projects",
+          "Satellite Antenna IEEE Projects",
+          "PhD Antenna Research Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
 
+          {/* Left */}
           <div className="ECEProjectDevelopment-left">
             <h3>🔑 Keywords</h3>
             <ul>
@@ -48,8 +74,18 @@ const AntennasProjectDevelopmentCenter = () => {
             </ul>
           </div>
 
+          {/* Center */}
           <div className="ECEProjectDevelopment-center">
             <h1>Antennas – Project Development Center</h1>
+
+            {/* Internal SEO Links */}
+            <p className="seo-internal-links">
+              Explore related services:
+              <a href="/ece-project-development"> ECE Project Development</a>,
+              <a href="/phd-project-development"> PhD Research Guidance</a>,
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
+            </p>
+
             <section className="ECEProjectDevelopment-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> supports global students and researchers in cutting-edge antenna design and deployment, featuring projects sourced from IEEE Transactions (2023–2025) covering software and hardware dimensions.
@@ -115,17 +151,23 @@ const AntennasProjectDevelopmentCenter = () => {
 
             <section className="ECEProjectDevelopment-btechCycle">
               <h2>B.Tech Project Development Cycle</h2>
-              <p>Training includes topic selection, designing antenna structures, simulation, prototyping, and performance testing for gain, efficiency, and radiation pattern.</p>
+              <p>
+                Training includes topic selection, designing antenna structures, simulation, prototyping, and performance testing for gain, efficiency, and radiation pattern.
+              </p>
             </section>
 
             <section className="ECEProjectDevelopment-mtechCycle">
               <h2>M.Tech Project Development Cycle</h2>
-              <p>Focus on in-depth literature review, advanced simulation, system optimization, IoT/5G/6G integration, hardware validation, and journal-quality documentation.</p>
+              <p>
+                Focus on in-depth literature review, advanced simulation, system optimization, IoT/5G/6G integration, hardware validation, and journal-quality documentation.
+              </p>
             </section>
 
             <section className="ECEProjectDevelopment-phdCycle">
               <h2>Ph.D. Project Development Cycle</h2>
-              <p>Emphasis on novel antenna designs, multi-physics simulations, AI-based optimization, co-design methodologies, and preparation of prototypes and research publications.</p>
+              <p>
+                Emphasis on novel antenna designs, multi-physics simulations, AI-based optimization, co-design methodologies, and preparation of prototypes and research publications.
+              </p>
             </section>
 
             <section className="ECEProjectDevelopment-projectTitles">
@@ -150,6 +192,7 @@ const AntennasProjectDevelopmentCenter = () => {
               </p>
             </section>
 
+            {/* FAQ UI (Schema via SEO component) */}
             <section className="ECEProjectDevelopment-faq">
               <h2>FAQs</h2>
               {faqs.map((faq, idx) => (
@@ -161,15 +204,19 @@ const AntennasProjectDevelopmentCenter = () => {
             </section>
           </div>
 
+          {/* Right */}
           <div className="ECEProjectDevelopment-right">
             <h3>Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing">Energy-Efficient Routing</a></li>
-              <li><a href="/adaptive-control">Adaptive Control Systems</a></li>
-              <li><a href="/secure-iot">Secure IoT Architectures</a></li>
-              <li><a href="/edge-computing">Edge and Fog Computing</a></li>
-              <li><a href="/cyber-physical">Control in Cyber-Physical Systems</a></li>
-            </ul>
+  <ul>
+  <li><a href="/department/antenna-design">Antenna Design</a></li>
+  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+</ul>
+
           </div>
 
         </div>

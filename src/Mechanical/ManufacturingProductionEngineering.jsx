@@ -1,6 +1,6 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO"
 const faqs = [
   {
     question: "What services does the Manufacturing & Production Engineering Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEManufacturingProductionEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="Manufacturing & Production Engineering IEEE Projects (2023–2025)"
+        description="Manufacturing Production Engineering IEEE project development for B.Tech, M.Tech & PhD using CNC machining, additive manufacturing, robotics, Industry 4.0, AI digital twins, IoT automation for aerospace, automotive, smart factories."
+        url="/department/manufacturing-production"
+        type="article"
+        keywords={[
+          "Manufacturing Engineering IEEE 2023–2025",
+          "CNC Machining Optimization Projects",
+          "Additive Manufacturing Student Projects",
+          "Industry 4.0 Smart Factory Projects",
+          "Robotics Automation IEEE Projects",
+          "Digital Twin Manufacturing Research",
+          "Sustainable Manufacturing PhD Projects",
+          "Tool Design Optimization Projects",
+          "Production Engineering B.Tech Projects",
+          "Narpavi Research Institute Manufacturing"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -217,36 +236,45 @@ const MEManufacturingProductionEngineeringProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/fluid-mechanics-fluid-dynamics-project-development">Fluid Mechanics / Fluid Dynamics Project Development</a></li>
-              <li><a href="/cfd-simulations-project-development">CFD Simulations Project Development</a></li>
-              <li><a href="/pump-valve-optimization-project-development">Pump & Valve Optimization Project Development</a></li>
-              <li><a href="/aerodynamics-wind-tunnel-studies-project-development">Aerodynamics & Wind Tunnel Studies Project Development</a></li>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/manufacturing-production">
+      Manufacturing & Production Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/cnc-machining-optimization">
+      CNC Machining Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/additive-manufacturing">
+      Additive Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/industrial-automation-robotics">
+      Industrial Automation & Robotics
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/smart-manufacturing-systems">
+      Smart Manufacturing Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/manufacturing-production/tool-design-process">
+      Tool Design & Process
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

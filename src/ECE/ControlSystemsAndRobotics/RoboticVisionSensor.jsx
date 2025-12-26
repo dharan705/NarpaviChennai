@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What is the focus of the Robotic Vision and Sensor Fusion Project Development Center?",
@@ -27,6 +27,13 @@ const faqs = [
 const ECERoboticVisionSensorFusionProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="Robotic Vision and Sensor Fusion IEEE Projects | SLAM, LiDAR-Camera, Edge AI | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) robotic vision and sensor fusion projects using deep learning (YOLO, Faster R-CNN), SLAM, LiDAR/IMU/GPS fusion, ROS, Gazebo, MATLAB/Simulink, TensorFlow, and Edge AI for autonomous, industrial, healthcare, and defense robots."
+        keywords="Robotic Vision Projects, Sensor Fusion Projects, AI Robotics IEEE Projects, SLAM Robotics Projects, LiDAR-Camera Fusion Robots, Autonomous Vehicle Vision Projects, Deep Learning Robotic Vision, Multi-Sensor Fusion Robotics, IEEE Robotics Project Development 2023–2025, Narpavi Research Institute Robotics"
+        url="/department/control-systems-robotics/robotic-vision-sensor-fusion"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -205,13 +212,15 @@ const ECERoboticVisionSensorFusionProjectDevelopmentCenter = () => {
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/ai-powered-robotic-control-systems-project-development">AI-Powered Robotic Control Systems Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-            </ul>
+              <ul>
+  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
+  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+</ul>
           </div>
         </div>
       </div>

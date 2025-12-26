@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Microfluidics & Lab-on-Chip Applications Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEMicrofluidicsLabOnChipProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Microfluidics & Lab-on-Chip IEEE Projects (2023–2025)"
+        description="Microfluidics Lab-on-Chip IEEE project development for B.Tech, M.Tech & PhD using COMSOL, ANSYS Fluent, PDMS fabrication, MEMS, AI diagnostics, IoT integration for healthcare, point-of-care testing, environmental monitoring."
+        url="/department/fluid-mechanics-dynamics/microfluidics-lab"
+        type="article"
+        keywords={[
+          "Microfluidics IEEE Projects 2023–2025",
+          "Lab-on-Chip Biomedical Applications",
+          "CFD Microchannel Flow Projects",
+          "IoT Lab-on-Chip Diagnostics",
+          "Point-of-Care Microfluidic Devices",
+          "Digital Microfluidics Research",
+          "MEMS Microfluidic Projects",
+          "Wearable Microfluidics Projects",
+          "PDMS Microchip Fabrication",
+          "Narpavi Research Institute Microfluidics"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -222,23 +241,6 @@ const MEMicrofluidicsLabOnChipProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -246,12 +248,38 @@ const MEMicrofluidicsLabOnChipProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/fluid-mechanics-fluid-dynamics-project-development">Fluid Mechanics / Fluid Dynamics Project Development</a></li>
-              <li><a href="/cfd-simulations-project-development">CFD Simulations Project Development</a></li>
-              <li><a href="/pump-valve-optimization-project-development">Pump & Valve Optimization Project Development</a></li>
-              <li><a href="/aerodynamics-wind-tunnel-studies-project-development">Aerodynamics & Wind Tunnel Studies Project Development</a></li>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics">
+      Fluid Mechanics & Dynamics
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
+      Computational Fluid Dynamics
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
+      Turbomachinery Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
+      Aerodynamics & Wind Tunnel
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
+      Pump & Valve Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
+      Microfluidics Lab
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

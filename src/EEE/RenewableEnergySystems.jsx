@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Renewable Energy Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Renewable Energy Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in solar, wind, fuel cell, and hybrid energy systems for applications in smart grids, rural electrification, and green mobility."
+    answer: "Narpavi Research Institute's Renewable Energy Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in solar, wind, fuel cell, and hybrid energy systems for applications in smart grids, rural electrification, and green mobility."
   },
   {
     question: "What types of renewable energy projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEERenewableEnergySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Renewable Energy IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Renewable Energy projects for B.Tech, M.Tech, Ph.D. Solar PV, wind, hybrid microgrids, fuel cells, V2G for smart grids, rural electrification, green mobility."
+        keywords="Renewable Energy IEEE Projects 2023–2025, Solar PV IEEE Projects, Wind Energy IEEE Research, Hybrid Renewable Microgrid IEEE Projects, B.Tech Renewable Energy Projects, M.Tech Sustainable Energy IEEE Projects, Ph.D. Renewable Energy Thesis, Hydrogen Fuel Cell IEEE Projects, AI in Renewable Systems, Narpavi Research Institute"
+        url="/renewable-energy-systems-project-development"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -213,45 +221,50 @@ const EEERenewableEnergySystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/renewable-energy-systems">
+      Renewable Energy Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/solar-photovoltaic">
+      Solar Photovoltaic Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/wind-energy-conversion">
+      Wind Energy Conversion Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
+      Biomass Fuel Cell Technologies
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/energy-storage-integration">
+      Energy Storage & Renewable Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
+      Hybrid Renewable Energy Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/grid-integration-renewables">
+      Grid Integration of Renewables
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

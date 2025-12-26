@@ -1,37 +1,65 @@
-
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
- 
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Communication Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Communication Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) communication systems projects, focusing on 5G/6G, IoT, optical fiber, and AI-driven protocols for industries like telecommunications, smart cities, and healthcare."
+    answer:
+      "Narpavi Research Institute’s Communication Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) communication systems projects, focusing on 5G/6G, IoT, optical fiber, and AI-driven protocols for industries like telecommunications, smart cities, and healthcare."
   },
   {
     question: "What types of communication systems projects are supported?",
-    answer: "We support B.Tech projects (signal processing, IoT networks), M.Tech projects (6G protocols, SDN), and Ph.D. projects (quantum communication, AI-driven networks) for applications in smart cities, defense, and healthcare."
+    answer:
+      "We support B.Tech projects (signal processing, IoT networks), M.Tech projects (6G protocols, SDN), and Ph.D. projects (quantum communication, AI-driven networks) for applications in smart cities, defense, and healthcare."
   },
   {
     question: "Which technologies are used in communication systems project development?",
-    answer: "Our stack includes MATLAB, NS3, OMNeT++, Python, SDR, FPGA, and cloud platforms like AWS for scalable communication solutions."
+    answer:
+      "Our stack includes MATLAB, NS3, OMNeT++, Python, SDR, FPGA, and cloud platforms like AWS for scalable communication solutions."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like 5G/6G, cognitive radio, and quantum communication, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like 5G/6G, cognitive radio, and quantum communication, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, algorithm design, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const ECECommunicationSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ✅ SEO */}
+      <SEO
+        title="Communication Systems IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        description="Communication Systems project development for B.Tech, M.Tech & PhD students focusing on 5G, 6G, IoT, optical fiber communication, AI-driven protocols, SDR, FPGA, and IEEE-aligned research projects."
+        url="/department/communication-systems"
+        type="article"
+        keywords={[
+          "Communication Systems Project Development",
+          "IEEE Communication Systems Projects",
+          "5G 6G Wireless Projects",
+          "Optical Fiber Communication Projects",
+          "IoT Communication Systems",
+          "Cognitive Radio Projects",
+          "Satellite Communication IEEE Projects",
+          "SDR FPGA Communication Projects",
+          "AI in Communication Networks",
+          "PhD Communication Systems Research"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="ECEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -53,6 +81,13 @@ const ECECommunicationSystemsProjectDevelopmentCenter = () => {
           {/* Center: Main Content */}
           <div className="ECEProjectDevelopmentCenter-center">
             <h1>Communication Systems – Project Development Center</h1>
+
+            <p className="seo-internal-links">
+              Explore related domains:
+              <a href="/ece-project-development"> ECE Project Development</a>,
+              <a href="/phd-project-development"> PhD Research Guidance</a>,
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
+            </p>
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
@@ -86,65 +121,37 @@ const ECECommunicationSystemsProjectDevelopmentCenter = () => {
                     </tr>
                     <tr>
                       <td>Software Defined Networking (SDN)</td>
-                      <td>Data Centers, Internet Service Providers, Enterprise Networking</td>
+                      <td>Data Centers, ISPs, Enterprise Networking</td>
                       <td>M.Tech/Ph.D.</td>
                       <td>OpenDaylight, Mininet</td>
                       <td>High</td>
                     </tr>
                     <tr>
-                      <td>Internet of Things (IoT) Communication</td>
-                      <td>Healthcare Monitoring, Smart Agriculture, Home Automation</td>
+                      <td>Internet of Things (IoT)</td>
+                      <td>Healthcare, Agriculture, Home Automation</td>
                       <td>B.Tech/M.Tech</td>
                       <td>Mosquitto, Node-RED</td>
                       <td>High</td>
                     </tr>
                     <tr>
                       <td>Optical Fiber Communication</td>
-                      <td>Broadband Internet, Undersea Data Transmission, High-Speed Data Links</td>
+                      <td>Broadband, Undersea Cables</td>
                       <td>M.Tech/Ph.D.</td>
                       <td>OptiSystem, MATLAB</td>
                       <td>Very High</td>
                     </tr>
                     <tr>
-                      <td>Satellite Communication Systems</td>
-                      <td>Space Research, GPS Navigation, Disaster Management</td>
+                      <td>Satellite Communication</td>
+                      <td>Space, GPS, Disaster Management</td>
                       <td>Ph.D.</td>
                       <td>STK, MATLAB</td>
                       <td>Expert</td>
                     </tr>
                     <tr>
-                      <td>MIMO & Beamforming Technologies</td>
-                      <td>Wireless Base Stations, Defense Communication</td>
-                      <td>M.Tech/Ph.D.</td>
-                      <td>MATLAB, GNU Radio</td>
-                      <td>Very High</td>
-                    </tr>
-                    <tr>
-                      <td>Cognitive Radio Networks</td>
-                      <td>Spectrum Management, Rural Connectivity</td>
-                      <td>M.Tech/Ph.D.</td>
-                      <td>NS3, MATLAB</td>
-                      <td>Very High</td>
-                    </tr>
-                    <tr>
-                      <td>AI-Driven Communication Protocols</td>
-                      <td>Autonomous Vehicles, Predictive Maintenance, Intelligent Networking</td>
+                      <td>AI-Driven Protocols</td>
+                      <td>Autonomous Systems, Smart Transport</td>
                       <td>Ph.D.</td>
                       <td>TensorFlow, PyTorch</td>
-                      <td>Expert</td>
-                    </tr>
-                    <tr>
-                      <td>Quantum Communication Systems</td>
-                      <td>Secure Communication, Military Defense</td>
-                      <td>Ph.D.</td>
-                      <td>Qiskit, MATLAB</td>
-                      <td>Expert</td>
-                    </tr>
-                    <tr>
-                      <td>Underwater Acoustic Communication</td>
-                      <td>Marine Research, Submarine Communication</td>
-                      <td>Ph.D.</td>
-                      <td>MATLAB, AquaSim</td>
                       <td>Expert</td>
                     </tr>
                   </tbody>
@@ -160,80 +167,59 @@ const ECECommunicationSystemsProjectDevelopmentCenter = () => {
               <ul>
                 <li>Topic selection from IEEE 2023–2025 trends</li>
                 <li>Development using MATLAB, NS3, or Python</li>
-                <li>Features like modulation or network protocols</li>
-                <li>Hardware integration with SDR or FPGA</li>
-                <li>Documentation and IEEE-format presentation support</li>
+                <li>Modulation techniques and network protocols</li>
+                <li>Hardware integration using SDR or FPGA</li>
+                <li>IEEE-format documentation and presentation</li>
               </ul>
-              <p>
-                The style emphasizes hands-on learning, practical communication systems, and academic-ready output.
-              </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Communication Systems Project Development</h2>
               <p>
-                For postgraduate students, we develop advanced communication systems projects like 6G protocols or AI-assisted channel estimation, aligned with IEEE research.
+                For postgraduate students, we develop advanced communication systems projects like 6G protocols or AI-assisted channel estimation.
               </p>
               <ul>
-                <li>IEEE topic selection with literature review</li>
-                <li>Development with SDN, 6G, or IoT frameworks</li>
-                <li>Features like protocol optimization or hybrid systems</li>
-                <li>Integration with industry applications like smart cities</li>
-                <li>Thesis support with journal-ready documentation</li>
+                <li>Advanced IEEE literature review</li>
+                <li>Development with SDN, 6G, and IoT frameworks</li>
+                <li>Protocol optimization and hybrid systems</li>
+                <li>Industry-focused smart city applications</li>
+                <li>Journal-ready thesis documentation</li>
               </ul>
-              <p>
-                The style focuses on research-driven, scalable, and industry-grade communication solutions.
-              </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Communication Systems Project Development</h2>
               <p>
-                For doctoral scholars, our center focuses on pioneering communication systems research in quantum communication, AI-driven networks, and cross-layer optimization.
+                For doctoral scholars, our center focuses on pioneering research in quantum communication, AI-driven networks, and cross-layer optimization.
               </p>
               <ul>
-                <li>Problem formulation with IEEE 2023–2025 gap analysis</li>
-                <li>Advanced protocol design with NS3 or GNU Radio</li>
-                <li>Validation with real-world datasets</li>
-                <li>Integration with cloud or edge computing</li>
-                <li>Publication and thesis support for IEEE/Scopus journals</li>
+                <li>IEEE gap identification (2023–2025)</li>
+                <li>Advanced simulations with NS3 or GNU Radio</li>
+                <li>Real-world dataset validation</li>
+                <li>Cloud and edge integration</li>
+                <li>IEEE / SCI publication & thesis support</li>
               </ul>
-              <p>
-                The style emphasizes innovation, research rigor, and publication-ready outcomes.
-              </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Communication Systems Project Titles (2023–2025)</h2>
               <ul>
-                <li>AI-Based Adaptive Beamforming for 6G Massive MIMO Networks</li>
-                <li>Blockchain-Integrated IoT Communication for Secure Data Transmission</li>
-                <li>Energy-Efficient Routing Protocol for Underwater Acoustic Networks</li>
-                <li>FPGA-Based Implementation of 5G NR Physical Layer</li>
-                <li>Quantum Key Distribution for Next-Generation Secure Communication</li>
-                <li>Machine Learning-Enhanced Spectrum Sensing in Cognitive Radio</li>
-                <li>Multi-Hop Relay Communication in Smart City IoT Networks</li>
-                <li>Real-Time Video Transmission Optimization over 5G Edge Computing</li>
-                <li>AI-Assisted Channel Estimation in High Mobility Wireless Networks</li>
-                <li>Cloud-Based Resource Allocation for 6G Network Slicing</li>
-                <li>Optical Fiber Communication Enhancement Using Nonlinear Compensation</li>
-                <li>Low-Power IoT Communication for Remote Healthcare Applications</li>
-                <li>Multi-Layer Security Framework for Satellite Communication Systems</li>
-                <li>AI-Driven Network Traffic Prediction for Smart Transportation</li>
-                <li>Ultra-Reliable Low Latency Communication for Autonomous Vehicles</li>
+                <li>AI-Based Adaptive Beamforming for 6G Networks</li>
+                <li>Blockchain-Integrated IoT Communication</li>
+                <li>Quantum Key Distribution Systems</li>
+                <li>FPGA-Based 5G NR Physical Layer Design</li>
+                <li>Ultra-Reliable Low-Latency Communication</li>
               </ul>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute is an India-based global center of excellence for academic and industrial project development support. We provide end-to-end assistance for B.Tech, M.Tech, and Ph.D. projects, ensuring IEEE-standard compliance, real-world applicability, and cutting-edge innovation.
-              </p>
-              <p>
-                Our team of experts selects topics from the latest IEEE Transactions (2023–2025), providing students with the most relevant and impactful research opportunities.
+                Narpavi Research Institute is a global center of excellence providing IEEE-compliant project development for B.Tech, M.Tech, and Ph.D. scholars with industry relevance and research impact.
               </p>
             </section>
 
+            {/* FAQ UI only — Schema handled by SEO */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -244,38 +230,24 @@ const ECECommunicationSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/natural-language-processing-project-development">Natural Language Processing Project Development</a></li>
-              <li><a href="/image-processing-project-development">Image Processing Project Development</a></li>
-              <li><a href="/devops-project-development">DevOps Project Development</a></li>
-              <li><a href="/artificial-intelligence-project-development">Artificial Intelligence Project Development</a></li>
-            </ul>
+  <li><a href="/department/communication-systems">Communication Systems </a></li>
+  <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
+  <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
+  <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
+  <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
+  <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
+  <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Energy Management Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Energy Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT-based EMS, AI-powered load forecasting, blockchain-enabled energy trading, and renewable energy optimization."
+    answer: "Narpavi Research Institute's Energy Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT-based EMS, AI-powered load forecasting, blockchain-enabled energy trading, and renewable energy optimization."
   },
   {
     question: "What types of EMS projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEEEnergyManagementSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="Energy Management Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) EMS projects for B.Tech, M.Tech, Ph.D. IoT, AI, blockchain EMS in smart grids, renewable energy, demand response, energy trading."
+        keywords="Energy Management Systems IEEE Projects, EMS in Smart Grids IEEE Projects, IoT EMS IEEE Projects, AI-Powered EMS IEEE Projects, Renewable Energy EMS IEEE Projects, Blockchain EMS IEEE Projects, Demand Response EMS IEEE Projects, EMS B.Tech Projects, EMS M.Tech Projects, EMS Ph.D. Research, IEEE EMS Publications, Narpavi Research Institute"
+        url="/department/energy-management-systems"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -236,24 +244,6 @@ const EEEEnergyManagementSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -261,26 +251,43 @@ const EEEEnergyManagementSystemsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/energy-management-systems">
+      Energy Management Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/smart-building-energy">
+      Smart Building Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/demand-side-management">
+      Demand-Side Management (DSM)
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/energy-efficiency-industries">
+      Energy Efficiency in Industries
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/renewable-energy-scheduling">
+      Renewable Energy Scheduling
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/home-energy-management">
+      Home Energy Management Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/data-analytics-energy-savings">
+      Data Analytics for Energy Savings
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

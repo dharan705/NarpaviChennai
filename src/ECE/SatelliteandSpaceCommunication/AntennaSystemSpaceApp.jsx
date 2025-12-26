@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What are Antenna Systems for Space Applications?",
@@ -27,6 +27,13 @@ const faqs = [
 const AntennaSystemsSpaceApplicationsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Antenna Systems for Space Applications IEEE Projects | CubeSat, Phased Arrays, Metamaterials, AI | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) antenna systems for space applications projects on microstrip patch and phased array antennas, GNSS and CubeSat antennas, metamaterial and dielectric resonator designs, and AI-optimized space antennas using HFSS, CST, FEKO, and MATLAB."
+        keywords="Satellite Antenna Projects, CubeSat Antenna Design, Phased Array Antenna Research, AI in Antenna Systems, GNSS Antenna Projects, Metamaterial Antenna Design, Reconfigurable Antennas for Space, IEEE Antenna Research Papers, Space Communication Antenna Projects, Narpavi Research Institute Antenna Guidance"
+        url="/department/satellite-communication/antenna-systems-space-applications"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -177,13 +184,15 @@ const AntennaSystemsSpaceApplicationsProject = () => {
           </div>
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

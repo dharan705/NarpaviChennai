@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the Electric Vehicles Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEElectricVehiclesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Electric Vehicles EV IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Electric Vehicles EV projects for B.Tech, M.Tech, Ph.D. EV motor drives, BMS, wireless charging, V2G using MATLAB/Simulink, LabVIEW, Arduino, FPGA, IoT for EV traction, smart charging, renewable integration."
+  keywords="Electric Vehicles EV IEEE Projects 2023–2025, B.Tech BLDC PMSM Motor Control, M.Tech Battery Management BMS V2G, Ph.D. AI Autonomous EVs, Wireless Charging EV, Vehicle-to-Grid V2G, Renewable EV Charging, Narpavi Research Institute"
+  url="/department/electric-vehicles"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -231,48 +239,50 @@ const EEEElectricVehiclesProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/electric-vehicles">
+      Electric Vehicles – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/bms">
+      Battery Management Systems (BMS)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-charging-infrastructure">
+      EV Charging Infrastructure
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-motor-drive-systems">
+      EV Motor Drive Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/hev">
+      Hybrid Electric Vehicles (HEV)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/power-electronics-evs">
+      Power Electronics for EVs
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/regenerative-braking-systems">
+      Regenerative Braking Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

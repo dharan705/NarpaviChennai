@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Energy-Efficient Embedded Systems Project Development Center offer?",
@@ -27,6 +27,13 @@ const faqs = [
 const ECEEnergyEfficientEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Energy-Efficient Embedded Systems IEEE Projects | DVFS, Energy Harvesting, AI Power Management | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) energy-efficient embedded systems projects on DVFS, low-power ARM/RISC-V microcontrollers, energy-harvesting WSNs, FPGA-based optimization, neuromorphic designs, and AI-driven power management for IoT, healthcare, robotics, and smart manufacturing."
+        keywords="Energy-Efficient Embedded Systems, Low Power Embedded Projects, IoT Energy Optimization, IEEE Embedded Systems Projects 2023–2025, Energy Harvesting Devices, DVFS Embedded Platforms, Neuromorphic Low-Power Architectures, Narpavi Research Institute"
+        url="/department/embedded-systems/energy-efficient-embedded"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -225,14 +232,15 @@ const ECEEnergyEfficientEmbeddedSystemsProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-            
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

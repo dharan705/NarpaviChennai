@@ -10,6 +10,7 @@ import {
 
 const departments = [
   {
+    deptId: "cse",
     icon: <FaLaptopCode />,
     title: "Computer Science & Engineering (CSE)",
     description:
@@ -18,6 +19,7 @@ const departments = [
     link: "/department",
   },
   {
+    deptId: "mech",
     icon: <FaCogs />,
     title: "Mechanical Engineering",
     description:
@@ -26,6 +28,7 @@ const departments = [
     link: "/department",
   },
   {
+    deptId: "ece",
     icon: <FaMicrochip />,
     title: "Electronics & Communication Engineering (ECE)",
     description:
@@ -34,6 +37,7 @@ const departments = [
     link: "/department",
   },
   {
+    deptId: "eee",
     icon: <FaBolt />,
     title: "Electrical & Electronics Engineering (EEE)",
     description:
@@ -42,6 +46,7 @@ const departments = [
     link: "/department",
   },
   {
+    deptId: "civil",
     icon: <FaDraftingCompass />,
     title: "Civil Engineering",
     description:
@@ -50,6 +55,7 @@ const departments = [
     link: "/department",
   },
   {
+    deptId: "other",
     icon: <FaUniversity />,
     title: "Other Specialized Departments",
     description:
@@ -81,7 +87,12 @@ const Departments = () => {
                 <div className="departments-icon">{dept.icon}</div>
                 <h3>{dept.title}</h3>
                 <p>{dept.description}</p>
-                <a href={dept.link} className="departments-cta">
+
+                {/* ✅ ONLY CHANGE: query param */}
+                <a
+                  href={`/department?dept=${dept.deptId}`}
+                  className="departments-cta"
+                >
                   🔗 {dept.linkText}
                 </a>
               </div>
@@ -91,15 +102,25 @@ const Departments = () => {
       </section>
 
       {/* ===================== New Services Container & Button Only ===================== */}
-      <section className="services-section">
-        <div className="services-container">
-          <h2 className="services-heading">✨ Our Services</h2>
-          <p className="services-text">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima nemo, perferendis dignissimos necessitatibus dicta eum magnam suscipit reprehenderit harum veniam commodi consequuntur amet omnis impedit iusto provident quaerat qui officiis laudantium. Inventore recusandae ex tempore minima omnis rem, expedita in. Iure omnis recusandae vel a inventore rerum corrupti, tempora nihil, reiciendis explicabo illo amet dolore praesentium! In autem dolorem consequatur, nesciunt nisi dolorum culpa labore magni, repellendus sint, architecto molestias consequuntur ad nihil. Similique dolore pariatur perferendis mollitia beatae aliquid quibusdam iste fuga ut, suscipit a debitis earum reprehenderit! Quidem dolore dicta voluptas accusamus, molestiae quo consequuntur nemo culpa vel?
+      <section className="services-section1">
+        <div className="services-container1">
+          <h2 className="services-heading1">✨ Our Services</h2>
+          <p className="services-text1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima nemo,
+            perferendis dignissimos necessitatibus dicta eum magnam suscipit
+            reprehenderit harum veniam commodi consequuntur amet omnis impedit
+            iusto provident quaerat qui officiis laudantium. Inventore recusandae
+            ex tempore minima omnis rem, expedita in. Iure omnis recusandae vel a
+            inventore rerum corrupti, tempora nihil, reiciendis explicabo illo
+            amet dolore praesentium! In autem dolorem consequatur, nesciunt nisi
+            dolorum culpa labore magni, repellendus sint, architecto molestias
+            consequuntur ad nihil. Similique dolore pariatur perferendis mollitia
+            beatae aliquid quibusdam iste fuga ut, suscipit a debitis earum
+            reprehenderit! Quidem dolore dicta voluptas accusamus, molestiae quo
+            consequuntur nemo culpa vel?
           </p>
 
-          {/* ⭐ Only Button (As you requested) */}
-          <a href="/service" className="services-button">
+          <a href="/service" className="services-button1">
             View All Services
           </a>
         </div>

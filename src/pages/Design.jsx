@@ -1,43 +1,57 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import "./Design.scss";
 
-const Design = () => {
-  const navigate = useNavigate();
+export default function Preloader({ onFinish }) {
+  const container = useRef(null);
+  const letters = useRef([]);
 
-  const boxes = [
-    { title: "Ranmars Corp", desc: "Description about Ranmars Corp", path: "/service1" },
-    { title: "Narpavitech Chennai", desc: "Description about Narpavitech Chennai", path: "/service2" },
-    { title: "Narpavitech Mumbai", desc: "Description about Narpavitech Mumbai", path: "/service3" },
-    { title: "iBridge", desc: "Description about iBridge", path: "/service4" },
-  ];
+  useEffect(() => {
+    const tl = gsap.timeline({
+      defaults: { ease: "power4.out" },
+      onComplete: onFinish,
+    });
+
+    tl.fromTo(
+      letters.current,
+      { opacity: 0, y: 40, filter: "blur(6px)" },
+      {
+        opacity: 1,
+        y: 0,
+        filter: "blur(0px)",
+        stagger: 0.06,
+        duration: 1.2,
+      }
+    )
+      .to(letters.current, {
+        opacity: 0,
+        y: -40,
+        filter: "blur(6px)",
+        stagger: 0.04,
+        duration: 1,
+        delay: 0.8,
+      })
+      .to(container.current, {
+        y: "-100%",
+        duration: 1.2,
+      });
+
+  }, [onFinish]);
+
+  const text = "narpavi research institute";
 
   return (
-    <div className="home-container">
-      <div className="box-grid">
-        {boxes.map((item, index) => (
-          <div
-            key={index}
-            className="flip-box"
-            onClick={() => navigate(item.path)}
+    <div className="preloader" ref={container}>
+      <h1>
+        {text.split("").map((char, i) => (
+          <span
+            key={i}
+            ref={(el) => (letters.current[i] = el)}
           >
-            <div className="flip-box-inner">
-              {/* Front side */}
-              <div className="flip-box-front">
-                <h2>{item.title}</h2>
-              </div>
-            
-              {/* Back side */}
-              <div className="flip-box-back">
-                <p>{item.desc}</p>
-                <button className="visit-btn">Visit</button>
-              </div>
-            </div>
-          </div>
+            {char === " " ? "\u00A0" : char}
+          </span>
         ))}
-      </div>
+      </h1>
     </div>
   );
-};
-
-export default Design;
+}

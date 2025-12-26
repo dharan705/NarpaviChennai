@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What is the significance of Satellite Communication in 5G/6G networks?",
@@ -27,6 +27,13 @@ const faqs = [
 const SatelliteCommunication5G6GProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Satellite Communication for 5G/6G IEEE Projects | NTN, LEO, mmWave/THz, AI & QKD | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) satellite communication for 5G/6G projects on NTN architectures, LEO constellations, satellite–5G backhaul, AI-driven beamforming, mmWave/THz links, resource allocation, and quantum key distribution using MATLAB, NS3, GNURadio, CST, HFSS, OPNET, TensorFlow, and Qiskit."
+        keywords="Satellite Communication for 5G Networks, Satellite Communication for 6G Networks, Non-Terrestrial Networks Research, LEO Satellite Communication Projects, Beamforming in Satellite 5G, AI in Satellite Communication, Terahertz Satellite Links, Quantum-Secure 6G Communication, Satellite IoT Integration, Satellite 5G/6G Project Ideas, IEEE Satellite Communication Projects, Narpavi Research Institute Space Communication"
+        url="/department/satellite-communication/satellite-communication-5g-6g"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -194,12 +201,14 @@ const SatelliteCommunication5G6GProject = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

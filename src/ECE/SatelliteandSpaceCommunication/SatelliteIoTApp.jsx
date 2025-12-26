@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What are Satellite IoT (Sat-IoT) Applications?",
@@ -27,6 +27,14 @@ const faqs = [
 const SatelliteIoTApplicationsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="Satellite IoT (Sat-IoT) Applications IEEE Projects | LEO/MEO/GEO, Hybrid, AI & Energy-Aware | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) Satellite IoT projects on LEO/MEO/GEO Sat-IoT coverage, hybrid satellite–terrestrial IoT, smart agriculture, disaster management, asset tracking, security protocols, and ML-based energy-aware architectures using NS3, MATLAB, Python, STK, TensorFlow, LoRaWAN, MQTT, and ThingsBoard."
+        keywords="Satellite IoT Projects, Sat-IoT Applications, LEO IoT Communication, Smart Agriculture with Sat-IoT, Disaster Management IoT via Satellites, Hybrid Satellite-Terrestrial IoT, AI in Satellite IoT, Secure Sat-IoT Systems, IEEE Satellite IoT Research, Narpavi Research Institute IoT Projects"
+        url="/department/satellite-communication/satellite-iot-applications"
+        faqs={faqs}
+      />
+      
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -192,12 +200,14 @@ const SatelliteIoTApplicationsProject = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

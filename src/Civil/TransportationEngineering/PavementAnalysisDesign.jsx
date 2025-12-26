@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Pavement Analysis & Design Project Development Center offer?",
@@ -27,6 +27,26 @@ const faqs = [
 const CEPavementAnalysisDesignProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+            <SEO
+        title="Pavement Analysis & Design IEEE Projects (2023–2025)"
+        description="Pavement Analysis & Design IEEE project development for B.Tech, M.Tech & PhD scholars using KENPAVE, AASHTOWare, ABAQUS, mechanistic-empirical design, IoT monitoring, AI performance prediction for sustainable pavements."
+        url="/department/transportation-engineering/pavement-analysis-design"
+        type="article"
+        keywords={[
+          "Pavement Analysis Design IEEE 2023–2025",
+          "Flexible Rigid Pavements Projects",
+          "Smart Pavement Monitoring IoT",
+          "AI Pavement Performance Prediction",
+          "Sustainable Asphalt Concrete Pavements",
+          "Recycled Material Pavements",
+          "Mechanistic-Empirical Pavement Design",
+          "B.Tech M.Tech PhD Transportation Projects",
+          "Narpavi Research Institute Transportation Projects",
+          "Climate-Resilient Road Design"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -217,23 +237,6 @@ const CEPavementAnalysisDesignProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -241,12 +244,28 @@ const CEPavementAnalysisDesignProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/smart-traffic-management-systems-project-development">Smart Traffic Management Systems Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/transportation-engineering">
+      Transportation Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/smart-traffic-management">
+      Smart Traffic Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/pavement-analysis-design">
+      Pavement Analysis & Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/highway-safety-optimization">
+      Highway Safety Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

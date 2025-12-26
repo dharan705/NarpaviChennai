@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEo from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Lean Manufacturing Techniques Project Development Center offer?",
@@ -27,6 +27,26 @@ const faqs = [
 const MELeanManufacturingTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Lean Manufacturing Techniques IEEE Projects (2023–2025)"
+        description="Lean Manufacturing IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ARENA, Kaizen, JIT, Six Sigma, IoT monitoring, AI optimization, digital twins for automotive, aerospace, healthcare, electronics."
+        url="/department/industrial-production-optimization/lean-manufacturing"
+        type="article"
+        keywords={[
+          "Lean Manufacturing IEEE Projects",
+          "Kaizen Project Development",
+          "Just in Time Academic Projects",
+          "Six Sigma Student Projects",
+          "IoT Enabled Lean Optimization",
+          "Lean Smart Factory IEEE Projects",
+          "Digital Twin Lean Projects",
+          "B.Tech Lean Manufacturing Projects",
+          "M.Tech Lean Optimization",
+          "Narpavi Research Institute Lean Guidance"
+        ]}
+        faqs={faqs}
+      />
+      
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -246,24 +266,6 @@ const MELeanManufacturingTechniquesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -271,12 +273,38 @@ const MELeanManufacturingTechniquesProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/industrial-production-optimization-project-development">Industrial & Production Optimization Project Development</a></li>
-              <li><a href="/fatigue-fracture-analysis-project-development">Fatigue & Fracture Analysis Project Development</a></li>
-              <li><a href="/nanomaterials-mechanical-systems-project-development">Nanomaterials in Mechanical Systems Project Development</a></li>
-              <li><a href="/tribology-wear-analysis-project-development">Tribology & Wear Analysis Project Development</a></li>
-              <li><a href="/advanced-alloy-development-project-development">Advanced Alloy Development Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/industrial-production-optimization">
+      Industrial Production Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/lean-manufacturing">
+      Lean Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/supply-chain-process">
+      Supply Chain Process Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
+      Industrial Safety & Ergonomics
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/smart-factory-systems">
+      Smart Factory Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/cost-time-optimization">
+      Cost & Time Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

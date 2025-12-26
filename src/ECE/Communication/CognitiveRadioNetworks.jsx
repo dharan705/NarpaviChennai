@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -27,6 +28,13 @@ const faqs = [
 const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Cognitive Radio Networks IEEE Projects | AI Spectrum Sensing, Blockchain CRN | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) Cognitive Radio Networks projects on AI-enabled spectrum sensing, energy-efficient CRN protocols, blockchain-secured CRN, and SDR-based cognitive radios for 5G/6G and IoT."
+        keywords="Cognitive Radio Networks Projects, CRN Research Topics 2023–2025, AI-Based Spectrum Sensing, Blockchain Cognitive Radio Projects, Cognitive Radio for B.Tech M.Tech Ph.D, SDR-Enabled CRNs, Narpavi Research Institute"
+        url="/department/communication-systems/cognitive-radio-networks"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -50,62 +58,62 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> presents the Cognitive Radio Networks – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in energy-efficient CRN protocols, AI-enabled spectrum sensing, blockchain-based CRN security, and SDR-integrated cognitive networks for 5G/6G, IoT, and defense applications.
+                <strong>Narpavi Research Institute</strong> presents the Cognitive Radio Networks – Project Development Center, a specialized hub helping B.Tech, M.Tech, and Ph.D. scholars build IEEE-aligned (2023–2025) solutions in energy-efficient CRN protocols, AI-enabled spectrum sensing, blockchain-based CRN security, and SDR-integrated cognitive networks for 5G/6G, IoT, and defense applications.[web:171][web:195]
               </p>
               <p>
-                With expertise in MATLAB, NS2, GNU Radio, and AI-driven frameworks, we deliver innovative solutions for dynamic spectrum access and spectral efficiency, ensuring academic rigor and industrial applicability.
+                Projects employ MATLAB, NS2, GNU Radio, USRP, and AI frameworks to design, simulate, and prototype dynamic spectrum access schemes that increase spectral efficiency while maintaining reliability and security.[web:172][web:180]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Cognitive Radio Networks Project Development</h2>
               <p>
-                For undergraduate students, our center focuses on foundational projects like spectrum sensing and energy detection, aligned with IEEE topics.
+                B.Tech projects focus on foundational CRN topics such as energy detection-based spectrum sensing and basic dynamic spectrum access aligned with recent IEEE tutorials and surveys.[web:177][web:201]
               </p>
               <ul>
-                <li>Problem definition and literature review from IEEE-based topics (2023–2025)</li>
+                <li>Problem definition and literature review from IEEE topics (2023–2025)</li>
                 <li>Spectrum sensing simulation using MATLAB or NS2</li>
                 <li>Energy detection for dynamic spectrum access</li>
                 <li>Performance analysis for spectral efficiency</li>
                 <li>Documentation in IEEE format for academic submission</li>
               </ul>
               <p>
-                The style emphasizes hands-on learning, practical CRN simulation, and academic-ready output.
+                The emphasis is on hands-on learning, practical CRN simulation, and academically ready project reports.
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Cognitive Radio Networks Project Development</h2>
               <p>
-                For postgraduate students, projects involve advanced algorithms like cooperative spectrum sensing and blockchain security.
+                M.Tech work targets cooperative spectrum sensing and secure spectrum sharing with AI and blockchain integration.[web:189][web:193]
               </p>
               <ul>
-                <li>Project selection from IEEE Transactions and Conferences (2023–2025)</li>
-                <li>Cooperative spectrum sensing using GNU Radio or USRP</li>
-                <li>Blockchain-based secure spectrum sharing</li>
-                <li>AI-based channel allocation for 5G/6G testbeds</li>
-                <li>Publication support for Scopus/SCI indexed papers</li>
+                <li>Project selection from recent IEEE Transactions and conference papers (2023–2025)</li>
+                <li>Cooperative spectrum sensing using GNU Radio and USRP</li>
+                <li>Blockchain-based secure spectrum sharing architectures</li>
+                <li>AI-driven channel allocation for 5G/6G CRN testbeds</li>
+                <li>Publication support for Scopus/SCI indexed journals</li>
               </ul>
               <p>
-                The style focuses on research-driven, scalable, and industry-grade CRN solutions.
+                The style is research-driven and industry-focused, targeting scalable and secure CRN designs.
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Cognitive Radio Networks Project Development</h2>
               <p>
-                For doctoral scholars, our center supports cutting-edge research in quantum cognitive radio and reinforcement learning-based CRN.
+                Ph.D. projects advance toward quantum-enabled CRN, deep RL-based spectrum management, and cross-layer secure CRN architectures.[web:171][web:195]
               </p>
               <ul>
-                <li>Research gap identification from IEEE Transactions (2023–2025)</li>
-                <li>Advanced simulation of quantum cognitive radio systems</li>
-                <li>Reinforcement learning for spectrum optimization</li>
-                <li>Experimental validation with SDR platforms</li>
-                <li>Publication support for IEEE/SCI journals</li>
-                <li>Patent filing support for innovative CRN methodologies</li>
+                <li>Research gap identification from top IEEE CRN and 6G/AI surveys</li>
+                <li>Advanced simulation of quantum cognitive radio concepts</li>
+                <li>Reinforcement learning for dynamic spectrum and power optimization</li>
+                <li>Experimental validation on SDR platforms (GNU Radio + USRP)</li>
+                <li>Publication support for high-impact IEEE/SCI journals</li>
+                <li>Patent filing guidance for novel CRN methodologies</li>
               </ul>
               <p>
-                The style emphasizes innovation, research rigor, and publication-ready outcomes.
+                The focus is on innovation, methodological rigor, and publication-ready research outputs.
               </p>
             </section>
 
@@ -135,7 +143,7 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
                     <tr>
                       <td>AI-Enabled Spectrum Sensing</td>
                       <td>5G/6G Wireless Infrastructure</td>
-                      <td>Improved accuracy and faster spectrum allocation</td>
+                      <td>Higher detection probability and faster allocation</td>
                       <td>M.Tech/Ph.D.</td>
                       <td>TensorFlow, GNU Radio</td>
                       <td>High</td>
@@ -143,7 +151,7 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
                     <tr>
                       <td>Blockchain-Based CRN Security</td>
                       <td>Military & Secure Communication</td>
-                      <td>Tamper-proof spectrum sharing</td>
+                      <td>Tamper-proof cooperative sensing and spectrum sharing</td>
                       <td>M.Tech/Ph.D.</td>
                       <td>Blockchain frameworks, MATLAB</td>
                       <td>Very High</td>
@@ -151,7 +159,7 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
                     <tr>
                       <td>SDR-Integrated Cognitive Networks</td>
                       <td>Telecom & Academic Research</td>
-                      <td>Flexible multi-band communication</td>
+                      <td>Flexible multi-band, real-time experimentation</td>
                       <td>B.Tech/M.Tech/Ph.D.</td>
                       <td>GNU Radio, USRP</td>
                       <td>Medium to High</td>
@@ -159,7 +167,7 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
                     <tr>
                       <td>Edge-AI Cognitive Radio</td>
                       <td>Industry 4.0 & Smart Factories</td>
-                      <td>Real-time adaptive spectrum allocation</td>
+                      <td>Real-time adaptive spectrum allocation at the edge</td>
                       <td>M.Tech/Ph.D.</td>
                       <td>TensorFlow, Edge platforms</td>
                       <td>Very High</td>
@@ -184,10 +192,10 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute specializes in Cognitive Radio Networks project development for B.Tech, M.Tech, and Ph.D. students.
+                Narpavi Research Institute specializes in Cognitive Radio Networks project development for all academic levels, integrating AI, blockchain, and SDR to match current CRN and 6G research directions.[web:171][web:185]
               </p>
               <p>
-                We provide end-to-end project execution, hardware-software integration, and IEEE publication support, ensuring innovative, industry-relevant, and publication-ready outcomes aligned with global standards.
+                The center delivers end-to-end execution, hardware–software integration, and IEEE-aligned publication support to ensure innovative and industry-relevant outcomes.[web:172][web:195]
               </p>
             </section>
 
@@ -201,39 +209,23 @@ const ECECognitiveRadioNetworksProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/iot-embedded-devices-project-development">IoT-enabled Embedded Devices Project Development</a></li>
-              <li><a href="/machine-learning-embedded-platforms-project-development">Machine Learning in Embedded Platforms Project Development</a></li>
-              <li><a href="/energy-efficient-embedded-systems-project-development">Energy-Efficient Embedded Systems Project Development</a></li>
-              <li><a href="/5g-6g-wireless-communication-project-development">5G and 6G Wireless Communication Systems Project Development</a></li>
-            </ul>
-            </div>
-            </div>
+             <ul>
+  <li><a href="/department/communication-systems">Communication Systems </a></li>
+  <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
+  <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
+  <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
+  <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
+  <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
+  <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
+</ul>
+          </div>
+        </div>
       </div>
     </div>
   );

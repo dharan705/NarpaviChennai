@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Machine Learning for Fault Detection Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEMlFaultDetectionProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Machine Learning Fault Detection IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Machine Learning Fault Detection projects for B.Tech, M.Tech, Ph.D. Anomaly detection, predictive maintenance, smart grid diagnosis using MATLAB/Simulink, TensorFlow PyTorch Scikit-learn, Arduino Raspberry Pi LabVIEW SCADA."
+  keywords="Machine Learning Fault Detection IEEE Projects 2023–2025, B.Tech ML Electrical Faults, M.Tech Smart Grid Anomaly Detection, Ph.D. GAN RL Fault Diagnosis, Predictive Maintenance IoT, Industrial Fault Detection, Narpavi Research Institute"
+  url="/department/ai-electrical-engineering/machine-learning-fault-detection"
+  faqs={faqs}
+/>
+
       <Sidebar/>
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -169,33 +177,50 @@ const EEEMlFaultDetectionProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* JSON-LD for SEO */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                   __html: JSON.stringify({
-                     "@context":"https://schema.org",
-                     "@type":"FAQPage",
-                     "mainEntity": faqs.map(f=>({
-                       "@type":"Question",
-                       "name":f.question,
-                       "acceptedAnswer": { "@type":"Answer","text":f.answer }
-                     }))
-                   })
-                }}
-              />
             </section>
           </div>
 
           {/* Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/predictive-maintenance-systems-project-development">Predictive Maintenance Systems</a></li>
-              <li><a href="/ai-power-load-forecasting-project-development">AI for Power Load Forecasting</a></li>
-              <li><a href="/intelligent-control-ai-ml-project-development">Intelligent Control with AI/ML</a></li>
-              <li><a href="/industrial-iiot-applications-project-development">Industrial IoT (IIoT) Applications</a></li>
-              <li><a href="/cybersecurity-smart-grids-project-development">Cybersecurity in Smart Grids</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/ai-electrical-engineering">
+      Artificial Intelligence in Electrical Engineering – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/power-load-forecasting">
+      AI-Based Power Load Forecasting
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
+      Machine Learning for Fault Detection
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
+      Deep Learning in Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/ai-smart-grids">
+      AI in Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/neural-networks-motor">
+      Neural Networks for Motor Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
+      AI-Based Energy Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

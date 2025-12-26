@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Topology Optimization of Components Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const METopologyOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Topology Optimization IEEE Projects (2023–2025)"
+        description="Topology Optimization IEEE project development for B.Tech, M.Tech & PhD using ANSYS, Altair OptiStruct, AI-driven optimization, generative design, multi-physics, digital twins for aerospace, automotive, biomedical lightweight structures."
+        url="/department/design-engineering-cad/topology-optimization"
+        type="article"
+        keywords={[
+          "Topology Optimization IEEE 2023–2025",
+          "Structural Optimization Projects",
+          "AI Based Topology Optimization",
+          "Generative Design Projects",
+          "Additive Manufacturing Topology",
+          "Aerospace Lightweight Optimization",
+          "Biomedical Implant Optimization",
+          "Multi Physics Optimization IEEE",
+          "CAD CAE Optimization Integration",
+          "Narpavi Research Institute Topology"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -224,36 +243,45 @@ const METopologyOptimizationProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/cad-modeling-simulation-project-development">CAD Modeling & Simulation Project Development</a></li>
-              <li><a href="/design-engineering-cad-cam-project-development">Design Engineering / CAD & CAM Project Development</a></li>
-              <li><a href="/mechanism-design-kinematics-project-development">Mechanism Design & Kinematics Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/design-engineering-cad">
+      Design Engineering & CAD
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/finite-element-analysis">
+      Finite Element Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/cad-modeling-simulation">
+      CAD Modeling & Simulation
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/mechanism-design">
+      Mechanism Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/topology-optimization">
+      Topology Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/product-lifecycle-management">
+      Product Lifecycle Management
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

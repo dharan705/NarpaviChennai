@@ -1,36 +1,63 @@
 import "./CEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-       
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Construction & Project Management Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Construction & Project Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on project scheduling, BIM integration, IoT-based monitoring, and AI-driven construction management."
+    answer:
+      "Narpavi Research Institute’s Construction & Project Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on project scheduling, BIM integration, IoT-based monitoring, and AI-driven construction management."
   },
   {
     question: "What types of Construction & Project Management projects are supported?",
-    answer: "We support B.Tech projects (basic planning and scheduling), M.Tech projects (smart construction and risk management), and Ph.D. projects (AI, IoT, and blockchain-based construction systems) for efficient project delivery."
+    answer:
+      "We support B.Tech projects (basic planning and scheduling), M.Tech projects (smart construction and risk management), and Ph.D. projects (AI, IoT, and blockchain-based construction systems) for efficient project delivery."
   },
   {
     question: "Which tools and technologies are used in Construction & Project Management projects?",
-    answer: "Our stack includes BIM (Revit), Primavera, MS Project, MATLAB, IoT sensors, AI frameworks (TensorFlow, Keras), blockchain, and drones for project planning and monitoring."
+    answer:
+      "Our stack includes BIM (Revit), Primavera, MS Project, MATLAB, IoT sensors, AI frameworks (TensorFlow, Keras), blockchain, and drones for project planning and monitoring."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Construction Management and Civil Engineering, focusing on AI-driven scheduling, digital twins, and smart contract systems."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Construction Management and Civil Engineering, focusing on AI-driven scheduling, digital twins, and smart contract systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
   }
 ];
 
 const CEConstructionProjectManagementProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO (added only, no content removed) */}
+      <SEO
+        title="Construction & Project Management IEEE Projects (2023–2025)"
+        description="Construction & Project Management IEEE project development for B.Tech, M.Tech & PhD scholars using BIM, AI, IoT, blockchain and digital twin technologies at Narpavi Research Institute."
+        url="/department/construction-project-management"
+        type="article"
+        keywords={[
+          "Construction Management IEEE Projects",
+          "Project Scheduling Civil Projects",
+          "BIM Construction Projects",
+          "IoT Construction Monitoring",
+          "AI in Construction Management",
+          "Blockchain Construction Projects",
+          "Digital Twin Civil Engineering",
+          "PhD Construction Management Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="CEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -50,6 +77,7 @@ const CEConstructionProjectManagementProjectDevelopmentCenter = () => {
 
           {/* Center: Main Content */}
           <div className="CEProjectDevelopmentCenter-center">
+
             <h1>Construction & Project Management – Project Development Support</h1>
 
             <section className="CEProjectDevelopmentCenter-intro">
@@ -209,6 +237,7 @@ const CEConstructionProjectManagementProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
+            {/* FAQ UI (schema handled by SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -219,42 +248,41 @@ const CEConstructionProjectManagementProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/construction-project-management">
+      Construction Project Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/smart-construction-techniques">
+      Smart Construction Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/cost-optimization-in-projects">
+      Cost Optimization in Projects
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/project-scheduling-planning">
+      Project Scheduling & Planning
+    </a>
+  </li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>
   );
 };
 
-export default CEConstructionProjectManagementProjectDevelopmentCenter;        
+export default CEConstructionProjectManagementProjectDevelopmentCenter;

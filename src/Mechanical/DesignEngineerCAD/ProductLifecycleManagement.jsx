@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Product Lifecycle Management (PLM) Project Development Center offer?",
@@ -27,6 +27,26 @@ const faqs = [
 const MEProductLifecycleManagementProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="Product Lifecycle Management PLM IEEE Projects (2023–2025)"
+        description="Product Lifecycle Management PLM IEEE project development for B.Tech, M.Tech & PhD using Siemens Teamcenter, PTC Windchill, digital twins, AI-driven PLM, blockchain, CAD-PDM integration for aerospace, automotive, healthcare."
+        url="/department/design-engineering-cad/product-lifecycle-management"
+        type="article"
+        keywords={[
+          "PLM IEEE Projects 2023–2025",
+          "Product Lifecycle Management",
+          "CAD PDM PLM Integration",
+          "Cloud Based PLM Systems",
+          "Digital Twin PLM Projects",
+          "AI Enabled PLM Manufacturing",
+          "Blockchain PLM Research",
+          "Sustainable PLM Frameworks",
+          "Aerospace PLM IEEE Projects",
+          "Narpavi Research Institute PLM"
+        ]}
+        faqs={faqs}
+      />
+      
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -224,23 +244,6 @@ const MEProductLifecycleManagementProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -248,12 +251,38 @@ const MEProductLifecycleManagementProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/cad-modeling-simulation-project-development">CAD Modeling & Simulation Project Development</a></li>
-              <li><a href="/design-engineering-cad-cam-project-development">Design Engineering / CAD & CAM Project Development</a></li>
-              <li><a href="/topology-optimization-project-development">Topology Optimization of Components Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/design-engineering-cad">
+      Design Engineering & CAD
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/finite-element-analysis">
+      Finite Element Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/cad-modeling-simulation">
+      CAD Modeling & Simulation
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/mechanism-design">
+      Mechanism Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/topology-optimization">
+      Topology Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/product-lifecycle-management">
+      Product Lifecycle Management
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

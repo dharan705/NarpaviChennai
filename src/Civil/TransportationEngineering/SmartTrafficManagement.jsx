@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Smart Traffic Management Systems Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CESmartTrafficManagementSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+       <SEO
+        title="Smart Traffic Management IEEE Projects (2023–2025)"
+        description="Smart Traffic Management IEEE project development for B.Tech, M.Tech & PhD scholars using VISSIM, SUMO, MATLAB, IoT sensors, AI prediction, adaptive signals, V2X communication for intelligent urban mobility."
+        url="/department/transportation-engineering/smart-traffic-management"
+        type="article"
+        keywords={[
+          "Smart Traffic Management IEEE 2023–2025",
+          "IoT Traffic Monitoring Projects",
+          "AI Traffic Prediction Systems",
+          "Adaptive Traffic Signal Control",
+          "VISSIM Traffic Simulation Projects",
+          "Smart City Traffic Solutions",
+          "Intelligent Urban Mobility Systems",
+          "B.Tech M.Tech PhD Transportation Projects",
+          "Narpavi Research Institute Transportation Projects",
+          "V2X Communication Traffic Management"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -213,36 +232,35 @@ const CESmartTrafficManagementSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/remote-sensing-gis-project-development">Remote Sensing & GIS Project Development</a></li>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/transportation-engineering">
+      Transportation Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/smart-traffic-management">
+      Smart Traffic Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/pavement-analysis-design">
+      Pavement Analysis & Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/transportation-engineering/highway-safety-optimization">
+      Highway Safety Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

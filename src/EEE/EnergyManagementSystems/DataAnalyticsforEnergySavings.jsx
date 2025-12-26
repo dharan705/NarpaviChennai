@@ -1,7 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Data Analytics for Energy Savings Project Development Center offer?",
@@ -28,6 +27,14 @@ const faqs = [
 const EEEDataAnalyticsEnergySavingsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Data Analytics Energy Savings IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Data Analytics for Energy Savings projects for B.Tech, M.Tech, Ph.D. AI optimization, IoT monitoring using MATLAB Simulink Python TensorFlow Keras Pandas LabVIEW MQTT AWS Raspberry Pi Arduino smart grids homes industries."
+  keywords="Data Analytics Energy Savings IEEE Projects 2023–2025, B.Tech IoT Energy Monitoring, M.Tech ML Energy Forecasting Optimization, Ph.D. Federated Learning Blockchain Energy Analytics, Smart Grid Home Industrial Energy Efficiency, Narpavi Research Institute"
+  url="/department/energy-management-systems/data-analytics-energy-savings"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -221,23 +228,6 @@ const EEEDataAnalyticsEnergySavingsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -245,12 +235,43 @@ const EEEDataAnalyticsEnergySavingsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/home-energy-management-systems-project-development">Home Energy Management Systems Project Development</a></li>
-              <li><a href="/renewable-energy-scheduling-project-development">Renewable Energy Scheduling Project Development</a></li>
-              <li><a href="/energy-efficiency-industries-project-development">Energy Efficiency in Industries Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/energy-management-systems">
+      Energy Management Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/smart-building-energy">
+      Smart Building Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/demand-side-management">
+      Demand-Side Management (DSM)
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/energy-efficiency-industries">
+      Energy Efficiency in Industries
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/renewable-energy-scheduling">
+      Renewable Energy Scheduling
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/home-energy-management">
+      Home Energy Management Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/energy-management-systems/data-analytics-energy-savings">
+      Data Analytics for Energy Savings
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

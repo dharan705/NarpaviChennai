@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,13 @@ const faqs = [
 const ECERTOSinEmbeddedApplicationsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="RTOS in Embedded Applications IEEE Projects | FreeRTOS, VxWorks, QNX | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) RTOS in embedded applications projects on real-time scheduling, kernel customization, low-power and fault-tolerant RTOS, and AI-enhanced schedulers using FreeRTOS, VxWorks, QNX on ARM and RISC-V for automotive, aerospace, IoT, and industrial systems."
+        keywords="Real-Time Operating Systems in Embedded Applications, RTOS project development, RTOS IEEE projects 2023–2025, Embedded system RTOS projects, B.Tech RTOS projects, M.Tech RTOS research, Ph.D. RTOS project support, RTOS academic project guidance, Narpavi Research Institute Embedded Systems, IEEE RTOS-based project topics"
+        url="/department/embedded-systems/rtos-in-embedded-applications"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -228,13 +236,14 @@ const ECERTOSinEmbeddedApplicationsProjectDevelopmentCenter = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

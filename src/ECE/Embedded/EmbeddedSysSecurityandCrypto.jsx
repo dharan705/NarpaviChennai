@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Embedded System Security and Cryptography Project Development Center offer?",
@@ -26,6 +27,13 @@ const faqs = [
 const ECEEmbeddedSystemSecurityCryptographyProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Embedded System Security and Cryptography IEEE Projects | Lightweight, Secure Boot, Blockchain, PQC | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) embedded system security and cryptography projects on lightweight ciphers, secure boot, blockchain-based security, intrusion detection, and post-quantum cryptography using ARM/RISC-V, Keil, IAR, and modern crypto frameworks for IoT, automotive, and healthcare systems."
+        keywords="Embedded System Security and Cryptography, Embedded cryptography IEEE projects, IoT security projects 2023–2025, B.Tech embedded security projects, M.Tech cryptography research, Ph.D. embedded security development, Secure IoT device projects, Narpavi Research Institute embedded systems, IEEE cryptography project titles, Embedded security and cryptography solutions"
+        url="/department/embedded-systems/embedded-system-security-cryptography"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -226,14 +234,15 @@ const ECEEmbeddedSystemSecurityCryptographyProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-             
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Composite Materials Analysis Project Development Center offer?",
@@ -22,13 +22,32 @@ const faqs = [
     question: "What support is provided for academic submissions?",
     answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
   }
-];
+]; 
 
 const MECompositeMaterialsAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
+        <SEO
+        title="Composite Materials Analysis IEEE Projects (2023–2025)"
+        description="Composite Materials Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS, ABAQUS, polymer matrix composites, nanocomposites, hybrid composites, smart materials for aerospace, automotive, renewable energy, biomedical."
+        url="/department/mechanical-properties-materials/composite-materials-analysis"
+        type="article"
+        keywords={[
+          "Composite Materials Analysis Projects",
+          "IEEE Composite Materials 2023–2025",
+          "Polymer Matrix Composite Projects",
+          "Nanocomposite Simulation Projects",
+          "FEA in Composites",
+          "Hybrid Composite Optimization",
+          "Smart Composite IEEE Projects",
+          "AI Driven Composite Analysis",
+          "Narpavi Research Institute Composite Projects",
+          "PhD Composite Research"
+        ]}
+        faqs={faqs}
+      />
         <div className="MEProjectDevelopmentCenter-grid">
           {/* Left: Keywords */}
           <div className="MEProjectDevelopmentCenter-left">
@@ -249,36 +268,45 @@ const MECompositeMaterialsAnalysisProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/material-science-mechanical-properties-project-development">Material Science & Mechanical Properties Project Development</a></li>
-              <li><a href="/smart-actuator-systems-project-development">Smart Actuator Systems Project Development</a></li>
-              <li><a href="/sensor-integration-iot-control-project-development">Sensor Integration & IoT Control Project Development</a></li>
-              <li><a href="/automation-in-manufacturing-project-development">Automation in Manufacturing Project Development</a></li>
-              <li><a href="/plc-scada-systems-project-development">PLC & SCADA Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/mechanical-properties-materials">
+      Mechanical Properties & Materials
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
+      Composite Materials Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
+      Advanced Alloy Development
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
+      Tribology & Wear Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
+      Nanomaterials – Mechanical Properties
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
+      Fatigue & Fracture Analysis
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

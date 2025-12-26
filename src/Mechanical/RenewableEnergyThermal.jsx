@@ -1,6 +1,6 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO"
 const faqs = [
   {
     question: "What services does the Renewable Energy / Thermal & Mechanical Systems Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MERenewableEnergyThermalMechanicalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+        <SEO
+        title="Renewable Energy IEEE Projects (2023–2025)"
+        description="Renewable Energy Thermal Mechanical Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PVsyst, AI optimization, smart grid integration, solar PV, wind turbines, biomass, energy storage for sustainable energy."
+        url="/department/renewable-thermal-energy"
+        type="article"
+        keywords={[
+          "Renewable Energy IEEE 2023–2025",
+          "Solar PV Thermal Systems Projects",
+          "Wind Turbine Design IEEE",
+          "Biomass Energy Student Projects",
+          "Energy Storage Optimization IEEE",
+          "Smart Grid Renewable Integration",
+          "AI Based Renewable Energy Management",
+          "Hybrid Renewable Energy Systems",
+          "Digital Twin Energy Projects",
+          "Narpavi Research Institute Renewable"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -224,36 +243,45 @@ const MERenewableEnergyThermalMechanicalSystemsProjectDevelopmentCenter = () => 
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/cad-modeling-simulation-project-development">CAD Modeling & Simulation Project Development</a></li>
-              <li><a href="/robotics-mechatronics-project-development">Robotics & Mechatronics Project Development</a></li>
-              <li><a href="/embedded-control-systems-project-development">Embedded Control Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/renewable-thermal-energy">
+      Renewable & Thermal Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
+      Solar PV & Thermal Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/wind-turbine-design">
+      Wind Turbine Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
+      Biomass & Biofuel Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
+      Energy Storage & Recovery
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/smart-grid-integration">
+      Smart Grid Integration
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

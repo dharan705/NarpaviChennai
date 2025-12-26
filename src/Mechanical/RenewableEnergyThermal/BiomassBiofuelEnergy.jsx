@@ -1,5 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,25 @@ const faqs = [
 const EEEBiomassBiofuelEnergySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+       <SEO
+        title="Biomass & Biofuel Energy IEEE Projects (2023–2025)"
+        description="Biomass Biofuel Energy IEEE project development for B.Tech, M.Tech & PhD using MATLAB, Aspen Plus, AI optimization, IoT monitoring, biogas digesters, biodiesel reactors, hybrid renewable systems for sustainable energy."
+        url="/department/renewable-thermal-energy/biomass-biofuel-energy"
+        type="article"
+        keywords={[
+          "Biomass Energy IEEE 2023–2025",
+          "Biogas Plant Projects",
+          "AI Enabled Biomass Optimization",
+          "IoT Biomass Monitoring Projects",
+          "Hybrid Renewable Energy Student Projects",
+          "Biodiesel Production IEEE Projects",
+          "Renewable Energy Conversion Projects",
+          "Smart Grid Biomass Integration",
+          "Digital Twin Biomass Systems",
+          "Narpavi Research Institute Biomass"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -164,33 +184,46 @@ const EEEBiomassBiofuelEnergySystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              {/* JSON-LD Schema */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                   __html: JSON.stringify({
-                     "@context":"https://schema.org",
-                     "@type":"FAQPage",
-                     "mainEntity": faqs.map(f=>({
-                       "@type":"Question",
-                       "name":f.question,
-                       "acceptedAnswer":{"@type":"Answer","text":f.answer}
-                     }))
-                   })
-                }}
-              />
+             
             </section>
           </div>
 
           {/* 🔗 Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/wind-turbine-design-optimization-project-development">Wind Turbine Design & Optimization</a></li>
-              <li><a href="/dl-renewable-systems-project-development">Deep Learning in Renewable Systems</a></li>
-              <li><a href="/ai-energy-optimization-project-development">AI-based Energy Optimization</a></li>
-              <li><a href="/predictive-maintenance-systems-project-development">Predictive Maintenance Systems</a></li>
-              <li><a href="/smart-grid-systems-project-development">Smart Grid Systems</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/renewable-thermal-energy">
+      Renewable & Thermal Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
+      Solar PV & Thermal Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/wind-turbine-design">
+      Wind Turbine Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
+      Biomass & Biofuel Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
+      Energy Storage & Recovery
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/smart-grid-integration">
+      Smart Grid Integration
+    </a>
+  </li>
+</ul>
+
           </div>
 
         </div>

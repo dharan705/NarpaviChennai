@@ -1,10 +1,11 @@
 import "./DataScience.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Data Science, Data Engineering & Data Mining Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Data Science, Data Engineering & Data Mining Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects, focusing on machine learning, big data pipelines, and data mining for industries like healthcare, finance, and smart cities."
+    answer: "Narpavi Research Institute's Data Science, Data Engineering & Data Mining Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects, focusing on machine learning, big data pipelines, and data mining for industries like healthcare, finance, and smart cities."
   },
   {
     question: "What types of projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
   return (
     <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter">
+      <SEO 
+        title="Data Science IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Data Science, Data Engineering & Data Mining projects for B.Tech, M.Tech, Ph.D. Machine learning, big data pipelines, Spark, Hadoop for healthcare, finance."
+        keywords="Data Science Project Development, Data Engineering IEEE Projects, Data Mining Research Topics 2023–2025, Big Data Analytics Projects for Students, M.Tech Data Science Projects, Ph.D. Data Engineering Research, IEEE Data Mining Titles, Narpavi Research Institute Data Projects, Real-Time Data Processing Projects, Scalable Data Pipeline Development"
+        url="/department/data-science"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-main">
         <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-grid">
@@ -156,7 +164,7 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
             <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-excellence">
               <h2>Excellence in Data Science, Data Engineering & Data Mining Project Development</h2>
               <p>
-                Narpavi Research Institute’s Data Science, Data Engineering & Data Mining – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative data-driven solutions.
+                Narpavi Research Institute's Data Science, Data Engineering & Data Mining – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative data-driven solutions.
               </p>
               <p>
                 Our global mentorship ensures students excel in creating impactful data systems for academia and industry, from predictive analytics to real-time data pipelines.
@@ -173,47 +181,28 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

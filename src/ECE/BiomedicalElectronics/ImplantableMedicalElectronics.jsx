@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +29,13 @@ const faqs = [
 const ImplantableMedicalElectronicsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Implantable Medical Electronics IEEE Projects | Pacemakers, Cochlear Implants | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) implantable medical electronics projects on pacemakers, cochlear implants, neural stimulators, smart drug delivery, and AI-powered implants with secure IoT integration."
+        keywords="Implantable Medical Electronics Projects, Pacemaker IEEE Projects, Cochlear Implant Research, Deep Brain Stimulator Projects, IoT Implantable Devices, AI in Implantable Biomedical Systems, Secure Implantable IoT Electronics, Biocompatible Implant Research, Narpavi Research Institute"
+        url="/department/biomedical-electronics/implantable-medical-electronics"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -52,12 +60,13 @@ const ImplantableMedicalElectronicsProject = () => {
             <h1>Implantable Medical Electronics – Project Development Center</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> fosters innovation aligned with IEEE standards (2023–2025) in bio-compatible, miniaturized implantable devices for continuous health monitoring, disease management, and therapeutic interventions.
+                <strong>Narpavi Research Institute</strong> fosters innovation aligned with IEEE standards (2023–2025) in miniaturized, biocompatible implantable devices for continuous health monitoring, disease management, and therapeutic interventions.[web:79][web:94]
               </p>
               <p>
-                Our projects encompass pacemakers, cochlear implants, neural stimulators, drug delivery systems, and smart prosthetics designed for long-term biomedical applications.
+                Projects span pacemakers, cochlear implants, neural stimulators, implantable drug delivery systems, glucose sensors, and smart prosthetics tailored for long-term clinical use.[web:79][web:81]
               </p>
             </section>
+
             {/* Comparative Table */}
             <section className="ECEProjectDevelopmentCenter-table">
               <h2>Comparative Table – Applications of Implantable Medical Electronics</h2>
@@ -112,27 +121,31 @@ const ImplantableMedicalElectronicsProject = () => {
                 </table>
               </div>
             </section>
+
             {/* B.Tech Cycle */}
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Project Development Cycle</h2>
               <p>
-                Focus on external prototype models and basic implantable simulations using Arduino, Raspberry Pi, MATLAB, and Proteus. Example projects include pacemaker simulations, cochlear implant signal processing units, and wearable-implant communication systems.
+                B.Tech work centers on external prototypes and implant-inspired simulations using Arduino, Raspberry Pi, MATLAB, and Proteus, including pacemaker simulators, cochlear processing units, and wearable–implant communication links.[web:84][web:94]
               </p>
             </section>
+
             {/* M.Tech Cycle */}
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Project Development Cycle</h2>
               <p>
-                Includes miniaturized circuit design, biocompatible simulations, and communication frameworks using MATLAB Simulink, Cadence VLSI, LabVIEW, and COMSOL Multiphysics. Projects cover pacemaker circuits, drug delivery systems, and adaptive neural stimulators.
+                M.Tech projects address miniaturized circuit design, biocompatibility modeling, and communication frameworks with MATLAB Simulink, Cadence VLSI, LabVIEW, and COMSOL for pacemakers, smart drug pumps, and adaptive neural stimulators.[web:81][web:96]
               </p>
             </section>
+
             {/* Ph.D. Cycle */}
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Project Development Cycle</h2>
               <p>
-                Advanced research into biofuel cells, AI-driven implant control, nanotech drug delivery, brain-computer interfaces, and blockchain-secured IoT implants aimed at top IEEE journals.
+                Ph.D. research explores biocompatible and self-powered energy sources, AI-guided implant control, nanotechnology-enabled drug delivery, implantable BCIs, and blockchain-secured data flows for next‑generation implants.[web:84][web:87][web:93]
               </p>
             </section>
+
             {/* IEEE Project Titles */}
             <section className="ECEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Style Project Titles (2023–2025)</h2>
@@ -147,13 +160,15 @@ const ImplantableMedicalElectronicsProject = () => {
                 <li>Nanotechnology-Enabled Implantable Smart Drug Pump (2025)</li>
               </ul>
             </section>
+
             {/* About Section */}
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute offers full project development support in implantable medical electronics, covering design, modeling, AI integration, and IEEE publication guidance to empower future biomedical innovations.
+                Narpavi Research Institute offers end-to-end guidance in implantable medical electronics, from circuit and packaging design to AI integration and IEEE-oriented publication support, enabling impactful biomedical innovations.[web:79][web:94]
               </p>
             </section>
+
             {/* FAQs */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
@@ -165,37 +180,21 @@ const ImplantableMedicalElectronicsProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                          <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
+            <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
           </div>
         </div>
       </div>

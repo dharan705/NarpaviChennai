@@ -1,133 +1,176 @@
-import '../pages/Subheading.scss';
-import Subsidebar from '../pages/Subsidebar';
+import "../pages/Subheading.scss";
+import Subsidebar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "Is a PhD entrance exam mandatory at CIT?",
-    answer: "Yes, Coimbatore Institute of Technology (CIT) requires candidates to appear for a PhD entrance exam as per Anna University norms."
+    answer:
+      "Yes. Coimbatore Institute of Technology (CIT) follows Anna University norms and requires candidates to appear for a PhD entrance exam.",
   },
   {
     question: "What qualifications are required to apply for a PhD at CIT?",
-    answer: "Candidates must have a Master’s Degree (e.g. M.E., M.Tech., M.Sc., M.A., MBA, MCA, etc.) with at least 55% marks or a CGPA of 6.0 on a 10-point scale."
+    answer:
+      "Candidates must have a Master’s Degree with at least 55% marks or CGPA 6.0 on a 10-point scale.",
   },
   {
     question: "Can working professionals apply for a PhD at CIT?",
-    answer: "Yes, working professionals can apply for part-time PhD programs. Professional experience may be mandatory, and a No Objection Certificate (NOC) from the employer is usually required."
+    answer:
+      "Yes. Working professionals can apply for part-time PhD programs with relevant experience and a No Objection Certificate (NOC).",
   },
   {
     question: "What is the mode of PhD offered at CIT?",
-    answer: "PhD programs at CIT are offered in both Full-Time and Part-Time modes."
-  },
-  {
-    question: "What documents are required for a PhD application at CIT?",
-    answer: "Applicants must submit their UG and PG certificates and mark sheets, 10th and 12th documents, date of birth proof, research proposal, NOC (for part-time), and other supporting documents such as experience and caste certificates if applicable."
+    answer:
+      "CIT offers both Full-Time and Part-Time PhD programs.",
   },
   {
     question: "When does CIT open PhD applications?",
-    answer: "PhD applications are typically open twice a year: in October-November for the January session, and in March-April for the July session, in line with Anna University’s schedule."
+    answer:
+      "PhD admissions usually open twice a year, following Anna University schedules for January and July sessions.",
   },
   {
-    question: "What is the approximate fee for PhD at CIT?",
-    answer: "The approximate annual fee is ₹28,170, totaling around ₹84,510 for a standard 3-year program."
+    question: "What is the approximate fee for a PhD at CIT?",
+    answer:
+      "The approximate annual fee is ₹28,170, totaling about ₹84,510 for a standard 3-year PhD program.",
   },
   {
-    question: "Are scholarships or fellowships available for PhD scholars at CIT?",
-    answer: "Yes, CIT offers scholarships and fellowships for eligible PhD scholars, including government and research funding agency support."
+    question: "Are scholarships available for PhD scholars at CIT?",
+    answer:
+      "Yes. Eligible scholars can apply for government-funded and research agency fellowships.",
   },
   {
-    question: "What makes CIT a preferred choice for PhD?",
-    answer: "CIT is known for its strong academic environment, experienced faculty, research-driven culture, and recognition as an Anna University-approved research center with active industry collaborations."
-  }
+    question: "Why is CIT a preferred choice for PhD studies?",
+    answer:
+      "CIT is an Anna University–approved research center with strong faculty, industry collaborations, and a research-driven academic culture.",
+  },
 ];
 
-
 const universityData = {
-  fullName: 'PhD Admission in Coimbatore Institute of Technology, Coimbatore',
-  shortName: 'CIT',
-  phdEntranceExam: 'YES',
+  fullName: "PhD Admission in Coimbatore Institute of Technology, Coimbatore",
+  shortName: "CIT Coimbatore",
+  phdEntranceExam: "Entrance Exam as per Anna University norms",
   qualificationRequired:
-    'Master’s Degree (e.g. M.E., M.Tech., M.Sc., M.A., MBA, MCA, etc.) with 55% of marks or CGPA 6.0/10',
+    "Master’s Degree with minimum 55% marks or CGPA 6.0",
   workExperience:
-    'For part-time PhD, professional experience may be mandatory',
-  modeOfPhd: 'Full-Time / Part-Time',
+    "Required for part-time PhD candidates",
+  modeOfPhd: "Full-Time / Part-Time",
   documentsRequired: [
-    'Master’s degree certificate and mark sheets',
-    'Undergraduate degree certificate and mark sheets',
-    'Class 10th and 12th mark sheets and certificates (for proof of education and date of birth)',
-    'Proof of date of birth (if not available in above)',
-    'Valid UGC-NET/SET/GATE scorecard (if applicable)',
-    'Transfer Certificate (TC) or Migration Certificate (if applicable)',
-    'Character certificate from the last institution attended',
-    'Passport size photographs (usually 2-4 copies)',
-    'No Objection Certificate (NOC) from employer (for part-time candidates)',
-    'Experience certificate (if applicable, for part-time candidates)',
-    'Caste/category certificate (if applicable)',
-    'Research proposal or synopsis (if required)',
+    "UG & PG degree certificates and mark sheets",
+    "10th & 12th certificates (DOB proof)",
+    "Entrance exam scorecard (if applicable)",
+    "Research proposal / synopsis",
+    "No Objection Certificate (for part-time candidates)",
+    "Experience certificate (if applicable)",
+    "Transfer / Migration Certificate",
+    "Passport-size photographs",
+    "Government-issued ID proof",
   ],
-  applicationTimeline: `Applications typically open twice a year:\n
-**January Session** – Announced around October-November\n
-**July Session** – Announced around March-April\n
-Exact dates follow Anna University Ph.D. schedule.`,
+  applicationTimeline:
+    "January Session (Oct–Nov) / July Session (Mar–Apr) as per Anna University schedule",
   approxFee:
-    'Approximately ₹28,170 per year, totaling around ₹84,510 for a standard 3-year duration across engineering and science disciplines.',
-  scholarshipAvailability: 'Yes',
+    "₹28,170 per year (approx.) – ₹84,510 for 3 years",
+  scholarshipAvailability:
+    "Government & Research Agency Fellowships",
 };
 
 const Subheading = () => {
   return (
     <div className="main">
+      {/* ✅ SEO META + FAQ SCHEMA */}
+      <SEO
+        title="PhD Admission in Coimbatore Institute of Technology"
+        description="Complete PhD admission guidance for Coimbatore Institute of Technology (CIT) including eligibility, entrance exam, part-time options, fee structure, documents required, and scholarships."
+        url="/coimbatore-institute"
+        keywords={[
+          "PhD Admission in CIT Coimbatore",
+          "Coimbatore Institute of Technology PhD",
+          "CIT PhD eligibility",
+          "Part time PhD CIT",
+          "Anna University PhD CIT",
+        ]}
+        faqs={faqs}
+      />
+
       <Subsidebar />
 
       <div className="university-details-wrapper">
         <div className="content-layout">
-          {/* Left Sidebar Box */}
+          {/* Left Sidebar */}
           <div className="side-box left-box">
             <h3>About Coimbatore Institute of Technology (CIT)</h3>
-<ul>
-  <li><b>Year of Establishment:</b> Coimbatore Institute of Technology (CIT) was established in 1956 as a government-aided autonomous institution.</li>
-  <li><b>Year of PhD Admission Establishment:</b><br/>PhD programs at CIT were introduced under the affiliation of Anna University in the early 2000s.</li>
-  <li><b>Annual PhD Enrolment and Exit Details:</b><br/>CIT admits around 40–60 PhD scholars annually under Anna University’s research framework.</li>
-  <li><b>Why this University is a Premier Choice for PhD Studies:</b><br/>CIT is renowned for its strong academic foundation, experienced faculty, and active industry-linked research. Its collaboration with Anna University and national funding agencies makes it a preferred destination for quality doctoral studies.</li>
-</ul>
+            <ul>
+              <li>
+                <b>Year of Establishment:</b> Established in 1956 as a government-aided autonomous institution.
+              </li>
+              <li>
+                <b>PhD Programs:</b> Introduced under Anna University in the early 2000s.
+              </li>
+              <li>
+                <b>Research Strength:</b> Around 40–60 PhD scholars admitted annually.
+              </li>
+              <li>
+                <b>Why Choose CIT:</b> Strong academic foundation, experienced faculty, and active industry collaborations.
+              </li>
+            </ul>
           </div>
 
           {/* Main Content */}
           <div className="university-details-container">
             <div className="phdimg" />
-            <h2 className="university-title">{universityData.fullName}</h2>
+            <h1 className="university-title">
+              {universityData.fullName}
+            </h1>
+
             <div className="details-grid">
               <div className="detail-item">
                 <span className="detail-label">Popularly Known As</span>
-                <span className="detail-value">{universityData.shortName}</span>
+                <span className="detail-value">
+                  {universityData.shortName}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">PhD Entrance Exam</span>
-                <span className="detail-value">{universityData.phdEntranceExam}</span>
+                <span className="detail-value">
+                  {universityData.phdEntranceExam}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Qualification Required</span>
-                <span className="detail-value">{universityData.qualificationRequired}</span>
+                <span className="detail-value">
+                  {universityData.qualificationRequired}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Work Experience</span>
-                <span className="detail-value">{universityData.workExperience}</span>
+                <span className="detail-value">
+                  {universityData.workExperience}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Mode of PhD</span>
-                <span className="detail-value">{universityData.modeOfPhd}</span>
+                <span className="detail-value">
+                  {universityData.modeOfPhd}
+                </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Application Timeline</span>
                 <span className="detail-value">
-                  <pre style={{ whiteSpace: 'pre-wrap' }}>{universityData.applicationTimeline}</pre>
+                  {universityData.applicationTimeline}
                 </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Approx. Fee</span>
                 <span className="detail-value">
-                  <pre style={{ whiteSpace: 'pre-wrap' }}>{universityData.approxFee}</pre>
+                  {universityData.approxFee}
                 </span>
               </div>
+
               <div className="detail-item">
                 <span className="detail-label">Documents Required</span>
                 <ul className="detail-list">
@@ -136,28 +179,33 @@ const Subheading = () => {
                   ))}
                 </ul>
               </div>
+
               <div className="detail-item">
-                <span className="detail-label">Scholarship/Fellowship</span>
-                <span className="detail-value">{universityData.scholarshipAvailability}</span>
+                <span className="detail-label">Scholarship / Fellowship</span>
+                <span className="detail-value">
+                  {universityData.scholarshipAvailability}
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Right Sidebar Box */}
+          {/* Right Sidebar */}
           <div className="side-box right-box">
             <h3>Key Highlights</h3>
             <ul>
-              <li>Anna University-approved research center</li>
-              <li>Affordable Ph.D. fee structure</li>
-              <li>Research-driven academic culture</li>
-              <li>Funding support and fellowships available</li>
-              <li>Collaborations with industries and R&D institutions</li>
+              <li>Anna University–approved research center</li>
+              <li>Affordable PhD fee structure</li>
+              <li>Industry-linked research projects</li>
+              <li>Government & agency fellowships</li>
+              <li>Strong academic and research culture</li>
             </ul>
           </div>
         </div>
       </div>
-       <section className="alluniversityfaq-section">
-        <h2>FAQs on Topic Selection</h2>
+
+      {/* FAQ Section */}
+      <section className="alluniversityfaq-section">
+        <h2>FAQs on PhD Admission</h2>
         <div className="faq-items">
           {faqs.map((faq, index) => (
             <details key={index}>
@@ -166,46 +214,7 @@ const Subheading = () => {
             </details>
           ))}
         </div>
-
-
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
-              {
-                "@type": "Question",
-                "name": "What is the eligibility for PhD admission at Anna University?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A Master’s Degree with at least 55% marks or 5.5 CGPA is required. Candidates with GATE/NET/SLET/M.Phil. may be exempted from the written test."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for PhD admission?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Essential documents include PG and UG certificates, community certificate, experience certificate (if part-time), research proposal, and ID proof."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Anna University provide any fellowship for PhD?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, fellowships like University Research Fellowship, UGC JRF/SRF, DST-INSPIRE, and industry-sponsored schemes are available."
-                }
-              }
-            ]
-          }),
-        }}
-      />
-    </section>
-
+      </section>
     </div>
   );
 };

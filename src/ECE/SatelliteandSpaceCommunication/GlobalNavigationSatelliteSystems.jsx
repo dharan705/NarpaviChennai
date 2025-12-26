@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What are Global Navigation Satellite Systems (GNSS)?",
@@ -27,6 +27,13 @@ const faqs = [
 const GnssProjectCenter = () => {
   return (
     <div className="ECEProjectCenter">
+       <SEO
+        title="GNSS IEEE Projects | GPS, NavIC, Multi-Constellation, IoT & 5G/6G | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) GNSS projects on GPS/GLONASS/Galileo/BeiDou/NavIC receivers, multi-constellation fusion, anti-spoofing, GNSS–IoT integration, and AI-enhanced positioning with MATLAB, Python, NS3, GNSS-SDR, MQTT, LoRaWAN, and TensorFlow."
+        keywords="GNSS, GPS, GLONASS, Galileo, BeiDou, NavIC, GNSS Security, GNSS IoT, GNSS 5G/6G, Navigation Systems, AI-based GNSS, IEEE GNSS Research, Narpavi Research Institute GNSS"
+        url="/department/satellite-communication/gnss-project"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectCenter-main">
         <div className="ECEProjectCenter-grid">
@@ -165,13 +172,15 @@ const GnssProjectCenter = () => {
 
           <div className="ECEProjectCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing">Energy-Efficient Routing in WSN</a></li>
-              <li><a href="/adaptive-nonlinear-control">Adaptive Nonlinear Control Systems</a></li>
-              <li><a href="/secure-iot-architectures">Secure IoT Architectures</a></li>
-              <li><a href="/edge-fog-computing">Edge and Fog Computing</a></li>
-              <li><a href="/control-cyber-physical">Control in Cyber-Physical Systems</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

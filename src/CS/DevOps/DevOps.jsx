@@ -1,10 +1,11 @@
 import "./DevOps.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the DevOps Project Development Center offer?",
-    answer: "Narpavi Research Institute’s DevOps Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) DevOps projects, focusing on CI/CD pipelines, infrastructure as code, containerization, and DevSecOps for industries like software development, FinTech, and healthcare."
+    answer: "Narpavi Research Institute's DevOps Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) DevOps projects, focusing on CI/CD pipelines, infrastructure as code, containerization, and DevSecOps for industries like software development, FinTech, and healthcare."
   },
   {
     question: "What types of DevOps projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const DevOpsProjectDevelopmentCenter = () => {
   return (
     <div className="DevOpsProjectDevelopmentCenter">
+      <SEO 
+        title="DevOps IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) DevOps projects for B.Tech, M.Tech, Ph.D. CI/CD pipelines, Kubernetes, Terraform, DevSecOps, microservices for software development, FinTech."
+        keywords="DevOps Project Development, IEEE DevOps Projects 2023–2025, CI/CD Pipeline Automation, Cloud-Native DevOps, Microservices Architecture Projects, DevSecOps Research, Kubernetes Projects for Students, Narpavi Research Institute DevOps Support, Infrastructure as Code Projects, AI-Driven DevOps Solutions"
+        url="/department/devops"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="DevOpsProjectDevelopmentCenter-main">
         <div className="DevOpsProjectDevelopmentCenter-grid">
@@ -53,10 +61,10 @@ const DevOpsProjectDevelopmentCenter = () => {
 
             <section className="DevOpsProjectDevelopmentCenter-intro">
               <p>
-              At Narpavi Research Institute, we take pride in delivering DevOps – Project Development Center solutions that empower engineering students and researchers across B.Tech, M.Tech, and Ph.D. levels worldwide. Our expertise covers both software and hardware-based DevOps projects, leveraging the most advanced methodologies from IEEE Transactions (2023–2025). By seamlessly integrating development and operations, we ensure faster delivery cycles, improved collaboration, and industry-ready solutions.
+                At Narpavi Research Institute, we take pride in delivering DevOps – Project Development Center solutions that empower engineering students and researchers across B.Tech, M.Tech, and Ph.D. levels worldwide. Our expertise covers both software and hardware-based DevOps projects, leveraging the most advanced methodologies from IEEE Transactions (2023–2025). By seamlessly integrating development and operations, we ensure faster delivery cycles, improved collaboration, and industry-ready solutions.
               </p>
               <p>
-                The DevOps – Project Development Center focuses on real-time automation, continuous integration/continuous deployment (CI/CD), infrastructure-as-code, and container orchestration. Our projects are designed to meet global industrial needs, ensuring students’ work remains relevant, scalable, and impactful.
+                The DevOps – Project Development Center focuses on real-time automation, continuous integration/continuous deployment (CI/CD), infrastructure-as-code, and container orchestration. Our projects are designed to meet global industrial needs, ensuring students' work remains relevant, scalable, and impactful.
               </p>
               <p>The DevOps – Project Development Center adopts modern cloud-native technologies, aligning with global industry benchmarks in software engineering, AI-driven operations, and microservice architecture. Every project follows a meticulously planned cycle tailored for B.Tech, M.Tech, and Ph.D. candidates, ensuring the perfect balance between academic depth and industrial application.</p>
             </section>
@@ -204,10 +212,10 @@ const DevOpsProjectDevelopmentCenter = () => {
             <section className="DevOpsProjectDevelopmentCenter-excellence">
               <h2>Excellence in DevOps Project Development</h2>
               <p>
-             Narpavi Technology is a mark of innovation, precision, and industry relevance. At Narpavi Research Institute, we empower engineering students across B.Tech, M.Tech, and Ph.D. levels globally with cutting-edge DevOps project solutions, blending software and hardware capabilities for real-world readiness. Our projects are meticulously aligned with the latest IEEE Transactions (2023–2025), ensuring academic distinction and industrial impact.
+                Narpavi Technology is a mark of innovation, precision, and industry relevance. At Narpavi Research Institute, we empower engineering students across B.Tech, M.Tech, and Ph.D. levels globally with cutting-edge DevOps project solutions, blending software and hardware capabilities for real-world readiness. Our projects are meticulously aligned with the latest IEEE Transactions (2023–2025), ensuring academic distinction and industrial impact.
               </p>
               <p>
-                By integrating automation, containerization, orchestration, and AI-driven workflows, we provide solutions that resonate with today’s fast-paced software delivery demands. Whether it’s developing an intelligent CI/CD pipeline, implementing GitOps infrastructure, or integrating AI into testing and monitoring, our project development cycles are optimized for excellence and future scalability.
+                By integrating automation, containerization, orchestration, and AI-driven workflows, we provide solutions that resonate with today's fast-paced software delivery demands. Whether it's developing an intelligent CI/CD pipeline, implementing GitOps infrastructure, or integrating AI into testing and monitoring, our project development cycles are optimized for excellence and future scalability.
               </p>
             </section>
 
@@ -221,47 +229,28 @@ const DevOpsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="DevOpsProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,10 +1,11 @@
 import "./Logo.scss";
 import Hexagon from "./Hexagon";
+
 const Logo =() =>{
 
     return(
         <div className="logo">
-            <Hexagon/>    
+            <Hexagon/>  
         </div>
     );
 };

@@ -1,10 +1,11 @@
 import "./Cybersecurity.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Cybersecurity Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Cybersecurity Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) cybersecurity projects, focusing on blockchain, AI-driven threat detection, quantum cryptography, and IoT security."
+    answer: "Narpavi Research Institute's Cybersecurity Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) cybersecurity projects, focusing on blockchain, AI-driven threat detection, quantum cryptography, and IoT security."
   },
   {
     question: "What types of cybersecurity projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const CybersecurityProjectDevelopmentCenter = () => {
   return (
     <div className="CybersecurityProjectDevelopmentCenter">
+      <SEO 
+        title="Cybersecurity IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) Cybersecurity projects for B.Tech, M.Tech, Ph.D. AI threat detection, blockchain security, quantum cryptography, IoT security for healthcare, finance."
+        keywords="Cybersecurity Project Development, IEEE Cybersecurity Projects 2023–2025, AI in Cybersecurity, Blockchain Cybersecurity Projects, Narpavi Research Institute Cybersecurity, B.Tech Cybersecurity Projects, M.Tech Cybersecurity Projects, Ph.D. Cybersecurity Research, Quantum Cryptography, Zero Trust Security, Intrusion Detection System Projects, IoT Security Frameworks, Privacy-Preserving AI Security"
+        url="/department/cybersecurity"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CybersecurityProjectDevelopmentCenter-main">
         <div className="CybersecurityProjectDevelopmentCenter-grid">
@@ -56,7 +64,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
 
             <section className="CybersecurityProjectDevelopmentCenter-intro">
               <p>
-               At Cybersecurity – Project Development Center, we specialize in delivering advanced academic project development services tailored to meet the ever-growing demands of digital security. The field of Cybersecurity – Project Development Center has become a global necessity, protecting individuals, enterprises, and governments from sophisticated cyber threats. Our expertise ensures that students from B.Tech, M.Tech, and Ph.D. levels gain industry-standard knowledge, hands-on skills, and IEEE-aligned research experience.
+                At Cybersecurity – Project Development Center, we specialize in delivering advanced academic project development services tailored to meet the ever-growing demands of digital security. The field of Cybersecurity – Project Development Center has become a global necessity, protecting individuals, enterprises, and governments from sophisticated cyber threats. Our expertise ensures that students from B.Tech, M.Tech, and Ph.D. levels gain industry-standard knowledge, hands-on skills, and IEEE-aligned research experience.
               </p>
               <p>
                 We at Narpavi Research Institute are committed to guiding students through end-to-end project execution, covering both software and hardware domains. All topics for the Cybersecurity – Project Development Center are meticulously chosen from IEEE Transactions spanning 2023 to 2025, ensuring alignment with the latest global trends and emerging threat landscapes.
@@ -168,7 +176,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
                 Narpavi Technology stands as a global benchmark for advanced, research-driven, and industry-aligned project development support. At Narpavi Research Institute, we empower engineering students from B.Tech, M.Tech, and Ph.D. streams worldwide, providing end-to-end guidance for both software and hardware-based cybersecurity innovations.
               </p>
               <p>
-               Our project topics are meticulously curated from IEEE Transactions (2023–2025), ensuring alignment with the most recent and impactful technological advancements in cybersecurity. Whether it’s securing IoT devices, designing next-generation encryption frameworks, or implementing AI-driven intrusion detection systems, our expertise helps students create IEEE-standard, publication-ready projects that stand out in both academia and industry.
+                Our project topics are meticulously curated from IEEE Transactions (2023–2025), ensuring alignment with the most recent and impactful technological advancements in cybersecurity. Whether it's securing IoT devices, designing next-generation encryption frameworks, or implementing AI-driven intrusion detection systems, our expertise helps students create IEEE-standard, publication-ready projects that stand out in both academia and industry.
               </p>
             </section>
 
@@ -182,47 +190,28 @@ const CybersecurityProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="CybersecurityProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-           <ul class="department-links">
-  <li><a href="/department/static-web-application">Static Web Application</a></li>
-  <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-  <li><a href="/department/mobile-app">Mobile App Development</a></li>
-  <li><a href="/department/animations-project">Animations Project</a></li>
-  <li><a href="/department/ai-project">AI Project</a></li>
-  <li><a href="/department/data-science">Data Science</a></li>
-  <li><a href="/department/big-data">Big Data</a></li>
-  <li><a href="/department/blockchain">Blockchain</a></li>
-  <li><a href="/department/devops">DevOps</a></li>
-  <li><a href="/department/networking">Networking</a></li>
-  <li><a href="/department/image-processing">Image Processing</a></li>
-  <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-  <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-  <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-</ul>
-
+            <ul>
+              <li><a href="/department/static-web-application">Static Web Application</a></li>
+              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
+              <li><a href="/department/mobile-app">Mobile App Development</a></li>
+              <li><a href="/department/animations-project">Animations Project</a></li>
+              <li><a href="/department/ai-project">AI Project</a></li>
+              <li><a href="/department/data-science">Data Science</a></li>
+              <li><a href="/department/big-data">Big Data</a></li>
+              <li><a href="/department/blockchain">Blockchain</a></li>
+              <li><a href="/department/devops">DevOps</a></li>
+              <li><a href="/department/networking">Networking</a></li>
+              <li><a href="/department/image-processing">Image Processing</a></li>
+              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
+              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
+              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
+            </ul>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the GIS-Based Urban Planning Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CEGISBasedUrbanPlanningProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+      <SEO
+        title="GIS-Based Urban Planning IEEE Projects (2023–2025)"
+        description="GIS-Based Urban Planning IEEE project development for B.Tech, M.Tech & PhD scholars using ArcGIS, QGIS, remote sensing, AI, IoT, Cloud GIS for smart city planning, land-use analysis, and sustainable urban development."
+        url="/department/remote-sensing-gis/gis-based-urban-planning"
+        type="article"
+        keywords={[
+          "GIS-Based Urban Planning",
+          "Smart City GIS Projects IEEE 2023–2025",
+          "Remote Sensing Urban Planning",
+          "AI-GIS City Planning Projects",
+          "Cloud GIS Smart Infrastructure",
+          "IoT Integrated GIS Projects",
+          "Urban Heat Island GIS Mapping",
+          "B.Tech M.Tech PhD GIS Projects",
+          "Narpavi Research Institute Civil Projects",
+          "GIS Urban Development Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -235,12 +254,23 @@ const CEGISBasedUrbanPlanningProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/remote-sensing-gis-project-development">Remote Sensing & GIS Project Development</a></li>
-              <li><a href="/smart-traffic-management-systems-project-development">Smart Traffic Management Systems Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/remote-sensing-gis">
+      Remote Sensing & GIS
+    </a>
+  </li>
+  <li>
+    <a href="/department/remote-sensing-gis/gis-based-urban-planning">
+      GIS-Based Urban Planning
+    </a>
+  </li>
+  <li>
+    <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
+      Remote Sensing for Disaster Management
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

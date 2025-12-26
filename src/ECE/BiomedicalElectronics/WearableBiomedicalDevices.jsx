@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +29,13 @@ const faqs = [
 const WearableBiomedicalDevicesProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Wearable Biomedical Devices IEEE Projects | Smart Health, ECG, AI | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) wearable biomedical device projects on smartwatches, ECG/EEG wearables, smart textiles, AI-driven multi-sensor fusion, and secure IoT health monitoring."
+        keywords="Wearable Biomedical Device Projects, Smart Health Monitoring IEEE Projects, IoT Wearable Devices for Healthcare, AI-Driven Wearable Health Systems, Smartwatch ECG IEEE Projects, Flexible Biomedical Electronics, Brain-Computer Interface Wearables, Secure Wearable IoT Devices, Narpavi Research Institute"
+        url="/department/biomedical-electronics/wearable-biomedical-devices"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -52,12 +60,13 @@ const WearableBiomedicalDevicesProject = () => {
             <h1>Wearable Biomedical Devices – Project Development Center</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> fosters innovation in wearable biomedical devices focused on non-invasive monitoring, continuous diagnostics, and personalized healthcare aligned with IEEE standards (2023–2025).
+                <strong>Narpavi Research Institute</strong> fosters innovation in wearable biomedical devices focused on non-invasive monitoring, continuous diagnostics, and personalized healthcare aligned with IEEE standards (2023–2025).[web:143][web:150]
               </p>
               <p>
-                Our projects span wearable biosensors, physiological monitoring, smart textiles, and AI-driven wearable analytics to improve healthcare accessibility and outcomes.
+                Projects span wearable biosensors, physiological monitoring, smart textiles, and AI-driven wearable analytics to enhance accessibility and outcomes in preventive and clinical care.[web:45][web:144]
               </p>
             </section>
+
             {/* Comparative Table */}
             <section className="ECEProjectDevelopmentCenter-table">
               <h2>Comparative Table – Applications of Wearable Biomedical Devices</h2>
@@ -112,27 +121,31 @@ const WearableBiomedicalDevicesProject = () => {
                 </table>
               </div>
             </section>
+
             {/* B.Tech Cycle */}
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Project Development Cycle</h2>
               <p>
-                Projects focus on basic wearable health monitoring systems using Arduino, Raspberry Pi, ESP32, BLE, and IoT dashboards. Examples include ECG and heart rate monitors, wearable SpO₂ trackers, smart wristbands, and fall detection devices.
+                B.Tech projects focus on basic wearable health monitoring systems using Arduino, Raspberry Pi, ESP32, BLE, and IoT dashboards, such as ECG and heart-rate monitors, SpO₂ wearables, smart wristbands, and fall detection devices.[web:117][web:118]
               </p>
             </section>
+
             {/* M.Tech Cycle */}
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Project Development Cycle</h2>
               <p>
-                Emphasis on advanced biomedical signal acquisition and AI-enhanced wearable analytics using MATLAB, TensorFlow, LabVIEW, Android SDK, and KiCad. Sample projects include smart ECG monitors, EEG-based stress devices, AI-powered smartwatches, and smart textile wearables.
+                M.Tech work emphasizes advanced signal acquisition and AI-enhanced analytics with MATLAB, TensorFlow, LabVIEW, Android SDK, and KiCad for smart ECG patches, EEG-based stress monitors, AI-enabled smartwatches, and textile-integrated wearables.[web:120][web:144]
               </p>
             </section>
+
             {/* Ph.D. Cycle */}
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Project Development Cycle</h2>
               <p>
-                Cutting-edge research involves flexible electronics, AI multi-sensor fusion, brain-computer interfaces, self-powered medical devices, and blockchain-secured wearable data management targeting high-level IEEE publications.
+                Ph.D. research targets flexible and stretchable electronics, AI-based multi-sensor fusion, BCI wearables, self-powered sensors, and blockchain-secured wearable data flows for high-impact IEEE and SCI publications.[web:119][web:122][web:126]
               </p>
             </section>
+
             {/* IEEE Project Titles */}
             <section className="ECEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Style Project Titles (2023–2025)</h2>
@@ -147,13 +160,15 @@ const WearableBiomedicalDevicesProject = () => {
                 <li>BCI-Integrated Wearable Device for Assistive Healthcare (2025)</li>
               </ul>
             </section>
+
             {/* About Section */}
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute provides comprehensive development and publication support in wearable biomedical devices, bridging healthcare and engineering to deliver innovative solutions for students, researchers, and professionals.
+                Narpavi Research Institute offers end-to-end support in wearable biomedical devices—from hardware and textile integration to AI analytics and IEEE publication guidance—bridging engineering and healthcare for impactful digital health solutions.[web:143][web:145]
               </p>
             </section>
+
             {/* FAQs */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
@@ -165,37 +180,21 @@ const WearableBiomedicalDevicesProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                           <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
+            <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Human-Machine Interface (HMI) Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEHmiProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Human-Machine Interface HMI IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Human-Machine Interface HMI projects for B.Tech, M.Tech, Ph.D. PLC/SCADA integration, IoT-enabled dashboards, AR/VR HMI, AI-driven interfaces using WinCC, FactoryTalk, Ignition, Node-RED for Industry 4.0, smart factories."
+  keywords="Human-Machine Interface HMI IEEE Projects 2023–2025, B.Tech PLC HMI Projects, M.Tech IoT SCADA HMI, Ph.D. AI AR VR HMI, Smart Factory HMI, Industrial Automation HMI, WinCC FactoryTalk Ignition, Narpavi Research Institute"
+  url="/department/industrial-automation/hmi"
+  faqs={faqs}
+/>
+
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -170,33 +178,50 @@ const EEEHmiProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* JSON-LD Schema */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context":"https://schema.org",
-                    "@type":"FAQPage",
-                    "mainEntity": faqs.map(f=>({
-                      "@type":"Question",
-                      "name":f.question,
-                      "acceptedAnswer":{ "@type":"Answer","text":f.answer }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* 🔗 Right Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/plc-scada-systems-project-development">PLC & SCADA Systems</a></li>
-              <li><a href="/industrial-iiot-applications-project-development">Industrial IoT (IIoT) Applications</a></li>
-              <li><a href="/process-control-in-industries-project-development">Process Control in Industries</a></li>
-              <li><a href="/intelligent-control-ai-ml-project-development">Intelligent Control using AI/ML</a></li>
-              <li><a href="/cybersecurity-smart-grids-project-development">Cybersecurity in Smart Grids</a></li>
-            </ul>
+         <ul>
+  <li>
+    <a href="/department/industrial-automation">
+      Industrial Automation – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/dcs">
+      DCS (Distributed Control Systems)
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/hmi">
+      HMI (Human-Machine Interface)
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/iiot-applications">
+      IIoT Applications in Industrial Automation
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/plc-scada">
+      PLC & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/predictive-maintenance">
+      Predictive Maintenance Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-automation/rpa">
+      RPA (Robotic Process Automation)
+    </a>
+  </li>
+</ul>
+
           </div>
           
         </div>

@@ -210,13 +210,44 @@ const EEEWindEnergyConversionSystemsProjectDevelopmentCenter = () => {
           {/* Right: Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/solar-photovoltaic-systems-project-development">Solar Photovoltaic Systems Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/hybrid-energy-storage-project-development">Hybrid Energy Storage Project Development</a></li>
-              <li><a href="/iot-eee-project-development">IoT in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/renewable-energy-systems">
+      Renewable Energy Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/solar-photovoltaic">
+      Solar Photovoltaic Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/wind-energy-conversion">
+      Wind Energy Conversion Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
+      Biomass Fuel Cell Technologies
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/energy-storage-integration">
+      Energy Storage & Renewable Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
+      Hybrid Renewable Energy Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-energy-systems/grid-integration-renewables">
+      Grid Integration of Renewables
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

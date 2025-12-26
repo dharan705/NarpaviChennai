@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Secure IoT Architectures Project Development Center offer?",
@@ -27,6 +27,13 @@ const faqs = [
 const ECESecureIoTArchitecturesProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+       <SEO
+        title="Secure IoT Architectures IEEE Projects | Blockchain, Lightweight Crypto, AI IDS | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) Secure IoT Architectures projects on TLS/SSL, ECC/AES-based lightweight cryptography, blockchain-enabled IoT, AI-driven intrusion detection, secure firmware updates, and cloud–edge security for smart grids, healthcare, smart homes, and industrial IoT."
+        keywords="Secure IoT Projects, IoT Security 2023–2025, Blockchain IoT, Lightweight Cryptography IoT, AI Intrusion Detection IoT, Edge Security IoT, Quantum-Resistant IoT, Narpavi Research Institute IoT Security, IEEE IoT Security Projects, Industrial IoT Security Solutions, Smart City IoT Security, Secure Healthcare IoT, IoT Authentication & Encryption"
+        url="/department/iot-projects/secure-iot-architectures"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -240,13 +247,15 @@ const ECESecureIoTArchitecturesProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/embedded-system-security-cryptography-project-development">Embedded System Security and Cryptography Project Development</a></li>
-              <li><a href="/iot-embedded-devices-project-development">IoT-enabled Embedded Devices Project Development</a></li>
-              <li><a href="/machine-learning-embedded-platforms-project-development">Machine Learning in Embedded Platforms Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/industrial-iot-industry-4.0-project-development">Industrial IoT (IIoT) for Industry 4.0 Project Development</a></li>
-            </ul>
+                     <ul>
+  <li><a href="/department/iot-projects">IoT </a></li>
+  <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
+  <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
+  <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
+  <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
+  <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
+  <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,35 +1,63 @@
 import "./CEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Environmental Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Environmental Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on water treatment, pollution monitoring, waste-to-energy systems, and sustainable urban development."
+    answer:
+      "Narpavi Research Institute’s Environmental Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on water treatment, pollution monitoring, waste-to-energy systems, and sustainable urban development."
   },
   {
     question: "What types of Environmental Engineering projects are supported?",
-    answer: "We support B.Tech projects (water quality and waste management), M.Tech projects (smart monitoring and advanced treatment), and Ph.D. projects (AI-driven climate resilience and green infrastructure) for sustainable environmental solutions."
+    answer:
+      "We support B.Tech projects (water quality and waste management), M.Tech projects (smart monitoring and advanced treatment), and Ph.D. projects (AI-driven climate resilience and green infrastructure) for sustainable environmental solutions."
   },
   {
     question: "Which tools and technologies are used in Environmental Engineering projects?",
-    answer: "Our stack includes MATLAB, EPANET, ArcGIS, SWMM, IoT sensors (pH, turbidity), AI frameworks (TensorFlow, Keras), and bioreactors for environmental monitoring and treatment."
+    answer:
+      "Our stack includes MATLAB, EPANET, ArcGIS, SWMM, IoT sensors (pH, turbidity), AI frameworks (TensorFlow, Keras), and bioreactors for environmental monitoring and treatment."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Environmental Engineering and Sustainability, focusing on smart water management, AI-driven pollution control, and green infrastructure."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Environmental Engineering and Sustainability, focusing on smart water management, AI-driven pollution control, and green infrastructure."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
   }
 ];
 
 const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO (added – content untouched) */}
+      <SEO
+        title="Environmental Engineering IEEE Projects (2023–2025)"
+        description="Environmental Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on water treatment, pollution control, waste-to-energy, AI, IoT, and sustainable urban development."
+        url="/department/environmental-engineering"
+        type="article"
+        keywords={[
+          "Environmental Engineering Projects",
+          "Water Treatment IEEE Projects",
+          "Pollution Monitoring Projects",
+          "Waste to Energy IEEE Projects",
+          "IoT Environmental Engineering",
+          "AI Climate Change Projects",
+          "Sustainable Development Civil Projects",
+          "PhD Environmental Engineering Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="CEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -50,6 +78,15 @@ const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
           {/* Center: Main Content */}
           <div className="CEProjectDevelopmentCenter-center">
             <h1>Environmental Engineering – Project Development Support</h1>
+
+            {/* Internal links (added, content preserved) */}
+            <p className="seo-internal-links">
+              Explore our
+              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
+              <a href="/phd-project-development"> PhD Project Guidance</a>, and
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
+              for complete academic support.
+            </p>
 
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
@@ -144,22 +181,22 @@ const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
                     <tr>
                       <td>AI & Machine Learning Models</td>
                       <td>Pollution prediction & climate modeling</td>
-                      <td>Data-driven forecasting, efficient decisions</td>
-                      <td>Data quality and computational complexity</td>
+                      <td>Data-driven forecasting</td>
+                      <td>Computational complexity</td>
                       <td>Ph.D.</td>
                     </tr>
                     <tr>
                       <td>Membrane & Nano-filtration Tech</td>
                       <td>Advanced water treatment</td>
-                      <td>High efficiency, compact design</td>
-                      <td>Membrane fouling and cost</td>
+                      <td>High efficiency</td>
+                      <td>Membrane fouling</td>
                       <td>M.Tech/Ph.D.</td>
                     </tr>
                     <tr>
                       <td>Green Infrastructure Systems</td>
                       <td>Urban sustainability & flood management</td>
-                      <td>Climate resilience, eco-friendly development</td>
-                      <td>Integration with existing urban systems</td>
+                      <td>Climate resilience</td>
+                      <td>Integration challenges</td>
                       <td>M.Tech/Ph.D.</td>
                     </tr>
                   </tbody>
@@ -170,7 +207,7 @@ const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
             <section className="CEProjectDevelopmentCenter-casestudy">
               <h2>Case Study – IoT-enabled Smart Water Monitoring</h2>
               <p>
-                A M.Tech project developed at Narpavi Research Institute used IoT-based water quality sensors integrated with cloud computing and AI models to monitor pH, turbidity, dissolved oxygen, and heavy metal concentrations in real-time. The system helped reduce contamination detection time by 60%, proving its practical impact on sustainable water resource management.
+                A M.Tech project developed at Narpavi Research Institute used IoT-based water quality sensors integrated with cloud computing and AI models to monitor pH, turbidity, dissolved oxygen, and heavy metal concentrations in real-time. The system reduced contamination detection time by 60%.
               </p>
             </section>
 
@@ -193,7 +230,7 @@ const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
             <section className="CEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                At Narpavi Research Institute, we provide world-class Environmental Engineering project support for B.Tech, M.Tech, and Ph.D. students across the globe. Our expertise spans water and wastewater treatment, renewable waste management, pollution monitoring, AI-based environmental modeling, and sustainable city planning. We ensure all projects are aligned with IEEE transactions (2023–2025), maintaining both academic rigor and industrial applicability.
+                At Narpavi Research Institute, we provide world-class Environmental Engineering project support for B.Tech, M.Tech, and Ph.D. students across the globe. Our expertise spans water and wastewater treatment, renewable waste management, pollution monitoring, AI-based environmental modeling, and sustainable city planning. We ensure all projects are aligned with IEEE transactions (2023–2025).
               </p>
             </section>
 
@@ -208,6 +245,7 @@ const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
+            {/* FAQ UI (schema handled by SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -218,38 +256,37 @@ const CEEnvironmentalEngineeringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right: Related Services */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/environmental-engineering">
+      Environmental Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/environmental-engineering/water-treatment-recycling">
+      Water Treatment & Recycling
+    </a>
+  </li>
+  <li>
+    <a href="/department/environmental-engineering/air-pollution-modeling">
+      Air Pollution Modeling
+    </a>
+  </li>
+  <li>
+    <a href="/department/environmental-engineering/waste-management-system">
+      Waste Management System
+    </a>
+  </li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

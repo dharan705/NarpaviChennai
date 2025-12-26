@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Fatigue & Fracture Analysis Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MEFatigueFractureAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Fatigue & Fracture Analysis IEEE Projects (2023–2025)"
+        description="Fatigue Fracture Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS, ABAQUS, crack growth modeling, AI fatigue prediction, digital twins for aerospace, automotive, energy, biomedical applications."
+        url="/department/mechanical-properties-materials/fatigue-fracture-analysis"
+        type="article"
+        keywords={[
+          "Fatigue Fracture Analysis Projects",
+          "Crack Growth Simulation IEEE Projects",
+          "AI Based Fatigue Monitoring",
+          "Digital Twin Fatigue Life Prediction",
+          "Fatigue in Aerospace Materials",
+          "Nanocomposites Fatigue Resistance",
+          "B.Tech Fatigue Analysis Projects",
+          "M.Tech Fracture Mechanics Projects",
+          "Narpavi Research Institute Fatigue Projects",
+          "PhD Fatigue Research"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -250,23 +269,6 @@ const MEFatigueFractureAnalysisProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -274,12 +276,38 @@ const MEFatigueFractureAnalysisProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/nanomaterials-mechanical-systems-project-development">Nanomaterials in Mechanical Systems Project Development</a></li>
-              <li><a href="/tribology-wear-analysis-project-development">Tribology & Wear Analysis Project Development</a></li>
-              <li><a href="/advanced-alloy-development-project-development">Advanced Alloy Development Project Development</a></li>
-              <li><a href="/composite-materials-analysis-project-development">Composite Materials Analysis Project Development</a></li>
-              <li><a href="/material-science-mechanical-properties-project-development">Material Science & Mechanical Properties Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/mechanical-properties-materials">
+      Mechanical Properties & Materials
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
+      Composite Materials Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
+      Advanced Alloy Development
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
+      Tribology & Wear Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
+      Nanomaterials – Mechanical Properties
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
+      Fatigue & Fracture Analysis
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

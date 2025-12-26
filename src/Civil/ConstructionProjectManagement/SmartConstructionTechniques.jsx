@@ -27,6 +27,23 @@ const faqs = [
 const CESmartConstructionTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+       <SEO
+        title="Smart Construction Techniques IEEE Projects (2023–2025)"
+        description="Smart Construction Techniques IEEE development for B.Tech, M.Tech & PhD using 3D printing, robotics, IoT, BIM, prefabrication at Narpavi Research Institute."
+        url="/department/construction-project-management/smart-construction-techniques"
+        type="article"
+        keywords={[
+          "Smart Construction Projects IEEE",
+          "IoT Construction Monitoring 2023-2025",
+          "Robotics Construction Projects",
+          "3D Printing Civil Engineering",
+          "Prefabrication Modular Construction",
+          "BIM AI Construction Management",
+          "PhD Sustainable Building Projects",
+          "B.Tech M.Tech Smart Infrastructure"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -211,37 +228,35 @@ const CESmartConstructionTechniquesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/waste-management-systems-project-development">Waste Management Systems Project Development</a></li>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/construction-project-management">
+      Construction Project Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/smart-construction-techniques">
+      Smart Construction Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/cost-optimization-in-projects">
+      Cost Optimization in Projects
+    </a>
+  </li>
+  <li>
+    <a href="/department/construction-project-management/project-scheduling-planning">
+      Project Scheduling & Planning
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

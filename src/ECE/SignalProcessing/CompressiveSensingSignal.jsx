@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Compressive Sensing in Signal Processing Project Development Center offer?",
@@ -27,6 +27,30 @@ const faqs = [
 const ECECompressiveSensingSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="Compressive Sensing IEEE Projects | Sparse Signal Recovery B.Tech M.Tech PhD (2023–2025)"
+  description="Compressive Sensing in Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on sparse signal recovery, basis pursuit, OMP, FPGA implementations, medical imaging, IoT sensors, and IEEE-aligned research (2023–2025)."
+  url="/department/signal-processing/compressive-sensing-signal-processing"
+  type="article"
+  keywords={[
+    "Compressive Sensing Projects",
+    "IEEE Sparse Signal Recovery",
+    "Basis Pursuit OMP Algorithms",
+    "FPGA Compressive Sensing",
+    "Medical Imaging CS Projects",
+    "IoT Sensor Networks CS",
+    "MATLAB Compressive Sensing",
+    "Radar Signal Processing CS",
+    "IEEE Signal Processing 2025",
+    "B.Tech Sparse Reconstruction",
+    "M.Tech Biomedical CS Imaging",
+    "Ph.D. AI Compressive Sensing",
+    "Narpavi Research Institute CS",
+    "Real-time CS FPGA Implementation",
+    "Smart City Sensor CS Projects"
+  ]}
+  faqs={faqs}
+/>
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -226,12 +250,15 @@ const ECECompressiveSensingSignalProcessingProjectDevelopmentCenter = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/biomedical-signal-processing-project-development">Biomedical Signal Processing Project Development</a></li>
-              <li><a href="/digital-image-video-signal-processing-project-development">Digital Image and Video Signal Processing Project Development</a></li>
-              <li><a href="/iot-embedded-devices-project-development">IoT-enabled Embedded Devices Project Development</a></li>
-              <li><a href="/fpga-system-prototyping-project-development">FPGA-Based System Prototyping Project Development</a></li>
-            </ul>
+  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What are CubeSats and Nanosatellites?",
@@ -26,6 +27,13 @@ const faqs = [
 const CubeSatNanosatelliteProject = () => {
   return (
     <div className="ECEProjectCenter">
+      <SEO
+        title="CubeSat and Nanosatellite Technologies IEEE Projects | IoT Relay, Swarm, Quantum & AI | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) CubeSat and nanosatellite projects on SDR-based links, IoT data relay, inter-satellite networking, AI-enabled payloads, swarm coordination, and quantum communication using MATLAB, Python, GNURadio, STK, Simulink, HFSS, CST, TensorFlow, and Qiskit."
+        keywords="CubeSat and Nanosatellite Technologies, CubeSat Design and Communication, Nanosatellite IoT Applications, Inter-Satellite Links, AI in CubeSat Payloads, Swarm Intelligence for Satellites, Quantum Communication via CubeSats, Satellite IoT Networks, LEO Satellite Constellations, IEEE CubeSat Projects, Nanosatellite Research Projects, NanoSatellites for Disaster Management"
+        url="/department/satellite-communication/cubesat-nanosatellite"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectCenter-main">
         <div className="ECEProjectCenter-grid">
@@ -165,13 +173,15 @@ const CubeSatNanosatelliteProject = () => {
 
           <div className="ECEProjectCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing-wsn">Energy-Efficient Routing in WSN</a></li>
-              <li><a href="/adaptive-nonlinear-control">Adaptive Nonlinear Control Systems</a></li>
-              <li><a href="/secure-iot-architectures">Secure IoT Architectures</a></li>
-              <li><a href="/edge-fog-computing">Edge and Fog Computing</a></li>
-              <li><a href="/control-cyber-physical">Control in Cyber-Physical Systems</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

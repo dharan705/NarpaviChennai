@@ -1,10 +1,11 @@
 import "./EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the High Voltage Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s High Voltage Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in HVDC transmission, insulation systems, and smart grid diagnostics for applications in power transmission, substations, and renewable integration."
+    answer: "Narpavi Research Institute's High Voltage Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in HVDC transmission, insulation systems, and smart grid diagnostics for applications in power transmission, substations, and renewable integration."
   },
   {
     question: "What types of high voltage engineering projects are supported?",
@@ -27,6 +28,13 @@ const faqs = [
 const EEEHighVoltageEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+        title="High Voltage Engineering IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        description="IEEE-aligned (2023-2025) High Voltage Engineering projects for B.Tech, M.Tech, Ph.D. HVDC, GIS, insulation, partial discharge, nanodielectrics in power transmission, smart grids."
+        keywords="High Voltage Engineering IEEE Projects, HVDC IEEE Projects, GIS Substation IEEE Projects, Insulation IEEE Projects, Partial Discharge IEEE Projects, B.Tech High Voltage IEEE Projects, M.Tech HVDC IEEE Projects, Ph.D. High Voltage Insulation IEEE Thesis, Smart Grid High Voltage IEEE Projects, Narpavi Research Institute"
+        url="/department/high-voltage-engineering"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -227,47 +235,44 @@ const EEEHighVoltageEngineeringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-            </ul>
+           <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+
+<Route
+  path="department/high-voltage-engineering/gis"
+  element={<EEEGISProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/high-voltage-testing"
+  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/hvdc-transmission"
+  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/insulation-materials"
+  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/overvoltage-surge-protection"
+  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
+/>
+
+<Route
+  path="department/high-voltage-engineering/partial-discharge-analysis"
+  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
+/>
+
           </div>
         </div>
       </div>

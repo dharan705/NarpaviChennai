@@ -1,11 +1,12 @@
 import "./MainPublicationServices.scss";
-import Sidebar from "./PublicationServicesSidebar"
+import Sidebar from "./PublicationServicesSidebar";
+
 const MainPublicationServices = () => {
   return (
     <div className="main-publication-wrapper">
-<Sidebar/>
-      <div className="main-publication-grid">
+      <Sidebar />
 
+      <div className="main-publication-container">
         {/* Left Side – Quick Links */}
         <div className="main-publication-left">
           <h3>Quick Links</h3>
@@ -18,6 +19,7 @@ const MainPublicationServices = () => {
           </ul>
         </div>
 
+       
         {/* Main Content */}
         <div className="main-publication-main">
           <h1>Research Journals, Review Articles, Conference Papers & Book Publication Services</h1>
@@ -143,6 +145,7 @@ const MainPublicationServices = () => {
             <li>📌 High Success Rate in Peer-Reviewed Journal Publications</li>
           </ul>
         </div>
+
 
         {/* Right Side – Keywords */}
         <div className="main-publication-right">

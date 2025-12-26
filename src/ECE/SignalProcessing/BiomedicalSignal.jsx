@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Biomedical Signal Processing Project Development Center offer?",
@@ -27,6 +27,30 @@ const faqs = [
 const ECEBiomedicalSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="Biomedical Signal Processing IEEE Projects | ECG EEG EMG B.Tech M.Tech PhD (2023–2025)"
+  description="Biomedical Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on ECG/EEG/EMG analysis, AI disease detection, wearable biosensors, biomedical imaging, and IEEE-aligned healthcare research (2023–2025)."
+  url="/department/signal-processing/biomedical-signal-processing"
+  type="article"
+  keywords={[
+    "Biomedical Signal Processing Projects",
+    "IEEE Biomedical Projects 2025",
+    "ECG EEG EMG Analysis Projects",
+    "AI Healthcare Signal Processing",
+    "Wearable Medical Device Projects",
+    "Biomedical Image Processing IEEE",
+    "TensorFlow Biomedical DSP",
+    "Brain Computer Interface Projects",
+    "IoT Health Monitoring Systems",
+    "B.Tech ECG Analysis Projects",
+    "M.Tech Wearable Biosensors",
+    "Ph.D. Multimodal Biosignal Fusion",
+    "Narpavi Research Institute Biomedical",
+    "Secure Biomedical Signal Processing",
+    "Cloud Healthcare Platforms IEEE"
+  ]}
+  faqs={faqs}
+/>
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -225,13 +249,16 @@ const ECEBiomedicalSignalProcessingProjectDevelopmentCenter = () => {
           {/* Right: Subpage Links */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/digital-image-video-signal-processing-project-development">Digital Image and Video Signal Processing Project Development</a></li>
-              <li><a href="/machine-learning-embedded-platforms-project-development">Machine Learning in Embedded Platforms Project Development</a></li>
-              <li><a href="/iot-embedded-devices-project-development">IoT-enabled Embedded Devices Project Development</a></li>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-            </ul>
+           <ul>
+  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+</ul>
+
           </div>
         </div>
       </div>

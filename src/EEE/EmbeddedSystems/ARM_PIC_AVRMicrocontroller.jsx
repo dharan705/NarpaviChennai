@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the ARM/PIC/AVR Microcontroller Projects Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="ARM PIC AVR Microcontroller IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) ARM, PIC, AVR Microcontroller projects for B.Tech, M.Tech, Ph.D. Embedded systems, IoT integration, AI-assisted control using Keil, Arduino IDE, Proteus, MATLAB/Simulink, TensorFlow for robotics, automotive, industrial automation."
+  keywords="ARM PIC AVR Microcontroller IEEE Projects 2023–2025, Embedded Systems Projects, B.Tech Microcontroller Projects, M.Tech IoT Embedded Systems, Ph.D. AI Embedded Control, Keil Arduino IDE Projects, Real-Time Embedded Systems, Robotics Microcontroller Research, Automotive Embedded Solutions, Narpavi Research Institute"
+  url="/department/embedded-systems-electrical/arm-pic-avr-microcontroller"
+  faqs={faqs}
+/>
+
       <Sidebar />
       
       <div className="EEEProjectDevelopmentCenter-main">
@@ -187,37 +195,51 @@ const EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              {/* SEO FAQ Schema */}
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context":"https://schema.org",
-                    "@type":"FAQPage",
-                    "mainEntity":faqs.map(ff=>({
-                      "@type":"Question",
-                      "name": ff.question,
-                      "acceptedAnswer":{
-                        "@type":"Answer",
-                        "text": ff.answer
-                      }
-                    }))
-                  })
-                }} 
-              />
+    
             </section>
           </div>
 
           {/* 🔗 Right Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/iot-eee-project-development">IoT in EEE Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Projects</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/robotics-automation-project-development">Robotics & Automation Projects</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Projects</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/embedded-systems-electrical">
+      Embedded Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
+      ARM, PIC & AVR Microcontroller Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
+      Automotive Embedded Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/embedded-robotics">
+      Embedded Robotics
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/fpga-control-applications">
+      FPGA Control Applications
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
+      IoT Embedded Hardware Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/embedded-systems-electrical/rtos">
+      RTOS Project Development Center
+    </a>
+  </li>
+</ul>
+
           </div>
         
         </div>

@@ -1,6 +1,6 @@
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
- 
+import SEO from "../assets/SEO"
 const faqs = [
   {
     question: "What services does the VLSI Design & Embedded Systems Project Development Center offer?",
@@ -27,6 +27,30 @@ const faqs = [
 const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="VLSI Design Embedded Systems IEEE Projects | FPGA RISC-V ASIC B.Tech M.Tech PhD (2023–2025)"
+  description="VLSI Design & Embedded Systems project development for B.Tech, M.Tech, and Ph.D. students focusing on ASIC design, FPGA prototyping, RISC-V processors, low-power VLSI, AI accelerators, hardware security, and IEEE-aligned research (2023–2025)."
+  url="/department/vlsi-design"
+  type="article"
+  keywords={[
+    "VLSI Design Projects IEEE",
+    "Embedded Systems Project Development",
+    "FPGA RISC-V Projects 2025",
+    "ASIC Design Projects",
+    "Low-Power VLSI Research",
+    "AI Hardware Accelerators",
+    "Cadence Synopsys Projects",
+    "Xilinx Vivado FPGA Projects",
+    "Hardware Security VLSI",
+    "B.Tech Embedded IoT Projects",
+    "M.Tech Low-Power VLSI",
+    "Ph.D. RISC-V Processor Design",
+    "Narpavi Research Institute VLSI",
+    "Real-Time Embedded Systems",
+    "SoC Design IEEE Projects"
+  ]}
+  faqs={faqs}
+/>
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -222,24 +246,6 @@ const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -247,15 +253,15 @@ const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-            </ul>
+  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+</ul>
+
           </div>
         </div>
       </div>

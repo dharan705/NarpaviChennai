@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Hybrid Electric Vehicles (HEV) Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EeeHevProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Hybrid Electric Vehicles HEV IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Hybrid Electric Vehicles HEV projects for B.Tech, M.Tech, Ph.D. Hybrid propulsion, energy management, regenerative braking, AI predictive control using MATLAB/Simulink, PSCAD, PLECS, DSP FPGA for automotive hybrids."
+  keywords="Hybrid Electric Vehicles HEV IEEE Projects 2023–2025, B.Tech HEV Drive Models, M.Tech HEV Energy Management, Ph.D. AI ML HEV Optimization, Parallel Series PHEV, Regenerative Braking HEV, Narpavi Research Institute"
+  url="/department/electric-vehicles/hev"
+  faqs={faqs}
+/>
+
       <Sidebar/>
       
       <div className="EEEProjectDevelopmentCenter-main">
@@ -167,33 +175,50 @@ const EeeHevProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* JSON-LD structured data for SEO */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context":"https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(f=>({
-                      "@type":"Question",
-                      "name":f.question,
-                      "acceptedAnswer": { "@type":"Answer","text":f.answer }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
           
           {/* 🔗 Related Services */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/ev-motor-drive-systems-project-development">EV Motor Drive Systems</a></li>
-              <li><a href="/battery-management-systems-project-development">Battery Management Systems (BMS)</a></li>
-              <li><a href="/ev-charging-infrastructure-project-development">EV Charging Infrastructure</a></li>
-              <li><a href="/automotive-embedded-systems-project-development">Automotive Embedded Systems</a></li>
-              <li><a href="/intelligent-control-ai-ml-project-development">AI/ML Intelligent Control</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/electric-vehicles">
+      Electric Vehicles – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/bms">
+      Battery Management Systems (BMS)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-charging-infrastructure">
+      EV Charging Infrastructure
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-motor-drive-systems">
+      EV Motor Drive Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/hev">
+      Hybrid Electric Vehicles (HEV)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/power-electronics-evs">
+      Power Electronics for EVs
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/regenerative-braking-systems">
+      Regenerative Braking Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         
         </div>

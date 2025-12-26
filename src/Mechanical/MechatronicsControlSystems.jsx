@@ -1,6 +1,6 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO";
 const faqs = [
   {
     question: "What services does the Mechatronics & Control Systems Project Development Center offer?",
@@ -27,6 +27,26 @@ const faqs = [
 const MEMechatronicsControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Mechatronics & Control Systems IEEE Projects (2023–2025)"
+        description="Mechatronics Control Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, LabVIEW, PID control, PLC SCADA, AI predictive control, IoT automation, smart actuators, digital twins for robotics & Industry 4.0."
+        url="/department/mechatronics-control-systems"
+        type="article"
+        keywords={[
+          "Mechatronics IEEE 2023–2025",
+          "PID Control Student Projects",
+          "Industrial Automation IEEE Projects",
+          "PLC SCADA Project Development",
+          "IoT Enabled Actuator Systems",
+          "Adaptive Predictive Control Projects",
+          "Smart Manufacturing IEEE Projects",
+          "Digital Twin Control Systems",
+          "Narpavi Research Institute Automation Projects",
+          "IEEE Control System Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -232,36 +252,45 @@ const MEMechatronicsControlSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/automotive-vehicle-engineering-project-development">Automotive & Vehicle Engineering Project Development</a></li>
-              <li><a href="/electric-vehicle-design-control-project-development">Electric Vehicle Design & Control Project Development</a></li>
-              <li><a href="/hybrid-vehicle-powertrains-project-development">Hybrid Vehicle Powertrains Project Development</a></li>
-              <li><a href="/vehicle-dynamics-stability-project-development">Vehicle Dynamics & Stability Project Development</a></li>
-              <li><a href="/engine-performance-optimization-project-development">Engine Performance Optimization Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/mechatronics-control-systems">
+      Mechatronics & Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/pid-advanced-control">
+      PID & Advanced Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/automation-manufacturing">
+      Automation in Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/plc-systems">
+      PLC Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/sensor-integration">
+      Sensor Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
+      Smart Actuator Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

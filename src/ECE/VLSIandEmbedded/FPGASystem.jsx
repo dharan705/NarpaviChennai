@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
- 
+  import SEO from "../../assets/SEO"
+
 const faqs = [
   {
     question: "What services does the FPGA-Based System Prototyping Project Development Center offer?",
@@ -27,6 +28,30 @@ const faqs = [
 const ECEFPGASystemPrototypingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+  title="FPGA System Prototyping IEEE Projects | VHDL Verilog Zynq HLS B.Tech M.Tech PhD (2023–2025)"
+  description="FPGA-Based System Prototyping project development for B.Tech, M.Tech, and Ph.D. students focusing on VHDL/Verilog design, hardware/software co-design, partial reconfiguration, high-level synthesis, Zynq SoCs, and IEEE-aligned research (2023–2025)."
+  url="/department/vlsi-design/fpga-system-prototyping"
+  type="article"
+  keywords={[
+    "FPGA System Prototyping Projects",
+    "IEEE FPGA Projects 2025",
+    "VHDL Verilog FPGA Design",
+    "Zynq SoC Prototyping",
+    "High Level Synthesis HLS FPGA",
+    "Partial Reconfiguration FPGA",
+    "Xilinx Vivado Projects",
+    "Intel Quartus FPGA Projects",
+    "FPGA Hardware Software Co-Design",
+    "B.Tech FPGA Digital Logic",
+    "M.Tech FPGA AI Acceleration",
+    "Ph.D. Cloud FPGA Research",
+    "Narpavi Research Institute FPGA",
+    "Real-time FPGA Prototyping",
+    "FPGA DSP 5G Applications"
+  ]}
+  faqs={faqs}
+/>
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -235,29 +260,14 @@ const ECEFPGASystemPrototypingProjectDevelopmentCenter = () => {
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/low-power-vlsi-project-development">Low Power VLSI Architectures Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-              <li><a href="/iot-eee-project-development">Internet of Things in EEE Project Development</a></li>
-            </ul>
+  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Air Pollution Modeling Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CEAirPollutionModelingProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+      <SEO
+        title="Air Pollution Modeling IEEE Projects (2023–2025)"
+        description="Air Pollution Modeling IEEE project development for B.Tech, M.Tech & PhD scholars focusing on air quality simulation, IoT-based monitoring, CFD analysis, AI-driven prediction, and smart city emission control."
+        url="/department/environmental-engineering/water-treatment-recycling"
+        type="article"
+        keywords={[
+          "Air Pollution Modeling Projects",
+          "IoT Air Quality Monitoring IEEE 2023–2025",
+          "AI-Based Air Quality Prediction",
+          "CFD Air Pollution Modeling",
+          "GIS-Based Air Quality Mapping",
+          "Urban Air Quality Management",
+          "B.Tech M.Tech PhD Environmental Projects",
+          "Narpavi Research Institute Air Pollution Projects",
+          "Smart City Air Pollution Solutions",
+          "Industrial Emission Control Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -238,12 +257,28 @@ const CEAirPollutionModelingProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/water-treatment-recycling-project-development">Water Treatment & Recycling Project Development</a></li>
-              <li><a href="/remote-sensing-gis-project-development">Remote Sensing & GIS Project Development</a></li>
-              <li><a href="/highway-safety-optimization-project-development">Highway Safety & Optimization Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/environmental-engineering">
+      Environmental Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/environmental-engineering/water-treatment-recycling">
+      Water Treatment & Recycling
+    </a>
+  </li>
+  <li>
+    <a href="/department/environmental-engineering/air-pollution-modeling">
+      Air Pollution Modeling
+    </a>
+  </li>
+  <li>
+    <a href="/department/environmental-engineering/waste-management-system">
+      Waste Management System
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

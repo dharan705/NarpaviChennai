@@ -1,5 +1,6 @@
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
@@ -27,9 +28,34 @@ const faqs = [
 const ECESatelliteSpaceCommunicationProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Satellite & Space Communication IEEE Projects | B.Tech M.Tech PhD (2023–2025)"
+        description="Satellite and space communication project development for B.Tech, M.Tech, and Ph.D. students focusing on CubeSat, LEO satellite internet, inter-satellite communication, RF systems, antenna design, and IEEE-aligned research (2023–2025)."
+        url="/department/satellite-communication"
+        type="article"
+        keywords={[
+          "Satellite Communication Projects",
+          "Space Communication Project Development",
+          "IEEE Satellite Projects 2025",
+          "CubeSat Project Development",
+          "LEO Satellite Communication",
+          "Antenna Design IEEE Projects",
+          "SDR Satellite Communication",
+          "FPGA Satellite Systems",
+          "Optical Satellite Communication",
+          "Narpavi Research Institute Satellite Projects"
+        ]}
+        faqs={faqs}
+      />
+      {/* ======================================= */}
+
       <Sidebar />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="ECEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -123,7 +149,7 @@ const ECESatelliteSpaceCommunicationProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-             <section className="ECEProjectDevelopmentCenter-btech">
+            <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Satellite & Space Communication Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational satellite and space communication projects like CubeSat systems or antenna design, aligned with IEEE topics.
@@ -205,6 +231,7 @@ const ECESatelliteSpaceCommunicationProjectDevelopmentCenter = () => {
               </p>
             </section>
 
+            {/* FAQ UI (schema injected via SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -215,40 +242,24 @@ const ECESatelliteSpaceCommunicationProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/control-systems-robotics-project-development">Control Systems & Robotics Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-            </ul>
+           <ul>
+  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

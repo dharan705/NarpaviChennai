@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the Artificial Intelligence in EEE Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEArtificialIntelligenceProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Artificial Intelligence AI in EEE IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Artificial Intelligence AI in EEE projects for B.Tech, M.Tech, Ph.D. AI power systems, smart grids, renewable forecasting, fault diagnosis using TensorFlow PyTorch MATLAB/Simulink Arduino ESP32 FPGA."
+  keywords="Artificial Intelligence AI EEE IEEE Projects 2023–2025, AI Power Systems Smart Grids, Deep Learning Fault Diagnosis, B.Tech AI Load Prediction, M.Tech AI Smart Grid Automation, Ph.D. Federated Learning EEE, Narpavi Research Institute"
+  url="/department/ai-electrical-engineering"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -180,23 +188,6 @@ const EEEArtificialIntelligenceProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -204,12 +195,43 @@ const EEEArtificialIntelligenceProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-           
-            </ul>
+  <li>
+    <a href="/department/ai-electrical-engineering">
+      Artificial Intelligence in Electrical Engineering – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/power-load-forecasting">
+      AI-Based Power Load Forecasting
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
+      Machine Learning for Fault Detection
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
+      Deep Learning in Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/ai-smart-grids">
+      AI in Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/neural-networks-motor">
+      Neural Networks for Motor Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
+      AI-Based Energy Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

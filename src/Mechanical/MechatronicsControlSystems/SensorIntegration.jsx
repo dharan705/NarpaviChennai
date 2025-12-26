@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Sensor Integration & IoT Control Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MESensorIntegrationIoTControlProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="Sensor Integration & IoT Control IEEE Projects (2023–2025)"
+        description="Sensor Integration IoT Control IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ESP32, Arduino, sensor fusion, edge computing, AI analytics, cybersecure IoT, digital twins for smart cities, healthcare, industrial IoT."
+        url="/department/mechatronics-control-systems/sensor-integration"
+        type="article"
+        keywords={[
+          "IoT Sensor IEEE 2023–2025",
+          "Sensor Integration in IoT Networks",
+          "AI Enabled IoT Control Projects",
+          "Edge Computing IoT Projects",
+          "Blockchain IoT Sensor Security",
+          "Smart City IoT IEEE Projects",
+          "Healthcare IoT Sensors",
+          "Digital Twin IoT Projects",
+          "Cybersecure IoT Networks",
+          "Narpavi Research Institute IoT Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -233,36 +252,45 @@ const MESensorIntegrationIoTControlProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/automation-in-manufacturing-project-development">Automation in Manufacturing Project Development</a></li>
-              <li><a href="/plc-scada-systems-project-development">PLC & SCADA Systems Project Development</a></li>
-              <li><a href="/mechatronics-control-systems-project-development">Mechatronics & Control Systems Project Development</a></li>
-              <li><a href="/pid-advanced-control-systems-project-development">PID & Advanced Control Systems Project Development</a></li>
-              <li><a href="/automotive-vehicle-engineering-project-development">Automotive & Vehicle Engineering Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/mechatronics-control-systems">
+      Mechatronics & Control Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/pid-advanced-control">
+      PID & Advanced Control
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/automation-manufacturing">
+      Automation in Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/plc-systems">
+      PLC Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/sensor-integration">
+      Sensor Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
+      Smart Actuator Systems
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

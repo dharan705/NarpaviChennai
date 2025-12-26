@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +29,13 @@ const faqs = [
 const BrainComputerInterfaceProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Brain-Computer Interface IEEE Projects | EEG BCI | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) Brain-Computer Interface projects using EEG, deep learning, embedded systems, and multimodal BCIs for prosthetics, neurofeedback, and rehabilitation."
+        keywords="Brain-Computer Interface Systems in Biomedical Electronics, BCI projects for engineering students, EEG-based BCI development, AI in Brain-Computer Interfaces, Neuro-rehabilitation BCI devices, IEEE BCI projects 2023–2025, Ph.D. research in Brain-Computer Interfaces, Narpavi Research Institute BCI support, Biomedical Electronics and BCI projects, Brain-controlled robotic systems"
+        url="/department/biomedical-electronics/brain-computer-interface"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -53,10 +61,10 @@ const BrainComputerInterfaceProject = () => {
             <h1>Brain-Computer Interface Systems in Biomedical Electronics – Project Development Center</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> provides comprehensive research and project development support for Brain-Computer Interface Systems in Biomedical Electronics, aligned with IEEE Transactions (2023–2025).
+                <strong>Narpavi Research Institute</strong> provides comprehensive research and project development support for Brain-Computer Interface Systems in Biomedical Electronics, aligned with IEEE Transactions (2023–2025).[web:58][web:60]
               </p>
               <p>
-                We focus on neural signal acquisition, feature extraction, machine learning interpretation, and real-time device actuation, applicable in prosthetics, neurofeedback, communication aids, and adaptive control.
+                The focus spans neural signal acquisition, feature extraction, machine learning interpretation, and real-time device actuation for prosthetics, neurofeedback, communication aids, and adaptive control systems.[web:60][web:74]
               </p>
             </section>
 
@@ -113,21 +121,21 @@ const BrainComputerInterfaceProject = () => {
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Projects in Brain-Computer Interface Systems</h2>
               <p>
-                Emphasize brain signal acquisition with EEG, preprocessing, and simple ML classifiers using MATLAB/Python simulations and hardware interfacing with low-cost EEG devices.
+                B.Tech projects emphasize EEG-based brain signal acquisition, preprocessing, basic feature extraction, and simple ML classifiers with low-cost EEG hardware for tasks such as robotic arm control and neurofeedback training.[web:60][web:76]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Projects in Brain-Computer Interface Systems</h2>
               <p>
-                Focus on advanced algorithm design, deep learning, hybrid signal processing for assistive and rehabilitation technologies, and embedded hardware implementations.
+                M.Tech projects address deep learning and hybrid signal processing for assistive technologies, neuro-rehabilitation devices, and embedded real-time BCI implementations on platforms like ARM Cortex and FPGA.[web:68][web:74]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Research in Brain-Computer Interface Systems</h2>
               <p>
-                Research novel architectures, adaptive ML algorithms, multimodal integration, scalability, signal variability, and secure data transmission aligned with top IEEE publications.
+                Ph.D. research explores novel and adaptive ML architectures, hybrid EEG–fNIRS BCIs, multimodal integration, and secure BCI communication, with strong emphasis on scalability and high-impact IEEE and neuroscience publications.[web:66][web:69][web:72]
               </p>
             </section>
 
@@ -148,7 +156,7 @@ const BrainComputerInterfaceProject = () => {
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute specializes in emerging biomedical electronics and BCI technologies, offering end-to-end project development and IEEE publication support to students and researchers worldwide.
+                Narpavi Research Institute specializes in advanced biomedical electronics and BCI technologies, offering end-to-end project development, experimental guidance, and IEEE-aligned publication support for students and researchers worldwide.[web:58][web:77]
               </p>
             </section>
 
@@ -163,37 +171,21 @@ const BrainComputerInterfaceProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                            <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
+             <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
           </div>
         </div>
       </div>

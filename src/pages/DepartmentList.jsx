@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   FiSettings,
   FiCpu,
@@ -15,81 +15,82 @@ import "./DepartmentList.scss";
 
 const DepartmentPage = () => {
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  /* ✅ READ dept FROM URL */
+  const deptFromUrl = searchParams.get("dept") || "cse";
 
   const domains = {
-cse: [
-  { name: "Static Web Application Development", path: "/department/static-web-application" },
-  { name: "Dynamic Web Application Development", path: "/department/dynamic-web-applications" },
-  { name: "Mobile App Development", path: "/department/mobile-app" },
-  { name: "Animation Project Development", path: "/department/animations-project" },
-  { name: "Artificial Intelligence", path: "/department/ai-project" },
-  { name: "Data Science", path: "/department/data-science" },
-  { name: "Big Data", path: "/department/big-data" },
-  { name: "Blockchain", path: "/department/blockchain" },
-  { name: "DevOps", path: "/department/devops" },
-  { name: "Networking", path: "/department/networking" },
-  { name: "Image Processing", path: "/department/image-processing" },
-  { name: "Natural Language Processing", path: "/department/nlp" },
-  { name: "Cloud Computing", path: "/department/cloud-computing" },
-  { name: "Cybersecurity", path: "/department/cybersecurity" },
-],
-
-ece: [
-  { name: "Biomedical Electronics", path: "/department/biomedical-electronics" },
-  { name: "Communication Systems", path: "/department/communication-systems" },
-  { name: "Control Systems & Robotics", path: "/department/control-systems-robotics" },
-  { name: "Cryptography & Security", path: "/department/cryptography-security" },
-  { name: "Embedded Systems", path: "/department/embedded-systems" },
-  { name: "Internet of Things (IoT)", path: "/department/iot-projects" },
-  { name: "Signal Processing", path: "/department/signal-processing" },
-  { name: "VLSI Design", path: "/department/vlsi-design" },
-  { name: "Wireless Sensor Networks", path: "/department/wireless-sensor-networks" },
-  { name: "Satellite Communication", path: "/department/satellite-communication" },
-  { name: "Antennas", path: "/department/antenna-design" },
-],
-
-eee: [
-  { name: "Power Systems", path: "/department/power-systems" },
-  { name: "Electrical Machines", path: "/department/electrical-machines" },
-  { name: "Power Electronics", path: "/department/power-electronics" },
-  { name: "Renewable Energy Systems", path: "/department/renewable-energy-systems" },
-  { name: "Embedded Systems", path: "/department/embedded-systems-electrical" },
-  { name: "High Voltage Engineering", path: "/department/high-voltage-engineering" },
-  { name: "Smart Grid / Microgrid", path: "/department/smart-grid-microgrid" },
-  { name: "Control Systems", path: "/department/control-systems-electrical" },
-  { name: "Industrial Automation", path: "/department/industrial-automation" },
-  { name: "Electric Vehicles", path: "/department/electric-vehicles" },
-  { name: "AI for Electrical Engineering", path: "/department/ai-electrical-engineering" },
-  { name: "IoT for Electrical Systems", path: "/department/iot-electrical-systems" },
-  { name: "Energy Management Systems", path: "/department/energy-management-systems" },
-],
-
-
- civil: [
-  { name: "Construction Project Management", path: "/department/construction-project-management" },
-  { name: "Environmental Engineering", path: "/department/environmental-engineering" },
-  { name: "Geotechnical Engineering", path: "/department/geotechnical-engineering" },
-  { name: "Remote Sensing & GIS", path: "/department/remote-sensing-gis" },
-  { name: "Structural Engineering", path: "/department/structural-engineering" },
-  { name: "Transportation Engineering", path: "/department/transportation-engineering" },
-],
-
-
-   mech: [
-  { name: "Thermal Engineering", path: "/department/thermal-engineering" },
-  { name: "Fluid Mechanics & Fluid Dynamics", path: "/department/fluid-mechanics-dynamics" },
-  { name: "Manufacturing & Production Engineering", path: "/department/manufacturing-production" },
-  { name: "Design Engineering (CAD/CAE)", path: "/department/design-engineering-cad" },
-  { name: "Robotics & Mechatronics", path: "/department/robotics-mechatronics" },
-  { name: "Renewable & Thermal Energy", path: "/department/renewable-thermal-energy" },
-  { name: "Automotive & Vehicle Engineering", path: "/department/automotive-vehicle-engineering" },
-  { name: "Mechatronics & Control Systems", path: "/department/mechatronics-control-systems" },
-  { name: "Mechanical Properties & Materials", path: "/department/mechanical-properties-materials" },
-  { name: "Industrial & Production Optimization", path: "/department/industrial-production-optimization" },
-],
- 
-    other: [
+    cse: [
+      { name: "Static Web Application Development", path: "/department/static-web-application" },
+      { name: "Dynamic Web Application Development", path: "/department/dynamic-web-applications" },
+      { name: "Mobile App Development", path: "/department/mobile-app" },
+      { name: "Animation Project Development", path: "/department/animations-project" },
+      { name: "Artificial Intelligence", path: "/department/ai-project" },
+      { name: "Data Science", path: "/department/data-science" },
+      { name: "Big Data", path: "/department/big-data" },
+      { name: "Blockchain", path: "/department/blockchain" },
+      { name: "DevOps", path: "/department/devops" },
+      { name: "Networking", path: "/department/networking" },
+      { name: "Image Processing", path: "/department/image-processing" },
+      { name: "Natural Language Processing", path: "/department/nlp" },
+      { name: "Cloud Computing", path: "/department/cloud-computing" },
+      { name: "Cybersecurity", path: "/department/cybersecurity" },
     ],
+
+    ece: [
+      { name: "Biomedical Electronics", path: "/department/biomedical-electronics" },
+      { name: "Communication Systems", path: "/department/communication-systems" },
+      { name: "Control Systems & Robotics", path: "/department/control-systems-robotics" },
+      { name: "Cryptography & Security", path: "/department/cryptography-security" },
+      { name: "Embedded Systems", path: "/department/embedded-systems" },
+      { name: "Internet of Things (IoT)", path: "/department/iot-projects" },
+      { name: "Signal Processing", path: "/department/signal-processing" },
+      { name: "VLSI Design", path: "/department/vlsi-design" },
+      { name: "Wireless Sensor Networks", path: "/department/wireless-sensor-networks" },
+      { name: "Satellite Communication", path: "/department/satellite-communication" },
+      { name: "Antennas", path: "/department/antenna-design" },
+    ],
+
+    eee: [
+      { name: "Power Systems", path: "/department/power-systems" },
+      { name: "Electrical Machines", path: "/department/electrical-machines" },
+      { name: "Power Electronics", path: "/department/power-electronics" },
+      { name: "Renewable Energy Systems", path: "/department/renewable-energy-systems" },
+      { name: "Embedded Systems", path: "/department/embedded-systems-electrical" },
+      { name: "High Voltage Engineering", path: "/department/high-voltage-engineering" },
+      { name: "Smart Grid / Microgrid", path: "/department/smart-grid-microgrid" },
+      { name: "Control Systems", path: "/department/control-systems-electrical" },
+      { name: "Industrial Automation", path: "/department/industrial-automation" },
+      { name: "Electric Vehicles", path: "/department/electric-vehicles" },
+      { name: "AI for Electrical Engineering", path: "/department/ai-electrical-engineering" },
+      { name: "IoT for Electrical Systems", path: "/department/iot-electrical-systems" },
+      { name: "Energy Management Systems", path: "/department/energy-management-systems" },
+    ],
+
+    civil: [
+      { name: "Construction Project Management", path: "/department/construction-project-management" },
+      { name: "Environmental Engineering", path: "/department/environmental-engineering" },
+      { name: "Geotechnical Engineering", path: "/department/geotechnical-engineering" },
+      { name: "Remote Sensing & GIS", path: "/department/remote-sensing-gis" },
+      { name: "Structural Engineering", path: "/department/structural-engineering" },
+      { name: "Transportation Engineering", path: "/department/transportation-engineering" },
+    ],
+
+    mech: [
+      { name: "Thermal Engineering", path: "/department/thermal-engineering" },
+      { name: "Fluid Mechanics & Fluid Dynamics", path: "/department/fluid-mechanics-dynamics" },
+      { name: "Manufacturing & Production Engineering", path: "/department/manufacturing-production" },
+      { name: "Design Engineering (CAD/CAE)", path: "/department/design-engineering-cad" },
+      { name: "Robotics & Mechatronics", path: "/department/robotics-mechatronics" },
+      { name: "Renewable & Thermal Energy", path: "/department/renewable-thermal-energy" },
+      { name: "Automotive & Vehicle Engineering", path: "/department/automotive-vehicle-engineering" },
+      { name: "Mechatronics & Control Systems", path: "/department/mechatronics-control-systems" },
+      { name: "Mechanical Properties & Materials", path: "/department/mechanical-properties-materials" },
+      { name: "Industrial & Production Optimization", path: "/department/industrial-production-optimization" },
+    ],
+
+    other: [],
   };
 
   const departments = [
@@ -131,11 +132,11 @@ eee: [
     },
   ];
 
-  const [activeDept, setActiveDept] = useState("cse"); // default like your screenshot
+  const [activeDept, setActiveDept] = useState(deptFromUrl);
 
-  const handleDeptClick = (id) => {
-    setActiveDept(id);
-  };
+  useEffect(() => {
+    setActiveDept(deptFromUrl);
+  }, [deptFromUrl]);
 
   const activeDeptObj = departments.find((d) => d.id === activeDept);
 
@@ -163,13 +164,15 @@ eee: [
                   className={`dept-card dept-card--${dept.id} ${
                     isActive ? "active" : ""
                   }`}
-                  onClick={() => handleDeptClick(dept.id)}
+                  onClick={() => setSearchParams({ dept: dept.id })}
                 >
                   <div className="dept-card-top-row">
                     <div className="dept-card-icon-wrap">
                       <Icon className="dept-card-icon" />
                     </div>
-                    {isActive && <span className="dept-active-pill">Active</span>}
+                    {isActive && (
+                      <span className="dept-active-pill">Active</span>
+                    )}
                   </div>
                   <div className="dept-card-title">{dept.title}</div>
                   <div className="dept-card-desc">{dept.desc}</div>

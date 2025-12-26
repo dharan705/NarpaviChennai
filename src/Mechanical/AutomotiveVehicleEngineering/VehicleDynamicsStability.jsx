@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Vehicle Dynamics & Stability Project Development Center offer?",
@@ -27,6 +27,26 @@ const faqs = [
 const MEVehicleDynamicsStabilityProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+       <SEO
+        title="Vehicle Dynamics & Stability IEEE Projects (2023–2025)"
+        description="Vehicle Dynamics Stability IEEE project development for B.Tech, M.Tech & PhD using MATLAB, CarSim, AI stability control, ABS/ESC systems, autonomous vehicle dynamics, IoT monitoring, digital twin modeling for automotive safety."
+        url="/department/automotive-vehicle-engineering/vehicle-dynamics-stability"
+        type="article"
+        keywords={[
+          "Vehicle Dynamics IEEE 2023–2025",
+          "Automotive Stability Projects",
+          "AI Based Vehicle Control Systems",
+          "Autonomous Vehicle Stability IEEE",
+          "Suspension Optimization Projects",
+          "Rollover Prevention IEEE Projects",
+          "Traction Control Simulation",
+          "Vehicle Digital Twin Modeling",
+          "Smart Vehicle Stability Systems",
+          "Narpavi Research Institute Vehicle Engineering Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -233,23 +253,6 @@ const MEVehicleDynamicsStabilityProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -257,12 +260,38 @@ const MEVehicleDynamicsStabilityProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/automotive-vehicle-engineering-project-development">Automotive & Vehicle Engineering Project Development</a></li>
-              <li><a href="/electric-vehicle-design-control-project-development">Electric Vehicle Design & Control Project Development</a></li>
-              <li><a href="/hybrid-vehicle-powertrains-project-development">Hybrid Vehicle Powertrains Project Development</a></li>
-              <li><a href="/smart-grid-integration-project-development">Smart Grid Integration for Automotive & Vehicle Engineering</a></li>
-              <li><a href="/embedded-control-systems-project-development">Embedded Control Systems Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/automotive-vehicle-engineering">
+      Automotive & Vehicle Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
+      Electric Vehicle Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
+      Hybrid Vehicle Powertrains
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
+      Vehicle Dynamics & Stability
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
+      Engine Performance Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
+      Emission Control & Fuel Efficiency
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

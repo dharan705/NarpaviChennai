@@ -11,7 +11,36 @@ const SCIJournal = () => {
     <div className="SCIJournalSupport-container">
       <Sidebar/>
       {/* Left Side - Empty */}
-      <div className="SCIJournalSupport-left"></div>
+      <div className="SCIJournalSupport-left">
+         <h3>Related Services</h3>
+        <ul>
+          <li>
+            <button onClick={() => navigate("/publication-services/sci-journal-targeting")}>
+              SCI Journal Targeting Service
+            </button>
+          </li>
+          <li>
+            <button onClick={() => navigate("/publication-services/sci-publishing-timelines")}>
+              SCI Publishing Timelines Support
+            </button>
+          </li>
+          <li>
+            <button onClick={() => navigate("/publication-services/ethical-sci-publication")}>
+              Ethical & Compliant SCI Publication
+            </button>
+          </li>
+          <li>
+            <button onClick={() => navigate("/publication-services/open-access-vs-subscription")}>
+              Open Access & Subscription SCI Journals
+            </button>
+          </li>
+          <li>
+            <button onClick={() => navigate("/publication-services/post-publication-visibility")}>
+              Post-Publication Visibility & Indexing
+            </button>
+          </li>
+        </ul>
+      </div>
 
       {/* Main Section */}
       <div className="SCIJournalSupport-main">
@@ -173,35 +202,7 @@ const SCIJournal = () => {
 
       {/* Right Sidebar */}
       <div className="SCIJournalSupport-right">
-        <h3>Related Services</h3>
-        <ul>
-          <li>
-            <button onClick={() => navigate("/publication-services/sci-journal-targeting")}>
-              SCI Journal Targeting Service
-            </button>
-          </li>
-          <li>
-            <button onClick={() => navigate("/publication-services/sci-publishing-timelines")}>
-              SCI Publishing Timelines Support
-            </button>
-          </li>
-          <li>
-            <button onClick={() => navigate("/publication-services/ethical-sci-publication")}>
-              Ethical & Compliant SCI Publication
-            </button>
-          </li>
-          <li>
-            <button onClick={() => navigate("/publication-services/open-access-vs-subscription")}>
-              Open Access & Subscription SCI Journals
-            </button>
-          </li>
-          <li>
-            <button onClick={() => navigate("/publication-services/post-publication-visibility")}>
-              Post-Publication Visibility & Indexing
-            </button>
-          </li>
-        </ul>
-
+       
         <h3>Keywords</h3>
         <div className="SCIJournalSupport-tags">
           <span>SCI journal publication services</span>

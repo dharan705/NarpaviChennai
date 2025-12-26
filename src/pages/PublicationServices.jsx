@@ -39,7 +39,7 @@ const services = [
     description:
       "High-quality academic writing and submission support for UGC Care listed journals, ideal for faculty, PhD scholars, and academic professionals.",
     linkText: "Read More",
-    link: "#",
+    link: "/publication-services/ugc-care-journal-publication-services",
   },
   {
     icon: <FaEdit />,
@@ -47,7 +47,7 @@ const services = [
     description:
       "We craft in-depth, literature-rich review articles with a strong analytical framework and critical insights—targeted for SCI, Scopus, and other indexed journals.",
     linkText: "Read More",
-    link: "#",
+    link: "/publication-services/review-article-publication",
   },
   {
     icon: <FaBook />,
@@ -55,7 +55,7 @@ const services = [
     description:
       "From academic book writing to ISBN registration and publisher coordination, we provide comprehensive support for individual authors and institutions.",
     linkText: "Read More",
-    link: "#",
+    link: "/publication-services/book-isbn-publication-support",
   },
 ];
 
@@ -72,7 +72,7 @@ const PublicationServices = () => {
           At <strong>Narpavi Research Institute</strong>, we offer trusted, expert-backed academic publication services tailored for researchers, PhD scholars, and academicians.
         </p>
 
-        <button>Read More</button>
+      <button ><a href="/publication-services">Read More</a></button>
 
         <div className="publication-grid">
           {services.map((service, index) => (

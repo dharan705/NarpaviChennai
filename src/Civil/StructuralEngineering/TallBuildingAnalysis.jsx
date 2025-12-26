@@ -1,6 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Tall Building Analysis Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const CETallBuildingAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+      <SEO
+        title="Tall Building Analysis IEEE Projects (2023–2025)"
+        description="Tall Building Analysis IEEE project development for B.Tech, M.Tech & PhD scholars using ETABS, SAP2000, ANSYS, outrigger systems, wind tunnel testing, seismic analysis, AI monitoring for skyscrapers and high-rise structures."
+        url="/department/structural-engineering/tall-building-analysis"
+        type="article"
+        keywords={[
+          "Tall Building Analysis IEEE 2023–2025",
+          "High-rise Structural Engineering Projects",
+          "Seismic Design Tall Buildings",
+          "Wind Load Skyscraper Analysis",
+          "Outrigger System Tall Building Projects",
+          "RCC vs Steel High-rise Comparison",
+          "Performance-based High-rise Design",
+          "Narpavi Research Institute Civil Projects",
+          "Tall Building Aerodynamics Projects",
+          "Tall Building Optimization Projects"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -218,24 +237,6 @@ const CETallBuildingAnalysisProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -243,12 +244,33 @@ const CETallBuildingAnalysisProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/earthquake-resistant-structures-project-development">Earthquake Resistant Structures Project Development</a></li>
-              <li><a href="/steel-rcc-design-optimization-project-development">Steel & RCC Design Optimization Project Development</a></li>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/structural-engineering">
+      Structural Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/earthquake-resistant-structures">
+      Earthquake Resistant Structures
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/steel-rcc-design-optimization">
+      Steel & RCC Design Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/tall-building-analysis">
+      Tall Building Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/bridge-design-monitoring">
+      Bridge Design & Monitoring
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

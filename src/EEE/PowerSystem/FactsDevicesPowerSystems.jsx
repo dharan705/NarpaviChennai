@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the FACTS Devices in Power Systems Project Development Center offer?",
@@ -27,6 +27,26 @@ const faqs = [
 const EEEFACTSPowerSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+       <SEO
+        title="FACTS Devices in Power Systems IEEE Projects (2023–2025)"
+        description="FACTS Devices Power Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB/Simulink, PSCAD, DIgSILENT, STATCOM, SSSC, UPFC, DVR, AI control, smart grid stability, voltage regulation."
+        url="/department/power-systems/facts-power-systems"
+        type="article"
+        keywords={[
+          "FACTS Project Development Center",
+          "IEEE FACTS Devices Projects 2023–2025",
+          "STATCOM Project Development",
+          "UPFC SSSC Research",
+          "DVR Voltage Restoration Projects",
+          "B.Tech FACTS Device Projects",
+          "M.Tech Power System Control Projects",
+          "Ph.D. FACTS Optimization Research",
+          "Smart Grid FACTS Projects",
+          "Narpavi Research Institute"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -196,23 +216,6 @@ const EEEFACTSPowerSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -220,12 +223,38 @@ const EEEFACTSPowerSystemsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/power-system-stability-control-project-development">Power System Stability & Control Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/load-flow-analysis-project-development">Load Flow Analysis Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/power-systems">
+      Power Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/distributed-generation-integration">
+      Distributed Generation Integration
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/facts-power-systems">
+      FACTS Power Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/load-flow-analysis">
+      Load Flow Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/power-system-protection-relays">
+      Power System Protection & Relays
+    </a>
+  </li>
+  <li>
+    <a href="/department/power-systems/power-system-stability-control">
+      Power System Stability & Control
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

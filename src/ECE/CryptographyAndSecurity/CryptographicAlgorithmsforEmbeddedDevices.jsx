@@ -1,6 +1,6 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What are cryptographic algorithms for embedded devices?",
@@ -27,6 +27,13 @@ const faqs = [
 const CryptographicAlgorithmsEmbeddedProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="Cryptographic Algorithms for Embedded Devices IEEE Projects | AES, ECC, PQC, FPGA | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) embedded cryptography projects on AES, RSA, ECC, lightweight ciphers, post-quantum cryptography, and FPGA/ARM-based hardware acceleration for IoT, wearables, and secure embedded systems."
+        keywords="Cryptographic Algorithms for Embedded Devices, Lightweight Cryptography Projects, FPGA Cryptography Projects, AES RSA ECC Implementation, Post-Quantum Cryptography for IoT, Secure Embedded System Projects, B.Tech Cryptography Projects, M.Tech Embedded Security Projects, Ph.D. Research in Cryptography, Hardware Accelerated Cryptography, Narpavi Research Institute Embedded Security"
+        url="/department/cryptography-security/cryptographic-algorithms-embedded"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -192,13 +199,15 @@ const CryptographicAlgorithmsEmbeddedProject = () => {
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/energy-efficient-routing-wsn-project-development">Energy-Efficient Routing in WSN Project Development</a></li>
-              <li><a href="/adaptive-nonlinear-control-systems-project-development">Adaptive and Nonlinear Control Systems Project Development</a></li>
-              <li><a href="/secure-iot-architectures-project-development">Secure IoT Architectures Project Development</a></li>
-              <li><a href="/edge-fog-computing-iot-project-development">Edge and Fog Computing in IoT Project Development</a></li>
-              <li><a href="/control-in-cyber-physical-systems-project-development">Control in Cyber-Physical Systems Project Development</a></li>
-            </ul>
+             <ul>
+  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
+  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+</ul>
           </div>
         </div>
       </div>

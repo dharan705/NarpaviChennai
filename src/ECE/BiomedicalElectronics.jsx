@@ -1,40 +1,68 @@
-
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from ".././assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Biomedical Electronics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Biomedical Electronics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) biomedical electronics projects, focusing on ECG/EEG processing, wearable sensors, medical imaging, and AI-driven diagnostics for industries like healthcare, telemedicine, and rehabilitation."
+    answer:
+      "Narpavi Research Institute’s Biomedical Electronics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) biomedical electronics projects, focusing on ECG/EEG processing, wearable sensors, medical imaging, and AI-driven diagnostics for industries like healthcare, telemedicine, and rehabilitation."
   },
   {
     question: "What types of biomedical electronics projects are supported?",
-    answer: "We support B.Tech projects (basic ECG/EEG systems, wearable sensors), M.Tech projects (AI-based diagnostics, IoT integration), and Ph.D. projects (FPGA-based devices, advanced BCI) for applications in cardiology, neurology, and rural healthcare."
+    answer:
+      "We support B.Tech projects (basic ECG/EEG systems, wearable sensors), M.Tech projects (AI-based diagnostics, IoT integration), and Ph.D. projects (FPGA-based devices, advanced BCI) for applications in cardiology, neurology, and rural healthcare."
   },
   {
     question: "Which technologies are used in biomedical electronics project development?",
-    answer: "Our stack includes MATLAB, LabVIEW, Proteus, Multisim, FPGA platforms, Python, and microcontrollers like Arduino, STM32, and PIC for scalable biomedical solutions."
+    answer:
+      "Our stack includes MATLAB, LabVIEW, Proteus, Multisim, FPGA platforms, Python, and microcontrollers like Arduino, STM32, and PIC for scalable biomedical solutions."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-powered diagnostics, IoT healthcare, and medical imaging, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-powered diagnostics, IoT healthcare, and medical imaging, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, circuit design, algorithm development, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, circuit design, algorithm development, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ✅ SEO */}
+      <SEO
+        title="Biomedical Electronics IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        description="Biomedical Electronics project development for B.Tech, M.Tech & PhD students focusing on ECG, EEG, wearable health devices, medical imaging, AI diagnostics, IoT healthcare, and FPGA-based biomedical systems."
+        url="/biomedical-electronics-project-development"
+        type="article"
+        keywords={[
+          "Biomedical Electronics Project Development",
+          "IEEE Biomedical Projects",
+          "ECG Signal Processing Projects",
+          "EEG BCI Development",
+          "Wearable Health Monitoring",
+          "Medical Imaging Projects",
+          "IoT Healthcare Devices",
+          "AI in Biomedical Engineering",
+          "PhD Biomedical Research Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
+
+          {/* Left */}
           <div className="ECEProjectDevelopmentCenter-left">
-             <h3>🔑 Keywords</h3>
+            <h3>🔑 Keywords</h3>
             <ul>
               <li>Biomedical Electronics Project Development</li>
               <li>IEEE Biomedical Projects</li>
@@ -48,12 +76,19 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
               <li>M.Tech Biomedical Projects</li>
               <li>Ph.D. Biomedical Research Support</li>
               <li>Narpavi Research Institute</li>
-            </ul> 
+            </ul>
           </div>
 
-          {/* Center: Main Content */}
+          {/* Center */}
           <div className="ECEProjectDevelopmentCenter-center">
             <h1>Biomedical Electronics – Project Development Center</h1>
+
+            <p className="seo-internal-links">
+              Explore related services:
+              <a href="/ece-project-development"> ECE Project Development</a>,
+              <a href="/phd-project-development"> PhD Research Guidance</a>,
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
+            </p>
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
@@ -100,7 +135,7 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
                       <td>Medium</td>
                     </tr>
                     <tr>
-                      <td>Medical Imaging Enhancement (MRI, CT, Ultrasound)</td>
+                      <td>Medical Imaging Enhancement</td>
                       <td>Radiology, Diagnostic Centers</td>
                       <td>M.Tech/Ph.D.</td>
                       <td>ITK, 3D Slicer</td>
@@ -113,47 +148,12 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
                       <td>FPGA, Cadence</td>
                       <td>Expert</td>
                     </tr>
-                    <tr>
-                      <td>AI-powered Diagnostic Systems</td>
-                      <td>Hospitals, Telemedicine Platforms</td>
-                      <td>M.Tech/Ph.D.</td>
-                      <td>TensorFlow, PyTorch</td>
-                      <td>Very High</td>
-                    </tr>
-                    <tr>
-                      <td>Biomedical IoT Systems</td>
-                      <td>Remote Patient Care, Home Healthcare</td>
-                      <td>M.Tech/Ph.D.</td>
-                      <td>Mosquitto, AWS IoT</td>
-                      <td>High</td>
-                    </tr>
-                    <tr>
-                      <td>Lab-on-a-Chip Devices</td>
-                      <td>Biotechnology, Clinical Research</td>
-                      <td>Ph.D.</td>
-                      <td>COMSOL, AutoCAD</td>
-                      <td>Expert</td>
-                    </tr>
-                    <tr>
-                      <td>Prosthetic Control Systems</td>
-                      <td>Rehabilitation, Assistive Technology</td>
-                      <td>M.Tech/Ph.D.</td>
-                      <td>MATLAB, ROS</td>
-                      <td>Very High</td>
-                    </tr>
-                    <tr>
-                      <td>Wireless Health Data Transmission</td>
-                      <td>Emergency Medical Services, Rural Healthcare</td>
-                      <td>B.Tech/M.Tech</td>
-                      <td>Zigbee, Bluetooth Low Energy</td>
-                      <td>High</td>
-                    </tr>
                   </tbody>
                 </table>
               </div>
             </section>
 
-             <section className="ECEProjectDevelopmentCenter-btech">
+            <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Biomedical Electronics Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational biomedical electronics projects like ECG/EEG systems or wearable sensors, aligned with IEEE topics.
@@ -165,9 +165,6 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
                 <li>Hardware implementation with Arduino or STM32</li>
                 <li>Documentation and IEEE-format presentation support</li>
               </ul>
-              <p>
-                The style emphasizes hands-on learning, practical biomedical systems, and academic-ready output.
-              </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-mtech">
@@ -178,13 +175,9 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
               <ul>
                 <li>IEEE topic selection with literature review</li>
                 <li>Development with AI, ML, or embedded systems</li>
-                <li>Features like clinical data analysis or medical standards compliance</li>
                 <li>Integration with IoT or cloud platforms</li>
                 <li>Thesis support with journal-ready documentation</li>
               </ul>
-              <p>
-                The style focuses on research-driven, scalable, and industry-grade biomedical solutions.
-              </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-phd">
@@ -193,48 +186,32 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
                 For doctoral scholars, our center focuses on pioneering biomedical electronics research in FPGA-based devices, advanced BCI, and AI-driven diagnostics.
               </p>
               <ul>
-                <li>Problem formulation with IEEE 2023–2025 gap analysis</li>
-                <li>Advanced system design with custom PCBs or FPGA</li>
-                <li>Prototyping with clinical-level testing</li>
-                <li>Validation with advanced data analysis</li>
+                <li>Problem formulation with IEEE gap analysis</li>
+                <li>Advanced system design with FPGA or custom PCBs</li>
+                <li>Clinical-level prototyping and validation</li>
                 <li>Publication and patent filing assistance</li>
               </ul>
-              <p>
-                The style emphasizes innovation, research rigor, and publication-ready outcomes.
-              </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Biomedical Electronics Project Titles (2023–2025)</h2>
               <ul>
-                <li>FPGA-Based Real-Time ECG Signal Processing for Arrhythmia Detection</li>
-                <li>AI-Enabled Portable Ultrasound Image Enhancement System</li>
-                <li>IoT-Integrated Wearable Health Monitoring for Elderly Care</li>
-                <li>Non-invasive Glucose Monitoring Using Optical Sensors and Machine Learning</li>
-                <li>Brain-Computer Interface for Rehabilitation of Stroke Patients</li>
-                <li>Low-Power Implantable Pacemaker with AI-based Heart Rate Optimization</li>
-                <li>Deep Learning Framework for Early Detection of Parkinson’s Disease</li>
-                <li>Real-Time EEG Monitoring with Edge Computing for Seizure Prediction</li>
-                <li>Cloud-Based Medical Image Archiving and Retrieval System</li>
-                <li>Wireless Body Area Network for Emergency Medical Response</li>
-                <li>AI-Powered Lab-on-a-Chip Device for Rapid Disease Detection</li>
-                <li>Multimodal Medical Image Fusion for Cancer Diagnosis</li>
-                <li>Machine Learning-Based Prosthetic Limb Control Using EMG Signals</li>
-                <li>Low-Cost Telemedicine Device for Rural Healthcare Access</li>
-                <li>Wearable Sensor Network for Predictive Cardiac Health Monitoring</li>
+                <li>FPGA-Based Real-Time ECG Signal Processing</li>
+                <li>AI-Enabled Portable Ultrasound Enhancement</li>
+                <li>IoT-Integrated Wearable Health Monitoring</li>
+                <li>Brain-Computer Interface for Rehabilitation</li>
+                <li>Wireless Body Area Network for Emergency Care</li>
               </ul>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute is an India-based global hub for academic and industrial research support, dedicated to providing world-class project development assistance. Specializing in IEEE-compliant biomedical electronics projects, the institute combines cutting-edge laboratory facilities, domain experts, and modern tools to deliver innovations that are both academically superior and industrially relevant.
-              </p>
-              <p>
-                Our strong ties with research organizations and industry leaders ensure students receive up-to-date knowledge and hands-on exposure that meets international quality standards.
+                Narpavi Research Institute is a global hub for IEEE-compliant biomedical electronics project development, combining academic rigor, clinical relevance, and industry exposure.
               </p>
             </section>
 
+            {/* FAQ UI only — Schema handled by SEO */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -245,40 +222,24 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
-            
+            <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

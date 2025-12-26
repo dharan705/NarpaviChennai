@@ -1,10 +1,11 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Industrial & Production Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Industrial & Production Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on lean manufacturing, supply chain optimization, smart factories, IoT-based safety systems, and cost-time optimization for automotive, electronics, and industrial applications."
+    answer: "Narpavi Research Institute's Industrial & Production Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on lean manufacturing, supply chain optimization, smart factories, IoT-based safety systems, and cost-time optimization for automotive, electronics, and industrial applications."
   },
   {
     question: "What types of Industrial & Production Optimization projects are supported?",
@@ -22,11 +23,18 @@ const faqs = [
     question: "What support is provided for academic submissions?",
     answer: "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
   }
-];
+]; 
 
 const MEIndustrialProductionOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO 
+        title="Industrial Optimization IEEE Projects | Smart Factory | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023-2025) Industrial & Production Optimization projects. Lean manufacturing, AI supply chain, IoT safety, digital twins for automotive, electronics, smart factories."
+        keywords="Industrial Optimization Projects, Lean Manufacturing IEEE Projects, Smart Factory Industry 4.0 Projects, Supply Chain AI Projects, IoT-Based Industrial Safety, Cost Optimization in Manufacturing, B.Tech Industrial Projects, M.Tech Production Optimization Projects, Ph.D. Smart Factory Projects, Narpavi Research Institute Industrial Projects"
+        url="/department/industrial-production-optimization"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -201,37 +209,45 @@ const MEIndustrialProductionOptimizationProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/fatigue-fracture-analysis-project-development">Fatigue & Fracture Analysis Project Development</a></li>
-              <li><a href="/nanomaterials-mechanical-systems-project-development">Nanomaterials in Mechanical Systems Project Development</a></li>
-              <li><a href="/tribology-wear-analysis-project-development">Tribology & Wear Analysis Project Development</a></li>
-              <li><a href="/advanced-alloy-development-project-development">Advanced Alloy Development Project Development</a></li>
-              <li><a href="/composite-materials-analysis-project-development">Composite Materials Analysis Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/industrial-production-optimization">
+      Industrial Production Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/lean-manufacturing">
+      Lean Manufacturing
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/supply-chain-process">
+      Supply Chain Process Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
+      Industrial Safety & Ergonomics
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/smart-factory-systems">
+      Smart Factory Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/industrial-production-optimization/cost-time-optimization">
+      Cost & Time Optimization
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

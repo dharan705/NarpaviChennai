@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the IoT in EEE Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEIoTProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="IoT in EEE IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) IoT in EEE projects for B.Tech, M.Tech, Ph.D. Smart grids, renewable energy, EV charging, industrial automation using Arduino Raspberry Pi ESP32 NodeMCU MATLAB Python NS3 ThingSpeak AWS IoT Firebase."
+  keywords="IoT EEE IEEE Projects 2023–2025, B.Tech IoT Smart Meters Home Automation, M.Tech AI IoT Smart Grids EV Charging, Ph.D. Blockchain Edge AI IoT, Smart City Energy Monitoring, Narpavi Research Institute"
+  url="/department/iot-electrical-systems"
+  faqs={faqs}
+/>
+
       <Sidebar />
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
@@ -238,51 +246,50 @@ const EEEIoTProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/biomedical-electronics-project-development">Biomedical Electronics Project Development</a></li>
-              <li><a href="/communication-systems-project-development">Communication Systems Project Development</a></li>
-              <li><a href="/cryptography-security-project-development">Cryptography & Security Project Development</a></li>
-              <li><a href="/iot-project-development">IoT Project Development</a></li>
-              <li><a href="/signal-processing-project-development">Signal Processing Project Development</a></li>
-              <li><a href="/satellite-space-communication-project-development">Satellite & Space Communication Project Development</a></li>
-              <li><a href="/vlsi-design-embedded-systems-project-development">VLSI Design & Embedded Systems Project Development</a></li>
-              <li><a href="/wireless-sensor-networks-project-development">Wireless Sensor Networks Project Development</a></li>
-              <li><a href="/power-systems-project-development">Power Systems Project Development</a></li>
-              <li><a href="/electrical-machines-project-development">Electrical Machines Project Development</a></li>
-              <li><a href="/power-electronics-project-development">Power Electronics Project Development</a></li>
-              <li><a href="/renewable-energy-systems-project-development">Renewable Energy Systems Project Development</a></li>
-              <li><a href="/smart-grid-microgrid-project-development">Smart Grid & Microgrid Project Development</a></li>
-              <li><a href="/high-voltage-engineering-project-development">High Voltage Engineering Project Development</a></li>
-              <li><a href="/embedded-systems-project-development">Embedded Systems Project Development</a></li>
-              <li><a href="/control-systems-project-development">Control Systems Project Development</a></li>
-              <li><a href="/industrial-automation-project-development">Industrial Automation Project Development</a></li>
-              <li><a href="/electric-vehicles-project-development">Electric Vehicles Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-              <li><a href="/energy-management-systems-project-development">Energy Management Systems Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/iot-electrical-systems">
+      IoT in Electrical Systems – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/smart-grids">
+      IoT for Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/renewable-energy">
+      IoT in Renewable Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/predictive-maintenance">
+      IoT for Predictive Maintenance
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/smart-home-automation">
+      Smart Home Automation with IoT
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/smart-meters">
+      IoT-Enabled Smart Meters
+    </a>
+  </li>
+  <li>
+    <a href="/department/iot-electrical-systems/health-monitoring">
+      IoT-Based Health Monitoring
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

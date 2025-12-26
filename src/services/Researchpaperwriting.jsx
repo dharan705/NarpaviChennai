@@ -1,109 +1,136 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar"
+import SubSiderbar from "../pages/Subsidebar";
+import SEO from "../assets/SEO";
+
 const faqs = [
   {
     question: "Are research paper writing services legal for PhD students?",
-    answer: "Yes, as long as the service provides guidance, editing, or support and the student maintains authorship and academic integrity."
+    answer:
+      "Yes, as long as the service provides guidance, editing, or support and the student maintains authorship and academic integrity.",
   },
   {
     question: "Can I get help with data analysis for my research paper?",
-    answer: "Yes, many services offer data analysis support using statistical tools like SPSS, R, or Python, depending on your research domain."
+    answer:
+      "Yes, many services offer data analysis support using statistical tools like SPSS, R, or Python, depending on your research domain.",
   },
   {
     question: "Will my paper be plagiarism-free?",
-    answer: "Reputable services ensure originality and provide plagiarism reports to confirm the content is unique and properly cited."
+    answer:
+      "Reputable services ensure originality and provide plagiarism reports to confirm the content is unique and properly cited.",
   },
   {
     question: "Can I choose my own citation style?",
-    answer: "Yes, most services support APA, MLA, Chicago, IEEE, and other styles based on your university or journal requirements."
+    answer:
+      "Yes, most services support APA, MLA, Chicago, IEEE, and other styles based on your university or journal requirements.",
   },
   {
     question: "Is it ethical to use research paper writing services?",
-    answer: "Yes, if used for guidance, proofreading, or formatting. It's unethical to pass off someone else’s work as your own."
-  }
+    answer:
+      "Yes, if used for guidance, proofreading, or formatting. It's unethical to pass off someone else’s work as your own.",
+  },
 ];
 
 const ResearchPaper = () => {
   return (
     <div className="phd-service">
+      <SEO
+        title="Research Paper Writing Help / Services"
+        description="Support for PhD research paper writing: expert guidance, literature review, methodology, data analysis, editing, formatting, and ethical use of writing services."
+        url="/service/research-paper-writing"
+        keywords={[
+          "research paper writing help",
+          "PhD research paper services",
+          "data analysis support SPSS R Python",
+          "academic editing and formatting",
+        ]}
+        faqs={faqs}
+      />
+
       <SubSiderbar />
-    <div className="phd-guidance-container">
-        <h1 className="title"> Research Paper Writing Help / Services </h1>
 
-      <p>
-        Research paper writing services for Ph.D. candidates are offered by various organizations and individuals to assist students in their academic journey. These services are designed to provide support and guidance throughout the research and writing process, helping students produce high-quality research papers that meet academic standards.
-      </p>
+      <div className="phd-guidance-container">
+        <h1 className="title">Research Paper Writing Help / Services</h1>
 
-      <p>Here are some common features and benefits of research paper writing services for Ph.D. students:</p>
+        <p>
+          Research paper writing services for PhD candidates support students in
+          planning, structuring, and polishing manuscripts so they meet academic
+          standards without replacing the candidate’s own intellectual
+          contribution.
+        </p>
 
-      <ol>
-        <li>
-          <strong>Professional Writers:</strong> Many services employ skilled and experienced writers with expertise in various academic disciplines. These writers can help Ph.D. candidates with their research papers, ensuring high-quality content and adherence to academic guidelines.
-        </li>
-        <li>
-          <strong>Original Research:</strong> Research paper writing services often emphasize originality, ensuring that the content provided is unique and plagiarism-free. This is particularly crucial for academic integrity.
-        </li>
-        <li>
-          <strong>Customization:</strong> The services can be tailored to suit individual needs. Ph.D. candidates can discuss their research requirements with the writers to receive personalized assistance.
-        </li>
-        <li>
-          <strong>Literature Review:</strong> Writers can help students conduct a comprehensive literature review, ensuring that the research paper is well-grounded in existing academic work.
-        </li>
-        <li>
-          <strong>Research Methodology:</strong> Assistance can be provided in defining and refining the research methodology, data collection, and analysis methods.
-        </li>
-        <li>
-          <strong>Data Analysis:</strong> Some services may offer support in analyzing research data using appropriate statistical methods and software.
-        </li>
-        <li>
-          <strong>Editing and Proofreading:</strong> Research paper writing services often include thorough editing and proofreading to improve the clarity, coherence, and overall quality of the paper.
-        </li>
-        <li>
-          <strong>Formatting and Citations:</strong> Writers can ensure that the research paper adheres to the required formatting styles (APA, MLA, Chicago, etc.) and includes accurate citations and references.
-        </li>
-        <li>
-          <strong>Meeting Deadlines:</strong> Many services are equipped to handle tight deadlines, allowing Ph.D. candidates to submit their research papers on time.
-        </li>
-      </ol>
+        <p>
+          Here are common features and benefits of such services for PhD
+          students:
+        </p>
 
-      <p>
-        While research paper writing services can be helpful, it's essential for Ph.D. students to maintain academic integrity and ensure that they actively participate in the research and writing process. Seeking assistance should not involve outsourcing the entire work but rather using these services as a supportive tool for improving their research papers.
-      </p>
+        <ol>
+          <li>
+            <strong>Professional Writers:</strong> Many providers work with
+            subject‑matter experts who understand disciplinary norms and journal
+            expectations.
+          </li>
+          <li>
+            <strong>Original Research:</strong> Quality services stress
+            originality and use plagiarism checks to keep content unique and
+            properly cited.
+          </li>
+          <li>
+            <strong>Customization:</strong> Assistance can be tailored to your
+            topic, university guidelines, and target journal.
+          </li>
+          <li>
+            <strong>Literature Review:</strong> Support in structuring and
+            articulating a comprehensive, critical review of prior work.
+          </li>
+          <li>
+            <strong>Research Methodology:</strong> Guidance in framing research
+            design, data collection, and analysis plans.
+          </li>
+          <li>
+            <strong>Data Analysis:</strong> In some cases, help with running and
+            explaining appropriate statistical or qualitative analyses using
+            tools like SPSS, R, Python, or similar.
+          </li>
+          <li>
+            <strong>Editing and Proofreading:</strong> Language, flow, and
+            clarity improvements to make the manuscript more readable and
+            professional.
+          </li>
+          <li>
+            <strong>Formatting and Citations:</strong> Alignment with required
+            styles (APA, MLA, Chicago, IEEE, etc.), including in‑text references
+            and reference lists.
+          </li>
+          <li>
+            <strong>Meeting Deadlines:</strong> Help organizing work so drafts
+            are ready in time for supervisor or journal deadlines.
+          </li>
+        </ol>
 
-      <p>
-        Ph.D. students should exercise caution when selecting research paper writing services. They should research the credibility and reputation of the service providers, read reviews from other clients, and confirm that the services align with academic guidelines and ethical standards.
-      </p>
-         <section className="servicefaq-section">
-  <h2>📘 FAQs on Annexure Journal Publications</h2>
-  <div className="faq-items">
-    {faqs.map((faq, index) => (
-      <details key={index}>
-        <summary>{faq.question}</summary>
-        <p>{faq.answer}</p>
-      </details>
-    ))}
-  </div>
+        <p>
+          These services should be used as support, not as a substitute for your
+          own research. PhD students need to stay closely involved, verify all
+          content, and ensure that the final work reflects their own ideas and
+          complies with institutional ethics.
+        </p>
 
-  {/* Proper way to include JSON-LD schema in React */}
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-          "@type": "Question",
-          "name": faq.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": faq.answer
-          }
-        }))
-      })
-    }}
-  />
-</section>
-    </div>
+        <p>
+          When choosing a provider, check reviews, sample work, and policies to
+          ensure quality, confidentiality, and adherence to academic integrity.
+        </p>
+
+        <section className="servicefaq-section">
+          <h2>📘 FAQs on Annexure Journal Publications</h2>
+          <div className="faq-items">
+            {faqs.map((faq, index) => (
+              <details key={index}>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

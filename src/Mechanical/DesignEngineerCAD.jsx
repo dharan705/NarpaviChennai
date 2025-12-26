@@ -1,11 +1,11 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Design Engineering / CAD & CAM Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Design Engineering / CAD & CAM Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on FEA, topology optimization, mechanism design, AI-driven CAD, and PLM for industries like automotive, aerospace, and manufacturing."
+    answer: "Narpavi Research Institute's Design Engineering / CAD & CAM Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on FEA, topology optimization, mechanism design, AI-driven CAD, and PLM for industries like automotive, aerospace, and manufacturing."
   },
   {
     question: "What types of CAD & CAM projects are supported?",
@@ -28,6 +28,13 @@ const faqs = [
 const MEDesignEngineeringCADCAMProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO 
+        title="CAD/CAM IEEE Projects | FEA, Topology Optimization | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023-2025) Design Engineering / CAD & CAM projects. SolidWorks, ANSYS, CATIA, AI-driven design, topology optimization, digital twins for automotive, aerospace."
+        keywords="CAD/CAM IEEE Projects 2023–2025, FEA Project Development, Topology Optimization Student Projects, Mechanism Design IEEE Research, PLM Project Ideas, AI-Assisted CAD Modeling, Multi-Physics Simulation Projects, CAD-CAM Integration Student Projects, Narpavi Research Institute CAD & CAM Projects, Smart Manufacturing Design Projects"
+        url="/department/design-engineering-cad"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -224,24 +231,6 @@ const MEDesignEngineeringCADCAMProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -249,12 +238,38 @@ const MEDesignEngineeringCADCAMProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/cnc-machining-optimization-project-development">CNC Machining Optimization Project Development</a></li>
-              <li><a href="/additive-manufacturing-project-development">Additive Manufacturing / 3D Printing Project Development</a></li>
-              <li><a href="/industrial-automation-robotics-project-development">Industrial Automation & Robotics Project Development</a></li>
-              <li><a href="/smart-manufacturing-systems-project-development">Smart Manufacturing Systems (Industry 4.0) Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/design-engineering-cad">
+      Design Engineering & CAD
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/finite-element-analysis">
+      Finite Element Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/cad-modeling-simulation">
+      CAD Modeling & Simulation
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/mechanism-design">
+      Mechanism Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/topology-optimization">
+      Topology Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/design-engineering-cad/product-lifecycle-management">
+      Product Lifecycle Management
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

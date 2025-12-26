@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";  
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the Regenerative Braking Systems Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEERegenerativeBrakingSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Regenerative Braking Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Regenerative Braking Systems projects for B.Tech, M.Tech, Ph.D. Energy recovery, adaptive braking, AI predictive control using MATLAB/Simulink, PSCAD, PLECS, Arduino STM32 DSP FPGA for EV cars, buses, fleet vehicles."
+  keywords="Regenerative Braking Systems IEEE Projects 2023–2025, B.Tech EV Braking Recovery, M.Tech Multi-Motor Regenerative Braking, Ph.D. AI ML Predictive Braking, Hybrid Braking EV, Energy Recovery Systems, Narpavi Research Institute"
+  url="/department/electric-vehicles/regenerative-braking-systems"
+  faqs={faqs}
+/>
+
       <Sidebar />
       
       <div className="EEEProjectDevelopmentCenter-main">

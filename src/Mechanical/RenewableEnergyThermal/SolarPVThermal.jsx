@@ -1,6 +1,6 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Solar PV & Thermal Systems Project Development Center offer?",
@@ -27,6 +27,25 @@ const faqs = [
 const MESolarPVThermalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO
+        title="Solar PV & Thermal Systems IEEE Projects (2023–2025)"
+        description="Solar PV Thermal Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PVsyst, AI optimization, IoT monitoring, hybrid PV-Thermal systems, smart grid integration for smart buildings, industrial heating."
+        url="/department/renewable-thermal-energy/solar-pv-thermal"
+        type="article"
+        keywords={[
+          "Solar PV IEEE 2023–2025",
+          "Hybrid PV Thermal Systems Projects",
+          "IoT Enabled Solar Systems",
+          "AI Based Solar Optimization",
+          "Renewable Energy Student Projects",
+          "PV System Modeling IEEE Projects",
+          "Smart Building Energy Solutions",
+          "Battery Integrated Solar Systems",
+          "Digital Twin Solar PV Thermal",
+          "Narpavi Research Institute Solar"
+        ]}
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -224,23 +243,6 @@ const MESolarPVThermalSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -248,12 +250,38 @@ const MESolarPVThermalSystemsProjectDevelopmentCenter = () => {
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/manufacturing-production-engineering-project-development">Manufacturing & Production Engineering Project Development</a></li>
-              <li><a href="/finite-element-analysis-project-development">Finite Element Analysis (FEA) Project Development</a></li>
-              <li><a href="/cad-modeling-simulation-project-development">CAD Modeling & Simulation Project Development</a></li>
-              <li><a href="/renewable-energy-thermal-mechanical-systems-project-development">Renewable Energy / Thermal & Mechanical Systems Project Development</a></li>
-              <li><a href="/embedded-control-systems-project-development">Embedded Control Systems Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/renewable-thermal-energy">
+      Renewable & Thermal Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
+      Solar PV & Thermal Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/wind-turbine-design">
+      Wind Turbine Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
+      Biomass & Biofuel Energy
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
+      Energy Storage & Recovery
+    </a>
+  </li>
+  <li>
+    <a href="/department/renewable-thermal-energy/smart-grid-integration">
+      Smart Grid Integration
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

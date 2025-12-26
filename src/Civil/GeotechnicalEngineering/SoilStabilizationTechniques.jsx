@@ -1,5 +1,6 @@
 import "../CEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO"
 
 const faqs = [
   {
@@ -27,6 +28,26 @@ const faqs = [
 const CESoilStabilizationTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+      <SEO
+        title="Soil Stabilization Techniques IEEE Projects (2023–2025)"
+        description="Soil Stabilization Techniques IEEE project development for B.Tech, M.Tech & PhD scholars focusing on lime/cement stabilization, nano-materials, geotextiles, fly ash applications, PLAXIS modeling, and IoT soil monitoring."
+        url="/department/geotechnical-engineering/soil-stabilization-techniques"
+        type="article"
+        keywords={[
+          "Soil Stabilization Techniques Projects",
+          "Cement Lime Soil Stabilization IEEE 2023–2025",
+          "Nano-materials Soil Stabilization",
+          "IoT Soil Monitoring Projects",
+          "Geotextile Geogrid Reinforcement",
+          "Fly Ash Soil Improvement Projects",
+          "B.Tech M.Tech PhD Soil Projects",
+          "Narpavi Research Institute Geotechnical Projects",
+          "Sustainable Infrastructure Projects",
+          "Advanced Soil Stabilization Research"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
@@ -215,24 +236,6 @@ const CESoilStabilizationTechniquesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
@@ -240,12 +243,28 @@ const CESoilStabilizationTechniquesProjectDevelopmentCenter = () => {
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/geotechnical-engineering-project-development">Geotechnical Engineering Project Development</a></li>
-              <li><a href="/structural-engineering-project-development">Structural Engineering Project Development</a></li>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/geotechnical-engineering">
+      Geotechnical Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+      Soil Stabilization Techniques
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/foundation-design">
+      Foundation Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/geotechnical-engineering/slope-stability-analysis">
+      Slope Stability Analysis
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

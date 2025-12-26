@@ -1,35 +1,61 @@
 import "./CEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Structural Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Structural Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural analysis, earthquake-resistant design, and IoT-based structural health monitoring for safe and sustainable infrastructure."
+    answer:
+      "Narpavi Research Institute’s Structural Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural analysis, earthquake-resistant design, and IoT-based structural health monitoring for safe and sustainable infrastructure."
   },
   {
     question: "What types of Structural Engineering projects are supported?",
-    answer: "We support B.Tech projects (basic structural design and modeling), M.Tech projects (advanced FEA and optimization), and Ph.D. projects (IoT and AI-driven structural monitoring) for applications in buildings, bridges, and dams."
+    answer:
+      "We support B.Tech projects (basic structural design and modeling), M.Tech projects (advanced FEA and optimization), and Ph.D. projects (IoT and AI-driven structural monitoring) for applications in buildings, bridges, and dams."
   },
   {
     question: "Which tools and technologies are used in Structural Engineering projects?",
-    answer: "Our stack includes AutoCAD, STAAD Pro, SAP2000, ETABS, ANSYS, ABAQUS, smart sensors, IoT modules (Wi-Fi/LoRa), and AI frameworks (TensorFlow, Keras) for structural analysis and monitoring."
+    answer:
+      "Our stack includes AutoCAD, STAAD Pro, SAP2000, ETABS, ANSYS, ABAQUS, smart sensors, IoT modules (Wi-Fi/LoRa), and AI frameworks (TensorFlow, Keras) for structural analysis and monitoring."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering and Structural Health Monitoring, focusing on seismic design, smart monitoring, and advanced materials."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering and Structural Health Monitoring, focusing on seismic design, smart monitoring, and advanced materials."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "We offer end-to-end guidance, including topic selection, system design, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
   }
 ];
 
 const CEStructuralEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO (added – content untouched) */}
+      <SEO
+        title="Structural Engineering IEEE Projects (2023–2025)"
+        description="Structural Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on structural analysis, earthquake-resistant design, IoT-based structural health monitoring, AI, and sustainable infrastructure."
+        url="/department/structural-engineering"
+        type="article"
+        keywords={[
+          "Structural Engineering Projects",
+          "Structural Health Monitoring IEEE Projects",
+          "Earthquake Resistant Structures",
+          "IoT Structural Engineering Projects",
+          "FEA Structural Analysis Projects",
+          "PhD Structural Engineering Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="CEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -48,6 +74,15 @@ const CEStructuralEngineeringProjectDevelopmentCenter = () => {
           {/* Center: Main Content */}
           <div className="CEProjectDevelopmentCenter-center">
             <h1>Structural Engineering – Project Development Support</h1>
+
+            {/* Internal links (added, original content preserved) */}
+            <p className="seo-internal-links">
+              Explore our
+              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
+              <a href="/phd-project-development"> PhD Project Guidance</a>, and
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
+              for complete academic support.
+            </p>
 
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
@@ -192,6 +227,7 @@ const CEStructuralEngineeringProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
+            {/* FAQ UI (schema handled by SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -202,38 +238,42 @@ const CEStructuralEngineeringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right: Related Services */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-              <li><a href="/iot-enabled-smart-meters-project-development">IoT-enabled Smart Meters Project Development</a></li>
-              <li><a href="/iot-smart-grids-project-development">IoT for Smart Grids Project Development</a></li>
-              <li><a href="/data-analytics-energy-savings-project-development">Data Analytics for Energy Savings Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+  <li>
+    <a href="/department/structural-engineering">
+      Structural Engineering
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/earthquake-resistant-structures">
+      Earthquake Resistant Structures
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/steel-rcc-design-optimization">
+      Steel & RCC Design Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/tall-building-analysis">
+      Tall Building Analysis
+    </a>
+  </li>
+  <li>
+    <a href="/department/structural-engineering/bridge-design-monitoring">
+      Bridge Design & Monitoring
+    </a>
+  </li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>

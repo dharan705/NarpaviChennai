@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO"
 const faqs = [
   {
     question: "What services does the Integration of Distributed Generation Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEIntegrationDistributedGenerationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Distributed Generation Integration IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Integration of Distributed Generation DG projects for B.Tech, M.Tech, Ph.D. Solar wind DG, smart inverters, AI predictive control using MATLAB/Simulink, PSIM, HOMER Pro, TensorFlow for microgrids, renewable energy integration."
+  keywords="Distributed Generation DG IEEE Projects 2023–2025, DG Integration Projects, B.Tech Solar Wind DG, M.Tech AI DG Optimization, Ph.D. Hybrid Renewable DG, IoT DG Monitoring, Smart Inverter Research, Microgrid DG Integration, Predictive Energy Management, Narpavi Research Institute"
+  url="/department/smart-grid-microgrid/integration-distributed-generation"
+  faqs={faqs}
+/>
+
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -218,13 +226,44 @@ const EEEIntegrationDistributedGenerationProjectDevelopmentCenter = () => {
           {/* Right Related */}
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/microgrid-energy-management-project-development">Microgrid Energy Management</a></li>
-              <li><a href="/smart-metering-demand-response-project-development">Smart Metering & Demand Response</a></li>
-              <li><a href="/grid-integration-of-renewables-project-development">Grid Integration of Renewables</a></li>
-              <li><a href="/energy-storage-renewable-integration-project-development">Energy Storage with Renewables</a></li>
-              <li><a href="/hybrid-renewable-energy-systems-project-development">Hybrid Renewable Energy Systems</a></li>
-            </ul>
+          <ul>
+  <li>
+    <a href="/department/smart-grid-microgrid">
+      Smart Grid & Microgrid – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
+      Cybersecurity for Smart Grids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
+      EV Charging & Microgrids
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
+      Integration of Distributed Generation
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
+      Microgrid Energy Management
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
+      Real-Time Monitoring & SCADA Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
+      Smart Metering & Demand Response
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

@@ -1,26 +1,27 @@
 import "./Home.scss";
-import Logo from "./Logo";
+// import Logo from "./Logo";
 import PhDresearch from "./PhDresearch";
 import Grid from "./Grid";
 //import Fact from "./Factandstats"
-import FacilitiesSection from "./FacilitiesSection"
+// import FacilitiesSection from "./FacilitiesSection"
 import ContactSection from "./ContactSection"
 import ResearchProposalServices from "./Researchproposalservices";
 import LeadingResearchServices from "./LeadingResearchServices"
 import PublicationServices from "./PublicationServices";
 import Departments from "./Departments";
- 
+ import Flip from "../Flip"
 const Home =() => {
 return(
     <div className="home"> 
-        <Logo/>
+    <Flip />
+        {/* <Logo/> */}
         <PhDresearch/>
         <Grid/>   
         <ResearchProposalServices/>
         <LeadingResearchServices/>
         <PublicationServices/> 
         <Departments/>
-        <FacilitiesSection/>
+        {/* <FacilitiesSection/> */}
         <ContactSection/>
     </div>
     );

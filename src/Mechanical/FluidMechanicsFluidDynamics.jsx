@@ -1,9 +1,11 @@
 import "./MEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
+
 const faqs = [
   {
     question: "What services does the Fluid Mechanics / Fluid Dynamics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Fluid Mechanics / Fluid Dynamics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CFD, turbomachinery, microfluidics, and fluid flow optimization for aerospace, automotive, and biomedical applications."
+    answer: "Narpavi Research Institute's Fluid Mechanics / Fluid Dynamics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CFD, turbomachinery, microfluidics, and fluid flow optimization for aerospace, automotive, and biomedical applications."
   },
   {
     question: "What types of Fluid Mechanics / Fluid Dynamics projects are supported?",
@@ -26,6 +28,13 @@ const faqs = [
 const MEFluidMechanicsFluidDynamicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      <SEO 
+        title="Fluid Dynamics IEEE Projects | CFD, Turbomachinery | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023-2025) Fluid Mechanics projects. ANSYS Fluent, COMSOL, OpenFOAM, CFD analysis, turbomachinery, microfluidics for aerospace, automotive, biomedical."
+        keywords="Fluid Mechanics Projects, Fluid Dynamics IEEE Projects 2023–2025, CFD Project Development, Turbomachinery Design Projects, Aerodynamics Student Projects, Microfluidics IEEE Projects, Energy-Efficient Fluid Systems, Experimental Fluid Mechanics Projects, Narpavi Research Institute Fluid Mechanics Projects"
+        url="/department/fluid-mechanics-dynamics"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
@@ -73,7 +82,7 @@ const MEFluidMechanicsFluidDynamicsProjectDevelopmentCenter = () => {
               <h2>B.Tech Fluid Mechanics / Fluid Dynamics Project Development</h2>
               <p>For undergraduate students, our center focuses on foundational fluid mechanics projects aligned with IEEE topics.</p>
               <ul>
-                <li>Learn fundamentals of laminar/turbulent flow and Bernoulli’s principle</li>
+                <li>Learn fundamentals of laminar/turbulent flow and Bernoulli's principle</li>
                 <li>Simulate fluid flow using ANSYS Fluent, COMSOL, or MATLAB</li>
                 <li>Conduct experiments with wind tunnels, pipe flow, or pump rigs</li>
                 <li>Validate results against theoretical predictions</li>
@@ -210,37 +219,45 @@ const MEFluidMechanicsFluidDynamicsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
           <div className="MEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/thermal-engineering-heat-transfer-project-development">Thermal Engineering / Heat Transfer Project Development</a></li>
-              <li><a href="/heat-exchanger-design-optimization-project-development">Heat Exchanger Design & Optimization Project Development</a></li>
-              <li><a href="/solar-thermal-systems-project-development">Solar Thermal Systems Project Development</a></li>
-              <li><a href="/waste-heat-recovery-systems-project-development">Waste Heat Recovery Systems Project Development</a></li>
-              <li><a href="/hvac-system-analysis-project-development">HVAC System Analysis Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics">
+      Fluid Mechanics & Dynamics
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
+      Computational Fluid Dynamics
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
+      Turbomachinery Design
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
+      Aerodynamics & Wind Tunnel
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
+      Pump & Valve Optimization
+    </a>
+  </li>
+  <li>
+    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
+      Microfluidics Lab
+    </a>
+  </li>
+</ul>
+
           </div>
         </div>
       </div>

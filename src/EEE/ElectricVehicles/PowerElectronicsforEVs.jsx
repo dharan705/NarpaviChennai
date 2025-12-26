@@ -1,6 +1,6 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-
+import SEO from "../../assets/SEO";
 const faqs = [
   {
     question: "What services does the Power Electronics for EVs Project Development Center offer?",
@@ -27,6 +27,14 @@ const faqs = [
 const EEEPowerElectronicsEvsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+      <SEO 
+  title="Power Electronics for EVs IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+  description="IEEE-aligned (2023–2025) Power Electronics for EVs projects for B.Tech, M.Tech, Ph.D. DC-DC converters, inverters, bidirectional converters, SiC GaN devices, AI control using MATLAB/Simulink, PSCAD, PLECS, FPGA DSP for EV propulsion, V2G."
+  keywords="Power Electronics EVs IEEE Projects 2023–2025, B.Tech EV Inverters DC-DC Converters, M.Tech SiC GaN Wide-Bandgap, Ph.D. AI Fault-Tolerant EV Power Electronics, Bidirectional V2G Converters, Narpavi Research Institute"
+  url="/department/electric-vehicles/power-electronics-evs"
+  faqs={faqs}
+/>
+
       <Sidebar/>
 
       <div className="EEEProjectDevelopmentCenter-main">
@@ -167,20 +175,6 @@ const EEEPowerElectronicsEvsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              {/* JSON-LD for FAQ SEO */}
-              <script type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                     "@context":"https://schema.org",
-                     "@type":"FAQPage",
-                     "mainEntity": faqs.map(f=>({
-                       "@type":"Question",
-                       "name":f.question,
-                       "acceptedAnswer": { "@type":"Answer","text":f.answer }
-                     }))
-                  })
-                }}
-              />
             </section>
           </div>
           
@@ -188,12 +182,43 @@ const EEEPowerElectronicsEvsProjectDevelopmentCenter = () => {
           <div className="EEEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/ev-motor-drive-systems-project-development">EV Motor Drive Systems</a></li>
-              <li><a href="/battery-management-systems-project-development">Battery Management Systems (BMS)</a></li>
-              <li><a href="/ev-charging-infrastructure-project-development">EV Charging Infrastructure</a></li>
-              <li><a href="/hev-project-development">Hybrid Electric Vehicles (HEV)</a></li>
-              <li><a href="/regenerative-braking-systems-project-development">Regenerative Braking Systems</a></li>
-            </ul>
+  <li>
+    <a href="/department/electric-vehicles">
+      Electric Vehicles – Project Development Center
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/bms">
+      Battery Management Systems (BMS)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-charging-infrastructure">
+      EV Charging Infrastructure
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/ev-motor-drive-systems">
+      EV Motor Drive Systems
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/hev">
+      Hybrid Electric Vehicles (HEV)
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/power-electronics-evs">
+      Power Electronics for EVs
+    </a>
+  </li>
+  <li>
+    <a href="/department/electric-vehicles/regenerative-braking-systems">
+      Regenerative Braking Systems
+    </a>
+  </li>
+</ul>
+
           </div>
           
         </div>

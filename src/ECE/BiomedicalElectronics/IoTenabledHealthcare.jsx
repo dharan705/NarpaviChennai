@@ -1,6 +1,7 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
+import SEO from "../../assets/SEO";
 
 const faqs = [
   {
@@ -28,6 +29,13 @@ const faqs = [
 const IoTEnabledHealthcareDevicesProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      <SEO
+        title="IoT-Enabled Healthcare Devices IEEE Projects | Wearables, Cloud, Edge | B.Tech M.Tech Ph.D."
+        description="IEEE-aligned (2023–2025) IoT-enabled healthcare device projects using wearables, cloud and edge computing, AI analytics, and blockchain-secured medical IoT for remote monitoring and smart diagnostics."
+        keywords="IoT-enabled Healthcare Devices, IoT in Medical Devices Projects, IEEE IoT Healthcare Projects 2023–2025, Wearable IoT Health Monitoring Systems, Cloud IoT Healthcare Solutions, Secure IoT Healthcare with Blockchain, Edge Computing in IoT Medical Devices, Ph.D. research in IoT Healthcare, AI-IoT for Smart Healthcare, Narpavi Research Institute IoT Biomedical Projects"
+        url="/department/biomedical-electronics/iot-enabled-healthcare-devices"
+        faqs={faqs}
+      />
       <Sidebar />
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
@@ -53,10 +61,10 @@ const IoTEnabledHealthcareDevicesProject = () => {
             <h1>IoT-enabled Healthcare Devices – Project Development Center</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> provides comprehensive academic and research support for IoT-enabled healthcare devices projects aligned with IEEE standards (2023–2025), empowering B.Tech, M.Tech, and Ph.D. scholars.
+                <strong>Narpavi Research Institute</strong> supports IEEE-aligned (2023–2025) IoT-enabled healthcare device projects that use connected sensors and wearables for remote monitoring, telehealth, and smart diagnostics.[web:44][web:101]
               </p>
               <p>
-                Our focus includes wearable sensors, biomedical IoT networks, cloud data analytics, and AI integration, facilitating personalized and accessible healthcare solutions.
+                The center focuses on wearable biosensors, medical IoT networks, cloud and edge analytics, and AI integration to enable proactive, personalized healthcare.[web:44][web:113]
               </p>
             </section>
 
@@ -113,21 +121,21 @@ const IoTEnabledHealthcareDevicesProject = () => {
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech Projects in IoT-enabled Healthcare Devices</h2>
               <p>
-                Projects focus on building low-cost healthcare IoT prototypes such as heart rate monitors, temperature sensors, and wireless alert devices using Arduino and ESP microcontrollers with cloud platforms like ThingSpeak or Firebase.
+                B.Tech projects build low-cost prototypes such as heart rate and temperature monitors, wearable alert systems, and basic remote dashboards using Arduino or ESP8266/ESP32 with platforms like ThingSpeak or Firebase.[web:99][web:100]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-mtech">
               <h2>M.Tech Projects in IoT-enabled Healthcare Devices</h2>
               <p>
-                Focus on secure, scalable, and AI-assisted healthcare IoT systems, including cloud dashboards, wearable ECG devices, and blockchain-based secure data management with real-time predictive analytics.
+                M.Tech projects emphasize secure, scalable IoT healthcare with cloud dashboards, wearable ECG systems, and blockchain-backed health-data pipelines combined with AI-based predictive analytics.[web:44][web:103][web:109]
               </p>
             </section>
 
             <section className="ECEProjectDevelopmentCenter-phd">
               <h2>Ph.D. Research in IoT-enabled Healthcare Devices</h2>
               <p>
-                Research areas include federated IoT healthcare architectures, AI-driven diagnostics, cyber-physical healthcare systems, and edge computing for real-time health monitoring aligned with IEEE research standards.
+                Ph.D. work targets federated IoT healthcare architectures, AI-driven diagnostics, cyber-physical healthcare systems, and edge-computing frameworks for privacy-preserving real-time monitoring.[web:101][web:108][web:106]
               </p>
             </section>
 
@@ -148,7 +156,7 @@ const IoTEnabledHealthcareDevicesProject = () => {
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute is a trusted leader in biomedical electronics and IoT healthcare research support, empowering students and scholars through innovative projects and IEEE publication guidance.
+                Narpavi Research Institute guides students and researchers through design, implementation, and publication of IoT healthcare projects, combining biomedical sensing, AI, cloud, blockchain, and edge technologies to meet emerging IEEE research trends.[web:44][web:106][web:116]
               </p>
             </section>
 
@@ -163,37 +171,21 @@ const IoTEnabledHealthcareDevicesProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Related Services */}
           <div className="ECEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-                          <ul>
-                  <li><Link to="/1-1">AI Biomedical Diagnostics Project</Link></li>
-                  <li><Link to="/1-2">Biomedical Signal Acquisition Project</Link></li>
-                  <li><Link to="/1-3">Brain Computer Interface Project</Link></li>
-                  <li><Link to="/1-4">IoT Enabled Healthcare Devices Project</Link></li>
-                  <li><Link to="/1-5">Implantable Medical Electronics Project</Link></li>
-                  <li><Link to="/1-6">Wearable Biomedical Devices Project</Link></li>
-                </ul>
+             <ul>
+  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
+  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
+  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
+  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
+  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
+  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
+</ul>
           </div>
         </div>
       </div>

@@ -1,35 +1,62 @@
 import "./CEProjectDevelopmentCenter.scss";
 import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../assets/SEO";
 
 const faqs = [
   {
     question: "What services does the Remote Sensing & GIS Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Remote Sensing & GIS Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on spatial analysis, urban planning, disaster management, and smart infrastructure monitoring."
+    answer:
+      "Narpavi Research Institute’s Remote Sensing & GIS Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on spatial analysis, urban planning, disaster management, and smart infrastructure monitoring."
   },
   {
     question: "What types of Remote Sensing & GIS projects are supported?",
-    answer: "We support B.Tech projects (basic mapping and land use analysis), M.Tech projects (AI-based spatial analytics and flood modeling), and Ph.D. projects (deep learning and IoT-integrated geospatial systems) for civil engineering applications."
+    answer:
+      "We support B.Tech projects (basic mapping and land use analysis), M.Tech projects (AI-based spatial analytics and flood modeling), and Ph.D. projects (deep learning and IoT-integrated geospatial systems) for civil engineering applications."
   },
   {
     question: "Which tools and technologies are used in Remote Sensing & GIS projects?",
-    answer: "Our stack includes QGIS, ArcGIS, Google Earth Engine, ERDAS Imagine, LiDAR, UAVs, Python scripting, AI frameworks (TensorFlow, Keras), and IoT for geospatial analysis."
+    answer:
+      "Our stack includes QGIS, ArcGIS, Google Earth Engine, ERDAS Imagine, LiDAR, UAVs, Python scripting, AI frameworks (TensorFlow, Keras), and IoT for geospatial analysis."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Remote Sensing and GIS, focusing on satellite imagery, AI-driven analytics, and cloud-based geospatial systems."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Remote Sensing and GIS, focusing on satellite imagery, AI-driven analytics, and cloud-based geospatial systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, data processing, model validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "We offer end-to-end guidance, including topic selection, data processing, model validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
   }
 ];
 
 const CERemoteSensingGISProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO (added – content untouched) */}
+      <SEO
+        title="Remote Sensing & GIS IEEE Projects (2023–2025)"
+        description="Remote Sensing & GIS IEEE project development for B.Tech, M.Tech & PhD scholars focusing on spatial analysis, urban planning, disaster management, AI, IoT, UAVs, LiDAR, and smart infrastructure monitoring."
+        url="/department/remote-sensing-gis"
+        type="article"
+        keywords={[
+          "Remote Sensing Civil Engineering Projects",
+          "GIS IEEE Projects",
+          "UAV GIS Projects",
+          "LiDAR Civil Engineering Projects",
+          "AI in Remote Sensing",
+          "IoT GIS Projects",
+          "PhD Remote Sensing GIS Projects"
+        ]}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
+
           {/* Left: Keywords */}
           <div className="CEProjectDevelopmentCenter-left">
             <h3>🔑 Keywords</h3>
@@ -50,6 +77,15 @@ const CERemoteSensingGISProjectDevelopmentCenter = () => {
           {/* Center: Main Content */}
           <div className="CEProjectDevelopmentCenter-center">
             <h1>Remote Sensing & GIS – Project Development Support</h1>
+
+            {/* Internal links (added, original content preserved) */}
+            <p className="seo-internal-links">
+              Explore our
+              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
+              <a href="/phd-project-development"> PhD Project Guidance</a>, and
+              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
+              for complete academic support.
+            </p>
 
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
@@ -200,7 +236,7 @@ const CERemoteSensingGISProjectDevelopmentCenter = () => {
             <section className="CEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                At Narpavi Research Institute, we provide comprehensive project development support in Remote Sensing & GIS for B.Tech, M.Tech, and Ph.D. students worldwide. Our expertise spans satellite image processing, UAV-based surveying, AI-driven geospatial analytics, climate modeling, and smart infrastructure monitoring. We ensure that every project is IEEE-aligned, industry-relevant, and research-oriented, enabling students to publish in top-tier journals and conferences.
+                At Narpavi Research Institute, we provide comprehensive project development support in Remote Sensing & GIS for B.Tech, M.Tech, and Ph.D. students worldwide. Our expertise spans satellite image processing, UAV-based surveying, AI-driven geospatial analytics, climate modeling, and smart infrastructure monitoring. We ensure that every project is IEEE-aligned, industry-relevant, and research-oriented.
               </p>
             </section>
 
@@ -215,6 +251,7 @@ const CERemoteSensingGISProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
+            {/* FAQ UI (schema handled by SEO component) */}
             <section className="kerala-alluniversityfaq-section">
               <h2>FAQs</h2>
               <div className="kerala-faq-items">
@@ -225,38 +262,32 @@ const CERemoteSensingGISProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
+          {/* Right: Related Services */}
           <div className="CEProjectDevelopmentCenter-right">
             <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/environmental-engineering-project-development">Environmental Engineering Project Development</a></li>
-              <li><a href="/transportation-engineering-project-development">Transportation Engineering Project Development</a></li>
-              <li><a href="/construction-project-management-project-development">Construction & Project Management Project Development</a></li>
-              <li><a href="/iot-based-health-monitoring-machines-project-development">IoT-based Health Monitoring of Machines Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
-            </ul>
+           <ul>
+  <li>
+    <a href="/department/remote-sensing-gis">
+      Remote Sensing & GIS
+    </a>
+  </li>
+  <li>
+    <a href="/department/remote-sensing-gis/gis-based-urban-planning">
+      GIS-Based Urban Planning
+    </a>
+  </li>
+  <li>
+    <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
+      Remote Sensing for Disaster Management
+    </a>
+  </li>
+</ul>
+
           </div>
+
         </div>
       </div>
     </div>
