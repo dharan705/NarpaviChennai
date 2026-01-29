@@ -1,76 +1,90 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Smart Traffic Management IEEE 2023–2025",
+  "IoT Traffic Monitoring Projects",
+  "AI Traffic Prediction Systems",
+  "Adaptive Traffic Signal Control",
+  "VISSIM Traffic Simulation Projects",
+  "Smart City Traffic Solutions",
+  "Intelligent Urban Mobility Systems",
+  "B.Tech M.Tech PhD Transportation Projects",
+  "Narpavi Research Institute Transportation Projects",
+  "V2X Communication Traffic Management"
+];
+
 const faqs = [
   {
-    question: "What services does the Smart Traffic Management Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Traffic Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on traffic flow optimization, IoT-based monitoring, and AI-driven analytics."
+    question:
+      "What services does the Smart Traffic Management Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Smart Traffic Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on traffic flow optimization, IoT-based monitoring, and AI-driven analytics."
   },
   {
     question: "What types of Smart Traffic Management projects are supported?",
-    answer: "We support B.Tech projects (basic traffic simulation and sensor-based monitoring), M.Tech projects (advanced modeling and AI prediction), and Ph.D. projects (smart city integration and autonomous vehicle traffic systems) for urban mobility."
+    answer:
+      "B.Tech projects on basic traffic simulation, M.Tech projects on AI-based prediction, and Ph.D. projects on smart city and autonomous vehicle traffic systems."
   },
   {
-    question: "Which tools and technologies are used in Smart Traffic Management projects?",
-    answer: "Our stack includes MATLAB, VISSIM, SUMO, AnyLogic, IoT sensors, cameras, and AI frameworks (TensorFlow, Keras) for traffic simulation and monitoring."
+    question: "Which tools are used in Smart Traffic Management projects?",
+    answer:
+      "MATLAB, VISSIM, SUMO, AnyLogic, IoT sensors, cameras, and AI frameworks."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Transportation Engineering, focusing on IoT integration, AI prediction, and V2X communication."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Transportation Engineering focusing on IoT, AI prediction, and V2X communication."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, hardware integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CESmartTrafficManagementSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Smart Traffic Management IEEE Projects (2023–2025)"
-        description="Smart Traffic Management IEEE project development for B.Tech, M.Tech & PhD scholars using VISSIM, SUMO, MATLAB, IoT sensors, AI prediction, adaptive signals, V2X communication for intelligent urban mobility."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Smart Traffic Management Systems – Project Development Center in Chennai"
+        description="Smart Traffic Management Systems project development for B.Tech, M.Tech, and Ph.D. students using VISSIM, SUMO, MATLAB, IoT sensors, AI prediction, adaptive signals, and V2X communication for intelligent urban mobility."
+        keywords={keywords}
         url="/department/transportation-engineering/smart-traffic-management"
-        type="article"
-        keywords={[
-          "Smart Traffic Management IEEE 2023–2025",
-          "IoT Traffic Monitoring Projects",
-          "AI Traffic Prediction Systems",
-          "Adaptive Traffic Signal Control",
-          "VISSIM Traffic Simulation Projects",
-          "Smart City Traffic Solutions",
-          "Intelligent Urban Mobility Systems",
-          "B.Tech M.Tech PhD Transportation Projects",
-          "Narpavi Research Institute Transportation Projects",
-          "V2X Communication Traffic Management"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          {
+            id: "transport",
+            label: "transportation",
+            path: "/department?dept=transportation"
+          }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Traffic Management Projects</li>
-              <li>IoT Traffic Monitoring</li>
-              <li>AI Traffic Prediction</li>
-              <li>Adaptive Traffic Signal Systems</li>
-              <li>Smart City Traffic Solutions</li>
-              <li>B.Tech M.Tech Ph.D. Transportation Projects</li>
-              <li>VISSIM Traffic Simulation</li>
-              <li>IEEE 2023–2025 Traffic Projects</li>
-              <li>Narpavi Research Institute Transportation Projects</li>
-              <li>Intelligent Urban Mobility Systems</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Smart Traffic Management Systems – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Smart Traffic Management Systems – Project Development Center in Chennai
+            </h1>
+                 <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Traffic Management Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on intelligent traffic management and urban mobility.
               </p>
@@ -231,37 +245,42 @@ const CESmartTrafficManagementSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/transportation-engineering">
-      Transportation Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/smart-traffic-management">
-      Smart Traffic Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/pavement-analysis-design">
-      Pavement Analysis & Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/highway-safety-optimization">
-      Highway Safety Optimization
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/transportation-engineering">
+                  Transportation Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/smart-traffic-management">
+                  Smart Traffic Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/pavement-analysis-design">
+                  Pavement Analysis & Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/highway-safety-optimization">
+                  Highway Safety Optimization
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

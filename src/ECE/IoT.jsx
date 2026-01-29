@@ -1,27 +1,47 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT (single source of truth) */
+const keywords = [
+  "IoT Project Development Center",
+  "IoT Projects for B.Tech",
+  "M.Tech IoT Research",
+  "PhD IoT Project Support",
+  "IEEE IoT Projects 2023",
+  "Smart City IoT Projects",
+  "Industrial IoT Project Development",
+  "AI Driven IoT Projects",
+  "Edge Computing IoT Research",
+  "Narpavi Research Institute IoT"
+];
 
 const faqs = [
   {
     question: "What services does the IoT Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT, focusing on smart cities, healthcare, industrial automation, and AI-driven IoT solutions for scalable, secure, and efficient systems."
+    answer:
+      "Narpavi Research Institute’s IoT Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT, focusing on smart cities, healthcare, industrial automation, and AI-driven IoT solutions for scalable, secure, and efficient systems."
   },
   {
     question: "What types of IoT projects are supported?",
-    answer: "We support B.Tech projects (IoT sensor networks, smart home systems), M.Tech projects (edge computing, LoRaWAN systems), and Ph.D. projects (federated learning, blockchain-integrated IoT) for applications in smart grids, agriculture, and healthcare."
+    answer:
+      "We support B.Tech projects (IoT sensor networks, smart home systems), M.Tech projects (edge computing, LoRaWAN systems), and Ph.D. projects (federated learning, blockchain-integrated IoT) for applications in smart grids, agriculture, and healthcare."
   },
   {
     question: "Which technologies are used in IoT project development?",
-    answer: "Our stack includes MQTT, CoAP, LoRaWAN, 5G IoT, TensorFlow Lite, AWS IoT, and microcontrollers like ESP32 and Raspberry Pi for advanced IoT solutions."
+    answer:
+      "Our stack includes MQTT, CoAP, LoRaWAN, 5G IoT, TensorFlow Lite, AWS IoT, and microcontrollers like ESP32 and Raspberry Pi for advanced IoT solutions."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-driven IoT, secure IoT architectures, and edge computing, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-driven IoT, secure IoT architectures, and edge computing, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
@@ -29,58 +49,35 @@ const ECEIoTProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ================= SEO ================= */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="IoT IEEE Projects | B.Tech M.Tech PhD IoT Project Development (2023–2025)"
+        title="Internet of Things (IoT) – Project Development Center in Chennai"
         description="IoT project development for B.Tech, M.Tech, and Ph.D. students focusing on smart cities, industrial IoT, healthcare IoT, edge computing, AI-driven IoT, and IEEE-aligned research projects (2023–2025)."
-        url="/department/iot-projects"
-        type="article"
-        keywords={[
-          "IoT Project Development Center",
-          "IoT Projects for B.Tech",
-          "M.Tech IoT Research",
-          "PhD IoT Project Support",
-          "IEEE IoT Projects 2023",
-          "Smart City IoT Projects",
-          "Industrial IoT Project Development",
-          "AI Driven IoT Projects",
-          "Edge Computing IoT Research",
-          "Narpavi Research Institute IoT"
-        ]}
+        url="/iot-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      {/* ======================================= */}
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT Project Development Center</li>
-              <li>IoT Projects for B.Tech Students</li>
-              <li>M.Tech IoT Research Assistance</li>
-              <li>Ph.D. IoT Thesis Development</li>
-              <li>IoT IEEE 2023–2025 Project Titles</li>
-              <li>IoT with AI</li>
-              <li>IoT for Smart Cities</li>
-              <li>Industrial IoT Projects</li>
-              <li>Secure IoT Development</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-              <li>IoT in Healthcare</li>
-              <li>IoT Cloud Integration</li>
-              <li>IoT Edge Computing Research</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR (ONLY CHANGE) */}
+          <aside className="left-sidebar2">
+           
+        <Leftsidebar/>
+          
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Internet of Things (IoT) – Project Development Center</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Internet of Things (IoT) – Project Development Center in Chennai</h1>
+ <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in the Internet of Things, focusing on smart ecosystems, secure communication, and AI-driven analytics.
               </p>
@@ -244,22 +241,28 @@ const ECEIoTProjectDevelopmentCenter = () => {
                 ))}
               </div>
             </section>
-          </div>
+                      </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR (ONLY CHANGE) */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/iot-projects">IoT </a></li>
-  <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
-  <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
-  <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
-  <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
-  <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
-  <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
-</ul>
+            <ul>
+              <li><a href="/department/iot-projects">IoT</a></li>
+              <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
+              <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
+              <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
+              <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
+              <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
+              <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

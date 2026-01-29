@@ -1,64 +1,84 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What are Satellite IoT (Sat-IoT) Applications?",
-    answer: "Sat-IoT combines satellites in LEO, MEO, and GEO orbits with IoT networks to provide global, uninterrupted connectivity, especially in remote and disaster-prone areas."
+    answer:
+      "Sat-IoT combines satellites with IoT networks to provide global connectivity, especially in remote and disaster-prone regions."
   },
   {
     question: "What projects are pursued by B.Tech students in Sat-IoT?",
-    answer: "Projects include IoT sensors with satellite uplink simulations, asset tracking via LEO satellites, weather monitoring systems, and energy-efficient IoT device design using Arduino, Raspberry Pi, MATLAB, and ThingsBoard."
+    answer:
+      "IoT sensors with satellite uplinks, asset tracking, weather monitoring, and energy-efficient IoT systems."
   },
   {
     question: "What advanced designs do M.Tech projects focus on?",
-    answer: "M.Tech research involves LEO-based Sat-IoT systems for remote areas, AI-enabled smart agriculture, disaster management via satellite networks, and satellite-enabled vehicular IoT using MATLAB, NS3, Python, and LoRaWAN."
+    answer:
+      "LEO-based Sat-IoT, AI-driven agriculture, disaster management, and vehicular Sat-IoT systems."
   },
   {
     question: "What research areas are emphasized in Ph.D. Sat-IoT projects?",
-    answer: "Ph.D. research includes security protocols, energy-aware architectures, machine learning optimizations, and hybrid terrestrial-satellite network interoperability with IEEE journal publications."
+    answer:
+      "Security protocols, energy-aware architectures, ML optimization, and hybrid satellite–terrestrial IoT."
   },
   {
-    question: "Which tools and platforms support Sat-IoT projects?",
-    answer: "Tools such as NS3, MATLAB, Python, STK, TensorFlow, LoRaWAN, MQTT, and ThingsBoard are primarily used for simulation, AI, and network deployment."
+    question: "Which tools support Sat-IoT projects?",
+    answer:
+      "NS3, MATLAB, Python, STK, TensorFlow, LoRaWAN, MQTT, and ThingsBoard."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Satellite IoT Projects",
+  "Sat-IoT Applications",
+  "LEO IoT Communication",
+  "Smart Agriculture with Sat-IoT",
+  "Disaster Management IoT via Satellites",
+  "Hybrid Satellite-Terrestrial IoT",
+  "AI in Satellite IoT",
+  "Secure Sat-IoT Systems",
+  "IEEE Satellite IoT Research",
+  "Narpavi Research Institute IoT Projects"
 ];
 
 const SatelliteIoTApplicationsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Satellite IoT (Sat-IoT) Applications IEEE Projects | LEO/MEO/GEO, Hybrid, AI & Energy-Aware | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) Satellite IoT projects on LEO/MEO/GEO Sat-IoT coverage, hybrid satellite–terrestrial IoT, smart agriculture, disaster management, asset tracking, security protocols, and ML-based energy-aware architectures using NS3, MATLAB, Python, STK, TensorFlow, LoRaWAN, MQTT, and ThingsBoard."
-        keywords="Satellite IoT Projects, Sat-IoT Applications, LEO IoT Communication, Smart Agriculture with Sat-IoT, Disaster Management IoT via Satellites, Hybrid Satellite-Terrestrial IoT, AI in Satellite IoT, Secure Sat-IoT Systems, IEEE Satellite IoT Research, Narpavi Research Institute IoT Projects"
-        url="/department/satellite-communication/satellite-iot-applications"
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Satellite IoT (Sat-IoT) Applications – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) Satellite IoT projects on LEO/MEO/GEO Sat-IoT coverage, hybrid satellite–terrestrial IoT, smart agriculture, disaster management, asset tracking, and AI-based energy-aware architectures."
+        keywords={keywords}
+        url="/department/satellite-communication/satellite-iot-applications-project-development-center-in-chennai"
         faqs={faqs}
       />
-      
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Satellite IoT Projects</li>
-              <li>Sat-IoT Applications</li>
-              <li>LEO IoT Communication</li>
-              <li>Smart Agriculture with Sat-IoT</li>
-              <li>Disaster Management IoT via Satellites</li>
-              <li>Hybrid Satellite-Terrestrial IoT</li>
-              <li>AI in Satellite IoT</li>
-              <li>Secure Sat-IoT Systems</li>
-              <li>IEEE Satellite IoT Research</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Satellite IoT (Sat-IoT) Applications – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>
+              Satellite IoT (Sat-IoT) Applications – Project Development Center in Chennai
+            </h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> offers expert guidance and project support in Satellite IoT systems, focusing on global IoT connectivity, hybrid networks, AI-powered applications, and energy-efficient designs aligned with IEEE standards (2023–2025).
               </p>
@@ -176,39 +196,29 @@ const SatelliteIoTApplicationsProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(faq => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+           </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
+              <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

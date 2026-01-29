@@ -1,73 +1,99 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "HVAC System Analysis Project Development Center in Chennai",
+  "HVAC IEEE Projects 2023–2025",
+  "CFD HVAC Projects",
+  "Smart HVAC System Research",
+  "IoT HVAC Optimization Projects",
+  "Energy Efficient HVAC Projects",
+  "AI HVAC Control Systems",
+  "Renewable Energy HVAC Integration",
+  "HVAC Airflow Distribution Analysis",
+  "Narpavi Research Institute Thermal Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the HVAC System Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s HVAC System Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on airflow distribution, energy efficiency, IoT-enabled HVAC, and renewable energy integration."
+    question:
+      "What services does the HVAC System Analysis Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s HVAC System Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on airflow distribution, energy efficiency, IoT-enabled HVAC, and renewable energy integration."
   },
   {
-    question: "What types of HVAC System Analysis projects are supported?",
-    answer: "We support B.Tech projects (duct design, load calculations), M.Tech projects (CFD airflow analysis, IoT integration), and Ph.D. projects (AI-driven HVAC control, net-zero energy buildings) for residential, commercial, and industrial applications."
+    question:
+      "What types of HVAC System Analysis projects are supported?",
+    answer:
+      "We support B.Tech projects in duct design and load calculations, M.Tech projects in CFD airflow analysis and IoT integration, and Ph.D. projects in AI-driven HVAC control and net-zero energy buildings."
   },
   {
-    question: "Which tools and technologies are used in HVAC System Analysis projects?",
-    answer: "Our stack includes ANSYS Fluent, COMSOL Multiphysics, CoolPack, TRACE 700, Carrier HAP, IoT sensors, and AI frameworks (TensorFlow, Keras) for HVAC simulation and optimization."
+    question:
+      "Which tools and technologies are used in HVAC System Analysis projects?",
+    answer:
+      "ANSYS Fluent, COMSOL Multiphysics, CoolPack, TRACE 700, Carrier HAP, IoT sensors, and AI frameworks are used for HVAC simulation and optimization."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Sustainable Energy, focusing on CFD-based HVAC analysis, smart control, and renewable integration."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Mechanical Engineering and Sustainable Energy, focusing on CFD-based HVAC analysis, smart control, and renewable integration."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, IoT/AI integration, prototype development, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "Complete guidance including CFD analysis, AI/IoT integration, prototype development, documentation, and IEEE/Scopus/Elsevier/Springer publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "HVAC System Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "HVAC System Analysis Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects for B.Tech, M.Tech, and Ph.D. using CFD airflow analysis, IoT-enabled smart HVAC, AI control, energy efficiency, and renewable integration.";
+
+const pageUrl =
+  "/department/thermal-engineering/hvac-system-analysis";
 
 const MEHVACSystemAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="HVAC System Analysis IEEE Projects (2023–2025)"
-        description="HVAC System Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, COMSOL, CFD airflow analysis, IoT smart HVAC, AI control, energy efficiency, renewable integration."
-        url="/department/thermal-engineering/hvac-system-analysis"
-        type="article"
-        keywords={[
-          "HVAC System Analysis IEEE 2023–2025",
-          "CFD HVAC Projects",
-          "Smart HVAC System Research",
-          "IoT HVAC Optimization Projects",
-          "Energy-Efficient HVAC Projects",
-          "AI HVAC Control Systems",
-          "Renewable Energy HVAC Integration",
-          "HVAC Airflow Distribution Analysis",
-          "Narpavi Research Institute Thermal Projects",
-          "Net-Zero Energy HVAC Buildings"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>HVAC System Analysis Projects</li>
-              <li>CFD HVAC Projects</li>
-              <li>IEEE HVAC Projects 2023–2025</li>
-              <li>Smart HVAC System Research</li>
-              <li>IoT HVAC Optimization Projects</li>
-              <li>Energy-Efficient HVAC Projects</li>
-              <li>AI in HVAC Systems</li>
-              <li>Renewable Energy HVAC Integration</li>
-              <li>Narpavi Research Institute Thermal Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>HVAC System Analysis – Project Development Support</h1>
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
@@ -211,43 +237,29 @@ const MEHVACSystemAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/thermal-engineering">
-      Thermal Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/heat-exchanger-design">
-      Heat Exchanger Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/solar-thermal-systems">
-      Solar Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/waste-heat-recovery">
-      Waste Heat Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/hvac-system-analysis">
-      HVAC System Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
-      Energy Efficiency in Thermal Systems
-    </a>
-  </li>
-</ul>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
 
-          </div>
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/thermal-engineering">Thermal Engineering</a></li>
+              <li><a href="/department/thermal-engineering/heat-exchanger-design">Heat Exchanger Design</a></li>
+              <li><a href="/department/thermal-engineering/solar-thermal-systems">Solar Thermal Systems</a></li>
+              <li><a href="/department/thermal-engineering/waste-heat-recovery">Waste Heat Recovery</a></li>
+              <li><a href="/department/thermal-engineering/hvac-system-analysis">HVAC System Analysis</a></li>
+              <li><a href="/department/thermal-engineering/energy-efficiency-in-thermal">Energy Efficiency in Thermal Systems</a></li>
+            </ul>
+
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

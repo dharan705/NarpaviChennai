@@ -1,7 +1,23 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import { Link } from "react-router-dom";
 import SEO from ".././assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT (used in SEO + page) */
+const keywords = [
+  "Biomedical Electronics Project Development",
+  "IEEE Biomedical Projects",
+  "ECG Signal Processing Projects",
+  "EEG BCI Development",
+  "Wearable Health Monitoring",
+  "Medical Imaging Projects",
+  "IoT Healthcare Devices",
+  "AI in Biomedical Engineering",
+  "B.Tech Biomedical Projects",
+  "M.Tech Biomedical Projects",
+  "PhD Biomedical Research Projects"
+];
 
 const faqs = [
   {
@@ -35,62 +51,39 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ✅ SEO */}
+      {/* ✅ SEO (FIXED as per rules) */}
       <SEO
-        title="Biomedical Electronics IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        title="Biomedical Electronics – Project Development Center in Chennai"
         description="Biomedical Electronics project development for B.Tech, M.Tech & PhD students focusing on ECG, EEG, wearable health devices, medical imaging, AI diagnostics, IoT healthcare, and FPGA-based biomedical systems."
-        url="/biomedical-electronics-project-development"
-        type="article"
-        keywords={[
-          "Biomedical Electronics Project Development",
-          "IEEE Biomedical Projects",
-          "ECG Signal Processing Projects",
-          "EEG BCI Development",
-          "Wearable Health Monitoring",
-          "Medical Imaging Projects",
-          "IoT Healthcare Devices",
-          "AI in Biomedical Engineering",
-          "PhD Biomedical Research Projects"
-        ]}
+        url="/biomedical-electronics-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left */}
-          <div className="ECEProjectDevelopmentCenter-left">
+          {/* ✅ LEFT SIDEBAR (classname fixed) */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Biomedical Electronics Project Development</li>
-              <li>IEEE Biomedical Projects</li>
-              <li>ECG Signal Processing Projects</li>
-              <li>EEG BCI Development</li>
-              <li>Wearable Health Monitoring</li>
-              <li>Medical Imaging Projects</li>
-              <li>IoT Healthcare Devices</li>
-              <li>AI in Biomedical Engineering</li>
-              <li>B.Tech Biomedical Projects</li>
-              <li>M.Tech Biomedical Projects</li>
-              <li>Ph.D. Biomedical Research Support</li>
-              <li>Narpavi Research Institute</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
-          {/* Center */}
+          {/* ❌ CENTER CONTENT — NOT TOUCHED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Biomedical Electronics – Project Development Center</h1>
-
-            <p className="seo-internal-links">
-              Explore related services:
-              <a href="/ece-project-development"> ECE Project Development</a>,
-              <a href="/phd-project-development"> PhD Research Guidance</a>,
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
-            </p>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Biomedical Electronics – Project Development Center in Chennai</h1>
+             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Biomedical Electronics – Project Development Center, a global hub empowering B.Tech, M.Tech, and Ph.D. students to develop innovative, IEEE-aligned (2023–2025) biomedical electronics projects, focusing on diagnostic devices, therapeutic systems, and AI-enabled medical solutions.
               </p>
@@ -225,20 +218,18 @@ const ECEBiomedicalElectronicsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right */}
-          <div className="ECEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
+          {/* ✅ RIGHT SIDEBAR (classname fixed) */}
+          <aside className="right-sidebar1">
             <ul>
-  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
-  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
-  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
-  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
-  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
-  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
-  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
-</ul>
-
-          </div>
+              <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+              <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics</a></li>
+              <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition</a></li>
+              <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface</a></li>
+              <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices</a></li>
+              <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics</a></li>
+              <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices</a></li>
+            </ul>
+          </aside>
 
         </div>
       </div>

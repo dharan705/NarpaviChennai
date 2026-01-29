@@ -1,77 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Product Lifecycle Management Project Development Center in Chennai",
+  "PLM IEEE Projects 2023–2025",
+  "Product Lifecycle Management Student Projects",
+  "CAD PDM PLM Integration",
+  "Cloud Based PLM Systems",
+  "Digital Twin PLM Projects",
+  "AI Driven PLM Manufacturing",
+  "Blockchain PLM Research",
+  "Sustainable PLM Frameworks",
+  "Narpavi Research Institute PLM Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Product Lifecycle Management (PLM) Project Development Center offer?",
-    answer: "Narpavi Research Institute’s PLM Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CAD-PDM integration, digital twins, cloud-based PLM, AI-driven lifecycle management, and blockchain-enabled frameworks for industries like aerospace, automotive, and healthcare."
+    question:
+      "What services does the Product Lifecycle Management (PLM) Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s PLM Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CAD-PDM integration, digital twins, cloud-based PLM, AI-driven lifecycle management, and blockchain-enabled frameworks."
   },
   {
     question: "What types of PLM projects are supported?",
-    answer: "We support B.Tech projects (basic CAD-PDM integration, workflow management), M.Tech projects (digital twins, ERP-PLM integration), and Ph.D. projects (AI-driven PLM, blockchain-enabled PLM) for applications in smart manufacturing and product lifecycle optimization."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering CAD-PDM integration, digital twins, AI-driven PLM, and blockchain-enabled lifecycle management."
   },
   {
-    question: "Which tools and technologies are used in PLM projects?",
-    answer: "Our stack includes SolidWorks PDM, Siemens Teamcenter, PTC Windchill, Dassault ENOVIA, Autodesk Fusion Lifecycle, MATLAB, Python, AI frameworks (TensorFlow, Keras), IoT platforms, and blockchain tools for lifecycle management and prototyping."
+    question: "Which tools and technologies are used?",
+    answer:
+      "Siemens Teamcenter, PTC Windchill, ENOVIA, SolidWorks PDM, MATLAB, Python, AI frameworks, IoT platforms, and blockchain tools."
   },
   {
     question: "How are PLM projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Manufacturing, focusing on digital twins, AI-driven PLM, cloud-based platforms, and blockchain-enabled lifecycle management."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Industrial Informatics and Manufacturing."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, PLM system modeling, AI/IoT integration, digital twin implementation, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including PLM modeling, digital twins, AI/IoT integration, documentation, and IEEE/Scopus/Elsevier publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Product Lifecycle Management – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Product Lifecycle Management Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering CAD-PDM integration, digital twins, cloud PLM, AI-driven lifecycle management, and blockchain frameworks.";
+
+const pageUrl =
+  "/department/design-engineering-cad/product-lifecycle-management";
 
 const MEProductLifecycleManagementProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Product Lifecycle Management PLM IEEE Projects (2023–2025)"
-        description="Product Lifecycle Management PLM IEEE project development for B.Tech, M.Tech & PhD using Siemens Teamcenter, PTC Windchill, digital twins, AI-driven PLM, blockchain, CAD-PDM integration for aerospace, automotive, healthcare."
-        url="/department/design-engineering-cad/product-lifecycle-management"
-        type="article"
-        keywords={[
-          "PLM IEEE Projects 2023–2025",
-          "Product Lifecycle Management",
-          "CAD PDM PLM Integration",
-          "Cloud Based PLM Systems",
-          "Digital Twin PLM Projects",
-          "AI Enabled PLM Manufacturing",
-          "Blockchain PLM Research",
-          "Sustainable PLM Frameworks",
-          "Aerospace PLM IEEE Projects",
-          "Narpavi Research Institute PLM"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
-      
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>PLM IEEE Projects 2023–2025</li>
-              <li>Product Lifecycle Management Student Projects</li>
-              <li>CAD-PDM PLM Projects</li>
-              <li>Cloud-Based PLM IEEE</li>
-              <li>Digital Twin PLM Projects</li>
-              <li>AI-Enabled PLM for Manufacturing</li>
-              <li>Blockchain PLM Research Projects</li>
-              <li>PLM in Aerospace IEEE</li>
-              <li>Sustainable PLM Frameworks</li>
-              <li>Narpavi Research Institute PLM Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Product Lifecycle Management (PLM) – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Product Lifecycle Management (PLM) Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on CAD-PDM integration, digital twins, cloud-based PLM, AI-driven lifecycle management, and blockchain-enabled frameworks.
               </p>
@@ -247,43 +266,26 @@ const MEProductLifecycleManagementProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/design-engineering-cad">
-      Design Engineering & CAD
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/finite-element-analysis">
-      Finite Element Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/cad-modeling-simulation">
-      CAD Modeling & Simulation
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/mechanism-design">
-      Mechanism Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/topology-optimization">
-      Topology Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/product-lifecycle-management">
-      Product Lifecycle Management
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/design-engineering-cad">Design Engineering & CAD</a></li>
+              <li><a href="/department/design-engineering-cad/finite-element-analysis">Finite Element Analysis</a></li>
+              <li><a href="/department/design-engineering-cad/cad-modeling-simulation">CAD Modeling & Simulation</a></li>
+              <li><a href="/department/design-engineering-cad/mechanism-design">Mechanism Design</a></li>
+              <li><a href="/department/design-engineering-cad/topology-optimization">Topology Optimization</a></li>
+              <li><a href="/department/design-engineering-cad/product-lifecycle-management">Product Lifecycle Management</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

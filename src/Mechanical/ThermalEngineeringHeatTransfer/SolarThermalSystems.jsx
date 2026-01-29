@@ -1,71 +1,99 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Solar Thermal Systems Project Development Center in Chennai",
+  "Solar Thermal IEEE Projects 2023–2025",
+  "Solar Thermal Collector Optimization",
+  "Hybrid Solar Thermal Power Plants",
+  "CFD Solar Thermal Analysis Projects",
+  "Nanofluid Solar Collector Research",
+  "Renewable Energy Thermal Storage",
+  "AI Solar Thermal Optimization",
+  "Parabolic Trough Solar Projects",
+  "Narpavi Research Institute Thermal Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Solar Thermal Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Solar Thermal Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on solar collectors, thermal storage, and hybrid solar systems for sustainable energy applications."
+    question:
+      "What services does the Solar Thermal Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Solar Thermal Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on solar collectors, thermal storage, and hybrid solar systems."
   },
   {
-    question: "What types of Solar Thermal Systems projects are supported?",
-    answer: "We support B.Tech projects (flat plate collector design, solar air heaters), M.Tech projects (CFD analysis of parabolic troughs, nanofluid optimization), and Ph.D. projects (AI-driven solar thermal power plants, solar-assisted hydrogen production)."
+    question:
+      "What types of Solar Thermal Systems projects are supported?",
+    answer:
+      "We support B.Tech projects on flat plate collectors and solar air heaters, M.Tech projects on CFD and nanofluid optimization, and Ph.D. projects on AI-driven solar thermal power plants and hydrogen production."
   },
   {
-    question: "Which tools and technologies are used in Solar Thermal Systems projects?",
-    answer: "Our stack includes ANSYS, MATLAB, COMSOL Multiphysics, CFD software, AI frameworks (TensorFlow, Keras), and experimental setups for solar thermal analysis and optimization."
+    question:
+      "Which tools and technologies are used in Solar Thermal Systems projects?",
+    answer:
+      "ANSYS, MATLAB, COMSOL Multiphysics, CFD software, AI frameworks, and experimental setups are used for solar thermal analysis and optimization."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Renewable Energy, focusing on advanced solar collectors, thermal storage, and hybrid systems."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Renewable Energy."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, AI integration, prototype development, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "We provide topic selection, CFD and experimental analysis, AI integration, prototype development, documentation, and journal publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Solar Thermal Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "Solar Thermal Systems Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects for B.Tech, M.Tech, and Ph.D. using CFD analysis, nanofluids, AI optimization, parabolic troughs, and thermal storage.";
+
+const pageUrl =
+  "/department/thermal-engineering/solar-thermal-systems";
 
 const MESolarThermalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-        <SEO
-        title="Solar Thermal Systems IEEE Projects (2023–2025)"
-        description="Solar Thermal Systems IEEE project development for B.Tech, M.Tech & PhD using ANSYS, CFD analysis, nanofluids, AI optimization, parabolic troughs, thermal storage for renewable energy applications."
-        url="/department/thermal-engineering/solar-thermal-systems"
-        type="article"
-        keywords={[
-          "Solar Thermal Systems IEEE 2023–2025",
-          "Solar Thermal Collector Optimization",
-          "Hybrid Solar Thermal Power Plants",
-          "CFD Solar Thermal Analysis Projects",
-          "Nanofluid Solar Collector Research",
-          "Solar Energy B.Tech M.Tech PhD Projects",
-          "Renewable Energy Thermal Storage",
-          "AI Solar Thermal Optimization",
-          "Narpavi Research Institute Thermal Projects",
-          "Parabolic Trough Solar Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Solar Thermal Systems Projects</li>
-              <li>IEEE Solar Energy Projects 2023–2025</li>
-              <li>Solar Thermal Collector Optimization</li>
-              <li>Hybrid Solar Thermal Power Plant Projects</li>
-              <li>Solar Energy for B.Tech M.Tech Ph.D.</li>
-              <li>Renewable Energy Projects Development</li>
-              <li>Narpavi Research Institute Thermal Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Solar Thermal Systems – Project Development Support</h1>
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
@@ -209,43 +237,29 @@ const MESolarThermalSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/thermal-engineering">
-      Thermal Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/heat-exchanger-design">
-      Heat Exchanger Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/solar-thermal-systems">
-      Solar Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/waste-heat-recovery">
-      Waste Heat Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/hvac-system-analysis">
-      HVAC System Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
-      Energy Efficiency in Thermal Systems
-    </a>
-  </li>
-</ul>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
 
-          </div>
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/thermal-engineering">Thermal Engineering</a></li>
+              <li><a href="/department/thermal-engineering/heat-exchanger-design">Heat Exchanger Design</a></li>
+              <li><a href="/department/thermal-engineering/solar-thermal-systems">Solar Thermal Systems</a></li>
+              <li><a href="/department/thermal-engineering/waste-heat-recovery">Waste Heat Recovery</a></li>
+              <li><a href="/department/thermal-engineering/hvac-system-analysis">HVAC System Analysis</a></li>
+              <li><a href="/department/thermal-engineering/energy-efficiency-in-thermal">Energy Efficiency in Thermal Systems</a></li>
+            </ul>
+
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

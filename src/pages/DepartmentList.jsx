@@ -12,6 +12,7 @@ import {
   FiChevronRight,
 } from "react-icons/fi";
 import "./DepartmentList.scss";
+import Subsidebar from "./Subsidebar";
 
 const DepartmentPage = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ const DepartmentPage = () => {
     cse: [
       { name: "Static Web Application Development", path: "/department/static-web-application" },
       { name: "Dynamic Web Application Development", path: "/department/dynamic-web-applications" },
-      { name: "Mobile App Development", path: "/department/mobile-app" },
+      { name: "Mobile App Development", path: "/department/mobile-app-development-project-development-center-in-chennai" },
       { name: "Animation Project Development", path: "/department/animations-project" },
       { name: "Artificial Intelligence", path: "/department/ai-project" },
       { name: "Data Science", path: "/department/data-science" },
@@ -142,6 +143,7 @@ const DepartmentPage = () => {
 
   return (
     <div className="dept-page-wrapper">
+      <Subsidebar/>
       <div className="dept-page-inner">
         {/* LEFT SIDE */}
         <div className="dept-left">

@@ -1,76 +1,87 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../assets/SEO"
+import Subsidebar from ".././pages/Subsidebar";
+import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT (single source) */
+const keywords = [
+  "Renewable Energy IEEE Projects 2023–2025",
+  "Solar PV & Thermal Systems Projects",
+  "Wind Turbine Design IEEE Projects",
+  "Biomass Energy Student Projects",
+  "Energy Storage Optimization IEEE Projects",
+  "Smart Grid Renewable Integration Projects",
+  "AI-Based Renewable Energy Management",
+  "Hybrid Renewable Energy System Projects",
+  "Ph.D. Renewable Energy Research Projects",
+  "Narpavi Research Institute Renewable Energy Projects",
+];
+
 const faqs = [
   {
-    question: "What services does the Renewable Energy / Thermal & Mechanical Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Renewable Energy / Thermal & Mechanical Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on solar, wind, biomass, energy storage, AI-driven optimization, and smart grid integration for industries like power generation, smart cities, and industrial applications."
+    question:
+      "What services does the Renewable Energy / Thermal & Mechanical Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Renewable Energy / Thermal & Mechanical Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on solar, wind, biomass, energy storage, AI-driven optimization, and smart grid integration.",
   },
   {
-    question: "What types of Renewable Energy / Thermal & Mechanical Systems projects are supported?",
-    answer: "We support B.Tech projects (basic solar, wind, or biomass systems), M.Tech projects (hybrid energy systems, AI-driven optimization), and Ph.D. projects (smart grid integration, digital twins) for applications in sustainable energy and smart infrastructure."
+    question:
+      "What types of Renewable Energy / Thermal & Mechanical Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (solar, wind, biomass systems), M.Tech projects (hybrid energy systems, AI optimization), and Ph.D. projects (smart grids, digital twins).",
   },
   {
-    question: "Which tools and technologies are used in Renewable Energy / Thermal & Mechanical Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, PVsyst, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like PV panels, wind turbines, and energy storage units for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Renewable Energy / Thermal & Mechanical Systems projects?",
+    answer:
+      "Our stack includes MATLAB, Simulink, PVsyst, Python, AI frameworks, IoT platforms, and renewable energy hardware.",
   },
   {
-    question: "How are Renewable Energy / Thermal & Mechanical Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Sustainable Energy and Power Systems, focusing on hybrid renewable systems, AI-driven energy management, and smart grid integration."
+    question:
+      "How are Renewable Energy / Thermal & Mechanical Systems projects aligned with IEEE standards?",
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Sustainable Energy and Power Systems.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
-  }
+    answer:
+      "We provide end-to-end guidance including simulation, AI/IoT integration, prototyping, documentation, and journal publication support.",
+  },
 ];
 
 const MERenewableEnergyThermalMechanicalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-        <SEO
-        title="Renewable Energy IEEE Projects (2023–2025)"
-        description="Renewable Energy Thermal Mechanical Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PVsyst, AI optimization, smart grid integration, solar PV, wind turbines, biomass, energy storage for sustainable energy."
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Renewable Energy & Thermal Systems – Project Development Center in Chennai"
+        description="Renewable Energy & Thermal Mechanical Systems project development for B.Tech, M.Tech, and Ph.D. students using MATLAB, PVsyst, AI optimization, smart grid integration, solar PV, wind turbines, biomass, and energy storage."
+        keywords={keywords}
         url="/department/renewable-thermal-energy"
-        type="article"
-        keywords={[
-          "Renewable Energy IEEE 2023–2025",
-          "Solar PV Thermal Systems Projects",
-          "Wind Turbine Design IEEE",
-          "Biomass Energy Student Projects",
-          "Energy Storage Optimization IEEE",
-          "Smart Grid Renewable Integration",
-          "AI Based Renewable Energy Management",
-          "Hybrid Renewable Energy Systems",
-          "Digital Twin Energy Projects",
-          "Narpavi Research Institute Renewable"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Renewable Energy IEEE Projects 2023–2025</li>
-              <li>Solar PV & Thermal Systems Projects</li>
-              <li>Wind Turbine Design IEEE Projects</li>
-              <li>Biomass Energy Student Projects</li>
-              <li>Energy Storage Optimization IEEE Projects</li>
-              <li>Smart Grid Renewable Integration Projects</li>
-              <li>AI-Based Renewable Energy Management</li>
-              <li>Hybrid Renewable Energy System Projects</li>
-              <li>Ph.D. Renewable Energy Research Projects</li>
-              <li>Narpavi Research Institute Renewable Energy Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>            
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Renewable Energy / Thermal & Mechanical Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO TITLE */}
+            <h1>
+              Renewable Energy & Thermal Systems – Project Development Center in Chennai
+            </h1>
+               <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Renewable Energy / Thermal & Mechanical Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on solar, wind, biomass, energy storage, AI-driven optimization, and smart grid integration.
               </p>
@@ -246,43 +257,25 @@ const MERenewableEnergyThermalMechanicalSystemsProjectDevelopmentCenter = () => 
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/renewable-thermal-energy">
-      Renewable & Thermal Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
-      Solar PV & Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/wind-turbine-design">
-      Wind Turbine Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
-      Biomass & Biofuel Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
-      Energy Storage & Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/smart-grid-integration">
-      Smart Grid Integration
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/renewable-thermal-energy">Renewable & Thermal Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/solar-pv-thermal">Solar PV & Thermal Systems</a></li>
+              <li><a href="/department/renewable-thermal-energy/wind-turbine-design">Wind Turbine Design</a></li>
+              <li><a href="/department/renewable-thermal-energy/biomass-biofuel-energy">Biomass & Biofuel Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/energy-storage-recovery">Energy Storage & Recovery</a></li>
+              <li><a href="/department/renewable-thermal-energy/smart-grid-integration">Smart Grid Integration</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

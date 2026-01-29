@@ -1,67 +1,100 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "Cybersecurity in Smart Grids Project Development Center in Chennai",
+  "IEEE Smart Grid Cybersecurity Projects 2023–2025",
+  "B.Tech Smart Grid Security Projects",
+  "M.Tech AI Based Smart Grid Cybersecurity",
+  "Ph.D Blockchain Energy Security Research",
+  "Smart Grid Intrusion Detection Systems",
+  "Secure SCADA IoT Smart Grids",
+  "Predictive Cyber Threat Detection",
+  "Smart Grid Protection Projects",
+  "Narpavi Research Institute Smart Grid"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Cybersecurity in Smart Grids Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Cybersecurity in Smart Grids Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on cyber-physical security, intrusion detection, secure IoT-SCADA communication, blockchain-based transaction systems, and AI-assisted threat mitigation."
+    question:
+      "What services does the Cybersecurity in Smart Grids Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Cybersecurity in Smart Grids Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on cyber-physical security, intrusion detection, secure IoT-SCADA communication, blockchain-based transaction systems, and AI-assisted threat mitigation."
   },
   {
-    question: "What types of cybersecurity projects in smart grids are supported?",
-    answer: "We support B.Tech projects (secure smart meters, intrusion detection basics), M.Tech projects (AI-based intrusion detection, blockchain-based transaction protocols), and Ph.D. projects (deep learning-based threat prediction, secure distributed control systems) for residential, industrial, and utility-scale grids."
+    question:
+      "What types of cybersecurity projects in smart grids are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering secure smart meters, AI-based intrusion detection, blockchain energy security, and distributed grid protection."
   },
   {
-    question: "Which technologies are used in cybersecurity project development?",
-    answer: "We use MATLAB/Simulink, Python, NS-3 for network simulation, IoT security platforms (MQTT, TLS, ZigBee), FPGA/DSP controllers, HIL test setups, and AI frameworks like TensorFlow and PyTorch for anomaly detection and predictive threat analysis."
+    question:
+      "Which technologies are used in cybersecurity project development?",
+    answer:
+      "MATLAB/Simulink, Python, NS-3, IoT security protocols (MQTT, TLS, ZigBee), FPGA/DSP platforms, and AI frameworks like TensorFlow and PyTorch."
   },
   {
-    question: "How are smart grid cybersecurity projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions (2023–2025) focusing on secure communication protocols, blockchain for energy data security, AI-driven intrusion detection, anomaly detection, and industrial cybersecurity standards for power systems."
+    question:
+      "How are smart grid cybersecurity projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on secure communication, blockchain energy data protection, AI-based intrusion detection, and cyber-physical grid security."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We provide IEEE-compliant topic guidance, algorithm design and threat modeling, simulation & HIL prototyping, secure IoT integration, technical documentation, and guidance for IEEE, Scopus, and SCI publication."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, threat modeling, simulation, HIL prototyping, documentation, and IEEE/Scopus/SCI journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Cybersecurity in Smart Grids – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Cybersecurity in Smart Grids Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering intrusion detection, blockchain energy security, AI threat prediction, secure SCADA and IoT systems.";
+
+const pageUrl =
+  "/department/smart-grid-microgrid/cybersecurity-smart-grids";
 
 const EEECybersecuritySmartGridsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Cybersecurity Smart Grids IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Cybersecurity in Smart Grids projects for B.Tech, M.Tech, Ph.D. Intrusion detection, blockchain energy transactions, AI threat prediction, secure SCADA/IoT using MATLAB/Simulink, NS-3, TensorFlow for utility grids, microgrids."
-  keywords="Cybersecurity Smart Grids IEEE Projects 2023–2025, Smart Grid Intrusion Detection, B.Tech Secure Smart Meters, M.Tech AI Cybersecurity Grids, Ph.D. Blockchain Energy Security, IoT SCADA Security, Predictive Cyber Threat Detection, Smart Grid Protection, Narpavi Research Institute"
-  url="/department/smart-grid-microgrid/cybersecurity-smart-grids"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* Left Column: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Cybersecurity in Smart Grids Projects</li>
-              <li>IEEE Smart Grid Security Projects 2023–2025</li>
-              <li>B.Tech Smart Grid Protection Projects</li>
-              <li>M.Tech AI-Based Cybersecurity</li>
-              <li>Ph.D Blockchain Energy Security</li>
-              <li>IoT-Based Grid Security</li>
-              <li>Narpavi Research Institute</li>
-              <li>Intrusion Detection for Smart Grids</li>
-              <li>Secure SCADA Research</li>
-              <li>Predictive Cyber Threat Detection</li>
-            </ul>
-          </div>
 
-          {/* Center Column: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Cybersecurity in Smart Grids – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+     {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> introduces the Cybersecurity in Smart Grids Project Development Center, helping B.Tech, M.Tech, and Ph.D. scholars tackle IEEE-aligned (2023–2025) challenges in intrusion detection, blockchain-based monitoring, secure SCADA/IoT communication, and AI-driven threat analysis.</p>
               <p>Students get hands-on with simulation environments, HIL testbeds, IoT-securing techniques, blockchain protocols, and predictive cyber attack defense strategies for smart grids and microgrids.</p>
@@ -196,48 +229,26 @@ const EEECybersecuritySmartGridsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right Column: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid – Project Development Center</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Integration of Distributed Generation</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA Systems</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

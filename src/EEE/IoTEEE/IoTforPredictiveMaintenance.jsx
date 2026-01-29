@@ -1,63 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "IoT for Predictive Maintenance Project Development Center in Chennai",
+  "IoT Predictive Maintenance IEEE Projects 2023–2025",
+  "IoT Condition Monitoring Projects",
+  "AI-driven Predictive Maintenance IoT",
+  "Edge IoT Predictive Maintenance",
+  "Cloud IoT Predictive Analytics",
+  "Blockchain IoT Maintenance Systems",
+  "B.Tech IoT Predictive Maintenance Projects",
+  "M.Tech AI Fault Prediction Projects",
+  "Ph.D IoT Predictive Maintenance Research",
+  "Industrial Energy Predictive Maintenance",
+  "Narpavi Research Institute IoT Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the IoT for Predictive Maintenance Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT for Predictive Maintenance Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based condition monitoring, AI-driven fault prediction, and secure maintenance systems for industrial and energy applications."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based condition monitoring, AI-driven fault prediction, and secure predictive maintenance systems."
   },
   {
-    question: "What types of IoT for Predictive Maintenance projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-based condition monitoring), M.Tech projects (AI-driven predictive analytics), and Ph.D. projects (blockchain and AI-enhanced maintenance ecosystems) for applications in manufacturing, energy, and critical infrastructure."
+    question: "What types of IoT predictive maintenance projects are supported?",
+    answer:
+      "B.Tech projects focus on IoT-based monitoring, M.Tech projects on AI-driven predictive analytics, and Ph.D. projects on blockchain and edge AI-enabled predictive maintenance ecosystems."
   },
   {
-    question: "Which technologies are used in IoT for Predictive Maintenance projects?",
-    answer: "Our stack includes Arduino, ESP32, STM32, vibration/temperature/acoustic sensors, cloud platforms (AWS IoT, Azure, Google Cloud), AI frameworks (TensorFlow, Keras), and blockchain for secure data logging."
+    question: "Which technologies are used?",
+    answer:
+      "Arduino, ESP32, STM32, vibration and temperature sensors, cloud platforms (AWS IoT, Azure, Google Cloud), AI frameworks (TensorFlow, Keras), and blockchain."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Smart Grid, focusing on IoT integration, AI-driven anomaly detection, and secure predictive maintenance."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Industrial Informatics, Smart Grid, AI-driven anomaly detection, and secure predictive maintenance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, system design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT for Predictive Maintenance – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT for Predictive Maintenance Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering condition monitoring, AI fault prediction, edge IoT, cloud analytics, and blockchain security.";
+
+const pageUrl = "/department/iot-electrical-systems/predictive-maintenance";
 
 const EEEIoTPredictiveMaintenanceProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT Predictive Maintenance IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT for Predictive Maintenance projects for B.Tech, M.Tech, Ph.D. Condition monitoring, AI fault prediction using Arduino ESP32 STM32 sensors, AWS IoT Azure Google Cloud, TensorFlow Keras blockchain."
-  keywords="IoT Predictive Maintenance IEEE Projects 2023–2025, B.Tech IoT Condition Monitoring, M.Tech AI Fault Prediction Cloud Analytics, Ph.D. Blockchain Edge AI Maintenance, Industrial Energy Predictive Maintenance, Narpavi Research Institute"
-  url="/department/iot-electrical-systems/predictive-maintenance"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT for Predictive Maintenance</li>
-              <li>IoT Predictive Maintenance Project</li>
-              <li>Predictive Maintenance using IoT IEEE 2023–2025</li>
-              <li>IoT Condition Monitoring Projects</li>
-              <li>IoT Machine Health Monitoring</li>
-              <li>Edge IoT Predictive Maintenance</li>
-              <li>Cloud IoT for Predictive Maintenance</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>IoT for Predictive Maintenance – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT for Predictive Maintenance Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on IoT-enabled predictive maintenance solutions. Our projects focus on real-time condition monitoring, AI-driven fault prediction, and secure data management for industries like manufacturing, energy, and utilities.
               </p>
@@ -213,48 +245,26 @@ const EEEIoTPredictiveMaintenanceProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/iot-electrical-systems">
-      IoT in Electrical Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-grids">
-      IoT for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/renewable-energy">
-      IoT in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/predictive-maintenance">
-      IoT for Predictive Maintenance
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-home-automation">
-      Smart Home Automation with IoT
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-meters">
-      IoT-Enabled Smart Meters
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/health-monitoring">
-      IoT-Based Health Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/iot-electrical-systems">IoT in Electrical Systems</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-grids">IoT for Smart Grids</a></li>
+              <li><a href="/department/iot-electrical-systems/renewable-energy">IoT in Renewable Energy</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-home-automation">Smart Home Automation with IoT</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-meters">IoT-Enabled Smart Meters</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">IoT-Based Health Monitoring</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

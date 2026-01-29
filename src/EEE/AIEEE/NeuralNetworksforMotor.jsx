@@ -1,69 +1,96 @@
-import "../EEEProjectDevelopmentCenter.scss"; 
+import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Neural Networks for Motor Control Project Development Center in Chennai",
+  "Neural Networks Motor Control IEEE Projects 2023–2025",
+  "AI-Based Motor Control Projects",
+  "Deep Learning Motor Controllers",
+  "Electric Vehicle Motor AI Projects",
+  "Industrial Motor Optimization using Neural Networks",
+  "B.Tech Neural Network Motor Projects",
+  "M.Tech AI Motor Control Projects",
+  "Ph.D Intelligent Motor Control Research",
+  "GAN Reinforcement Learning Motor Controllers",
+  "Narpavi Research Institute Motor Control Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Neural Networks for Motor Control Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects applying neural networks to DC, AC, BLDC, PMSM, and stepper motors. Services include algorithm design, simulation (MATLAB/Python), hardware prototyping (Arduino/Raspberry Pi/DSP/FPGA), AI optimization, and IEEE/SCI/Scopus publication support."
+    answer:
+      "IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects applying neural networks to DC, AC, BLDC, PMSM, and stepper motors with simulation, hardware prototyping, and publication guidance."
   },
   {
     question: "What types of motor control projects are supported?",
-    answer: "B.Tech: feedforward/backpropagation NN motor control simulations in MATLAB/Python. M.Tech: RNN, LSTM, hybrid NN controllers for adaptive torque response and efficiency optimization. Ph.D: GANs, reinforcement learning + NN hybrid controllers, industrial-scale validation, patents & IEEE/SCI publications."
+    answer:
+      "B.Tech focuses on basic NN simulations, M.Tech on adaptive and hybrid NN controllers, and Ph.D. on GAN/RL-based intelligent motor control with industrial validation."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, LabVIEW, Python (TensorFlow, PyTorch), Arduino, Raspberry Pi, STM32 microcontrollers, FPGA/DSP boards, IoT telemetry integration for Industry 4.0 motor systems."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch), Arduino, Raspberry Pi, STM32, FPGA/DSP boards, and IoT telemetry platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions (2023–2025) on Industrial Electronics, Power Electronics, Neural Networks, covering intelligent motor control, adaptive torque optimization, predictive maintenance, and energy-efficient controllers."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Industrial Electronics, Power Electronics, and Neural Networks."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide guidance from IEEE topic selection, dataset preparation, network modeling, simulation/testing, hardware-in-loop integration, performance benchmarking, to IEEE/SCI/Scopus publication."
+    answer:
+      "Complete support from topic selection, dataset preparation, simulation, HIL testing, to IEEE/SCI/Scopus publication."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Neural Networks for Motor Control – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Neural Networks for Motor Control Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering DC, AC, BLDC, PMSM motor control using MATLAB, TensorFlow, PyTorch, FPGA, DSP, and IoT.";
+
+const pageUrl =
+  "/department/ai-electrical-engineering/neural-networks-motor";
 
 const EEENnMotorControlProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Neural Networks Motor Control IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Neural Networks for Motor Control projects for B.Tech, M.Tech, Ph.D. DC AC BLDC PMSM control using MATLAB/Simulink, TensorFlow PyTorch, Arduino Raspberry Pi STM32 FPGA DSP IoT for EVs robotics renewables."
-  keywords="Neural Networks Motor Control IEEE Projects 2023–2025, B.Tech Feedforward Backpropagation Motor Control, M.Tech RNN LSTM Motor Optimization, Ph.D. GAN RL Hybrid Motor Controllers, EV Robotics Motor AI, Narpavi Research Institute"
-  url="/department/ai-electrical-engineering/neural-networks-motor"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords for SEO */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Neural Networks for Motor Control projects</li>
-              <li>AI-based motor control</li>
-              <li>Deep Learning motor controllers</li>
-              <li>Industrial motor optimization using NN</li>
-              <li>Electric vehicle motor AI projects</li>
-              <li>IEEE 2023–2025 motor control projects</li>
-              <li>B.Tech neural network motor projects</li>
-              <li>M.Tech AI motor control projects</li>
-              <li>Ph.D. research in intelligent motor control</li>
-              <li>Renewable energy motor control AI projects</li>
-              <li>Narpavi Research Institute project center</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
 
-          {/* 📑 Center Column */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Neural Networks for Motor Control – Project Development Support</h1>
-
-            {/* Intro */}
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>The <strong>Neural Networks for Motor Control Project Development Center</strong> empowers scholars globally with IEEE-aligned (2023–2025) projects in intelligent control of motors and drives. Students apply feedforward, backpropagation, RNN, LSTM, and hybrid NN architectures for robotics, electric vehicles, renewable systems, and automation applications.</p>
               <p>Projects span simulation, algorithm design, and embedded prototyping with Arduino, Raspberry Pi, FPGA, or DSP controllers, ensuring students gain both academic and industry-ready expertise.</p>
             </section>
@@ -193,53 +220,30 @@ const EEENnMotorControlProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Related */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/ai-electrical-engineering">
-      Artificial Intelligence in Electrical Engineering – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/power-load-forecasting">
-      AI-Based Power Load Forecasting
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
-      Machine Learning for Fault Detection
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
-      Deep Learning in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-smart-grids">
-      AI in Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/neural-networks-motor">
-      Neural Networks for Motor Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
-      AI-Based Energy Optimization
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/ai-electrical-engineering">Artificial Intelligence in Electrical Engineering</a></li>
+              <li><a href="/department/ai-electrical-engineering/power-load-forecasting">AI-Based Power Load Forecasting</a></li>
+              <li><a href="/department/ai-electrical-engineering/machine-learning-fault-detection">Machine Learning for Fault Detection</a></li>
+              <li><a href="/department/ai-electrical-engineering/deep-learning-renewables">Deep Learning in Renewable Energy</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-smart-grids">AI in Smart Grids</a></li>
+              <li><a href="/department/ai-electrical-engineering/neural-networks-motor">Neural Networks for Motor Control</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-energy-optimization">AI-Based Energy Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
-        
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEENnMotorControlProjectDevelopmentCenter;

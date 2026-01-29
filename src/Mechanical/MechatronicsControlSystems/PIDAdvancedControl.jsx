@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "PID & Advanced Control Systems Project Development Center in Chennai",
+  "PID Control IEEE Projects 2023–2025",
+  "Adaptive PID Student Projects",
+  "Fuzzy Logic Control IEEE Projects",
+  "Model Predictive Control IEEE Projects",
+  "IoT Based Control System Projects",
+  "AI Assisted PID Projects",
+  "Mechatronics Control Systems Projects",
+  "Digital Twin Control Systems",
+  "Narpavi Research Institute Control Systems Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the PID & Advanced Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s PID & Advanced Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on PID control, adaptive control, fuzzy logic, Model Predictive Control (MPC), AI-assisted tuning, and IoT-enabled control systems for robotics, industrial automation, and smart vehicles."
+    question:
+      "What services does the PID & Advanced Control Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on PID control, adaptive control, fuzzy logic, MPC, AI-assisted tuning, and IoT-enabled control systems."
   },
   {
-    question: "What types of PID & Advanced Control Systems projects are supported?",
-    answer: "We support B.Tech projects (basic PID control, sensor-based systems), M.Tech projects (adaptive PID, fuzzy logic, MPC), and Ph.D. projects (AI-driven control, digital twins, cybersecure automation) for applications in robotics, smart factories, and automotive systems."
+    question: "Who can apply for PID & control systems projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechatronics, Control, ECE, and Mechanical backgrounds."
   },
   {
-    question: "Which tools and technologies are used in PID & Advanced Control Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, LabVIEW, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, PLCs, and actuators for simulation, prototyping, and real-time control."
+    question: "Which tools are used in PID & advanced control projects?",
+    answer:
+      "MATLAB, Simulink, LabVIEW, Python, PLC, IoT platforms, and AI frameworks."
   },
   {
-    question: "How are PID & Advanced Control Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Control Systems Technology and Industrial Electronics, focusing on advanced control algorithms, IoT integration, and automation, aligned with IEEE/IEC standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes. All projects follow IEEE Transactions (2023–2025) and IEEE/IEC standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes. Support is available for IEEE, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "PID & Advanced Control Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) PID & Advanced Control Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on PID control, adaptive control, fuzzy logic, MPC, AI-assisted tuning, and IoT-enabled control systems.";
+
+const pageUrl =
+  "/department/mechatronics-control-systems/pid-advanced-control";
 
 const MEPIDAdvancedControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="PID & Advanced Control Systems IEEE Projects (2023–2025)"
-        description="PID Advanced Control Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, Simulink, fuzzy logic, MPC, AI-assisted tuning, IoT control, adaptive PID for robotics, smart factories, industrial automation."
-        url="/department/mechatronics-control-systems/pid-advanced-control"
-        type="article"
-        keywords={[
-          "PID Control IEEE 2023–2025",
-          "Adaptive PID Student Projects",
-          "Fuzzy PID Controller Projects",
-          "Model Predictive Control IEEE Projects",
-          "IoT Based Control System Projects",
-          "AI Assisted PID Projects",
-          "Mechatronics Control IEEE Projects",
-          "Digital Twin PID Control",
-          "Narpavi Research Institute Control Systems Projects",
-          "IEEE Advanced Control Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>PID Control IEEE Projects 2023–2025</li>
-              <li>Adaptive PID Student Projects</li>
-              <li>Fuzzy PID Controller Projects</li>
-              <li>Model Predictive Control IEEE Projects</li>
-              <li>IoT-Based Control System Projects</li>
-              <li>AI-Assisted PID Projects</li>
-              <li>Mechatronics Control IEEE Projects</li>
-              <li>B.Tech/M.Tech/Ph.D. PID Projects</li>
-              <li>Narpavi Research Institute Control Systems Projects</li>
-              <li>IEEE 2023–2025 Advanced Control Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>PID & Advanced Control Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+<section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the PID & Advanced Control Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on PID control, adaptive control, fuzzy logic, Model Predictive Control (MPC), AI-assisted tuning, and IoT-enabled control systems.
               </p>
@@ -254,43 +274,26 @@ const MEPIDAdvancedControlSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/mechatronics-control-systems">
-      Mechatronics & Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/pid-advanced-control">
-      PID & Advanced Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/automation-manufacturing">
-      Automation in Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/plc-systems">
-      PLC Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/sensor-integration">
-      Sensor Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
-      Smart Actuator Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/mechatronics-control-systems">Mechatronics & Control Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/pid-advanced-control">PID & Advanced Control</a></li>
+              <li><a href="/department/mechatronics-control-systems/automation-manufacturing">Automation in Manufacturing</a></li>
+              <li><a href="/department/mechatronics-control-systems/plc-systems">PLC Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/sensor-integration">Sensor Integration</a></li>
+              <li><a href="/department/mechatronics-control-systems/smart-actuator-systems">Smart Actuator Systems</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

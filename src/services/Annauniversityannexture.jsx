@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar";
+import Subsidebar from ".././pages/Subsidebar"
 import SEO from "../assets/SEO";
 
 const faqs = [
@@ -47,7 +47,11 @@ const AnnaUniversityPublication = () => {
         faqs={faqs}
       />
 
-      <SubSiderbar />
+         <Subsidebar
+  extraLinks={[
+    { id: "service", label: "service", path: "/service" }
+  ]}
+/>
 
       <div className="phd-guidance-container">
         <h2 className="title">Anna University Annexure Paper Publication Services</h2>

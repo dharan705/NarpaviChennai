@@ -1,76 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "CFD Simulations Project Development Center in Chennai",
+  "Computational Fluid Dynamics IEEE Projects 2023–2025",
+  "ANSYS Fluent Student Projects",
+  "OpenFOAM CFD Projects",
+  "Turbulence Modeling IEEE Projects",
+  "Fluid Structure Interaction CFD",
+  "Machine Learning in CFD",
+  "Multiphysics CFD Simulations",
+  "High Performance CFD Computing",
+  "Narpavi Research Institute CFD Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the CFD Simulations Project Development Center offer?",
-    answer: "Narpavi Research Institute’s CFD Simulations Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on computational fluid dynamics for aerospace, mechanical, civil, and energy applications, using tools like ANSYS Fluent and OpenFOAM."
+    answer:
+      "Narpavi Research Institute’s CFD Simulations Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) computational fluid dynamics projects."
   },
   {
     question: "What types of CFD projects are supported?",
-    answer: "We support B.Tech projects (airflow over airfoils, pipe flow simulations), M.Tech projects (multiphysics CFD, turbine optimization), and Ph.D. projects (AI-driven CFD, high-performance computing) for industries like aerospace, biomedical, and energy."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering airflow analysis, multiphysics CFD, turbulence modeling, and AI-driven simulations."
   },
   {
-    question: "Which tools and technologies are used in CFD projects?",
-    answer: "Our stack includes ANSYS Fluent, OpenFOAM, MATLAB, COMSOL Multiphysics, C++, Python, AI frameworks (TensorFlow, Keras), and high-performance computing platforms for CFD simulations."
+    question: "Which tools and technologies are used?",
+    answer:
+      "ANSYS Fluent, OpenFOAM, MATLAB, COMSOL, Python, C++, AI frameworks, and HPC platforms."
   },
   {
     question: "How are CFD projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics, focusing on turbulence modeling, multiphysics simulations, and AI-driven CFD."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD modeling, experimental validation, AI/HPC integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance from problem formulation to IEEE/Scopus/Elsevier/Springer publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Computational Fluid Dynamics (CFD) Simulations – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Computational Fluid Dynamics (CFD) Simulations Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using ANSYS Fluent, OpenFOAM, multiphysics modeling, AI-driven CFD, and high-performance computing.";
+
+const pageUrl =
+  "/department/fluid-mechanics-dynamics/computational-fluid-dynamics";
 
 const MECFDSimulationsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="CFD Simulations IEEE Projects (2023–2025)"
-        description="Computational Fluid Dynamics IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, OpenFOAM, turbulence modeling, multiphysics FSI, AI-driven CFD, HPC simulations for aerospace, biomedical, energy systems."
-        url="/department/fluid-mechanics-dynamics/computational-fluid-dynamics"
-        type="article"
-        keywords={[
-          "CFD Simulations IEEE 2023–2025",
-          "ANSYS Fluent Student Projects",
-          "OpenFOAM CFD Projects",
-          "Turbulence Modeling IEEE Projects",
-          "Fluid Structure Interaction CFD",
-          "Machine Learning CFD Optimization",
-          "Multiphysics CFD Simulations",
-          "High Performance CFD Computing",
-          "Narpavi Research Institute CFD Projects",
-          "Aerospace Biomedical CFD Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Computational Fluid Dynamics Projects</li>
-              <li>CFD IEEE Projects 2023–2025</li>
-              <li>Fluid Mechanics Simulation Projects</li>
-              <li>ANSYS Fluent Student Projects</li>
-              <li>OpenFOAM CFD Projects</li>
-              <li>Machine Learning in CFD</li>
-              <li>Turbulence Modeling IEEE Projects</li>
-              <li>CFD Project Support Narpavi Research Institute</li>
-              <li>Fluid–Structure Interaction Projects</li>
-              <li>High-Performance CFD Simulations</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Computational Fluid Dynamics (CFD) Simulations – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the CFD Simulations Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on computational fluid dynamics for fluid flow analysis, heat transfer, and system optimization.
               </p>
@@ -235,43 +254,26 @@ const MECFDSimulationsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-          <ul>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics">
-      Fluid Mechanics & Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
-      Computational Fluid Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
-      Turbomachinery Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
-      Aerodynamics & Wind Tunnel
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
-      Pump & Valve Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
-      Microfluidics Lab
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/fluid-mechanics-dynamics">Fluid Mechanics & Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">Computational Fluid Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/turbomachinery-design">Turbomachinery Design</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">Aerodynamics & Wind Tunnel</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">Pump & Valve Optimization</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/microfluidics-lab">Microfluidics Lab</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

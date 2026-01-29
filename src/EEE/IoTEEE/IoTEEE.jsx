@@ -1,67 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "IoT in EEE Project Development Center in Chennai",
+  "IoT EEE IEEE Projects 2023–2025",
+  "IoT Smart Grid IEEE Projects",
+  "IoT Renewable Energy IEEE Projects",
+  "IoT Electric Vehicle IEEE Projects",
+  "AI Integrated IoT EEE Projects",
+  "Blockchain IoT EEE Research",
+  "IoT Energy Monitoring Projects",
+  "IoT Industrial Automation Projects",
+  "B.Tech IoT EEE Projects",
+  "M.Tech IoT EEE Projects",
+  "Ph.D IoT EEE Research",
+  "Narpavi Research Institute IoT Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the IoT in EEE Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT in EEE Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT-powered smart grids, renewable energy systems, electric vehicles, and industrial automation."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) IoT projects for smart grids, renewable energy systems, electric vehicles, and industrial automation."
   },
   {
     question: "What types of IoT in EEE projects are supported?",
-    answer: "We support B.Tech projects (smart energy meters, home automation), M.Tech projects (AI-integrated IoT, smart EV charging), and Ph.D. projects (blockchain IoT, edge intelligence) for EEE applications."
+    answer:
+      "B.Tech projects focus on smart meters and home automation, M.Tech projects on AI-integrated IoT and EV charging, and Ph.D. research on blockchain, edge intelligence, and secure IoT systems."
   },
   {
     question: "Which technologies are used in IoT in EEE project development?",
-    answer: "Our stack includes Arduino, Raspberry Pi, ESP32, NodeMCU, MATLAB/Simulink, Python, NS3, and cloud platforms like ThingSpeak, AWS IoT, and Firebase for IoT system design and prototyping."
+    answer:
+      "Arduino, Raspberry Pi, ESP32, NodeMCU, MATLAB/Simulink, Python, NS3, and cloud platforms such as ThingSpeak, AWS IoT, and Firebase."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Journals (2023–2025), covering areas like IoT in smart grids, renewable energy monitoring, and cybersecurity, ensuring academic and industry relevance."
+    answer:
+      "Projects are aligned with IEEE Transactions and Journals (2023–2025) covering smart grids, renewable energy IoT, cybersecurity, and intelligent EEE systems."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT in EEE – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT in EEE Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering smart grids, renewable energy, EV charging, AI-integrated IoT, and industrial automation.";
+
+const pageUrl = "/department/iot-electrical-systems";
 
 const EEEIoTProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT in EEE IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT in EEE projects for B.Tech, M.Tech, Ph.D. Smart grids, renewable energy, EV charging, industrial automation using Arduino Raspberry Pi ESP32 NodeMCU MATLAB Python NS3 ThingSpeak AWS IoT Firebase."
-  keywords="IoT EEE IEEE Projects 2023–2025, B.Tech IoT Smart Meters Home Automation, M.Tech AI IoT Smart Grids EV Charging, Ph.D. Blockchain Edge AI IoT, Smart City Energy Monitoring, Narpavi Research Institute"
-  url="/department/iot-electrical-systems"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT in EEE IEEE Projects</li>
-              <li>IoT Smart Grid IEEE Projects</li>
-              <li>IoT Renewable Energy IEEE Projects</li>
-              <li>IoT Electric Vehicle IEEE Projects</li>
-              <li>AI IoT IEEE Projects</li>
-              <li>Blockchain IoT IEEE Projects</li>
-              <li>IoT Energy Monitoring IEEE Projects</li>
-              <li>IoT Industrial Automation IEEE Projects</li>
-              <li>IoT B.Tech Projects</li>
-              <li>IoT M.Tech Projects</li>
-              <li>IoT Ph.D. Research</li>
-              <li>IEEE IoT Publications</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Internet of Things (IoT) in EEE – Project Development Center</h1>
-
+            <h1>{pageTitle}</h1>
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Internet of Things (IoT) in EEE – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) IoT-powered solutions for smart grids, smart cities, electric vehicles, renewable energy, and industrial automation.
@@ -249,48 +277,27 @@ const EEEIoTProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/iot-electrical-systems">
-      IoT in Electrical Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-grids">
-      IoT for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/renewable-energy">
-      IoT in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/predictive-maintenance">
-      IoT for Predictive Maintenance
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-home-automation">
-      Smart Home Automation with IoT
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-meters">
-      IoT-Enabled Smart Meters
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/health-monitoring">
-      IoT-Based Health Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/iot-electrical-systems">IoT in Electrical Systems</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-grids">IoT for Smart Grids</a></li>
+              <li><a href="/department/iot-electrical-systems/renewable-energy">IoT in Renewable Energy</a></li>
+              <li><a href="/department/iot-electrical-systems/predictive-maintenance">IoT for Predictive Maintenance</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-home-automation">Smart Home Automation</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-meters">IoT-Enabled Smart Meters</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">IoT-Based Health Monitoring</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

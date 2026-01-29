@@ -92,3 +92,50 @@
     }
   }
 }
+.trending-topics {
+  margin-left: 100px; /* space for Subsidebar */
+  min-height: 100vh;
+  position: relative;
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 2rem;
+  }
+
+  aside.left-links,
+  aside.right-tags {
+    position: sticky;
+    top: 100px;
+    background: #ffffff;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #dceaf0;
+    align-self: start;
+  }
+
+  aside h3 {
+    font-size: 1.1rem;
+    color: #005f83;
+    margin-bottom: 0.5rem;
+  }
+
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  aside ul li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  aside.left-links a {
+    color: #0079a1;
+    text-decoration: none;
+  }
+
+  aside.left-links a:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,64 +1,83 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Automotive Project Development Center Chennai",
+  "Vehicle Engineering Project Development Center Chennai",
+  "Automotive IEEE Projects 2023–2025",
+  "Electric Vehicle Projects for Students",
+  "Hybrid Vehicle IEEE Projects",
+  "Vehicle Dynamics MATLAB Projects",
+  "AI in Automotive Engineering",
+  "Smart Grid EV Integration",
+  "Emission Control Projects",
+  "Autonomous Vehicle IEEE Projects",
+  "IoT-Based Automotive Projects",
+  "Narpavi Research Institute Automotive Projects"
+];
 
 const faqs = [
   {
     question: "What services does the Automotive & Vehicle Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute's Automotive & Vehicle Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on electric vehicles, hybrid powertrains, autonomous driving, smart grid integration, and emission control for sustainable mobility and smart city applications."
+    answer:
+      "Narpavi Research Institute's Automotive & Vehicle Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on electric vehicles, hybrid powertrains, autonomous driving, smart grid integration, and emission control."
   },
   {
     question: "What types of Automotive & Vehicle Engineering projects are supported?",
-    answer: "We support B.Tech projects (EV prototypes, vehicle dynamics), M.Tech projects (AI-driven powertrains, hybrid optimization), and Ph.D. projects (autonomous vehicles, digital twins, V2G systems) for applications in green transport, smart cities, and automotive innovation."
+    answer:
+      "We support B.Tech projects (EV prototypes, vehicle dynamics), M.Tech projects (AI-driven powertrains, hybrid optimization), and Ph.D. projects (autonomous vehicles, digital twins, V2G systems)."
   },
   {
     question: "Which tools and technologies are used in Automotive & Vehicle Engineering projects?",
-    answer: "Our stack includes MATLAB, Simulink, ADAMS, ANSYS, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, and EV motor drives for simulation, prototyping, and real-time control."
+    answer:
+      "Our stack includes MATLAB, Simulink, ADAMS, ANSYS, Python, AI frameworks, IoT platforms, and embedded hardware for simulation and prototyping."
   },
   {
     question: "How are Automotive & Vehicle Engineering projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on EV powertrains, autonomous driving, and smart grid integration."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) focusing on vehicular technology, EV powertrains, autonomous systems, and smart grid integration."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    answer:
+      "We provide topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const MEAutomotiveVehicleEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-      <SEO 
-        title="Automotive IEEE Projects | EV, Autonomous Vehicles | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023-2025) Automotive & Vehicle Engineering projects. MATLAB, Simulink, AI, IoT for electric vehicles, hybrid powertrains, autonomous driving, smart grid integration."
-        keywords="Automotive IEEE Projects 2023–2025, Electric Vehicle Projects for Students, Hybrid Vehicle IEEE Projects, Vehicle Dynamics MATLAB Projects, AI in Automotive Engineering, Smart Grid EV Integration, Emission Control Projects, Autonomous Vehicle IEEE Projects, IoT-Based Automotive Projects, Narpavi Research Institute Automotive Projects"
-        url="/department/automotive-vehicle-engineering"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Automotive & Vehicle Engineering – Project Development Center in Chennai"
+        description="Automotive & Vehicle Engineering Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on electric vehicles, hybrid powertrains, autonomous driving, AI, IoT, smart grid integration, and emission control (2023–2025)."
+        url="/automotive-vehicle-engineering-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" }
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Automotive IEEE Projects 2023–2025</li>
-              <li>Electric Vehicle Projects for Students</li>
-              <li>Hybrid Vehicle IEEE Projects</li>
-              <li>Vehicle Dynamics MATLAB Projects</li>
-              <li>AI in Automotive Engineering</li>
-              <li>Smart Grid EV Integration</li>
-              <li>Emission Control Projects</li>
-              <li>Autonomous Vehicle IEEE Projects</li>
-              <li>IoT-Based Automotive Projects</li>
-              <li>Narpavi Research Institute Automotive Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          </aside>
+
+          {/* ❌ MAIN CONTENT (UNCHANGED) */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Automotive & Vehicle Engineering – Project Development Support</h1>
-
+            <h1>Automotive & Vehicle Engineering – Project Development Center in Chennai</h1>
+              
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Automotive & Vehicle Engineering Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on electric vehicles, hybrid powertrains, autonomous driving, smart grid integration, and emission control.
@@ -234,43 +253,25 @@ const MEAutomotiveVehicleEngineeringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/automotive-vehicle-engineering">
-      Automotive & Vehicle Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
-      Electric Vehicle Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
-      Hybrid Vehicle Powertrains
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
-      Vehicle Dynamics & Stability
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
-      Engine Performance Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
-      Emission Control & Fuel Efficiency
-    </a>
-  </li>
-</ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <ul>
+              <li><a href="/department/automotive-vehicle-engineering">Automotive & Vehicle Engineering</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/electric-vehicle-design">Electric Vehicle Design</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">Hybrid Vehicle Powertrains</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">Vehicle Dynamics & Stability</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/engine-performance-optimization">Engine Performance Optimization</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">Emission Control & Fuel Efficiency</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

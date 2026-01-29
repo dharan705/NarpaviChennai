@@ -1,68 +1,97 @@
-import "../EEEProjectDevelopmentCenter.scss";  
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
+import "../EEEProjectDevelopmentCenter.scss";
+import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Predictive Maintenance Systems Project Development Center in Chennai",
+  "Predictive Maintenance IEEE Projects 2023–2025",
+  "AI Based Predictive Maintenance Projects",
+  "IIoT Predictive Maintenance Systems",
+  "Condition Based Monitoring Projects",
+  "Digital Twin Predictive Maintenance",
+  "Smart Factory Maintenance Systems",
+  "Industrial Equipment Health Monitoring",
+  "B.Tech Predictive Maintenance Projects",
+  "M.Tech Predictive Maintenance Projects",
+  "Ph.D Predictive Maintenance Research",
+  "Narpavi Research Institute Predictive Maintenance"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Predictive Maintenance Systems Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. students IEEE-aligned (2023–2025) support for predictive maintenance projects integrating IIoT sensors, AI/ML models, condition-based monitoring, and cloud-enabled industrial analytics."
+    question:
+      "What services does the Predictive Maintenance Systems Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. students IEEE-aligned (2023–2025) support for predictive maintenance projects integrating IIoT sensors, AI/ML models, condition-based monitoring, and cloud-enabled industrial analytics."
   },
   {
     question: "What types of projects are supported?",
-    answer: "B.Tech projects include vibration monitoring, motor fault detection, Arduino/PLC-based alert systems. M.Tech projects cover AI/ML predictive models, IoT-enabled dashboards, and real-time condition-based maintenance. Ph.D. research focuses on deep learning-driven predictive frameworks, digital twins, smart asset management, and IEEE/SCI publications."
+    answer:
+      "B.Tech projects include vibration monitoring and motor fault detection. M.Tech projects focus on AI/ML predictive models and IoT dashboards. Ph.D. research covers deep learning-driven predictive frameworks, digital twins, and IEEE/SCI publications."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "Arduino, Raspberry Pi, PLCs, MATLAB/Simulink, LabVIEW, IoT protocols (MQTT, OPC-UA), cloud services (AWS IoT, Azure, ThingSpeak), AI frameworks (TensorFlow, PyTorch), and predictive analytics systems (Python SciKit-Learn)."
+    answer:
+      "Arduino, Raspberry Pi, PLCs, MATLAB/Simulink, LabVIEW, MQTT, OPC-UA, AWS IoT, Azure, TensorFlow, PyTorch, and Python predictive analytics libraries."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Our projects follow IEEE Transactions (2023–2025) on predictive analytics, condition-based monitoring, deep learning-driven maintenance, and Industry 4.0 predictive maintenance strategies."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on predictive analytics, condition-based monitoring, deep learning maintenance, and Industry 4.0 strategies."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide full-cycle support from IEEE topic selection, AI/ML algorithm development, IoT hardware integration, performance evaluation, IEEE-style report formatting, to Scopus/SCI-indexed publication guidance."
+    answer:
+      "End-to-end guidance including topic selection, AI/ML model development, IoT integration, IEEE-format documentation, and Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Predictive Maintenance Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Predictive Maintenance Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IIoT sensors, AI/ML condition monitoring, digital twins, and Industry 4.0 smart factory maintenance.";
+
+const pageUrl =
+  "/department/industrial-automation/predictive-maintenance";
 
 const EEEPredictiveMaintenanceProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Predictive Maintenance IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Predictive Maintenance projects for B.Tech, M.Tech, Ph.D. IIoT sensors, AI/ML condition monitoring, digital twins using Arduino Raspberry Pi, MATLAB/Simulink, TensorFlow for Industry 4.0, smart factories."
-  keywords="Predictive Maintenance IEEE Projects 2023–2025, B.Tech Motor Vibration Monitoring, M.Tech AI Predictive Maintenance, Ph.D. Deep Learning Digital Twins, Condition-Based Maintenance, IIoT Predictive Analytics, Smart Factory Maintenance, Narpavi Research Institute"
-  url="/department/industrial-automation/predictive-maintenance"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🚀 Left Column – Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Predictive Maintenance Systems Project Development Center</li>
-              <li>Industrial Maintenance AI/ML Projects</li>
-              <li>IoT-Based Predictive Maintenance</li>
-              <li>Smart Factory Maintenance Projects</li>
-              <li>Condition-Based Maintenance Projects</li>
-              <li>Predictive Analytics IEEE Projects</li>
-              <li>Motor Health Monitoring Projects</li>
-              <li>B.Tech Predictive Maintenance Projects</li>
-              <li>M.Tech Predictive Maintenance Projects</li>
-              <li>Ph.D. Predictive Maintenance Research</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center – Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Predictive Maintenance Systems – Project Development Support</h1>
-            
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+   {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> introduces the Predictive Maintenance Systems Project Development Center, offering IEEE-aligned (2023–2025) research on data-driven industrial maintenance strategies. Students develop intelligent, IIoT-enabled, and AI-driven predictive systems to reduce downtime and optimize asset life.</p>
               <p>Predictive maintenance leverages sensors, analytics, and machine learning to forecast failures, providing smarter, safer, and cost-efficient operations across industries.</p>
@@ -183,53 +212,31 @@ const EEEPredictiveMaintenanceProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Column Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-         <ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">DCS</a></li>
+              <li><a href="/department/industrial-automation/hmi">HMI</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">RPA</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEPredictiveMaintenanceProjectDevelopmentCenter;

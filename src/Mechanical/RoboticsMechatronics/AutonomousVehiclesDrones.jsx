@@ -1,78 +1,100 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Autonomous Vehicles & Drones Project Development Center in Chennai",
+  "Autonomous Vehicle IEEE Projects 2023–2025",
+  "Drone Navigation Projects",
+  "IoT Enabled UAV Systems",
+  "AI Autonomous Driving Projects",
+  "Smart City Autonomous Systems",
+  "Multi Drone Coordination IEEE Projects",
+  "Machine Vision Autonomous Vehicles",
+  "Self Driving Car Simulation Projects",
+  "Narpavi Research Institute Autonomous Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Autonomous Vehicles & Drones Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Autonomous Vehicles & Drones Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on autonomous navigation, drone delivery systems, AI-driven decision-making, and IoT-enabled fleet management for industries like transportation, logistics, and smart cities."
+    question:
+      "What services does the Autonomous Vehicles & Drones Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Autonomous Vehicles & Drones Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on autonomous navigation, drone delivery systems, AI-driven decision-making, and IoT-enabled fleet management for transportation, logistics, and smart cities."
   },
   {
-    question: "What types of Autonomous Vehicles & Drones projects are supported?",
-    answer: "We support B.Tech projects (basic autonomous navigation, drone prototyping), M.Tech projects (AI-driven navigation, IoT integration), and Ph.D. projects (swarm robotics, digital twins) for applications in urban mobility, logistics, and defense."
+    question:
+      "What types of Autonomous Vehicles & Drones projects are supported?",
+    answer:
+      "We support B.Tech projects in basic autonomous navigation and drone prototyping, M.Tech projects in AI-driven navigation and IoT integration, and Ph.D. research in swarm robotics and digital twins."
   },
   {
-    question: "Which tools and technologies are used in Autonomous Vehicles & Drones projects?",
-    answer: "Our stack includes MATLAB, Simulink, ROS, Gazebo, Python, AI frameworks (TensorFlow, Keras), Raspberry Pi, Arduino, and IoT platforms like AWS IoT for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Autonomous Vehicles & Drones projects?",
+    answer:
+      "MATLAB, Simulink, ROS, Gazebo, Python, TensorFlow, Keras, Raspberry Pi, Arduino, and IoT platforms for simulation, prototyping, and real-time control."
   },
   {
-    question: "How are Autonomous Vehicles & Drones projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics and Autonomous Systems, focusing on AI-driven navigation, sensor fusion, and IoT-enabled autonomous systems."
+    question:
+      "How are Autonomous Vehicles & Drones projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Robotics and Autonomous Systems, focusing on AI-driven navigation, sensor fusion, and IoT-enabled autonomy."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, IEEE documentation, and Scopus/SCI/Elsevier publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Autonomous Vehicles & Drones – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Autonomous Vehicles & Drones Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering ROS-based navigation, AI decision-making, IoT fleet management, swarm robotics, and smart city applications.";
+
+const pageUrl =
+  "/department/robotics-mechatronics/autonomous-vehicles-drones";
 
 const MEAutonomousVehiclesDronesProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-            <SEO
-        title="Autonomous Vehicles & Drones IEEE Projects (2023–2025)"
-        description="Autonomous Vehicles Drones IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI navigation, IoT fleet management, swarm robotics, sensor fusion for transportation, logistics, smart cities."
-        url="/department/robotics-mechatronics/autonomous-vehicles-drones"
-        type="article"
-        keywords={[
-          "Autonomous Vehicle IEEE 2023–2025",
-          "Drone Navigation Projects",
-          "IoT Enabled UAV Systems",
-          "AI Autonomous Driving",
-          "Smart City Autonomous Projects",
-          "Multi Drone Coordination",
-          "Machine Vision Autonomous Vehicles",
-          "Self Driving Car Simulation",
-          "Swarm Robotics Drone Projects",
-          "Narpavi Research Institute Autonomous"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
-
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Autonomous Vehicle IEEE Projects 2023–2025</li>
-              <li>Drone Navigation Projects</li>
-              <li>IoT-Enabled UAV Systems</li>
-              <li>AI for Autonomous Driving</li>
-              <li>Smart City Autonomous Projects</li>
-              <li>Multi-Drone Coordination IEEE Projects</li>
-              <li>Machine Vision in Autonomous Vehicles</li>
-              <li>Self-Driving Car Simulation Projects</li>
-              <li>Ph.D. Drone Research Projects</li>
-              <li>Narpavi Research Institute Autonomous Systems</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Autonomous Vehicles & Drones – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+   <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Autonomous Vehicles & Drones Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on autonomous navigation, drone delivery systems, AI-driven decision-making, and IoT-enabled fleet management.
               </p>
@@ -244,64 +266,32 @@ const MEAutonomousVehiclesDronesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/robotics-mechatronics">
-      Robotics & Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
-      Industrial Robotics Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
-      IoT-Based Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
-      Autonomous Vehicles & Drones
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
-      Robotic Manipulator Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/embedded-control-systems">
-      Embedded Control Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/robotics-mechatronics">Robotics & Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/industrial-robotics-systems">Industrial Robotics Systems</a></li>
+              <li><a href="/department/robotics-mechatronics/iot-based-mechatronics">IoT-Based Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/autonomous-vehicles-drones">Autonomous Vehicles & Drones</a></li>
+              <li><a href="/department/robotics-mechatronics/robotic-manipulator-control">Robotic Manipulator Control</a></li>
+              <li><a href="/department/robotics-mechatronics/embedded-control-systems">Embedded Control Systems</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

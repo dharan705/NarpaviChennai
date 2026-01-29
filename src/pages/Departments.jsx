@@ -1,4 +1,6 @@
 import "./Departments.scss";
+import { useNavigate } from "react-router-dom";
+import DepartmentUI from "./DepartmentUI"
 import {
   FaLaptopCode,
   FaCogs,
@@ -7,6 +9,7 @@ import {
   FaDraftingCompass,
   FaUniversity,
 } from "react-icons/fa";
+
 
 const departments = [
   {
@@ -66,6 +69,7 @@ const departments = [
 ];
 
 const Departments = () => {
+  const navigate=useNavigate();
   return (
     <>
       {/* ===================== Departments Section ===================== */}
@@ -79,7 +83,7 @@ const Departments = () => {
             and researchers across multiple engineering and technology domains.
           </p>
 
-          <button className="read-more-btn">Read More</button>
+          <button className="read-more-btn" onClick={()=>navigate("/department")}>View All Departments</button>
 
           <div className="departments-grid">
             {departments.map((dept, index) => (
@@ -106,18 +110,7 @@ const Departments = () => {
         <div className="services-container1">
           <h2 className="services-heading1">✨ Our Services</h2>
           <p className="services-text1">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima nemo,
-            perferendis dignissimos necessitatibus dicta eum magnam suscipit
-            reprehenderit harum veniam commodi consequuntur amet omnis impedit
-            iusto provident quaerat qui officiis laudantium. Inventore recusandae
-            ex tempore minima omnis rem, expedita in. Iure omnis recusandae vel a
-            inventore rerum corrupti, tempora nihil, reiciendis explicabo illo
-            amet dolore praesentium! In autem dolorem consequatur, nesciunt nisi
-            dolorum culpa labore magni, repellendus sint, architecto molestias
-            consequuntur ad nihil. Similique dolore pariatur perferendis mollitia
-            beatae aliquid quibusdam iste fuga ut, suscipit a debitis earum
-            reprehenderit! Quidem dolore dicta voluptas accusamus, molestiae quo
-            consequuntur nemo culpa vel?
+           Our PhD Support Services are designed to guide research scholars through every stage of their doctoral journey with expert academic assistance and personalized mentoring. From PhD admission guidance, research proposal development, paper writing, journal publications, and conference submissions to thesis writing, synopsis preparation, viva support, and project implementation, we ensure quality, originality, and adherence to university and international research standards. Whether you are targeting Scopus, SCI, Web of Science, IEEE, Springer, Elsevier, or university-specific publications, our team provides end-to-end, ethical, and professional support to help you achieve research excellence and successful completion of your PhD journey.
           </p>
 
           <a href="/service" className="services-button1">
@@ -125,6 +118,7 @@ const Departments = () => {
           </a>
         </div>
       </section>
+       <DepartmentUI/>
     </>
   );
 };

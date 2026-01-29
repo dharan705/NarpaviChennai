@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "IoT Embedded Hardware Design Project Development Center in Chennai",
+  "IoT Embedded Hardware IEEE Projects 2023–2025",
+  "Sensor Integration IoT Projects",
+  "B.Tech IoT Embedded Systems",
+  "M.Tech AI Assisted IoT Hardware",
+  "Ph.D Edge Computing IoT Projects",
+  "ESP32 ARM PIC AVR IoT Projects",
+  "Wireless Communication IoT Hardware",
+  "Industrial IoT Prototyping",
+  "Secure IoT Embedded Systems",
+  "Narpavi Research Institute IoT Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the IoT-Embedded Hardware Design Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) areas such as IoT hardware design, embedded programming, sensor integration, wireless communication, AI-assisted analytics, and secure cloud integration."
+    question:
+      "What services does the IoT-Embedded Hardware Design Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) areas such as IoT hardware design, embedded programming, sensor integration, wireless communication, AI-assisted analytics, and secure cloud integration."
   },
   {
     question: "What types of IoT-Embedded Hardware projects are supported?",
-    answer: "We support B.Tech projects (microcontroller-based IoT prototypes with sensors/actuators), M.Tech projects (AI-enabled IoT analytics, secure communication, embedded prototyping), and Ph.D. projects (deep learning-driven IoT designs, scalable IoT architectures, publications & patents)."
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects covering embedded IoT hardware, AI-enabled analytics, secure communication, and scalable architectures."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "Microcontrollers (ARM/PIC/AVR/ESP32), Proteus, Arduino IDE, Embedded C/C++, MATLAB/Simulink, IoT platforms (MQTT, AWS IoT, ThingSpeak), PCB design tools, and AI frameworks like TensorFlow & PyTorch."
+    answer:
+      "ARM, PIC, AVR, ESP32, Arduino IDE, Proteus, Embedded C/C++, MATLAB/Simulink, MQTT, AWS IoT, ThingSpeak, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects follow IEEE Transactions (2023–2025) addressing IoT hardware, embedded architectures, wireless protocols (LoRa, Zigbee, Bluetooth, 5G), secure data communication, edge analytics, and industrial IoT benchmarks."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on IoT hardware, embedded systems, wireless communication, and edge intelligence."
   },
   {
     question: "What academic support is provided?",
-    answer: "Full support: IEEE topic identification, embedded firmware coding, IoT prototyping, real-time testing with sensors & wireless modules, IEEE-style projects reports, and publishing guidance for IEEE/Scopus/SCI Journals."
+    answer:
+      "Complete guidance including IEEE topic selection, firmware development, IoT prototyping, documentation, and IEEE/Scopus journal support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT Embedded Hardware Design – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT Embedded Hardware Design Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering sensor integration, wireless communication, AI-assisted analytics, and secure IoT systems.";
+
+const pageUrl =
+  "/department/embedded-systems-electrical/iot-embedded-hardware-design";
 
 const EEEIoTEmbeddedHardwareDesignProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT Embedded Hardware Design IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT-Embedded Hardware Design projects for B.Tech, M.Tech, Ph.D. Sensor integration, wireless communication, AI-assisted analytics using ARM/ESP32, Proteus, Arduino IDE, MATLAB/Simulink, TensorFlow for smart homes, industrial IoT, healthcare."
-  keywords="IoT Embedded Hardware IEEE Projects 2023–2025, IoT Sensor Integration Projects, B.Tech IoT Devices, M.Tech AI IoT Systems, Ph.D. Edge Computing IoT, ESP32 ARM PIC AVR IoT, Cloud IoT Platforms, Industrial IoT Prototyping, Secure IoT Communication, Narpavi Research Institute"
-  url="/department/embedded-systems-electrical/iot-embedded-hardware-design"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT Embedded Hardware Projects</li>
-              <li>IEEE IoT Research 2023–2025</li>
-              <li>B.Tech IoT Devices</li>
-              <li>M.Tech Smart IoT Systems</li>
-              <li>Ph.D AI-Assisted IoT Hardware</li>
-              <li>Narpavi Research Institute</li>
-              <li>Sensor Integration IoT Projects</li>
-              <li>Embedded IoT Design</li>
-              <li>Cloud-Based IoT Monitoring</li>
-              <li>Industrial IoT Prototyping</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>IoT-Embedded Hardware Design – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT-Embedded Hardware Design Project Development Center, 
@@ -203,53 +233,31 @@ const EEEIoTEmbeddedHardwareDesignProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems – Project Development Center</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM, PIC & AVR Microcontroller Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development Center</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEIoTEmbeddedHardwareDesignProjectDevelopmentCenter;

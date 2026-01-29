@@ -1,77 +1,88 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Highway Safety Projects IEEE 2023–2025",
+  "Traffic Accident Prediction",
+  "IoT-Based Highway Monitoring",
+  "AI Traffic Optimization Projects",
+  "Genetic Algorithm Lane Allocation",
+  "Smart Highway Systems",
+  "Big Data Traffic Analytics",
+  "B.Tech M.Tech PhD Transportation Projects",
+  "Narpavi Research Institute Highway Projects",
+  "Real-Time Highway Safety Solutions"
+];
+
 const faqs = [
   {
-    question: "What services does the Highway Safety & Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Highway Safety & Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on accident prevention, traffic optimization, and smart highway systems."
+    question:
+      "What services does the Highway Safety & Optimization Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Highway Safety & Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on accident prevention, traffic optimization, and smart highway systems."
   },
   {
-    question: "What types of Highway Safety & Optimization projects are supported?",
-    answer: "We support B.Tech projects (safety audits and basic traffic analysis), M.Tech projects (advanced traffic modeling and AI-based prediction), and Ph.D. projects (smart highway systems and big data analytics) for safer and efficient highways."
+    question:
+      "What types of Highway Safety & Optimization projects are supported?",
+    answer:
+      "B.Tech projects on safety audits, M.Tech projects on AI-based traffic modeling, and Ph.D. projects on smart highways and big data analytics."
   },
   {
-    question: "Which tools and technologies are used in Highway Safety & Optimization projects?",
-    answer: "Our stack includes SIDRA, VISSIM, MATLAB, IoT sensors, traffic counters, and AI frameworks (TensorFlow, Keras) for traffic simulation and safety analysis."
+    question:
+      "Which tools are used in Highway Safety & Optimization projects?",
+    answer:
+      "SIDRA, VISSIM, MATLAB, IoT sensors, traffic counters, and AI frameworks."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Transportation Engineering, focusing on AI-driven safety prediction, IoT monitoring, and optimization techniques."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Transportation Engineering focusing on AI-driven safety prediction and optimization."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, IoT integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, IoT integration, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
 
 const CEHighwaySafetyOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Highway Safety & Optimization IEEE Projects (2023–2025)"
-        description="Highway Safety & Optimization IEEE project development for B.Tech, M.Tech & PhD scholars using SIDRA, VISSIM, AI traffic prediction, IoT monitoring, genetic algorithms for accident prevention and smart highway systems."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Highway Safety & Optimization – Project Development Center in Chennai"
+        description="Highway Safety & Optimization project development for B.Tech, M.Tech, and Ph.D. students using SIDRA, VISSIM, AI traffic prediction, IoT monitoring, and optimization algorithms for accident prevention and smart highway systems."
+        keywords={keywords}
         url="/department/transportation-engineering/highway-safety-optimization"
-        type="article"
-        keywords={[
-          "Highway Safety Projects IEEE 2023–2025",
-          "Traffic Accident Prediction",
-          "IoT-Based Highway Monitoring",
-          "AI Traffic Optimization Projects",
-          "Genetic Algorithm Lane Allocation",
-          "Smart Highway Systems",
-          "Big Data Traffic Analytics",
-          "B.Tech M.Tech PhD Transportation Projects",
-          "Narpavi Research Institute Highway Projects",
-          "Real-Time Highway Safety Solutions"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "transport", label: "transportation", path: "/department?dept=transportation" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Highway Safety Projects</li>
-              <li>Traffic Accident Prediction IEEE 2023–2025</li>
-              <li>IoT-Based Highway Monitoring</li>
-              <li>AI Traffic Optimization</li>
-              <li>Genetic Algorithm Lane Allocation</li>
-              <li>Smart Highway Systems</li>
-              <li>B.Tech M.Tech Ph.D. Transportation Projects</li>
-              <li>Narpavi Research Institute Highway Projects</li>
-              <li>Big Data Traffic Analytics</li>
-              <li>Real-Time Highway Safety Solutions</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Highway Safety & Optimization – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Highway Safety & Optimization – Project Development Center in Chennai
+            </h1>
+                  <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Highway Safety & Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on accident prevention, traffic efficiency, and smart highway systems.
               </p>
@@ -229,33 +240,39 @@ const CEHighwaySafetyOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/transportation-engineering">
-      Transportation Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/smart-traffic-management">
-      Smart Traffic Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/pavement-analysis-design">
-      Pavement Analysis & Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/highway-safety-optimization">
-      Highway Safety Optimization
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/transportation-engineering">
+                  Transportation Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/smart-traffic-management">
+                  Smart Traffic Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/pavement-analysis-design">
+                  Pavement Analysis & Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/highway-safety-optimization">
+                  Highway Safety Optimization
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

@@ -1,66 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Solid-State Drives Project Development Center in Chennai",
+  "Solid State Drives IEEE Projects 2023–2025",
+  "High-Speed Solid-State Drives",
+  "B.Tech Solid-State Drive Projects",
+  "M.Tech AI Based Drive Control",
+  "Ph.D Fault Tolerant Drive Systems",
+  "IoT Based Drive Monitoring",
+  "Energy Efficient Industrial Drives",
+  "High Performance Motor Drives",
+  "Narpavi Research Institute Power Electronics"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Solid-State Drives Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Solid-State Drives Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-performance solid-state drives, intelligent control algorithms, and IoT-enabled monitoring for industrial, automotive, and renewable energy applications."
+    answer:
+      "Narpavi Research Institute’s Solid-State Drives Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-performance solid-state drives, intelligent control algorithms, and IoT-enabled monitoring for industrial, automotive, and renewable energy applications."
   },
   {
     question: "What types of Solid-State Drives projects are supported?",
-    answer: "We support B.Tech projects (high-speed drives, IoT monitoring), M.Tech projects (AI-based control, energy-efficient drives), and Ph.D. projects (fault-tolerant design, predictive control) for applications in industrial automation, EVs, and renewable energy systems."
+    answer:
+      "We support B.Tech projects (high-speed drives, IoT monitoring), M.Tech projects (AI-based control, energy-efficient drives), and Ph.D. projects (fault-tolerant design and predictive control)."
   },
   {
     question: "Which technologies are used in Solid-State Drives project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSIM, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for drive design and control."
+    answer:
+      "MATLAB/Simulink, PSIM, TensorFlow, PyTorch, MQTT, FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like high-speed drives, energy-efficient converters, and AI-driven control, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) covering high-speed drives, energy-efficient converters, and AI-driven control."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/PSIM, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Solid-State Drives – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Solid-State Drives Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering high-speed drives, AI-based control, energy-efficient design, IoT monitoring, and fault-tolerant drive systems.";
+
+const pageUrl =
+  "/department/power-electronics/solid-state-drives";
 
 const EEESolidStateDrivesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Solid State Drives IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Solid-State Drives projects for B.Tech, M.Tech, Ph.D. High-speed drives, AI-based control, energy-efficient design using MATLAB/Simulink, PSIM, TensorFlow for industrial automation, EVs, renewable energy systems."
-  keywords="Solid State Drives IEEE Projects 2023–2025, High-Speed Drives Research, B.Tech Solid-State Drive Projects, M.Tech AI Drive Control, Ph.D. Fault-Tolerant Drives, IoT Drive Monitoring, Energy-Efficient Drives, High-Performance Industrial Drives, Intelligent Drive Systems, Narpavi Research Institute"
-  url="/department/power-electronics/solid-state-drives"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Solid-State Drives Projects</li>
-              <li>High-Speed Drives Research</li>
-              <li>IEEE Power Electronics Projects 2023–2025</li>
-              <li>B.Tech Solid-State Drive Projects</li>
-              <li>M.Tech AI-Based Drive Control</li>
-              <li>Ph.D Intelligent Drive Research</li>
-              <li>IoT-Based Drive Monitoring</li>
-              <li>Energy-Efficient Solid-State Drives</li>
-              <li>High-Performance Industrial Drives</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Solid-State Drives – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+     <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Solid-State Drives Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance high-performance solid-state drive systems aligned with IEEE Transactions (2023–2025). Our projects focus on high-speed, energy-efficient drives with intelligent control and IoT-enabled monitoring for industrial automation, electric vehicles, and renewable energy applications.
               </p>
@@ -204,90 +233,30 @@ const EEESolidStateDrivesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <ul>
-  <li>
-    <a href="/department/power-electronics">
-      Power Electronics – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/dc-dc-converters">
-      DC–DC Converters & Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/multilevel-inverters">
-      Multilevel Inverters
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/renewable-energy-controllers">
-      Power Electronic Controllers for Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/power-factor-correction">
-      Power Factor Correction Circuits
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/solid-state-drives">
-      Solid State Drives
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/wireless-power-transfer">
-      Wireless Power Transfer Circuits
-    </a>
-  </li>
-</ul>
-
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-          <ul>
-  <li>
-    <a href="/department/power-electronics">
-      Power Electronics – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/dc-dc-converters">
-      DC–DC Converters & Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/multilevel-inverters">
-      Multilevel Inverters
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/renewable-energy-controllers">
-      Power Electronic Controllers for Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/power-factor-correction">
-      Power Factor Correction Circuits
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/solid-state-drives">
-      Solid State Drives
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/wireless-power-transfer">
-      Wireless Power Transfer Circuits
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/power-electronics">Power Electronics</a></li>
+              <li><a href="/department/power-electronics/dc-dc-converters">DC–DC Converters & Applications</a></li>
+              <li><a href="/department/power-electronics/multilevel-inverters">Multilevel Inverters</a></li>
+              <li><a href="/department/power-electronics/renewable-energy-controllers">Renewable Energy Controllers</a></li>
+              <li><a href="/department/power-electronics/power-factor-correction">Power Factor Correction Circuits</a></li>
+              <li><a href="/department/power-electronics/solid-state-drives">Solid State Drives</a></li>
+              <li><a href="/department/power-electronics/wireless-power-transfer">Wireless Power Transfer</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

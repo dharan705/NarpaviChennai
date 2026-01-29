@@ -1,66 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Energy Efficient Motors Project Development Center in Chennai",
+  "Energy Efficient Motors IEEE Projects 2023–2025",
+  "High Efficiency Motor Design Projects",
+  "Loss Minimization in Electric Motors",
+  "B.Tech Energy Saving Motor Projects",
+  "M.Tech Motor Optimization Research",
+  "Ph.D Intelligent Motor Control Research",
+  "IoT-Based Motor Energy Monitoring",
+  "Power Factor Improvement in Motors",
+  "Narpavi Research Institute Energy Efficient Motors"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Energy-Efficient Motors Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Energy-Efficient Motors Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency motor design, loss minimization, advanced control strategies, and IoT-enabled monitoring for industrial, automotive, and renewable energy applications."
+    question:
+      "What services does the Energy-Efficient Motors Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Energy-Efficient Motors Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency motor design, loss minimization, advanced control strategies, and IoT-enabled monitoring for industrial, automotive, and renewable energy applications."
   },
   {
     question: "What types of Energy-Efficient Motors projects are supported?",
-    answer: "We support B.Tech projects (motor design, IoT-based monitoring), M.Tech projects (AI-based optimization, advanced control), and Ph.D. projects (multi-objective optimization, predictive control) for applications in EVs, robotics, and renewable energy systems."
+    answer:
+      "We support B.Tech projects (motor design and IoT-based monitoring), M.Tech projects (AI-based optimization and advanced control), and Ph.D. projects (multi-objective optimization and predictive control) for EVs, robotics, and renewable energy systems."
   },
   {
     question: "Which technologies are used in Energy-Efficient Motors project development?",
-    answer: "Our stack includes MATLAB/Simulink, ANSYS Maxwell, LabVIEW, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for motor design and control."
+    answer:
+      "MATLAB/Simulink, ANSYS Maxwell, LabVIEW, TensorFlow, PyTorch, IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like high-efficiency motor design, loss minimization, and AI-driven control, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering high-efficiency motor design, loss minimization, AI-driven optimization, and advanced control strategies."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/ANSYS, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Energy Efficient Motors – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Energy Efficient Motors Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering high-efficiency motor design, loss minimization, AI-based optimization, advanced control strategies, and IoT-enabled energy monitoring.";
+
+const pageUrl =
+  "/department/electrical-machines/energy-efficient-motors";
 
 const EEEEnergyEfficientMotorsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Energy Efficient Motors IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Energy-Efficient Motors projects for B.Tech, M.Tech, Ph.D. High-efficiency motor design, loss minimization, AI-based optimization, advanced control strategies using MATLAB/Simulink, ANSYS Maxwell, TensorFlow for industrial, EV, renewable energy applications."
-  keywords="Energy Efficient Motors IEEE Projects 2023–2025, High-Efficiency Motor Design, B.Tech Energy Saving Motor Projects, M.Tech Motor Optimization Research, Ph.D. Intelligent Motor Control, Loss Minimization Motors, IoT Motor Monitoring, Industrial Energy Efficient Drives, Power Factor Improvement Motors, Narpavi Research Institute"
-  url="/department/electrical-machines/energy-efficient-motors"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy-Efficient Motors Projects</li>
-              <li>High-Efficiency Motor Design</li>
-              <li>IEEE Motor Efficiency Projects 2023–2025</li>
-              <li>B.Tech Energy-Saving Motor Projects</li>
-              <li>M.Tech AI-Based Motor Optimization</li>
-              <li>Ph.D Intelligent Motor Control Research</li>
-              <li>IoT-Based Motor Monitoring</li>
-              <li>Industrial Energy-Efficient Drives</li>
-              <li>Loss Minimization in Motors</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Energy-Efficient Motors – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Energy-Efficient Motors Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance high-efficiency motor design aligned with IEEE Transactions (2023–2025). Our projects focus on reducing losses, improving power factor, and integrating intelligent control for industrial, automotive, and renewable energy applications.
               </p>
@@ -208,48 +238,27 @@ const EEEEnergyEfficientMotorsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/electrical-machines">Electrical Machines – Project Development Center</a></li>
+              <li><a href="/department/electrical-machines/advanced-drives-controllers">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

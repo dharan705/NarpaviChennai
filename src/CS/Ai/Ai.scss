@@ -19,6 +19,64 @@ body {
   width: 100%;
   text-align: justify;
 }
+.site-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1rem 0;
+  font-family: "Poppins", sans-serif;
+
+  &__section {
+    
+    margin-top: 0.8rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid #e5e7eb;
+  }
+}
+
+.site-link {
+  position: relative;
+  font-size: 0.95rem;
+  color: #1f2937; // slate-800
+  text-decoration: none;
+  padding: 6px 4px;
+  line-height: 1.4;
+  transition: all 0.25s ease;
+
+  &:hover {
+    color: #1d4ed8; // blue-700
+    padding-left: 10px;
+  }
+
+  &::before {
+    content: "›";
+    position: absolute;
+    left: -8px;
+    opacity: 0;
+    color: #1d4ed8;
+    transition: all 0.25s ease;
+  }
+
+  &:hover::before {
+    left: 0;
+    opacity: 1;
+  }
+
+  &--heading {
+    font-weight: 600;
+    color: #0f172a; // dark heading
+    margin-top: 0.8rem;
+
+    &:hover {
+      color: #0f172a;
+      padding-left: 4px;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}
 
 .ArtificialIntelligenceProjectDevelopmentCenter-main {
   padding: 2rem;
@@ -27,7 +85,7 @@ body {
   flex: 1;
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     margin-bottom: 1.5rem;
     color: $primary-color;
   }

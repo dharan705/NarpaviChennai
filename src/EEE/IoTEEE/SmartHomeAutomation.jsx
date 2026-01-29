@@ -1,63 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "Smart Home Automation Systems Project Development Center in Chennai",
+  "Smart Home Automation IEEE Projects 2023–2025",
+  "IoT Smart Home Automation Projects",
+  "AI Smart Home Automation Systems",
+  "Cloud-based Smart Home Automation",
+  "Blockchain Smart Home Security",
+  "Voice Controlled Smart Home Systems",
+  "Smart Home Automation B.Tech Projects",
+  "Smart Home Automation M.Tech Projects",
+  "Ph.D Smart Home Automation Research",
+  "Energy Efficient Smart Home Systems",
+  "Narpavi Research Institute Smart Home Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Smart Home Automation Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Home Automation Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based smart home control, AI-driven automation, and secure home ecosystems for enhanced convenience and energy efficiency."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) Smart Home Automation projects using IoT, AI, cloud platforms, and secure communication technologies."
   },
   {
     question: "What types of Smart Home Automation projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-based appliance control), M.Tech projects (AI-driven and cloud-integrated automation), and Ph.D. projects (blockchain and 5G/6G-enabled smart home ecosystems) for applications in lighting, security, and energy management."
+    answer:
+      "B.Tech projects focus on IoT-based appliance control, M.Tech projects include AI-driven cloud automation, and Ph.D. projects cover blockchain and 5G/6G-enabled smart home ecosystems."
   },
   {
-    question: "Which technologies are used in Smart Home Automation projects?",
-    answer: "Our stack includes Arduino, ESP32, Raspberry Pi, Wi-Fi/ZigBee, voice assistants (Alexa, Google Home), cloud platforms (AWS, Azure, Google Cloud), AI frameworks (TensorFlow, Keras), and blockchain for secure communication."
+    question: "Which technologies are used?",
+    answer:
+      "Arduino, ESP32, Raspberry Pi, Wi-Fi, ZigBee, voice assistants (Alexa, Google Home), AWS, Azure, Google Cloud, TensorFlow, Keras, and blockchain."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Consumer Electronics and Smart Grid, focusing on IoT integration, AI-driven automation, and secure smart home systems."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Consumer Electronics and Smart Grid with emphasis on secure IoT automation and AI-driven intelligence."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end support including topic selection, system design, prototyping, documentation, and IEEE/Scopus/SCI publication assistance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Home Automation Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Home Automation Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IoT control, AI automation, cloud platforms, voice assistants, and secure smart home ecosystems.";
+
+const pageUrl =
+  "/department/iot-electrical-systems/smart-home-automation";
 
 const EEESmartHomeAutomationSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Smart Home Automation IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Smart Home Automation projects for B.Tech, M.Tech, Ph.D. IoT control, AI automation, voice assistants using Arduino ESP32 Raspberry Pi Wi-Fi ZigBee, AWS Azure Google Cloud, TensorFlow Keras Alexa Google Home blockchain."
-  keywords="Smart Home Automation IEEE Projects 2023–2025, B.Tech IoT Appliance Control, M.Tech AI Cloud Smart Home, Ph.D. Blockchain 5G 6G Smart Homes, Energy Efficient Smart Homes, Narpavi Research Institute"
-  url="/department/iot-electrical-systems/smart-home-automation"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Home Automation Systems</li>
-              <li>IoT Smart Home Projects</li>
-              <li>Smart Home Automation IEEE Projects 2023–2025</li>
-              <li>AI Smart Home Research</li>
-              <li>Cloud Smart Home Automation</li>
-              <li>Secure Smart Home with Blockchain</li>
-              <li>Smart Home Automation for B.Tech M.Tech Ph.D.</li>
-              <li>Narpavi Research Institute Smart Home Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Smart Home Automation Systems – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+    <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Home Automation Systems Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on IoT-enabled smart home solutions. Our projects focus on seamless control of appliances, lighting, security, and energy usage through advanced IoT, AI, and cloud technologies.
               </p>
@@ -210,52 +243,29 @@ const EEESmartHomeAutomationSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/iot-electrical-systems">
-      IoT in Electrical Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-grids">
-      IoT for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/renewable-energy">
-      IoT in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/predictive-maintenance">
-      IoT for Predictive Maintenance
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-home-automation">
-      Smart Home Automation with IoT
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-meters">
-      IoT-Enabled Smart Meters
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/health-monitoring">
-      IoT-Based Health Monitoring
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/iot-electrical-systems">IoT in Electrical Systems</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-grids">IoT for Smart Grids</a></li>
+              <li><a href="/department/iot-electrical-systems/renewable-energy">IoT in Renewable Energy</a></li>
+              <li><a href="/department/iot-electrical-systems/predictive-maintenance">IoT for Predictive Maintenance</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-meters">IoT-Enabled Smart Meters</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">IoT-Based Health Monitoring</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,76 +1,88 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Steel RCC Design Optimization IEEE Projects 2023–2025",
+  "Genetic Algorithm RCC Design",
+  "AI-based Structural Engineering Optimization",
+  "RCC Slab Beam Optimization",
+  "Cost-effective Tall Building Design",
+  "Finite Element Steel RCC Modeling",
+  "Sustainable RCC Steel Design Research",
+  "PhD Steel RCC Composite Optimization",
+  "Civil Engineering Optimization Projects",
+  "Narpavi Research Institute Structural Projects"
+];
+
 const faqs = [
   {
-    question: "What services does the Steel & RCC Design Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Steel & RCC Design Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural design optimization, AI-driven modeling, and sustainable construction."
+    question:
+      "What services does the Steel & RCC Design Optimization Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Steel & RCC Design Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural design optimization, AI-driven modeling, and sustainable construction."
   },
   {
-    question: "What types of Steel & RCC Design Optimization projects are supported?",
-    answer: "We support B.Tech projects (basic design optimization), M.Tech projects (advanced algorithms and performance-based design), and Ph.D. projects (AI-driven and hybrid structural systems) for cost-effective and sustainable structures."
+    question:
+      "What types of Steel & RCC Design Optimization projects are supported?",
+    answer:
+      "B.Tech projects on basic optimization, M.Tech projects on advanced algorithms, and Ph.D. projects on AI-driven and hybrid structural systems."
   },
   {
-    question: "Which tools and technologies are used in Steel & RCC Design Optimization projects?",
-    answer: "Our stack includes STAAD.Pro, ETABS, ANSYS, OpenSees, MATLAB, AutoCAD, Revit, and AI frameworks (TensorFlow, Keras) for structural modeling and optimization."
+    question: "Which tools and technologies are used?",
+    answer:
+      "STAAD.Pro, ETABS, ANSYS, OpenSees, MATLAB, AutoCAD, Revit, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Structural Engineering, focusing on genetic algorithms, AI models, and sustainable design optimization."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) on Structural Engineering, focusing on AI models and sustainable optimization."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end support including topic selection, simulation, documentation, and IEEE/Scopus/SCI publication assistance."
   }
 ];
 
 const CESteelRCCDesignOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Steel & RCC Design Optimization IEEE Projects (2023–2025)"
-        description="Steel & RCC Design Optimization IEEE project development for B.Tech, M.Tech & PhD scholars using STAAD.Pro, ETABS, ANSYS, genetic algorithms, AI optimization, FEM modeling for cost-effective sustainable structures."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Steel & RCC Design Optimization – Project Development Center in Chennai"
+        description="Steel & RCC Design Optimization project development for B.Tech, M.Tech, and Ph.D. students using STAAD.Pro, ETABS, ANSYS, genetic algorithms, AI optimization, and FEM modeling for cost-effective sustainable structures."
+        keywords={keywords}
         url="/department/structural-engineering/steel-rcc-design-optimization"
-        type="article"
-        keywords={[
-          "Steel RCC Design Optimization IEEE 2023–2025",
-          "Genetic Algorithm RCC Design",
-          "AI-based Structural Engineering Optimization",
-          "RCC Slab Beam Optimization",
-          "Cost-effective Tall Building Design",
-          "Finite Element Steel RCC Modeling",
-          "Sustainable RCC Steel Design Research",
-          "Narpavi Research Institute Structural Projects",
-          "PhD Steel RCC Composite Optimization",
-          "Civil Engineering Optimization Projects"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Steel and RCC design optimization projects</li>
-              <li>RCC slab and beam optimization research</li>
-              <li>Genetic algorithm for RCC design</li>
-              <li>AI-based optimization in structural engineering</li>
-              <li>Cost-effective tall building design projects</li>
-              <li>Finite element modeling for RCC and steel structures</li>
-              <li>IEEE civil engineering projects 2023–2025</li>
-              <li>Narpavi Research Institute structural projects</li>
-              <li>Ph.D. research in steel RCC composite optimization</li>
-              <li>Sustainable RCC and steel design research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Steel & RCC Design Optimization – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Steel & RCC Design Optimization – Project Development Center in Chennai
+            </h1>
+
+    <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Steel & RCC Design Optimization Project Development Center, a global hub for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on structural design optimization. Our focus is on creating safe, cost-efficient, and sustainable structures for modern infrastructure needs.
               </p>
@@ -259,58 +271,47 @@ const CESteelRCCDesignOptimizationProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+                          </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/structural-engineering">
-      Structural Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/earthquake-resistant-structures">
-      Earthquake Resistant Structures
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/steel-rcc-design-optimization">
-      Steel & RCC Design Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/tall-building-analysis">
-      Tall Building Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/bridge-design-monitoring">
-      Bridge Design & Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/structural-engineering">
+                  Structural Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/earthquake-resistant-structures">
+                  Earthquake Resistant Structures
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/steel-rcc-design-optimization">
+                  Steel & RCC Design Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/tall-building-analysis">
+                  Tall Building Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/bridge-design-monitoring">
+                  Bridge Design & Monitoring
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

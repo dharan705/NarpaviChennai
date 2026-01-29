@@ -1,78 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Pump & Valve Optimization Project Development Center in Chennai",
+  "Pump Optimization IEEE Projects 2023–2025",
+  "Valve Optimization CFD Projects",
+  "Smart Valve IoT Control Systems",
+  "Cavitation Analysis Pumps",
+  "Energy Efficient Pumping Systems",
+  "AI Pump Valve Predictive Maintenance",
+  "Centrifugal Pump Impeller Optimization",
+  "Industrial Pump Valve Projects",
+  "Narpavi Research Institute Pump Valve Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Pump & Valve Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Pump & Valve Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on pump efficiency, valve flow control, CFD analysis, and AI-driven predictive maintenance for industrial and energy systems."
+    answer:
+      "Narpavi Research Institute’s Pump & Valve Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) pump and valve optimization projects."
   },
   {
-    question: "What types of Pump & Valve Optimization projects are supported?",
-    answer: "We support B.Tech projects (pump efficiency analysis, valve flow testing), M.Tech projects (CFD-based impeller optimization, smart valve control), and Ph.D. projects (AI-driven digital twins, cavitation modeling) for applications in power plants, HVAC, and oil & gas."
+    question: "What types of projects are supported?",
+    answer:
+      "We support pump efficiency analysis, valve flow control, CFD-based optimization, smart valve systems, and AI-driven digital twin research."
   },
   {
-    question: "Which tools and technologies are used in Pump & Valve Optimization projects?",
-    answer: "Our stack includes ANSYS Fluent, SolidWorks Flow Simulation, MATLAB/Simulink, OpenFOAM, CAD tools (SolidWorks, CATIA), AI frameworks (TensorFlow, Keras), and experimental setups with flow meters and pressure sensors."
+    question: "Which tools are used?",
+    answer:
+      "ANSYS Fluent, OpenFOAM, SolidWorks Flow Simulation, MATLAB, CAD tools, and AI frameworks."
   },
   {
-    question: "How are Pump & Valve Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics, focusing on CFD, smart control systems, and energy-efficient pump/valve designs."
+    question: "How are projects IEEE aligned?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD modeling, experimental validation, AI/IoT integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "Do you support publications?",
+    answer:
+      "Yes, we support IEEE, Scopus, Elsevier, Springer journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Pump & Valve Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Pump & Valve Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using CFD analysis, smart valve control, AI predictive maintenance, and cavitation modeling.";
+
+const pageUrl =
+  "/department/fluid-mechanics-dynamics/pump-valve-optimization";
 
 const MEPumpValveOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Pump & Valve Optimization IEEE Projects (2023–2025)"
-        description="Pump Valve Optimization IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, CFD analysis, AI predictive maintenance, smart valve control, cavitation modeling for power plants, HVAC, oil & gas systems."
-        url="/department/fluid-mechanics-dynamics/pump-valve-optimization"
-        type="article"
-        keywords={[
-          "Pump Optimization IEEE Projects 2023–2025",
-          "Valve Optimization CFD Projects",
-          "Smart Valve IoT Control Systems",
-          "Cavitation Analysis Pumps",
-          "Energy Efficient Pumping Systems",
-          "AI Pump Valve Predictive Maintenance",
-          "Centrifugal Pump Impeller Optimization",
-          "Industrial Pump Valve Projects",
-          "Narpavi Research Institute Pump Projects",
-          "Fluid Mechanics Pump Valve Design"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
-      
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Pump Optimization Projects</li>
-              <li>Valve Optimization IEEE Projects 2023–2025</li>
-              <li>CFD-Based Pump Design</li>
-              <li>Smart Valve IoT Projects</li>
-              <li>Cavitation Analysis in Pumps</li>
-              <li>Energy Efficiency in Pumping Systems</li>
-              <li>AI for Pump and Valve Optimization</li>
-              <li>Fluid Mechanics Project Topics</li>
-              <li>Mechanical IEEE Projects</li>
-              <li>Narpavi Research Institute Pump Valve Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Pump & Valve Optimization – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Pump & Valve Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on pump efficiency, valve flow control, and smart system integration.
               </p>
@@ -245,43 +262,26 @@ const MEPumpValveOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics">
-      Fluid Mechanics & Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
-      Computational Fluid Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
-      Turbomachinery Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
-      Aerodynamics & Wind Tunnel
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
-      Pump & Valve Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
-      Microfluidics Lab
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/fluid-mechanics-dynamics">Fluid Mechanics & Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">Computational Fluid Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/turbomachinery-design">Turbomachinery Design</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">Aerodynamics & Wind Tunnel</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">Pump & Valve Optimization</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/microfluidics-lab">Microfluidics Lab</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

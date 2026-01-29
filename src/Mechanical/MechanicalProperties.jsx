@@ -1,76 +1,86 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../assets/SEO"
+import Subsidebar from ".././pages/Subsidebar";
+import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Material Science IEEE Projects 2023–2025",
+  "Composite Material Optimization Projects",
+  "Alloy Development IEEE Projects",
+  "Nanomaterials in Engineering",
+  "Tribology Wear Analysis Projects",
+  "Fatigue Fracture Research Projects",
+  "Additive Manufacturing Materials Projects",
+  "AI in Material Discovery",
+  "Sustainable Materials Engineering",
+  "Narpavi Research Institute Materials Projects",
+];
+
 const faqs = [
   {
-    question: "What services does the Material Science & Mechanical Properties Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Material Science & Mechanical Properties Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on composite materials, advanced alloys, nanomaterials, tribology, fatigue analysis, and additive manufacturing for applications in aerospace, automotive, biomedical, and energy sectors."
+    question:
+      "What services does the Material Science & Mechanical Properties Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Material Science & Mechanical Properties Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on composite materials, advanced alloys, nanomaterials, tribology, fatigue analysis, and additive manufacturing.",
   },
   {
-    question: "What types of Material Science & Mechanical Properties projects are supported?",
-    answer: "We support B.Tech projects (basic material testing, stress–strain analysis), M.Tech projects (hybrid material design, finite element modeling), and Ph.D. projects (AI-driven material discovery, self-healing materials, nanotechnology) for applications in structural, biomedical, and energy systems."
+    question:
+      "What types of Material Science & Mechanical Properties projects are supported?",
+    answer:
+      "We support B.Tech projects (basic material testing, stress–strain analysis), M.Tech projects (hybrid material design, finite element modeling), and Ph.D. projects (AI-driven material discovery, nanotechnology).",
   },
   {
-    question: "Which tools and technologies are used in Material Science & Mechanical Properties projects?",
-    answer: "Our stack includes ANSYS, ABAQUS, SolidWorks, MATLAB, Python, molecular dynamics tools (LAMMPS), and experimental setups for tensile testing, nano-indentation, and tribological analysis."
+    question:
+      "Which tools and technologies are used in Material Science & Mechanical Properties projects?",
+    answer:
+      "Our stack includes ANSYS, ABAQUS, SolidWorks, MATLAB, Python, molecular dynamics tools, and experimental testing setups.",
   },
   {
-    question: "How are Material Science & Mechanical Properties projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Materials, Nanotechnology, and Industrial Applications, focusing on advanced materials, computational modeling, and sustainability, aligned with IEEE/ASTM/ISO standards."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Materials, Nanotechnology, and Industrial Applications.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
-  }
+    answer:
+      "We provide end-to-end guidance including simulation, experimental testing, documentation, and journal publication support.",
+  },
 ];
 
 const MEMaterialScienceMechanicalPropertiesProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Material Science & Mechanical Properties IEEE Projects (2023–2025)"
-        description="Material Science Mechanical Properties IEEE project development for B.Tech, M.Tech & PhD using ANSYS, ABAQUS, composites, advanced alloys, nanomaterials, tribology, fatigue analysis, additive manufacturing for aerospace, automotive, biomedical."
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Material Science & Mechanical Properties – Project Development Center in Chennai"
+        description="Material Science & Mechanical Properties project development for B.Tech, M.Tech, and Ph.D. students focusing on composites, advanced alloys, nanomaterials, tribology, fatigue analysis, and additive manufacturing."
+        keywords={keywords}
         url="/department/mechanical-properties-materials"
-        type="article"
-        keywords={[
-          "Material Science IEEE 2023–2025",
-          "Composite Material Optimization Projects",
-          "Alloy Development IEEE Projects",
-          "Nanomaterials in Engineering",
-          "Tribology Wear Analysis Projects",
-          "Fatigue Fracture Research Projects",
-          "Additive Manufacturing Materials Projects",
-          "AI in Material Discovery",
-          "Sustainable Materials Engineering",
-          "Narpavi Research Institute Materials Projects"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Material Science IEEE Projects 2023–2025</li>
-              <li>Composite Material Optimization Projects</li>
-              <li>Alloy Development IEEE Projects</li>
-              <li>Nanomaterials in Engineering</li>
-              <li>Tribology & Wear Analysis Projects</li>
-              <li>Fatigue & Fracture Research Projects</li>
-              <li>Additive Manufacturing Materials Projects</li>
-              <li>AI in Material Discovery</li>
-              <li>Sustainable Materials in Engineering</li>
-              <li>Narpavi Research Institute Materials Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Material Science & Mechanical Properties – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 FIXED */}
+            <h1>
+              Material Science & Mechanical Properties – Project Development Center in Chennai
+            </h1>
+               <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Material Science & Mechanical Properties Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on composite materials, advanced alloys, nanomaterials, tribology, fatigue analysis, and additive manufacturing.
               </p>
@@ -268,43 +278,49 @@ const MEMaterialScienceMechanicalPropertiesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/mechanical-properties-materials">
-      Mechanical Properties & Materials
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
-      Composite Materials Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
-      Advanced Alloy Development
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
-      Tribology & Wear Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
-      Nanomaterials – Mechanical Properties
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
-      Fatigue & Fracture Analysis
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/mechanical-properties-materials">
+                  Mechanical Properties & Materials
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechanical-properties-materials/composite-materials-analysis">
+                  Composite Materials Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechanical-properties-materials/advanced-alloy-development">
+                  Advanced Alloy Development
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
+                  Tribology & Wear Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
+                  Nanomaterials – Mechanical Properties
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
+                  Fatigue & Fracture Analysis
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

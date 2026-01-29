@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "ARM PIC AVR Microcontroller Project Development Center in Chennai",
+  "ARM Microcontroller IEEE Projects 2023–2025",
+  "PIC AVR Embedded Systems Projects",
+  "Embedded Systems Project Development Chennai",
+  "B.Tech Microcontroller Projects",
+  "M.Tech IoT Embedded Systems",
+  "Ph.D AI Embedded Control Systems",
+  "Real Time Embedded Systems Research",
+  "Automotive Embedded Systems Projects",
+  "Robotics Embedded Systems IEEE",
+  "Narpavi Research Institute Embedded Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the ARM/PIC/AVR Microcontroller Projects Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects focusing on ARM, PIC, and AVR microcontrollers for embedded system design, peripheral interfacing, IoT integration, AI-assisted control, and automation."
+    question:
+      "What services does the ARM/PIC/AVR Microcontroller Projects Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects focusing on ARM, PIC, and AVR microcontrollers for embedded system design, peripheral interfacing, IoT integration, AI-assisted control, and automation."
   },
   {
     question: "What types of microcontroller projects are supported?",
-    answer: "We support B.Tech projects (microcontroller prototypes, IoT integration), M.Tech projects (AI-enabled embedded control, energy-efficient architectures), and Ph.D. projects (deep learning-based embedded systems, robotics, automotive applications with patents and publications)."
+    answer:
+      "B.Tech projects include microcontroller prototypes and IoT integration. M.Tech projects focus on AI-enabled embedded control and energy-efficient systems. Ph.D projects cover deep learning-based embedded applications, robotics, automotive systems, patents, and publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "Keil, Arduino IDE, Embedded C/C++, Proteus, MATLAB/Simulink, IoT platforms (MQTT, Zigbee), FPGA/DSP controllers, and AI frameworks (TensorFlow, PyTorch) for intelligent embedded systems."
+    answer:
+      "Keil, Arduino IDE, Embedded C/C++, Proteus, MATLAB/Simulink, IoT platforms (MQTT, Zigbee), FPGA/DSP controllers, and AI frameworks such as TensorFlow and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects follow IEEE Transactions (2023–2025) in low-power microcontroller designs, IoT-enabled embedded systems, automotive control, and robotics applications ensuring academic-industry alignment."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) in low-power microcontroller designs, IoT-enabled embedded systems, automotive control, and robotics applications."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide topic guidance, code development, prototype building, IoT connectivity, experimental performance validation, IEEE-style documentation, and Scopus/SCI/IEEE journal publishing support."
+    answer:
+      "Complete guidance including topic selection, code development, hardware prototyping, IoT connectivity, experimental validation, IEEE-format documentation, and Scopus/SCI/IEEE journal publishing support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "ARM PIC AVR Microcontroller Projects – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) ARM PIC AVR Microcontroller Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering embedded systems, IoT integration, real-time control, robotics, automotive applications, and AI-assisted embedded solutions.";
+
+const pageUrl =
+  "/department/embedded-systems-electrical/arm-pic-avr-microcontroller";
 
 const EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="ARM PIC AVR Microcontroller IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) ARM, PIC, AVR Microcontroller projects for B.Tech, M.Tech, Ph.D. Embedded systems, IoT integration, AI-assisted control using Keil, Arduino IDE, Proteus, MATLAB/Simulink, TensorFlow for robotics, automotive, industrial automation."
-  keywords="ARM PIC AVR Microcontroller IEEE Projects 2023–2025, Embedded Systems Projects, B.Tech Microcontroller Projects, M.Tech IoT Embedded Systems, Ph.D. AI Embedded Control, Keil Arduino IDE Projects, Real-Time Embedded Systems, Robotics Microcontroller Research, Automotive Embedded Solutions, Narpavi Research Institute"
-  url="/department/embedded-systems-electrical/arm-pic-avr-microcontroller"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>ARM Microcontroller Projects</li>
-              <li>PIC Embedded Systems</li>
-              <li>AVR Microcontroller Research 2023–2025</li>
-              <li>B.Tech Embedded Hardware Projects</li>
-              <li>M.Tech IoT Embedded Systems</li>
-              <li>Ph.D AI-Assisted Embedded Control</li>
-              <li>Narpavi Research Institute</li>
-              <li>Real-Time Microcontroller Applications</li>
-              <li>Robotics Embedded Systems</li>
-              <li>Automotive Embedded Solutions</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>ARM/PIC/AVR Microcontroller Projects – Project Development Support</h1>
-
-            {/* Introduction */}
+            {/* ✅ SINGLE H1 ONLY */}
+            <h1>{pageTitle}</h1>
+ {/* Introduction */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents this Project Development Center for ARM, PIC, and AVR microcontrollers. It empowers B.Tech, M.Tech, and Ph.D. scholars to explore IEEE-aligned (2023–2025) research fields in embedded systems, peripheral interfacing, real-time control, IoT integration, and robotics automation.</p>
               <p>Students gain expertise in simulation, coding in Embedded C/C++, laboratory validation, IoT-sensor integration, and AI-based adaptive control for industrial and commercial applications.</p>
@@ -199,53 +229,31 @@ const EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems – Project Development Center</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM PIC AVR Microcontroller Projects</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development Center</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEArmPicAvrMicrocontrollerProjectDevelopmentCenter;

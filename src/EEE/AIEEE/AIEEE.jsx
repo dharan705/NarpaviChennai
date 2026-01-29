@@ -1,66 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Artificial Intelligence in EEE Project Development Center in Chennai",
+  "AI in Electrical Engineering IEEE Projects",
+  "AI Power Systems Smart Grids",
+  "Deep Learning Fault Diagnosis EEE",
+  "AI Renewable Energy Forecasting",
+  "B.Tech AI EEE Projects",
+  "M.Tech AI Smart Grid Automation",
+  "Ph.D Federated Learning EEE",
+  "Predictive Maintenance AI EEE",
+  "AI Industrial Automation EEE",
+  "IEEE AI Publications",
+  "Narpavi Research Institute AI EEE"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Artificial Intelligence in EEE Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Artificial Intelligence in EEE Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in AI-powered power systems, smart grids, renewable energy forecasting, and industrial automation."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) AI-powered EEE projects including smart grids, power systems, renewable forecasting, and automation."
   },
   {
     question: "What types of AI in EEE projects are supported?",
-    answer: "We support B.Tech projects (AI-based load prediction, IoT devices), M.Tech projects (deep learning for fault diagnosis, smart grid automation), and Ph.D. projects (federated learning, AI-driven cybersecurity) for EEE applications."
+    answer:
+      "B.Tech projects include AI-based load prediction, M.Tech focuses on deep learning for fault diagnosis and smart grids, while Ph.D. research covers federated learning and AI cybersecurity."
   },
   {
-    question: "Which technologies are used in AI in EEE project development?",
-    answer: "Our stack includes TensorFlow, PyTorch, MATLAB/Simulink, Arduino, ESP32, and FPGA for advanced AI model development and EEE system integration."
+    question: "Which technologies are used in AI in EEE projects?",
+    answer:
+      "TensorFlow, PyTorch, MATLAB/Simulink, Arduino, ESP32, FPGA, and IoT platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI in smart grids, renewable energy forecasting, and predictive maintenance, ensuring academic and industry relevance."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) in smart grids, renewable energy, and predictive maintenance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Artificial Intelligence in EEE – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Artificial Intelligence in EEE Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI power systems, smart grids, renewable forecasting, and fault diagnosis.";
+
+const pageUrl = "/department/ai-electrical-engineering";
 
 const EEEArtificialIntelligenceProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Artificial Intelligence AI in EEE IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Artificial Intelligence AI in EEE projects for B.Tech, M.Tech, Ph.D. AI power systems, smart grids, renewable forecasting, fault diagnosis using TensorFlow PyTorch MATLAB/Simulink Arduino ESP32 FPGA."
-  keywords="Artificial Intelligence AI EEE IEEE Projects 2023–2025, AI Power Systems Smart Grids, Deep Learning Fault Diagnosis, B.Tech AI Load Prediction, M.Tech AI Smart Grid Automation, Ph.D. Federated Learning EEE, Narpavi Research Institute"
-  url="/department/ai-electrical-engineering"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Artificial Intelligence in EEE IEEE Projects</li>
-              <li>AI in Power Systems IEEE Projects</li>
-              <li>Deep Learning in EEE IEEE Projects</li>
-              <li>Smart Grid AI IEEE Projects</li>
-              <li>Predictive Maintenance IEEE Projects</li>
-              <li>AI for Renewable Energy IEEE Projects</li>
-              <li>B.Tech AI EEE Projects</li>
-              <li>M.Tech AI EEE Projects</li>
-              <li>Ph.D. AI EEE Projects</li>
-              <li>IEEE AI Publications</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Artificial Intelligence in EEE – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Artificial Intelligence in EEE – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) AI-powered solutions for power systems, smart grids, renewable energy, and industrial automation.
               </p>
@@ -191,48 +221,26 @@ const EEEArtificialIntelligenceProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/ai-electrical-engineering">
-      Artificial Intelligence in Electrical Engineering – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/power-load-forecasting">
-      AI-Based Power Load Forecasting
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
-      Machine Learning for Fault Detection
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
-      Deep Learning in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-smart-grids">
-      AI in Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/neural-networks-motor">
-      Neural Networks for Motor Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
-      AI-Based Energy Optimization
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/ai-electrical-engineering">Artificial Intelligence in Electrical Engineering</a></li>
+              <li><a href="/department/ai-electrical-engineering/power-load-forecasting">AI-Based Power Load Forecasting</a></li>
+              <li><a href="/department/ai-electrical-engineering/machine-learning-fault-detection">Machine Learning for Fault Detection</a></li>
+              <li><a href="/department/ai-electrical-engineering/deep-learning-renewables">Deep Learning in Renewable Energy</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-smart-grids">AI in Smart Grids</a></li>
+              <li><a href="/department/ai-electrical-engineering/neural-networks-motor">Neural Networks for Motor Control</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-energy-optimization">AI-Based Energy Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

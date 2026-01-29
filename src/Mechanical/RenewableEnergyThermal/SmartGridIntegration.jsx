@@ -1,77 +1,97 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEo from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Smart Grid Integration for Renewable Energy Project Development Center in Chennai",
+  "Smart Grid Renewable IEEE Projects 2023–2025",
+  "IoT Based Smart Grid Projects",
+  "AI Renewable Energy Scheduling",
+  "Blockchain Smart Grid Projects",
+  "Microgrid Renewable Integration",
+  "Energy Storage Smart Grid Optimization",
+  "Cybersecurity Smart Grids",
+  "Digital Twin Smart Grid",
+  "Narpavi Research Institute Smart Grid Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Smart Grid Integration for Renewable Energy Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. students in renewable-smart grid integration, IoT metering, AI-driven scheduling, blockchain-enabled peer-to-peer energy trading, energy storage integration, hardware prototyping, co-simulations, and IEEE/Scopus/SCI publication support."
+    question:
+      "What services does the Smart Grid Integration for Renewable Energy Project Development Center offer?",
+    answer:
+      "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. students in renewable-smart grid integration, IoT metering, AI-driven scheduling, blockchain-enabled peer-to-peer energy trading, energy storage integration, hardware prototyping, co-simulations, and IEEE/Scopus/SCI publication support."
   },
   {
-    question: "What types of renewable smart grid projects are supported?",
-    answer: "B.Tech: MATLAB/Simulink simulation of grid-connected solar/wind systems, Arduino/RPi-based smart metering. M.Tech: AI forecasting, hybrid solar-wind-battery scheduling, IoT dashboards. Ph.D: blockchain peer-to-peer grid trading, cybersecure IoT smart microgrids, multi-agent reinforcement learning, digital twin validations."
+    question:
+      "What types of renewable smart grid projects are supported?",
+    answer:
+      "B.Tech projects include MATLAB/Simulink grid-connected renewable simulations and IoT metering. M.Tech projects focus on AI forecasting, hybrid scheduling, and dashboards. Ph.D research covers blockchain trading, cybersecure microgrids, multi-agent reinforcement learning, and digital twin validation."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, Python (TensorFlow, Scikit-learn), IoT dashboards (Node-RED, ThingsBoard), blockchain frameworks (Hyperledger, Ethereum for energy trading), Arduino/Raspberry Pi, Digital Twin simulation, and IEEE compliant testing platforms."
+    answer:
+      "MATLAB/Simulink, PSCAD, Python (TensorFlow, Scikit-learn), IoT dashboards, blockchain frameworks, Arduino/Raspberry Pi, and digital twin platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Renewable Integration, Cybersecurity, AI-driven scheduling, microgrids, and peer-to-peer renewable trading. All designs are validated per IEEE/IEC standards for scalability."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Renewable Integration, Cybersecurity, AI scheduling, and microgrids."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer complete project mentoring: IEEE topic selection, algorithm/simulation development, IoT/blockchain deployments, performance testing, IEEE-format technical reporting, and global journal/conference publication support."
+    answer:
+      "Complete mentoring including topic selection, simulations, IoT/blockchain deployment, testing, IEEE documentation, and global publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Grid Integration for Renewable Energy – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Grid Integration for Renewable Energy Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IoT smart metering, AI scheduling, blockchain energy trading, microgrids, and cybersecure renewable systems.";
+
+const pageUrl =
+  "/department/renewable-thermal-energy/smart-grid-integration";
 
 const EEESmartGridRenewableIntegrationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-       <SEO
-        title="Smart Grid Renewable Integration IEEE Projects (2023–2025)"
-        description="Smart Grid Renewable Integration IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PSCAD, AI scheduling, blockchain energy trading, IoT smart metering, microgrids, cybersecure renewable integration."
-        url="/department/renewable-thermal-energy/smart-grid-integration"
-        type="article"
-        keywords={[
-          "Smart Grid Renewable IEEE 2023–2025",
-          "IoT Based Smart Grid Projects",
-          "AI Renewable Energy Scheduling",
-          "Blockchain Smart Grid Projects",
-          "Microgrid Renewable Integration",
-          "Energy Storage Smart Grid Optimization",
-          "Cybersecurity Smart Grids",
-          "Smart Meter IEEE Projects",
-          "Digital Twin Smart Grid",
-          "Narpavi Research Institute Smart Grid"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
-      <Sidebar/>
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* Sidebar Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart grid renewable integration IEEE projects 2023–2025</li>
-              <li>IoT-based smart grid student projects</li>
-              <li>AI in renewable energy scheduling</li>
-              <li>Blockchain-enabled smart grid projects</li>
-              <li>Microgrid renewable integration projects</li>
-              <li>Energy storage smart grid optimization</li>
-              <li>Ph.D. smart grid projects</li>
-              <li>Cybersecurity in smart grids</li>
-              <li>Smart meter IEEE projects</li>
-              <li>Narpavi Research Institute smart grid projects</li>
-            </ul>
-          </div>
 
-          {/* Center Body */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Smart Grid Integration for Renewable Energy – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+   {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> enables scholars to explore IEEE-aligned (2023–2025) research for Smart Grid Integration with renewable energy. Students focus on solar, wind, and biomass integration, IoT-based smart metering, AI scheduling, blockchain energy trading, and microgrid simulation + hardware prototyping.</p>
               <p>Our projects prepare students for real-world smart city-ready energy systems with academic depth and industrial relevance.</p>
@@ -187,48 +207,33 @@ const EEESmartGridRenewableIntegrationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/renewable-thermal-energy">
-      Renewable & Thermal Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
-      Solar PV & Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/wind-turbine-design">
-      Wind Turbine Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
-      Biomass & Biofuel Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
-      Energy Storage & Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/smart-grid-integration">
-      Smart Grid Integration
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/renewable-thermal-energy">Renewable & Thermal Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/solar-pv-thermal">Solar PV & Thermal Systems</a></li>
+              <li><a href="/department/renewable-thermal-energy/wind-turbine-design">Wind Turbine Design</a></li>
+              <li><a href="/department/renewable-thermal-energy/biomass-biofuel-energy">Biomass & Biofuel Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/energy-storage-recovery">Energy Storage & Recovery</a></li>
+              <li><a href="/department/renewable-thermal-energy/smart-grid-integration">Smart Grid Integration</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEESmartGridRenewableIntegrationProjectDevelopmentCenter;

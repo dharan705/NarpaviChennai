@@ -1,49 +1,79 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Wind Turbine Design & Optimization Project Development Center in Chennai",
+  "Wind Turbine IEEE Projects 2023–2025",
+  "CFD Based Turbine Optimization",
+  "AI Enabled Wind Energy Projects",
+  "IoT Wind Turbine Monitoring",
+  "Hybrid Wind Solar Projects",
+  "Renewable Energy Student Projects",
+  "Structural Analysis of Wind Turbines",
+  "Predictive Maintenance Wind Energy",
+  "Narpavi Research Institute Wind Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Wind Turbine Design & Optimization Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects in wind turbine aerodynamics, structural design, IoT monitoring, AI-optimized forecasting, hybrid renewable integration, CFD/FEA simulations, hardware prototyping, and IEEE/SCI/Scopus publication guidance."
+    question:
+      "What services does the Wind Turbine Design & Optimization Project Development Center offer?",
+    answer:
+      "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects in wind turbine aerodynamics, structural design, IoT monitoring, AI-optimized forecasting, hybrid renewable integration, CFD/FEA simulations, hardware prototyping, and IEEE/SCI/Scopus publication guidance."
   },
   {
-    question: "What types of wind turbine projects are supported?",
-    answer: "B.Tech projects: basic turbine modeling with MATLAB/Simulink, small-scale prototypes for power output testing. M.Tech projects: CFD-based blade optimization, structural FEA, AI-driven performance forecasting. Ph.D projects: hybrid wind-solar systems, predictive maintenance, multi-objective optimization, patents, and SCI/IEEE publications."
+    question:
+      "What types of wind turbine projects are supported?",
+    answer:
+      "B.Tech projects focus on basic turbine modeling and prototypes. M.Tech projects include CFD-based blade optimization and AI forecasting. Ph.D. research covers hybrid wind-solar systems, predictive maintenance, multi-objective optimization, patents, and high-impact publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, ANSYS, SolidWorks for CFD/FEA, Arduino/Raspberry Pi for IoT-enabled prototypes, Python (TensorFlow/PyTorch) for AI forecasting, DC generators, wind tunnel testing kits, and digital twins for advanced simulations."
+    answer:
+      "MATLAB/Simulink, ANSYS, SolidWorks, Arduino/Raspberry Pi, Python (TensorFlow/PyTorch), wind tunnel kits, DC generators, and digital twins."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions on Sustainable Energy, Wind Energy, and Industrial Electronics (2023–2025), focusing on blade optimization, hybrid renewable integration, predictive maintenance, and AI-enhanced wind turbine performance."
+    answer:
+      "Projects align with IEEE Transactions on Sustainable Energy, Wind Energy, and Industrial Electronics (2023–2025)."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide end-to-end guidance: IEEE topic selection, CFD/FEA simulations, hardware prototyping, performance validation (power output, rotor efficiency), IEEE-format reporting, and Scopus/SCI publication support."
+    answer:
+      "End-to-end guidance including simulations, prototyping, validation, IEEE documentation, and Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Wind Turbine Design & Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Wind Turbine Design & Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering CFD/FEA blade optimization, AI forecasting, IoT monitoring, hybrid wind-solar systems, and predictive maintenance.";
+
+const pageUrl =
+  "/department/renewable-thermal-energy/wind-turbine-design";
 
 const EEEWindTurbineDesignOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-            <SEO
-        title="Wind Turbine Design IEEE Projects (2023–2025)"
-        description="Wind Turbine Design Optimization IEEE project development for B.Tech, M.Tech & PhD using CFD/FEA (ANSYS, SolidWorks), AI forecasting, IoT monitoring, hybrid wind-solar systems, structural analysis for renewable energy."
-        url="/department/renewable-thermal-energy/wind-turbine-design"
-        type="article"
-        keywords={[
-          "Wind Turbine IEEE 2023–2025",
-          "CFD Based Turbine Optimization",
-          "AI Enabled Wind Energy Projects",
-          "IoT Wind Turbine Monitoring",
-          "Hybrid Wind Solar Projects",
-          "Renewable Energy Student Projects",
-          "Structural Analysis Turbines",
-          "Predictive Maintenance Wind Energy",
-          "Digital Twin Wind Turbines",
-          "Narpavi Research Institute Wind"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
@@ -51,29 +81,17 @@ const EEEWindTurbineDesignOptimizationProjectDevelopmentCenter = () => {
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Wind turbine IEEE projects 2023–2025</li>
-              <li>CFD-based turbine optimization</li>
-              <li>AI-enabled wind energy projects</li>
-              <li>IoT wind turbine monitoring</li>
-              <li>Hybrid wind-solar projects</li>
-              <li>Renewable energy student projects</li>
-              <li>Structural analysis for turbines</li>
-              <li>Predictive maintenance wind energy projects</li>
-              <li>Ph.D. wind turbine research projects</li>
-              <li>Narpavi Research Institute renewable energy projects</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Wind Turbine Design & Optimization – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> offers the Wind Turbine Design & Optimization Project Development Center, empowering B.Tech, M.Tech, and Ph.D. students with IEEE-aligned (2023–2025) projects in aerodynamic blade design, structural optimization, IoT monitoring, and hybrid renewable systems.</p>
               <p>Students gain expertise in maximizing energy generation, improving efficiency, and integrating AI-driven forecasting with real-world prototypes, contributing to sustainable wind energy solutions.</p>
@@ -188,48 +206,33 @@ const EEEWindTurbineDesignOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/renewable-thermal-energy">
-      Renewable & Thermal Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
-      Solar PV & Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/wind-turbine-design">
-      Wind Turbine Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
-      Biomass & Biofuel Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
-      Energy Storage & Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/smart-grid-integration">
-      Smart Grid Integration
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/renewable-thermal-energy">Renewable & Thermal Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/solar-pv-thermal">Solar PV & Thermal Systems</a></li>
+              <li><a href="/department/renewable-thermal-energy/wind-turbine-design">Wind Turbine Design</a></li>
+              <li><a href="/department/renewable-thermal-energy/biomass-biofuel-energy">Biomass & Biofuel Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/energy-storage-recovery">Energy Storage & Recovery</a></li>
+              <li><a href="/department/renewable-thermal-energy/smart-grid-integration">Smart Grid Integration</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEWindTurbineDesignOptimizationProjectDevelopmentCenter;

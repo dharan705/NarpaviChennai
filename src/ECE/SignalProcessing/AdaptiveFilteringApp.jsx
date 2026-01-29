@@ -1,78 +1,100 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Adaptive Filtering Project Development Center in Chennai",
+  "IEEE Adaptive Filtering Projects",
+  "LMS RLS Kalman Filter Projects",
+  "Adaptive Beamforming IEEE Projects",
+  "Noise Cancellation Signal Processing",
+  "FPGA DSP Adaptive Filtering",
+  "B.Tech M.Tech PhD Adaptive Filtering Projects",
+  "Narpavi Research Institute Signal Processing"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Adaptive Filtering and Applications Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Adaptive Filtering and Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in LMS/RLS/Kalman filtering, adaptive beamforming, noise cancellation, and FPGA/DSP-based implementations for communications, biomedical systems, and IoT applications."
+    question:
+      "What services does the Adaptive Filtering and Applications Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Adaptive Filtering and Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in LMS/RLS/Kalman filtering, adaptive beamforming, noise cancellation, and FPGA/DSP-based implementations."
   },
   {
-    question: "What types of Adaptive Filtering and Applications projects are supported?",
-    answer: "We support B.Tech projects (noise suppression, echo cancellation), M.Tech projects (RLS-based channel equalization, Kalman-filtered IoT data), and Ph.D. projects (AI-integrated adaptive filters, multi-sensor fusion) for applications in audio devices, wireless communications, and healthcare."
+    question:
+      "What types of Adaptive Filtering and Applications projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects including noise suppression, echo cancellation, RLS-based channel equalization, Kalman-filtered IoT data fusion, and AI-integrated adaptive filters."
   },
   {
-    question: "Which technologies are used in Adaptive Filtering and Applications project development?",
-    answer: "Our stack includes MATLAB, Python, VHDL/Verilog for FPGA, and DSP kits for simulation, algorithm optimization, and real-time adaptive processing."
+    question:
+      "Which technologies are used in Adaptive Filtering projects?",
+    answer:
+      "Technologies include MATLAB, Python, VHDL/Verilog, FPGA platforms, and DSP kits for real-time adaptive signal processing."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like adaptive beamforming, Kalman filtering, and AI-integrated adaptive filters, ensuring academic and industry relevance."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "All projects are derived from IEEE Transactions and Conferences (2023–2025), ensuring academic and research relevance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    question:
+      "Is publication support provided?",
+    answer:
+      "Yes, we provide complete guidance for IEEE, Scopus, and SCI journal publications."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Adaptive Filtering and Applications – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/signal-processing/adaptive-filtering-applications-project-development-center-in-chennai";
+
+const pageDescription =
+  "Adaptive Filtering and Applications Project Development Center in Chennai offering IEEE-aligned LMS, RLS, Kalman filter, adaptive beamforming, FPGA and DSP-based projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEAdaptiveFilteringApplicationsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Adaptive Filtering IEEE Projects | LMS RLS Kalman Filters B.Tech M.Tech PhD (2023–2025)"
-  description="Adaptive Filtering project development for B.Tech, M.Tech, and Ph.D. students focusing on LMS/RLS/Kalman filters, adaptive beamforming, noise cancellation, FPGA/DSP implementations, and IEEE-aligned research (2023–2025)."
-  url="/department/signal-processing/adaptive-filtering-applications"
-  type="article"
-  keywords={[
-    "Adaptive Filtering Projects",
-    "IEEE Adaptive Filter Research",
-    "LMS RLS Kalman Filters",
-    "Noise Cancellation Systems",
-    "Adaptive Beamforming Projects",
-    "FPGA Adaptive Filtering",
-    "DSP Kalman Filter Implementation",
-    "IEEE Signal Processing 2025",
-    "B.Tech Adaptive Filters",
-    "M.Tech RLS Projects",
-    "Ph.D. AI Adaptive Filtering",
-    "Narpavi Research Institute Adaptive Filtering",
-    "Echo Cancellation Projects",
-    "MIMO Channel Equalization",
-    "IoT Sensor Data Fusion"
-  ]}
-  faqs={faqs}
-  />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Adaptive Filtering Projects</li>
-              <li>IEEE Adaptive Filter Research</li>
-              <li>LMS RLS Kalman Filters</li>
-              <li>Noise Cancellation Systems</li>
-              <li>Beamforming Applications</li>
-              <li>Signal Processing IEEE Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
 
-          {/* Center: Main Content */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Adaptive Filtering and Applications – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
+              <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Adaptive Filtering and Applications – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in LMS/RLS/Kalman filtering, adaptive beamforming, noise cancellation, and FPGA/DSP-based implementations for noise cancellation, communications, biomedical systems, and IoT applications.
               </p>
@@ -226,40 +248,41 @@ const ECEAdaptiveFilteringApplicationsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
-          </div>
+        </section>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          </div>
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
-  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
-  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
-  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
-  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
-  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
-  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
-</ul>
+              <li>
+                <a href="/department/signal-processing">
+                  Signal Processing Project Development Center
+                </a>
+              </li>
+              <li>
+                <a href="/department/signal-processing/ai-driven-signal-enhancement">
+                  AI-Driven Signal Enhancement Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/signal-processing/biomedical-signal-processing">
+                  Biomedical Signal Processing
+                </a>
+              </li>
+              <li>
+                <a href="/department/signal-processing/speech-audio-signal-processing">
+                  Speech & Audio Signal Processing
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

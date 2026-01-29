@@ -1,65 +1,87 @@
 import "./Networking.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Csesidebar from "../../assets/Csesidebar";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+const keywords = [
+  "Networking – Project Development Center in Chennai",
+  "IEEE Networking Projects 2023–2025",
+  "5G and 6G Networking Projects",
+  "Software Defined Networking Projects",
+  "NFV Networking Projects",
+  "IoT Networking IEEE Topics",
+  "Edge Computing Networking Projects",
+  "AI in Networking Projects",
+  "IEEE Networking Conference Papers",
+  "Narpavi Research Institute Networking Support"
+];
 
 const faqs = [
   {
     question: "What services does the Networking Project Development Center offer?",
-    answer: "Narpavi Research Institute's Networking Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) networking projects, focusing on 5G/6G, SDN, NFV, IoT, and AI-driven network security for industries like telecom, cloud services, and cybersecurity."
+    answer:
+      "Narpavi Research Institute's Networking Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) networking projects focusing on 5G/6G, SDN, NFV, IoT, and AI-driven networking."
   },
   {
     question: "What types of networking projects are supported?",
-    answer: "We support B.Tech projects (basic protocols, IoT networks), M.Tech projects (SDN, NFV orchestration), and Ph.D. projects (quantum networking, AI-driven analytics) for applications in smart cities, data centers, and enterprise IT."
+    answer:
+      "We support protocol design, SDN, NFV orchestration, IoT networking, edge computing, and AI-driven network optimization projects."
   },
   {
     question: "Which technologies are used in networking project development?",
-    answer: "Our stack includes Cisco Packet Tracer, GNS3, Mininet, OpenFlow, Kubernetes, and AI tools like TensorFlow for scalable networking solutions."
+    answer:
+      "Our stack includes Cisco Packet Tracer, GNS3, Mininet, OpenFlow, Kubernetes, and AI-based network analytics tools."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like 5G/6G, SDN, NFV, and AI-driven networking, ensuring academic and industry relevance."
+    answer:
+      "All projects are selected from IEEE Transactions (2023–2025) covering 5G/6G, SDN, NFV, and AI-driven networking."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, architecture design, simulation, testing, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "We provide complete guidance including topic selection, simulation, validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const NetworkingProjectDevelopmentCenter = () => {
   return (
-    <div className="NetworkingProjectDevelopmentCenter">
-      <SEO 
-        title="Networking IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Networking projects for B.Tech, M.Tech, Ph.D. 5G/6G, SDN, NFV, IoT networking, AI-driven security for telecom, cloud services, cybersecurity."
-        keywords="Networking Project Development Center, IEEE Networking Projects 2023–2025, Software Defined Networking Projects, NFV Networking Projects, IoT Networking IEEE Topics, 5G Networking IEEE Papers, Edge Computing Networking Projects, Narpavi Research Institute Networking Support, IEEE Networking Conference Papers, AI in Networking Projects"
-        url="/department/networking"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Networking – Project Development Center in Chennai"
+        description="Networking – Project Development Center in Chennai offering IEEE 2023–2025 projects in 5G/6G, SDN, NFV, IoT networking, edge computing, and AI-driven network security for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/networking-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="NetworkingProjectDevelopmentCenter-main">
-        <div className="NetworkingProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="NetworkingProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+          <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Networking Project Development Center</li>
-              <li>IEEE Networking Projects 2023–2025</li>
-              <li>Software Defined Networking Projects</li>
-              <li>NFV Networking Projects</li>
-              <li>IoT Networking IEEE Topics</li>
-              <li>5G Networking IEEE Papers</li>
-              <li>Edge Computing Networking Projects</li>
-              <li>Narpavi Research Institute Networking Support</li>
-              <li>IEEE Networking Conference Papers</li>
-              <li>AI in Networking Projects</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="NetworkingProjectDevelopmentCenter-center">
-            <h1>Networking – Project Development Center</h1>
-
-            <section className="NetworkingProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Networking – Project Development Center in Chennai</h1>
+            <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong>, we are proud to offer Networking – Project Development Center services to engineering students and researchers across the globe. Through our commitment to innovation and research excellence, our Networking – Project Development Center ensures that every project aligns with the most recent IEEE Transactions (2023–2025), empowering students to develop robust, scalable, and industry-relevant networking solutions.
               </p>
@@ -71,7 +93,7 @@ const NetworkingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NetworkingProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Networking Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational networking projects like IoT protocols or basic SDN setups, aligned with IEEE topics.
@@ -88,7 +110,7 @@ const NetworkingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NetworkingProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Networking Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced networking projects like SDN optimization or NFV orchestration, aligned with IEEE research.
@@ -105,7 +127,7 @@ const NetworkingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NetworkingProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Networking Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering networking research in quantum key distribution, AI-driven analytics, and digital twins.
@@ -122,9 +144,9 @@ const NetworkingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NetworkingProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table – Networking Applications</h2>
-              <div className="NetworkingProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -197,7 +219,7 @@ const NetworkingProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="NetworkingProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Networking Project Titles (2023–2025)</h2>
               <ul>
                 <li>AI-Enhanced Traffic Prediction Models for 6G Networks – 2024</li>
@@ -218,7 +240,7 @@ const NetworkingProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="NetworkingProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Networking Project Development</h2>
               <p>
                 Excellence in Networking Project Development with Narpavi Technology stands as a benchmark for world-class academic and industrial project execution. At Narpavi Research Institute, we specialize in guiding engineering students across B.Tech, M.Tech, and Ph.D. programs worldwide in creating both software and hardware networking solutions. We source our topics exclusively from IEEE Transactions (2023–2025), ensuring every project aligns with cutting-edge research and global standards. Excellence in Networking Project Development with Narpavi Technology is not just about completing a project — it is about delivering innovation that resonates with industry needs, from cloud-based networking architectures to 5G/6G communication frameworks.
@@ -238,26 +260,11 @@ const NetworkingProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="NetworkingProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+<Csesidebar/>
           </div>
+
         </div>
       </div>
     </div>

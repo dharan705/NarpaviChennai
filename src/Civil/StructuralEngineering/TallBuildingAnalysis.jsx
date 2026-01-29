@@ -1,76 +1,86 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Tall Building Analysis IEEE Projects 2023–2025",
+  "High-rise Structural Engineering Projects",
+  "Seismic Design Tall Buildings",
+  "Wind Load Skyscraper Analysis",
+  "Outrigger System Tall Building Projects",
+  "RCC vs Steel High-rise Comparison",
+  "Performance-based High-rise Design",
+  "Tall Building Aerodynamics Projects",
+  "Tall Building Optimization Projects",
+  "Narpavi Research Institute Civil Projects"
+];
+
 const faqs = [
   {
-    question: "What services does the Tall Building Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Tall Building Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural dynamics, seismic/wind analysis, and sustainable skyscraper design."
+    question:
+      "What services does the Tall Building Analysis Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Tall Building Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural dynamics, seismic/wind analysis, and sustainable skyscraper design."
   },
   {
     question: "What types of Tall Building Analysis projects are supported?",
-    answer: "We support B.Tech projects (basic structural modeling), M.Tech projects (dynamic analysis and optimization), and Ph.D. projects (AI-driven monitoring and hybrid systems) for high-rise buildings and towers."
+    answer:
+      "B.Tech projects on basic modeling, M.Tech projects on dynamic analysis, and Ph.D. projects on AI-driven monitoring and hybrid systems."
   },
   {
-    question: "Which tools and technologies are used in Tall Building Analysis projects?",
-    answer: "Our stack includes ETABS, STAAD.Pro, SAP2000, SAFE, ANSYS, ABAQUS, CSI Perform 3D, AutoCAD, and AI/IoT frameworks for structural analysis and monitoring."
+    question: "Which tools are used in Tall Building Analysis projects?",
+    answer:
+      "ETABS, STAAD.Pro, SAP2000, SAFE, ANSYS, ABAQUS, CSI Perform 3D, AutoCAD, and AI/IoT frameworks."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Structural Engineering, focusing on wind/seismic analysis, outrigger systems, and AI-based monitoring."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on wind/seismic analysis and AI-based monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CETallBuildingAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Tall Building Analysis IEEE Projects (2023–2025)"
-        description="Tall Building Analysis IEEE project development for B.Tech, M.Tech & PhD scholars using ETABS, SAP2000, ANSYS, outrigger systems, wind tunnel testing, seismic analysis, AI monitoring for skyscrapers and high-rise structures."
+        title="Tall Building Analysis – Project Development Center in Chennai"
+        description="Tall Building Analysis project development for B.Tech, M.Tech, and Ph.D. students using ETABS, SAP2000, ANSYS, outrigger systems, wind tunnel testing, seismic analysis, and AI monitoring for skyscrapers."
+        keywords={keywords}
         url="/department/structural-engineering/tall-building-analysis"
-        type="article"
-        keywords={[
-          "Tall Building Analysis IEEE 2023–2025",
-          "High-rise Structural Engineering Projects",
-          "Seismic Design Tall Buildings",
-          "Wind Load Skyscraper Analysis",
-          "Outrigger System Tall Building Projects",
-          "RCC vs Steel High-rise Comparison",
-          "Performance-based High-rise Design",
-          "Narpavi Research Institute Civil Projects",
-          "Tall Building Aerodynamics Projects",
-          "Tall Building Optimization Projects"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Tall Building Analysis projects</li>
-              <li>High-rise structural engineering projects</li>
-              <li>Seismic design of tall buildings IEEE 2023–2025</li>
-              <li>Wind load analysis for skyscrapers</li>
-              <li>Outrigger system projects for students</li>
-              <li>RCC vs steel tall building comparison</li>
-              <li>Tall building optimization student projects</li>
-              <li>Narpavi Research Institute civil engineering projects</li>
-              <li>Performance-based design in high-rises</li>
-              <li>Tall building aerodynamics projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Tall Building Analysis – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Tall Building Analysis – Project Development Center in Chennai
+            </h1>
+                   <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Tall Building Analysis Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on skyscraper design, structural dynamics, and sustainable high-rise solutions.
               </p>
@@ -240,38 +250,44 @@ const CETallBuildingAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/structural-engineering">
-      Structural Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/earthquake-resistant-structures">
-      Earthquake Resistant Structures
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/steel-rcc-design-optimization">
-      Steel & RCC Design Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/tall-building-analysis">
-      Tall Building Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/bridge-design-monitoring">
-      Bridge Design & Monitoring
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/structural-engineering">
+                  Structural Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/earthquake-resistant-structures">
+                  Earthquake Resistant Structures
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/steel-rcc-design-optimization">
+                  Steel & RCC Design Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/tall-building-analysis">
+                  Tall Building Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/bridge-design-monitoring">
+                  Bridge Design & Monitoring
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

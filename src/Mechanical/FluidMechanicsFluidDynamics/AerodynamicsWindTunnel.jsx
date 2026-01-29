@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Aerodynamics & Wind Tunnel Studies Project Development Center in Chennai",
+  "Aerodynamics IEEE Projects 2023–2025",
+  "Wind Tunnel Studies Student Projects",
+  "CFD and Wind Tunnel Validation",
+  "Aerospace Aerodynamic Optimization",
+  "Automotive Drag Reduction CFD",
+  "Wind Turbine Aerodynamics Projects",
+  "AI Driven Aerodynamics Research",
+  "PIV LDV Wind Tunnel Experiments",
+  "Narpavi Research Institute Aerodynamics Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Aerodynamics & Wind Tunnel Studies Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Aerodynamics & Wind Tunnel Studies Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on aerodynamic optimization, CFD simulations, and wind tunnel validation for aerospace, automotive, and renewable energy applications."
+    question:
+      "What services does the Aerodynamics & Wind Tunnel Studies Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Aerodynamics & Wind Tunnel Studies Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on aerodynamic optimization, CFD simulations, and wind tunnel validation."
   },
   {
-    question: "What types of Aerodynamics & Wind Tunnel Studies projects are supported?",
-    answer: "We support B.Tech projects (airfoil drag analysis, simple wind tunnel tests), M.Tech projects (CFD-based turbine optimization, aeroelastic analysis), and Ph.D. projects (AI-driven aerodynamics, hypersonic flow modeling) for aerospace, automotive, and urban planning."
+    question: "What types of Aerodynamics projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering CFD simulations, wind tunnel testing, aerodynamic optimization, and AI-driven flow modeling."
   },
   {
-    question: "Which tools and technologies are used in Aerodynamics & Wind Tunnel Studies projects?",
-    answer: "Our stack includes ANSYS Fluent, COMSOL Multiphysics, MATLAB, OpenFOAM, CAD tools (SolidWorks, CATIA), AI frameworks (TensorFlow, Keras), and wind tunnel setups with PIV and LDV."
+    question: "Which tools and technologies are used?",
+    answer:
+      "ANSYS Fluent, OpenFOAM, COMSOL, MATLAB, CAD tools, AI frameworks, and wind tunnel setups with PIV and LDV."
   },
   {
-    question: "How are Aerodynamics & Wind Tunnel Studies projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Aerospace, focusing on CFD, wind tunnel validation, and AI-driven aerodynamic optimization."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Mechanical Engineering and Aerospace."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD modeling, wind tunnel experimentation, AI integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including CFD modeling, wind tunnel experimentation, AI integration, documentation, and IEEE/Scopus/Elsevier/Springer publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Aerodynamics & Wind Tunnel Studies – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Aerodynamics & Wind Tunnel Studies Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering CFD simulations, wind tunnel validation, aerodynamic optimization, AI-driven modeling, and experimental analysis.";
+
+const pageUrl =
+  "/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel";
 
 const MEAerodynamicsWindTunnelStudiesProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Aerodynamics & Wind Tunnel Studies IEEE Projects (2023–2025)"
-        description="Aerodynamics Wind Tunnel IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, CFD simulations, PIV/LDV, AI optimization for aerospace, automotive, wind turbines, urban planning."
-        url="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel"
-        type="article"
-        keywords={[
-          "Aerodynamics Wind Tunnel IEEE 2023–2025",
-          "CFD Wind Tunnel Validation Projects",
-          "EV Aerodynamic Design Projects",
-          "Aerospace Aerodynamic Optimization",
-          "Automotive Drag Reduction CFD",
-          "Wind Turbine Aerodynamics Projects",
-          "AI-Driven Aerodynamics Research",
-          "PIV LDV Wind Tunnel Experiments",
-          "Narpavi Research Institute Aerodynamic Projects",
-          "Aeroelastic Analysis Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Aerodynamics Projects</li>
-              <li>Wind Tunnel IEEE Projects 2023–2025</li>
-              <li>CFD and Wind Tunnel Validation</li>
-              <li>Aerodynamics for EVs</li>
-              <li>Aerospace Aerodynamic Design Projects</li>
-              <li>Automotive Drag Reduction Projects</li>
-              <li>Wind Turbine Aerodynamics IEEE Projects</li>
-              <li>Aerodynamic Optimization Student Projects</li>
-              <li>Narpavi Research Institute Aerodynamic Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Aerodynamics & Wind Tunnel Studies – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+                 <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Aerodynamics & Wind Tunnel Studies Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on aerodynamic optimization, CFD simulations, and wind tunnel validation.
               </p>
@@ -244,43 +264,26 @@ const MEAerodynamicsWindTunnelStudiesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics">
-      Fluid Mechanics & Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
-      Computational Fluid Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
-      Turbomachinery Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
-      Aerodynamics & Wind Tunnel
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
-      Pump & Valve Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
-      Microfluidics Lab
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/fluid-mechanics-dynamics">Fluid Mechanics & Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">Computational Fluid Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/turbomachinery-design">Turbomachinery Design</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">Aerodynamics & Wind Tunnel</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">Pump & Valve Optimization</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/microfluidics-lab">Microfluidics Lab</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

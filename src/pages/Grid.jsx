@@ -12,18 +12,18 @@ import sastra from "../images/sastra.png";
 import bharathidasan from "../images/bharathidasan.png";
 import madurai_kamaraj from "../images/madurai_kamaraj.png";
 import more from "../images/more_college.png";
-
+import SEO from '../assets/SEO';
 const newsItems = [
-  { image: anna, link: '/phd-admission-in-anna-university-chennai',alt:"PhD Admission in Anna University", name: 'PhD Admission in Anna University' },
-  { image: a2, link: '/annamalai-university', alt: 'PhD Admission in Annamalai University', name: 'PhD Admission in Annamalai University' },
-  { image: bu, link: '/bharathiar-university', alt: 'PhD Admission in Bharathiar University' , name: 'PhD Admission in Bharathiar University' },
-  { image: vit, link: '/vit-university', alt: 'PhD Admission in VIT University', name: 'PhD Admission in VIT University' },
-  { image: srm, link: '/srm-university', alt: 'PhD Admission in SRM University', name: 'PhD Admission in SRM University' },
-  { image: sathyabama, link: '/sathyabama-university', alt: 'PhD Admission in Sathyabama University' , name: 'PhD Admission in Sathyabama University' },
-  { image: saveetha, link: '/saveetha-university', alt: 'PhD Admission in Saveetha University' , name: 'PhD Admission in Saveetha University' },
-  { image: sastra, link: '/sastra-university', alt: 'PhD Admission in SASTRA University', name: 'PhD Admission in SASTRA University' },
-  { image: bharathidasan, link: '/bharathidasan-university', alt: 'PhD Admission in Bharathidasan University', name: 'PhD Admission in Bharathidasan University' },
-  { image: madurai_kamaraj, link: '/madurai-kamaraj-university', alt: 'PhD Admission in Madurai Kamaraj University', name: 'PhD Admission in Madurai Kamaraj University' },
+  { image: anna, link: '/phd-admission-assistance-in-anna-university', alt: 'PhD Admission Assistance in Anna University', name: 'PhD Admission Assistance in Anna University' },
+  { image: a2, link: '/phd-admission-assistance-in-anna-malai-university', alt: 'PhD Admission Assistance in Annamalai University', name: 'PhD Admission Assistance in Annamalai University' },
+  { image: bu, link: '/phd-admission-assistance-in-bharathiar-university', alt: 'PhD Admission Assistance in Bharathiar University', name: 'PhD Admission Assistance in Bharathiar University' },
+  { image: vit, link: '/phd-admission-assistance-in-vit', alt: 'PhD Admission Assistance in VIT University', name: 'PhD Admission Assistance in VIT University' },
+  { image: srm, link: '/phd-admission-assistance-in-srm', alt: 'PhD Admission Assistance in SRM University', name: 'PhD Admission Assistance in SRM University' },
+  { image: sathyabama, link: '/phd-admission-assistance-in-sathyabama-university', alt: 'PhD Admission Assistance in Sathyabama University', name: 'PhD Admission Assistance in Sathyabama University' },
+  { image: saveetha, link: '/phd-admission-assistance-in-saveetha-university', alt: 'PhD Admission Assistance in Saveetha University', name: 'PhD Admission Assistance in Saveetha University' },
+  { image: sastra, link: '/phd-admission-assistance-in-sastra', alt: 'PhD Admission Assistance in SASTRA University', name: 'PhD Admission Assistance in SASTRA University' },
+  { image: bharathidasan, link: '/phd-admission-assistance-in-bharathidasan-university', alt: 'PhD Admission Assistance in Bharathidasan University', name: 'PhD Admission Assistance in Bharathidasan University' },
+  { image: madurai_kamaraj, link: '/phd-admission-assistance-in-madurai-kamaraj-university', alt: 'PhD Admission Assistance in Madurai Kamaraj University', name: 'PhD Admission Assistance in Madurai Kamaraj University' },
   { image: more, link: '/college', alt: 'More Colleges', name: 'More Colleges' },
 ];
 
@@ -66,6 +66,36 @@ const NewsCarousel = () => {
 
   return (
     <div className="carousel-wrapper">
+      <SEO
+  title="PhD Admission Assistance in Top Universities in Chennai"
+  description="Explore PhD admission support and research guidance for Anna University, VIT, SRM, Sathyabama, Bharathiar, Saveetha and 25+ universities across Chennai and Tamil Nadu."
+  url="/college"
+  keywords={[
+    "PhD Admission Chennai",
+    "Anna University PhD Admission",
+    "SRM PhD Guidance",
+    "VIT PhD Assistance",
+    "Sathyabama PhD Admission",
+    "Research Admission Chennai",
+    "Doctoral Programs Tamil Nadu",
+    "PhD University Admission Support"
+  ]}
+  faqs={[
+    {
+      question: "Do you help with PhD admission in multiple universities?",
+      answer: "Yes, we provide complete PhD admission and research support for Anna University, VIT, SRM, Sathyabama, Bharathiar and 25+ other universities in Tamil Nadu."
+    },
+    {
+      question: "Is support available for part-time or full-time PhD?",
+      answer: "Absolutely. We guide students for both full-time and part-time PhD programs depending on university eligibility."
+    },
+    {
+      question: "Do you assist with documentation and proposal writing?",
+      answer: "Yes. We support topic selection, proposal drafting, document verification, and entrance preparation for PhD admissions."
+    }
+  ]}
+/>
+
       <div className="carousel-header">
         <h1>PhD Admission Assistance in Chennai</h1>
         <p>“One-stop solution for your PhD dreams.”</p>

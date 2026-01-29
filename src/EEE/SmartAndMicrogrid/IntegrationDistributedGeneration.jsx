@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "Integration of Distributed Generation Project Development Center in Chennai",
+  "Distributed Generation IEEE Projects 2023–2025",
+  "DG Integration Projects",
+  "B.Tech Solar Wind Distributed Generation Projects",
+  "M.Tech AI Based DG Optimization",
+  "Ph.D Hybrid Renewable DG Systems",
+  "Smart Inverter DG Research",
+  "Microgrid Distributed Generation Integration",
+  "Predictive DG Energy Management",
+  "Narpavi Research Institute DG Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Integration of Distributed Generation Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Integration of Distributed Generation Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects focusing on DG planning, renewable energy interfacing, smart inverters, predictive control, and stability enhancement for grids and microgrids."
+    question:
+      "What services does the Integration of Distributed Generation Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Integration of Distributed Generation Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects focusing on DG planning, renewable energy interfacing, smart inverters, predictive control, and stability enhancement for grids and microgrids."
   },
   {
     question: "What types of Distributed Generation projects are supported?",
-    answer: "We support B.Tech projects (basic solar/wind DG units, IoT-enabled monitoring), M.Tech projects (AI-based DG scheduling, hybrid coordination, stability control), and Ph.D. projects (deep learning-based DG energy management, predictive voltage/frequency control, HIL-tested prototypes)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering solar/wind DG systems, AI-based scheduling, hybrid coordination, stability control, and predictive energy management."
   },
   {
     question: "Which technologies are used in DG project development?",
-    answer: "We use MATLAB/Simulink, PSIM, HOMER Pro for simulations; AI frameworks like TensorFlow and PyTorch for predictive control; IoT platforms (MQTT, SCADA) for monitoring; and FPGA/DSP controllers for hardware prototyping."
+    answer:
+      "MATLAB/Simulink, PSIM, HOMER Pro, TensorFlow, PyTorch, IoT/SCADA platforms, and FPGA/DSP-based hardware prototyping."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), focusing on smart inverter design, fault-tolerant DG interconnections, adaptive grid control, and hybrid renewable dispatch strategies."
+    question: "How are DG projects aligned with IEEE standards?",
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on smart inverters, adaptive DG control, fault-tolerant interconnections, and hybrid renewable dispatch."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer complete support including IEEE topic mentoring, modeling & simulations, hardware prototyping, performance analysis, IEEE-formatted reports, and research publication assistance."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including IEEE topic mentoring, modeling, simulations, hardware prototyping, performance analysis, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Integration of Distributed Generation – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Integration of Distributed Generation Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering DG planning, smart inverters, AI-based predictive control, renewable energy interfacing, and microgrid integration.";
+
+const pageUrl =
+  "/department/smart-grid-microgrid/integration-distributed-generation";
 
 const EEEIntegrationDistributedGenerationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Distributed Generation Integration IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Integration of Distributed Generation DG projects for B.Tech, M.Tech, Ph.D. Solar wind DG, smart inverters, AI predictive control using MATLAB/Simulink, PSIM, HOMER Pro, TensorFlow for microgrids, renewable energy integration."
-  keywords="Distributed Generation DG IEEE Projects 2023–2025, DG Integration Projects, B.Tech Solar Wind DG, M.Tech AI DG Optimization, Ph.D. Hybrid Renewable DG, IoT DG Monitoring, Smart Inverter Research, Microgrid DG Integration, Predictive Energy Management, Narpavi Research Institute"
-  url="/department/smart-grid-microgrid/integration-distributed-generation"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* Left Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Distributed Generation Projects</li>
-              <li>IEEE DG Integration Projects 2023–2025</li>
-              <li>B.Tech DG System Projects</li>
-              <li>M.Tech AI-Based DG Optimization</li>
-              <li>Ph.D Hybrid Renewable DG Systems</li>
-              <li>IoT-Based DG Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>Smart Inverter Research</li>
-              <li>Microgrid DG Integration</li>
-              <li>Predictive Energy Management</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* Center: Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Integration of Distributed Generation – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Integration of Distributed Generation (DG) Project Development Center, 
@@ -203,68 +233,30 @@ const EEEIntegrationDistributedGenerationProjectDevelopmentCenter = () => {
                 ))}
               </div>
               
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
-          </div>
+         </div>
 
-          {/* Right Related */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-          <ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid – Project Development Center</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Integration of Distributed Generation</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA Systems</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

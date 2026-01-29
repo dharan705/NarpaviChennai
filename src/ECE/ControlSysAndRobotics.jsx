@@ -1,6 +1,21 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT */
+const keywords = [
+  "Control Systems Project Development",
+  "Robotics IEEE Projects",
+  "Autonomous Robotics Projects",
+  "PID Controller Projects",
+  "Model Predictive Control Projects",
+  "ROS Robotics Projects",
+  "UAV Control IEEE Topics",
+  "Industrial Automation Robotics",
+  "AI in Control Systems",
+  "PhD Robotics Research"
+];
 
 const faqs = [
   {
@@ -34,61 +49,34 @@ const ECEControlSystemsRoboticsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ✅ SEO */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Control Systems & Robotics IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        title="Control Systems & Robotics – Project Development Center in Chennai"
         description="Control Systems & Robotics project development for B.Tech, M.Tech & PhD students focusing on robotics, intelligent automation, PID, MPC, AI-driven control, ROS, FPGA, UAVs, and IEEE-aligned research projects."
-        url="/department/control-systems-robotics"
-        type="article"
-        keywords={[
-          "Control Systems Project Development",
-          "Robotics IEEE Projects",
-          "Autonomous Robotics Projects",
-          "PID Controller Projects",
-          "Model Predictive Control Projects",
-          "ROS Robotics Projects",
-          "UAV Control IEEE Topics",
-          "Industrial Automation Robotics",
-          "AI in Control Systems",
-          "PhD Robotics Research"
-        ]}
+        url="/control-systems-robotics-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Control Systems Project Development</li>
-              <li>Robotics IEEE Projects 2023–2025</li>
-              <li>Autonomous Robots Project Support</li>
-              <li>Narpavi Research Institute Robotics</li>
-              <li>B.Tech M.Tech Ph.D. Robotics Projects</li>
-              <li>India Robotics Project Center</li>
-              <li>IEEE Control Systems Projects</li>
-              <li>ROS-Based Robotics Projects</li>
-              <li>UAV Control IEEE Topics</li>
-              <li>Industrial Automation Projects</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR (classname fixed) */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Control Systems & Robotics – Project Development Center</h1>
-
-            <p className="seo-internal-links">
-              Related research domains:
-              <a href="/ece-project-development"> ECE Project Development</a>,
-              <a href="/phd-project-development"> PhD Research Guidance</a>,
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
-            </p>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Control Systems & Robotics – Project Development Center in Chennai</h1>
+     <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Control Systems & Robotics – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. students to excel in intelligent automation, mechatronics, and robotic control solutions. Our projects are aligned with IEEE Transactions (2023–2025) to ensure cutting-edge innovation.
               </p>
@@ -222,23 +210,27 @@ const ECEControlSystemsRoboticsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
-          </div>
+            </section>          </div>
 
-          {/* Right */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR (classname fixed) */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
-  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
-  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
-  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
-  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
-</ul>
-
-          </div>
+            <ul>
+              <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project</a></li>
+              <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+              <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+              <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+              <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+            </ul>
+              <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Electric Vehicle Design Project Development Center in Chennai",
+  "EV IEEE Projects 2023–2025",
+  "Electric Vehicle Design Student Projects",
+  "EV Motor Control Projects",
+  "AI in EV Design",
+  "Smart Grid EV Integration",
+  "Battery Management IEEE Projects",
+  "IoT Based EV Projects",
+  "Fast Charging EV Systems",
+  "Vehicle to Grid EV Projects",
+  "Narpavi Research Institute EV Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Electric Vehicle Design & Control Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Electric Vehicle Design & Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on EV battery management, motor control, AI-driven optimization, V2G systems, and smart charging infrastructure for sustainable mobility."
+    answer:
+      "Narpavi Research Institute’s Electric Vehicle Design & Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on EV battery management, motor control, AI-driven optimization, V2G systems, and smart charging infrastructure."
   },
   {
     question: "What types of Electric Vehicle Design & Control projects are supported?",
-    answer: "We support B.Tech projects (EV prototypes, battery monitoring), M.Tech projects (AI-based motor control, smart charging), and Ph.D. projects (solid-state batteries, digital twins, V2G frameworks) for applications in smart cities, green transport, and automotive innovation."
+    answer:
+      "We support B.Tech projects (EV prototypes, battery monitoring), M.Tech projects (AI-based motor control, smart charging), and Ph.D. projects (solid-state batteries, digital twins, V2G frameworks)."
   },
   {
     question: "Which tools and technologies are used in Electric Vehicle Design & Control projects?",
-    answer: "Our stack includes MATLAB, Simulink, ANSYS, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, BLDC motors, and battery systems for simulation, prototyping, and real-time control."
+    answer:
+      "MATLAB, Simulink, ANSYS, Python, TensorFlow, Keras, AWS IoT, ThingSpeak, Arduino, Raspberry Pi, BLDC motors, and battery systems."
   },
   {
     question: "How are Electric Vehicle Design & Control projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on EV powertrains, smart charging, and V2G integration."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and IEEE/Scopus/Elsevier publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Electric Vehicle Design & Control – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Electric Vehicle Design & Control Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering EV battery management, motor control, AI optimization, V2G systems, and smart charging.";
+
+const pageUrl =
+  "/department/automotive-vehicle-engineering/electric-vehicle-design";
 
 const MEElectricVehicleDesignControlProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Electric Vehicle Design IEEE Projects (2023–2025)"
-        description="Electric Vehicle Design Control IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ANSYS, AI optimization, V2G systems, BLDC motor control, IoT battery management, smart charging for sustainable mobility."
-        url="/department/automotive-vehicle-engineering/electric-vehicle-design"
-        type="article"
-        keywords={[
-          "EV IEEE Projects 2023–2025",
-          "Electric Vehicle Design Student Projects",
-          "EV Motor Control Projects",
-          "AI in EV Design",
-          "Smart Grid EV Integration",
-          "Battery Management IEEE Projects",
-          "IoT Based EV Projects",
-          "Fast Charging EV Systems",
-          "Vehicle to Grid EV Projects",
-          "Narpavi Research Institute EV Projects"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>EV IEEE Projects 2023–2025</li>
-              <li>Electric Vehicle Design Student Projects</li>
-              <li>EV Motor Control Projects</li>
-              <li>AI in EV Design</li>
-              <li>Smart Grid EV Integration</li>
-              <li>Battery Management IEEE Projects</li>
-              <li>IoT-Based EV Projects</li>
-              <li>Fast Charging EV Systems</li>
-              <li>Vehicle-to-Grid EV Projects</li>
-              <li>Narpavi Research Institute EV Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Electric Vehicle Design & Control – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+               <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Electric Vehicle Design & Control Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on EV battery management, motor control, AI-driven optimization, V2G systems, and smart charging infrastructure.
               </p>
@@ -262,43 +282,25 @@ const MEElectricVehicleDesignControlProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/automotive-vehicle-engineering">
-      Automotive & Vehicle Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
-      Electric Vehicle Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
-      Hybrid Vehicle Powertrains
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
-      Vehicle Dynamics & Stability
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
-      Engine Performance Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
-      Emission Control & Fuel Efficiency
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/automotive-vehicle-engineering">Automotive & Vehicle Engineering</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/electric-vehicle-design">Electric Vehicle Design</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">Hybrid Vehicle Powertrains</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">Vehicle Dynamics & Stability</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/engine-performance-optimization">Engine Performance Optimization</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">Emission Control & Fuel Efficiency</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

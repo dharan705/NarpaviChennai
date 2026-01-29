@@ -1,65 +1,87 @@
 import "./DevOps.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "DevOps – Project Development Center in Chennai",
+  "IEEE DevOps Projects 2023–2025",
+  "CI/CD Pipeline Automation Projects",
+  "Cloud-Native DevOps Solutions",
+  "Microservices Architecture Projects",
+  "DevSecOps Research Projects",
+  "Kubernetes Projects for Students",
+  "Infrastructure as Code Projects",
+  "AI-Driven DevOps Solutions",
+  "GitOps Automation Projects"
+];
 
 const faqs = [
   {
     question: "What services does the DevOps Project Development Center offer?",
-    answer: "Narpavi Research Institute's DevOps Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) DevOps projects, focusing on CI/CD pipelines, infrastructure as code, containerization, and DevSecOps for industries like software development, FinTech, and healthcare."
+    answer:
+      "Narpavi Research Institute's DevOps Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) DevOps projects focusing on CI/CD, containerization, IaC, and DevSecOps."
   },
   {
     question: "What types of DevOps projects are supported?",
-    answer: "We support B.Tech projects (CI/CD pipelines, containerized apps), M.Tech projects (microservices, DevSecOps), and Ph.D. projects (AI-driven automation, GitOps) for applications in e-commerce, telecom, and cloud services."
+    answer:
+      "We support CI/CD pipelines, containerized applications, microservices, DevSecOps platforms, and AI-driven DevOps automation projects."
   },
   {
     question: "Which technologies are used in DevOps project development?",
-    answer: "Our stack includes Jenkins, GitLab CI, Terraform, Ansible, Docker, Kubernetes, Prometheus, ELK Stack, and AI tools like TensorFlow for scalable DevOps solutions."
+    answer:
+      "Our stack includes Jenkins, GitLab CI, Docker, Kubernetes, Terraform, Ansible, Prometheus, ELK Stack, and AI-driven automation tools."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-driven DevOps, container security, and observability, ensuring academic and industry relevance."
+    answer:
+      "Projects are selected from IEEE Transactions (2023–2025) covering AI-driven DevOps, container security, and observability."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, architecture design, implementation, testing, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "We provide complete guidance including topic selection, implementation, validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const DevOpsProjectDevelopmentCenter = () => {
   return (
-    <div className="DevOpsProjectDevelopmentCenter">
-      <SEO 
-        title="DevOps IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) DevOps projects for B.Tech, M.Tech, Ph.D. CI/CD pipelines, Kubernetes, Terraform, DevSecOps, microservices for software development, FinTech."
-        keywords="DevOps Project Development, IEEE DevOps Projects 2023–2025, CI/CD Pipeline Automation, Cloud-Native DevOps, Microservices Architecture Projects, DevSecOps Research, Kubernetes Projects for Students, Narpavi Research Institute DevOps Support, Infrastructure as Code Projects, AI-Driven DevOps Solutions"
-        url="/department/devops"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="DevOps – Project Development Center in Chennai"
+        description="DevOps – Project Development Center in Chennai offering IEEE 2023–2025 projects in CI/CD automation, Kubernetes, Terraform, DevSecOps, microservices, and AI-driven DevOps for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/devops-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="DevOpsProjectDevelopmentCenter-main">
-        <div className="DevOpsProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="DevOpsProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>DevOps Project Development</li>
-              <li>IEEE DevOps Projects 2023–2025</li>
-              <li>CI/CD Pipeline Automation</li>
-              <li>Cloud-Native DevOps</li>
-              <li>Microservices Architecture Projects</li>
-              <li>DevSecOps Research</li>
-              <li>Kubernetes Projects for Students</li>
-              <li>Narpavi Research Institute DevOps Support</li>
-              <li>Infrastructure as Code Projects</li>
-              <li>AI-Driven DevOps Solutions</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="DevOpsProjectDevelopmentCenter-center">
-            <h1>DevOps – Project Development Center</h1>
-
-            <section className="DevOpsProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>DevOps – Project Development Center in Chennai</h1>
+ <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 At Narpavi Research Institute, we take pride in delivering DevOps – Project Development Center solutions that empower engineering students and researchers across B.Tech, M.Tech, and Ph.D. levels worldwide. Our expertise covers both software and hardware-based DevOps projects, leveraging the most advanced methodologies from IEEE Transactions (2023–2025). By seamlessly integrating development and operations, we ensure faster delivery cycles, improved collaboration, and industry-ready solutions.
               </p>
@@ -69,7 +91,7 @@ const DevOpsProjectDevelopmentCenter = () => {
               <p>The DevOps – Project Development Center adopts modern cloud-native technologies, aligning with global industry benchmarks in software engineering, AI-driven operations, and microservice architecture. Every project follows a meticulously planned cycle tailored for B.Tech, M.Tech, and Ph.D. candidates, ensuring the perfect balance between academic depth and industrial application.</p>
             </section>
 
-            <section className="DevOpsProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech DevOps Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational DevOps projects like CI/CD pipelines or containerized applications, aligned with IEEE topics.
@@ -86,7 +108,7 @@ const DevOpsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DevOpsProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech DevOps Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced DevOps projects like microservices or DevSecOps pipelines, aligned with IEEE research.
@@ -103,7 +125,7 @@ const DevOpsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DevOpsProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. DevOps Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering DevOps research in AI-driven automation, GitOps, and quantum-integrated workflows.
@@ -120,9 +142,9 @@ const DevOpsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DevOpsProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table – DevOps Applications</h2>
-              <div className="DevOpsProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -188,7 +210,7 @@ const DevOpsProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="DevOpsProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned DevOps Project Titles (2023–2025)</h2>
               <ul>
                 <li>AI-Driven Continuous Integration Pipeline for Predictive Deployment Failures – 2023</li>
@@ -209,7 +231,7 @@ const DevOpsProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="DevOpsProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in DevOps Project Development</h2>
               <p>
                 Narpavi Technology is a mark of innovation, precision, and industry relevance. At Narpavi Research Institute, we empower engineering students across B.Tech, M.Tech, and Ph.D. levels globally with cutting-edge DevOps project solutions, blending software and hardware capabilities for real-world readiness. Our projects are meticulously aligned with the latest IEEE Transactions (2023–2025), ensuring academic distinction and industrial impact.
@@ -229,29 +251,13 @@ const DevOpsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>          </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+            <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="DevOpsProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

@@ -23,6 +23,7 @@ const SEO = ({
   url,
   image,
   keywords,
+  robots,
   faqs,
 }) => {
   const pageTitle = title
@@ -37,36 +38,30 @@ const SEO = ({
     ? keywords.join(", ")
     : keywords || DEFAULT_KEYWORDS.join(", ");
 
+  const robotsValue = robots || (description ? "index, follow" : "noindex, follow");
+
   useEffect(() => {
     /* ---------- TITLE ---------- */
     document.title = pageTitle;
 
-    /* ---------- META DESCRIPTION ---------- */
-    let metaDesc = document.querySelector("meta[name='description']");
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.name = "description";
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.content = pageDescription;
+    const setMeta = (selector, name, content) => {
+      let tag = document.querySelector(selector);
+      if (!tag) {
+        tag = document.createElement("meta");
+        tag.setAttribute("name", name);
+        document.head.appendChild(tag);
+      }
+      tag.content = content;
+    };
 
-    /* ---------- META KEYWORDS ---------- */
-    let metaKeywords = document.querySelector("meta[name='keywords']");
-    if (!metaKeywords) {
-      metaKeywords = document.createElement("meta");
-      metaKeywords.name = "keywords";
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.content = pageKeywords;
+    /* DESCRIPTION */
+    setMeta("meta[name='description']", "description", pageDescription);
 
-    /* ---------- ROBOTS ---------- */
-    let robots = document.querySelector("meta[name='robots']");
-    if (!robots) {
-      robots = document.createElement("meta");
-      robots.name = "robots";
-      document.head.appendChild(robots);
-    }
-    robots.content = "index, follow";
+    /* KEYWORDS */
+    setMeta("meta[name='keywords']", "keywords", pageKeywords);
+
+    /* ROBOTS */
+    setMeta("meta[name='robots']", "robots", robotsValue);
 
     /* ---------- CANONICAL ---------- */
     let canonical = document.querySelector("link[rel='canonical']");
@@ -77,15 +72,14 @@ const SEO = ({
     }
     canonical.href = pageUrl;
 
-    /* ---------- OPEN GRAPH ---------- */
     const setOG = (property, content) => {
-      let tag = document.querySelector(`meta[property='${property}']`);
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute("property", property);
-        document.head.appendChild(tag);
+      let ogTag = document.querySelector(`meta[property='${property}']`);
+      if (!ogTag) {
+        ogTag = document.createElement("meta");
+        ogTag.setAttribute("property", property);
+        document.head.appendChild(ogTag);
       }
-      tag.content = content;
+      ogTag.content = content;
     };
 
     setOG("og:type", "website");
@@ -98,27 +92,29 @@ const SEO = ({
 
     /* ---------- TWITTER ---------- */
     const setTwitter = (name, content) => {
-      let tag = document.querySelector(`meta[name='${name}']`);
-      if (!tag) {
-        tag = document.createElement("meta");
-        tag.setAttribute("name", name);
-        document.head.appendChild(tag);
+      let twitterTag = document.querySelector(`meta[name='${name}']`);
+      if (!twitterTag) {
+        twitterTag = document.createElement("meta");
+        twitterTag.setAttribute("name", name);
+        document.head.appendChild(twitterTag);
       }
-      tag.content = content;
+      twitterTag.content = content;
     };
 
     setTwitter("twitter:card", "summary_large_image");
     setTwitter("twitter:title", pageTitle);
     setTwitter("twitter:description", pageDescription);
     setTwitter("twitter:image", pageImage);
-    setTwitter("twitter:site", "@narpavitech"); // optional
+    setTwitter("twitter:site", "@narpavitech");
 
     /* ---------- FAQ SCHEMA ---------- */
+    let faqScript = document.getElementById("faq-schema");
+
     if (faqs && faqs.length > 0) {
       const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-           mainEntity: faqs.map((faq) => ({
+        mainEntity: faqs.map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: {
@@ -128,16 +124,15 @@ const SEO = ({
         })),
       };
 
-      let script = document.getElementById("faq-schema");
-
-      if (!script) {
-        script = document.createElement("script");
-        script.id = "faq-schema";
-        script.type = "application/ld+json";
-        document.head.appendChild(script);
+      if (!faqScript) {
+        faqScript = document.createElement("script");
+        faqScript.id = "faq-schema";
+        faqScript.type = "application/ld+json";
+        document.head.appendChild(faqScript);
       }
-
-      script.textContent = JSON.stringify(faqSchema);
+      faqScript.textContent = JSON.stringify(faqSchema);
+    } else if (faqScript) {
+      faqScript.remove();
     }
   }, [
     pageTitle,
@@ -145,6 +140,7 @@ const SEO = ({
     pageUrl,
     pageImage,
     pageKeywords,
+    robotsValue,
     faqs,
   ]);
 

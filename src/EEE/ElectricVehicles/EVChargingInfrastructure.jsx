@@ -1,68 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "EV Charging Infrastructure Project Development Center in Chennai",
+  "EV Charging Infrastructure IEEE Projects 2023–2025",
+  "AC DC EV Charger Projects",
+  "Fast EV Charging Systems",
+  "Wireless EV Charging IEEE Projects",
+  "Vehicle to Grid V2G Charging Systems",
+  "Smart Grid EV Charging Infrastructure",
+  "IoT Based EV Charging Monitoring",
+  "B.Tech EV Charging Projects",
+  "M.Tech EV Charging Research",
+  "Ph.D EV Charging Research",
+  "Narpavi Research Institute EV Charging Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the EV Charging Infrastructure Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students. Services cover charger design, AC/DC charging systems, wireless charging prototypes, smart grid integration, IoT monitoring systems, and publication guidance."
+    answer:
+      "We provide IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students covering charger design, AC/DC charging systems, wireless charging prototypes, smart grid integration, IoT monitoring systems, and publication guidance."
   },
   {
     question: "What types of EV Charging projects are supported?",
-    answer: "B.Tech: basic AC/DC chargers and monitoring circuits. M.Tech: fast charging design, smart load management, wireless EV charging. Ph.D: grid-integrated smart charging, vehicle-to-grid (V2G), AI-enabled charging, and SCI/Scopus-indexed publications."
+    answer:
+      "B.Tech projects include AC/DC chargers and monitoring circuits. M.Tech projects cover fast charging, smart load management, and wireless charging. Ph.D research focuses on grid-integrated smart charging, V2G systems, AI-enabled charging, and SCI/Scopus publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, PLECS, IoT platforms (MQTT, AWS IoT, Azure IoT), power electronics hardware (IGBT, MOSFET inverters/converters), FPGA/DSP for charger control, TensorFlow for AI-enabled optimization."
+    answer:
+      "MATLAB/Simulink, PSCAD, PLECS, IoT platforms (MQTT, AWS IoT, Azure IoT), power electronics hardware, FPGA/DSP controllers, and TensorFlow for AI-based optimization."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) on fast charging, wireless charging, bidirectional V2G energy systems, predictive load management, and smart charging platforms."
+    answer:
+      "Projects reference IEEE Transactions (2023–2025) on fast charging, wireless charging, bidirectional V2G energy systems, predictive load management, and smart charging platforms."
   },
   {
     question: "What academic support is provided?",
-    answer: "End-to-end project support: IEEE topic selection, charger circuit design, IoT-enabled monitoring, smart grid/renewable energy integration, IEEE-compliant technical documentation, and international journal publication mentorship."
+    answer:
+      "Complete support including IEEE topic selection, charger circuit design, IoT-enabled monitoring, renewable energy integration, IEEE documentation, and international journal publication mentorship."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "EV Charging Infrastructure – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) EV Charging Infrastructure Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AC/DC fast chargers, wireless EV charging, vehicle-to-grid V2G systems, smart grid integration, IoT monitoring, and AI-enabled load optimization.";
+
+const pageUrl = "/department/electric-vehicles/ev-charging-infrastructure";
 
 const EEEEvChargingInfrastructureProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="EV Charging Infrastructure IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) EV Charging Infrastructure projects for B.Tech, M.Tech, Ph.D. AC/DC fast chargers, wireless charging, V2G, smart grid integration using MATLAB/Simulink, PSCAD, PLECS, IoT, TensorFlow for EV stations."
-  keywords="EV Charging Infrastructure IEEE Projects 2023–2025, B.Tech AC DC Chargers, M.Tech Fast Wireless EV Charging, Ph.D. V2G Smart Grid Charging, IoT EV Charging Monitoring, Vehicle-to-Grid V2G Projects, Smart EV Charging Stations, Narpavi Research Institute"
-  url="/department/electric-vehicles/ev-charging-infrastructure"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 SEO Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>EV Charging Infrastructure Project Development Center</li>
-              <li>AC DC EV Chargers Projects</li>
-              <li>Fast EV Charging Research</li>
-              <li>Wireless EV Charging Projects</li>
-              <li>Smart Grid EV Charging</li>
-              <li>Vehicle-to-Grid IEEE Projects</li>
-              <li>IoT EV Charging Monitoring</li>
-              <li>B.Tech EV Charging Projects</li>
-              <li>M.Tech EV Charging Research</li>
-              <li>Ph.D. EV Charging Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
-          
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>EV Charging Infrastructure – Project Development Support</h1>
-            
-            {/* Intro */}
+
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>The <strong>EV Charging Infrastructure Project Development Center</strong> at Narpavi Research Institute empowers scholars to design IEEE-aligned (2023–2025) charging solutions that include AC/DC fast chargers, wireless charging systems, V2G architectures, and IoT-monitoring dashboards for smart charging networks.</p>
               <p>Students integrate hardware, power electronics, and AI-based control strategies for future-ready EV charging stations and Industry 4.0 deployments.</p>
@@ -178,48 +207,26 @@ const EEEEvChargingInfrastructureProjectDevelopmentCenter = () => {
             </section>  
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/electric-vehicles">Electric Vehicles – Project Development Center</a></li>
+              <li><a href="/department/electric-vehicles/bms">Battery Management Systems (BMS)</a></li>
+              <li><a href="/department/electric-vehicles/ev-charging-infrastructure">EV Charging Infrastructure</a></li>
+              <li><a href="/department/electric-vehicles/ev-motor-drive-systems">EV Motor Drive Systems</a></li>
+              <li><a href="/department/electric-vehicles/hev">Hybrid Electric Vehicles (HEV)</a></li>
+              <li><a href="/department/electric-vehicles/power-electronics-evs">Power Electronics for EVs</a></li>
+              <li><a href="/department/electric-vehicles/regenerative-braking-systems">Regenerative Braking Systems</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

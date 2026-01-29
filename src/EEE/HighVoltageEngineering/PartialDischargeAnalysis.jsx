@@ -1,66 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Partial Discharge Analysis Project Development Center in Chennai",
+  "Partial Discharge IEEE Projects 2023–2025",
+  "PD Detection Projects",
+  "High Voltage Insulation Diagnostics",
+  "B.Tech Partial Discharge Projects",
+  "M.Tech AI-Based PD Analysis",
+  "Ph.D IoT PD Monitoring",
+  "Predictive Maintenance PD Systems",
+  "Transformer PD Analysis",
+  "GIS Partial Discharge Monitoring",
+  "Narpavi Research Institute PD Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Partial Discharge Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Partial Discharge Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on PD detection, insulation diagnostics, predictive maintenance, and condition monitoring of high-voltage systems."
+    question:
+      "What services does the Partial Discharge Analysis Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Partial Discharge Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on PD detection, insulation diagnostics, predictive maintenance, and condition monitoring of high-voltage systems."
   },
   {
     question: "What types of PD projects are supported?",
-    answer: "We support B.Tech projects (PD detection basics, insulation diagnostics, lab-scale testing), M.Tech projects (AI-based PD signal analysis, IoT-enabled monitoring), and Ph.D. projects (deep learning PD diagnostics, predictive maintenance frameworks, patents, and IEEE publications)."
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects covering PD detection, AI-based diagnostics, IoT monitoring, and predictive maintenance."
   },
   {
     question: "Which tools are used in PD research?",
-    answer: "MATLAB/Simulink, COMSOL Multiphysics, PSCAD, LabVIEW, IoT platforms (MQTT), and AI/ML frameworks (TensorFlow, PyTorch) are employed for PD detection, modeling, and predictive diagnostics."
+    answer:
+      "MATLAB/Simulink, COMSOL Multiphysics, PSCAD, LabVIEW, MQTT-based IoT platforms, TensorFlow, and PyTorch."
   },
   {
-    question: "How are PD projects aligned with IEEE standards?",
-    answer: "Projects follow IEEE Transactions (2023–2025) guidelines in PD detection, insulation degradation monitoring, AI-based predictive diagnostics, and utility-scale reliability testing."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on partial discharge detection, insulation degradation monitoring, and predictive diagnostics."
   },
   {
     question: "What academic support is provided?",
-    answer: "We guide students through IEEE topic selection, PD algorithm development, insulation testing, result validation, IEEE-style report writing, and publishing in IEEE, Scopus, and SCI journals."
+    answer:
+      "We guide students in IEEE topic selection, PD algorithm development, insulation testing, report writing, and IEEE/Scopus/SCI publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Partial Discharge Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Partial Discharge Analysis Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PD detection, insulation diagnostics, AI-based predictive maintenance, and IoT monitoring of high-voltage systems.";
+
+const pageUrl =
+  "/department/high-voltage-engineering/partial-discharge-analysis";
 
 const EEEPartialDischargeAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Partial Discharge Analysis IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Partial Discharge PD Analysis projects for B.Tech, M.Tech, Ph.D. PD detection, insulation diagnostics, AI predictive maintenance using MATLAB/Simulink, COMSOL, PSCAD, TensorFlow for transformers, GIS, high-voltage systems."
-  keywords="Partial Discharge Analysis IEEE Projects 2023–2025, PD Detection Projects, B.Tech PD Insulation Diagnostics, M.Tech AI PD Analysis, Ph.D. IoT PD Monitoring, High Voltage PD Research, Transformers PD Analysis, GIS Partial Discharge, Predictive Maintenance PD, Narpavi Research Institute"
-  url="/department/high-voltage-engineering/partial-discharge-analysis"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Partial Discharge Analysis Projects</li>
-              <li>IEEE PD Research 2023–2025</li>
-              <li>B.Tech PD Detection Projects</li>
-              <li>M.Tech AI-Based PD Analysis</li>
-              <li>Ph.D IoT PD Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>High Voltage Insulation Diagnostics</li>
-              <li>Predictive Maintenance PD Systems</li>
-              <li>Transformers PD Analysis</li>
-              <li>GIS Partial Discharge Monitoring</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Partial Discharge Analysis – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Partial Discharge Analysis Project Development Center, focused on IEEE-aligned (2023–2025) project areas including PD detection, insulation diagnostics, predictive maintenance, and condition monitoring for high-voltage systems.</p>
               <p>Students gain expertise in PD testing setups, AI-assisted insulation diagnostics, IoT-enabled monitoring, and predictive maintenance of transformers, GIS, and high-voltage transmission networks.</p>
@@ -194,47 +225,31 @@ const EEEPartialDischargeAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gas-insulated-substations">Gas Insulated Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing Equipment</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEPartialDischargeAnalysisProjectDevelopmentCenter;

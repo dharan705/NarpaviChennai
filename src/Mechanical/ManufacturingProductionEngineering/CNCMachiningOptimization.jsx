@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "CNC Machining Optimization Project Development Center in Chennai",
+  "CNC Machining Optimization IEEE Projects 2023–2025",
+  "AI Based CNC Toolpath Optimization",
+  "IoT Enabled CNC Monitoring Systems",
+  "Chatter Suppression CNC Projects",
+  "Digital Twin CNC Machining",
+  "Multi Axis CNC Optimization",
+  "Sustainable CNC Machining Projects",
+  "Tool Wear Prediction CNC",
+  "Narpavi Research Institute CNC Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the CNC Machining Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s CNC Machining Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on toolpath optimization, AI-based machining, IoT-enabled CNC monitoring, and sustainable machining for industries like aerospace, automotive, and biomedical."
+    question:
+      "What services does the CNC Machining Optimization Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on AI-based toolpath optimization, IoT-enabled CNC monitoring, digital twins, and sustainable machining."
   },
   {
-    question: "What types of CNC Machining Optimization projects are supported?",
-    answer: "We support B.Tech projects (G-code programming, toolpath simulation), M.Tech projects (AI-based optimization, hybrid machining), and Ph.D. projects (digital twins, smart CNC systems) for precision engineering and smart factories."
+    question: "Who can apply for these projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Manufacturing, and Production Engineering streams."
   },
   {
-    question: "Which tools and technologies are used in CNC Machining Optimization projects?",
-    answer: "Our stack includes SolidWorks CAM, MasterCAM, Siemens NX, MATLAB, Python, ANSYS, AI frameworks (TensorFlow, Keras), IoT platforms, and multi-axis CNC machines for simulations and prototyping."
+    question: "Which tools and technologies are used?",
+    answer:
+      "SolidWorks CAM, MasterCAM, Siemens NX, MATLAB, Python, ANSYS, AI frameworks, IoT platforms, and multi-axis CNC machines."
   },
   {
-    question: "How are CNC Machining Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Manufacturing and Industrial Engineering, focusing on AI-driven toolpath optimization, chatter suppression, and energy-efficient machining."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects align with IEEE Transactions (2023–2025) on Manufacturing and Industrial Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD/CAM modeling, FEM/CFD simulations, AI/IoT integration, prototype fabrication, documentation, and support for IEEE/Scopus/Elsevier/ASME journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, IEEE, ASME, Scopus, Elsevier journal and patent support is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "CNC Machining Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) CNC Machining Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI toolpath optimization, IoT CNC monitoring, digital twins, chatter suppression, and sustainable machining.";
+
+const pageUrl =
+  "/department/manufacturing-production/cnc-machining-optimization";
 
 const MECNCMachiningOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-        <SEO
-        title="CNC Machining Optimization IEEE Projects (2023–2025)"
-        description="CNC Machining Optimization IEEE project development for B.Tech, M.Tech & PhD using AI toolpath optimization, IoT monitoring, chatter suppression, digital twins, hybrid machining for aerospace, automotive, biomedical applications."
-        url="/department/manufacturing-production/cnc-machining-optimization"
-        type="article"
-        keywords={[
-          "CNC Machining Optimization IEEE 2023–2025",
-          "AI CNC Toolpath Optimization",
-          "IoT Enabled CNC Monitoring",
-          "Chatter Suppression CNC Projects",
-          "Digital Twin CNC Machining",
-          "Multi-Axis CNC Optimization",
-          "Sustainable CNC Machining Projects",
-          "Tool Wear Prediction CNC",
-          "Hybrid CNC Additive Manufacturing",
-          "Narpavi Research Institute CNC Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>CNC Machining Optimization IEEE Projects 2023–2025</li>
-              <li>Toolpath Optimization Projects</li>
-              <li>AI-Based CNC Machining Research</li>
-              <li>IoT-Enabled CNC Monitoring</li>
-              <li>Chatter Suppression CNC Projects</li>
-              <li>CNC Machining Sustainability Projects</li>
-              <li>Digital Twin CNC Research</li>
-              <li>Multi-Axis CNC Optimization Student Projects</li>
-              <li>Manufacturing Optimization Ph.D. Projects</li>
-              <li>Narpavi Research Institute CNC Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>CNC Machining Optimization – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the CNC Machining Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on toolpath optimization, AI-driven machining, IoT-enabled CNC systems, and sustainable manufacturing solutions.
               </p>
@@ -241,64 +261,29 @@ const MECNCMachiningOptimizationProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+       </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/manufacturing-production">
-      Manufacturing & Production Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/cnc-machining-optimization">
-      CNC Machining Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/additive-manufacturing">
-      Additive Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/industrial-automation-robotics">
-      Industrial Automation & Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/smart-manufacturing-systems">
-      Smart Manufacturing Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/tool-design-process">
-      Tool Design & Process
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/manufacturing-production">Manufacturing & Production Engineering</a></li>
+              <li><a href="/department/manufacturing-production/cnc-machining-optimization">CNC Machining Optimization</a></li>
+              <li><a href="/department/manufacturing-production/additive-manufacturing">Additive Manufacturing</a></li>
+              <li><a href="/department/manufacturing-production/industrial-automation-robotics">Industrial Automation & Robotics</a></li>
+              <li><a href="/department/manufacturing-production/smart-manufacturing-systems">Smart Manufacturing Systems</a></li>
+              <li><a href="/department/manufacturing-production/tool-design-process">Tool Design & Process</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

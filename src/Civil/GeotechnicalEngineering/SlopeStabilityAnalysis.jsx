@@ -1,77 +1,85 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Slope Stability Analysis IEEE Projects 2023–2025",
+  "Geotechnical Engineering Slope Projects",
+  "IoT Enabled Slope Monitoring",
+  "Machine Learning Landslide Prediction",
+  "PLAXIS FLAC Slope Modeling",
+  "Reinforced Soil Slope Projects",
+  "Sustainable Slope Stabilization",
+  "Civil Engineering B.Tech M.Tech PhD",
+  "Narpavi Research Institute Geotechnical Projects",
+  "Advanced Slope Safety Analysis"
+];
 
 const faqs = [
   {
     question: "What services does the Slope Stability Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Slope Stability Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on slope stability, geotechnical analysis, and IoT-based monitoring."
+    answer:
+      "Narpavi Research Institute’s Slope Stability Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on slope stability, geotechnical analysis, and IoT-based monitoring."
   },
   {
-    question: "What types of Slope Stability Analysis projects are supported?",
-    answer: "We support B.Tech projects (basic slope analysis and testing), M.Tech projects (advanced numerical modeling and reinforcement), and Ph.D. projects (AI-driven failure prediction and sustainable stabilization) for infrastructure safety."
+    question: "What types of projects are supported?",
+    answer:
+      "B.Tech projects on basic slope analysis, M.Tech projects on numerical modeling and reinforcement, and Ph.D. projects on AI-driven failure prediction and sustainable stabilization."
   },
   {
-    question: "Which tools and technologies are used in Slope Stability Analysis projects?",
-    answer: "Our stack includes GeoStudio, GEO5, PLAXIS, FLAC, IoT sensors, and AI frameworks (TensorFlow, Keras) for slope modeling and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "GeoStudio, GEO5, PLAXIS, FLAC, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering, focusing on numerical modeling, geosynthetics, and IoT monitoring."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering focusing on numerical modeling, geosynthetics, and IoT monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, experimental testing, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
 
 const CESlopeStabilityAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Slope Stability Analysis IEEE Projects (2023–2025)"
-        description="Slope Stability Analysis IEEE project development for B.Tech, M.Tech & PhD scholars focusing on PLAXIS/FLAC modeling, IoT monitoring, AI landslide prediction, geosynthetics reinforcement, and sustainable slope stabilization."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Slope Stability Analysis – Project Development Center in Chennai"
+        description="Slope Stability Analysis project development for B.Tech, M.Tech, and Ph.D. students focusing on PLAXIS and FLAC modeling, IoT-based monitoring, AI-driven landslide prediction, reinforced soil slopes, and sustainable slope stabilization."
+        keywords={keywords}
         url="/department/geotechnical-engineering/slope-stability-analysis"
-        type="article"
-        keywords={[
-          "Slope Stability Analysis Projects",
-          "Geotechnical Engineering IEEE Projects",
-          "IoT-Enabled Slope Monitoring",
-          "Machine Learning Landslide Prediction",
-          "PLAXIS FLAC Slope Modeling",
-          "Reinforced Soil Slope Projects",
-          "Sustainable Slope Stabilization",
-          "B.Tech M.Tech PhD Slope Projects",
-          "Narpavi Research Institute Civil Projects",
-          "Advanced Slope Safety Analysis"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Slope Stability Analysis Projects</li>
-              <li>Geotechnical Engineering IEEE Projects</li>
-              <li>B.Tech M.Tech Ph.D. Slope Projects</li>
-              <li>IoT-Enabled Slope Monitoring</li>
-              <li>Machine Learning Landslide Prediction</li>
-              <li>PLAXIS & FLAC Slope Modeling</li>
-              <li>Reinforced Soil Slope Projects</li>
-              <li>Sustainable Slope Stabilization</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-              <li>Advanced Slope Safety Analysis</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Slope Stability Analysis – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Slope Stability Analysis – Project Development Center in Chennai
+            </h1>
+                 <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Slope Stability Analysis Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on slope stability and geotechnical engineering.
               </p>
@@ -235,38 +243,43 @@ const CESlopeStabilityAnalysisProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              
-            </section>
+                </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/geotechnical-engineering">
-      Geotechnical Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
-      Soil Stabilization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/foundation-design">
-      Foundation Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/slope-stability-analysis">
-      Slope Stability Analysis
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/geotechnical-engineering">
+                  Geotechnical Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+                  Soil Stabilization Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/foundation-design">
+                  Foundation Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/slope-stability-analysis">
+                  Slope Stability Analysis
+                </a>
+              </li>
+            </ul>
+            
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

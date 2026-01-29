@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import "./TrendingResearchTopics.scss";
+import Subsidebar from "../pages/Subsidebar";
+import Leftsidebar from "../assets/Leftsidebar";
 
 const faqs = [
   {
@@ -115,51 +117,66 @@ const topicsByDiscipline = [
 
 const TrendingResearchTopics = () => {
   return (
-    <section className="trending-topics">
-      <Helmet>
-        <title>Trending Research Proposal Topics 2025 | Narpavi Research Institute</title>
-        <meta
-          name="description"
-          content="Explore trending PhD research topics in AI, Civil, Mechanical, and more. Align your proposal with industry needs and innovation in 2025."
-        />
-        <meta
-          name="keywords"
-          content="trending research topics 2025, engineering proposal topics, AI PhD ideas, civil engineering research, Narpavi Research Institute"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-      </Helmet>
+    <div className="ieee-page">
+      <Subsidebar />
 
-      <div className="container">
+      {/* LEFT SIDEBAR */}
+      <aside className="left-sidebar2">
+        <ul>
+          <li><a href="/research-proposal-services/how-to-write-research-proposal">How to Write a Research Proposal</a></li>
+          <li><a href="/research-proposal-services/trending-research-topics">Trending Research Topics</a></li>
+          <li><a href="/research-proposal-services/research-proposal-for-funding">Research Proposal for Funding</a></li>
+          <li><a href="/research-proposal-services/engineering-research-proposal-guide">Engineering Research Proposal Guide</a></li>
+        </ul>
+      </aside>
+
+      {/* MAIN CONTENT */}
+      <main className="main-content">
         <h1>Choosing Trending Topics for Your Research Proposal</h1>
         <h2>Align Your Passion with the Future of Engineering</h2>
 
         <p className="intro">
           Selecting the right topic is the first — and often most crucial — step toward writing a successful research proposal.
-          The ideal research topic should not only ignite your curiosity but also reflect the latest trends, industry demands, and
-          global challenges.
+          The ideal research topic should not only ignite your curiosity but also reflect the latest trends, industry demands,
+          and global challenges. Before finalizing your topic, it is recommended to understand the overall
+          {" "}
+          <a
+            href="/research-proposal-services/how-to-write-research-proposal"
+            className="internal-link highlight-link"
+          >
+            research proposal writing process
+          </a>
+          {" "}
+          to ensure alignment with academic and funding expectations.
         </p>
 
         <p className="intro">
           To help you get started, we’ve curated a list of cutting-edge research themes across various engineering disciplines.
           These topics are shaping the future of technology and innovation in 2025 — from AI-powered diagnostics and sustainable
-          infrastructure to space systems and next-gen energy solutions.
+          infrastructure to space systems and next-gen energy solutions. Many of these themes are also well-suited for
+          {" "}
+          <a
+            href="/research-proposal-services/research-proposal-for-funding"
+            className="internal-link highlight-link"
+          >
+            research proposals for funding
+          </a>
+          {" "}
+          due to their strong societal and industrial relevance.
         </p>
 
         <p className="intro">
           Explore the table below to find inspiration that fits your field, and begin crafting a proposal that matters.
+          For discipline-specific structuring and technical depth, you may also refer to our
+          {" "}
+          <a
+            href="/research-proposal-services/engineering-research-proposal-guide"
+            className="internal-link highlight-link"
+          >
+            Engineering Research Proposal Guide
+          </a>
+          {" "}
+          before moving ahead.
         </p>
 
         <div className="topics-table">
@@ -168,7 +185,7 @@ const TrendingResearchTopics = () => {
               <h3>{discipline.title}</h3>
               <ul>
                 {discipline.topics.map((topic, i) => (
-                  <li key={i}>– {topic}</li>
+                  <li key={i}> {topic}</li>
                 ))}
               </ul>
             </div>
@@ -178,13 +195,14 @@ const TrendingResearchTopics = () => {
         <div className="closing-note">
           <h3>Conclusion: Start with the Right Topic, Shape the Future</h3>
           <p>
-            Choosing the right research topic is more than a starting point — it’s the foundation for impactful innovation. The trends
-            listed above are not just academic interests; they represent the direction in which industries, technologies, and societies are evolving.
+            Choosing the right research topic is more than a starting point — it’s the foundation for impactful innovation.
+            The trends listed above are not just academic interests; they represent the direction in which industries,
+            technologies, and societies are evolving.
           </p>
           <p>
-            At Narpavi Research Institute, we’re here to help you align your research passion with the most relevant, high-impact areas of engineering.
-            Whether you’re preparing for a funding proposal, academic thesis, or collaborative project, we offer the insights and support you need
-            to choose a topic that resonates — and leads.
+            At Narpavi Research Institute, we’re here to help you align your research passion with the most relevant,
+            high-impact areas of engineering. Whether you’re preparing for a funding proposal, academic thesis,
+            or collaborative project, we offer the insights and support you need to choose a topic that resonates — and leads.
           </p>
           <p className="connect">
             🔧 The future is being engineered right now — let your research lead the way.
@@ -204,8 +222,22 @@ const TrendingResearchTopics = () => {
             ))}
           </div>
         </section>
-      </div>
-    </section>
+      </main>
+
+      {/* RIGHT SIDEBAR */}
+      <aside className="right-sidebar1">
+       <Leftsidebar/>
+
+        <h3>Keywords</h3>
+        <ul>
+          <li>Research Proposal Topics 2025</li>
+          <li>Trending Engineering Ideas</li>
+          <li>AI Research PhD Topics</li>
+          <li>Civil Engineering Project Ideas</li>
+          <li>Narpavi Research Institute</li>
+        </ul>
+      </aside>
+    </div>
   );
 };
 

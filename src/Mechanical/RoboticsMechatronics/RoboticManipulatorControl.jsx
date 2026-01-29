@@ -1,76 +1,100 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Robotic Manipulator Control Project Development Center in Chennai",
+  "Robotic Manipulator IEEE Projects 2023–2025",
+  "AI Driven Robotic Arm Projects",
+  "IoT Enabled Robotic Manipulators",
+  "Multi DOF Robotic Control",
+  "Industrial Robotic Arm IEEE Projects",
+  "Machine Vision Robotic Manipulators",
+  "Reinforcement Learning Robotic Arm",
+  "Collaborative Robotic Manipulators",
+  "Narpavi Research Institute Robotics Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Robotic Manipulator Control Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Robotic Manipulator Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven robotic arms, IoT-enabled manipulators, machine vision, and collaborative robotics for industries like manufacturing, healthcare, and aerospace."
+    question:
+      "What services does the Robotic Manipulator Control Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Robotic Manipulator Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven robotic arms, IoT-enabled manipulators, machine vision, and collaborative robotics for manufacturing, healthcare, and aerospace industries."
   },
   {
-    question: "What types of Robotic Manipulator Control projects are supported?",
-    answer: "We support B.Tech projects (basic robotic arm control, kinematics), M.Tech projects (AI-driven control, IoT integration), and Ph.D. projects (multi-arm coordination, digital twins) for applications in industrial automation and collaborative robotics."
+    question:
+      "What types of Robotic Manipulator Control projects are supported?",
+    answer:
+      "We support B.Tech projects in basic robotic arm control and kinematics, M.Tech projects in AI-driven control and IoT integration, and Ph.D. research in multi-arm coordination and digital twin-based robotic systems."
   },
   {
-    question: "Which tools and technologies are used in Robotic Manipulator Control projects?",
-    answer: "Our stack includes MATLAB, Simulink, ROS, Gazebo, Python, AI frameworks (TensorFlow, Keras), Arduino, Raspberry Pi, and IoT platforms for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Robotic Manipulator Control projects?",
+    answer:
+      "MATLAB, Simulink, ROS, Gazebo, Python, TensorFlow, Keras, Arduino, Raspberry Pi, and IoT platforms for simulation, prototyping, and real-time robotic control."
   },
   {
-    question: "How are Robotic Manipulator Control projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics and Automation, focusing on AI-driven manipulator control, IoT integration, and collaborative robotic systems."
+    question:
+      "How are Robotic Manipulator Control projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Robotics and Automation, focusing on AI-driven manipulator control, IoT integration, and collaborative robotic systems."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, IEEE documentation, and Scopus/SCI/Elsevier publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Robotic Manipulator Control – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Robotic Manipulator Control Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-driven robotic arms, IoT-enabled manipulators, machine vision, collaborative robotics, and digital twin systems.";
+
+const pageUrl =
+  "/department/robotics-mechatronics/robotic-manipulator-control";
 
 const MERoboticManipulatorControlProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Robotic Manipulator Control IEEE Projects (2023–2025)"
-        description="Robotic Manipulator Control IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI-driven robotic arms, IoT manipulators, machine vision, collaborative robotics for manufacturing, healthcare, aerospace."
-        url="/department/robotics-mechatronics/robotic-manipulator-control"
-        type="article"
-        keywords={[
-          "Robotic Manipulator IEEE 2023–2025",
-          "AI Driven Robotic Arm Projects",
-          "IoT Enabled Manipulators",
-          "Multi DOF Robotic Control",
-          "Industrial Robotic Arm IEEE",
-          "Machine Vision Manipulator",
-          "Reinforcement Learning Robotic Arm",
-          "Collaborative Robotic Manipulators",
-          "Digital Twin Robotic Control",
-          "Narpavi Research Institute Robotics"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Robotic Manipulator IEEE Projects 2023–2025</li>
-              <li>AI-Driven Robotic Arm Projects</li>
-              <li>IoT-Enabled Manipulators</li>
-              <li>Multi-DOF Robotic Control</li>
-              <li>Industrial Robotic Arm IEEE Projects</li>
-              <li>Machine Vision Manipulator Projects</li>
-              <li>Reinforcement Learning Robotic Arm</li>
-              <li>Collaborative Robotic Manipulator Systems</li>
-              <li>Ph.D. Manipulator Research Projects</li>
-              <li>Narpavi Research Institute Robotics Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Robotic Manipulator Control – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Robotic Manipulator Control Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on AI-driven robotic arms, IoT-enabled manipulators, machine vision, and collaborative robotics.
               </p>
@@ -242,64 +266,32 @@ const MERoboticManipulatorControlProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/robotics-mechatronics">
-      Robotics & Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
-      Industrial Robotics Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
-      IoT-Based Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
-      Autonomous Vehicles & Drones
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
-      Robotic Manipulator Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/embedded-control-systems">
-      Embedded Control Systems
-    </a>
-  </li>
-</ul>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
 
-          </div>
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/robotics-mechatronics">Robotics & Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/industrial-robotics-systems">Industrial Robotics Systems</a></li>
+              <li><a href="/department/robotics-mechatronics/iot-based-mechatronics">IoT-Based Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/autonomous-vehicles-drones">Autonomous Vehicles & Drones</a></li>
+              <li><a href="/department/robotics-mechatronics/robotic-manipulator-control">Robotic Manipulator Control</a></li>
+              <li><a href="/department/robotics-mechatronics/embedded-control-systems">Embedded Control Systems</a></li>
+            </ul>
+
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

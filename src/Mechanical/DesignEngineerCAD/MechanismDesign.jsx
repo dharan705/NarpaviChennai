@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Mechanism Design & Kinematics Project Development Center in Chennai",
+  "Mechanism Design IEEE Projects 2023–2025",
+  "Kinematics Project Topics IEEE",
+  "Robotic Arm Kinematics Projects",
+  "Compliant Mechanism Design",
+  "Inverse Kinematics IEEE Projects",
+  "Digital Twin Mechanism Modeling",
+  "Bio Inspired Mechanism Projects",
+  "Multi DOF Kinematics Simulation",
+  "Narpavi Research Institute Mechanism Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Mechanism Design & Kinematics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Mechanism Design & Kinematics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on robotic kinematics, compliant mechanisms, AI-driven design, and digital twin-based motion analysis for industries like automotive, aerospace, and biomedical."
+    question:
+      "What services does the Mechanism Design & Kinematics Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Mechanism Design & Kinematics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on robotic kinematics, compliant mechanisms, AI-driven design, and digital twin-based motion analysis."
   },
   {
     question: "What types of Mechanism Design & Kinematics projects are supported?",
-    answer: "We support B.Tech projects (basic linkages, gear trains), M.Tech projects (robotic arm kinematics, optimization), and Ph.D. projects (AI-driven mechanism synthesis, digital twins) for applications in robotics, manufacturing, and biomedical devices."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering linkages, robotic arms, inverse kinematics, compliant mechanisms, and digital twin-based simulations."
   },
   {
-    question: "Which tools and technologies are used in Mechanism Design & Kinematics projects?",
-    answer: "Our stack includes SolidWorks, CATIA, Fusion 360, ANSYS, MATLAB, Python, AI frameworks (TensorFlow, Keras), and IoT platforms for mechanism design, simulation, and prototyping."
+    question: "Which tools and technologies are used?",
+    answer:
+      "SolidWorks, CATIA, Fusion 360, ANSYS, MATLAB, Python, TensorFlow, Keras, and IoT platforms."
   },
   {
-    question: "How are Mechanism Design & Kinematics projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics and Industrial Engineering, focusing on AI-driven kinematics, compliant mechanisms, and digital twin-enabled motion analysis."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Robotics and Industrial Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD modeling, kinematic simulation, AI integration, prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including CAD modeling, kinematic simulation, AI integration, documentation, and IEEE/Scopus/Elsevier publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Mechanism Design & Kinematics – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Mechanism Design & Kinematics Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering robotic kinematics, compliant mechanisms, AI-driven design, and digital twin-based motion analysis.";
+
+const pageUrl =
+  "/department/design-engineering-cad/mechanism-design";
 
 const MEMechanismDesignKinematicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Mechanism Design & Kinematics IEEE Projects (2023–2025)"
-        description="Mechanism Design Kinematics IEEE project development for B.Tech, M.Tech & PhD using SolidWorks, CATIA, MATLAB, AI-driven kinematics, compliant mechanisms, digital twins, robotic arm analysis for automotive, aerospace, biomedical."
-        url="/department/design-engineering-cad/mechanism-design"
-        type="article"
-        keywords={[
-          "Mechanism Design 2023–2025",
-          "IEEE Kinematics Projects",
-          "Robotic Arm Kinematics",
-          "Compliant Mechanism Design",
-          "Inverse Kinematics IEEE",
-          "Digital Twin Mechanism",
-          "Bio Inspired Mechanisms",
-          "Multi DOF Kinematics Projects",
-          "CAD Mechanism Simulation",
-          "Narpavi Research Institute Mechanisms"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Mechanism Design Projects 2023–2025</li>
-              <li>IEEE Kinematics Project Topics</li>
-              <li>Robotic Arm Kinematic Analysis Projects</li>
-              <li>CAD-Based Mechanism Simulation</li>
-              <li>Compliant Mechanism Design Projects</li>
-              <li>Inverse Kinematics IEEE Projects</li>
-              <li>Digital Twin Mechanism Modeling</li>
-              <li>Bio-Inspired Mechanism IEEE Projects</li>
-              <li>Multi-DOF Kinematic Projects</li>
-              <li>Narpavi Research Institute Mechanism Design Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Mechanism Design & Kinematics – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Mechanism Design & Kinematics Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on robotic kinematics, compliant mechanisms, AI-driven design, and digital twin-based motion analysis.
               </p>
@@ -245,43 +265,26 @@ const MEMechanismDesignKinematicsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/design-engineering-cad">
-      Design Engineering & CAD
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/finite-element-analysis">
-      Finite Element Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/cad-modeling-simulation">
-      CAD Modeling & Simulation
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/mechanism-design">
-      Mechanism Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/topology-optimization">
-      Topology Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/product-lifecycle-management">
-      Product Lifecycle Management
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/design-engineering-cad">Design Engineering & CAD</a></li>
+              <li><a href="/department/design-engineering-cad/finite-element-analysis">Finite Element Analysis</a></li>
+              <li><a href="/department/design-engineering-cad/cad-modeling-simulation">CAD Modeling & Simulation</a></li>
+              <li><a href="/department/design-engineering-cad/mechanism-design">Mechanism Design</a></li>
+              <li><a href="/department/design-engineering-cad/topology-optimization">Topology Optimization</a></li>
+              <li><a href="/department/design-engineering-cad/product-lifecycle-management">Product Lifecycle Management</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

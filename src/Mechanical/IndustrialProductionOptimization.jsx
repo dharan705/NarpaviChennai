@@ -1,65 +1,85 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS AS ARRAY (USED IN SEO + PAGE) */
+const keywords = [
+  "Industrial Optimization Projects",
+  "Lean Manufacturing IEEE Projects",
+  "Smart Factory Industry 4.0 Projects",
+  "Supply Chain AI Projects",
+  "IoT-Based Industrial Safety",
+  "Cost Optimization in Manufacturing",
+  "B.Tech Industrial Projects",
+  "M.Tech Production Optimization Projects",
+  "Ph.D. Smart Factory Projects",
+  "Narpavi Research Institute Industrial Projects",
+];
 
 const faqs = [
   {
-    question: "What services does the Industrial & Production Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute's Industrial & Production Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on lean manufacturing, supply chain optimization, smart factories, IoT-based safety systems, and cost-time optimization for automotive, electronics, and industrial applications."
+    question:
+      "What services does the Industrial & Production Optimization Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute's Industrial & Production Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on lean manufacturing, supply chain optimization, smart factories, IoT-based safety systems, and cost-time optimization for automotive, electronics, and industrial applications.",
   },
   {
-    question: "What types of Industrial & Production Optimization projects are supported?",
-    answer: "We support B.Tech projects (lean manufacturing, IoT monitoring), M.Tech projects (AI-driven supply chain, scheduling algorithms), and Ph.D. projects (digital twins, blockchain-enabled supply chains) for applications in smart factories, automotive, and logistics."
+    question:
+      "What types of Industrial & Production Optimization projects are supported?",
+    answer:
+      "We support B.Tech projects (lean manufacturing, IoT monitoring), M.Tech projects (AI-driven supply chain, scheduling algorithms), and Ph.D. projects (digital twins, blockchain-enabled supply chains) for applications in smart factories, automotive, and logistics.",
   },
   {
-    question: "Which tools and technologies are used in Industrial & Production Optimization projects?",
-    answer: "Our stack includes MATLAB, ARENA, Python, Arduino, Raspberry Pi, ERP systems, and digital twin platforms for simulation, hardware integration, and optimization."
+    question:
+      "Which tools and technologies are used in Industrial & Production Optimization projects?",
+    answer:
+      "Our stack includes MATLAB, ARENA, Python, Arduino, Raspberry Pi, ERP systems, and digital twin platforms for simulation, hardware integration, and optimization.",
   },
   {
-    question: "How are Industrial & Production Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics, Automation, and Systems Engineering, focusing on AI, IoT, digital twins, and blockchain, aligned with IEEE standards."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics, Automation, and Systems Engineering, focusing on AI, IoT, digital twins, and blockchain.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
-  }
-]; 
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents.",
+  },
+];
 
 const MEIndustrialProductionOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-      <SEO 
-        title="Industrial Optimization IEEE Projects | Smart Factory | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023-2025) Industrial & Production Optimization projects. Lean manufacturing, AI supply chain, IoT safety, digital twins for automotive, electronics, smart factories."
-        keywords="Industrial Optimization Projects, Lean Manufacturing IEEE Projects, Smart Factory Industry 4.0 Projects, Supply Chain AI Projects, IoT-Based Industrial Safety, Cost Optimization in Manufacturing, B.Tech Industrial Projects, M.Tech Production Optimization Projects, Ph.D. Smart Factory Projects, Narpavi Research Institute Industrial Projects"
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Industrial & Production Optimization – Project Development Center in Chennai"
+        description="Industrial & Production Optimization project development for B.Tech, M.Tech, and Ph.D. students focusing on lean manufacturing, smart factories, AI-driven supply chain optimization, IoT-based industrial safety, and Industry 4.0 systems."
+        keywords={keywords}
         url="/department/industrial-production-optimization"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial Optimization Projects</li>
-              <li>Lean Manufacturing IEEE Projects</li>
-              <li>Smart Factory Industry 4.0 Projects</li>
-              <li>Supply Chain AI Projects</li>
-              <li>IoT-Based Industrial Safety</li>
-              <li>Cost Optimization in Manufacturing</li>
-              <li>B.Tech Industrial Projects</li>
-              <li>M.Tech Production Optimization Projects</li>
-              <li>Ph.D. Smart Factory Projects</li>
-              <li>Narpavi Research Institute Industrial Projects</li>
-            </ul>
-          </div>
+          
+          {/* ✅ LEFT SIDEBAR (CLASSNAME FIXED) */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/> 
+           </aside>
 
-          {/* Center: Main Content */}
+          {/* CENTER CONTENT (UNCHANGED EXCEPT H1 FORMAT) */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Industrial & Production Optimization – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            <h1>
+              Industrial & Production Optimization – Project Development Center in Chennai
+            </h1>
+                <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Industrial & Production Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on lean manufacturing, supply chain optimization, smart factories, IoT-based safety systems, and cost-time optimization.
               </p>
@@ -212,43 +232,43 @@ const MEIndustrialProductionOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR (CLASSNAME FIXED) */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/industrial-production-optimization">
-      Industrial Production Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/lean-manufacturing">
-      Lean Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/supply-chain-process">
-      Supply Chain Process Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
-      Industrial Safety & Ergonomics
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/smart-factory-systems">
-      Smart Factory Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/cost-time-optimization">
-      Cost & Time Optimization
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/industrial-production-optimization">
+                  Industrial Production Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/industrial-production-optimization/lean-manufacturing">
+                  Lean Manufacturing
+                </a>
+              </li>
+              <li>
+                <a href="/department/industrial-production-optimization/supply-chain-process">
+                  Supply Chain Process Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
+                  Industrial Safety & Ergonomics
+                </a>
+              </li>
+              <li>
+                <a href="/department/industrial-production-optimization/smart-factory-systems">
+                  Smart Factory Systems
+                </a>
+              </li>
+              <li>
+                <a href="/department/industrial-production-optimization/cost-time-optimization">
+                  Cost & Time Optimization
+                </a>
+              </li>
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

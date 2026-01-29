@@ -1,78 +1,86 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Soil Stabilization Techniques IEEE Projects 2023–2025",
+  "Cement and Lime Soil Stabilization",
+  "Nano Materials Soil Improvement",
+  "IoT Based Soil Monitoring",
+  "Geotextile and Geogrid Reinforcement",
+  "Fly Ash Soil Stabilization Projects",
+  "Civil Engineering B.Tech M.Tech PhD",
+  "Geotechnical Engineering Projects",
+  "Narpavi Research Institute Civil Projects",
+  "Sustainable Infrastructure Soil Stabilization"
+];
 
 const faqs = [
   {
     question: "What services does the Soil Stabilization Techniques Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Soil Stabilization Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on soil improvement, geotechnical analysis, and IoT-based monitoring."
+    answer:
+      "Narpavi Research Institute’s Soil Stabilization Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on soil improvement, geotechnical analysis, and IoT-based monitoring."
   },
   {
-    question: "What types of Soil Stabilization Techniques projects are supported?",
-    answer: "We support B.Tech projects (basic stabilization and testing), M.Tech projects (advanced chemical and mechanical stabilization), and Ph.D. projects (AI-driven prediction and sustainable materials) for infrastructure applications."
+    question: "What types of projects are supported?",
+    answer:
+      "B.Tech projects on basic stabilization and testing, M.Tech projects on advanced chemical and mechanical stabilization, and Ph.D. projects on AI-driven prediction and sustainable materials."
   },
   {
-    question: "Which tools and technologies are used in Soil Stabilization Techniques projects?",
-    answer: "Our stack includes PLAXIS, GEO5, ANSYS, IoT sensors, and AI frameworks (TensorFlow, Keras) for soil analysis and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "PLAXIS, GEO5, ANSYS, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering, focusing on chemical stabilization, nano-materials, and IoT monitoring."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering focusing on chemical stabilization, nano-materials, and IoT monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, laboratory testing, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, laboratory testing, documentation, and IEEE/Scopus/SCI publication assistance."
   }
 ];
 
 const CESoilStabilizationTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Soil Stabilization Techniques IEEE Projects (2023–2025)"
-        description="Soil Stabilization Techniques IEEE project development for B.Tech, M.Tech & PhD scholars focusing on lime/cement stabilization, nano-materials, geotextiles, fly ash applications, PLAXIS modeling, and IoT soil monitoring."
+        title="Soil Stabilization Techniques – Project Development Center in Chennai"
+        description="Soil Stabilization Techniques project development for B.Tech, M.Tech, and Ph.D. students focusing on lime and cement stabilization, nano-materials, geotextiles, fly ash applications, PLAXIS modeling, AI prediction, and IoT-based soil monitoring."
+        keywords={keywords}
         url="/department/geotechnical-engineering/soil-stabilization-techniques"
-        type="article"
-        keywords={[
-          "Soil Stabilization Techniques Projects",
-          "Cement Lime Soil Stabilization IEEE 2023–2025",
-          "Nano-materials Soil Stabilization",
-          "IoT Soil Monitoring Projects",
-          "Geotextile Geogrid Reinforcement",
-          "Fly Ash Soil Improvement Projects",
-          "B.Tech M.Tech PhD Soil Projects",
-          "Narpavi Research Institute Geotechnical Projects",
-          "Sustainable Infrastructure Projects",
-          "Advanced Soil Stabilization Research"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Soil Stabilization Techniques Projects</li>
-              <li>B.Tech M.Tech Ph.D. soil improvement projects</li>
-              <li>Nano-materials soil stabilization research</li>
-              <li>Cement and lime soil stabilization projects IEEE 2023–2025</li>
-              <li>IoT soil monitoring projects</li>
-              <li>Geotextile and geogrid soil reinforcement</li>
-              <li>Sustainable infrastructure projects</li>
-              <li>Soil strength and compaction optimization</li>
-              <li>Narpavi Research Institute Geotechnical Projects</li>
-              <li>Advanced soil stabilization research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Soil Stabilization Techniques – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Soil Stabilization Techniques – Project Development Center in Chennai
+            </h1>
+               <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Soil Stabilization Techniques Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on soil improvement and geotechnical engineering.
               </p>
@@ -237,35 +245,42 @@ const CESoilStabilizationTechniquesProjectDevelopmentCenter = () => {
                 ))}
               </div>
             </section>
+
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/geotechnical-engineering">
-      Geotechnical Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
-      Soil Stabilization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/foundation-design">
-      Foundation Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/slope-stability-analysis">
-      Slope Stability Analysis
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/geotechnical-engineering">
+                  Geotechnical Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+                  Soil Stabilization Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/foundation-design">
+                  Foundation Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/slope-stability-analysis">
+                  Slope Stability Analysis
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

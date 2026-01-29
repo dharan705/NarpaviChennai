@@ -1,61 +1,83 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the Energy-Efficient Embedded Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Energy-Efficient Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in low-power microcontrollers, energy-harvesting systems, and AI-driven power management for IoT, healthcare, and smart manufacturing."
+    question:
+      "What services does the Energy-Efficient Embedded Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Energy-Efficient Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in low-power microcontrollers, energy-harvesting systems, and AI-driven power management for IoT, healthcare, and smart manufacturing.",
   },
   {
-    question: "What types of Energy-Efficient Embedded Systems projects are supported?",
-    answer: "We support B.Tech projects (solar-powered IoT, low-power sensor networks), M.Tech projects (DVFS-integrated processors, FPGA-based energy optimization), and Ph.D. projects (neuromorphic low-power architectures, 6G IoT energy management) for applications in smart cities, robotics, and environmental monitoring."
+    question:
+      "What types of Energy-Efficient Embedded Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (solar-powered IoT, low-power sensor networks), M.Tech projects (DVFS-integrated processors, FPGA-based energy optimization), and Ph.D. projects (neuromorphic low-power architectures, 6G IoT energy management) for applications in smart cities, robotics, and environmental monitoring.",
   },
   {
-    question: "Which technologies are used in Energy-Efficient Embedded Systems project development?",
-    answer: "Our stack includes ARM Cortex-M, RISC-V, Xilinx Vivado, STM32, FreeRTOS, energy-harvesting modules, and AI-driven power management frameworks for low-power embedded solutions."
+    question:
+      "Which technologies are used in Energy-Efficient Embedded Systems project development?",
+    answer:
+      "Our stack includes ARM Cortex-M, RISC-V, Xilinx Vivado, STM32, FreeRTOS, energy-harvesting modules, and AI-driven power management frameworks for low-power embedded solutions.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like DVFS, energy-harvesting systems, and neuromorphic architectures, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like DVFS, energy-harvesting systems, and neuromorphic architectures, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware prototyping, software optimization, validation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, hardware prototyping, software optimization, validation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Energy-Efficient Embedded Systems",
+  "Low Power Embedded Projects",
+  "IoT Energy Optimization",
+  "IEEE Embedded Systems Projects 2023–2025",
+  "Energy Harvesting Devices",
+  "DVFS Embedded Platforms",
+  "Neuromorphic Low-Power Architectures",
+  "Narpavi Research Institute",
 ];
 
 const ECEEnergyEfficientEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Energy-Efficient Embedded Systems IEEE Projects | DVFS, Energy Harvesting, AI Power Management | B.Tech M.Tech Ph.D."
+        title="Energy-Efficient Embedded Systems – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) energy-efficient embedded systems projects on DVFS, low-power ARM/RISC-V microcontrollers, energy-harvesting WSNs, FPGA-based optimization, neuromorphic designs, and AI-driven power management for IoT, healthcare, robotics, and smart manufacturing."
-        keywords="Energy-Efficient Embedded Systems, Low Power Embedded Projects, IoT Energy Optimization, IEEE Embedded Systems Projects 2023–2025, Energy Harvesting Devices, DVFS Embedded Platforms, Neuromorphic Low-Power Architectures, Narpavi Research Institute"
-        url="/department/embedded-systems/energy-efficient-embedded"
+        keywords={keywords}
+        url="/department/embedded-systems/energy-efficient-embedded-system-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy-Efficient Embedded Systems</li>
-              <li>Low Power Embedded Projects</li>
-              <li>IoT Energy Optimization</li>
-              <li>IEEE Embedded Systems Projects 2023–2025</li>
-              <li>Energy Harvesting Devices</li>
-              <li>DVFS Embedded Platforms</li>
-              <li>Neuromorphic Low-Power Architectures</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Energy-Efficient Embedded Systems – Project Development Support</h1>
-
+            <h1>Energy-Efficient Embedded Systems - Project Development Center in Chennai</h1>
+              
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Energy-Efficient Embedded Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in low-power microcontrollers, energy-harvesting systems, and AI-driven power management for IoT, healthcare, and smart manufacturing.
@@ -208,40 +230,29 @@ const ECEEnergyEfficientEmbeddedSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+              </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
-  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
-  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
-  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
-  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+              <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+              <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+              <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+              <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

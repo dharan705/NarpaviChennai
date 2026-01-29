@@ -1,63 +1,95 @@
 import "../../EEE/EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "IoT for Smart Grids Project Development Center in Chennai",
+  "IoT Smart Grid IEEE Projects 2023–2025",
+  "Smart Grid Monitoring using IoT",
+  "AI-driven Smart Grid Optimization",
+  "Blockchain Smart Grid Security",
+  "IoT Energy Management Systems",
+  "IoT Demand Side Management",
+  "B.Tech IoT Smart Grid Projects",
+  "M.Tech Cloud Smart Grid Projects",
+  "Ph.D Smart Grid Research with IoT",
+  "Smart City Energy Management",
+  "Narpavi Research Institute Smart Grid Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the IoT for Smart Grids Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT for Smart Grids Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based smart grid monitoring, AI-driven optimization, and secure energy management for efficient power distribution."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based smart grid monitoring, AI-driven optimization, and secure energy management."
   },
   {
     question: "What types of IoT for Smart Grids projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-based smart metering), M.Tech projects (cloud-integrated load balancing), and Ph.D. projects (blockchain and AI-driven grid architectures) for applications in smart homes, utilities, and smart cities."
+    answer:
+      "B.Tech projects focus on smart metering, M.Tech projects on cloud-based load balancing, and Ph.D. projects on blockchain and AI-driven smart grid architectures."
   },
   {
-    question: "Which technologies are used in IoT for Smart Grids projects?",
-    answer: "Our stack includes Arduino/Raspberry Pi, NodeMCU, STM32, Wi-Fi/Zigbee/LoRaWAN, cloud platforms (AWS, Azure IoT Hub, ThingsBoard), MATLAB/Simulink, and blockchain for secure transactions."
+    question: "Which technologies are used?",
+    answer:
+      "Arduino, Raspberry Pi, NodeMCU, STM32, Wi-Fi, Zigbee, LoRaWAN, AWS, Azure IoT Hub, ThingsBoard, MATLAB/Simulink, and blockchain."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Smart Grid and Sustainable Energy, focusing on IoT integration, AI-driven forecasting, and secure grid architectures."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Smart Grid and Sustainable Energy focusing on IoT integration, AI forecasting, and secure grid architectures."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT for Smart Grids – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT for Smart Grids Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering real-time monitoring, AI optimization, cloud analytics, blockchain security, and smart city energy management.";
+
+const pageUrl = "/department/iot-electrical-systems/smart-grids";
 
 const EEEIoTSmartGridsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT Smart Grids IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT for Smart Grids projects for B.Tech, M.Tech, Ph.D. Real-time monitoring, AI optimization, energy management using Arduino Raspberry Pi NodeMCU STM32 Wi-Fi Zigbee LoRaWAN, AWS Azure ThingsBoard MATLAB Simulink blockchain."
-  keywords="IoT Smart Grids IEEE Projects 2023–2025, B.Tech IoT Smart Metering, M.Tech Cloud Load Balancing, Ph.D. Blockchain AI Grid Architecture, Smart City Energy Management, Narpavi Research Institute"
-  url="/department/iot-electrical-systems/smart-grids"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT for Smart Grids</li>
-              <li>IoT Smart Grid Projects</li>
-              <li>Smart Grid with IoT IEEE 2023–2025</li>
-              <li>IoT-based Energy Management</li>
-              <li>IoT Renewable Energy Smart Grid</li>
-              <li>IoT Demand Side Management</li>
-              <li>IoT in EEE Projects</li>
-              <li>Narpavi Research Institute IoT Smart Grid</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>IoT for Smart Grids – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT for Smart Grids Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on IoT-enabled smart grid solutions. Our projects focus on real-time monitoring, efficient energy distribution, and AI-driven decision-making for reliable and optimized power flow.
               </p>
@@ -213,48 +245,26 @@ const EEEIoTSmartGridsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/iot-electrical-systems">
-      IoT in Electrical Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-grids">
-      IoT for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/renewable-energy">
-      IoT in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/predictive-maintenance">
-      IoT for Predictive Maintenance
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-home-automation">
-      Smart Home Automation with IoT
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-meters">
-      IoT-Enabled Smart Meters
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/health-monitoring">
-      IoT-Based Health Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/iot-electrical-systems">IoT in Electrical Systems</a></li>
+              <li><a href="/department/iot-electrical-systems/renewable-energy">IoT in Renewable Energy</a></li>
+              <li><a href="/department/iot-electrical-systems/predictive-maintenance">IoT for Predictive Maintenance</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-home-automation">Smart Home Automation with IoT</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-meters">IoT-Enabled Smart Meters</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">IoT-Based Health Monitoring</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

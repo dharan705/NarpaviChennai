@@ -1,78 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEo from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Lean Manufacturing Techniques Project Development Center in Chennai",
+  "Lean Manufacturing IEEE Projects 2023–2025",
+  "Kaizen Project Development",
+  "Just In Time JIT Student Projects",
+  "Six Sigma Lean Projects",
+  "IoT Enabled Lean Manufacturing",
+  "AI Driven Lean Optimization",
+  "Digital Twin Lean Manufacturing",
+  "Lean Smart Factory Projects",
+  "Narpavi Research Institute Lean Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Lean Manufacturing Techniques Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Lean Manufacturing Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on lean principles, including Kaizen, Just-in-Time, Six Sigma, IoT-based lean monitoring, AI-driven optimization, and digital twins for automotive, aerospace, healthcare, and electronics applications."
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on Kaizen, JIT, Six Sigma, IoT-based lean monitoring, AI-driven optimization, and digital twins."
   },
   {
-    question: "What types of Lean Manufacturing projects are supported?",
-    answer: "We support B.Tech projects (Kaizen, JIT, VSM basics), M.Tech projects (Lean Six Sigma, IoT integration), and Ph.D. projects (AI-driven lean systems, blockchain-enabled supply chains) for applications in smart factories, logistics, and healthcare."
+    question: "Which students can apply?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students across industrial, production, and manufacturing domains."
   },
   {
-    question: "Which tools and technologies are used in Lean Manufacturing projects?",
-    answer: "Our stack includes MATLAB, ARENA, FlexSim, Python, Arduino, Raspberry Pi, ERP systems, and digital twin platforms for simulation, IoT integration, and lean optimization."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB, ARENA, FlexSim, Python, Arduino, Raspberry Pi, ERP systems, and digital twin platforms."
   },
   {
-    question: "How are Lean Manufacturing projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics, Automation, and Systems Engineering, focusing on Lean 4.0, AI, IoT, and blockchain, aligned with IEEE standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects align with IEEE Transactions (2023–2025) and Lean 4.0 standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support available?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier journal and patent support is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Lean Manufacturing Techniques – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Lean Manufacturing Techniques Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering Kaizen, JIT, Six Sigma, IoT-enabled lean systems, AI optimization, and digital twins.";
+
+const pageUrl =
+  "/department/industrial-production-optimization/lean-manufacturing";
 
 const MELeanManufacturingTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Lean Manufacturing Techniques IEEE Projects (2023–2025)"
-        description="Lean Manufacturing IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ARENA, Kaizen, JIT, Six Sigma, IoT monitoring, AI optimization, digital twins for automotive, aerospace, healthcare, electronics."
-        url="/department/industrial-production-optimization/lean-manufacturing"
-        type="article"
-        keywords={[
-          "Lean Manufacturing IEEE Projects",
-          "Kaizen Project Development",
-          "Just in Time Academic Projects",
-          "Six Sigma Student Projects",
-          "IoT Enabled Lean Optimization",
-          "Lean Smart Factory IEEE Projects",
-          "Digital Twin Lean Projects",
-          "B.Tech Lean Manufacturing Projects",
-          "M.Tech Lean Optimization",
-          "Narpavi Research Institute Lean Guidance"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
-      
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Lean Manufacturing IEEE Projects</li>
-              <li>Kaizen Project Development</li>
-              <li>Just-in-Time Academic Projects</li>
-              <li>Six Sigma Student Projects</li>
-              <li>IoT-Enabled Lean Optimization</li>
-              <li>Lean Smart Factory IEEE Projects</li>
-              <li>Digital Twin Lean Projects</li>
-              <li>B.Tech Lean Manufacturing Projects</li>
-              <li>M.Tech Lean Optimization</li>
-              <li>Ph.D. Lean Systems Research</li>
-              <li>Narpavi Research Institute Lean Guidance</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Lean Manufacturing Techniques – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Lean Manufacturing Techniques Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on lean principles, including Kaizen, Just-in-Time, Six Sigma, IoT-based monitoring, AI-driven optimization, and digital twins.
               </p>
@@ -269,43 +286,26 @@ const MELeanManufacturingTechniquesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/industrial-production-optimization">
-      Industrial Production Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/lean-manufacturing">
-      Lean Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/supply-chain-process">
-      Supply Chain Process Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
-      Industrial Safety & Ergonomics
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/smart-factory-systems">
-      Smart Factory Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/cost-time-optimization">
-      Cost & Time Optimization
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/industrial-production-optimization">Industrial Production Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/lean-manufacturing">Lean Manufacturing</a></li>
+              <li><a href="/department/industrial-production-optimization/supply-chain-process">Supply Chain Process Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/industrial-safety-ergonomics">Industrial Safety & Ergonomics</a></li>
+              <li><a href="/department/industrial-production-optimization/smart-factory-systems">Smart Factory Systems</a></li>
+              <li><a href="/department/industrial-production-optimization/cost-time-optimization">Cost & Time Optimization</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

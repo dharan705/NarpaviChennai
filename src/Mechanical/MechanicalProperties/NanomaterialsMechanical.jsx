@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Nanomaterials in Mechanical Systems Project Development Center in Chennai",
+  "IEEE Nanomaterials Projects 2023–2025",
+  "Graphene Nanocomposites Research",
+  "Carbon Nanotube Mechanical Applications",
+  "Nano Lubricants Mechanical Systems",
+  "Nanocoatings for Biomedical Implants",
+  "B.Tech Nanomaterials Projects",
+  "M.Tech Nanotechnology Research",
+  "PhD Nanomaterials Research",
+  "Narpavi Research Institute Nanotechnology Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Nanomaterials in Mechanical Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Nanomaterials in Mechanical Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on nanocomposites, nano-coatings, carbon nanostructures, and smart nanomaterials for applications in automotive, aerospace, biomedical, and energy systems."
+    question:
+      "What services does the Nanomaterials in Mechanical Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on nanocomposites, nano-coatings, carbon nanostructures, and smart nanomaterials for mechanical systems."
   },
   {
-    question: "What types of Nanomaterials in Mechanical Systems projects are supported?",
-    answer: "We support B.Tech projects (basic nanomaterial testing, nano-lubricants), M.Tech projects (CNT composites, nano-coatings), and Ph.D. projects (smart nanomaterials, AI-driven nanomaterial design) for applications in EVs, aerospace, biomedical implants, and renewable energy."
+    question: "Who can apply for nanomaterials-based mechanical projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Materials, Nanotechnology, and allied disciplines."
   },
   {
-    question: "Which tools and technologies are used in Nanomaterials in Mechanical Systems projects?",
-    answer: "Our stack includes ANSYS, ABAQUS, COMSOL Multiphysics, MATLAB, Python, SEM, TEM, AFM, XRD, and Raman spectroscopy for simulation, characterization, and prototyping of nanomaterials."
+    question: "Which tools are used in nanomaterials mechanical projects?",
+    answer:
+      "ANSYS, ABAQUS, COMSOL Multiphysics, MATLAB, Python, SEM, TEM, AFM, XRD, and Raman spectroscopy."
   },
   {
-    question: "How are Nanomaterials in Mechanical Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Nanotechnology, Materials Science, and Industrial Applications, focusing on graphene, CNTs, nano-coatings, and AI-driven analysis, aligned with IEEE/ASTM standards."
+    question: "Are projects aligned with IEEE standards?",
+    answer:
+      "Yes. All projects align with IEEE Transactions (2023–2025) and IEEE/ASTM standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is journal and patent support provided?",
+    answer:
+      "Yes. Support is provided for IEEE, SCI, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Nanomaterials in Mechanical Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Nanomaterials in Mechanical Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on graphene, CNTs, nanocomposites, nano-coatings, and smart nanomaterials.";
+
+const pageUrl =
+  "/department/mechanical-properties-materials/nanomaterials-mechanical";
 
 const MENanomaterialsMechanicalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Nanomaterials Mechanical Properties IEEE Projects (2023–2025)"
-        description="Nanomaterials Mechanical Systems IEEE project development for B.Tech, M.Tech & PhD using ANSYS, COMSOL, graphene, CNTs, nano-coatings, nanocomposites for automotive, aerospace, biomedical, energy applications."
-        url="/department/mechanical-properties-materials/nanomaterials-mechanical"
-        type="article"
-        keywords={[
-          "Nanomaterials Mechanical Systems Projects",
-          "Graphene Nanocomposites Research",
-          "CNT Applications Aerospace",
-          "Nano Lubricants Projects",
-          "IEEE Nanomaterials 2023–2025",
-          "Nanocoatings Biomedical Implants",
-          "B.Tech Nanomaterials Projects",
-          "M.Tech Nanotechnology Research",
-          "Narpavi Research Institute Nanotechnology Projects",
-          "PhD Nanomaterials Research"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Nanomaterials in Mechanical Systems Projects</li>
-              <li>Graphene Nanocomposites Research</li>
-              <li>CNT Applications in Aerospace</li>
-              <li>Nano-Lubricants Projects</li>
-              <li>IEEE Nanomaterials Projects 2023–2025</li>
-              <li>Nanocoatings in Biomedical Implants</li>
-              <li>B.Tech Nanomaterials Projects</li>
-              <li>M.Tech Nanotechnology Research</li>
-              <li>Ph.D. Nanomaterials Research Center</li>
-              <li>Narpavi Research Institute Nanotechnology Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Nanomaterials in Mechanical Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+       <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Nanomaterials in Mechanical Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on nanocomposites, nano-coatings, carbon nanostructures, and smart nanomaterials for automotive, aerospace, biomedical, and energy applications.
               </p>
@@ -271,43 +291,26 @@ const MENanomaterialsMechanicalSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/mechanical-properties-materials">
-      Mechanical Properties & Materials
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
-      Composite Materials Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
-      Advanced Alloy Development
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
-      Tribology & Wear Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
-      Nanomaterials – Mechanical Properties
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
-      Fatigue & Fracture Analysis
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/mechanical-properties-materials">Mechanical Properties & Materials</a></li>
+              <li><a href="/department/mechanical-properties-materials/composite-materials-analysis">Composite Materials Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/advanced-alloy-development">Advanced Alloy Development</a></li>
+              <li><a href="/department/mechanical-properties-materials/tribology-wear-analysis">Tribology & Wear Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/nanomaterials-mechanical">Nanomaterials – Mechanical Properties</a></li>
+              <li><a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">Fatigue & Fracture Analysis</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

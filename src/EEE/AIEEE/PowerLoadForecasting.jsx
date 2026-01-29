@@ -1,68 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "AI for Power Load Forecasting Project Development Center in Chennai",
+  "AI Power Load Forecasting IEEE Projects 2023–2025",
+  "Machine Learning Energy Load Prediction",
+  "Deep Learning Power Load Forecasting",
+  "Smart Grid Load Prediction Projects",
+  "Renewable Energy Load Forecasting AI",
+  "B.Tech AI Power Load Forecasting Projects",
+  "M.Tech CNN LSTM Load Forecasting",
+  "Ph.D AI Energy Demand Forecasting",
+  "IoT Based Power Load Prediction",
+  "Narpavi Research Institute EEE Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the AI for Power Load Forecasting Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students with IEEE-aligned (2023–2025) projects on ML/DL-based forecasting, hybrid AI algorithms, IoT-enabled load prediction, simulation, real-world testbeds, and IEEE/Scopus/SCI indexed publication assistance."
+    answer:
+      "IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students covering ML/DL forecasting, hybrid AI models, IoT-based load prediction, simulation, and indexed publication guidance."
   },
   {
     question: "What types of projects are supported?",
-    answer: "B.Tech: MATLAB/Python-based forecasting models with IoT data. M.Tech: hybrid CNN + LSTM forecasting systems, hardware-software integration for smart grids. Ph.D: novel architectures (GANs, RL), large-scale simulation, experimental testbeds, IEEE/SCI papers and patents."
+    answer:
+      "B.Tech focuses on ML forecasting, M.Tech on CNN-LSTM hybrid systems, and Ph.D. on GAN/RL-based large-scale load forecasting research."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), RNN, LSTM, CNN, Reinforcement Learning, IoT devices, smart meter datasets, SCADA integration for energy monitoring."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), CNN, RNN, LSTM, Reinforcement Learning, IoT devices, smart meters, and SCADA."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) in AI-based forecasting, demand optimization, renewable load prediction, hybrid model integration, smart cities, and Industry 4.0 automation standards."
+    answer:
+      "Projects reference IEEE Transactions (2023–2025) in AI-based forecasting, smart grids, renewable energy, and Industry 4.0."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer complete IEEE cycle support: topic selection, dataset handling, AI model training/testing, IoT integration, IEEE-format report writing, and publishing in IEEE/Scopus/SCI journals."
+    answer:
+      "Complete IEEE cycle support from topic selection to dataset handling, AI model validation, IoT integration, and IEEE/Scopus/SCI publication."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "AI for Power Load Forecasting – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) AI for Power Load Forecasting Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering ML, DL, CNN-LSTM, IoT-based smart grid and renewable energy forecasting.";
+
+const pageUrl =
+  "/department/ai-electrical-engineering/power-load-forecasting";
 
 const EEEAiPowerLoadForecastingProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="AI Power Load Forecasting IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) AI Power Load Forecasting projects for B.Tech, M.Tech, Ph.D. ML DL hybrid forecasting, CNN LSTM RNN, smart grid IoT prediction using MATLAB/Simulink, TensorFlow PyTorch Scikit-learn, SCADA smart meters."
-  keywords="AI Power Load Forecasting IEEE Projects 2023–2025, B.Tech ML Load Prediction, M.Tech CNN LSTM Hybrid Forecasting, Ph.D. GAN RL Energy Demand, Smart Grid Renewable Forecasting, IoT Load Prediction, Narpavi Research Institute"
-  url="/department/ai-electrical-engineering/power-load-forecasting"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>AI for Power Load Forecasting projects</li>
-              <li>Power load prediction using AI</li>
-              <li>Machine Learning for energy demand forecasting</li>
-              <li>Deep Learning in load forecasting</li>
-              <li>Smart grid load prediction projects</li>
-              <li>Renewable energy forecasting with AI</li>
-              <li>IEEE 2023–2025 power forecasting projects</li>
-              <li>B.Tech AI in EEE projects</li>
-              <li>M.Tech load forecasting projects</li>
-              <li>Ph.D. research in AI for energy forecasting</li>
-              <li>Narpavi Research Institute EEE project center</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>AI for Power Load Forecasting – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+               {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                <strong>The AI for Power Load Forecasting</strong> – Project Development Center at Narpavi Research Institute is a globally recognized hub where Electrical and Electronics Engineering (EEE) meets Artificial Intelligence to advance energy demand prediction and system optimization. With rapid growth in smart grids, renewable energy integration, and industrial automation, accurate load forecasting has become a critical need. Our center empowers B.Tech, M.Tech, and Ph.D. students worldwide with IEEE-aligned projects (2023–2025), focusing on predictive analytics, real-time monitoring, and hybrid AI modeling.
@@ -183,54 +211,31 @@ const EEEAiPowerLoadForecastingProjectDevelopmentCenter = () => {
               
             </section>
           </div>
-          
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/ai-electrical-engineering">
-      Artificial Intelligence in Electrical Engineering – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/power-load-forecasting">
-      AI-Based Power Load Forecasting
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
-      Machine Learning for Fault Detection
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
-      Deep Learning in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-smart-grids">
-      AI in Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/neural-networks-motor">
-      Neural Networks for Motor Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
-      AI-Based Energy Optimization
-    </a>
-  </li>
-</ul>
 
-          </div>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/ai-electrical-engineering">Artificial Intelligence in Electrical Engineering</a></li>
+              <li><a href="/department/ai-electrical-engineering/power-load-forecasting">AI-Based Power Load Forecasting</a></li>
+              <li><a href="/department/ai-electrical-engineering/machine-learning-fault-detection">Machine Learning for Fault Detection</a></li>
+              <li><a href="/department/ai-electrical-engineering/deep-learning-renewables">Deep Learning in Renewable Energy</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-smart-grids">AI in Smart Grids</a></li>
+              <li><a href="/department/ai-electrical-engineering/neural-networks-motor">Neural Networks for Motor Control</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-energy-optimization">AI-Based Energy Optimization</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEAiPowerLoadForecastingProjectDevelopmentCenter;

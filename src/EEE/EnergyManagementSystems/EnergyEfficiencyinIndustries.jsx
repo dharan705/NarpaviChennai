@@ -1,65 +1,99 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Energy Efficiency in Industries Project Development Center in Chennai",
+  "Industrial Energy Efficiency IEEE Projects 2023–2025",
+  "AI Based Industrial Energy Optimization",
+  "IoT Based Industrial Energy Monitoring",
+  "Renewable Energy Integration in Industries",
+  "B.Tech Energy Efficiency Projects",
+  "M.Tech Industrial Energy Optimization",
+  "Ph.D Industrial Energy Research",
+  "Digital Twin Energy Optimization",
+  "Predictive Maintenance Energy Systems",
+  "Narpavi Research Institute Energy Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Energy Efficiency in Industries Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Energy Efficiency in Industries Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven energy optimization, IoT-based monitoring, and renewable energy integration for industrial applications."
+    question:
+      "What services does the Energy Efficiency in Industries Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Energy Efficiency in Industries Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven energy optimization, IoT-based monitoring, and renewable energy integration for industrial applications."
   },
   {
-    question: "What types of Energy Efficiency in Industries projects are supported?",
-    answer: "We support B.Tech projects (basic monitoring and optimization systems), M.Tech projects (AI/ML-based load balancing, renewable integration), and Ph.D. projects (novel AI architectures, digital twins) for applications in manufacturing, automotive, textile, and power-intensive industries."
+    question:
+      "What types of Energy Efficiency in Industries projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering industrial monitoring systems, AI/ML-based load balancing, renewable integration, and digital twin-based optimization."
   },
   {
-    question: "Which technologies are used in Energy Efficiency in Industries project development?",
-    answer: "Our stack includes MATLAB, Python (TensorFlow, PyTorch), IoT platforms (MQTT), industrial sensors, Arduino/Raspberry Pi for hardware, and big data analytics for energy optimization."
+    question:
+      "Which technologies are used in Energy Efficiency in Industries project development?",
+    answer:
+      "MATLAB, Python (TensorFlow, PyTorch), MQTT-based IoT platforms, industrial sensors, Arduino, Raspberry Pi, and big data analytics tools."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Smart Grid, Sustainable Energy, and Industrial Electronics, focusing on AI-driven optimization, predictive maintenance, and renewable energy integration."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Sustainable Energy, and Industrial Electronics."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, AI model development, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, AI model development, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Energy Efficiency in Industries – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Energy Efficiency in Industries Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-driven optimization, IoT-based monitoring, renewable integration, and industrial energy management systems.";
+
+const pageUrl =
+  "/department/energy-management-systems/energy-efficiency-industries";
 
 const EEEnergyEfficiencyIndustriesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Energy Efficiency Industries IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Energy Efficiency in Industries projects for B.Tech, M.Tech, Ph.D. AI optimization, IoT monitoring, renewable integration using MATLAB Python TensorFlow PyTorch MQTT industrial sensors Arduino Raspberry Pi manufacturing automotive textile."
-  keywords="Energy Efficiency Industries IEEE Projects 2023–2025, B.Tech Industrial Energy Monitoring, M.Tech AI Load Balancing Renewables, Ph.D. Digital Twins Novel AI Energy Optimization, Industrial Energy Management, Narpavi Research Institute"
-  url="/department/energy-management-systems/energy-efficiency-industries"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy Efficiency in Industries</li>
-              <li>Industrial Energy Optimization Projects</li>
-              <li>Smart Energy Systems for Industries</li>
-              <li>AI in Industrial Energy Efficiency</li>
-              <li>IoT for Energy Management</li>
-              <li>IEEE Projects 2023–2025</li>
-              <li>Narpavi Research Institute</li>
-              <li>B.Tech Energy Projects</li>
-              <li>M.Tech Energy Efficiency Projects</li>
-              <li>Ph.D. Energy Management Research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Energy Efficiency in Industries – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+   <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Energy Efficiency in Industries Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on advanced energy management systems. Our projects focus on AI-driven optimization, IoT-based monitoring, and renewable energy integration for industrial applications.
               </p>
@@ -208,48 +242,27 @@ const EEEnergyEfficiencyIndustriesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems – Project Development Center</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand-Side Management (DSM)</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,65 +1,85 @@
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import { Link } from "react-router-dom";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "AI in Biomedical Diagnostics",
+  "Artificial Intelligence in Healthcare Projects",
+  "Deep Learning in Medical Imaging",
+  "IEEE AI Biomedical Projects 2023–2025",
+  "Machine Learning for Disease Prediction",
+  "PhD Research in Biomedical AI",
+  "Explainable AI in Healthcare",
+  "AI Based Wearable Diagnostic Devices",
+  "Personalized Medicine Using AI",
+  "Healthcare AI Project Development Chennai"
+];
 
 const faqs = [
   {
     question: "What is the role of AI in biomedical diagnostics?",
-    answer: "AI enables faster, accurate, and automated disease detection by processing biomedical data such as medical images, biosignals, and patient records to support clinical decision-making."
+    answer:
+      "AI enables faster and accurate disease detection by analyzing medical images, biosignals, and patient data to assist clinical decision-making."
   },
   {
-    question: "What topics do B.Tech projects in AI biomedical diagnostics cover?",
-    answer: "Fundamental AI applications like tumor detection using image processing, anomaly classification in ECG/EEG, and diabetes prediction using machine learning, implemented via MATLAB and Python."
+    question: "What topics do B.Tech projects cover?",
+    answer:
+      "Tumor detection, ECG/EEG anomaly classification, and disease prediction using machine learning with MATLAB and Python."
   },
   {
-    question: "What advanced research areas do M.Tech projects focus on?",
-    answer: "Advanced algorithm design, deep learning for cancer detection, MRI/CT image segmentation, and multimodal biomedical data fusion, with emphasis on model optimization and clinical applicability."
+    question: "What are the M.Tech research areas?",
+    answer:
+      "Deep learning for cancer detection, MRI/CT image segmentation, and multimodal biomedical data fusion."
   },
   {
-    question: "What are the Ph.D. research directions in AI biomedical diagnostics?",
-    answer: "Innovations include novel AI architectures, explainable AI for transparent diagnostics, federated learning, multi-omics analysis, and predictive diagnostics integrated with IoT-enabled healthcare systems."
+    question: "What are the Ph.D. research directions?",
+    answer:
+      "Explainable AI, federated learning, multi-omics analysis, and AI-driven predictive diagnostics."
   },
   {
-    question: "Which tools and platforms support AI biomedical diagnostic projects?",
-    answer: "Tools include TensorFlow, PyTorch, MATLAB, Python, R, Arduino, Raspberry Pi, and explainable AI frameworks like LIME and SHAP."
+    question: "Which tools are used?",
+    answer:
+      "TensorFlow, PyTorch, MATLAB, Python, R, Arduino, Raspberry Pi, LIME, and SHAP."
   }
 ];
 
 const AIBiomedicalDiagnosticsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="AI Biomedical Diagnostics IEEE Projects | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) AI in Biomedical Diagnostics projects using deep learning, signal processing, and federated learning for medical imaging, biosignals, and wearable healthcare."
-        keywords="AI in Biomedical Diagnostics, Artificial Intelligence in Healthcare Projects, Deep Learning in Medical Imaging, IEEE AI Biomedical Projects 2023–2025, Machine Learning for Disease Prediction, Ph.D. research in Biomedical AI, Explainable AI in Healthcare, Narpavi Research Institute biomedical AI support, AI-based wearable diagnostic devices, AI-enabled personalized medicine"
-        url="/department/biomedical-electronics/ai-biomedical-diagnostics"
+        title="AI in Biomedical Diagnostics – Project Development Center in Chennai"
+        description="IEEE-aligned AI biomedical diagnostics project development for B.Tech, M.Tech, and Ph.D. students using deep learning, signal processing, explainable AI, federated learning, and wearable healthcare systems."
+        keywords={keywords}
+        url="/department/biomedical-electronics/ai-biomedical-diagnostics–project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>AI in Biomedical Diagnostics</li>
-              <li>Artificial Intelligence in Healthcare Projects</li>
-              <li>Deep Learning in Medical Imaging</li>
-              <li>IEEE AI Biomedical Projects 2023–2025</li>
-              <li>Machine Learning for Disease Prediction</li>
-              <li>Ph.D. research in Biomedical AI</li>
-              <li>Explainable AI in Healthcare</li>
-              <li>Narpavi Research Institute biomedical AI support</li>
-              <li>AI-based wearable diagnostic devices</li>
-              <li>AI-enabled personalized medicine</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 🔒 CENTER CONTENT (UNCHANGED STRUCTURE) */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>AI in Biomedical Diagnostics – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              AI in Biomedical Diagnostics – Project Development Center in Chennai
+            </h1>   
+             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> leads in AI-powered biomedical diagnostics research and project development aligned with IEEE standards (2023–2025), providing end-to-end support for B.Tech, M.Tech, and Ph.D. students.[web:4][web:24]
               </p>
@@ -174,19 +194,26 @@ const AIBiomedicalDiagnosticsProject = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
-  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
-  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
-  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
-  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
-  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
-  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
-</ul>
-          </div>
+              <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+              <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics</a></li>
+              <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition</a></li>
+              <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface</a></li>
+              <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices</a></li>
+              <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics</a></li>
+              <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

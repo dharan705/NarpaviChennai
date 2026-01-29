@@ -1,68 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Electric Vehicles Project Development Center in Chennai",
+  "Electric Vehicles EV IEEE Projects 2023–2025",
+  "EV Motor Drive Projects",
+  "Battery Management Systems BMS EV Projects",
+  "Wireless Charging Electric Vehicles",
+  "Vehicle to Grid V2G IEEE Projects",
+  "AI Based Electric Vehicle Systems",
+  "B.Tech Electric Vehicle Projects",
+  "M.Tech EV Research Projects",
+  "Ph.D Electric Vehicle Research",
+  "Narpavi Research Institute EV Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Electric Vehicles Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Electric Vehicles Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in EV motor drives, battery management systems, wireless charging, and V2G integration for electric vehicle applications."
+    answer:
+      "Narpavi Research Institute’s Electric Vehicles Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in EV motor drives, battery management systems, wireless charging, and V2G integration."
   },
   {
     question: "What types of electric vehicle projects are supported?",
-    answer: "We support B.Tech projects (motor control, IoT charging stations), M.Tech projects (BMS, V2G systems), and Ph.D. projects (AI-enabled BMS, autonomous EVs) for applications in EV traction and smart energy systems."
+    answer:
+      "We support B.Tech projects in motor control and IoT charging stations, M.Tech projects in BMS and V2G systems, and Ph.D. projects in AI-enabled EVs, smart energy integration, and autonomous electric vehicles."
   },
   {
     question: "Which technologies are used in electric vehicle project development?",
-    answer: "Our stack includes MATLAB/Simulink, LabVIEW, Arduino, FPGA, and IoT platforms for advanced EV design, simulation, and prototyping."
+    answer:
+      "MATLAB/Simulink, LabVIEW, Arduino, FPGA, IoT platforms, AI/ML tools, and real-time EV prototyping environments."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like BLDC motor control, wireless charging, and AI-driven EV diagnostics, ensuring academic and industry relevance."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) covering EV traction systems, wireless charging, AI-driven diagnostics, and smart grid integration."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Electric Vehicles – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Electric Vehicles Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering EV motor drives, battery management systems, wireless charging, V2G integration, AI-enabled EV diagnostics, and smart charging solutions.";
+
+const pageUrl = "/department/electric-vehicles";
 
 const EEEElectricVehiclesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Electric Vehicles EV IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Electric Vehicles EV projects for B.Tech, M.Tech, Ph.D. EV motor drives, BMS, wireless charging, V2G using MATLAB/Simulink, LabVIEW, Arduino, FPGA, IoT for EV traction, smart charging, renewable integration."
-  keywords="Electric Vehicles EV IEEE Projects 2023–2025, B.Tech BLDC PMSM Motor Control, M.Tech Battery Management BMS V2G, Ph.D. AI Autonomous EVs, Wireless Charging EV, Vehicle-to-Grid V2G, Renewable EV Charging, Narpavi Research Institute"
-  url="/department/electric-vehicles"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Electric Vehicle IEEE Projects</li>
-              <li>EV IEEE Projects</li>
-              <li>Battery Management System IEEE Projects</li>
-              <li>BLDC Motor IEEE Projects</li>
-              <li>PMSM IEEE Projects</li>
-              <li>Vehicle-to-Grid IEEE Projects</li>
-              <li>Wireless Charging IEEE Projects</li>
-              <li>Renewable EV Charging IEEE Projects</li>
-              <li>B.Tech EV Projects</li>
-              <li>M.Tech EV Projects</li>
-              <li>Ph.D. EV Projects</li>
-              <li>IEEE EV Publications</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Electric Vehicles (EV) – Project Development Center</h1>
 
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Electric Vehicles (EV) – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in EV motor drives, battery management, power electronics, and smart charging systems.
               </p>
@@ -242,48 +270,27 @@ const EEEElectricVehiclesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/electric-vehicles">Electric Vehicles – Project Development Center</a></li>
+              <li><a href="/department/electric-vehicles/bms">Battery Management Systems (BMS)</a></li>
+              <li><a href="/department/electric-vehicles/ev-charging-infrastructure">EV Charging Infrastructure</a></li>
+              <li><a href="/department/electric-vehicles/ev-motor-drive-systems">EV Motor Drive Systems</a></li>
+              <li><a href="/department/electric-vehicles/hev">Hybrid Electric Vehicles (HEV)</a></li>
+              <li><a href="/department/electric-vehicles/power-electronics-evs">Power Electronics for EVs</a></li>
+              <li><a href="/department/electric-vehicles/regenerative-braking-systems">Regenerative Braking Systems</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

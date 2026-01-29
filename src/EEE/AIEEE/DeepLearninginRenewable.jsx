@@ -1,68 +1,96 @@
-import "../EEEProjectDevelopmentCenter.scss"; 
+import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Deep Learning in Renewable Systems Project Development Center in Chennai",
+  "Deep Learning Renewable Energy IEEE Projects 2023–2025",
+  "CNN RNN LSTM Renewable Forecasting",
+  "Hybrid Deep Learning Microgrid Optimization",
+  "Solar Wind Energy Prediction using AI",
+  "B.Tech Deep Learning Renewable Projects",
+  "M.Tech Renewable Energy AI Projects",
+  "Ph.D Deep Learning Energy Research",
+  "Transformer GAN Renewable Forecasting",
+  "Smart Energy Storage Optimization",
+  "Narpavi Research Institute Renewable AI"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Deep Learning in Renewable Systems Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects that apply deep learning to renewable systems. Services include algorithm design (CNN, RNN, LSTM, Hybrid), dataset preparation from solar/wind systems, IoT integration, simulation validation, hardware testbeds, and IEEE/Scopus/SCI publication assistance."
+    answer:
+      "IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects applying deep learning to solar, wind, and hybrid renewable systems with simulation, IoT integration, and publication support."
   },
   {
     question: "What kinds of renewable system projects are supported?",
-    answer: "We support B.Tech projects (basic CNN/LSTM forecasting for solar/wind datasets), M.Tech projects (hybrid deep learning forecasting with IoT hardware, storage optimization), and Ph.D. projects (Transformer/GAN-based forecasting models, microgrid optimization, predictive maintenance with industrial collaborations)."
+    answer:
+      "B.Tech projects focus on CNN/LSTM forecasting, M.Tech on hybrid DL with IoT and storage optimization, and Ph.D. on Transformer/GAN-based forecasting and microgrid optimization."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, Python (TensorFlow, PyTorch, Keras, Scikit-Learn), Arduino, Raspberry Pi, IoT energy monitoring sensors, cloud platforms (AWS, Azure), GAN/Transformer architectures for advanced deep learning."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch, Keras), Arduino, Raspberry Pi, IoT sensors, and cloud platforms like AWS and Azure."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are aligned with IEEE Transactions on Sustainable Energy, Smart Grid, and Industrial Electronics (2023–2025). Topics include deep learning for renewable forecasting, hybrid microgrid optimization, predictive maintenance, and AI integration with storage/grid systems."
+    answer:
+      "Projects align with IEEE Transactions on Sustainable Energy, Smart Grid, and Industrial Electronics (2023–2025)."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide complete project development support—IEEE topic selection, dataset collection, algorithm simulation & hardware deployment, technical documentation in IEEE style, and publishing guidance in IEEE/SCI/Scopus indexed journals."
+    answer:
+      "Complete support including topic selection, dataset preparation, simulation, hardware deployment, IEEE documentation, and publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Deep Learning in Renewable Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Deep Learning in Renewable Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering CNN, RNN, LSTM, hybrid forecasting, microgrid optimization, and AI-based renewable energy systems.";
+
+const pageUrl =
+  "/department/ai-electrical-engineering/deep-learning-renewables";
 
 const EEEDlRenewableSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Deep Learning Renewable Energy IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Deep Learning in Renewable Systems projects for B.Tech, M.Tech, Ph.D. CNN RNN LSTM hybrid forecasting, solar wind microgrid optimization using MATLAB/Simulink, TensorFlow PyTorch Keras, Arduino Raspberry Pi AWS Azure."
-  keywords="Deep Learning Renewable Energy IEEE Projects 2023–2025, B.Tech CNN LSTM Solar Forecasting, M.Tech Hybrid DL Microgrid Optimization, Ph.D. Transformer GAN Renewables, Solar Wind Energy Prediction, Narpavi Research Institute"
-  url="/department/ai-electrical-engineering/deep-learning-renewables"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keyword Sidebar */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Deep Learning in Renewable Systems projects</li>
-              <li>AI-based renewable energy forecasting</li>
-              <li>CNN/RNN energy prediction projects</li>
-              <li>Microgrid optimization using DL</li>
-              <li>Smart grid energy management projects</li>
-              <li>IEEE 2023–2025 renewable energy projects</li>
-              <li>B.Tech deep learning projects</li>
-              <li>M.Tech renewable energy AI projects</li>
-              <li>Ph.D. research in deep learning for energy</li>
-              <li>Renewable energy optimization AI projects</li>
-              <li>Narpavi Research Institute project center</li>
-            </ul>
-          </div>
 
-          {/* 📑 Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Deep Learning in Renewable Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>The <strong>Deep Learning in Renewable Systems Project Development Center</strong> equips students with IEEE-aligned (2023–2025) research opportunities in solar, wind, and hybrid energy systems using AI/Deep Learning algorithms. Projects prepare engineers to enhance prediction, optimization, and resilience of renewable systems.</p>
               <p>We train scholars to work with CNNs, RNNs, LSTMs, and hybrid models for solar/wind output forecasting, microgrid efficiency, energy storage integration, and grid stability management.</p>
@@ -245,54 +273,31 @@ const EEEDlRenewableSystemsProjectDevelopmentCenter = () => {
          
             </section>
           </div>
-          
-          {/* Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/ai-electrical-engineering">
-      Artificial Intelligence in Electrical Engineering – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/power-load-forecasting">
-      AI-Based Power Load Forecasting
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
-      Machine Learning for Fault Detection
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
-      Deep Learning in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-smart-grids">
-      AI in Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/neural-networks-motor">
-      Neural Networks for Motor Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
-      AI-Based Energy Optimization
-    </a>
-  </li>
-</ul>
 
-          </div>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/ai-electrical-engineering">Artificial Intelligence in Electrical Engineering</a></li>
+              <li><a href="/department/ai-electrical-engineering/power-load-forecasting">AI-Based Power Load Forecasting</a></li>
+              <li><a href="/department/ai-electrical-engineering/machine-learning-fault-detection">Machine Learning for Fault Detection</a></li>
+              <li><a href="/department/ai-electrical-engineering/deep-learning-renewables">Deep Learning in Renewable Energy</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-smart-grids">AI in Smart Grids</a></li>
+              <li><a href="/department/ai-electrical-engineering/neural-networks-motor">Neural Networks for Motor Control</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-energy-optimization">AI-Based Energy Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEDlRenewableSystemsProjectDevelopmentCenter;

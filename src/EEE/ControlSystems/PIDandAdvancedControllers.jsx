@@ -1,59 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "PID and Advanced Controllers Project Development Center in Chennai",
+  "PID Controller IEEE Projects 2023–2025",
+  "Advanced Controllers Projects for B.Tech",
+  "M.Tech Adaptive PID Controller Projects",
+  "Ph.D Research in Advanced Controllers",
+  "Model Predictive Control Projects",
+  "Sliding Mode Controller IEEE Projects",
+  "AI-based Intelligent Controllers",
+  "Control Systems Projects using MATLAB",
+  "Narpavi Research Institute PID Controllers"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the PID and Advanced Controllers Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. students guidance on IEEE-aligned (2023–2025) projects related to PID controllers, adaptive controllers, MPC, sliding mode, and intelligent AI/ML-based controllers. Services include simulation, hardware prototyping, algorithm design, and IEEE publication support."
+    question:
+      "What services does the PID and Advanced Controllers Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. students guidance on IEEE-aligned (2023–2025) projects related to PID controllers, adaptive controllers, MPC, sliding mode, and AI/ML-based controllers, including simulation, prototyping, and IEEE publication support."
   },
   {
-    question: "What types of PID and Advanced Controller projects are supported?",
-    answer: "We support B.Tech projects (PID tuning, microcontroller-based implementations), M.Tech projects (adaptive PID, MPC, intelligent controllers), and Ph.D. projects (nonlinear robust control, predictive AI-based controllers, patents, and IEEE/Scopus/SCI research papers)."
+    question:
+      "What types of PID and Advanced Controller projects are supported?",
+    answer:
+      "B.Tech projects include PID tuning and microcontroller-based control. M.Tech projects focus on adaptive PID, MPC, and intelligent controllers. Ph.D. projects explore robust nonlinear and AI-based advanced control strategies with patents and IEEE publications."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, LabVIEW, Arduino/ARM/PIC microcontrollers, FPGA boards, Python with TensorFlow/PyTorch for intelligent control, and real-time hardware-in-loop (HIL) setups."
+    answer:
+      "MATLAB/Simulink, LabVIEW, Arduino/ARM/PIC microcontrollers, FPGA boards, Python with TensorFlow/PyTorch, and real-time HIL systems."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) focusing on modern control, adaptive/robust controllers, AI integration, and control-oriented research with industrial validation."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on modern control systems, adaptive and robust control, AI-based controllers, and industrial automation."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide complete support from topic selection, simulation, algorithm/hardware development, to IEEE-style documentation, patents, and submission to leading conferences/journals."
+    answer:
+      "Complete support from topic selection and simulation to hardware implementation, IEEE documentation, patents, and journal submissions."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "PID and Advanced Controllers – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) PID and Advanced Controllers Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PID tuning, adaptive controllers, MPC, sliding mode control, and AI/ML-based intelligent controllers using MATLAB and real-time hardware.";
+
+const pageUrl =
+  "/department/control-systems-electrical/pid-advanced-controllers";
 
 const EEEPidAdvancedControllersProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <Sidebar/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* Left Column – Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>PID and Advanced Controllers Project Development Center</li>
-              <li>PID Controller Projects for B.Tech</li>
-              <li>Advanced Controllers for M.Tech</li>
-              <li>Ph.D. Research in PID Controllers</li>
-              <li>Adaptive and Robust Control Projects</li>
-              <li>IEEE 2023–2025 PID Controller Projects</li>
-              <li>Intelligent Control Systems Research</li>
-              <li>Control System Projects with MATLAB</li>
-              <li>Sliding Mode Controller Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* Center – Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>PID and Advanced Controllers – Project Development Support</h1>
-            
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+                {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                <strong>Narpavi Research Institute</strong> leads the PID and Advanced Controllers Project Development Center – offering B.Tech, M.Tech, and Ph.D. students IEEE-aligned (2023–2025) projects in PID, adaptive controllers, MPC, sliding mode controllers, and intelligent AI/ML-based controllers.
@@ -175,53 +213,31 @@ const EEEPidAdvancedControllersProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right Column – Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/control-systems-electrical">Control Systems – Project Development Center</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEPidAdvancedControllersProjectDevelopmentCenter;

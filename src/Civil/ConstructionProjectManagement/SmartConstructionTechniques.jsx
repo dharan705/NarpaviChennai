@@ -1,74 +1,86 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Smart Construction Techniques IEEE Projects 2023–2025",
+  "IoT Based Smart Construction",
+  "Robotics in Construction Engineering",
+  "3D Printing Civil Engineering Projects",
+  "Prefabrication and Modular Construction",
+  "BIM AI Construction Management",
+  "Sustainable Smart Infrastructure Projects",
+  "B.Tech M.Tech Ph.D. Smart Construction Projects",
+  "Automation in Civil Engineering",
+  "Narpavi Research Institute Smart Construction"
+];
 
 const faqs = [
   {
     question: "What services does the Smart Construction Techniques Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Construction Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on automation, robotics, IoT, and sustainable construction."
+    answer:
+      "Narpavi Research Institute’s Smart Construction Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on automation, robotics, IoT, and sustainable construction."
   },
   {
     question: "What types of Smart Construction Techniques projects are supported?",
-    answer: "We support B.Tech projects (prefabrication, small-scale automation), M.Tech projects (3D printing, IoT integration), and Ph.D. projects (BIM-AI systems, sustainable materials) for innovative construction solutions."
+    answer:
+      "We support B.Tech projects (prefabrication, automation basics), M.Tech projects (3D printing, IoT integration), and Ph.D. projects (BIM-AI systems, sustainable materials)."
   },
   {
-    question: "Which tools and technologies are used in Smart Construction Techniques projects?",
-    answer: "Our stack includes MATLAB, Revit, AutoCAD Civil 3D, IoT sensors, robotics, and AI frameworks (TensorFlow, Keras) for modeling and monitoring construction systems."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, Revit, AutoCAD Civil 3D, IoT sensors, robotics platforms, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering, focusing on smart construction, IoT monitoring, and AI-driven project management."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) focusing on smart construction, IoT monitoring, and AI-driven project management."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, laboratory experiments, simulation, IoT and robotics integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, experiments, simulation, IoT & robotics integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CESmartConstructionTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Smart Construction Techniques IEEE Projects (2023–2025)"
-        description="Smart Construction Techniques IEEE development for B.Tech, M.Tech & PhD using 3D printing, robotics, IoT, BIM, prefabrication at Narpavi Research Institute."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Smart Construction Techniques – Project Development Center in Chennai"
+        description="Smart Construction Techniques project development for B.Tech, M.Tech, and Ph.D. students using IoT, robotics, 3D printing, BIM, prefabrication, and sustainable construction technologies."
+        keywords={keywords}
         url="/department/construction-project-management/smart-construction-techniques"
-        type="article"
-        keywords={[
-          "Smart Construction Projects IEEE",
-          "IoT Construction Monitoring 2023-2025",
-          "Robotics Construction Projects",
-          "3D Printing Civil Engineering",
-          "Prefabrication Modular Construction",
-          "BIM AI Construction Management",
-          "PhD Sustainable Building Projects",
-          "B.Tech M.Tech Smart Infrastructure"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Construction Projects</li>
-              <li>IoT-Based Construction Monitoring IEEE 2023–2025</li>
-              <li>Robotics in Construction Projects</li>
-              <li>3D Printing in Civil Engineering</li>
-              <li>Prefabrication and Modular Construction</li>
-              <li>AI-Enabled Construction Management</li>
-              <li>B.Tech M.Tech Ph.D. Civil Projects</li>
-              <li>Narpavi Research Institute Smart Construction</li>
-              <li>Sustainable Building Projects</li>
-              <li>Smart Infrastructure Project Development</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Smart Construction Techniques – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Smart Construction Techniques – Project Development Center in Chennai
+            </h1>
+
+                <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Construction Techniques Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on advanced construction technologies, automation, and sustainability.
               </p>
@@ -229,35 +241,42 @@ const CESmartConstructionTechniquesProjectDevelopmentCenter = () => {
                 ))}
               </div>
             </section>
+
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/construction-project-management">
-      Construction Project Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/smart-construction-techniques">
-      Smart Construction Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/cost-optimization-in-projects">
-      Cost Optimization in Projects
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/project-scheduling-planning">
-      Project Scheduling & Planning
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/construction-project-management">
+                  Construction Project Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/smart-construction-techniques">
+                  Smart Construction Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/cost-optimization-in-projects">
+                  Cost Optimization in Projects
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/project-scheduling-planning">
+                  Project Scheduling & Planning
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

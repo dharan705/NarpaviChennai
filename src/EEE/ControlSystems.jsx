@@ -1,66 +1,82 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT */
+const keywords = [
+  "Control Systems IEEE Projects",
+  "Adaptive Control IEEE Projects",
+  "Robust Control IEEE Projects",
+  "Fuzzy Logic Control IEEE Projects",
+  "PID Control IEEE Projects",
+  "Digital Control Systems Projects",
+  "Model Predictive Control IEEE",
+  "B.Tech Control Systems Projects",
+  "M.Tech Control Systems Projects",
+  "Ph.D. Control Systems Research",
+  "Narpavi Research Institute Control Systems"
+];
 
 const faqs = [
   {
     question: "What services does the Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute's Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in classical, modern, and AI-assisted control systems for applications in smart grids, electric vehicles, and industrial automation."
+    answer:
+      "Narpavi Research Institute's Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in classical, modern, and AI-assisted control systems for applications in smart grids, electric vehicles, and industrial automation."
   },
   {
     question: "What types of control systems projects are supported?",
-    answer: "We support B.Tech projects (PID controllers, motor control), M.Tech projects (robust control, smart grid applications), and Ph.D. projects (AI-driven adaptive control, distributed control) for EEE applications in power systems and robotics."
+    answer:
+      "We support B.Tech projects (PID controllers, motor control), M.Tech projects (robust control, smart grid applications), and Ph.D. projects (AI-driven adaptive control, distributed control) for EEE applications in power systems and robotics."
   },
   {
     question: "Which technologies are used in control systems project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSCAD, LabVIEW, and embedded platforms like Arduino and FPGA for advanced control system design and prototyping."
+    answer:
+      "Our stack includes MATLAB/Simulink, PSCAD, LabVIEW, and embedded platforms like Arduino and FPGA for advanced control system design and prototyping."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like model predictive control, fuzzy logic control, and adaptive control for smart grids, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like model predictive control, fuzzy logic control, and adaptive control for smart grids, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware-in-the-loop testing, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, hardware-in-the-loop testing, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEEControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Control Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Control Systems projects for B.Tech, M.Tech, Ph.D. students. MATLAB/Simulink, PSCAD, FPGA projects in smart grids, EVs, industrial automation."
-        keywords="Control Systems IEEE Projects, Adaptive Control IEEE Projects, Robust Control IEEE Projects, Fuzzy Logic IEEE Projects, PID Control IEEE Projects, Model Predictive Control IEEE Projects, B.Tech Control IEEE Projects, M.Tech Control IEEE Projects, Ph.D. Control IEEE Thesis, Narpavi Research Institute"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Control Systems – Project Development Center in Chennai"
+        description="Control Systems project development center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on PID, adaptive, robust, AI-based and model predictive control using MATLAB/Simulink, PSCAD, FPGA (IEEE 2023–2025)."
+        url="/control-systems-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
-        url="/department/control-systems-electrical "
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Control Systems IEEE Projects</li>
-              <li>Adaptive Control IEEE Projects</li>
-              <li>Robust Control IEEE Projects</li>
-              <li>Fuzzy Logic IEEE Projects</li>
-              <li>PID Control IEEE Projects</li>
-              <li>Digital Control IEEE Projects</li>
-              <li>Model Predictive Control IEEE Projects</li>
-              <li>B.Tech Control IEEE Projects</li>
-              <li>M.Tech Control IEEE Projects</li>
-              <li>Ph.D. Control IEEE Thesis</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Control Systems – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>Control Systems – Project Development Center in Chennai</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Control Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in classical, modern, and AI-assisted control systems for smart grids, electric vehicles, and industrial automation.
               </p>
@@ -236,51 +252,29 @@ const EEEControlSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
-          </div>
+            </section>          </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/control-systems-electrical">Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

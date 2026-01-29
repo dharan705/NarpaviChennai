@@ -1,59 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Energy Storage with Renewable Integration Project Development Center in Chennai",
+  "IEEE Energy Storage Projects 2023–2025",
+  "Battery Energy Storage Systems Projects",
+  "Supercapacitor Energy Storage Research",
+  "Hybrid Energy Storage Systems",
+  "AI Based Energy Management Systems",
+  "IoT Based Energy Storage Monitoring",
+  "B.Tech Energy Storage Projects",
+  "M.Tech Renewable Energy Storage Systems",
+  "Ph.D Grid Integrated Energy Storage Research",
+  "Narpavi Research Institute Renewable Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Energy Storage with Renewable Integration Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Energy Storage with Renewable Integration Project Development Center supports B.Tech, M.Tech, and Ph.D. students in designing and implementing IEEE-aligned (2023–2025) projects involving battery storage, supercapacitors, hybrid storage systems, AI-assisted energy management, and grid-connected renewable integration."
+    answer:
+      "Narpavi Research Institute’s Energy Storage with Renewable Integration Project Development Center supports B.Tech, M.Tech, and Ph.D. students in designing and implementing IEEE-aligned (2023–2025) projects involving battery storage, supercapacitors, hybrid storage systems, AI-assisted energy management, and grid-connected renewable integration."
   },
   {
     question: "What types of Energy Storage projects are supported?",
-    answer: "We support B.Tech projects (battery/supercapacitor system design, IoT-enabled monitoring), M.Tech projects (AI-assisted charge-discharge scheduling, hybrid storage research), and Ph.D. projects (predictive energy optimization, grid-connected hybrid storage systems) across residential, industrial, and utility-scale applications."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering battery systems, supercapacitors, hybrid storage, AI-based scheduling, and grid-connected energy storage applications."
   },
   {
     question: "Which technologies are used in Energy Storage project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSIM, HOMER Pro, HIL (Hardware-in-the-Loop) platforms, IoT messaging protocols (MQTT), AI/ML frameworks (TensorFlow, PyTorch), and FPGA/DSP-based embedded controllers."
+    answer:
+      "MATLAB/Simulink, PSIM, HOMER Pro, HIL platforms, MQTT-based IoT systems, TensorFlow, PyTorch, and FPGA/DSP controllers."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects reference IEEE Transactions (2023–2025), focusing on topics such as hybrid storage optimization, predictive energy management, system reliability, and compliance with IEEE smart grid standards."
+    answer:
+      "All projects are based on IEEE Transactions (2023–2025) focusing on hybrid storage optimization, predictive energy management, and smart grid compliance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We provide end-to-end guidance: IEEE topic selection, literature survey, simulation modeling, hardware prototyping, technical documentation, and publication in IEEE/Scopus/SCI-indexed journals."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including IEEE topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Energy Storage with Renewable Integration – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Energy Storage with Renewable Integration Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering battery storage, supercapacitors, hybrid energy storage systems, AI-based energy management, and IoT-enabled monitoring.";
+
+const pageUrl =
+  "/department/renewable-energy-systems/energy-storage-integration";
 
 const EEEEnergyStorageRenewableIntegrationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy Storage Projects</li>
-              <li>IEEE Renewable Energy Projects 2023–2025</li>
-              <li>B.Tech Hybrid Storage Projects</li>
-              <li>M.Tech AI-Based Energy Management</li>
-              <li>Ph.D Grid-Integrated Storage Systems</li>
-              <li>IoT-Based Storage Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>Battery and Supercapacitor Hybrid Projects</li>
-              <li>Smart Grid Storage Solutions</li>
-              <li>Adaptive Energy Management Research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
 
-            <h1>Energy Storage with Renewable Integration – Project Development Support</h1>
-            
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+       {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Energy Storage with Renewable Integration Project Development Center, 
@@ -194,69 +232,31 @@ const EEEEnergyStorageRenewableIntegrationProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/renewable-energy-systems">
-      Renewable Energy Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/solar-photovoltaic">
-      Solar Photovoltaic Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/wind-energy-conversion">
-      Wind Energy Conversion Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
-      Biomass Fuel Cell Technologies
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/energy-storage-integration">
-      Energy Storage & Renewable Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
-      Hybrid Renewable Energy Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/grid-integration-renewables">
-      Grid Integration of Renewables
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/renewable-energy-systems">Renewable Energy Systems – Project Development Center</a></li>
+              <li><a href="/department/renewable-energy-systems/solar-photovoltaic">Solar Photovoltaic Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/wind-energy-conversion">Wind Energy Conversion Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/biomass-fuel-cell">Biomass Fuel Cell Technologies</a></li>
+              <li><a href="/department/renewable-energy-systems/energy-storage-integration">Energy Storage & Renewable Integration</a></li>
+              <li><a href="/department/renewable-energy-systems/hybrid-renewable-systems">Hybrid Renewable Energy Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/grid-integration-renewables">Grid Integration of Renewables</a></li>
+            </ul>
 
-          </div>
-          
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

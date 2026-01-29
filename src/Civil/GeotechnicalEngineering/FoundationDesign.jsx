@@ -1,76 +1,85 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Foundation Design IEEE Projects 2023–2025",
+  "Shallow and Deep Foundation Design",
+  "Pile Raft Foundation Optimization",
+  "AI Based Foundation Settlement Prediction",
+  "FEM Based Foundation Analysis",
+  "Sustainable Foundation Design",
+  "IoT Enabled Foundation Monitoring",
+  "Geotechnical Engineering Projects",
+  "Civil Engineering B.Tech M.Tech Ph.D.",
+  "Narpavi Research Institute Geotechnical Projects"
+];
+
 const faqs = [
   {
     question: "What services does the Foundation Design Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Foundation Design Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on foundation design, soil-structure interaction, and IoT-based monitoring."
+    answer:
+      "Narpavi Research Institute’s Foundation Design Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on foundation design, soil-structure interaction, and IoT-based monitoring."
   },
   {
     question: "What types of Foundation Design projects are supported?",
-    answer: "We support B.Tech projects (shallow and deep foundation design), M.Tech projects (advanced FEM and seismic analysis), and Ph.D. projects (AI-driven prediction and sustainable foundations) for safe and durable infrastructure."
+    answer:
+      "B.Tech projects on shallow and deep foundations, M.Tech projects on FEM and seismic analysis, and Ph.D. projects on AI-driven prediction and sustainable foundation systems."
   },
   {
-    question: "Which tools and technologies are used in Foundation Design projects?",
-    answer: "Our stack includes STAAD.Pro, SAFE, PLAXIS, ANSYS, ABAQUS, IoT sensors, and AI frameworks (TensorFlow, Keras) for foundation analysis and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "STAAD.Pro, SAFE, PLAXIS, ANSYS, ABAQUS, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering, focusing on finite element modeling, sustainable materials, and IoT monitoring."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering focusing on FEM modeling, sustainability, and smart monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, testing, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CEFoundationDesignProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Foundation Design IEEE Projects (2023–2025)"
-        description="Foundation Design IEEE project development for B.Tech, M.Tech & PhD scholars focusing on shallow/deep foundations, FEM analysis (PLAXIS, ANSYS), soil-structure interaction, AI settlement prediction, and IoT monitoring."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Foundation Design – Project Development Center in Chennai"
+        description="Foundation Design project development for B.Tech, M.Tech, and Ph.D. students focusing on shallow and deep foundations, FEM analysis, soil-structure interaction, AI settlement prediction, sustainable foundations, and IoT monitoring."
+        keywords={keywords}
         url="/department/geotechnical-engineering/foundation-design"
-        type="article"
-        keywords={[
-          "Foundation Design Projects",
-          "Shallow Deep Foundations IEEE 2023–2025",
-          "Pile-Raft Optimization Projects",
-          "AI-Based Foundation Settlement Prediction",
-          "FEM-Based Foundation Analysis",
-          "Sustainable Foundation Design",
-          "IoT-Enabled Foundation Monitoring",
-          "Civil Engineering Geotechnical Projects",
-          "Narpavi Research Institute Civil Projects",
-          "Advanced Geotechnical Engineering Research"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Foundation Design Projects</li>
-              <li>Shallow & Deep Foundations</li>
-              <li>Pile-Raft Optimization Projects</li>
-              <li>AI-Based Foundation Settlement Prediction</li>
-              <li>FEM-Based Foundation Analysis</li>
-              <li>Sustainable Foundation Design IEEE 2023–2025</li>
-              <li>IoT-Enabled Foundation Monitoring</li>
-              <li>Civil Engineering Geotechnical Projects</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-              <li>Advanced Geotechnical Engineering Research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Foundation Design – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Foundation Design – Project Development Center in Chennai
+            </h1>
+                <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Foundation Design Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on foundation engineering and geotechnical analysis.
               </p>
@@ -239,33 +248,39 @@ const CEFoundationDesignProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/geotechnical-engineering">
-      Geotechnical Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
-      Soil Stabilization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/foundation-design">
-      Foundation Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/slope-stability-analysis">
-      Slope Stability Analysis
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/geotechnical-engineering">
+                  Geotechnical Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+                  Soil Stabilization Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/foundation-design">
+                  Foundation Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/slope-stability-analysis">
+                  Slope Stability Analysis
+                </a>
+              </li>
+            </ul>
+                <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

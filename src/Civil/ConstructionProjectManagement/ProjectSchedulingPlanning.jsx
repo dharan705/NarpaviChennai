@@ -1,74 +1,86 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Project Scheduling & Planning Construction IEEE 2023–2025",
+  "AI Project Scheduling",
+  "IoT Construction Planning",
+  "BIM Integrated Scheduling",
+  "CPM PERT Construction Projects",
+  "Primavera P6 MS Project Scheduling",
+  "Predictive Delay Analysis Civil Engineering",
+  "Smart Infrastructure Scheduling",
+  "B.Tech M.Tech Ph.D. Project Scheduling",
+  "Narpavi Research Institute Project Planning"
+];
 
 const faqs = [
   {
     question: "What services does the Project Scheduling & Planning Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Project Scheduling & Planning Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-based scheduling, IoT monitoring, and BIM-integrated planning."
+    answer:
+      "Narpavi Research Institute’s Project Scheduling & Planning Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-based scheduling, IoT monitoring, and BIM-integrated planning."
   },
   {
     question: "What types of Project Scheduling & Planning projects are supported?",
-    answer: "We support B.Tech projects (Gantt charts, CPM, PERT), M.Tech projects (AI and BIM-based scheduling), and Ph.D. projects (predictive algorithms, IoT-integrated systems) for efficient construction planning."
+    answer:
+      "We support B.Tech projects (Gantt charts, CPM, PERT), M.Tech projects (AI and BIM-based scheduling), and Ph.D. projects (predictive algorithms, IoT-integrated systems)."
   },
   {
-    question: "Which tools and technologies are used in Project Scheduling & Planning projects?",
-    answer: "Our stack includes Primavera P6, MS Project, MATLAB, Revit, IoT sensors, and AI frameworks (TensorFlow, Keras) for scheduling and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "Primavera P6, MS Project, MATLAB, Revit, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering, focusing on smart scheduling, IoT monitoring, and AI-driven planning."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Civil Engineering, focusing on smart scheduling, IoT monitoring, and AI-driven planning."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, scheduling simulations, IoT and AI integration, pilot implementations, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulations, AI & IoT integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CEProjectSchedulingPlanningProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Project Scheduling & Planning IEEE Projects (2023–2025)"
-        description="Project Scheduling & Planning IEEE development for B.Tech, M.Tech & PhD using Primavera P6, AI, IoT, BIM, CPM, PERT at Narpavi Research Institute."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Project Scheduling & Planning – Project Development Center in Chennai"
+        description="Project Scheduling & Planning project development for B.Tech, M.Tech, and Ph.D. students using Primavera P6, MS Project, AI, IoT, BIM, CPM, and PERT techniques."
+        keywords={keywords}
         url="/department/construction-project-management/project-scheduling-planning"
-        type="article"
-        keywords={[
-          "Project Scheduling Construction IEEE",
-          "AI Project Scheduling IEEE 2023-2025",
-          "IoT Construction Planning",
-          "BIM Integrated Scheduling",
-          "CPM PERT Construction Projects",
-          "Primavera P6 MS Project",
-          "PhD Predictive Delay Analysis",
-          "B.Tech M.Tech Construction Scheduling"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Project Scheduling & Planning in Construction</li>
-              <li>AI-Based Project Scheduling IEEE 2023–2025</li>
-              <li>IoT Real-Time Construction Planning</li>
-              <li>BIM-Integrated Scheduling Civil Engineering</li>
-              <li>CPM and PERT in Construction Projects</li>
-              <li>Predictive Delay Analysis</li>
-              <li>Smart Infrastructure Scheduling</li>
-              <li>Narpavi Research Institute Project Planning</li>
-              <li>B.Tech M.Tech Ph.D. Construction Project Scheduling</li>
-              <li>Resource Allocation Optimization in Civil Engineering</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+            
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Project Scheduling & Planning – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Project Scheduling & Planning – Project Development Center in Chennai
+            </h1>
+               <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Project Scheduling & Planning Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on efficient scheduling, resource allocation, and project management.
               </p>
@@ -236,53 +248,42 @@ const CEProjectSchedulingPlanningProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/construction-project-management">
-      Construction Project Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/smart-construction-techniques">
-      Smart Construction Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/cost-optimization-in-projects">
-      Cost Optimization in Projects
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/project-scheduling-planning">
-      Project Scheduling & Planning
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/construction-project-management">
+                  Construction Project Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/smart-construction-techniques">
+                  Smart Construction Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/cost-optimization-in-projects">
+                  Cost Optimization in Projects
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/project-scheduling-planning">
+                  Project Scheduling & Planning
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

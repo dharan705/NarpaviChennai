@@ -1,66 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "FPGA-Based Control Applications Project Development Center in Chennai",
+  "FPGA Control Applications IEEE Projects 2023–2025",
+  "VHDL Verilog FPGA Projects",
+  "B.Tech FPGA Control Applications",
+  "M.Tech Real-Time FPGA Control",
+  "Ph.D AI FPGA Systems",
+  "FPGA DSP Applications",
+  "Industrial FPGA Automation",
+  "Robotics FPGA Control",
+  "Xilinx Vivado Quartus Projects",
+  "Narpavi Research Institute FPGA Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the FPGA-Based Control Applications Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects covering FPGA-based digital controllers, high-speed DSP, real-time process optimization, AI-assisted adaptive control, and IoT-enabled FPGA monitoring."
+    question:
+      "What services does the FPGA-Based Control Applications Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects covering FPGA-based digital controllers, high-speed DSP, real-time process optimization, AI-assisted adaptive control, and IoT-enabled FPGA monitoring."
   },
   {
     question: "What types of FPGA-based projects are supported?",
-    answer: "We support B.Tech projects (HDL programming, FPGA prototypes with sensors/actuators), M.Tech projects (AI-optimized FPGA controllers, parallel processing, DSP applications), and Ph.D. projects (deep learning-based FPGA architectures, smart industry automation, patents and IEEE publications)."
+    answer:
+      "B.Tech projects include HDL programming and FPGA prototypes. M.Tech projects cover AI-optimized FPGA controllers and DSP applications. Ph.D. projects focus on deep learning FPGA architectures, smart automation, patents, and IEEE publications."
   },
   {
     question: "Which tools are used in FPGA projects?",
-    answer: "We use VHDL/Verilog, Xilinx Vivado, Intel Quartus, MATLAB/Simulink, ModelSim, IoT monitoring platforms, and AI frameworks (TensorFlow, PyTorch) for FPGA-based adaptive control."
+    answer:
+      "VHDL/Verilog, Xilinx Vivado, Intel Quartus, MATLAB/Simulink, ModelSim, IoT platforms, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects reference IEEE Transactions (2023–2025) covering FPGA digital controllers, DSP applications, high-speed processing, AI/IoT-based FPGA solutions, aligning academic research with industrial deployment standards."
+    answer:
+      "Projects reference IEEE Transactions (2023–2025) on FPGA digital controllers, DSP systems, AI-enabled control, and industrial FPGA solutions."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide end-to-end IEEE project mentoring, HDL programming guidance, FPGA prototyping, real-time validation in labs, IEEE-formatted technical reporting, and research publication in IEEE/Scopus/SCI journals."
+    answer:
+      "We provide IEEE topic mentoring, HDL guidance, FPGA prototyping, lab validation, IEEE-style documentation, and international publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "FPGA-Based Control Applications – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) FPGA-Based Control Applications Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering VHDL/Verilog controllers, DSP, AI-assisted adaptive control, IoT-enabled FPGA systems, and industrial automation.";
+
+const pageUrl =
+  "/department/embedded-systems-electrical/fpga-control-applications";
 
 const EEEFpgaControlApplicationsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-        <SEO 
-  title="FPGA Control Applications IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) FPGA-Based Control Applications projects for B.Tech, M.Tech, Ph.D. VHDL/Verilog digital controllers, DSP, AI-assisted adaptive control using Xilinx Vivado, Intel Quartus, MATLAB/Simulink, TensorFlow for industrial automation, robotics."
-  keywords="FPGA Control Applications IEEE Projects 2023–2025, VHDL Verilog FPGA Projects, B.Tech FPGA Prototypes, M.Tech Real-Time FPGA Control, Ph.D. AI FPGA Systems, FPGA DSP Applications, Industrial FPGA Automation, Robotics FPGA Control, Xilinx Vivado Quartus, Narpavi Research Institute"
-  url="/department/embedded-systems-electrical/fpga-control-applications"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Left - Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>FPGA Control Projects</li>
-              <li>IEEE FPGA Research 2023–2025</li>
-              <li>B.Tech FPGA Applications</li>
-              <li>M.Tech Real-Time FPGA Control</li>
-              <li>Ph.D AI FPGA Systems</li>
-              <li>Narpavi Research Institute</li>
-              <li>VHDL Verilog FPGA Projects</li>
-              <li>DSP FPGA Solutions</li>
-              <li>Industrial FPGA Automation</li>
-              <li>Robotics FPGA Control</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center - Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>FPGA-Based Control Applications – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+   {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the FPGA-Based Control Applications Project Development Center, providing scholars with IEEE-aligned (2023–2025) research opportunities in FPGA digital controllers, DSP, parallel control, and real-time adaptive systems.</p>
               <p>Students gain skills in HDL design, FPGA prototyping, AI-assisted controllers, IoT-enabled monitoring, and industry-grade performance validation.</p>
@@ -190,49 +221,27 @@ const EEEFpgaControlApplicationsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right - Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems – Project Development Center</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM, PIC & AVR Microcontroller Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development Center</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

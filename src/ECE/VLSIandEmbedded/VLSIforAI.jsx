@@ -1,82 +1,109 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
- import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "VLSI for Artificial Intelligence Applications Project Development Center in Chennai",
+  "IEEE VLSI AI Projects",
+  "AI Hardware Accelerators VLSI",
+  "Neuromorphic VLSI Projects",
+  "FPGA AI Inference Engines",
+  "ASIC AI Accelerator Projects",
+  "Low Power AI VLSI Architectures",
+  "3D VLSI AI Workloads",
+  "Edge AI Hardware Accelerators",
+  "Narpavi Research Institute VLSI AI"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the VLSI for Artificial Intelligence Applications Project Development Center offer?",
-    answer: "Narpavi Research Institute’s VLSI for Artificial Intelligence Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in AI accelerators, neuromorphic VLSI, and low-power AI hardware for edge computing and robotics."
+    question:
+      "What services does the VLSI for Artificial Intelligence Applications Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s VLSI for Artificial Intelligence Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in AI accelerators, neuromorphic VLSI, and low-power AI hardware."
   },
   {
-    question: "What types of VLSI for AI projects are supported?",
-    answer: "We support B.Tech projects (FPGA-based AI inference, CNN implementation), M.Tech projects (neuromorphic circuits, ASIC co-design), and Ph.D. projects (3D VLSI, spiking neural networks) for applications in IoT, healthcare, and autonomous systems."
+    question:
+      "What types of VLSI for AI projects are supported?",
+    answer:
+      "FPGA-based AI inference, ASIC AI accelerators, neuromorphic circuits, and 3D VLSI architectures."
   },
   {
-    question: "Which technologies are used in VLSI for AI project development?",
-    answer: "Our stack includes VHDL/Verilog, Cadence, Synopsys, Xilinx Vivado, and FPGA/ASIC platforms for AI accelerator design, simulation, and prototyping."
+    question:
+      "Which tools are used?",
+    answer:
+      "VHDL/Verilog, Cadence, Synopsys, Xilinx Vivado, and FPGA/ASIC platforms."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI accelerators, neuromorphic VLSI, and 3D VLSI architectures, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are based on IEEE Transactions (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question:
+      "Is journal publication support available?",
+    answer:
+      "Yes, IEEE, Scopus, and SCI publication support is provided."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "VLSI for Artificial Intelligence Applications – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/vlsi-design/vlsi-ai-project-development-center-in-chennai";
+
+const pageDescription =
+  "VLSI for Artificial Intelligence Applications Project Development Center in Chennai offering IEEE-aligned AI accelerator, neuromorphic VLSI, FPGA inference, ASIC design, low-power AI hardware, and 3D VLSI projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEVLSIAIProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="VLSI AI IEEE Projects | Neuromorphic Accelerators FPGA ASIC B.Tech M.Tech PhD (2023–2025)"
-  description="VLSI for Artificial Intelligence Applications project development for B.Tech, M.Tech, and Ph.D. students focusing on AI accelerators, neuromorphic VLSI, low-power AI hardware, FPGA inference, 3D VLSI, and IEEE-aligned research (2023–2025)."
-  url="/department/vlsi-design/vlsi-ai"
-  type="article"
-  keywords={[
-    "VLSI AI Projects IEEE",
-    "AI Hardware Accelerators VLSI",
-    "Neuromorphic VLSI Projects",
-    "FPGA AI Inference Engines",
-    "ASIC AI Accelerator Projects",
-    "Low Power AI VLSI Architectures",
-    "3D VLSI AI Workloads",
-    "Cadence Synopsys AI VLSI",
-    "Xilinx Vivado AI Projects",
-    "B.Tech FPGA CNN Implementation",
-    "M.Tech Neuromorphic Circuits",
-    "Ph.D. Spiking Neural VLSI",
-    "Narpavi Research Institute AI VLSI",
-    "Edge AI Hardware Accelerators",
-    "AI Robotics VLSI Projects"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>VLSI for Artificial Intelligence Applications Projects</li>
-              <li>IEEE VLSI-AI Projects 2023–2025</li>
-              <li>FPGA-Based AI Accelerator Projects</li>
-              <li>ASIC for AI Workloads</li>
-              <li>Neuromorphic VLSI Projects</li>
-              <li>Low-Power AI VLSI Architectures</li>
-              <li>AI Hardware Accelerator Projects</li>
-              <li>B.Tech AI-VLSI Projects</li>
-              <li>M.Tech AI-VLSI Research</li>
-              <li>Ph.D. VLSI for AI Applications</li>
-              <li>Narpavi Research Institute AI-VLSI</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>VLSI for Artificial Intelligence Applications – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
+              <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the VLSI for Artificial Intelligence Applications – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) VLSI solutions for AI-driven applications in edge computing, robotics, healthcare, and autonomous vehicles.
               </p>
@@ -235,40 +262,31 @@ const ECEVLSIAIProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
-  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
-  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
-  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
-  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
-  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
-  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+              <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+              <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+              <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+              <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+              <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+              <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

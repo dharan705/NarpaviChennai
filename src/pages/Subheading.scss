@@ -217,6 +217,9 @@
 
 .right-box {
   order: 3;
+  a{
+    text-decoration: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -289,3 +292,5 @@
       }
     }
   }
+
+  

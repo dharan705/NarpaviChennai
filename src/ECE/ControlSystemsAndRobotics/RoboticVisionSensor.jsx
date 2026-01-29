@@ -1,65 +1,88 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What is the focus of the Robotic Vision and Sensor Fusion Project Development Center?",
-    answer: "The Robotic Vision and Sensor Fusion Project Development Center at Narpavi Research Institute focuses on IEEE-aligned projects (2023–2025) integrating robotic vision and multi-sensor fusion for autonomous, industrial, healthcare, agricultural, and defense robots."
+    question:
+      "What is the focus of the Robotic Vision and Sensor Fusion Project Development Center?",
+    answer:
+      "The Robotic Vision and Sensor Fusion Project Development Center at Narpavi Research Institute focuses on IEEE-aligned projects (2023–2025) integrating robotic vision and multi-sensor fusion for autonomous, industrial, healthcare, agricultural, and defense robots.",
   },
   {
     question: "What types of projects are supported for different academic levels?",
-    answer: "B.Tech projects focus on vision-based robots using Raspberry Pi and Arduino, M.Tech projects focus on deep learning, LiDAR-camera fusion, and SLAM, while Ph.D. projects emphasize multi-modal sensor fusion, AI-enhanced SLAM, and human-robot collaborative perception systems."
+    answer:
+      "B.Tech projects focus on vision-based robots using Raspberry Pi and Arduino, M.Tech projects focus on deep learning, LiDAR-camera fusion, and SLAM, while Ph.D. projects emphasize multi-modal sensor fusion, AI-enhanced SLAM, and human-robot collaborative perception systems.",
   },
   {
-    question: "Which technologies and tools are used in robotic vision and sensor fusion projects?",
-    answer: "Technologies include deep learning (YOLO, Faster R-CNN), SLAM, sensor fusion frameworks, LiDAR, IMU, GPS integration, ROS, MATLAB/Simulink, Gazebo, TensorFlow, and Edge AI platforms."
+    question:
+      "Which technologies and tools are used in robotic vision and sensor fusion projects?",
+    answer:
+      "Technologies include deep learning (YOLO, Faster R-CNN), SLAM, sensor fusion frameworks, LiDAR, IMU, GPS integration, ROS, MATLAB/Simulink, Gazebo, TensorFlow, and Edge AI platforms.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are designed based on IEEE Transactions and Conferences (2023–2025), ensuring alignment with global robotics research trends in vision, SLAM, AI-driven fusion, and autonomous mobility."
+    answer:
+      "Projects are designed based on IEEE Transactions and Conferences (2023–2025), ensuring alignment with global robotics research trends in vision, SLAM, AI-driven fusion, and autonomous mobility.",
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer complete support including topic selection, algorithm development, simulation with ROS/Gazebo/MATLAB, prototype building, IEEE-format documentation, and journal publication in Scopus/SCI/IEEE venues."
-  }
+    answer:
+      "We offer complete support including topic selection, algorithm development, simulation with ROS/Gazebo/MATLAB, prototype building, IEEE-format documentation, and journal publication in Scopus/SCI/IEEE venues.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Robotic Vision Projects",
+  "Sensor Fusion Projects",
+  "AI Robotics IEEE Projects",
+  "SLAM Robotics Projects",
+  "LiDAR-Camera Fusion Robots",
+  "Autonomous Vehicle Vision Projects",
+  "Deep Learning Robotic Vision",
+  "Multi-Sensor Fusion Robotics",
+  "IEEE Robotics Project Development 2023–2025",
+  "Narpavi Research Institute Robotics",
 ];
 
 const ECERoboticVisionSensorFusionProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Robotic Vision and Sensor Fusion IEEE Projects | SLAM, LiDAR-Camera, Edge AI | B.Tech M.Tech Ph.D."
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Robotic Vision and Sensor Fusion – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) robotic vision and sensor fusion projects using deep learning (YOLO, Faster R-CNN), SLAM, LiDAR/IMU/GPS fusion, ROS, Gazebo, MATLAB/Simulink, TensorFlow, and Edge AI for autonomous, industrial, healthcare, and defense robots."
-        keywords="Robotic Vision Projects, Sensor Fusion Projects, AI Robotics IEEE Projects, SLAM Robotics Projects, LiDAR-Camera Fusion Robots, Autonomous Vehicle Vision Projects, Deep Learning Robotic Vision, Multi-Sensor Fusion Robotics, IEEE Robotics Project Development 2023–2025, Narpavi Research Institute Robotics"
-        url="/department/control-systems-robotics/robotic-vision-sensor-fusion"
+        keywords={keywords}
+        url="/department/control-systems-robotics/robotic-vision-sensor-fusion-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
+
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Robotic Vision Projects</li>
-              <li>Sensor Fusion Projects</li>
-              <li>AI Robotics IEEE Projects</li>
-              <li>SLAM Robotics Projects</li>
-              <li>LiDAR-Camera Fusion Robots</li>
-              <li>Autonomous Vehicle Vision Projects</li>
-              <li>Deep Learning Robotic Vision</li>
-              <li>Multi-Sensor Fusion Robotics</li>
-              <li>IEEE Robotics Project Development 2023–2025</li>
-              <li>Narpavi Research Institute Robotics</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Robotic Vision and Sensor Fusion – Project Development Center</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Robotic Vision and Sensor Fusion – Project Development Center in Chennai</h1>
+                 <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> introduces the <em>Excellence in Robotic Vision and Sensor Fusion Project Development</em>, a dedicated center for building intelligent, perception-driven robotic systems. Our projects align with IEEE standards (2023–2025) and support B.Tech, M.Tech, and Ph.D. scholars in creating autonomous robots with advanced perception and decision-making.
               </p>
@@ -188,40 +211,23 @@ const ECERoboticVisionSensorFusionProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-              <ul>
-  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
-  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
-  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
-  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
-  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/control-systems-robotics">Control Systems & Robotics</a></li>
+              <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+              <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+              <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+              <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

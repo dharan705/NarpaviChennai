@@ -1,5 +1,20 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Cost Optimization in Construction Projects IEEE 2023–2025",
+  "AI Project Cost Management",
+  "IoT Real-Time Cost Monitoring",
+  "BIM Cost Optimization Projects",
+  "Predictive Budgeting Civil Projects",
+  "Primavera MS Project Cost Simulation",
+  "Construction Cost Control Projects",
+  "B.Tech M.Tech Ph.D. Cost Optimization Projects",
+  "Narpavi Research Institute Cost Optimization"
+];
 
 const faqs = [
   {
@@ -11,64 +26,55 @@ const faqs = [
     answer: "We support B.Tech projects (basic cost estimation), M.Tech projects (AI and simulation-based cost control), and Ph.D. projects (BIM-AI integration, predictive analytics) for efficient construction cost management."
   },
   {
-    question: "Which tools and technologies are used in Cost Optimization in Projects projects?",
-    answer: "Our stack includes Primavera, MS Project, MATLAB, Revit, IoT sensors, and AI frameworks (TensorFlow, Keras) for cost simulation and monitoring."
+    question: "Which tools and technologies are used?",
+    answer: "Primavera, MS Project, MATLAB, Revit, IoT sensors, and AI frameworks (TensorFlow, Keras)."
   },
   {
     question: "How are projects aligned with IEEE standards?",
     answer: "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering, focusing on smart cost management, IoT monitoring, and AI-driven budgeting."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, cost simulations, IoT and AI integration, pilot implementations, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer: "End-to-end guidance including topic selection, simulations, AI & IoT integration, and publication support."
   }
 ];
 
 const CECostOptimizationInProjectsProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Cost Optimization in Construction Projects IEEE (2023–2025)"
-        description="Cost Optimization in Projects IEEE development for B.Tech, M.Tech & PhD using AI, IoT, BIM, predictive analytics & Primavera at Narpavi Research Institute."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Cost Optimization in Projects – Project Development Center in Chennai"
+        description="Cost Optimization in Projects project development for B.Tech, M.Tech, and Ph.D. students using AI, IoT, BIM, predictive analytics, Primavera, and smart cost management systems."
+        keywords={keywords}
         url="/department/construction-project-management/cost-optimization-in-projects"
-        type="article"
-        keywords={[
-          "Cost Optimization Construction Projects",
-          "AI Project Cost Management IEEE 2023-2025",
-          "IoT Real-Time Cost Monitoring",
-          "BIM Cost Optimization",
-          "Predictive Budgeting Civil Projects",
-          "Primavera MS Project Cost Simulation",
-          "PhD Construction Cost Management",
-          "B.Tech M.Tech Cost Estimation Projects"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Cost Optimization in Construction Projects</li>
-              <li>AI-Based Project Cost Management IEEE 2023–2025</li>
-              <li>IoT Real-Time Cost Monitoring</li>
-              <li>BIM Cost Optimization</li>
-              <li>Predictive Budgeting in Civil Projects</li>
-              <li>Resource Allocation and Cost Reduction</li>
-              <li>B.Tech M.Tech Ph.D. Construction Projects</li>
-              <li>Narpavi Research Institute Cost Optimization</li>
-              <li>Smart Infrastructure Project Cost Control</li>
-              <li>Construction Waste Reduction Techniques</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+           
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Cost Optimization in Projects – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Cost Optimization in Projects – Project Development Center in Chennai
+            </h1>
+               <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Cost Optimization in Projects Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on efficient budgeting, resource allocation, and cost management.
               </p>
@@ -229,53 +235,42 @@ const CECostOptimizationInProjectsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/construction-project-management">
-      Construction Project Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/smart-construction-techniques">
-      Smart Construction Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/cost-optimization-in-projects">
-      Cost Optimization in Projects
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/project-scheduling-planning">
-      Project Scheduling & Planning
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/construction-project-management">
+                  Construction Project Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/smart-construction-techniques">
+                  Smart Construction Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/cost-optimization-in-projects">
+                  Cost Optimization in Projects
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/project-scheduling-planning">
+                  Project Scheduling & Planning
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

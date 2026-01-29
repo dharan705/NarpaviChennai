@@ -1,76 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"; 
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Smart Factory Systems Project Development Center in Chennai",
+  "Smart Factory IEEE Projects 2023–2025",
+  "Industry 4.0 Student Projects",
+  "Industry 5.0 Smart Factory Research",
+  "IoT Enabled Manufacturing Systems",
+  "AI Predictive Maintenance Projects",
+  "Digital Twin Smart Factory",
+  "Collaborative Robotics Projects",
+  "Cybersecurity in Smart Manufacturing",
+  "Narpavi Research Institute Smart Factory Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Smart Factory Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Factory Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled manufacturing, AI-driven predictive maintenance, digital twins, collaborative robotics, and cybersecurity for smart factories in automotive, aerospace, electronics, and pharmaceutical industries."
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on IoT-enabled manufacturing, AI predictive maintenance, digital twins, collaborative robotics, and cybersecurity."
   },
   {
-    question: "What types of Smart Factory Systems projects are supported?",
-    answer: "We support B.Tech projects (IoT monitoring, robotics basics), M.Tech projects (AI-driven automation, digital twins), and Ph.D. projects (self-learning systems, blockchain-secured manufacturing) for applications in smart factories, logistics, and Industry 4.0/5.0."
+    question: "Which students can apply?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students across Industrial, Production, and Manufacturing domains."
   },
   {
-    question: "Which tools and technologies are used in Smart Factory Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, Python, Arduino, Raspberry Pi, cloud platforms, blockchain frameworks, AR/VR systems, and digital twin tools for simulation, prototyping, and automation."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB, Simulink, Python, Arduino, Raspberry Pi, cloud platforms, blockchain frameworks, and digital twin tools."
   },
   {
-    question: "How are Smart Factory Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics, Automation, and Systems Engineering, focusing on IoT, AI, digital twins, and cybersecurity, aligned with IEEE/IEC standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are aligned with IEEE Transactions (2023–2025) and Industry 4.0 / 5.0 standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier journal and patent support is available."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Factory Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Factory Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IoT manufacturing, AI predictive maintenance, digital twins, collaborative robotics, and cybersecurity.";
+
+const pageUrl =
+  "/department/industrial-production-optimization/smart-factory-systems";
 
 const MESmartFactorySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Smart Factory Systems IEEE Projects (2023–2025)"
-        description="Smart Factory Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, Simulink, IoT manufacturing, AI predictive maintenance, digital twins, collaborative robotics, cybersecurity for Industry 4.0/5.0."
-        url="/department/industrial-production-optimization/smart-factory-systems"
-        type="article"
-        keywords={[
-          "Smart Factory IEEE Projects",
-          "Industry 4.0 Project Topics",
-          "IoT Enabled Manufacturing Systems",
-          "AI Predictive Maintenance Projects",
-          "Digital Twin Student Projects",
-          "Robotics Automation Factories",
-          "Blockchain Manufacturing Projects",
-          "Industry 5.0 Student Research",
-          "Narpavi Research Institute Projects",
-          "Smart Grid Industrial Integration"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Factory IEEE Projects</li>
-              <li>Industry 4.0 Project Topics</li>
-              <li>IoT-Enabled Manufacturing Systems</li>
-              <li>AI Predictive Maintenance Projects</li>
-              <li>Digital Twin Student Projects</li>
-              <li>Robotics and Automation in Factories</li>
-              <li>Blockchain Manufacturing Projects</li>
-              <li>Smart Grid Integration in Industries</li>
-              <li>Industry 5.0 Student Research</li>
-              <li>Narpavi Research Institute Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Smart Factory Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+   <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Factory Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on IoT-enabled manufacturing, AI-driven predictive maintenance, digital twins, collaborative robotics, and cybersecurity for Industry 4.0 and 5.0.
               </p>
@@ -260,43 +279,26 @@ const MESmartFactorySystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/industrial-production-optimization">
-      Industrial Production Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/lean-manufacturing">
-      Lean Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/supply-chain-process">
-      Supply Chain Process Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
-      Industrial Safety & Ergonomics
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/smart-factory-systems">
-      Smart Factory Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/cost-time-optimization">
-      Cost & Time Optimization
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/industrial-production-optimization">Industrial Production Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/lean-manufacturing">Lean Manufacturing</a></li>
+              <li><a href="/department/industrial-production-optimization/supply-chain-process">Supply Chain Process Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/industrial-safety-ergonomics">Industrial Safety & Ergonomics</a></li>
+              <li><a href="/department/industrial-production-optimization/smart-factory-systems">Smart Factory Systems</a></li>
+              <li><a href="/department/industrial-production-optimization/cost-time-optimization">Cost & Time Optimization</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

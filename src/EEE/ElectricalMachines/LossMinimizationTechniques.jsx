@@ -1,66 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Loss Minimization Techniques Project Development Center in Chennai",
+  "Loss Minimization Techniques IEEE Projects 2023–2025",
+  "Copper and Core Loss Reduction Projects",
+  "High Efficiency Electrical Machine Design",
+  "B.Tech Energy Efficient Machine Projects",
+  "M.Tech AI Based Drive Optimization",
+  "Ph.D Electrical Machine Efficiency Research",
+  "Energy Efficient Motor Drives",
+  "IoT Based Energy Monitoring Systems",
+  "Narpavi Research Institute Loss Minimization"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Loss Minimization Techniques Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Loss Minimization Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on copper/core loss reduction, high-efficiency machine design, and energy-saving control strategies for electrical machines and drives."
+    question:
+      "What services does the Loss Minimization Techniques Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Loss Minimization Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on copper and core loss reduction, high-efficiency machine design, and energy-saving control strategies for electrical machines and drives."
   },
   {
     question: "What types of Loss Minimization projects are supported?",
-    answer: "We support B.Tech projects (loss analysis, IoT-based monitoring), M.Tech projects (AI-based optimization, efficient drive design), and Ph.D. projects (multi-objective optimization, predictive control) for applications in industrial automation, EVs, and renewable energy."
+    answer:
+      "We support B.Tech projects (loss analysis and IoT-based monitoring), M.Tech projects (AI-based optimization and efficient drive design), and Ph.D. projects (multi-objective optimization and predictive control) for industrial automation, EVs, and renewable energy systems."
   },
   {
     question: "Which technologies are used in Loss Minimization project development?",
-    answer: "Our stack includes MATLAB/Simulink, ANSYS Maxwell, LabVIEW, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), and hardware-in-the-loop (HIL) testbeds for energy-efficient machine design and control."
+    answer:
+      "MATLAB/Simulink, ANSYS Maxwell, LabVIEW, TensorFlow, PyTorch, IoT platforms (MQTT), and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like copper/core loss minimization, AI-driven control, and IoT-based energy monitoring, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering copper and core loss minimization, AI-driven control, and IoT-based energy monitoring."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/ANSYS, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Loss Minimization Techniques – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Loss Minimization Techniques Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering copper and core loss reduction, high-efficiency machine design, AI-based optimization, IoT energy monitoring, and advanced control strategies.";
+
+const pageUrl =
+  "/department/electrical-machines/loss-minimization-techniques";
 
 const EEELossMinimizationTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Loss Minimization Techniques IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Loss Minimization Techniques projects for B.Tech, M.Tech, Ph.D. Copper/core loss reduction, high-efficiency machine design, AI-based optimization, energy-saving control using MATLAB/Simulink, ANSYS Maxwell, TensorFlow for industrial automation, EVs, renewable energy."
-  keywords="Loss Minimization Techniques IEEE Projects 2023–2025, Copper Core Loss Reduction, B.Tech High-Efficiency Machine Projects, M.Tech AI Drive Optimization, Ph.D. Electrical Machine Efficiency Research, Energy-Efficient Motor Drives, IoT Energy Monitoring, Industrial Loss Optimization, Smart Drive Solutions, Narpavi Research Institute"
-  url="/department/electrical-machines/loss-minimization-techniques"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Loss Minimization Techniques Projects</li>
-              <li>Energy-Efficient Motor Projects</li>
-              <li>IEEE Loss Reduction Projects 2023–2025</li>
-              <li>B.Tech High-Efficiency Machine Projects</li>
-              <li>M.Tech AI-Based Drive Optimization</li>
-              <li>Ph.D Electrical Machine Efficiency Research</li>
-              <li>IoT-Based Energy Monitoring</li>
-              <li>Smart Industrial Drive Solutions</li>
-              <li>Copper and Core Loss Optimization Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Loss Minimization Techniques – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Loss Minimization Techniques Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance energy efficiency in electrical machines and power systems aligned with IEEE Transactions (2023–2025). Our projects focus on copper/core loss reduction, high-efficiency machine design, and energy-saving control strategies.
               </p>
@@ -208,48 +238,27 @@ const EEELossMinimizationTechniquesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/electrical-machines">Electrical Machines – Project Development Center</a></li>
+              <li><a href="/department/electrical-machines/advanced-drives-controllers">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

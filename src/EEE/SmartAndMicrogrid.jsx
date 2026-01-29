@@ -1,65 +1,83 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Smart Grid Project Development Center Chennai",
+  "Microgrid Project Development Center Chennai",
+  "Smart Grid IEEE Projects",
+  "Microgrid IEEE Projects",
+  "Smart Energy Management Systems",
+  "Blockchain Smart Grid Projects",
+  "IoT Smart Grid IEEE Research",
+  "AI in Smart Grid Projects",
+  "B.Tech Smart Grid Projects",
+  "M.Tech Microgrid Projects",
+  "Ph.D. Smart Energy Research",
+  "Narpavi Research Institute"
+];
 
 const faqs = [
   {
     question: "What services does the Smart Grid & Microgrid Project Development Center offer?",
-    answer: "Narpavi Research Institute's Smart Grid & Microgrid Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart energy management, renewable integration, and AI-driven grid intelligence for applications in smart cities, rural electrification, and industrial power systems."
+    answer:
+      "Narpavi Research Institute's Smart Grid & Microgrid Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart energy management, renewable integration, and AI-driven grid intelligence."
   },
   {
     question: "What types of smart grid and microgrid projects are supported?",
-    answer: "We support B.Tech projects (smart meters, microgrid prototypes), M.Tech projects (hybrid microgrids, blockchain energy trading), and Ph.D. projects (AI-based forecasting, cyber-secure grids) for applications in smart grids, decentralized energy, and EV integration."
+    answer:
+      "We support B.Tech projects (smart meters, microgrid prototypes), M.Tech projects (hybrid microgrids, blockchain energy trading), and Ph.D. projects (AI-based forecasting, cyber-secure grids)."
   },
   {
     question: "Which technologies are used in smart grid and microgrid project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSCAD, OpenDSS, and IoT platforms like AWS IoT and Raspberry Pi for advanced smart grid simulations and prototyping."
+    answer:
+      "Our stack includes MATLAB/Simulink, PSCAD, OpenDSS, and IoT platforms like AWS IoT and Raspberry Pi."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like smart meters, blockchain energy trading, and AI-driven load forecasting, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering smart meters, blockchain energy trading, and AI-driven load forecasting."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEESmartGridMicrogridProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Smart Grid & Microgrid IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Smart Grid & Microgrid projects for B.Tech, M.Tech, Ph.D. Smart meters, hybrid microgrids, blockchain energy trading, AI forecasting for smart cities."
-        keywords="Smart Grid IEEE Projects 2023–2025, Microgrid IEEE Projects, Smart Energy Management Systems, Blockchain in Smart Grid IEEE Projects, IoT Smart Grid IEEE Research, B.Tech Smart Grid Projects, M.Tech Microgrid Projects, Ph.D. Smart Energy IEEE Thesis, AI in Smart Grid Projects, Narpavi Research Institute"
-        url="/smart-grid-microgrid-project-development"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Smart Grid & Microgrid – Project Development Center in Chennai"
+        description="Smart Grid & Microgrid Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on smart grids, microgrids, renewable integration, blockchain energy trading, IoT, and AI-based grid intelligence (2023–2025)."
+        url="/smart-grid-microgrid-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Grid IEEE Projects 2023–2025</li>
-              <li>Microgrid IEEE Projects</li>
-              <li>Smart Energy Management Systems</li>
-              <li>Blockchain in Smart Grid IEEE Projects</li>
-              <li>IoT Smart Grid IEEE Research</li>
-              <li>B.Tech Smart Grid Projects</li>
-              <li>M.Tech Microgrid Projects</li>
-              <li>Ph.D. Smart Energy IEEE Thesis</li>
-              <li>AI in Smart Grid Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ❌ MAIN CONTENT (UNCHANGED) */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Smart Grid & Microgrid – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>Smart Grid & Microgrid – Project Development Center in Chennai</h1>
+              <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Grid & Microgrid – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in smart energy management, renewable integration, and AI-driven grid intelligence.
               </p>
@@ -231,48 +249,26 @@ const EEESmartGridMicrogridProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Distributed Generation Integration</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

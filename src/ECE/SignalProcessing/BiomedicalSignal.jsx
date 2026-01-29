@@ -1,76 +1,106 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Biomedical Signal Processing Project Development Center in Chennai",
+  "IEEE Biomedical Signal Processing Projects",
+  "ECG EEG EMG Project Development",
+  "AI Healthcare Signal Processing",
+  "Wearable Biomedical Device Projects",
+  "Biomedical Image Processing IEEE",
+  "B.Tech M.Tech PhD Biomedical Projects",
+  "Narpavi Research Institute Biomedical Signal Processing"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Biomedical Signal Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Biomedical Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in ECG/EEG/EMG analysis, AI-based disease detection, wearable biosignal sensors, biomedical image processing, and cloud-enabled biomedical platforms for healthcare applications."
+    question:
+      "What services does the Biomedical Signal Processing Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Biomedical Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in ECG, EEG, EMG analysis, AI-driven diagnostics, wearable biosensors, and biomedical image processing."
   },
   {
-    question: "What types of Biomedical Signal Processing projects are supported?",
-    answer: "We support B.Tech projects (ECG/EEG analysis, heart disease detection), M.Tech projects (wearable devices, brain-computer interfaces), and Ph.D. projects (multimodal biosignal fusion, biomedical cryptography) for cardiology, neurology, and telemedicine applications."
+    question:
+      "What types of Biomedical Signal Processing projects are supported?",
+    answer:
+      "We support ECG/EEG analysis, wearable medical devices, brain-computer interfaces, multimodal biosignal fusion, and cloud-based healthcare platforms."
   },
   {
-    question: "Which technologies are used in Biomedical Signal Processing project development?",
-    answer: "Our stack includes MATLAB, Python (SciPy, TensorFlow), Arduino/Raspberry Pi for hardware prototypes, and cloud platforms for simulation, AI-driven diagnostics, and real-time monitoring."
+    question:
+      "Which technologies are used?",
+    answer:
+      "MATLAB, Python (SciPy, TensorFlow), Arduino, Raspberry Pi, and cloud platforms are used."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like ECG abnormality detection, multimodal biosignal fusion, and secure biomedical signal processing, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are based on IEEE Transactions and Conferences (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, we provide full IEEE, Scopus, and SCI journal publication support."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Biomedical Signal Processing – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/signal-processing/biomedical-signal-processing-project-development-center-in-chennai";
+
+const pageDescription =
+  "Biomedical Signal Processing Project Development Center in Chennai offering IEEE-aligned ECG, EEG, EMG, AI healthcare, wearable biosensor, and biomedical imaging projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEBiomedicalSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Biomedical Signal Processing IEEE Projects | ECG EEG EMG B.Tech M.Tech PhD (2023–2025)"
-  description="Biomedical Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on ECG/EEG/EMG analysis, AI disease detection, wearable biosensors, biomedical imaging, and IEEE-aligned healthcare research (2023–2025)."
-  url="/department/signal-processing/biomedical-signal-processing"
-  type="article"
-  keywords={[
-    "Biomedical Signal Processing Projects",
-    "IEEE Biomedical Projects 2025",
-    "ECG EEG EMG Analysis Projects",
-    "AI Healthcare Signal Processing",
-    "Wearable Medical Device Projects",
-    "Biomedical Image Processing IEEE",
-    "TensorFlow Biomedical DSP",
-    "Brain Computer Interface Projects",
-    "IoT Health Monitoring Systems",
-    "B.Tech ECG Analysis Projects",
-    "M.Tech Wearable Biosensors",
-    "Ph.D. Multimodal Biosignal Fusion",
-    "Narpavi Research Institute Biomedical",
-    "Secure Biomedical Signal Processing",
-    "Cloud Healthcare Platforms IEEE"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Biomedical Signal Processing</li>
-              <li>IEEE Biomedical Projects</li>
-              <li>ECG EEG EMG Projects</li>
-              <li>AI Healthcare Signal Processing</li>
-              <li>Wearable Medical Device Projects</li>
-              <li>Biomedical Image Processing Research</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Biomedical Signal Processing – Project Development Support</h1>
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
@@ -226,40 +256,31 @@ const ECEBiomedicalSignalProcessingProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
-  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
-  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
-  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
-  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
-  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
-  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
-</ul>
+            <ul>
+              <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+              <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+              <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+              <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+              <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+              <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+              <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

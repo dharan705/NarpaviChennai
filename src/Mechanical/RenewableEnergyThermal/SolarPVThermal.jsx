@@ -1,76 +1,99 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Solar PV & Thermal Systems Project Development Center in Chennai",
+  "Solar PV IEEE Projects 2023–2025",
+  "Hybrid PV Thermal Systems Projects",
+  "IoT Enabled Solar Systems",
+  "AI Based Solar Optimization",
+  "Renewable Energy Student Projects",
+  "PV System Modeling IEEE Projects",
+  "Smart Building Energy Solutions",
+  "Digital Twin Solar PV Thermal",
+  "Narpavi Research Institute Solar Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Solar PV & Thermal Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Solar PV & Thermal Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on hybrid PV-Thermal systems, AI-driven optimization, IoT-enabled monitoring, and smart grid integration for applications in smart buildings, industrial heating, and renewable energy management."
+    question:
+      "What services does the Solar PV & Thermal Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Solar PV & Thermal Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on hybrid PV-Thermal systems, AI-driven optimization, IoT-enabled monitoring, and smart grid integration for applications in smart buildings, industrial heating, and renewable energy management."
   },
   {
-    question: "What types of Solar PV & Thermal Systems projects are supported?",
-    answer: "We support B.Tech projects (basic PV and thermal systems), M.Tech projects (hybrid PV-T optimization, AI-driven energy management), and Ph.D. projects (digital twins, smart grid integration) for applications in renewable energy and smart infrastructure."
+    question:
+      "What types of Solar PV & Thermal Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (basic PV and thermal systems), M.Tech projects (hybrid PV-T optimization, AI-driven energy management), and Ph.D. projects (digital twins, smart grid integration)."
   },
   {
-    question: "Which tools and technologies are used in Solar PV & Thermal Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, PVsyst, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like PV panels, thermal collectors, and battery storage units for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Solar PV & Thermal Systems projects?",
+    answer:
+      "MATLAB, Simulink, PVsyst, Python, AI frameworks, IoT platforms, PV panels, thermal collectors, and battery storage units."
   },
   {
-    question: "How are Solar PV & Thermal Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Sustainable Energy and Power Systems, focusing on hybrid PV-Thermal systems, AI-driven energy optimization, and IoT-enabled smart grids."
+    question:
+      "How are Solar PV & Thermal Systems projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Sustainable Energy and Power Systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    answer:
+      "End-to-end guidance including simulation, AI/IoT integration, prototyping, documentation, and IEEE/Scopus/Elsevier publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Solar PV & Thermal Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Solar PV & Thermal Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering hybrid PV-Thermal systems, AI optimization, IoT monitoring, battery integration, and smart grid connectivity.";
+
+const pageUrl =
+  "/department/renewable-thermal-energy/solar-pv-thermal";
 
 const MESolarPVThermalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Solar PV & Thermal Systems IEEE Projects (2023–2025)"
-        description="Solar PV Thermal Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PVsyst, AI optimization, IoT monitoring, hybrid PV-Thermal systems, smart grid integration for smart buildings, industrial heating."
-        url="/department/renewable-thermal-energy/solar-pv-thermal"
-        type="article"
-        keywords={[
-          "Solar PV IEEE 2023–2025",
-          "Hybrid PV Thermal Systems Projects",
-          "IoT Enabled Solar Systems",
-          "AI Based Solar Optimization",
-          "Renewable Energy Student Projects",
-          "PV System Modeling IEEE Projects",
-          "Smart Building Energy Solutions",
-          "Battery Integrated Solar Systems",
-          "Digital Twin Solar PV Thermal",
-          "Narpavi Research Institute Solar"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Solar PV IEEE Projects 2023–2025</li>
-              <li>Hybrid PV-Thermal Systems Projects</li>
-              <li>IoT-Enabled Solar Systems</li>
-              <li>AI-Based Solar Optimization</li>
-              <li>Renewable Energy Student Projects</li>
-              <li>PV System Modeling IEEE Projects</li>
-              <li>Smart Building Energy Solutions</li>
-              <li>Ph.D. Solar Energy Research Projects</li>
-              <li>Battery-Integrated Solar Systems</li>
-              <li>Narpavi Research Institute Renewable Energy Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Solar PV & Thermal Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+        <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Solar PV & Thermal Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on hybrid PV-Thermal systems, AI-driven optimization, IoT-enabled monitoring, and smart grid integration.
               </p>
@@ -246,43 +269,29 @@ const MESolarPVThermalSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/renewable-thermal-energy">
-      Renewable & Thermal Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
-      Solar PV & Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/wind-turbine-design">
-      Wind Turbine Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
-      Biomass & Biofuel Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
-      Energy Storage & Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/smart-grid-integration">
-      Smart Grid Integration
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/renewable-thermal-energy">Renewable & Thermal Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/solar-pv-thermal">Solar PV & Thermal Systems</a></li>
+              <li><a href="/department/renewable-thermal-energy/wind-turbine-design">Wind Turbine Design</a></li>
+              <li><a href="/department/renewable-thermal-energy/biomass-biofuel-energy">Biomass & Biofuel Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/energy-storage-recovery">Energy Storage & Recovery</a></li>
+              <li><a href="/department/renewable-thermal-energy/smart-grid-integration">Smart Grid Integration</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

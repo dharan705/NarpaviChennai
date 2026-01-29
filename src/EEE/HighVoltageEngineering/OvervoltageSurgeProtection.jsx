@@ -1,67 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Overvoltage & Surge Protection Project Development Center in Chennai",
+  "Overvoltage Surge Protection IEEE Projects 2023–2025",
+  "Lightning Arrester Projects",
+  "Surge Protective Devices SPD",
+  "B.Tech Overvoltage Protection Projects",
+  "M.Tech AI Surge Detection Projects",
+  "Ph.D Smart Protective Relays",
+  "Transient Voltage Suppression Projects",
+  "IoT Surge Monitoring Systems",
+  "Narpavi Research Institute Surge Protection"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Overvoltage & Surge Protection Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Overvoltage & Surge Protection Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on surge protection devices, lightning arresters, transient suppression methods, intelligent protective relays, and AI-assisted monitoring systems."
+    question:
+      "What services does the Overvoltage & Surge Protection Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Overvoltage & Surge Protection Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on surge protection devices, lightning arresters, transient suppression methods, intelligent protective relays, and AI-assisted monitoring systems."
   },
   {
-    question: "What types of projects in Overvoltage & Surge Protection are supported?",
-    answer: "We support B.Tech projects (lightning arresters, surge protection circuits, transient testing units), M.Tech projects (AI-assisted surge detection, smart relay algorithms), and Ph.D. projects (deep learning-based protection frameworks, adaptive grid-level surge coordination, and IoT-enabled predictive monitoring for industrial/utility systems)."
+    question: "What types of projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in lightning arresters, surge protection circuits, AI-assisted detection, smart relays, and grid-level surge coordination."
   },
   {
-    question: "Which tools and technologies are used in Overvoltage Protection projects?",
-    answer: "Our toolkit includes MATLAB/Simulink, PSCAD, COMSOL Multiphysics for surge analysis, IoT tools (MQTT, Modbus), FPGA/DSP hardware, and AI frameworks (TensorFlow, PyTorch) for predictive surge and fault detection."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB/Simulink, PSCAD, COMSOL Multiphysics, FPGA/DSP platforms, IoT tools, TensorFlow, and PyTorch."
   },
   {
-    question: "How are these projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) focusing on surge protective devices, lightning arresters, smart protective relays, predictive detection strategies, and IEEE-compliant protection coordination methods."
+    question: "How are projects aligned with IEEE?",
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on surge protective devices, lightning protection, smart relays, and protection coordination."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide complete support from IEEE topic identification, simulations, hardware prototyping, IoT-enabled real-time monitoring, IEEE-style project documentation, and guidance for IEEE/Scopus/SCI indexed publications."
+    answer:
+      "We provide IEEE topic selection, simulations, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Overvoltage & Surge Protection – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Overvoltage & Surge Protection Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering lightning arresters, surge protective devices, AI-assisted smart relays, and transient voltage mitigation.";
+
+const pageUrl =
+  "/department/high-voltage-engineering/overvoltage-surge-protection";
 
 const EEEOvervoltageSurgeProtectionProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Overvoltage Surge Protection IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Overvoltage & Surge Protection projects for B.Tech, M.Tech, Ph.D. Lightning arresters, surge protective devices SPDs, AI-assisted smart relays using MATLAB/Simulink, PSCAD, COMSOL, TensorFlow for smart grids, industrial systems."
-  keywords="Overvoltage Surge Protection IEEE Projects 2023–2025, Lightning Arrester Projects, B.Tech Surge Mitigation, M.Tech AI Surge Detection, Ph.D. Smart Protective Relays, Surge Protective Devices SPD, Transient Voltage Suppression, IoT Surge Monitoring, Industrial Protection Systems, Narpavi Research Institute"
-  url="/department/high-voltage-engineering/overvoltage-surge-protection"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Overvoltage Protection Projects</li>
-              <li>Surge Protection Research 2023–2025</li>
-              <li>IEEE Lightning Arrester Projects</li>
-              <li>B.Tech Surge Mitigation</li>
-              <li>M.Tech AI-Based Overvoltage Protection</li>
-              <li>Ph.D Smart Relays</li>
-              <li>Narpavi Research Institute</li>
-              <li>Transient Voltage Suppression Projects</li>
-              <li>Predictive Surge Detection</li>
-              <li>Industrial Protection Systems</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Overvoltage & Surge Protection – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+   {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Overvoltage & Surge Protection Project Development Center, 
@@ -206,42 +235,27 @@ const EEEOvervoltageSurgeProtectionProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gas-insulated-substations">Gas Insulated Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing Equipment</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
         </div>
       </div>
     </div>

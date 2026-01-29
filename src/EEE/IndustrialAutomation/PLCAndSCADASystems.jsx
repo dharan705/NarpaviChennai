@@ -1,67 +1,96 @@
-import "../EEEProjectDevelopmentCenter.scss";  
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
-import SEO from "../../assets/SEO"
+import "../EEEProjectDevelopmentCenter.scss";
+import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "PLC & SCADA Systems Project Development Center in Chennai",
+  "PLC SCADA IEEE Projects 2023–2025",
+  "Industrial Automation PLC SCADA Projects",
+  "IoT Enabled SCADA Systems",
+  "Smart Grid SCADA Projects",
+  "Industry 4.0 PLC Automation",
+  "AI Integrated SCADA Systems",
+  "B.Tech PLC SCADA Projects",
+  "M.Tech PLC SCADA Projects",
+  "Ph.D PLC SCADA Research",
+  "Industrial Control Systems Projects",
+  "Narpavi Research Institute PLC SCADA"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the PLC & SCADA Systems Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in PLC programming, SCADA integration, IoT-SCADA projects, energy monitoring systems, and AI-integrated SCADA. Services include hardware prototyping, industry protocol integration, and IEEE/Scopus journal publication."
+    question:
+      "What services does the PLC & SCADA Systems Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in PLC programming, SCADA integration, IoT-SCADA projects, energy monitoring systems, and AI-integrated SCADA including hardware prototyping and IEEE/Scopus journal publication."
   },
   {
     question: "What types of projects are supported?",
-    answer: "B.Tech projects include traffic light automation, conveyor belt control, water level monitoring, and home automation. M.Tech projects cover IoT-enabled SCADA, energy monitoring, industrial safety automation. Ph.D. projects focus on AI-integrated SCADA, cyber-physical SCADA security, and Industry 4.0 PLC-SCADA frameworks."
+    answer:
+      "B.Tech projects include traffic light automation, conveyor systems, and water level monitoring. M.Tech projects focus on IoT-enabled SCADA and energy monitoring. Ph.D. projects cover AI-integrated and cyber-secure SCADA frameworks."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "PLC platforms (Siemens, Allen Bradley, Delta), SCADA software (Wonderware, WinCC, Ignition), MATLAB/Simulink, LabVIEW, industrial protocols (Modbus, OPC-UA, Profibus), IoT frameworks (MQTT), and AI/ML libraries (TensorFlow, PyTorch)."
+    answer:
+      "Siemens, Allen Bradley, Delta PLCs, Wonderware, WinCC, Ignition SCADA, MATLAB/Simulink, LabVIEW, Modbus, OPC-UA, Profibus, MQTT, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) on industrial automation, Industry 4.0, process monitoring, SCADA cybersecurity, and AI-driven predictive maintenance applications."
+    answer:
+      "Projects reference IEEE Transactions (2023–2025) on industrial automation, Industry 4.0, SCADA cybersecurity, and AI-driven predictive maintenance."
   },
   {
     question: "What academic support is provided?",
-    answer: "We support scholars with topic selection, PLC-SCADA integration, IoT/AI driven automation, hardware implementation, IEEE report formatting, and submission to IEEE, Springer, Elsevier, and SCI journals."
+    answer:
+      "End-to-end support including topic selection, PLC-SCADA integration, IoT/AI automation, IEEE report formatting, and publication in IEEE, Springer, Elsevier, and SCI journals."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "PLC & SCADA Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) PLC & SCADA Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PLC automation, SCADA integration, IoT-enabled monitoring, Industry 4.0 systems, and AI-driven industrial control.";
+
+const pageUrl = "/department/industrial-automation/plc-scada";
 
 const EEEPlcScadaSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="PLC SCADA Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) PLC & SCADA Systems projects for B.Tech, M.Tech, Ph.D. Industrial automation, IoT-SCADA integration, AI predictive monitoring using Siemens Allen Bradley Delta PLC, Wonderware WinCC Ignition, Modbus OPC-UA for smart grids, manufacturing."
-  keywords="PLC SCADA IEEE Projects 2023–2025, B.Tech PLC Automation Projects, M.Tech IoT SCADA Energy Monitoring, Ph.D. AI Cyber-Secure SCADA, Industry 4.0 PLC SCADA, Smart Grid SCADA Systems, Industrial Control Projects, Narpavi Research Institute"
-  url="/department/industrial-automation/plc-scada"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
-      
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>PLC & SCADA Systems Project Development Center</li>
-              <li>Industrial Automation Projects</li>
-              <li>PLC SCADA IEEE Projects</li>
-              <li>SCADA Monitoring Projects</li>
-              <li>PLC Automation Projects</li>
-              <li>IoT-SCADA Projects</li>
-              <li>Smart Grid SCADA Research</li>
-              <li>Industrial Control Projects</li>
-              <li>Industry 4.0 Automation Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* 📑 Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>PLC & SCADA Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> offers the PLC & SCADA Systems Project Development Center, providing IEEE-aligned (2023–2025) support for industrial automation, monitoring, and control systems.
@@ -185,53 +214,31 @@ const EEEPlcScadaSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right – Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-<ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">DCS</a></li>
+              <li><a href="/department/industrial-automation/hmi">HMI</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">RPA</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEPlcScadaSystemsProjectDevelopmentCenter;

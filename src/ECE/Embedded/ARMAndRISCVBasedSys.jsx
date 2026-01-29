@@ -1,59 +1,82 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the ARM & RISC-V Based System Development Project Development Center offer?",
-    answer: "Narpavi Research Institute’s ARM & RISC-V Based System Development Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in ARM Cortex programming, RISC-V FPGA prototyping, and hybrid architectures for IoT, robotics, and medical electronics."
+    question:
+      "What services does the ARM & RISC-V Based System Development Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s ARM & RISC-V Based System Development Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in ARM Cortex programming, RISC-V FPGA prototyping, and hybrid architectures for IoT, robotics, and medical electronics.",
   },
   {
-    question: "What types of ARM & RISC-V Based System Development projects are supported?",
-    answer: "We support B.Tech projects (ARM microcontroller programming, peripheral interfacing), M.Tech projects (hybrid ARM-RISC-V systems, AI-accelerated platforms), and Ph.D. projects (RISC-V extensions, energy-aware SoC designs) for applications in IoT, aerospace, and automotive industries."
+    question:
+      "What types of ARM & RISC-V Based System Development projects are supported?",
+    answer:
+      "We support B.Tech projects (ARM microcontroller programming, peripheral interfacing), M.Tech projects (hybrid ARM-RISC-V systems, AI-accelerated platforms), and Ph.D. projects (RISC-V extensions, energy-aware SoC designs) for applications in IoT, aerospace, and automotive industries.",
   },
   {
-    question: "Which technologies are used in ARM & RISC-V Based System Development projects?",
-    answer: "Our stack includes ARM Cortex-M/A processors, RISC-V cores, Xilinx Vivado, Keil, IAR Embedded Workbench, and FreeRTOS for hardware prototyping and software integration."
+    question:
+      "Which technologies are used in ARM & RISC-V Based System Development projects?",
+    answer:
+      "Our stack includes ARM Cortex-M/A processors, RISC-V cores, Xilinx Vivado, Keil, IAR Embedded Workbench, and FreeRTOS for hardware prototyping and software integration.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like low-power ARM architectures, RISC-V FPGA prototyping, and secure hybrid systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like low-power ARM architectures, RISC-V FPGA prototyping, and secure hybrid systems, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware prototyping, software integration, validation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, hardware prototyping, software integration, validation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "ARM & RISC-V Based System Development",
+  "ARM Cortex Projects",
+  "RISC-V FPGA Prototyping",
+  "Embedded System Development Support",
+  "IEEE ARM Projects 2023–2025",
+  "ARM-RISC-V Hybrid Architectures",
+  "Narpavi Research Institute ARM Projects",
+  "Secure Embedded Systems Development",
 ];
 
 const ECEARMRISCVSystemDevelopmentProjectDevelopmentCenter = () => {
   return (
-    <div className="ECEProjectDevelopmentCenter">\ <SEO
-        title="ARM & RISC-V Based System Development IEEE Projects | Cortex, FPGA, Hybrid SoC | B.Tech M.Tech Ph.D."
+    <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="ARM & RISC-V Based System Development – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) ARM & RISC-V based system development projects on ARM Cortex-M/A programming, RISC-V FPGA SoCs, hybrid ARM–RISC-V architectures, RTOS-based designs, and energy-aware SoCs for IoT, robotics, aerospace, and medical electronics."
-        keywords="ARM & RISC-V Based System Development, ARM Cortex Projects, RISC-V FPGA Prototyping, Embedded System Development Support, IEEE ARM Projects 2023–2025, ARM-RISC-V Hybrid Architectures, Narpavi Research Institute ARM Projects, Secure Embedded Systems Development"
-        url="/department/embedded-systems/arm-risc-v-system"
+        keywords={keywords}
+        url="/department/embedded-systems/arm-risc-v-based-system-development-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>ARM & RISC-V Based System Development</li>
-              <li>ARM Cortex Projects</li>
-              <li>RISC-V FPGA Prototyping</li>
-              <li>Embedded System Development Support</li>
-              <li>IEEE ARM Projects 2023–2025</li>
-              <li>ARM-RISC-V Hybrid Architectures</li>
-              <li>Narpavi Research Institute ARM Projects</li>
-              <li>Secure Embedded Systems Development</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>ARM & RISC-V Based System Development – Project Development Support</h1>
+             <h1>ARM & RISC-V Based System Development - Project Development Center in Chennai</h1>
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
@@ -206,40 +229,29 @@ const ECEARMRISCVSystemDevelopmentProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
-  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
-  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
-  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
-  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+              <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+              <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+              <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+              <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

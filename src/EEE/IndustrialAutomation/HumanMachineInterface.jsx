@@ -1,69 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Human Machine Interface Project Development Center in Chennai",
+  "HMI IEEE Projects 2023–2025",
+  "Industrial Automation HMI Projects",
+  "PLC SCADA HMI Projects",
+  "IoT Based HMI Systems",
+  "Smart Factory HMI Projects",
+  "AR VR HMI Research",
+  "B.Tech HMI Projects",
+  "M.Tech IoT SCADA HMI",
+  "Ph.D AI Driven HMI",
+  "Industry 4.0 HMI Systems",
+  "Narpavi Research Institute HMI Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Human-Machine Interface (HMI) Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. in HMI-based automation, including real-time monitoring dashboards, PLC/SCADA integration, IoT-enabled HMI systems, AR/VR-based interfaces, and international publication assistance."
+    question:
+      "What services does the Human-Machine Interface (HMI) Project Development Center offer?",
+    answer:
+      "We provide IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students in PLC/SCADA HMI systems, IoT-enabled dashboards, AR/VR interfaces, and AI-driven adaptive HMI designs."
   },
   {
     question: "What types of HMI projects are supported?",
-    answer: "B.Tech: PLC-based touchscreen HMIs, factory dashboards, sensor monitoring interfaces. M.Tech: IoT-enabled graphical HMIs, SCADA-integrated dashboards, predictive analytics visualization. Ph.D: AI/ML-driven HMI systems, AR/VR-enabled HMI, adaptive operator interfaces with SCI/Scopus indexed publications."
+    answer:
+      "B.Tech projects include PLC touchscreen HMIs and dashboards. M.Tech projects focus on IoT-enabled SCADA HMIs and predictive visualization. Ph.D. projects involve AI/ML, AR/VR-based adaptive HMIs with IEEE/SCI publications."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "WinCC, FactoryTalk, Ignition, Wonderware, LabVIEW, MATLAB/Simulink, Node-RED, MQTT/OPC-UA for IIoT connectivity, AR/VR HMI frameworks, cloud dashboards, TensorFlow/PyTorch for adaptive AI-integrated HMIs."
+    answer:
+      "WinCC, FactoryTalk, Ignition, Wonderware, LabVIEW, MATLAB/Simulink, Node-RED, MQTT, OPC-UA, cloud dashboards, TensorFlow, and PyTorch."
   },
   {
     question: "How are HMI projects aligned with IEEE standards?",
-    answer: "All projects align with IEEE Transactions (2023–2025) on industrial automation, human-centered design, smart factory visualization, IIoT control, and AI-enhanced user interfaces."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on industrial automation, human-centered design, IIoT visualization, and AI-enhanced interfaces."
   },
   {
     question: "What academic support is provided?",
-    answer: "Services include IEEE topic selection, PLC-HMI/SCADA integration, IoT dashboard prototyping, predictive analytics visualization, IEEE-style documentation, and international publication guidance."
+    answer:
+      "Support includes IEEE topic selection, PLC-HMI/SCADA integration, IoT dashboard prototyping, documentation, and publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Human Machine Interface – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Human Machine Interface Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PLC SCADA integration, IoT dashboards, AR VR HMI, AI-driven interfaces, and Industry 4.0 smart factories.";
+
+const pageUrl = "/department/industrial-automation/hmi";
 
 const EEEHmiProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Human-Machine Interface HMI IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Human-Machine Interface HMI projects for B.Tech, M.Tech, Ph.D. PLC/SCADA integration, IoT-enabled dashboards, AR/VR HMI, AI-driven interfaces using WinCC, FactoryTalk, Ignition, Node-RED for Industry 4.0, smart factories."
-  keywords="Human-Machine Interface HMI IEEE Projects 2023–2025, B.Tech PLC HMI Projects, M.Tech IoT SCADA HMI, Ph.D. AI AR VR HMI, Smart Factory HMI, Industrial Automation HMI, WinCC FactoryTalk Ignition, Narpavi Research Institute"
-  url="/department/industrial-automation/hmi"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 SEO Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Human-Machine Interface Project Development Center</li>
-              <li>HMI IEEE Projects</li>
-              <li>Industrial Automation HMI Projects</li>
-              <li>PLC HMI Projects</li>
-              <li>SCADA HMI Projects</li>
-              <li>IoT-Based HMI Projects</li>
-              <li>Smart Factory HMI Research</li>
-              <li>AR/VR HMI Projects</li>
-              <li>B.Tech HMI Projects</li>
-              <li>M.Tech HMI Projects</li>
-              <li>Ph.D. HMI Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* 📑 Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Human-Machine Interface (HMI) – Project Development Support</h1>
-
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> offers a dedicated HMI Project Development Center for IEEE-aligned (2023–2025) projects focused on designing intuitive, interactive, and advanced operator interfaces for industrial automation.</p>
               <p>HMI bridges operators and automation systems (PLC, SCADA, IIoT), enabling real-time visualization, predictive decision-making, and efficiency in Industry 4.0 environments.</p>
@@ -181,53 +208,31 @@ const EEEHmiProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-         <ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">Distributed Control Systems</a></li>
+              <li><a href="/department/industrial-automation/hmi">Human Machine Interface</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA Systems</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">Robotic Process Automation</a></li>
+            </ul>
 
-          </div>
-          
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEHmiProjectDevelopmentCenter;

@@ -1,63 +1,98 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Renewable Energy Scheduling Project Development Center in Chennai",
+  "Renewable Energy Scheduling IEEE Projects 2023–2025",
+  "AI Based Renewable Energy Scheduling",
+  "Smart Grid Renewable Scheduling Projects",
+  "Solar Wind Hybrid Energy Scheduling",
+  "B.Tech Renewable Energy Scheduling Projects",
+  "M.Tech AI Based Renewable Optimization",
+  "Ph.D Renewable Energy Scheduling Research",
+  "EV Integrated Renewable Energy Scheduling",
+  "Blockchain Based Energy Scheduling",
+  "Narpavi Research Institute Renewable Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Renewable Energy Scheduling Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Renewable Energy Scheduling Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven scheduling, renewable energy integration, and smart grid optimization for reliable and cost-effective energy management."
+    question:
+      "What services does the Renewable Energy Scheduling Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Renewable Energy Scheduling Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven scheduling, renewable energy integration, and smart grid optimization."
   },
   {
-    question: "What types of Renewable Energy Scheduling projects are supported?",
-    answer: "We support B.Tech projects (basic scheduling models for solar PV and storage), M.Tech projects (AI/ML-based multi-objective optimization for hybrid systems), and Ph.D. projects (stochastic models, EV integration, and blockchain-based energy trading) for applications in smart grids and renewable power plants."
+    question:
+      "What types of Renewable Energy Scheduling projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering solar PV scheduling, hybrid renewable optimization, stochastic scheduling, EV integration, and blockchain-based energy trading."
   },
   {
-    question: "Which technologies are used in Renewable Energy Scheduling project development?",
-    answer: "Our stack includes MATLAB/Simulink, Python (PyPSA, Pandapower), HOMER Pro, GAMS/CPLEX, AI/ML frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), and hardware like Arduino/ESP32 for prototyping."
+    question:
+      "Which technologies are used in Renewable Energy Scheduling project development?",
+    answer:
+      "MATLAB/Simulink, Python (PyPSA, Pandapower), HOMER Pro, GAMS/CPLEX, TensorFlow, PyTorch, MQTT, Arduino, and ESP32."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Power Systems, Smart Grid, and Renewable Energy, focusing on advanced scheduling algorithms, forecasting models, and grid integration techniques."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Power Systems, Smart Grid, and Renewable Energy."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm development, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patent filings."
+    answer:
+      "End-to-end guidance including topic selection, algorithm development, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication and patent support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Renewable Energy Scheduling – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Renewable Energy Scheduling Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-driven scheduling, smart grid integration, hybrid renewable systems, and advanced optimization techniques.";
+
+const pageUrl =
+  "/department/energy-management-systems/renewable-energy-scheduling";
 
 const EEERenewableEnergySchedulingProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Renewable Energy Scheduling IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Renewable Energy Scheduling projects for B.Tech, M.Tech, Ph.D. AI optimization, smart grid integration using MATLAB Simulink Python PyPSA Pandapower HOMER Pro GAMS CPLEX TensorFlow PyTorch MQTT Arduino ESP32."
-  keywords="Renewable Energy Scheduling IEEE Projects 2023–2025, B.Tech Solar PV Scheduling, M.Tech AI Hybrid Renewable Optimization, Ph.D. Stochastic EV Blockchain Scheduling, Smart Grid Renewable Energy Management, Narpavi Research Institute"
-  url="/department/energy-management-systems/renewable-energy-scheduling"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Renewable Energy Scheduling projects</li>
-              <li>Renewable Energy Scheduling B.Tech projects</li>
-              <li>Renewable Energy Scheduling M.Tech projects</li>
-              <li>Renewable Energy Scheduling Ph.D. research</li>
-              <li>IEEE renewable energy scheduling topics</li>
-              <li>AI in renewable energy scheduling</li>
-              <li>Smart grid renewable scheduling projects</li>
-              <li>Renewable scheduling MATLAB simulation</li>
-              <li>Narpavi Research Institute renewable projects</li>
-              <li>Energy optimization scheduling research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Renewable Energy Scheduling – Project Development Support</h1>
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
@@ -227,48 +262,27 @@ const EEERenewableEnergySchedulingProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems – Project Development Center</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand-Side Management (DSM)</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

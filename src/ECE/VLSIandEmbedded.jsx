@@ -1,81 +1,83 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
-import SEO from "../assets/SEO"
+import SEO from "../assets/SEO";
+import { Link } from "react-router-dom";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT (single source of truth) */
+const keywords = [
+  "VLSI Design Projects",
+  "Embedded Systems Project Development",
+  "IEEE VLSI Projects 2025",
+  "FPGA Implementation Projects",
+  "RISC-V Processor Design Projects",
+  "Low Power VLSI Design Research",
+  "Embedded IoT Project Support",
+  "SoC Design Project Development",
+  "ASIC FPGA IEEE Projects",
+  "AI Embedded Systems Projects",
+  "Real Time Embedded Systems Projects",
+  "Narpavi Research Institute VLSI"
+];
+
 const faqs = [
   {
     question: "What services does the VLSI Design & Embedded Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s VLSI Design & Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in ASIC design, FPGA prototyping, and embedded IoT systems for industries like consumer electronics, automotive, and healthcare."
+    answer:
+      "Narpavi Research Institute’s VLSI Design & Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in ASIC design, FPGA prototyping, and embedded IoT systems for industries like consumer electronics, automotive, and healthcare."
   },
   {
     question: "What types of VLSI and embedded systems projects are supported?",
-    answer: "We support B.Tech projects (IoT controllers, FPGA designs), M.Tech projects (low-power VLSI, AI accelerators), and Ph.D. projects (RISC-V processors, hardware security) for applications in smart cities, robotics, and 5G/6G networks."
+    answer:
+      "We support B.Tech projects (IoT controllers, FPGA designs), M.Tech projects (low-power VLSI, AI accelerators), and Ph.D. projects (RISC-V processors, hardware security) for applications in smart cities, robotics, and 5G/6G networks."
   },
   {
     question: "Which technologies are used in VLSI and embedded systems project development?",
-    answer: "Our stack includes Cadence, Xilinx Vivado, Synopsys, ARM, STM32, Arduino, Raspberry Pi, and AI frameworks for advanced VLSI and embedded solutions."
+    answer:
+      "Our stack includes Cadence, Xilinx Vivado, Synopsys, ARM, STM32, Arduino, Raspberry Pi, and AI frameworks for advanced VLSI and embedded solutions."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like low-power VLSI, RISC-V design, and AI-embedded systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like low-power VLSI, RISC-V design, and AI-embedded systems, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, system design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-  title="VLSI Design Embedded Systems IEEE Projects | FPGA RISC-V ASIC B.Tech M.Tech PhD (2023–2025)"
-  description="VLSI Design & Embedded Systems project development for B.Tech, M.Tech, and Ph.D. students focusing on ASIC design, FPGA prototyping, RISC-V processors, low-power VLSI, AI accelerators, hardware security, and IEEE-aligned research (2023–2025)."
-  url="/department/vlsi-design"
-  type="article"
-  keywords={[
-    "VLSI Design Projects IEEE",
-    "Embedded Systems Project Development",
-    "FPGA RISC-V Projects 2025",
-    "ASIC Design Projects",
-    "Low-Power VLSI Research",
-    "AI Hardware Accelerators",
-    "Cadence Synopsys Projects",
-    "Xilinx Vivado FPGA Projects",
-    "Hardware Security VLSI",
-    "B.Tech Embedded IoT Projects",
-    "M.Tech Low-Power VLSI",
-    "Ph.D. RISC-V Processor Design",
-    "Narpavi Research Institute VLSI",
-    "Real-Time Embedded Systems",
-    "SoC Design IEEE Projects"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title="VLSI Design & Embedded Systems – Project Development Center in Chennai"
+        description="VLSI Design & Embedded Systems project development for B.Tech, M.Tech, and Ph.D. students focusing on ASIC design, FPGA prototyping, RISC-V processors, low-power VLSI, AI accelerators, hardware security, and IEEE-aligned research (2023–2025)."
+        url="/vlsi-design-embedded-systems-project-development-center-chennai"
+        keywords={keywords}
+        faqs={faqs}
+      />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>VLSI Design Projects</li>
-              <li>Embedded Systems Project Development</li>
-              <li>IEEE VLSI Projects 2025</li>
-              <li>FPGA Implementation Projects</li>
-              <li>RISC-V Processor Design Projects</li>
-              <li>Low-Power VLSI Design Research</li>
-              <li>Embedded IoT Project Support</li>
-              <li>SoC Design Project Development</li>
-              <li>ASIC & FPGA IEEE Projects</li>
-              <li>AI Embedded Systems Projects</li>
-              <li>Real-Time Embedded Systems Projects</li>
-              <li>Narpavi Research Institute Project Center</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR (structure kept, keywords unified) */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>VLSI Design & Embedded Systems – Project Development Center</h1>
+            <h1>VLSI Design & Embedded Systems – Project Development Center in Chennai</h1>
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
@@ -84,6 +86,37 @@ const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
               <p>
                 With access to industry-standard EDA tools (Cadence, Xilinx, Synopsys) and embedded platforms (ARM, STM32, Raspberry Pi), we deliver innovative solutions for consumer electronics, automotive, and healthcare, ensuring academic rigor and industrial applicability.
               </p>
+              <p>
+  Research in
+  {" "}
+  <Link
+    to="/department/vlsi-design/low-power-vlsi"
+    className="internal-link highlight-link"
+  >
+    Low Power VLSI Design
+  </Link>
+  {" "}
+  focuses on minimizing energy consumption while maintaining performance in digital
+  and mixed-signal circuits. These projects address critical challenges in wearable
+  devices, mobile computing, and IoT systems by leveraging IEEE-backed techniques
+  such as clock gating, power gating, and multi-voltage design methodologies.
+</p>
+<p>
+  Modern embedded platforms demand tight integration between hardware and software,
+  which is addressed through
+  {" "}
+  <Link
+    to="/department/vlsi-design/hardware-software-co-design"
+    className="internal-link highlight-link"
+  >
+    Hardware–Software Co-Design
+  </Link>
+  {" "}
+  methodologies. These projects emphasize system partitioning, real-time scheduling,
+  and performance optimization across processors, accelerators, and firmware layers,
+  making them ideal for complex SoC and embedded AI applications.
+</p>
+
             </section>
 
             <section className="ECEProjectDevelopmentCenter-table">
@@ -153,6 +186,37 @@ const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
                 </table>
               </div>
             </section>
+
+            <p>
+  Cutting-edge semiconductor research is driven by
+  {" "}
+  <Link
+    to="/department/vlsi-design/nanoelectronics-emerging-devices"
+    className="internal-link highlight-link"
+  >
+    Nanoelectronics & Emerging Devices
+  </Link>
+  {" "}
+  which explore technologies beyond traditional CMOS scaling. These projects examine
+  novel materials, device physics, and ultra-scaled architectures for next-generation
+  computing, offering high research value for M.Tech dissertations and Ph.D. theses.
+</p>
+<p>
+  The convergence of artificial intelligence and hardware design is realized through
+  {" "}
+  <Link
+    to="/department/vlsi-design/vlsi-ai"
+    className="internal-link highlight-link"
+  >
+    VLSI for AI Applications
+  </Link>
+  {" "}
+  where specialized architectures accelerate machine learning and deep learning tasks.
+  These projects focus on neural network accelerators, edge AI processors, and
+  energy-efficient inference engines aligned with IEEE research trends and industry
+  demands.
+</p>
+
 
             <section className="ECEProjectDevelopmentCenter-btech">
               <h2>B.Tech VLSI & Embedded Systems Project Development</h2>
@@ -225,6 +289,21 @@ const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
                 <li>Embedded Machine Learning Algorithms for Energy-Efficient IoT Nodes</li>
               </ul>
             </section>
+<p>
+  The
+  {" "}
+  <Link
+    to="/department/vlsi-design/fpga-system-prototyping"
+    className="internal-link highlight-link"
+  >
+    FPGA-Based System Prototyping
+  </Link>
+  {" "}
+  approach enables rapid validation of digital architectures before ASIC fabrication.
+  Students work on real-time hardware implementations using FPGA boards to evaluate
+  speed, resource utilization, and power efficiency. These projects are widely adopted
+  in AI accelerators, communication systems, and embedded control applications.
+</p>
 
             <section className="ECEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
@@ -247,22 +326,28 @@ const ECEVLSIDesignEmbeddedSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
             </section>
-          </div>
+                      </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
+          {/* ✅ RIGHT SIDEBAR (ONLY FIXED STRUCTURE) */}
+          <aside className="right-sidebar1">
             <ul>
-  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
-  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
-  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
-  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
-  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
-  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
-  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
-</ul>
+              <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+              <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+              <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+              <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+              <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+              <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+              <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

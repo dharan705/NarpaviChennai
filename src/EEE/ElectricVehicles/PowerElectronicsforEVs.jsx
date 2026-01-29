@@ -1,67 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Power Electronics for EVs Project Development Center in Chennai",
+  "Power Electronics for Electric Vehicles IEEE Projects 2023–2025",
+  "EV Inverter Design Projects",
+  "DC DC Converter Projects for EVs",
+  "Bidirectional Converter V2G Projects",
+  "Wide Bandgap SiC GaN Power Electronics",
+  "AI Based EV Power Electronics Control",
+  "B.Tech EV Power Electronics Projects",
+  "M.Tech EV Inverter Research",
+  "Ph.D EV Power Electronics Optimization",
+  "Narpavi Research Institute EV Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Power Electronics for EVs Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students focusing on DC-DC converters, inverters, bidirectional converters, charging controllers, wide-bandgap devices, and AI-based power electronics design."
+    answer:
+      "We provide IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students focusing on DC-DC converters, inverters, bidirectional converters, charging controllers, wide-bandgap devices, and AI-based power electronics design."
   },
   {
     question: "What types of EV power electronics projects are supported?",
-    answer: "B.Tech projects: DC-DC converters, inverter design, motor drive control simulations. M.Tech projects: wide-bandgap SiC/GaN devices, bidirectional converters, high-efficiency inverter designs, integration with BMS. Ph.D: AI-driven converter control, fault-tolerant EV power electronics, high-power propulsion systems, V2G integration."
+    answer:
+      "B.Tech projects include DC-DC converters and inverter simulations. M.Tech projects focus on SiC/GaN-based converters, bidirectional V2G systems, and high-efficiency inverters. Ph.D research includes AI-driven converter control, fault-tolerant EV power electronics, and high-power propulsion systems."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, PLECS, FPGA/DSP controllers, Arduino/STM32, SiC/GaN wide-bandgap devices, CAN protocols, IoT telemetry, AI frameworks (TensorFlow, PyTorch) for control optimization."
+    answer:
+      "MATLAB/Simulink, PSCAD, PLECS, FPGA/DSP controllers, Arduino/STM32, SiC/GaN wide-bandgap devices, CAN protocols, IoT telemetry, and AI frameworks such as TensorFlow and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions (2023–2025) on EV motor drives, wide-bandgap power electronics, fault-tolerant design, regenerative braking, bidirectional converters, and grid integration systems."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on EV motor drives, wide-bandgap power electronics, fault-tolerant converters, regenerative braking, and V2G integration."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide support from IEEE topic identification, circuit design, real-time hardware prototyping, AI-based optimization, to technical writing in IEEE style with Scopus/SCI/IEEE publication guidance."
+    answer:
+      "Complete academic support including IEEE topic identification, circuit design, hardware prototyping, AI-based optimization, IEEE-format documentation, and Scopus/SCI/IEEE publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Power Electronics for EVs – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Power Electronics for EVs Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering DC-DC converters, inverters, bidirectional V2G systems, wide-bandgap SiC/GaN devices, AI-based control, and EV propulsion research.";
+
+const pageUrl = "/department/electric-vehicles/power-electronics-evs";
 
 const EEEPowerElectronicsEvsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Power Electronics for EVs IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Power Electronics for EVs projects for B.Tech, M.Tech, Ph.D. DC-DC converters, inverters, bidirectional converters, SiC GaN devices, AI control using MATLAB/Simulink, PSCAD, PLECS, FPGA DSP for EV propulsion, V2G."
-  keywords="Power Electronics EVs IEEE Projects 2023–2025, B.Tech EV Inverters DC-DC Converters, M.Tech SiC GaN Wide-Bandgap, Ph.D. AI Fault-Tolerant EV Power Electronics, Bidirectional V2G Converters, Narpavi Research Institute"
-  url="/department/electric-vehicles/power-electronics-evs"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Sidebar Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Power Electronics for EVs Project Development Center</li>
-              <li>EV Inverter Projects</li>
-              <li>DC-DC Converter Research for EVs</li>
-              <li>Wide-Bandgap Power Electronics</li>
-              <li>AI-Based EV Converters</li>
-              <li>B.Tech EV Power Electronics Projects</li>
-              <li>M.Tech EV Power Electronics Research</li>
-              <li>Ph.D. EV Power Electronics Projects</li>
-              <li>V2G Power Electronics IEEE Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Power Electronics for EVs – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+   {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> provides students with IEEE-aligned (2023–2025) project development in EV power electronics, enabling innovations in converters, inverters, regenerative systems, and AI-optimized drive electronics for electrified transport.</p>
               <p>Power electronics govern the energy exchange between EV batteries, motor drives, and charging systems, playing a pivotal role in EV safety, range, thermal management, and performance optimization.</p>
@@ -177,54 +205,32 @@ const EEEPowerElectronicsEvsProjectDevelopmentCenter = () => {
 
             </section>
           </div>
-          
-          {/* Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/electric-vehicles">Electric Vehicles – Project Development Center</a></li>
+              <li><a href="/department/electric-vehicles/bms">Battery Management Systems (BMS)</a></li>
+              <li><a href="/department/electric-vehicles/ev-charging-infrastructure">EV Charging Infrastructure</a></li>
+              <li><a href="/department/electric-vehicles/ev-motor-drive-systems">EV Motor Drive Systems</a></li>
+              <li><a href="/department/electric-vehicles/hev">Hybrid Electric Vehicles (HEV)</a></li>
+              <li><a href="/department/electric-vehicles/power-electronics-evs">Power Electronics for EVs</a></li>
+              <li><a href="/department/electric-vehicles/regenerative-braking-systems">Regenerative Braking Systems</a></li>
+            </ul>
 
-          </div>
-          
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEPowerElectronicsEvsProjectDevelopmentCenter;

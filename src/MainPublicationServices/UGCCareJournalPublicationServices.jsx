@@ -1,5 +1,7 @@
 import "./UGCCareJournalPublicationServices.scss";
 import Sidebar from "./PublicationServicesSidebar";
+import { Link } from "react-router-dom";
+import Leftsidebar from "../assets/Leftsidebar";
 
 const faqs = [
   {
@@ -23,20 +25,40 @@ const UGCCareJournalPublicationServices = () => {
       <div className="UGCCareJournalPublication-main">
         <div className="UGCCareJournalPublication-grid">
           {/* Left: Keywords */}
-          <div className="UGCCareJournalPublication-left">
-            <h3>🔑 Keywords</h3>
+          <div className="left-sidebar2">
             <ul>
-              <li>ugc care journal publication services</li>
-              <li>publish in ugc care journal</li>
-              <li>ugc care approved journal publication</li>
-              <li>ugc care manuscript support</li>
-              <li>ugc journal publication help</li>
-              <li>UGC CARE India journal list publication</li>
-              <li>publish paper in ugc care</li>
-              <li>narpavi ugc care publication assistance</li>
-              <li>journal publication for Indian researchers</li>
-              <li>academic publication services India</li>
-            </ul>
+  <li>
+    <Link to="/publication-services/conference-paper-publication-services">
+      Conference Paper Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/SCIJournal">
+      SCI Journal Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/review-article-publication">
+      Review Article Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/ugc-care-journal-publication-services">
+      UGC CARE Journal Publication Services 
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/book-isbn-publication-support">
+      Book ISBN Publication Support
+    </Link>
+  </li>
+  <li>
+   <Link to="/publication-services/scopus-journal-publication-services">
+      Scopus Journal Publication Services
+    </Link>
+  </li>
+</ul>
+             
           </div>
 
           {/* Center: Main Content */}
@@ -50,7 +72,45 @@ const UGCCareJournalPublicationServices = () => {
               <p>
                 Tailored to the evolving standards of Indian universities and regulatory bodies, our services guarantee academic legitimacy and successful publication outcomes across disciplines like Engineering, Management, Arts, Science, Law, and Education.
               </p>
+
             </section>
+            <p>
+  While UGC CARE journals fulfill essential academic and regulatory requirements, many
+  researchers also aim to publish in high-impact international journals. SCI journals
+  represent the highest tier of scientific indexing and are often targeted after successful
+  UGC CARE publications. Experience gained through
+  {" "}
+  <Link
+    to="/publication-services/SCIJournal"
+    className="internal-link highlight-link"
+  >
+    SCI Journal Publication
+  </Link>
+  {" "}
+  helps scholars understand rigorous peer-review standards, advanced formatting
+  requirements, and global editorial expectations. Publishing in UGC CARE journals first
+  allows researchers to build confidence, credibility, and a strong publication record
+  before transitioning to SCI-level submissions.
+</p>
+<p>
+  Review articles play a significant role in UGC CARE journals, particularly for faculty
+  members and doctoral candidates seeking academic recognition. Many review articles are
+  developed after analyzing extensive literature collected during conference papers,
+  coursework, or funded research projects. Support through
+  {" "}
+  <Link
+    to="/publication-services/review-article-publication"
+    className="internal-link highlight-link"
+  >
+    Review Article Publication
+  </Link>
+  {" "}
+  ensures that manuscripts meet UGC CARE expectations in terms of depth, structure, and
+  citation accuracy. Review articles published in UGC CARE journals are widely accepted for
+  promotions, PhD evaluations, and institutional assessments, making them a strategic
+  publication choice within Indian academia.
+</p>
+
 
             <section className="UGCCareJournalPublication-features">
               <h2>Comprehensive Features of Our UGC Care Journal Publication Services</h2>
@@ -70,6 +130,41 @@ const UGCCareJournalPublicationServices = () => {
                 We aim to enhance your academic portfolio by ensuring every paper meets UGC standards and aligns with your career goals.
               </p>
             </section>
+<p>
+  Scopus-indexed journals offer global visibility and are often pursued alongside or after
+  UGC CARE publications. Many researchers adopt a parallel publication strategy, submitting
+  domain-specific studies to UGC CARE journals while preparing extended versions for
+  international indexing. Guidance through
+  {" "}
+  <Link
+    to="/publication-services/scopus-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    Scopus Journal Publication Services
+  </Link>
+  {" "}
+  helps authors align manuscripts with international scope, citation standards, and
+  editorial expectations. This balanced approach enables researchers to meet national
+  academic requirements while building an internationally recognized research profile.
+</p>
+<p>
+  UGC CARE journal publications are frequently complemented by academic books, edited
+  volumes, and institutional publications. Research papers published in UGC CARE journals
+  are often compiled into subject-specific books for teaching, accreditation, or research
+  dissemination. To ensure formal recognition and global cataloging, these outputs require
+  ISBN registration. Researchers and institutions rely on
+  {" "}
+  <Link
+    to="/publication-services/book-isbn-publication-support"
+    className="internal-link highlight-link"
+  >
+    Book ISBN Publication Support
+  </Link>
+  {" "}
+  to assign bibliographic identity, enhance library indexing, and strengthen documentation
+  for NAAC and accreditation audits. This approach extends the academic value of UGC CARE
+  publications beyond journals into long-term scholarly assets.
+</p>
 
             <section className="UGCCareJournalPublication-comparative-table">
               <h2>Comparative Overview: UGC Care vs. Other Indexed Journals</h2>
@@ -156,7 +251,9 @@ const UGCCareJournalPublicationServices = () => {
           </div>
 
           {/* Right: Subpage Links */}
-          <div className="UGCCareJournalPublication-right">
+          <div className="right-sidebar1">
+                  <Leftsidebar/>
+        <br />
             <h3>🔗 Related Services</h3>
             <ul>
               <li><a href="/scopus-journal-publication">Scopus Journal Publication</a></li>

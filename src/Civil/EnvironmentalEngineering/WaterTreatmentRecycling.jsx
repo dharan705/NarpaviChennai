@@ -1,76 +1,86 @@
-  import "../CEProjectDevelopmentCenter.scss";
-  import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
-  const faqs = [
-    {
-      question: "What services does the Water Treatment & Recycling Project Development Center offer?",
-      answer: "Narpavi Research Institute’s Water Treatment & Recycling Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on water treatment, recycling, and smart monitoring systems."
-    },
-    {
-      question: "What types of Water Treatment & Recycling projects are supported?",
-      answer: "We support B.Tech projects (basic treatment and recycling systems), M.Tech projects (advanced treatment techniques and optimization), and Ph.D. projects (smart water treatment and sustainable recycling) for environmental sustainability."
-    },
-    {
-      question: "Which tools and technologies are used in Water Treatment & Recycling projects?",
-      answer: "Our stack includes MATLAB, EPANET, WaterGEMS, IoT sensors, and AI frameworks (TensorFlow, Keras) for modeling and monitoring water treatment systems."
-    },
-    {
-      question: "How are projects aligned with IEEE standards?",
-      answer: "Projects are based on IEEE Transactions (2023–2025) on Environmental Engineering, focusing on smart water treatment, IoT monitoring, and sustainable recycling methods."
-    },
-    {
-      question: "What support is provided for academic submissions?",
-      answer: "We offer end-to-end guidance, including topic selection, laboratory experiments, simulation, IoT integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
-    }
-  ];
+import "../CEProjectDevelopmentCenter.scss";
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
-  const CEWaterTreatmentRecyclingProjectDevelopmentCenter = () => {
-    return (
-      <div className="CEProjectDevelopmentCenter">
-         <SEO
-        title="Waste Management Systems IEEE Projects (2023–2025)"
-        description="Waste Management Systems IEEE project development for B.Tech, M.Tech & PhD scholars focusing on smart waste collection, IoT monitoring, AI optimization, circular economy, biogas generation, and sustainable recycling."
-        url="/department/environmental-engineering/waste-management-system"
-        type="article"
-        keywords={[
-          "Waste Management Projects",
-          "Smart Waste Collection IEEE 2023–2025",
-          "IoT Waste Monitoring",
-          "AI-Based Waste Optimization",
-          "Circular Economy Waste Systems",
-          "Anaerobic Digestion Biogas Projects",
-          "B.Tech M.Tech PhD Environmental Projects",
-          "Narpavi Research Institute Waste Projects",
-          "Smart City Waste Management",
-          "Industrial Municipal Recycling Systems"
-        ]}
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Water Treatment & Recycling IEEE Projects 2023–2025",
+  "Smart Water Treatment Systems",
+  "IoT Water Quality Monitoring",
+  "AI Based Water Treatment Optimization",
+  "Membrane Filtration RO Projects",
+  "Sustainable Wastewater Recycling",
+  "Constructed Wetlands Treatment",
+  "Rainwater Harvesting Recycling Systems",
+  "Environmental Engineering B.Tech M.Tech Ph.D.",
+  "Narpavi Research Institute Water Projects"
+];
+
+const faqs = [
+  {
+    question: "What services does the Water Treatment & Recycling Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Water Treatment & Recycling Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on water treatment, recycling, and smart monitoring systems."
+  },
+  {
+    question: "What types of projects are supported?",
+    answer:
+      "B.Tech projects on basic treatment systems, M.Tech projects on advanced optimization, and Ph.D. projects on smart and sustainable recycling."
+  },
+  {
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, EPANET, WaterGEMS, IoT sensors, and AI frameworks such as TensorFlow and Keras."
+  },
+  {
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) focusing on smart water treatment, IoT monitoring, and sustainability."
+  },
+  {
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, lab experiments, simulation, IoT integration, and IEEE/Scopus/SCI publication guidance."
+  }
+];
+
+const CEWaterTreatmentRecyclingProjectDevelopmentCenter = () => {
+  return (
+    <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Water Treatment & Recycling – Project Development Center in Chennai"
+        description="Water Treatment & Recycling project development for B.Tech, M.Tech, and Ph.D. students focusing on smart water treatment, IoT monitoring, AI optimization, membrane filtration, wastewater reuse, and sustainable recycling."
+        keywords={keywords}
+        url="/department/environmental-engineering/water-treatment-recycling"
         faqs={faqs}
       />
-        <Sidebar />
-        <div className="CEProjectDevelopmentCenter-main">
-          <div className="CEProjectDevelopmentCenter-grid">
-            {/* Left: Keywords */}
-            <div className="CEProjectDevelopmentCenter-left">
-              <h3>🔑 Keywords</h3>
-              <ul>
-                <li>Water Treatment & Recycling Projects</li>
-                <li>Smart Water Treatment IEEE 2023–2025</li>
-                <li>IoT Water Quality Monitoring</li>
-                <li>AI-Based Water Treatment Optimization</li>
-                <li>Membrane Filtration & RO Projects</li>
-                <li>Sustainable Wastewater Recycling</li>
-                <li>B.Tech M.Tech Ph.D. Environmental Projects</li>
-                <li>Narpavi Research Institute Water Projects</li>
-                <li>Constructed Wetlands Water Treatment</li>
-                <li>Rainwater Recycling System Projects</li>
-              </ul>
-            </div>
 
-            {/* Center: Main Content */}
-            <div className="CEProjectDevelopmentCenter-center">
-              <h1>Water Treatment & Recycling – Project Development Support</h1>
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
 
-              <section className="CEProjectDevelopmentCenter-intro">
+      <div className="CEProjectDevelopmentCenter-main">
+        <div className="CEProjectDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+           
+          </aside>
+
+          {/* CENTER CONTENT */}
+          <div className="CEProjectDevelopmentCenter-center">
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Water Treatment & Recycling – Project Development Center in Chennai
+            </h1>
+                 <section className="CEProjectDevelopmentCenter-intro">
                 <p>
                   <strong>Narpavi Research Institute</strong> presents the Water Treatment & Recycling Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on sustainable water treatment and recycling systems.
                 </p>
@@ -230,58 +240,47 @@ import SEO from "../../assets/SEO"
                     </details>
                   ))}
                 </div>
-
-                <script
-                  type="application/ld+json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      "@context": "https://schema.org",
-                      "@type": "FAQPage",
-                      "mainEntity": faqs.map((faq) => ({
-                        "@type": "Question",
-                        "name": faq.question,
-                        "acceptedAnswer": {
-                          "@type": "Answer",
-                          "text": faq.answer
-                        }
-                      }))
-                    })
-                  }}
-                />
               </section>
-            </div>
 
-            {/* Right: Subpage Links */}
-            <div className="CEProjectDevelopmentCenter-right">
-              <h3>🔗 Related Services</h3>
-            <ul>
-    <li>
-      <a href="/department/environmental-engineering">
-        Environmental Engineering
-      </a>
-    </li>
-    <li>
-      <a href="/department/environmental-engineering/water-treatment-recycling">
-        Water Treatment & Recycling
-      </a>
-    </li>
-    <li>
-      <a href="/department/environmental-engineering/air-pollution-modeling">
-        Air Pollution Modeling
-      </a>
-    </li>
-    <li>
-      <a href="/department/environmental-engineering/waste-management-system">
-        Waste Management System
-      </a>
-    </li>
-  </ul>
-
-            </div>
           </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar">
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li>
+                <a href="/department/environmental-engineering">
+                  Environmental Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/water-treatment-recycling">
+                  Water Treatment & Recycling
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/air-pollution-modeling">
+                  Air Pollution Modeling
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/waste-management-system">
+                  Waste Management System
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
-    );
-  };
+    </div>
+  );
+};
 
-  export default CEWaterTreatmentRecyclingProjectDevelopmentCenter;
+export default CEWaterTreatmentRecyclingProjectDevelopmentCenter;

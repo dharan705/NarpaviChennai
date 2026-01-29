@@ -1,66 +1,98 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "Smart Metering & Demand Response Project Development Center in Chennai",
+  "Smart Metering IEEE Projects 2023–2025",
+  "Demand Response Smart Grid Projects",
+  "B.Tech Smart Metering Projects",
+  "M.Tech AI Based Demand Response",
+  "Ph.D Predictive Load Management",
+  "IoT Enabled Smart Metering Systems",
+  "Real-Time Energy Monitoring",
+  "Adaptive Load Control Research",
+  "Narpavi Research Institute Smart Grid Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Smart Metering & Demand Response Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Metering & Demand Response Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on advanced smart meters, demand response strategies, load forecasting, real-time pricing, and AI/IoT-enabled adaptive energy management."
+    question:
+      "What services does the Smart Metering & Demand Response Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Smart Metering & Demand Response Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on advanced smart meters, demand response strategies, load forecasting, real-time pricing, and AI/IoT-enabled adaptive energy management."
   },
   {
-    question: "What types of Smart Metering & Demand Response projects are supported?",
-    answer: "We support B.Tech projects (basic smart meters with IoT-enabled monitoring, load management), M.Tech projects (AI-powered demand response, dynamic pricing optimization), and Ph.D. projects (cybersecurity, predictive load management, intelligent real-time demand-side optimization for industrial and utility applications)."
+    question:
+      "What types of Smart Metering & Demand Response projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering smart meters, AI-powered demand response, predictive load management, cybersecurity, and intelligent real-time energy optimization."
   },
   {
-    question: "Which technologies are used in Smart Metering project development?",
-    answer: "Our stack includes MATLAB/Simulink, Python, PSIM for simulation, IoT protocols (MQTT, Zigbee), AI frameworks (TensorFlow, PyTorch), and FPGA/DSP systems for real-time smart metering and demand response prototyping."
+    question: "Which technologies are used?",
+    answer:
+      "MATLAB/Simulink, Python, PSIM, IoT protocols (MQTT, Zigbee), TensorFlow, PyTorch, and FPGA/DSP-based systems."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects are aligned with IEEE Transactions (2023–2025), focusing on standards for smart grids, metering infrastructure, load forecasting, demand response algorithms, energy cybersecurity, and adaptive smart grid solutions."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) focusing on smart grid metering, demand response algorithms, load forecasting, and adaptive energy systems."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer IEEE topic selection, simulation and modeling training, prototyping, IoT integration, real-time performance validation, IEEE-formatted documentation, and publication in IEEE/Scopus/SCI-indexed journals."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including IEEE topic selection, simulations, prototyping, IoT integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Metering & Demand Response – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Metering & Demand Response Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering advanced smart meters, AI-based demand response, predictive load forecasting, and IoT-enabled smart grid solutions.";
+
+const pageUrl =
+  "/department/smart-grid-microgrid/smart-metering-demand-response";
 
 const EEESmartMeteringDemandResponseProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Smart Metering Demand Response IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Smart Metering & Demand Response projects for B.Tech, M.Tech, Ph.D. Advanced smart meters, AI load forecasting, dynamic pricing using MATLAB/Simulink, Python, TensorFlow, IoT for smart grids, energy management."
-  keywords="Smart Metering Demand Response IEEE Projects 2023–2025, B.Tech Smart Meters IoT, M.Tech AI Demand Response, Ph.D. Predictive Load Management, Real-Time Energy Monitoring, Adaptive Load Control, Smart Grid Metering, Narpavi Research Institute"
-  url="/department/smart-grid-microgrid/smart-metering-demand-response"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Metering Projects</li>
-              <li>Demand Response Projects</li>
-              <li>IEEE Smart Grid Projects 2023–2025</li>
-              <li>B.Tech Load Management Projects</li>
-              <li>M.Tech AI-Based Demand Response</li>
-              <li>Ph.D IoT-Enabled Smart Meters</li>
-              <li>Narpavi Research Institute</li>
-              <li>Real-Time Energy Monitoring</li>
-              <li>Adaptive Load Control Research</li>
-              <li>Predictive Energy Management</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Smart Metering & Demand Response – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ SINGLE H1 ONLY */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Metering & Demand Response Project Development Center, 
@@ -203,48 +235,26 @@ const EEESmartMeteringDemandResponseProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid – Project Development Center</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Integration of Distributed Generation</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA Systems</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

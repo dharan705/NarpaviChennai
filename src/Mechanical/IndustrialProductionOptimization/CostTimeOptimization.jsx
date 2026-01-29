@@ -1,78 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Cost & Time Optimization in Manufacturing Project Development Center in Chennai",
+  "Cost Optimization Manufacturing IEEE Projects 2023–2025",
+  "Time Reduction in Production Systems",
+  "Lean Six Sigma Manufacturing Projects",
+  "AI Scheduling Manufacturing Optimization",
+  "IoT Production Monitoring Projects",
+  "Digital Twin Manufacturing Optimization",
+  "Blockchain Supply Chain Cost Optimization",
+  "Industry 4.0 Manufacturing Projects",
+  "Narpavi Research Institute Manufacturing Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Cost & Time Optimization in Manufacturing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Cost & Time Optimization in Manufacturing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on lean manufacturing, Six Sigma, AI-based scheduling, IoT monitoring, digital twins, and blockchain for cost and time efficiency in automotive, aerospace, electronics, and pharmaceutical industries."
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on lean manufacturing, Six Sigma, AI scheduling, IoT monitoring, digital twins, and blockchain-based optimization."
   },
   {
-    question: "What types of Cost & Time Optimization projects are supported?",
-    answer: "We support B.Tech projects (lean systems, IoT monitoring), M.Tech projects (AI scheduling, digital twins), and Ph.D. projects (multi-objective optimization, blockchain-secured supply chains) for applications in smart factories, logistics, and manufacturing."
+    question: "What types of projects are supported?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. projects covering smart factories, logistics, and manufacturing optimization."
   },
   {
-    question: "Which tools and technologies are used in Cost & Time Optimization projects?",
-    answer: "Our stack includes MATLAB, Simulink, ARENA, Python, Arduino, Raspberry Pi, cloud platforms, and blockchain frameworks for simulation, IoT integration, and optimization."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB, Simulink, ARENA, Python, Arduino, Raspberry Pi, cloud platforms, and blockchain frameworks."
   },
   {
-    question: "How are Cost & Time Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Automation Science, Manufacturing Systems, and Industrial Informatics, focusing on AI, IoT, lean manufacturing, and digital twins, aligned with IEEE standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects align with IEEE Transactions (2023–2025) on Manufacturing, Automation, and Industrial Informatics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, support is provided for IEEE, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Cost & Time Optimization in Manufacturing – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Cost & Time Optimization in Manufacturing Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using AI scheduling, IoT monitoring, digital twins, lean Six Sigma, and blockchain.";
+
+const pageUrl =
+  "/department/industrial-production-optimization/cost-time-optimization";
 
 const MECostTimeOptimizationManufacturingProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Cost & Time Optimization in Manufacturing IEEE Projects (2023–2025)"
-        description="Cost Time Optimization Manufacturing IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ARENA, AI scheduling, IoT monitoring, digital twins, lean Six Sigma, blockchain for automotive, aerospace, electronics, pharma."
-        url="/department/industrial-production-optimization/cost-time-optimization"
-        type="article"
-        keywords={[
-          "Cost Optimization Manufacturing Projects",
-          "Time Reduction Production",
-          "IEEE Manufacturing Projects 2023–2025",
-          "Lean Six Sigma Student Projects",
-          "IoT Production Monitoring",
-          "Digital Twin Optimization Projects",
-          "AI Scheduling Manufacturing",
-          "Supply Chain Cost Optimization",
-          "Industry 4.0 Manufacturing Projects",
-          "Narpavi Research Institute Project Guidance"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Cost Optimization in Manufacturing Projects</li>
-              <li>Time Reduction in Production</li>
-              <li>IEEE Aligned Manufacturing Projects 2023–2025</li>
-              <li>Lean Six Sigma Student Projects</li>
-              <li>IoT in Production Monitoring</li>
-              <li>Digital Twin Optimization Projects</li>
-              <li>AI Scheduling in Manufacturing</li>
-              <li>Supply Chain Cost Optimization Projects</li>
-              <li>Industry 4.0 Manufacturing Projects</li>
-              <li>Narpavi Research Institute Project Guidance</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Cost & Time Optimization in Manufacturing – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 ONLY */}
+            <h1>{pageTitle}</h1>
+           <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Cost & Time Optimization in Manufacturing Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on lean manufacturing, Six Sigma, AI-based scheduling, IoT monitoring, digital twins, and blockchain for cost and time efficiency.
               </p>
@@ -261,43 +278,26 @@ const MECostTimeOptimizationManufacturingProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/industrial-production-optimization">
-      Industrial Production Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/lean-manufacturing">
-      Lean Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/supply-chain-process">
-      Supply Chain Process Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
-      Industrial Safety & Ergonomics
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/smart-factory-systems">
-      Smart Factory Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/cost-time-optimization">
-      Cost & Time Optimization
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/industrial-production-optimization">Industrial Production Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/lean-manufacturing">Lean Manufacturing</a></li>
+              <li><a href="/department/industrial-production-optimization/supply-chain-process">Supply Chain Process Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/industrial-safety-ergonomics">Industrial Safety & Ergonomics</a></li>
+              <li><a href="/department/industrial-production-optimization/smart-factory-systems">Smart Factory Systems</a></li>
+              <li><a href="/department/industrial-production-optimization/cost-time-optimization">Cost & Time Optimization</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

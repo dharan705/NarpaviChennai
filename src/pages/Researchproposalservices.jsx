@@ -1,11 +1,40 @@
 import React from 'react';
 import './Researchproposalservices.scss'; // Optional for custom styling
-
+import SEO from '../assets/SEO';
 const PhDProposalHero = () => {
   return (
     <section className="phd-proposal-hero">
+      <SEO
+  title="PhD Research Proposal Writing Services in Chennai | Topic Selection & Funding"
+  description="Expert PhD proposal writing services including topic selection, proposal structuring, funding proposal drafting, and research-ready deliverables for scholars across all Indian universities."
+  url="/research-proposal-services"
+  keywords={[
+    "PhD Proposal Writing Chennai",
+    "Research Proposal Services",
+    "PhD Topic Selection Help",
+    "Funding Proposal Writing",
+    "Engineering PhD Proposal Guide",
+    "Research Proposal Support India",
+    "Doctoral Proposal Assistance"
+  ]}
+  faqs={[
+    {
+      question: "Do you provide complete PhD proposal writing help?",
+      answer: "Yes. We support scholars with topic selection, research framing, proposal drafting, methodology design, timeline creation, and plagiarism-free final submission."
+    },
+    {
+      question: "Can you assist with funding proposal writing?",
+      answer: "Absolutely. We help craft grant-winning proposals for government, private, and institutional funding schemes."
+    },
+    {
+      question: "Is this service limited to engineering PhDs?",
+      answer: "No. We support PhD scholars across engineering, management, arts, science, and interdisciplinary fields."
+    }
+  ]}
+/>
+
       <div className="hero-content">
-        <h1>Top-Rated PhD Research Proposal Writing Services Across Indian Universities</h1>
+        <h1>Top-Rated PhD Research Proposal Writing Services Across Indian Universities in Chennai</h1>
         <h2>
           📌 Empowering doctoral scholars with expert guidance, customized proposals, and research-ready solutions across disciplines.
         </h2>

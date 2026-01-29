@@ -15,16 +15,95 @@
   }
 
   .subtitle p {
-    
     color: #fff;
     margin: 0.3rem 0;
   }
 
-  .point {
-    margin-top: 16px;
+  .phd-box{
     border: 1px solid #30E3FF;
-    color: #fff;
   }
+  
+  .point {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  color: #fff;
+  padding: 12px;
+  display: grid;
+  font-size: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.point h4 {
+  margin: 0;
+}
+
+/* Links stay below line by line */
+.point-links {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.point-links .card {
+  border: 1px solid #30E3FF;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.3s ease;
+}
+
+.point-links .card:hover {
+  border-color: #00eaff;
+  box-shadow: 0px 0px 12px rgba(48, 227, 255, 0.3);
+  transform: translateY(-4px);
+}
+
+.point-links h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #fff;
+}
+
+.point-links p {
+  margin: 12px 0;
+  color: #d9faff;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
+.point-links a {
+  margin-top: auto;
+  color: #30E3FF;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.point-links a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .point-links {
+    grid-template-columns: 1fr;
+  }
+}
+/* Center the last card when total items = 5 */
+.point-links li:last-child {
+  grid-column: 1 / -1;   /* make it span full row */
+  width: 50%;            /* shrink to half */
+  justify-self: center;  /* center it */
+}
+
 
   .para {
     margin-top: 1.5rem;

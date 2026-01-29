@@ -1,5 +1,7 @@
+import Leftsidebar from "../assets/Leftsidebar";
 import "./BookISBNPublicationSupport.scss";
 import Sidebar from "./PublicationServicesSidebar";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -23,7 +25,40 @@ const BookISBNPublicationSupport = () => {
       <div className="BookISBNPublicationSupport-main">
         <div className="BookISBNPublicationSupport-grid">
           {/* Left: Keywords */}
-          <div className="BookISBNPublicationSupport-left">
+          <div className="left-sidebar2">
+            <ul>
+  <li>
+    <Link to="/publication-services/conference-paper-publication-services">
+      Conference Paper Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/SCIJournal">
+      SCI Journal Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/review-article-publication">
+      Review Article Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/ugc-care-journal-publication-services">
+      UGC CARE Journal Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/book-isbn-publication-support">
+      Book ISBN Publication Support
+    </Link>
+  </li>
+  <li>
+  <Link to="/publication-services/scopus-journal-publication-services">
+      Scopus Journal Publication Services
+    </Link>
+  </li>
+</ul>
+         
             <h3>🔑 Keywords</h3>
             <ul>
               <li>Book ISBN Publication Support</li>
@@ -51,6 +86,45 @@ const BookISBNPublicationSupport = () => {
                 We guide you through every stage of ISBN acquisition, metadata registration, book formatting, and indexing, ensuring compliance with institutional and global publishing standards for both individual authors and university-affiliated research groups.
               </p>
             </section>
+<p>
+  Many high-impact academic books are authored by researchers with strong SCI journal
+  publication records. Chapters in scientific books often summarize, extend, or contextualize
+  findings previously published in SCI-indexed journals. Experience with
+  {" "}
+  <Link
+    to="/publication-services/SCIJournal"
+    className="internal-link highlight-link"
+  >
+    SCI Journal Publication
+  </Link>
+  {" "}
+  helps authors understand rigorous peer-review standards, citation ethics, and scholarly
+  presentation, all of which are essential for producing ISBN-registered academic books.
+  Books derived from SCI-level research carry greater credibility, are widely accepted for
+  NAAC and accreditation evaluations, and attract international readership through library
+  and database indexing.
+</p>
+<p>
+  Academic books and edited volumes are often developed from previously published conference
+  papers, especially in engineering, science, and interdisciplinary research domains.
+  Conference proceedings allow authors to formally document early-stage findings, workshop
+  discussions, and collaborative research outputs. These conference publications later
+  evolve into structured book chapters or complete volumes that require ISBN registration
+  for academic legitimacy. Researchers who engage with
+  {" "}
+  <Link
+    to="/publication-services/conference-paper-publication-services"
+    className="internal-link highlight-link"
+  >
+    Conference Paper Publication Services
+  </Link>
+  {" "}
+  gain experience in peer-reviewed dissemination, formatting standards, and editorial
+  workflows, which significantly simplifies the transition from conference papers to ISBN-
+  registered books. This pathway is especially valuable for institutions compiling
+  conference proceedings, departmental research books, and funded project reports that must
+  be archived, cited, and indexed globally.
+</p>
 
             <section className="BookISBNPublicationSupport-features">
               <h2>Key Features of Our Book ISBN Publication Support</h2>
@@ -67,6 +141,40 @@ const BookISBNPublicationSupport = () => {
                 <li>End-to-end technical support during publishing</li>
               </ul>
             </section>
+<p>
+  Publications in UGC CARE journals are often expanded into academic books for teaching,
+  accreditation, and institutional documentation. Universities and research institutions
+  frequently compile UGC CARE-approved papers into ISBN-registered books for NAAC audits,
+  curriculum development, and faculty promotions. Researchers supported through
+  {" "}
+  <Link
+    to="/publication-services/ugc-care-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    UGC CARE Journal Publication Services
+  </Link>
+  {" "}
+  benefit from content that already meets regulatory and academic standards, making ISBN
+  book publication smoother and more compliant. This integration strengthens academic
+  portfolios and ensures long-term scholarly value.
+</p>
+<p>
+  Review articles frequently form the intellectual foundation of academic books, handbooks,
+  and reference volumes. A well-structured review article consolidates years of research,
+  identifies thematic progressions, and highlights future research directions—making it
+  ideal for transformation into book chapters or standalone scholarly books. Support through
+  {" "}
+  <Link
+    to="/publication-services/review-article-publication"
+    className="internal-link highlight-link"
+  >
+    Review Article Publication
+  </Link>
+  {" "}
+  ensures that content is comprehensive, well-referenced, and methodologically sound before
+  ISBN registration. This approach is commonly used by senior researchers and faculty members
+  publishing textbooks, edited volumes, and institutional research compilations.
+</p>
 
             <section className="BookISBNPublicationSupport-comparative-table">
               <h2>Comparative Table: Self ISBN vs. Narpavi's ISBN Support</h2>
@@ -102,6 +210,22 @@ const BookISBNPublicationSupport = () => {
                 Whether you’re an independent author or part of a research institution, our services guarantee a smooth and credible publishing process.
               </p>
             </section>
+<p>
+  Scopus-indexed publications significantly enhance the value of academic books and edited
+  volumes. Chapters derived from Scopus journals carry international recognition and improve
+  citation potential for ISBN-registered publications. Authors who work with
+  {" "}
+  <Link
+    to="/publication-services/scopus-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    Scopus Journal Publication Services
+  </Link>
+  {" "}
+  gain experience in global publishing standards, structured abstracts, and citation metrics,
+  which directly translate into higher-quality book publications. ISBN books based on Scopus
+  research are widely accepted by universities, funding agencies, and international libraries.
+</p>
 
             <section className="BookISBNPublicationSupport-benefits">
               <h2>Benefits of Choosing Book ISBN Publication Support</h2>
@@ -177,35 +301,26 @@ const BookISBNPublicationSupport = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
           {/* Right: Subpage Links */}
-          <div className="BookISBNPublicationSupport-right">
-            <h3>🔗 Related Services</h3>
+          <div className="right-sidebar1">
+                   <Leftsidebar/>
+        <br />
+            
+              <h3>🔑 Keywords</h3>
             <ul>
-              <li><a href="/ugc-care-journal-publication">UGC Care Journal Publication</a></li>
-              <li><a href="/ugc-care-open-access-publication">UGC Care Open Access Journal Publication</a></li>
-              <li><a href="/ugc-care-arts-humanities-publication">UGC Care Arts and Humanities Journal Publication</a></li>
-              <li><a href="/ugc-care-science-technology-publication">UGC Care Science and Technology Journal Publication</a></li>
-              <li><a href="/journal-selection-assistance">Review Article Journal Selection Assistance</a></li>
+              <li>Book ISBN Publication Support</li>
+              <li>ISBN Number for Book Publication</li>
+              <li>Academic Book ISBN Registration</li>
+              <li>ISBN for Research Book</li>
+              <li>UGC ISBN Book Support</li>
+              <li>Book Publishing with ISBN</li>
+              <li>Narpavi Research Institute ISBN Support</li>
+              <li>Conference Proceedings ISBN</li>
+              <li>Print and eBook ISBN Service</li>
+              <li>Indian ISBN Registration Services</li>
             </ul>
           </div>
         </div>

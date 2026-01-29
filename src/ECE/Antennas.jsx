@@ -1,4 +1,4 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar"
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
 
@@ -52,13 +52,67 @@ const AntennasProjectDevelopmentCenter = () => {
         faqs={faqs}
       />
 
-      <Sidebar />
-
+  <Subsidebar
+  extraLinks={[
+    { id: "ece", label: "ece", path: "/department?dept=ece" }
+  ]}
+/>
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
 
           {/* Left */}
           <div className="ECEProjectDevelopment-left">
+                    <div class="site-links">
+              <h3>🔗 Tags</h3>
+
+  <a href="/service" class="site-link">Services</a>
+  <a href="/review-article-writing" class="site-link">Review Article Writing</a>
+  <a href="/sci-journal-paper-writing" class="site-link">SCI Journal Paper Writing</a>
+  <a href="/scopus-journal-paper-writing" class="site-link">Scopus Journal Paper Writing</a>
+  <a href="/ieee-conference-paper-writing" class="site-link">IEEE Conference Paper Writing</a>
+
+  <a href="/publication-services" class="site-link site-link--heading">
+    Publication Services
+  </a>
+
+  <a href="/publication-services/conference-paper-publication-services" class="site-link">
+    Conference Paper Publication Services
+  </a>
+
+  <a href="/publication-services/SCIJournal" class="site-link">
+    SCI Journal Publication Services
+  </a>
+
+  <a href="/publication-services/scopus-journal-publication-services" class="site-link">
+    Scopus Journal Publication Services
+  </a>
+
+  <a href="/publication-services/review-article-publication" class="site-link">
+    Review Article Publication
+  </a>
+
+  <a href="/publication-services/ugc-care-journal-publication-services" class="site-link">
+    UGC CARE Journal Publication Services
+  </a>
+
+  <a href="/publication-services/book-isbn-publication-support" class="site-link">
+    Book ISBN Publication Support
+  </a>
+
+  <a href="/scopus-journal-paper-writing/scopus-services" class="site-link">
+    Scopus Paper Services
+  </a>
+
+
+  <div class="site-links__section">
+    <a href="/department?dept=cse" class="site-link">Computer Science Engineering (CSE)</a>
+    <a href="/department?dept=eee" class="site-link">Electrical & Electronics Engineering (EEE)</a>
+    <a href="/department?dept=ece" class="site-link">Electronics & Communication Engineering (ECE)</a>
+    <a href="/department?dept=mech" class="site-link">Mechanical Engineering</a>
+    <a href="/department?dept=civil" class="site-link">Civil Engineering</a>
+  </div>
+
+</div>
             <h3>🔑 Keywords</h3>
             <ul>
               <li>Antennas Project Development</li>

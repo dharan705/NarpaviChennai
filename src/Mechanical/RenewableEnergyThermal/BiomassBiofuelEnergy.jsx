@@ -1,79 +1,97 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Biomass & Biofuel Energy Project Development Center in Chennai",
+  "Biomass Energy IEEE Projects 2023–2025",
+  "Biogas Plant Student Projects",
+  "AI Enabled Biomass Optimization",
+  "IoT Biomass Monitoring Projects",
+  "Hybrid Renewable Energy Systems",
+  "Biodiesel Production IEEE Projects",
+  "Renewable Energy Conversion Projects",
+  "Digital Twin Biomass Systems",
+  "Narpavi Research Institute Biomass Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Biomass & Biofuel Energy Systems Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects in biomass conversion, biofuel production, IoT monitoring, AI optimization, hybrid renewable integration, CFD/FEA simulations, hardware prototyping, and IEEE/SCI/Scopus publication guidance."
+    question:
+      "What services does the Biomass & Biofuel Energy Systems Project Development Center offer?",
+    answer:
+      "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects in biomass conversion, biofuel production, IoT monitoring, AI optimization, hybrid renewable integration, CFD/FEA simulations, hardware prototyping, and IEEE/SCI/Scopus publication guidance."
   },
   {
-    question: "What types of biomass and biofuel projects are supported?",
-    answer: "B.Tech projects: basic biomass-to-energy models with MATLAB/Simulink, small-scale digesters or gasifiers. M.Tech projects: AI/ML-based biofuel yield optimization, IoT-enabled process monitoring. Ph.D projects: hybrid biomass-solar systems, predictive maintenance, multi-objective optimization, patents, and SCI/IEEE publications."
+    question:
+      "What types of biomass and biofuel projects are supported?",
+    answer:
+      "B.Tech projects include basic biomass-to-energy models and prototypes. M.Tech projects focus on AI/ML optimization and IoT monitoring. Ph.D. research covers hybrid systems, predictive maintenance, multi-objective optimization, patents, and high-impact publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, Aspen Plus, Python for AI/ML, Arduino/Raspberry Pi for IoT prototypes, CFD/FEA software (ANSYS), biogas digesters, gasifiers, biodiesel reactors, and digital twins for advanced simulations."
+    answer:
+      "MATLAB/Simulink, Aspen Plus, Python (AI/ML), Arduino/Raspberry Pi, ANSYS CFD/FEA, biogas digesters, biodiesel reactors, and digital twins."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions on Sustainable Energy, Industrial Electronics, and Bioenergy (2023–2025), focusing on biofuel production optimization, hybrid renewable integration, predictive maintenance, and AI-enhanced biomass systems."
+    answer:
+      "Projects align with IEEE Transactions on Sustainable Energy and Industrial Electronics (2023–2025)."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide end-to-end guidance: IEEE topic selection, feedstock analysis, simulation/process modeling, hardware prototyping, performance validation (yield, efficiency), IEEE-format reporting, and Scopus/SCI publication support."
+    answer:
+      "End-to-end guidance including topic selection, modeling, prototyping, validation, documentation, and IEEE/SCI/Scopus publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Biomass & Biofuel Energy Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Biomass & Biofuel Energy Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering biogas, biodiesel, AI optimization, IoT monitoring, and hybrid renewable energy systems.";
+
+const pageUrl =
+  "/department/renewable-thermal-energy/biomass-biofuel-energy";
 
 const EEEBiomassBiofuelEnergySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-       <SEO
-        title="Biomass & Biofuel Energy IEEE Projects (2023–2025)"
-        description="Biomass Biofuel Energy IEEE project development for B.Tech, M.Tech & PhD using MATLAB, Aspen Plus, AI optimization, IoT monitoring, biogas digesters, biodiesel reactors, hybrid renewable systems for sustainable energy."
-        url="/department/renewable-thermal-energy/biomass-biofuel-energy"
-        type="article"
-        keywords={[
-          "Biomass Energy IEEE 2023–2025",
-          "Biogas Plant Projects",
-          "AI Enabled Biomass Optimization",
-          "IoT Biomass Monitoring Projects",
-          "Hybrid Renewable Energy Student Projects",
-          "Biodiesel Production IEEE Projects",
-          "Renewable Energy Conversion Projects",
-          "Smart Grid Biomass Integration",
-          "Digital Twin Biomass Systems",
-          "Narpavi Research Institute Biomass"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Biomass energy IEEE projects 2023–2025</li>
-              <li>Biogas plant projects</li>
-              <li>AI-enabled biomass optimization</li>
-              <li>IoT biomass monitoring projects</li>
-              <li>Hybrid renewable energy student projects</li>
-              <li>Biodiesel production IEEE projects</li>
-              <li>Renewable energy conversion student projects</li>
-              <li>Ph.D. biomass energy research projects</li>
-              <li>Smart grid biomass integration</li>
-              <li>Narpavi Research Institute renewable energy projects</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Biomass & Biofuel Energy Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+       {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> offers the Biomass & Biofuel Energy Systems Project Development Center, enabling B.Tech, M.Tech, and Ph.D. students to design IEEE-aligned (2023–2025) systems for converting organic matter into sustainable energy via biochemical/thermochemical processes.</p>
               <p>Students gain expertise in biofuel yield optimization, hybrid renewable integration, IoT monitoring, and AI-driven predictive models for efficient, scalable biomass energy solutions.</p>
@@ -188,48 +206,33 @@ const EEEBiomassBiofuelEnergySystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/renewable-thermal-energy">
-      Renewable & Thermal Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
-      Solar PV & Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/wind-turbine-design">
-      Wind Turbine Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
-      Biomass & Biofuel Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
-      Energy Storage & Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/smart-grid-integration">
-      Smart Grid Integration
-    </a>
-  </li>
-</ul>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
 
-          </div>
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/renewable-thermal-energy">Renewable & Thermal Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/solar-pv-thermal">Solar PV & Thermal Systems</a></li>
+              <li><a href="/department/renewable-thermal-energy/wind-turbine-design">Wind Turbine Design</a></li>
+              <li><a href="/department/renewable-thermal-energy/biomass-biofuel-energy">Biomass & Biofuel Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/energy-storage-recovery">Energy Storage & Recovery</a></li>
+              <li><a href="/department/renewable-thermal-energy/smart-grid-integration">Smart Grid Integration</a></li>
+            </ul>
+
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEBiomassBiofuelEnergySystemsProjectDevelopmentCenter;

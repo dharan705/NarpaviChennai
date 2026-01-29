@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "Real-Time Monitoring & SCADA Project Development Center in Chennai",
+  "SCADA IEEE Projects 2023–2025",
+  "Real-Time Monitoring Smart Grid Projects",
+  "B.Tech SCADA Projects",
+  "M.Tech AI Based SCADA Monitoring",
+  "Ph.D Secure SCADA Systems",
+  "IoT Enabled SCADA Dashboards",
+  "Predictive Fault Detection SCADA",
+  "Industrial SCADA Automation",
+  "Narpavi Research Institute SCADA Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Real-Time Monitoring & SCADA Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Real-Time Monitoring & SCADA Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned projects (2023–2025) on SCADA system design, IoT-enabled monitoring, predictive fault detection, and intelligent control for smart grids and microgrids."
+    question:
+      "What services does the Real-Time Monitoring & SCADA Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Real-Time Monitoring & SCADA Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on SCADA system design, IoT-enabled monitoring, predictive fault detection, and intelligent control for smart grids and microgrids."
   },
   {
     question: "What types of SCADA and Monitoring projects are supported?",
-    answer: "We support B.Tech projects (IoT-enabled SCADA dashboards and sensors), M.Tech projects (AI-based predictive fault detection, cloud-integrated SCADA), and Ph.D. projects (deep learning-based intelligent SCADA security, HIL testing, patents) for industrial, commercial, and smart grid applications."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering SCADA dashboards, AI-based predictive monitoring, cloud-integrated SCADA, cybersecurity, and HIL-tested intelligent control systems."
   },
   {
-    question: "Which technologies are used in SCADA and monitoring project development?",
-    answer: "We use MATLAB/Simulink, LabVIEW, Python, PSIM, FPGA/DSP controllers, IoT protocols (MQTT, Modbus, Zigbee), cloud platforms, as well as TensorFlow and PyTorch for predictive monitoring and adaptive control algorithms."
+    question: "Which technologies are used?",
+    answer:
+      "MATLAB/Simulink, LabVIEW, Python, PSIM, IoT protocols (MQTT, Modbus, Zigbee), cloud platforms, TensorFlow, PyTorch, and FPGA/DSP controllers."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025), focusing on SCADA design, IoT security, predictive monitoring systems, adaptive AI-assisted fault detection, and standards for reliable industrial automation."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering SCADA design, IoT security, predictive monitoring, and adaptive AI-based fault detection."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We provide full IEEE-topic mentoring, system simulation & modeling, IoT-secure prototyping, hardware validation, technical report documentation, and guidance for IEEE/Scopus/SCI publications."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end support including IEEE topic selection, simulation, hardware prototyping, IoT integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Real-Time Monitoring & SCADA – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Real-Time Monitoring & SCADA Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IoT-enabled SCADA, AI predictive fault detection, industrial automation, and smart grid monitoring.";
+
+const pageUrl =
+  "/department/smart-grid-microgrid/real-time-monitoring-scada";
 
 const EEERealtimeMonitoringSCADAProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Real-Time Monitoring SCADA IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Real-Time Monitoring & SCADA projects for B.Tech, M.Tech, Ph.D. IoT-enabled SCADA dashboards, AI predictive fault detection using MATLAB/Simulink, LabVIEW, TensorFlow for smart grids, industrial automation."
-  keywords="Real-Time Monitoring SCADA IEEE Projects 2023–2025, SCADA System Projects, B.Tech IoT SCADA, M.Tech AI Fault Detection SCADA, Ph.D. Secure SCADA Systems, Predictive Monitoring Smart Grids, Industrial SCADA Research, Narpavi Research Institute"
-  url="/department/smart-grid-microgrid/real-time-monitoring-scada"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Column: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Real-Time Monitoring Projects</li>
-              <li>SCADA System Projects</li>
-              <li>IEEE Smart Grid Projects 2023–2025</li>
-              <li>B.Tech SCADA Control Projects</li>
-              <li>M.Tech AI-Based Monitoring</li>
-              <li>Ph.D IoT-Enabled SCADA Systems</li>
-              <li>Narpavi Research Institute</li>
-              <li>Predictive Fault Detection Research</li>
-              <li>Industrial SCADA Systems</li>
-              <li>Smart Grid Monitoring Projects</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Column: Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Real-Time Monitoring & SCADA – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Real-Time Monitoring & SCADA Project Development Center, helping scholars develop IEEE-aligned (2023–2025) solutions in real-time monitoring, predictive fault detection, SCADA dashboards, IoT sensors, and automated control.</p>
               <p>Students gain both theoretical and hands-on expertise in SCADA modeling, FPGA/IoT prototyping, predictive analytics, cloud-enabled monitoring, and AI-assisted adaptive control strategies.</p>
@@ -202,48 +232,26 @@ const EEERealtimeMonitoringSCADAProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Column: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-<ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid – Project Development Center</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Integration of Distributed Generation</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA Systems</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

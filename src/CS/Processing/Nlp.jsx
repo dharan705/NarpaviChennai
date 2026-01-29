@@ -1,65 +1,88 @@
 import "./Nlp.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Natural Language Processing – Project Development Center in Chennai",
+  "NLP IEEE Projects 2023–2025",
+  "B.Tech NLP Project Guidance",
+  "M.Tech NLP Research Projects",
+  "Ph.D. NLP Dissertation Support",
+  "Sentiment Analysis Projects",
+  "Chatbot Development Projects",
+  "Machine Translation IEEE Projects",
+  "AI-driven Language Processing",
+  "Narpavi Research Institute NLP"
+];
 
 const faqs = [
   {
     question: "What services does the Natural Language Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute's Natural Language Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) NLP projects, focusing on speech recognition, sentiment analysis, machine translation, and conversational AI for industries like healthcare, finance, and e-commerce."
+    answer:
+      "Narpavi Research Institute's Natural Language Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) NLP projects including sentiment analysis, speech recognition, machine translation, and conversational AI."
   },
   {
     question: "What types of NLP projects are supported?",
-    answer: "We support B.Tech projects (chatbots, sentiment analysis), M.Tech projects (machine translation, NER), and Ph.D. projects (multimodal NLP, bias mitigation) for applications in customer support, legal tech, and education."
+    answer:
+      "We support chatbots, sentiment analysis, machine translation, named entity recognition, multimodal NLP, and bias mitigation projects."
   },
   {
     question: "Which technologies are used in NLP project development?",
-    answer: "Our stack includes Python, spaCy, NLTK, Hugging Face Transformers, TensorFlow, and hardware like edge devices for on-device NLP solutions."
+    answer:
+      "Our stack includes Python, spaCy, NLTK, Hugging Face Transformers, TensorFlow, and edge devices for on-device NLP."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like transformer models, federated learning, and multimodal NLP, ensuring academic and industry relevance."
+    answer:
+      "All projects are selected from IEEE Transactions (2023–2025), ensuring academic and industry relevance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, model design, dataset curation, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "We provide end-to-end guidance including topic selection, model design, dataset preparation, validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
   return (
-    <div className="NaturalLanguageProcessingProjectDevelopmentCenter">
-      <SEO 
-        title="NLP IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Natural Language Processing projects for B.Tech, M.Tech, Ph.D. Transformers, spaCy, sentiment analysis, chatbots, machine translation for healthcare, finance."
-        keywords="Natural Language Processing Project Development, NLP IEEE Projects 2023–2025, B.Tech NLP Project Guidance, M.Tech NLP Research, Ph.D. NLP Dissertation Support, Sentiment Analysis Projects, Chatbot Development, Machine Translation IEEE Projects, Narpavi Research Institute NLP, AI-driven Language Processing Projects"
-        url="/department/nlp"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Natural Language Processing – Project Development Center in Chennai"
+        description="Natural Language Processing – Project Development Center in Chennai offering IEEE 2023–2025 NLP projects in sentiment analysis, chatbots, transformers, and machine translation for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/nlp-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="NaturalLanguageProcessingProjectDevelopmentCenter-main">
-        <div className="NaturalLanguageProcessingProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="NaturalLanguageProcessingProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Natural Language Processing Project Development</li>
-              <li>NLP IEEE Projects 2023–2025</li>
-              <li>B.Tech NLP Project Guidance</li>
-              <li>M.Tech NLP Research</li>
-              <li>Ph.D. NLP Dissertation Support</li>
-              <li>Sentiment Analysis Projects</li>
-              <li>Chatbot Development</li>
-              <li>Machine Translation IEEE Projects</li>
-              <li>Narpavi Research Institute NLP</li>
-              <li>AI-driven Language Processing Projects</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="NaturalLanguageProcessingProjectDevelopmentCenter-center">
-            <h1>Natural Language Processing – Project Development Center</h1>
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Natural Language Processing – Project Development Center in Chennai</h1>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-intro">
+            <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 Natural Language Processing – Project Development Center is a cutting-edge initiative designed to empower engineering students and research scholars worldwide in developing both software and hardware projects. At Narpavi Research Institute, we specialize in delivering world-class guidance and project execution support that aligns with IEEE Transactions' latest advancements from 2023 to 2025. Whether for B.Tech, M.Tech, or Ph.D. levels, our Natural Language Processing – Project Development Center provides tailored solutions to ensure technical precision and industry relevance.
               </p>
@@ -68,7 +91,7 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech NLP Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational NLP projects like chatbots or sentiment analysis, aligned with IEEE topics.
@@ -85,7 +108,7 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech NLP Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced NLP projects like machine translation or named entity recognition, aligned with IEEE research.
@@ -102,7 +125,7 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. NLP Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering NLP research in multimodal systems, bias mitigation, and federated learning.
@@ -119,9 +142,9 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table – Natural Language Processing</h2>
-              <div className="NaturalLanguageProcessingProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -194,7 +217,7 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned NLP Project Titles (2023–2025)</h2>
               <ul>
                 <li>Transformer-Based Multilingual Summarization for Low-Resource Languages – 2025</li>
@@ -215,7 +238,7 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="NaturalLanguageProcessingProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Natural Language Processing Project Development</h2>
               <p>
                 Excellence in Natural Language Processing Project Development with Narpavi Technology represents a world-class initiative designed to provide engineering students across the globe with cutting-edge support for software and hardware-based NLP projects. At Narpavi Research Institute, we specialize in curating project topics aligned with IEEE Transactions from the years 2023 to 2025, ensuring every student benefits from the latest advancements in AI-driven language systems. This comprehensive approach positions students to contribute meaningfully to industries such as healthcare, finance, cybersecurity, e-commerce, and autonomous systems.
@@ -235,29 +258,13 @@ const NaturalLanguageProcessingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>          </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+                <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="NaturalLanguageProcessingProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

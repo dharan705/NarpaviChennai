@@ -1,68 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Hybrid Electric Vehicles Project Development Center in Chennai",
+  "Hybrid Electric Vehicles IEEE Projects 2023–2025",
+  "HEV Propulsion Systems Projects",
+  "Hybrid Energy Management Systems",
+  "Regenerative Braking HEV Projects",
+  "Parallel Series Plug-in Hybrid Vehicles",
+  "AI Based HEV Energy Optimization",
+  "B.Tech HEV Projects",
+  "M.Tech HEV Energy Management Research",
+  "Ph.D HEV Optimization Projects",
+  "Narpavi Research Institute HEV Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Hybrid Electric Vehicles (HEV) Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects on hybrid propulsion systems, energy management strategies, motor-generator integration, regenerative braking, power electronics, and publication in IEEE/Scopus/SCI journals."
+    answer:
+      "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects on hybrid propulsion systems, energy management strategies, motor–generator integration, regenerative braking, power electronics, and IEEE/Scopus/SCI journal publications."
   },
   {
     question: "What types of HEV projects are supported?",
-    answer: "B.Tech projects: basic HEV drive models, MATLAB simulations, hybrid prototypes with microcontrollers. M.Tech projects: energy management optimization, regenerative braking, hybrid control algorithms. Ph.D projects: AI/ML predictive HEV management, multi-motor hybrids, advanced powertrain optimization, and patents/publications."
+    answer:
+      "B.Tech projects include basic HEV drive models and MATLAB simulations. M.Tech projects focus on energy management optimization and regenerative braking. Ph.D research includes AI/ML predictive HEV management, multi-motor hybrids, advanced powertrain optimization, and patent-ready innovations."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, PLECS, embedded microcontrollers (Arduino, STM32), DSP/FPGA controllers, power electronics circuits, CAN-bus communication, IoT integration, AI/ML libraries (TensorFlow, PyTorch)."
+    answer:
+      "MATLAB/Simulink, PSCAD, PLECS, Arduino/STM32, DSP/FPGA controllers, power electronics circuits, CAN bus communication, IoT platforms, and AI/ML libraries such as TensorFlow and PyTorch."
   },
   {
     question: "How are HEV projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) on automotive hybrid drives, predictive energy management, HEV powertrain optimization, adaptive control algorithms, and regenerative integration."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) focusing on hybrid powertrain optimization, predictive energy management, adaptive control strategies, and regenerative braking integration."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer guidance in IEEE topic selection, embedded drive hardware/simulation, control algorithm validation, real-time energy management integration, IEEE-format technical writing, and support for international publications."
+    answer:
+      "Complete academic support including IEEE topic selection, simulation and hardware validation, energy management algorithm design, IEEE-format documentation, and international publication assistance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Hybrid Electric Vehicles (HEV) – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Hybrid Electric Vehicles Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering hybrid propulsion systems, energy management strategies, regenerative braking, AI-based optimization, and automotive powertrain research.";
+
+const pageUrl = "/department/electric-vehicles/hev";
 
 const EeeHevProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Hybrid Electric Vehicles HEV IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Hybrid Electric Vehicles HEV projects for B.Tech, M.Tech, Ph.D. Hybrid propulsion, energy management, regenerative braking, AI predictive control using MATLAB/Simulink, PSCAD, PLECS, DSP FPGA for automotive hybrids."
-  keywords="Hybrid Electric Vehicles HEV IEEE Projects 2023–2025, B.Tech HEV Drive Models, M.Tech HEV Energy Management, Ph.D. AI ML HEV Optimization, Parallel Series PHEV, Regenerative Braking HEV, Narpavi Research Institute"
-  url="/department/electric-vehicles/hev"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
-      
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords List */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Hybrid Electric Vehicles Project Development Center</li>
-              <li>HEV IEEE Projects</li>
-              <li>Hybrid Propulsion System Projects</li>
-              <li>Energy Management HEV Research</li>
-              <li>Regenerative Braking HEV Projects</li>
-              <li>Parallel & Series Hybrid Vehicles</li>
-              <li>B.Tech HEV Projects</li>
-              <li>M.Tech HEV Research</li>
-              <li>Ph.D. HEV Projects</li>
-              <li>AI-Based HEV Systems</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
-          
-          {/* 📑 Main Content */}
-          <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Hybrid Electric Vehicles (HEV) – Project Development Support</h1>
 
-            {/* Introduction */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
+          <div className="EEEProjectDevelopmentCenter-center">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    {/* Introduction */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> runs the HEV Project Development Center, aligned with IEEE 2023–2025 standards. Students design IEEE-standardized hybrid propulsion projects combining ICE with electric drives for fuel efficiency and reduced emissions.</p>
               <p>Research covers energy management, regenerative technology, motor-generator integration, control systems, and AI-powered optimization for Automotive 4.0 mobility.</p>
@@ -177,54 +204,32 @@ const EeeHevProjectDevelopmentCenter = () => {
 
             </section>
           </div>
-          
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
 
-          </div>
-        
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/electric-vehicles">Electric Vehicles – Project Development Center</a></li>
+              <li><a href="/department/electric-vehicles/bms">Battery Management Systems (BMS)</a></li>
+              <li><a href="/department/electric-vehicles/ev-charging-infrastructure">EV Charging Infrastructure</a></li>
+              <li><a href="/department/electric-vehicles/ev-motor-drive-systems">EV Motor Drive Systems</a></li>
+              <li><a href="/department/electric-vehicles/hev">Hybrid Electric Vehicles (HEV)</a></li>
+              <li><a href="/department/electric-vehicles/power-electronics-evs">Power Electronics for EVs</a></li>
+              <li><a href="/department/electric-vehicles/regenerative-braking-systems">Regenerative Braking Systems</a></li>
+            </ul>
+
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EeeHevProjectDevelopmentCenter;

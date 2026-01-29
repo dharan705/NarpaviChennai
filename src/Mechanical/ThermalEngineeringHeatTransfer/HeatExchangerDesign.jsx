@@ -1,76 +1,100 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Heat Exchanger Design & Optimization Project Development Center in Chennai",
+  "Heat Exchanger IEEE Projects 2023–2025",
+  "Shell & Tube Heat Exchanger Projects",
+  "Plate Heat Exchanger CFD Simulation",
+  "Nanofluid Heat Exchanger Research",
+  "Microchannel Heat Exchanger Design",
+  "AI Heat Exchanger Optimization",
+  "HVAC Heat Exchanger Design",
+  "Thermal Engineering Heat Exchanger Projects",
+  "Narpavi Research Institute Thermal Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Heat Exchanger Design & Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Heat Exchanger Design & Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on shell & tube, plate, and microchannel heat exchangers, focusing on CFD, AI, and sustainable design."
+    question:
+      "What services does the Heat Exchanger Design & Optimization Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Heat Exchanger Design & Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on shell & tube, plate, and microchannel heat exchangers using CFD, AI, and sustainable design approaches."
   },
   {
-    question: "What types of Heat Exchanger Design & Optimization projects are supported?",
-    answer: "We support B.Tech projects (CFD simulation of flow arrangements, fin material comparison), M.Tech projects (nanofluid-based exchanger optimization, experimental validation), and Ph.D. projects (AI-driven predictive design, additive manufacturing for microchannels)."
+    question:
+      "What types of Heat Exchanger Design & Optimization projects are supported?",
+    answer:
+      "We support B.Tech projects in CFD flow analysis, M.Tech projects in nanofluid optimization and experimental validation, and Ph.D. research in AI-driven predictive design and additive manufacturing of microchannels."
   },
   {
-    question: "Which tools and technologies are used in Heat Exchanger Design & Optimization projects?",
-    answer: "Our stack includes ANSYS, MATLAB, COMSOL Multiphysics, CFD software, AI frameworks (TensorFlow, Keras), and experimental setups for heat exchanger analysis and optimization."
+    question:
+      "Which tools and technologies are used in Heat Exchanger Design & Optimization projects?",
+    answer:
+      "ANSYS, MATLAB, COMSOL Multiphysics, CFD tools, AI frameworks, and experimental setups are used for advanced heat exchanger analysis and optimization."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering, focusing on advanced heat exchanger designs, AI-driven optimization, and sustainable thermal systems."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Mechanical Engineering, focusing on advanced exchanger designs, AI-driven optimization, and sustainable thermal systems."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, AI/IoT integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "End-to-end guidance including CFD analysis, experimental validation, AI integration, documentation, and support for IEEE, Scopus, Elsevier, and Springer publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Heat Exchanger Design & Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "Heat Exchanger Design & Optimization Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects for B.Tech, M.Tech, and Ph.D. using CFD, AI optimization, nanofluids, microchannel design, and experimental validation.";
+
+const pageUrl =
+  "/department/thermal-engineering/heat-exchanger-design";
 
 const MEHeatExchangerDesignOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-        <SEO
-        title="Heat Exchanger Design & Optimization IEEE Projects (2023–2025)"
-        description="Heat Exchanger Design Optimization IEEE project development for B.Tech, M.Tech & PhD using ANSYS, COMSOL, CFD simulation, nanofluids, AI optimization, microchannel design for thermal systems."
-        url="/department/thermal-engineering/heat-exchanger-design"
-        type="article"
-        keywords={[
-          "Heat Exchanger Design Optimization IEEE 2023–2025",
-          "Shell Tube Heat Exchanger Projects",
-          "Plate Heat Exchanger Simulation",
-          "CFD Heat Transfer Projects",
-          "Nanofluid Heat Exchanger Research",
-          "Microchannel Heat Exchanger Projects",
-          "AI Heat Exchanger Optimization",
-          "HVAC Heat Exchanger Design",
-          "Thermal Engineering Heat Exchanger Projects",
-          "Narpavi Research Institute Thermal Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Heat Exchanger Design & Optimization</li>
-              <li>Shell & Tube Heat Exchanger Projects</li>
-              <li>Plate Heat Exchanger Simulation</li>
-              <li>CFD Heat Transfer Projects</li>
-              <li>Nanofluid Heat Exchanger Research</li>
-              <li>HVAC Heat Exchanger Design</li>
-              <li>Microchannel Heat Exchanger Projects</li>
-              <li>AI Optimization in Heat Transfer</li>
-              <li>Thermal Engineering Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Heat Exchanger Design & Optimization – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+       <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Heat Exchanger Design & Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on advanced heat exchanger technologies for energy conservation and industrial efficiency.
               </p>
@@ -247,43 +271,29 @@ const MEHeatExchangerDesignOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/thermal-engineering">
-      Thermal Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/heat-exchanger-design">
-      Heat Exchanger Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/solar-thermal-systems">
-      Solar Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/waste-heat-recovery">
-      Waste Heat Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/hvac-system-analysis">
-      HVAC System Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
-      Energy Efficiency in Thermal Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/thermal-engineering">Thermal Engineering</a></li>
+              <li><a href="/department/thermal-engineering/heat-exchanger-design">Heat Exchanger Design</a></li>
+              <li><a href="/department/thermal-engineering/solar-thermal-systems">Solar Thermal Systems</a></li>
+              <li><a href="/department/thermal-engineering/waste-heat-recovery">Waste Heat Recovery</a></li>
+              <li><a href="/department/thermal-engineering/hvac-system-analysis">HVAC System Analysis</a></li>
+              <li><a href="/department/thermal-engineering/energy-efficiency-in-thermal">Energy Efficiency in Thermal Systems</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,67 +1,84 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Energy Management Systems IEEE Projects",
+  "EMS Project Development Center Chennai",
+  "EMS in Smart Grids IEEE Projects",
+  "IoT Based Energy Management Systems",
+  "AI Powered EMS IEEE Projects",
+  "Blockchain Energy Management Systems",
+  "Renewable Energy EMS IEEE Projects",
+  "Demand Response EMS Projects",
+  "EMS B.Tech Projects",
+  "EMS M.Tech Projects",
+  "EMS Ph.D. Research",
+  "Narpavi Research Institute EMS"
+];
 
 const faqs = [
   {
     question: "What services does the Energy Management Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute's Energy Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT-based EMS, AI-powered load forecasting, blockchain-enabled energy trading, and renewable energy optimization."
+    answer:
+      "Narpavi Research Institute's Energy Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in IoT-based EMS, AI-powered load forecasting, blockchain-enabled energy trading, and renewable energy optimization."
   },
   {
     question: "What types of EMS projects are supported?",
-    answer: "We support B.Tech projects (smart meters, load monitoring), M.Tech projects (AI-driven demand response, cloud-based EMS), and Ph.D. projects (blockchain energy trading, federated EMS) for applications in smart grids and industrial automation."
+    answer:
+      "We support B.Tech projects (smart meters, load monitoring), M.Tech projects (AI-driven demand response, cloud-based EMS), and Ph.D. projects (blockchain energy trading, federated EMS) for applications in smart grids and industrial automation."
   },
   {
     question: "Which technologies are used in EMS project development?",
-    answer: "Our stack includes MATLAB/Simulink, Python, SCADA, Arduino, Raspberry Pi, ESP32, and cloud computing platforms for advanced EMS design and prototyping."
+    answer:
+      "Our stack includes MATLAB/Simulink, Python, SCADA, Arduino, Raspberry Pi, ESP32, and cloud computing platforms for advanced EMS design and prototyping."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like smart grid EMS, demand response, and blockchain energy trading, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like smart grid EMS, demand response, and blockchain energy trading, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEEEnergyManagementSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Energy Management Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) EMS projects for B.Tech, M.Tech, Ph.D. IoT, AI, blockchain EMS in smart grids, renewable energy, demand response, energy trading."
-        keywords="Energy Management Systems IEEE Projects, EMS in Smart Grids IEEE Projects, IoT EMS IEEE Projects, AI-Powered EMS IEEE Projects, Renewable Energy EMS IEEE Projects, Blockchain EMS IEEE Projects, Demand Response EMS IEEE Projects, EMS B.Tech Projects, EMS M.Tech Projects, EMS Ph.D. Research, IEEE EMS Publications, Narpavi Research Institute"
-        url="/department/energy-management-systems"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Energy Management Systems – Project Development Center in Chennai"
+        description="Energy Management Systems project development center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on IoT-based EMS, AI-powered load forecasting, blockchain-enabled energy trading, smart grids, and renewable energy optimization (IEEE 2023–2025)."
+        url="/energy-management-systems-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy Management Systems IEEE Projects</li>
-              <li>EMS in Smart Grids IEEE Projects</li>
-              <li>IoT EMS IEEE Projects</li>
-              <li>AI-Powered EMS IEEE Projects</li>
-              <li>Renewable Energy EMS IEEE Projects</li>
-              <li>Blockchain EMS IEEE Projects</li>
-              <li>Demand Response EMS IEEE Projects</li>
-              <li>EMS B.Tech Projects</li>
-              <li>EMS M.Tech Projects</li>
-              <li>EMS Ph.D. Research</li>
-              <li>IEEE EMS Publications</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+
+          </aside>
+
+          {/* ❌ CENTER CONTENT (NOT MODIFIED) */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Energy Management Systems (EMS) – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>Energy Management Systems – Project Development Center in Chennai</h1>
+              <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Energy Management Systems (EMS) – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) EMS solutions for power systems, smart grids, and renewable energy integration.
               </p>
@@ -247,48 +264,27 @@ const EEEEnergyManagementSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand Side Management</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

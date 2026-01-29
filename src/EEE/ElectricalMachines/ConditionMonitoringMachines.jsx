@@ -1,66 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Condition Monitoring of Machines Project Development Center in Chennai",
+  "Condition Monitoring of Machines IEEE Projects 2023–2025",
+  "Predictive Maintenance IEEE Projects",
+  "Motor Fault Diagnosis Research",
+  "B.Tech Machine Monitoring Projects",
+  "M.Tech Vibration Analysis Research",
+  "Ph.D RUL Prediction and Anomaly Detection",
+  "Thermal and Vibration Monitoring Projects",
+  "IoT-Based Machine Condition Monitoring",
+  "Narpavi Research Institute Condition Monitoring"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Condition Monitoring of Machines Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Condition Monitoring of Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on predictive maintenance, fault detection, vibration analysis, thermal monitoring, and IoT-based condition monitoring for electrical machines and industrial drives."
+    question:
+      "What services does the Condition Monitoring of Machines Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Condition Monitoring of Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on predictive maintenance, fault detection, vibration analysis, thermal monitoring, and IoT-based condition monitoring for electrical machines and industrial drives."
   },
   {
     question: "What types of Condition Monitoring projects are supported?",
-    answer: "We support B.Tech projects (vibration/thermal monitoring, IoT-based diagnostics), M.Tech projects (AI/ML-based fault prediction, real-time monitoring), and Ph.D. projects (RUL prediction, anomaly detection) for applications in motors, generators, and Industry 4.0."
+    answer:
+      "We support B.Tech projects (vibration and thermal monitoring, IoT-based diagnostics), M.Tech projects (AI/ML-based fault prediction, real-time monitoring), and Ph.D. projects (RUL prediction and anomaly detection) for motors, generators, and Industry 4.0 applications."
   },
   {
     question: "Which technologies are used in Condition Monitoring project development?",
-    answer: "Our stack includes MATLAB/Simulink, LabVIEW, ANSYS Maxwell, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/ARM controllers, and hardware-in-the-loop (HIL) testbeds for machine diagnostics and monitoring."
+    answer:
+      "MATLAB/Simulink, LabVIEW, ANSYS Maxwell, TensorFlow, PyTorch, IoT platforms (MQTT), FPGA/ARM controllers, and hardware-in-the-loop (HIL) systems."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like predictive maintenance, fault diagnostics, and IoT integration, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering predictive maintenance, fault diagnostics, AI-based monitoring, and IoT integration."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/LabVIEW, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end support including topic selection, algorithm design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Condition Monitoring of Machines – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Condition Monitoring of Machines Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering predictive maintenance, vibration analysis, thermal monitoring, current signature analysis, IoT-based diagnostics, and AI-driven fault detection.";
+
+const pageUrl =
+  "/department/electrical-machines/condition-monitoring-machines";
 
 const EEEConditionMonitoringMachinesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Condition Monitoring of Machines IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Condition Monitoring projects for B.Tech, M.Tech, Ph.D. Predictive maintenance, vibration analysis, thermal monitoring, current signature analysis, IoT-based fault detection for motors, generators, industrial drives using MATLAB/Simulink, LabVIEW, TensorFlow, PyTorch."
-  keywords="Condition Monitoring of Machines IEEE Projects 2023–2025, Predictive Maintenance IEEE Projects, Motor Fault Diagnosis, B.Tech Machine Monitoring Projects, M.Tech Vibration Analysis Research, Ph.D. RUL Prediction AI, Thermal Monitoring Motors, Current Signature Analysis, IoT Motor Monitoring, Industry 4.0 Condition Monitoring, Narpavi Research Institute"
-  url="/department/electrical-machines/condition-monitoring-machines"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Condition Monitoring of Machines Projects</li>
-              <li>IEEE Predictive Maintenance Projects 2023–2025</li>
-              <li>Motor Fault Diagnosis Research</li>
-              <li>B.Tech Machine Monitoring Projects</li>
-              <li>M.Tech Predictive Maintenance Solutions</li>
-              <li>Ph.D AI-Based Fault Detection</li>
-              <li>IoT-Enabled Motor Monitoring</li>
-              <li>Smart Industrial Machine Research</li>
-              <li>Thermal & Vibration Monitoring Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Condition Monitoring of Machines – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Condition Monitoring of Machines Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance predictive maintenance and fault detection aligned with IEEE Transactions (2023–2025). Our projects focus on vibration analysis, thermal monitoring, current signature analysis, and IoT-based systems for motors, generators, and industrial drives.
               </p>
@@ -208,48 +238,27 @@ const EEEConditionMonitoringMachinesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/electrical-machines">Electrical Machines – Project Development Center</a></li>
+              <li><a href="/department/electrical-machines/advanced-drives-controllers">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

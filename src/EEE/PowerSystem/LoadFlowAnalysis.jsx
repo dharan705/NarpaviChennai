@@ -1,77 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Load Flow Analysis Project Development Center in Chennai",
+  "Load Flow Analysis IEEE Projects 2023–2025",
+  "Power System Load Flow Projects",
+  "Newton Raphson Load Flow",
+  "Gauss Seidel Load Flow Analysis",
+  "Optimal Power Flow Projects",
+  "AI Based Load Flow Analysis",
+  "Smart Grid Load Flow Projects",
+  "B.Tech Power Flow Projects",
+  "M.Tech Load Flow Optimization",
+  "Ph.D Power System Load Flow Research",
+  "Narpavi Research Institute Power Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Load Flow Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Load Flow Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power system load flow analysis, focusing on steady-state computations, renewable integration, and AI-driven optimization for utility grids and smart grids."
+    answer:
+      "Narpavi Research Institute’s Load Flow Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power system load flow analysis, focusing on steady-state computations, renewable integration, and AI-driven optimization for utility grids and smart grids."
   },
   {
     question: "What types of Load Flow Analysis projects are supported?",
-    answer: "We support B.Tech projects (Newton–Raphson, Gauss–Seidel implementations), M.Tech projects (optimal power flow, FACTS integration), and Ph.D. projects (AI/ML-based load flow, digital twins) for applications in smart grids, renewable energy, and wide-area monitoring."
+    answer:
+      "We support B.Tech projects (Newton–Raphson and Gauss–Seidel methods), M.Tech projects (optimal power flow and FACTS integration), and Ph.D. projects (AI/ML-based load flow and digital twins)."
   },
   {
     question: "Which technologies are used in Load Flow Analysis project development?",
-    answer: "Our stack includes MATLAB/Simulink, ETAP, Python, evolutionary algorithms (PSO, GA), AI frameworks (TensorFlow, PyTorch), and IoT platforms for real-time power system analysis."
+    answer:
+      "MATLAB/Simulink, ETAP, Python, PSO, GA, TensorFlow, PyTorch, and IoT platforms for real-time power system analysis."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like optimal power flow, AI-driven load flow, and renewable integration, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions and Conferences (2023–2025) covering optimal power flow, AI-driven load flow, and renewable energy integration."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/ETAP, hardware-in-the-loop testing, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, algorithm design, simulation, HIL testing, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Load Flow Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Load Flow Analysis Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering Newton–Raphson, Gauss–Seidel, optimal power flow, AI-based load flow, smart grids, and renewable integration.";
+
+const pageUrl =
+  "/department/power-systems/load-flow-analysis";
 
 const EEELoadFlowAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-       <SEO
-        title="Load Flow Analysis IEEE Projects (2023–2025)"
-        description="Load Flow Analysis IEEE project development for B.Tech, M.Tech & PhD using MATLAB/Simulink, ETAP, Newton-Raphson, Gauss-Seidel, optimal power flow, AI/ML load flow, smart grid analysis, renewable integration."
-        url="/department/power-systems/load-flow-analysis"
-        type="article"
-        keywords={[
-          "Load Flow Analysis Project Development",
-          "Power System Simulation Projects",
-          "IEEE Load Flow Projects 2023–2025",
-          "Optimal Power Flow Research",
-          "AI in Load Flow Analysis",
-          "Smart Grid Load Flow Projects",
-          "B.Tech Power Flow Projects",
-          "M.Tech Load Flow Projects",
-          "Ph.D. Power Engineering Projects",
-          "Narpavi Research Institute"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Load Flow Analysis Project Development Center</li>
-              <li>Power System Simulation Projects</li>
-              <li>IEEE Load Flow Projects 2023–2025</li>
-              <li>Optimal Power Flow Research</li>
-              <li>AI in Load Flow Analysis</li>
-              <li>Smart Grid Load Flow Projects</li>
-              <li>B.Tech Power Flow Projects</li>
-              <li>M.Tech Load Flow Projects</li>
-              <li>Ph.D. Power Engineering Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Load Flow Analysis – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+   <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Load Flow Analysis Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to advance power system analysis aligned with IEEE Transactions (2023–2025). Our projects focus on steady-state behavior, renewable integration, and AI-driven optimization for utility grids and smart grids.
               </p>
@@ -235,43 +255,26 @@ const EEELoadFlowAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/power-systems">
-      Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/distributed-generation-integration">
-      Distributed Generation Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/facts-power-systems">
-      FACTS Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/load-flow-analysis">
-      Load Flow Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-protection-relays">
-      Power System Protection & Relays
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-stability-control">
-      Power System Stability & Control
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/power-systems">Power Systems</a></li>
+              <li><a href="/department/power-systems/distributed-generation-integration">Distributed Generation Integration</a></li>
+              <li><a href="/department/power-systems/facts-power-systems">FACTS Power Systems</a></li>
+              <li><a href="/department/power-systems/load-flow-analysis">Load Flow Analysis</a></li>
+              <li><a href="/department/power-systems/power-system-protection-relays">Power System Protection & Relays</a></li>
+              <li><a href="/department/power-systems/power-system-stability-control">Power System Stability & Control</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,75 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Tribology & Wear Analysis Project Development Center in Chennai",
+  "IEEE Tribology Projects 2023–2025",
+  "Nano Lubricant Tribology Research",
+  "Surface Coating Wear Analysis",
+  "AI Driven Wear Prediction",
+  "Tribology Simulation Projects",
+  "B.Tech Tribology Projects",
+  "M.Tech Wear Resistant Projects",
+  "PhD Tribology Research",
+  "Narpavi Research Institute Tribology Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Tribology & Wear Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Tribology & Wear Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on friction, lubrication, and wear, focusing on nano-lubricants, surface texturing, advanced coatings, and AI-driven wear prediction for applications in automotive, aerospace, biomedical, and energy sectors."
+    question:
+      "What services does the Tribology & Wear Analysis Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on friction, lubrication, and wear, including nano-lubricants, surface texturing, advanced coatings, and AI-driven wear prediction."
   },
   {
-    question: "What types of Tribology & Wear Analysis projects are supported?",
-    answer: "We support B.Tech projects (basic friction and wear testing), M.Tech projects (advanced coatings, nano-lubricants), and Ph.D. projects (AI-driven wear prediction, tribology in additive manufacturing) for applications in EVs, biomedical implants, wind turbines, and aerospace systems."
+    question: "Who can apply for tribology-based projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Materials, and related disciplines."
   },
   {
-    question: "Which tools and technologies are used in Tribology & Wear Analysis projects?",
-    answer: "Our stack includes ANSYS, ABAQUS, Tribo-X, COMSOL, MATLAB, Python, pin-on-disc testers, SEM, AFM, and XRD for simulation, experimental testing, and surface characterization."
+    question: "Which tools are used in tribology projects?",
+    answer:
+      "ANSYS, ABAQUS, Tribo-X, COMSOL, MATLAB, Python, pin-on-disc testers, SEM, AFM, and XRD."
   },
   {
-    question: "How are Tribology & Wear Analysis projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Tribology, Materials Science, and Industrial Applications, focusing on nano-lubricants, smart coatings, and AI-driven analysis, aligned with IEEE/ASTM standards."
+    question: "Are projects aligned with IEEE standards?",
+    answer:
+      "Yes. All projects follow IEEE Transactions (2023–2025) and IEEE/ASTM standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is journal and patent support provided?",
+    answer:
+      "Yes. Support is available for IEEE, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Tribology & Wear Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Tribology & Wear Analysis Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on friction, lubrication, nano-lubricants, surface coatings, and AI-driven wear prediction.";
+
+const pageUrl =
+  "/department/mechanical-properties-materials/tribology-wear-analysis";
 
 const METribologyWearAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Tribology & Wear Analysis IEEE Projects (2023–2025)"
-        description="Tribology Wear Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS, Tribo-X, nano-lubricants, surface texturing, advanced coatings, AI wear prediction for automotive, aerospace, biomedical, energy."
-        url="/department/mechanical-properties-materials/tribology-wear-analysis"
-        type="article"
-        keywords={[
-          "Tribology Wear Analysis Projects",
-          "IEEE Tribology Projects 2023–2025",
-          "Nano Lubricant Tribology Research",
-          "Surface Coating Wear Analysis",
-          "Tribology Simulation Projects",
-          "AI Driven Wear Prediction",
-          "B.Tech Tribology Projects",
-          "M.Tech Wear Resistant Projects",
-          "Narpavi Research Institute Tribology Projects",
-          "PhD Tribology Research"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Tribology & Wear Analysis Projects</li>
-              <li>IEEE Tribology Projects 2023–2025</li>
-              <li>Nano-Lubricant Tribology Research</li>
-              <li>Surface Coating Wear Analysis</li>
-              <li>Tribology Simulation Projects</li>
-              <li>B.Tech Tribology Projects</li>
-              <li>M.Tech Wear-Resistant Projects</li>
-              <li>Ph.D. Tribology Research</li>
-              <li>Narpavi Research Institute Tribology Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Tribology & Wear Analysis – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Tribology & Wear Analysis Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on friction, lubrication, and wear, focusing on nano-lubricants, surface texturing, advanced coatings, and AI-driven wear prediction.
               </p>
@@ -269,43 +290,26 @@ const METribologyWearAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/mechanical-properties-materials">
-      Mechanical Properties & Materials
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
-      Composite Materials Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
-      Advanced Alloy Development
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
-      Tribology & Wear Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
-      Nanomaterials – Mechanical Properties
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
-      Fatigue & Fracture Analysis
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/mechanical-properties-materials">Mechanical Properties & Materials</a></li>
+              <li><a href="/department/mechanical-properties-materials/composite-materials-analysis">Composite Materials Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/advanced-alloy-development">Advanced Alloy Development</a></li>
+              <li><a href="/department/mechanical-properties-materials/tribology-wear-analysis">Tribology & Wear Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/nanomaterials-mechanical">Nanomaterials – Mechanical Properties</a></li>
+              <li><a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">Fatigue & Fracture Analysis</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

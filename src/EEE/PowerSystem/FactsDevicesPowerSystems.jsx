@@ -1,77 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "FACTS Devices in Power Systems Project Development Center in Chennai",
+  "FACTS Devices IEEE Projects 2023–2025",
+  "STATCOM Project Development",
+  "SSSC Power System Projects",
+  "UPFC Power Flow Control Research",
+  "DVR Voltage Restoration Projects",
+  "B.Tech FACTS Device Projects",
+  "M.Tech Power System FACTS Control",
+  "Ph.D FACTS Optimization Research",
+  "Narpavi Research Institute Power Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the FACTS Devices in Power Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s FACTS Devices in Power Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FACTS technologies like STATCOM, SSSC, UPFC, and DVR for enhancing power system reliability, stability, and control."
+    answer:
+      "Narpavi Research Institute’s FACTS Devices in Power Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FACTS technologies like STATCOM, SSSC, UPFC, and DVR for enhancing power system reliability, stability, and control."
   },
   {
     question: "What types of FACTS Devices in Power Systems projects are supported?",
-    answer: "We support B.Tech projects (STATCOM/DVR modeling, IoT monitoring), M.Tech projects (multi-device coordination, adaptive control), and Ph.D. projects (AI-optimized FACTS, wide-area integration) for applications in smart grids, renewable systems, and transmission networks."
+    answer:
+      "We support B.Tech projects (STATCOM/DVR modeling, IoT monitoring), M.Tech projects (multi-device coordination, adaptive control), and Ph.D. projects (AI-optimized FACTS and wide-area integration)."
   },
   {
     question: "Which technologies are used in FACTS Devices in Power Systems project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, AI frameworks (TensorFlow, PyTorch), IoT platforms, and hardware-in-the-loop (HIL) testbeds for FACTS design and control."
+    answer:
+      "MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, TensorFlow, PyTorch, IoT platforms, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like FACTS-based voltage control, power flow optimization, and AI-driven stability, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) covering FACTS-based voltage control, power flow optimization, and AI-driven stability enhancement."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/PSCAD, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, algorithm design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "FACTS Devices in Power Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) FACTS Devices in Power Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering STATCOM, SSSC, UPFC, DVR, AI-based control, smart grids, and power system stability.";
+
+const pageUrl =
+  "/department/power-systems/facts-power-systems";
 
 const EEEFACTSPowerSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-       <SEO
-        title="FACTS Devices in Power Systems IEEE Projects (2023–2025)"
-        description="FACTS Devices Power Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB/Simulink, PSCAD, DIgSILENT, STATCOM, SSSC, UPFC, DVR, AI control, smart grid stability, voltage regulation."
-        url="/department/power-systems/facts-power-systems"
-        type="article"
-        keywords={[
-          "FACTS Project Development Center",
-          "IEEE FACTS Devices Projects 2023–2025",
-          "STATCOM Project Development",
-          "UPFC SSSC Research",
-          "DVR Voltage Restoration Projects",
-          "B.Tech FACTS Device Projects",
-          "M.Tech Power System Control Projects",
-          "Ph.D. FACTS Optimization Research",
-          "Smart Grid FACTS Projects",
-          "Narpavi Research Institute"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>FACTS Project Development Center</li>
-              <li>IEEE FACTS Devices Projects 2023–2025</li>
-              <li>STATCOM Project Development</li>
-              <li>UPFC & SSSC Research</li>
-              <li>DVR Voltage Restoration Projects</li>
-              <li>B.Tech FACTS Device Projects</li>
-              <li>M.Tech Power System Control Projects</li>
-              <li>Ph.D. FACTS Optimization Research</li>
-              <li>Smart Grid FACTS Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>FACTS Devices in Power Systems – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the FACTS Devices in Power Systems Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance Flexible AC Transmission Systems (FACTS) aligned with IEEE Transactions (2023–2025). Our projects focus on devices like STATCOM, SSSC, UPFC, and DVR to enhance power system reliability, controllability, and stability.
               </p>
@@ -219,43 +237,26 @@ const EEEFACTSPowerSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/power-systems">
-      Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/distributed-generation-integration">
-      Distributed Generation Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/facts-power-systems">
-      FACTS Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/load-flow-analysis">
-      Load Flow Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-protection-relays">
-      Power System Protection & Relays
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-stability-control">
-      Power System Stability & Control
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/power-systems">Power Systems</a></li>
+              <li><a href="/department/power-systems/distributed-generation-integration">Distributed Generation Integration</a></li>
+              <li><a href="/department/power-systems/facts-power-systems">FACTS Power Systems</a></li>
+              <li><a href="/department/power-systems/load-flow-analysis">Load Flow Analysis</a></li>
+              <li><a href="/department/power-systems/power-system-protection-relays">Power System Protection & Relays</a></li>
+              <li><a href="/department/power-systems/power-system-stability-control">Power System Stability & Control</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"; // For navigation
 import "./ConferencePublication.scss";
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./PublicationServicesSidebar"
+import Leftsidebar from "../assets/Leftsidebar";
 
 const faqs = [
   {
@@ -43,30 +44,44 @@ const ConferencePublication = () => {
 
       <div className="conference-container">
         {/* Left Box */}
-        <div className="conference-left">
-          <h3>Related Services</h3>
-      <ul>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/ieee-conference-paper-publication")}>
-          IEEE Conference Paper Publication Services
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/springer-conference-paper-assistance")}>
-          Springer Conference Paper Publication Assistance
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/elsevier-conference-paper-support")}>
-          Elsevier Conference Paper Publication Support
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/national-conference-paper-support")}>
-          National Conference Paper Publication Support
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/fast-track-conference-paper-services")}>
-          Fast-Track Conference Paper Publication Services
-        </li>
-        <li onClick={() => navigate("/publication-services/conference-paper-publication-services/ieee-review-article-support")}>
-          Review Article Publication Support for IEEE Conferences
-        </li>
-      </ul>
-   
-        </div>
+          <aside className="left-sidebar2">
+            <ul>
+  <li>
+    <Link to="/publication-services/conference-paper-publication-services">
+      Conference Paper Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/SCIJournal">
+      SCI Journal Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/review-article-publication">
+      Review Article Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/ugc-care-journal-publication-services">
+      UGC CARE Journal Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/book-isbn-publication-support">
+      Book ISBN Publication Support
+    </Link>
+  </li>
+  <li>
+   <Link to="/publication-services/scopus-journal-publication-services">
+      Scopus Journal Publication Services
+    </Link>
+  </li>
+</ul>
+
+
+        
+      </aside>
+        
 
         {/* Main Content */}
         <div className="conference-main">
@@ -80,6 +95,28 @@ const ConferencePublication = () => {
             experience from writing and formatting to final submission, ensuring
             your paper meets all required standards and guidelines.
           </p>
+          <p>
+  Conference paper publication often serves as the first milestone in a researcher’s academic journey,
+  especially for PhD scholars and early-career researchers. Presenting research at international or
+  national conferences allows authors to test ideas, validate methodologies, and receive expert feedback
+  from peers working in the same domain. In many cases, conference papers are later extended with deeper
+  experimental analysis, broader datasets, or refined theoretical contributions. These enhanced versions
+  are commonly submitted to
+  {" "}
+  <Link
+    to="/publication-services/SCIJournal"
+    className="internal-link highlight-link"
+  >
+    SCI Journal Publication
+  </Link>
+  {" "}
+  where originality, technical depth, and clarity are evaluated at a higher standard. By starting with
+  conference publication and strategically progressing toward SCI-indexed journals, researchers improve
+  their acceptance chances while building a credible academic track record. This stepwise approach is
+  widely recommended by supervisors and research committees, as it ensures systematic growth in research
+  quality, citation potential, and global academic visibility.
+</p>
+
 
           <h2>Why Choose Our Conference Paper Publication Services?</h2>
           <ul>
@@ -109,6 +146,25 @@ const ConferencePublication = () => {
               alike.
             </li>
           </ul>
+    <p>
+  For researchers aiming to reach a broader international audience, conference papers often act as a
+  foundation for Scopus-indexed journal submissions. Conferences help authors identify strengths and
+  limitations in their work, making it easier to refine content before journal submission. Once feedback
+  is incorporated, the improved manuscript can be aligned with the scope and quality requirements of
+  {" "}
+  <Link
+    to="/publication-services/scopus-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    Scopus Journal Publication Services
+  </Link>
+  {" "}
+  which emphasize technical relevance, citation value, and global impact. This transition from conference
+  to Scopus journals is especially beneficial for researchers seeking recognition in institutional
+  evaluations, funding applications, and international collaborations. Publishing through this pathway
+  ensures that research contributions move beyond presentations and achieve long-term discoverability
+  within major academic databases.
+</p>
 
           <h2>Our Process: Seamless Paper Publication</h2>
           <ol>
@@ -135,6 +191,25 @@ const ConferencePublication = () => {
               priority processing for quicker acceptance.
             </li>
           </ol>
+        <p>
+  Conference publications also play an important role in shaping high-quality review articles.
+  Researchers often present comparative studies, literature surveys, or framework analyses at conferences
+  before developing them into full-scale reviews. These expanded versions consolidate multiple conference
+  findings and recent studies into a single comprehensive manuscript. Such refined works are well-suited
+  for
+  {" "}
+  <Link
+    to="/publication-services/review-article-publication"
+    className="internal-link highlight-link"
+  >
+    Review Article Publication
+  </Link>
+  {" "}
+  where clarity, depth, and synthesis of existing research are critical. Review articles derived from
+  conference insights are highly valuable for PhD coursework, proposal justification, and domain
+  expertise demonstration. This progression enables researchers to establish themselves as subject-matter
+  experts while enhancing citation frequency and academic credibility.
+</p>
 
           <h2>Comparative Services Table</h2>
           <div className="conference-table">
@@ -202,6 +277,25 @@ const ConferencePublication = () => {
               </tbody>
             </table>
           </div>
+      <p>
+  In many academic and institutional settings, conference papers are later compiled into edited volumes,
+  handbooks, or thematic books. These collections preserve conference knowledge while offering structured
+  academic documentation. To ensure formal recognition and global accessibility, such publications require
+  legitimate ISBN allocation. Researchers and institutions often rely on
+  {" "}
+  <Link
+    to="/publication-services/book-isbn-publication-support"
+    className="internal-link highlight-link"
+  >
+    Book ISBN Publication Support
+  </Link>
+  {" "}
+  to register conference proceedings, edited books, and academic compilations. ISBN registration enhances
+  cataloging in libraries, indexing platforms, and academic repositories, making the work traceable and
+  citable. This approach is especially valuable for universities seeking NAAC, UGC, or international
+  accreditation compliance, ensuring that conference outputs contribute meaningfully to institutional
+  research metrics.
+</p>
 
           <h2>Benefits of Choosing Our Service</h2>
           <ul>
@@ -253,9 +347,10 @@ const ConferencePublication = () => {
         </div>
 
         {/* Right Box */}
-        <div className="Conference-right-highlights">
-          
-     
+        <div className="right-sidebar1">
+              <Leftsidebar/>
+        <br />
+    
           <h3>Keywords</h3>
           <ul>
             {keywords.map((keyword, idx) => (

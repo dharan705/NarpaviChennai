@@ -1,67 +1,98 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Industrial Automation Project Development Center in Chennai",
+  "Industrial Automation IEEE Projects 2023–2025",
+  "PLC SCADA Industrial Automation Projects",
+  "Robotics Industrial Automation Projects",
+  "IoT Industry 4.0 Automation Projects",
+  "Smart Factory Automation Systems",
+  "AI Driven Industrial Automation",
+  "Cyber Physical Systems Automation",
+  "Machine Vision Automation Projects",
+  "Predictive Maintenance Automation",
+  "B.Tech Industrial Automation Projects",
+  "M.Tech Industrial Automation Projects",
+  "Ph.D Industrial Automation Research",
+  "Narpavi Research Institute Industrial Automation"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Industrial Automation Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Industrial Automation Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in PLC/SCADA automation, robotics, IoT, and AI-driven systems for smart factories, Industry 4.0, and industrial energy management."
+    question:
+      "What services does the Industrial Automation Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects covering PLC/SCADA automation, robotics, IoT, AI-driven smart factories, Industry 4.0, and industrial energy management."
   },
   {
     question: "What types of industrial automation projects are supported?",
-    answer: "We support B.Tech projects (PLC-based automation, robotic arms), M.Tech projects (IoT-enabled smart factories, AI robotics), and Ph.D. projects (cyber-physical systems, blockchain automation) for applications in manufacturing and smart grids."
+    answer:
+      "B.Tech projects include PLC automation and robotics. M.Tech projects focus on IoT-enabled smart factories and AI robotics. Ph.D. projects address cyber-physical systems, blockchain automation, and advanced industrial intelligence."
   },
   {
-    question: "Which technologies are used in industrial automation project development?",
-    answer: "Our stack includes MATLAB/Simulink, LabVIEW, PLC/SCADA systems, IoT platforms like AWS IoT, and robotics frameworks for advanced automation design and prototyping."
+    question: "Which technologies are used in industrial automation projects?",
+    answer:
+      "Technologies include MATLAB/Simulink, LabVIEW, PLC/SCADA platforms, industrial IoT systems, robotics frameworks, and cloud-based automation tools."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like PLC/SCADA automation, machine vision, and predictive maintenance, ensuring academic and industry relevance."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) in automation, robotics, predictive maintenance, machine vision, and Industry 4.0 systems."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end support includes topic selection, simulation, hardware prototyping, validation, IEEE documentation, and Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Industrial Automation – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Industrial Automation Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PLC SCADA automation, robotics, IoT Industry 4.0, AI-driven smart factories, predictive maintenance, and cyber-physical systems.";
+
+const pageUrl = "/department/industrial-automation";
 
 const EEEIndustrialAutomationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Industrial Automation IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Industrial Automation projects for B.Tech, M.Tech, Ph.D. PLC/SCADA, robotics, IoT Industry 4.0, AI-driven smart factories using MATLAB/Simulink, LabVIEW, AWS IoT for manufacturing, predictive maintenance."
-  keywords="Industrial Automation IEEE Projects 2023–2025, PLC SCADA IEEE Projects, B.Tech Industrial Automation, M.Tech IoT Smart Factory, Ph.D. Cyber-Physical Systems, Industry 4.0 IEEE Projects, Machine Vision Predictive Maintenance, Narpavi Research Institute"
-  url="/department/industrial-automation"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial Automation IEEE Projects</li>
-              <li>PLC SCADA IEEE Projects</li>
-              <li>Robotics IEEE Projects</li>
-              <li>IoT in Industrial Automation IEEE Projects</li>
-              <li>Industry 4.0 IEEE Projects</li>
-              <li>Cyber-Physical Systems IEEE Projects</li>
-              <li>Machine Vision IEEE Projects</li>
-              <li>Predictive Maintenance IEEE Projects</li>
-              <li>B.Tech Industrial Automation Projects</li>
-              <li>M.Tech Industrial Automation Projects</li>
-              <li>Ph.D. Industrial Automation Thesis</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Industrial Automation – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Industrial Automation – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in PLC/SCADA automation, robotics, IoT, and AI-driven systems for smart factories and Industry 4.0.
               </p>
@@ -236,54 +267,31 @@ const EEEIndustrialAutomationProjectDevelopmentCenter = () => {
                     <p>{faq.answer}</p>
                   </details>
                 ))}
-              </div>
-
-          
+              </div>          
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">DCS (Distributed Control Systems)</a></li>
+              <li><a href="/department/industrial-automation/hmi">HMI (Human-Machine Interface)</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA Systems</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">Robotic Process Automation</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Advanced Alloy Development Project Development Center in Chennai",
+  "IEEE Alloy Research 2023–2025",
+  "High Entropy Alloy Projects",
+  "Titanium Alloy Biomedical Projects",
+  "Nickel Based Superalloy Research",
+  "Additive Manufacturing Alloys",
+  "AI Driven Alloy Optimization",
+  "Thermo Calc Alloy Simulation",
+  "PhD Alloy Research Projects",
+  "Narpavi Research Institute Alloy Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Advanced Alloy Development Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Advanced Alloy Development Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced alloys, including high entropy alloys, titanium alloys, nickel-based superalloys, and nanostructured alloys, with applications in aerospace, automotive, biomedical, and energy sectors."
+    question:
+      "What services does the Advanced Alloy Development Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on advanced alloys including high entropy alloys, titanium alloys, nickel-based superalloys, and nanostructured alloys."
   },
   {
-    question: "What types of Advanced Alloy Development projects are supported?",
-    answer: "We support B.Tech projects (basic alloy design, tensile testing), M.Tech projects (computational alloy design, additive manufacturing), and Ph.D. projects (high entropy alloys, AI-driven alloy optimization) for applications in aerospace, electric vehicles, biomedical implants, and energy systems."
+    question: "Who can apply for Advanced Alloy Development projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Materials, and Metallurgy domains."
   },
   {
-    question: "Which tools and technologies are used in Advanced Alloy Development projects?",
-    answer: "Our stack includes Thermo-Calc, JMatPro, MATLAB, Python, ANSYS, ABAQUS, and additive manufacturing systems for phase prediction, mechanical simulation, and alloy prototyping."
+    question: "Which tools are used?",
+    answer:
+      "Thermo-Calc, JMatPro, MATLAB, Python, ANSYS, ABAQUS, and additive manufacturing platforms."
   },
   {
-    question: "How are Advanced Alloy Development projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Materials, Metallurgy, and Industrial Applications, focusing on high entropy alloys, additive manufacturing, and AI-driven design, aligned with IEEE/ASTM/ISO standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes. Projects follow IEEE Transactions (2023–2025) and IEEE/ASTM/ISO standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is journal and patent support provided?",
+    answer:
+      "Yes. IEEE, SCI, Scopus, Elsevier journal and patent assistance is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Advanced Alloy Development – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Advanced Alloy Development Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on high entropy alloys, titanium alloys, nickel superalloys, AI-driven alloy design, and additive manufacturing.";
+
+const pageUrl =
+  "/department/mechanical-properties-materials/advanced-alloy-development";
 
 const MEAdvancedAlloyDevelopmentProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Advanced Alloy Development IEEE Projects (2023–2025)"
-        description="Advanced Alloy Development IEEE project development for B.Tech, M.Tech & PhD using Thermo-Calc, JMatPro, high entropy alloys, titanium alloys, nickel superalloys, additive manufacturing for aerospace, automotive, biomedical, energy applications."
-        url="/department/mechanical-properties-materials/composite-materials-analysis"
-        type="article"
-        keywords={[
-          "Advanced Alloy Development Projects",
-          "IEEE Alloy Research 2023–2025",
-          "High Entropy Alloy Projects",
-          "Titanium Alloy Biomedical Projects",
-          "Nickel Based Superalloy Research",
-          "Additive Manufacturing Alloys",
-          "AI Driven Alloy Optimization",
-          "Thermo Calc Alloy Simulation",
-          "Narpavi Research Institute Alloy Projects",
-          "PhD Alloy Research Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Advanced Alloy Development Projects</li>
-              <li>IEEE Alloy Research 2023–2025</li>
-              <li>High Entropy Alloy Projects</li>
-              <li>Titanium Alloy Biomedical Projects</li>
-              <li>Nickel-Based Superalloy Research</li>
-              <li>Additive Manufacturing Alloys</li>
-              <li>B.Tech Alloy Projects</li>
-              <li>M.Tech Alloy Simulation Projects</li>
-              <li>Ph.D. Research in Advanced Alloys</li>
-              <li>Narpavi Research Institute Alloy Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Advanced Alloy Development – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+        <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Advanced Alloy Development Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on advanced alloys, including high entropy alloys, titanium alloys, nickel-based superalloys, and nanostructured alloys for aerospace, automotive, biomedical, and energy applications.
               </p>
@@ -270,43 +290,26 @@ const MEAdvancedAlloyDevelopmentProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/mechanical-properties-materials">
-      Mechanical Properties & Materials
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
-      Composite Materials Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
-      Advanced Alloy Development
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
-      Tribology & Wear Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
-      Nanomaterials – Mechanical Properties
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
-      Fatigue & Fracture Analysis
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/mechanical-properties-materials">Mechanical Properties & Materials</a></li>
+              <li><a href="/department/mechanical-properties-materials/composite-materials-analysis">Composite Materials Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/advanced-alloy-development">Advanced Alloy Development</a></li>
+              <li><a href="/department/mechanical-properties-materials/tribology-wear-analysis">Tribology & Wear Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/nanomaterials-mechanical">Nanomaterials – Mechanical Properties</a></li>
+              <li><a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">Fatigue & Fracture Analysis</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,63 +1,84 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the Embedded System Security and Cryptography Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Embedded System Security and Cryptography Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in lightweight cryptography, secure boot mechanisms, and blockchain-based security for IoT, automotive, and smart healthcare applications."
+    question:
+      "What services does the Embedded System Security and Cryptography Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Embedded System Security and Cryptography Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in lightweight cryptography, secure boot mechanisms, and blockchain-based security for IoT, automotive, and smart healthcare applications.",
   },
   {
-    question: "What types of Embedded System Security and Cryptography projects are supported?",
-    answer: "We support B.Tech projects (lightweight encryption, secure IoT devices), M.Tech projects (elliptic curve cryptography, intrusion detection), and Ph.D. projects (post-quantum cryptography, secure virtualization) for applications in smart cities, healthcare, and defense."
+    question:
+      "What types of Embedded System Security and Cryptography projects are supported?",
+    answer:
+      "We support B.Tech projects (lightweight encryption, secure IoT devices), M.Tech projects (elliptic curve cryptography, intrusion detection), and Ph.D. projects (post-quantum cryptography, secure virtualization) for applications in smart cities, healthcare, and defense.",
   },
   {
-    question: "Which technologies are used in Embedded System Security and Cryptography project development?",
-    answer: "Our stack includes ARM-based microcontrollers, RISC-V cores, Keil, IAR Embedded Workbench, and tools for blockchain and post-quantum cryptography implementation."
+    question:
+      "Which technologies are used in Embedded System Security and Cryptography project development?",
+    answer:
+      "Our stack includes ARM-based microcontrollers, RISC-V cores, Keil, IAR Embedded Workbench, and tools for blockchain and post-quantum cryptography implementation.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like lightweight ciphers, secure boot, and blockchain security, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like lightweight ciphers, secure boot, and blockchain security, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, cryptographic implementation, hardware prototyping, validation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, cryptographic implementation, hardware prototyping, validation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Embedded System Security and Cryptography",
+  "Embedded cryptography IEEE projects",
+  "IoT security projects 2023–2025",
+  "B.Tech embedded security projects",
+  "M.Tech cryptography research",
+  "Ph.D. embedded security development",
+  "Secure IoT device projects",
+  "Narpavi Research Institute embedded systems",
+  "IEEE cryptography project titles",
+  "Embedded security and cryptography solutions",
 ];
 
 const ECEEmbeddedSystemSecurityCryptographyProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Embedded System Security and Cryptography IEEE Projects | Lightweight, Secure Boot, Blockchain, PQC | B.Tech M.Tech Ph.D."
+        title="Embedded System Security and Cryptography – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) embedded system security and cryptography projects on lightweight ciphers, secure boot, blockchain-based security, intrusion detection, and post-quantum cryptography using ARM/RISC-V, Keil, IAR, and modern crypto frameworks for IoT, automotive, and healthcare systems."
-        keywords="Embedded System Security and Cryptography, Embedded cryptography IEEE projects, IoT security projects 2023–2025, B.Tech embedded security projects, M.Tech cryptography research, Ph.D. embedded security development, Secure IoT device projects, Narpavi Research Institute embedded systems, IEEE cryptography project titles, Embedded security and cryptography solutions"
-        url="/department/embedded-systems/embedded-system-security-cryptography"
+        keywords={keywords}
+        url="/department/embedded-systems/embedded-system-security-cryptography-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Embedded System Security and Cryptography</li>
-              <li>Embedded cryptography IEEE projects</li>
-              <li>IoT security projects 2023–2025</li>
-              <li>B.Tech embedded security projects</li>
-              <li>M.Tech cryptography research</li>
-              <li>Ph.D. embedded security development</li>
-              <li>Secure IoT device projects</li>
-              <li>Narpavi Research Institute embedded systems</li>
-              <li>IEEE cryptography project titles</li>
-              <li>Embedded security and cryptography solutions</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Embedded System Security and Cryptography – Project Development Support</h1>
-
+            <h1>Embedded System Security and Cryptography - Project Development Center in Chennai</h1>
+              
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Embedded System Security and Cryptography – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in lightweight cryptography, secure boot mechanisms, and blockchain-based security for IoT, automotive, and smart healthcare applications.
@@ -211,39 +232,29 @@ const ECEEmbeddedSystemSecurityCryptographyProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
-  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
-  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
-  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
-  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+              <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+              <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+              <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+              <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

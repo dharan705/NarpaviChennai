@@ -1,77 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Composite Materials Analysis Project Development Center in Chennai",
+  "IEEE Composite Materials Projects 2023–2025",
+  "Polymer Matrix Composite Projects",
+  "Nanocomposite Simulation Projects",
+  "Hybrid Composite Optimization",
+  "Smart Composite IEEE Projects",
+  "FEA in Composites",
+  "AI Driven Composite Analysis",
+  "PhD Composite Research",
+  "Narpavi Research Institute Composite Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Composite Materials Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Composite Materials Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on polymer matrix composites, nanocomposites, hybrid composites, and smart materials, focusing on simulation, testing, and optimization for aerospace, automotive, renewable energy, and biomedical applications."
+    question:
+      "What services does the Composite Materials Analysis Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on polymer matrix composites, nanocomposites, hybrid composites, and smart materials."
   },
   {
-    question: "What types of Composite Materials Analysis projects are supported?",
-    answer: "We support B.Tech projects (basic composite modeling, tensile testing), M.Tech projects (multi-scale simulation, nanofiller integration), and Ph.D. projects (smart composites, AI-driven defect detection, digital twins) for applications in aerospace, automotive, civil, and biomedical engineering."
+    question: "Who can apply for Composite Materials Analysis projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Materials, and Civil Engineering backgrounds."
   },
   {
-    question: "Which tools and technologies are used in Composite Materials Analysis projects?",
-    answer: "Our stack includes ANSYS, ABAQUS, SolidWorks, CATIA, MATLAB, Python, AI libraries (TensorFlow, Keras), and additive manufacturing for simulation, design, and experimental validation of composite materials."
+    question: "Which tools are used?",
+    answer:
+      "ANSYS, ABAQUS, SolidWorks, CATIA, MATLAB, Python, AI libraries, and additive manufacturing."
   },
   {
-    question: "How are Composite Materials Analysis projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Composite Materials, Advanced Manufacturing, and Applied Mechanics, focusing on multi-scale modeling, AI-driven analysis, and smart composites, aligned with IEEE/ASTM/ISO standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes. Projects align with IEEE Transactions (2023–2025) and IEEE/ASTM/ISO standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is journal and patent support provided?",
+    answer:
+      "Yes. IEEE, SCI, Scopus, Elsevier journal and patent assistance is provided."
   }
-]; 
+];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Composite Materials Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Composite Materials Analysis Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on polymer matrix composites, nanocomposites, hybrid composites, smart materials, and AI-driven analysis.";
+
+const pageUrl =
+  "/department/mechanical-properties-materials/composite-materials-analysis";
 
 const MECompositeMaterialsAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-      <Sidebar />
-      <div className="MEProjectDevelopmentCenter-main">
-        <SEO
-        title="Composite Materials Analysis IEEE Projects (2023–2025)"
-        description="Composite Materials Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS, ABAQUS, polymer matrix composites, nanocomposites, hybrid composites, smart materials for aerospace, automotive, renewable energy, biomedical."
-        url="/department/mechanical-properties-materials/composite-materials-analysis"
-        type="article"
-        keywords={[
-          "Composite Materials Analysis Projects",
-          "IEEE Composite Materials 2023–2025",
-          "Polymer Matrix Composite Projects",
-          "Nanocomposite Simulation Projects",
-          "FEA in Composites",
-          "Hybrid Composite Optimization",
-          "Smart Composite IEEE Projects",
-          "AI Driven Composite Analysis",
-          "Narpavi Research Institute Composite Projects",
-          "PhD Composite Research"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
+      <Sidebar />
+
+      <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Composite Materials Analysis Projects</li>
-              <li>IEEE Composite Materials Projects 2023–2025</li>
-              <li>Polymer Matrix Composite Projects</li>
-              <li>Nanocomposite Simulation Projects</li>
-              <li>FEA in Composites</li>
-              <li>Hybrid Composite Optimization</li>
-              <li>B.Tech Composite Projects</li>
-              <li>M.Tech Composite Simulation Projects</li>
-              <li>Ph.D. Research in Composites</li>
-              <li>Narpavi Research Institute Composite Projects</li>
-              <li>Smart Composite IEEE Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Composite Materials Analysis – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+      <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Composite Materials Analysis Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on polymer matrix composites, nanocomposites, hybrid composites, and smart materials for applications in aerospace, automotive, renewable energy, and biomedical engineering.
               </p>
@@ -271,43 +290,26 @@ const MECompositeMaterialsAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/mechanical-properties-materials">
-      Mechanical Properties & Materials
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
-      Composite Materials Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
-      Advanced Alloy Development
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
-      Tribology & Wear Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
-      Nanomaterials – Mechanical Properties
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
-      Fatigue & Fracture Analysis
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/mechanical-properties-materials">Mechanical Properties & Materials</a></li>
+              <li><a href="/department/mechanical-properties-materials/composite-materials-analysis">Composite Materials Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/advanced-alloy-development">Advanced Alloy Development</a></li>
+              <li><a href="/department/mechanical-properties-materials/tribology-wear-analysis">Tribology & Wear Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/nanomaterials-mechanical">Nanomaterials – Mechanical Properties</a></li>
+              <li><a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">Fatigue & Fracture Analysis</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

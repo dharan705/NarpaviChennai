@@ -1,67 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "HVDC Transmission Systems Project Development Center in Chennai",
+  "HVDC Transmission IEEE Projects 2023–2025",
+  "LCC VSC HVDC Converters",
+  "B.Tech HVDC System Design Projects",
+  "M.Tech Multi-Terminal HVDC Projects",
+  "Ph.D AI Based HVDC Control",
+  "HVDC Stability Analysis Projects",
+  "Renewable Energy HVDC Integration",
+  "IoT Based HVDC Monitoring",
+  "Narpavi Research Institute HVDC Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the HVDC Transmission Systems Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) domains such as HVDC converters, stability analysis, power flow optimization, and multi-terminal HVDC systems integration."
+    question:
+      "What services does the HVDC Transmission Systems Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) domains such as HVDC converters, stability analysis, power flow optimization, and multi-terminal HVDC systems integration."
   },
   {
     question: "What types of HVDC projects are supported?",
-    answer: "We support B.Tech projects (basic LCC and VSC modeling, voltage regulation experiments), M.Tech projects (AI-assisted predictive control, renewable integration, multi-terminal optimization), and Ph.D. projects (deep learning HVDC predictive frameworks, IoT-enabled HVDC real-time monitoring, innovation and patents)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering LCC/VSC modeling, AI-assisted predictive control, renewable integration, and IEEE publications."
   },
   {
     question: "Which tools are used for HVDC research?",
-    answer: "We use MATLAB/Simulink, PSCAD, PLECS for HVDC system simulations; FPGA/DSP for hardware prototypes; IoT-based monitoring systems; and AI frameworks like TensorFlow/PyTorch for predictive analysis."
+    answer:
+      "MATLAB/Simulink, PSCAD, PLECS, FPGA/DSP controllers, IoT platforms, TensorFlow, and PyTorch."
   },
   {
     question: "How are HVDC projects aligned with IEEE standards?",
-    answer: "Projects use IEEE Transactions (2023–2025) as foundation, focusing on HVDC converters, stability, predictive control, renewable coordination, and standard-compliant multi-terminal systems."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) focusing on HVDC converters, stability, predictive control, and multi-terminal systems."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide IEEE topic mentoring, extensive simulation, hardware prototyping support, AI and IoT-based monitoring, IEEE format reports, and publication support for IEEE/Scopus/SCI journals."
+    answer:
+      "We provide IEEE topic mentoring, simulations, hardware prototyping, AI/IoT monitoring, IEEE-format reports, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "HVDC Transmission Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) HVDC Transmission Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering LCC and VSC converters, multi-terminal HVDC, AI-based predictive control, and renewable energy integration.";
+
+const pageUrl =
+  "/department/high-voltage-engineering/hvdc-transmission";
 
 const EEEHVDCTransmissionSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="HVDC Transmission Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) HVDC Transmission projects for B.Tech, M.Tech, Ph.D. LCC VSC converters, multi-terminal HVDC, AI predictive control, renewable integration using MATLAB/Simulink, PSCAD, PLECS, TensorFlow for smart grids, offshore wind."
-  keywords="HVDC Transmission IEEE Projects 2023–2025, LCC VSC HVDC Converters, B.Tech HVDC System Design, M.Tech Multi-Terminal HVDC, Ph.D. AI HVDC Control, HVDC Stability Analysis, IoT HVDC Monitoring, Renewable Energy HVDC Integration, PSCAD PLECS Simulation, Narpavi Research Institute"
-  url="/department/high-voltage-engineering/hvdc-transmission"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Left Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>HVDC Transmission Projects</li>
-              <li>IEEE HVDC Research 2023–2025</li>
-              <li>B.Tech HVDC System Design</li>
-              <li>M.Tech Multi-Terminal HVDC Projects</li>
-              <li>Ph.D AI-Based HVDC Control</li>
-              <li>Narpavi Research Institute</li>
-              <li>VSC & LCC HVDC Converters</li>
-              <li>Predictive Control HVDC Systems</li>
-              <li>IoT-Based HVDC Monitoring</li>
-              <li>Renewable Energy HVDC Integration</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>HVDC Transmission Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+     {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the HVDC Transmission Systems Project Development Center, an IEEE-aligned (2023–2025) initiative supporting B.Tech, M.Tech, and Ph.D. scholars in converter design, stability analysis, renewable integration, and predictive HVDC control.
@@ -204,43 +233,27 @@ const EEEHVDCTransmissionSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gas-insulated-substations">Gas Insulated Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing Equipment</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
-        
         </div>
       </div>
     </div>

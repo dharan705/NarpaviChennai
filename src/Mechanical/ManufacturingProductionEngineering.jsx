@@ -1,76 +1,87 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../assets/SEO"
+import Subsidebar from ".././pages/Subsidebar";
+import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Manufacturing Engineering IEEE Projects 2023–2025",
+  "CNC Machining Optimization Projects",
+  "Additive Manufacturing Student Projects",
+  "Industry 4.0 Smart Factory Projects",
+  "Robotics Automation IEEE Projects",
+  "Digital Twin Manufacturing Research",
+  "Sustainable Manufacturing PhD Projects",
+  "Tool Design Optimization Projects",
+  "Production Engineering B.Tech Projects",
+  "Narpavi Research Institute Manufacturing",
+];
+
 const faqs = [
   {
-    question: "What services does the Manufacturing & Production Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Manufacturing & Production Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CNC machining, additive manufacturing, robotics, and Industry 4.0 solutions for aerospace, automotive, and healthcare applications."
+    question:
+      "What services does the Manufacturing & Production Engineering Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Manufacturing & Production Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CNC machining, additive manufacturing, robotics, and Industry 4.0 solutions for aerospace, automotive, and healthcare applications.",
   },
   {
-    question: "What types of Manufacturing & Production Engineering projects are supported?",
-    answer: "We support B.Tech projects (CNC toolpath generation, 3D printing), M.Tech projects (hybrid manufacturing, IoT-enabled automation), and Ph.D. projects (AI-driven digital twins, sustainable manufacturing) for industries like aerospace, automotive, and smart factories."
+    question:
+      "What types of Manufacturing & Production Engineering projects are supported?",
+    answer:
+      "We support B.Tech projects (CNC toolpath generation, 3D printing), M.Tech projects (hybrid manufacturing, IoT-enabled automation), and Ph.D. projects (AI-driven digital twins, sustainable manufacturing).",
   },
   {
-    question: "Which tools and technologies are used in Manufacturing & Production Engineering projects?",
-    answer: "Our stack includes SolidWorks, CATIA, Siemens NX, AutoCAD, MasterCAM, ANSYS, MATLAB, AI frameworks (TensorFlow, Keras), PLC systems, and IoT platforms for simulations and prototyping."
+    question:
+      "Which tools and technologies are used in Manufacturing & Production Engineering projects?",
+    answer:
+      "Our stack includes SolidWorks, CATIA, Siemens NX, AutoCAD, MasterCAM, ANSYS, MATLAB, AI frameworks, PLC systems, and IoT platforms.",
   },
   {
-    question: "How are Manufacturing & Production Engineering projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Manufacturing and Industrial Engineering, focusing on CNC optimization, additive manufacturing, and smart factory solutions."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Manufacturing and Industrial Engineering.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD/CAM modeling, FEA/CFD simulations, prototype fabrication, AI/IoT integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
-  }
+    answer:
+      "We offer end-to-end guidance including topic selection, CAD/CAM modeling, simulations, prototype fabrication, documentation, and journal publication support.",
+  },
 ];
 
 const MEManufacturingProductionEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Manufacturing & Production Engineering IEEE Projects (2023–2025)"
-        description="Manufacturing Production Engineering IEEE project development for B.Tech, M.Tech & PhD using CNC machining, additive manufacturing, robotics, Industry 4.0, AI digital twins, IoT automation for aerospace, automotive, smart factories."
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Manufacturing & Production Engineering – Project Development Center in Chennai"
+        description="Manufacturing & Production Engineering project development for B.Tech, M.Tech, and Ph.D. students focusing on CNC machining, additive manufacturing, robotics, Industry 4.0, AI-driven digital twins, and smart factory systems."
+        keywords={keywords}
         url="/department/manufacturing-production"
-        type="article"
-        keywords={[
-          "Manufacturing Engineering IEEE 2023–2025",
-          "CNC Machining Optimization Projects",
-          "Additive Manufacturing Student Projects",
-          "Industry 4.0 Smart Factory Projects",
-          "Robotics Automation IEEE Projects",
-          "Digital Twin Manufacturing Research",
-          "Sustainable Manufacturing PhD Projects",
-          "Tool Design Optimization Projects",
-          "Production Engineering B.Tech Projects",
-          "Narpavi Research Institute Manufacturing"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Manufacturing Engineering IEEE Projects 2023–2025</li>
-              <li>CNC Machining Projects for B.Tech</li>
-              <li>Additive Manufacturing IEEE Projects</li>
-              <li>Robotics and Automation Student Projects</li>
-              <li>Smart Factory Industry 4.0 Projects</li>
-              <li>Tool Design Optimization Research</li>
-              <li>Production Engineering Ph.D. Projects</li>
-              <li>Digital Twin Manufacturing Projects</li>
-              <li>Sustainable Manufacturing Research Projects</li>
-              <li>Narpavi Research Institute Manufacturing Support</li>
-            </ul>
-          </div>
+          
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
 
-          {/* Center: Main Content */}
+            </aside>
+
+          {/* CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Manufacturing & Production Engineering – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 FIXED */}
+            <h1>
+              Manufacturing & Production Engineering – Project Development Center in Chennai
+            </h1>
+                 <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Manufacturing & Production Engineering Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on CNC machining, additive manufacturing, robotics, and smart Industry 4.0 solutions.
               </p>
@@ -239,43 +250,50 @@ const MEManufacturingProductionEngineeringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/manufacturing-production">
-      Manufacturing & Production Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/cnc-machining-optimization">
-      CNC Machining Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/additive-manufacturing">
-      Additive Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/industrial-automation-robotics">
-      Industrial Automation & Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/smart-manufacturing-systems">
-      Smart Manufacturing Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/tool-design-process">
-      Tool Design & Process
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/manufacturing-production">
+                  Manufacturing & Production Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/manufacturing-production/cnc-machining-optimization">
+                  CNC Machining Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/manufacturing-production/additive-manufacturing">
+                  Additive Manufacturing
+                </a>
+              </li>
+              <li>
+                <a href="/department/manufacturing-production/industrial-automation-robotics">
+                  Industrial Automation & Robotics
+                </a>
+              </li>
+              <li>
+                <a href="/department/manufacturing-production/smart-manufacturing-systems">
+                  Smart Manufacturing Systems
+                </a>
+              </li>
+              <li>
+                <a href="/department/manufacturing-production/tool-design-process">
+                  Tool Design & Process
+                </a>
+              </li>
+            </ul>
 
-          </div>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

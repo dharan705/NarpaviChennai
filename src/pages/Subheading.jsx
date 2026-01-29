@@ -1,8 +1,5 @@
 import './Subheading.scss';
 import Subsidebar from './Subsidebar';
-import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
-
 
 const faqs = [
   {
@@ -36,7 +33,7 @@ const faqs = [
 ];
 
 const universityData = {
-  fullName: 'PhD Admission in Anna University Chennai',
+  fullName: 'PhD Admission Assistance in Anna University Chennai | Guidances',
   shortName: 'Anna University Chennai',
   phdEntranceExam:
     'Written Test and Interview (Exemptions: UGC-NET, CSIR-NET, SLET, GATE / M.Phil.)',
@@ -79,52 +76,24 @@ const universityData = {
 };
 
 const Subheading = () => {
-  useEffect(() => {
-      document.title = "PhD Admission in Anna University Chennai";
-    },[]);       
-
+  
   return (
     <div className="main">
-      <Helmet>
-        {/* Page Title */}
-        <title>PhD Admission in Anna University Chennai || Narpavitech</title>
-
-        {/* Meta Description */}
-        <meta name="description"
-          content="Get expert PhD research proposal writing services in Chennai from Narpavitech – a leading name in PhD guidance and support."
-        />
-
-        {/* Responsive Design */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* Robots */}
-        <meta name="robots" content="index, follow" />
-
-        {/* Author */}
-        <meta name="author" content="Narpavitech - PhD Project Center, Chennai" />
-
-        {/* Language */}
-        <meta name="language" content="en" />
-
-        {/* Open Graph (for social sharing) */}
-        <meta property="og:title" content="PhD Research Proposal Writing Services in Chennai | Narpavitech" />
-        <meta
-          property="og:description"
-          content="Get expert PhD research proposal writing services in Chennai from Narpavitech – a leading name in PhD guidance and support."
-        />
-        <meta property="og:url" content="https://www.narpavitech.com/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://www.narpavitech.in/images/preview.jpg" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PhD Research Proposal Writing Services in Chennai | Narpavitech" />
-        <meta
-          name="twitter:description"
-          content="Get expert PhD research proposal writing services in Chennai from Narpavitech – a leading name in PhD guidance and support."
-        />
-        <meta name="twitter:image" content="https://www.narpavitech.in/images/preview.jpg" />
-      </Helmet>
+      <SEO
+  title="PhD Admission Assistance in Anna University in Chennai"
+  description="Complete PhD admission guidance for Anna University including eligibility, entrance exams, part-time options, document checklist, fee details, scholarships and supervisor selection support."
+  url="/phd-admission-assistance-in-anna-university"
+  keywords={[
+    "Anna University PhD admission Chennai",
+    "PhD admission eligibility Anna University",
+    "Anna University part-time PhD",
+    "Anna University PhD entrance exam",
+    "Anna University PhD supervisor change",
+    "PhD application dates Anna University",
+    "Anna University PhD documentation requirements"
+  ]}
+  faqs={faqs}
+/>
 
       <Subsidebar /> 
 
@@ -140,12 +109,18 @@ const Subheading = () => {
               <li><b>Annual PhD Enrolment and Exit Details:</b><br />2,200+ scholars in main campuses and 13,000+ in affiliates reflect strong PhD output.</li>
               <li><b>Why this University is a Premier Choice for PhD Studies:</b><br /> PhD Admission in Chennai Anna University offers expert faculty, vast research scope, and top-tier facilities—making it a preferred research destination.</li>
             </ul>
+            <br />
+             <ul>
+              {universityData.SearchKeywordsforPhDAdmission.map((keyword, idx) => (
+                <li key={idx}>{keyword}</li>
+              ))}
+            </ul>
           </div>
 
           {/* Center Content */}
           <div className="university-details-container">
             <div className="phdimg" />
-            <h2 className="university-title">{universityData.fullName}</h2>
+            <h1 className="university-title">{universityData.fullName}</h1>
             <div className="details-grid">
               <div className="detail-item">
                 <span className="detail-label">Popularly Known As</span>
@@ -193,11 +168,40 @@ const Subheading = () => {
           {/* Right Sidebar */}
           <div className="side-box right-box">
               {/* <h3>Search Keywords for PhD Admission</h3> */}
-            <ul>
-              {universityData.SearchKeywordsforPhDAdmission.map((keyword, idx) => (
-                <li key={idx}>{keyword}</li>
-              ))}
-            </ul>
+            <ul class="university-links">
+  <li><a href="/phd-admission-assistance-in-anna-university">PhD Admission Assistance in Anna University</a></li>
+  <li><a href="/phd-admission-assistance-in-anna-malai-university">PhD Admission Assistance in Annamalai University</a></li>
+  <li><a href="/phd-admission-assistance-in-bharathiar-university">PhD Admission Assistance in Bharathiar University</a></li>
+  <li><a href="/phd-admission-assistance-in-vit">PhD Admission Assistance in VIT University</a></li>
+  <li><a href="/phd-admission-assistance-in-mgr-institute">PhD Admission Assistance in MGR Institute</a></li>
+  <li><a href="/phd-admission-assistance-in-sathyabama-university">PhD Admission Assistance in Sathyabama University</a></li>
+  <li><a href="/phd-admission-assistance-in-saveetha-university">PhD Admission Assistance in Saveetha University</a></li>
+  <li><a href="/phd-admission-assistance-in-srm">PhD Admission Assistance in SRM University</a></li>
+  <li><a href="/phd-admission-assistance-in-vels-vistas">PhD Admission Assistance in VELS University (VISTAS)</a></li>
+  <li><a href="/phd-admission-assistance-in-biher">PhD Admission Assistance in BIHER</a></li>
+  <li><a href="/phd-admission-assistance-in-amrita">PhD Admission Assistance in Amrita University</a></li>
+  <li><a href="/phd-admission-assistance-in-hits">PhD Admission Assistance in HITS</a></li>
+  <li><a href="/phd-admission-assistance-in-alagappa-university">PhD Admission Assistance in Alagappa University</a></li>
+  <li><a href="/phd-admission-assistance-in-manu">PhD Admission Assistance in Manonmaniam Sundaranar University</a></li>
+  <li><a href="/phd-admission-assistance-in-periyar-university">PhD Admission Assistance in Periyar University</a></li>
+  <li><a href="/phd-admission-assistance-in-madurai-kamaraj-university">PhD Admission Assistance in Madurai Kamaraj University</a></li>
+  <li><a href="/phd-admission-assistance-in-bharathidasan-university">PhD Admission Assistance in Bharathidasan University</a></li>
+  <li><a href="/phd-admission-assistance-in-sastra">PhD Admission Assistance in SASTRA University</a></li>
+  <li><a href="/phd-admission-assistance-in-sri-ramakrishna-engineering">PhD Admission Assistance in Sri Ramakrishna Engineering College</a></li>
+  <li><a href="/phd-admission-assistance-in-sns">PhD Admission Assistance in SNS College</a></li>
+  <li><a href="/phd-admission-assistance-in-cit">PhD Admission Assistance in CIT</a></li>
+  <li><a href="/phd-admission-assistance-in-psg">PhD Admission Assistance in PSG College of Technology</a></li>
+  <li><a href="/phd-admission-assistance-in-vinayaka-mission">PhD Admission Assistance in Vinayaka Missions University</a></li>
+  <li><a href="/phd-admission-assistance-in-prist-university">PhD Admission Assistance in PRIST University</a></li>
+  <li><a href="/phd-admission-assistance-in-periyar-maniammai-university">PhD Admission Assistance in Periyar Maniammai University</a></li>
+  <li><a href="/phd-admission-assistance-in-st-peters-institute">PhD Admission Assistance in St Peter’s Institute</a></li>
+  <li><a href="/phd-admission-assistance-in-scsstm">PhD Admission Assistance in Sri Chandrasekharendra Saraswathi University</a></li>
+  <li><a href="/phd-admission-assistance-in-karpagam-academy">PhD Admission Assistance in Karpagam Academy</a></li>
+  <li><a href="/phd-admission-assistance-in-karunya-university">PhD Admission Assistance in Karunya University</a></li>
+  <li><a href="/phd-admission-assistance-in-vel-tech">PhD Admission Assistance in Vel Tech</a></li>
+  <li><a href="/phd-admission-assistance-in-kalasalingam-university">PhD Admission Assistance in Kalasalingam Academy</a></li>
+</ul>
+
           </div>
         </div>
       </div>
@@ -213,43 +217,6 @@ const Subheading = () => {
           ))}
         </div>
 
-
-      {/* JSON-LD Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [ 
-              {
-                "@type": "Question",
-                "name": "What is the eligibility for PhD admission at Anna University?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "A Master’s Degree with at least 55% marks or 5.5 CGPA is required. Candidates with GATE/NET/SLET/M.Phil. may be exempted from the written test."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "What documents are required for PhD admission?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Essential documents include PG and UG certificates, community certificate, experience certificate (if part-time), research proposal, and ID proof."
-                }
-              },
-              {
-                "@type": "Question",
-                "name": "Does Anna University provide any fellowship for PhD?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, fellowships like University Research Fellowship, UGC JRF/SRF, DST-INSPIRE, and industry-sponsored schemes are available."
-                }  
-              }
-            ]
-          }),
-        }}
-        />
       </section>  
       <Script/>
     </div>

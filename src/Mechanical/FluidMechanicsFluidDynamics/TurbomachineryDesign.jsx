@@ -1,75 +1,94 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Turbomachinery Design & Analysis Project Development Center in Chennai",
+  "Turbomachinery Design IEEE Projects 2023–2025",
+  "Gas Turbine Analysis Projects",
+  "Compressor CFD Simulation Projects",
+  "Wind Turbine Blade Optimization",
+  "Hydraulic Turbine Cavitation Analysis",
+  "AI Turbomachinery Optimization",
+  "CFD FEA Turbine Blade Analysis",
+  "Pump Impeller Design Projects",
+  "Narpavi Research Institute Turbomachinery Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Turbomachinery Design & Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Turbomachinery Design & Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on compressors, turbines, pumps, and fans using CAD, CFD, FEA, and AI-driven optimization."
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) turbomachinery projects using CAD, CFD, FEA, and AI-driven optimization."
   },
   {
-    question: "What types of Turbomachinery projects are supported?",
-    answer: "We support B.Tech projects (pump design, compressor flow analysis), M.Tech projects (turbine blade optimization, FSI modeling), and Ph.D. projects (AI-driven CFD, cavitation mitigation) for aerospace, energy, and automotive applications."
+    question: "What types of turbomachinery projects are supported?",
+    answer:
+      "Projects include compressors, turbines, pumps, fans, cavitation analysis, and AI-driven diagnostics."
   },
   {
-    question: "Which tools and technologies are used in Turbomachinery projects?",
-    answer: "Our stack includes SolidWorks, CATIA, ANSYS Fluent, OpenFOAM, COMSOL Multiphysics, C++, Python, AI frameworks (TensorFlow, Keras), and HPC platforms for simulations."
+    question: "Which tools are used?",
+    answer:
+      "ANSYS Fluent, OpenFOAM, SolidWorks, CATIA, MATLAB, AI frameworks, and HPC platforms."
   },
   {
-    question: "How are Turbomachinery projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics, focusing on turbulence modeling, blade design, and AI-driven optimization."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects align with IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD/CFD/FEA modeling, experimental validation, AI/HPC integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "Do you support publications?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier, Springer journals and patents are supported."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Turbomachinery Design & Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Turbomachinery Design & Analysis Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using CAD, CFD, FEA, AI-driven optimization, and HPC simulations.";
+
+const pageUrl =
+  "/department/fluid-mechanics-dynamics/turbomachinery-design";
 
 const METurbomachineryDesignAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Turbomachinery Design & Analysis IEEE Projects (2023–2025)"
-        description="Turbomachinery Design IEEE project development for B.Tech, M.Tech & PhD using ANSYS Fluent, OpenFOAM, CAD, CFD-FEA coupling, AI optimization for gas turbines, compressors, wind turbines, hydraulic turbines, aerospace propulsion."
-        url="/department/fluid-mechanics-dynamics/turbomachinery-design"
-        type="article"
-        keywords={[
-          "Turbomachinery Design IEEE 2023–2025",
-          "Gas Turbine Analysis Projects",
-          "Compressor CFD Simulation Projects",
-          "Wind Turbine Blade Optimization",
-          "Hydraulic Turbine Cavitation Analysis",
-          "AI Turbomachinery Optimization",
-          "CFD FEA Turbine Blade Analysis",
-          "Pump Impeller Design Projects",
-          "Aerospace Turbomachinery Projects",
-          "Narpavi Research Institute Turbomachinery"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Turbomachinery Design Projects</li>
-              <li>Gas Turbine Analysis IEEE Projects</li>
-              <li>Pump Design Optimization Projects</li>
-              <li>Compressor CFD Simulation</li>
-              <li>Wind Turbine Blade Design IEEE Projects</li>
-              <li>Hydraulic Turbine Projects</li>
-              <li>AI in Turbomachinery</li>
-              <li>Structural Analysis of Turbine Blades</li>
-              <li>CFD–FEA Coupled Projects</li>
-              <li>Narpavi Research Institute Turbomachinery Support</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Turbomachinery Design & Analysis – Project Development Support</h1>
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
@@ -242,48 +261,29 @@ const METurbomachineryDesignAnalysisProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics">
-      Fluid Mechanics & Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
-      Computational Fluid Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
-      Turbomachinery Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
-      Aerodynamics & Wind Tunnel
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
-      Pump & Valve Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
-      Microfluidics Lab
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/fluid-mechanics-dynamics">Fluid Mechanics & Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">Computational Fluid Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/turbomachinery-design">Turbomachinery Design</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">Aerodynamics & Wind Tunnel</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">Pump & Valve Optimization</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/microfluidics-lab">Microfluidics Lab</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

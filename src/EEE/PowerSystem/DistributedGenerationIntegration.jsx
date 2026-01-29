@@ -1,76 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Distributed Generation Integration Project Development Center in Chennai",
+  "Distributed Generation IEEE Projects 2023–2025",
+  "Renewable Energy Integration Projects",
+  "B.Tech Distributed Generation Projects",
+  "M.Tech Microgrid Optimization Projects",
+  "Ph.D Hybrid Renewable Energy Research",
+  "Smart Grid Distributed Generation",
+  "IoT Based DG Monitoring",
+  "AI Enabled Distributed Generation Projects",
+  "Narpavi Research Institute Power Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Distributed Generation Integration Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Distributed Generation Integration Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in renewable energy integration, microgrid design, and AI-based energy optimization for applications in smart grids, hybrid systems, and sustainable power networks."
+    answer:
+      "Narpavi Research Institute’s Distributed Generation Integration Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in renewable energy integration, microgrid design, and AI-based energy optimization for smart grids, hybrid systems, and sustainable power networks."
   },
   {
     question: "What types of Distributed Generation Integration projects are supported?",
-    answer: "We support B.Tech projects (solar/wind system modeling, IoT monitoring), M.Tech projects (hybrid DG optimization, energy storage integration), and Ph.D. projects (AI-enabled dispatch, grid resilience) for applications in microgrids, smart cities, and renewable energy systems."
+    answer:
+      "We support B.Tech projects (solar and wind system modeling, IoT monitoring), M.Tech projects (hybrid DG optimization, energy storage integration), and Ph.D. projects (AI-enabled dispatch and grid resilience)."
   },
   {
     question: "Which technologies are used in Distributed Generation Integration project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, AI frameworks (TensorFlow, PyTorch), IoT platforms, and hardware-in-the-loop (HIL) testbeds for DG design and integration."
+    answer:
+      "MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, TensorFlow, PyTorch, IoT platforms, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like hybrid DG systems, optimal placement, and AI-driven energy management, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) covering hybrid distributed generation systems, optimal placement, and AI-driven energy management."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/PSCAD, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, algorithm design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Distributed Generation Integration – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Distributed Generation Integration Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering renewable energy integration, microgrids, AI-based optimization, smart grids, and IoT monitoring.";
+
+const pageUrl =
+  "/department/power-systems/distributed-generation-integration";
 
 const EEEDistributedGenerationIntegrationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-        <SEO
-        title="Distributed Generation Integration IEEE Projects (2023–2025)"
-        description="Distributed Generation Integration IEEE project development for B.Tech, M.Tech & PhD using MATLAB/Simulink, PSCAD, DIgSILENT, AI optimization, microgrid design, renewable energy integration, smart grids."
-        url="/department/power-systems/distributed-generation-integration"
-        type="article"
-        keywords={[
-          "Distributed Generation Project Development",
-          "Renewable Energy Integration Projects",
-          "IEEE Distributed Generation Projects 2023–2025",
-          "B.Tech DG Integration Projects",
-          "M.Tech Microgrid Optimization Projects",
-          "Ph.D. Hybrid Renewable Energy Research",
-          "Smart Grid DG Research",
-          "IoT-based DG Monitoring",
-          "AI-enabled Distributed Generation Projects",
-          "Narpavi Research Institute"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Distributed Generation Project Development Center</li>
-              <li>Renewable Energy Integration Projects</li>
-              <li>IEEE Distributed Generation Projects 2023–2025</li>
-              <li>B.Tech DG Integration Projects</li>
-              <li>M.Tech Microgrid Optimization Projects</li>
-              <li>Ph.D. Hybrid Renewable Energy Research</li>
-              <li>Smart Grid DG Research</li>
-              <li>IoT-based DG Monitoring</li>
-              <li>AI-enabled Distributed Generation Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Distributed Generation Integration – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Distributed Generation Integration Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance renewable energy integration aligned with IEEE Transactions (2023–2025). Our projects focus on solar, wind, and hybrid systems, microgrid stability, and AI-based energy optimization.
               </p>
@@ -218,43 +237,26 @@ const EEEDistributedGenerationIntegrationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/power-systems">
-      Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/distributed-generation-integration">
-      Distributed Generation Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/facts-power-systems">
-      FACTS Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/load-flow-analysis">
-      Load Flow Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-protection-relays">
-      Power System Protection & Relays
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-stability-control">
-      Power System Stability & Control
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/power-systems">Power Systems</a></li>
+              <li><a href="/department/power-systems/distributed-generation-integration">Distributed Generation Integration</a></li>
+              <li><a href="/department/power-systems/facts-power-systems">FACTS Power Systems</a></li>
+              <li><a href="/department/power-systems/load-flow-analysis">Load Flow Analysis</a></li>
+              <li><a href="/department/power-systems/power-system-protection-relays">Power System Protection & Relays</a></li>
+              <li><a href="/department/power-systems/power-system-stability-control">Power System Stability & Control</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

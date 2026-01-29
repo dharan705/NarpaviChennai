@@ -1,64 +1,83 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What is Hardware Security and Trusted Computing?",
-    answer: "It addresses protection of digital systems against tampering, unauthorized access, and hardware-level threats using secure hardware modules like TPM, PUFs, and TEEs."
+    answer:
+      "It addresses protection of digital systems against tampering, unauthorized access, and hardware-level threats using secure hardware modules like TPM, PUFs, and TEEs.",
   },
   {
     question: "What do B.Tech projects in hardware security focus on?",
-    answer: "Introductory secure hardware implementations such as FPGA-based password authentication, hardware firewalls for IoT, and trusted boot mechanisms using tools like Arduino, Raspberry Pi, and FPGA kits."
+    answer:
+      "Introductory secure hardware implementations such as FPGA-based password authentication, hardware firewalls for IoT, and trusted boot mechanisms using tools like Arduino, Raspberry Pi, and FPGA kits.",
   },
   {
     question: "What advanced topics are covered in M.Tech hardware security projects?",
-    answer: "Practical secure systems including TPMs, FPGA-based AES/RSA processors, Trusted Execution Environments, and tamper-resistant architectures using Vivado, Quartus, Verilog, VHDL, and ARM-based boards."
+    answer:
+      "Practical secure systems including TPMs, FPGA-based AES/RSA processors, Trusted Execution Environments, and tamper-resistant architectures using Vivado, Quartus, Verilog, VHDL, and ARM-based boards.",
   },
   {
     question: "What research areas do Ph.D. projects explore in this domain?",
-    answer: "PUF-based authentication, AI-driven hardware intrusion detection, post-quantum secure design, and federated trusted computing across IoT and cloud, aiming at IEEE Transactions and symposiums."
+    answer:
+      "PUF-based authentication, AI-driven hardware intrusion detection, post-quantum secure design, and federated trusted computing across IoT and cloud, aiming at IEEE Transactions and symposiums.",
   },
   {
     question: "Which tools and platforms are used for hardware security projects?",
-    answer: "Common tools include ARM TrustZone, TPM chips, FPGA, ASIC prototyping, Cadence, Mentor Graphics, Python, MATLAB, and FPGA-SoC platforms."
-  }
+    answer:
+      "Common tools include ARM TrustZone, TPM chips, FPGA, ASIC prototyping, Cadence, Mentor Graphics, Python, MATLAB, and FPGA-SoC platforms.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Hardware Security Projects in ECE",
+  "Trusted Computing IEEE Projects 2023–2025",
+  "FPGA Security Projects",
+  "Cryptographic Hardware Design",
+  "PUF-Based Authentication Research",
+  "Tamper-Resistant Hardware Systems",
+  "ARM TrustZone Security Projects",
+  "Post-Quantum Hardware Security",
+  "B.Tech Hardware Security Projects",
+  "Ph.D. Research in Trusted Computing",
+  "Narpavi Research Institute Security Support",
 ];
 
 const HardwareSecurityTrustedComputingProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Hardware Security and Trusted Computing IEEE Projects | FPGA, TPM, ARM TrustZone | B.Tech M.Tech Ph.D."
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Hardware Security and Trusted Computing – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) hardware security and trusted computing projects on TPM, PUFs, TEEs, FPGA/ASIC crypto engines, AI-driven intrusion detection, and post-quantum secure hardware for IoT and embedded systems."
-        keywords="Hardware Security Projects in ECE, Trusted Computing IEEE Projects 2023–2025, FPGA Security Projects, Cryptographic Hardware Design, PUF-Based Authentication Research, Tamper-Resistant Hardware Systems, ARM TrustZone Security Projects, Post-Quantum Hardware Security, B.Tech Hardware Security Projects, Ph.D. Research in Trusted Computing, Narpavi Research Institute Security Support"
-        url="/department/cryptography-security/hardware-security-trusted-computing"
+        keywords={keywords}
+        url="/department/cryptography-security/hardware-security-trusted-computing-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Hardware Security Projects in ECE</li>
-              <li>Trusted Computing IEEE Projects 2023–2025</li>
-              <li>FPGA Security Projects</li>
-              <li>Cryptographic Hardware Design</li>
-              <li>PUF-Based Authentication Research</li>
-              <li>Tamper-Resistant Hardware Systems</li>
-              <li>ARM TrustZone Security Projects</li>
-              <li>Post-Quantum Hardware Security</li>
-              <li>B.Tech Hardware Security Projects</li>
-              <li>Ph.D. Research in Trusted Computing</li>
-              <li>Narpavi Research Institute Security Support</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Hardware Security and Trusted Computing – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Hardware Security and Trusted Computing – Project Development Center in Chennai</h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> provides advanced research and project support in Hardware Security and Trusted Computing for B.Tech, M.Tech, and Ph.D. scholars, aligned with IEEE standards (2023–2025).
               </p>
@@ -176,39 +195,29 @@ const HardwareSecurityTrustedComputingProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+              </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
-  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
-  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
-  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
-  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
-  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
-  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/cryptography-security">Cryptography & Security</a></li>
+              <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+              <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+              <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+              <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+              <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+              <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

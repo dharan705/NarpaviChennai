@@ -1,68 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss"; 
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "AI-based Energy Optimization Project Development Center in Chennai",
+  "AI Energy Optimization IEEE Projects 2023–2025",
+  "Deep Reinforcement Learning Energy Optimization",
+  "Smart Grid Energy Optimization AI",
+  "Industrial Energy Management using AI",
+  "Hybrid CNN LSTM Energy Prediction",
+  "Microgrid Energy Optimization AI",
+  "Renewable Energy Optimization using AI",
+  "B.Tech AI Energy Projects",
+  "M.Tech AI Energy Optimization",
+  "Ph.D AI Energy Research",
+  "Narpavi Research Institute Energy Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the AI-based Energy Optimization Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects on AI-driven energy efficiency. Services include reinforcement learning algorithms, hybrid deep learning for smart grids, IoT-enabled hardware prototyping, HIL testing, and IEEE/Scopus/SCI publication support."
+    answer:
+      "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects on AI-driven energy efficiency, including reinforcement learning, hybrid deep learning, IoT prototyping, and publication support."
   },
   {
     question: "What types of projects are supported?",
-    answer: "B.Tech students can implement ML/DL predictive models for industrial/building datasets with IoT-enabled controllers. M.Tech students focus on hybrid CNN-LSTM and RL optimization with embedded systems. Ph.D research covers GANs, Transformers, hybrid RL-DL architectures, large-scale simulations, patents, and SCI/IEEE publications."
+    answer:
+      "B.Tech focuses on ML/DL prediction models, M.Tech on hybrid CNN-LSTM and RL optimization, and Ph.D. on GANs, Transformers, large-scale simulations, and patents."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), LabVIEW, Arduino/Raspberry Pi, IoT-based sensors, Cloud platforms (AWS, Azure), and industrial protocols (Modbus/OPC-UA)."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch), LabVIEW, Arduino, Raspberry Pi, AWS, Azure, and industrial protocols."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions (2023–2025) in Industrial Electronics, Smart Grid, and Sustainable Energy, applying reinforcement learning, neural networks, and hybrid deep models for energy efficiency in grids and renewable systems."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) in Smart Grid, Industrial Electronics, and Sustainable Energy domains."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide complete IEEE-project assistance: topic selection, dataset preparation, model building, energy optimization simulation, IoT integration, IEEE-format reporting, and international journal/conference publication."
+    answer:
+      "Complete support including topic selection, dataset preparation, modeling, simulation, IEEE documentation, and journal publication."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "AI-based Energy Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) AI-based Energy Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using reinforcement learning, CNN-LSTM, smart grids, MATLAB, TensorFlow, Arduino, and cloud platforms.";
+
+const pageUrl =
+  "/department/ai-electrical-engineering/ai-energy-optimization";
 
 const EEEAiEnergyOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="AI Energy Optimization IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) AI Energy Optimization projects for B.Tech, M.Tech, Ph.D. Reinforcement learning, hybrid CNN-LSTM, deep RL for smart grids, industrial energy using MATLAB/Simulink, TensorFlow PyTorch, Arduino Raspberry Pi, AWS Azure."
-  keywords="AI Energy Optimization IEEE Projects 2023–2025, Deep Reinforcement Learning Energy, B.Tech ML Energy Prediction, M.Tech Hybrid CNN LSTM Energy, Ph.D. GAN Transformers Energy, Smart Grid Microgrid Optimization, Narpavi Research Institute"
-  url="/department/ai-electrical-engineering/ai-energy-optimization"
-  faqs={faqs}
-/>
+      
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Sidebar Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>AI-based Energy Optimization projects</li>
-              <li>Industrial energy management AI</li>
-              <li>Smart building energy optimization</li>
-              <li>Deep Reinforcement Learning for energy</li>
-              <li>Renewable energy optimization using AI</li>
-              <li>IEEE 2023–2025 energy projects</li>
-              <li>B.Tech energy optimization projects</li>
-              <li>M.Tech AI-based energy management projects</li>
-              <li>Ph.D. research in energy optimization AI</li>
-              <li>Microgrid energy optimization AI projects</li>
-              <li>Narpavi Research Institute project center</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
 
-          {/* 📑 Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>AI-based Energy Optimization – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+                {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 The <strong>AI-based Energy Optimization Project Development Center</strong> at Narpavi Research Institute enables B.Tech, M.Tech, and Ph.D. scholars (2023–2025) to create IEEE-aligned solutions for energy efficiency in industries, smart buildings, and renewable systems.  
@@ -197,55 +226,33 @@ const EEEAiEnergyOptimizationProjectDevelopmentCenter = () => {
               </div>
               
             </section>
+            
           </div>
-          
-          {/* 🔗 Right Related */}
-          <div className="EEEProjectDevelopmentCenter-right">
+
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/ai-electrical-engineering">
-      Artificial Intelligence in Electrical Engineering – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/power-load-forecasting">
-      AI-Based Power Load Forecasting
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
-      Machine Learning for Fault Detection
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
-      Deep Learning in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-smart-grids">
-      AI in Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/neural-networks-motor">
-      Neural Networks for Motor Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
-      AI-Based Energy Optimization
-    </a>
-  </li>
-</ul>
-
-          </div>
+              <li><a href="/department/ai-electrical-engineering">Artificial Intelligence in Electrical Engineering</a></li>
+              <li><a href="/department/ai-electrical-engineering/power-load-forecasting">AI-Based Power Load Forecasting</a></li>
+              <li><a href="/department/ai-electrical-engineering/machine-learning-fault-detection">Machine Learning for Fault Detection</a></li>
+              <li><a href="/department/ai-electrical-engineering/deep-learning-renewables">Deep Learning in Renewable Energy</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-smart-grids">AI in Smart Grids</a></li>
+              <li><a href="/department/ai-electrical-engineering/neural-networks-motor">Neural Networks for Motor Control</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-energy-optimization">AI-Based Energy Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEAiEnergyOptimizationProjectDevelopmentCenter;

@@ -1,68 +1,90 @@
 import "./Ipp.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Image Processing – Project Development Center in Chennai",
+  "IEEE Image Processing Projects 2023–2025",
+  "B.Tech Image Processing Projects",
+  "M.Tech Image Processing Projects",
+  "Ph.D. Image Processing Research",
+  "Computer Vision Project Development",
+  "AI-powered Image Processing",
+  "OpenCV Image Processing Projects",
+  "MATLAB Image Processing Projects",
+  "Image Processing Hardware Integration"
+];
 
 const faqs = [
   {
     question: "What services does the Image Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute's Image Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) image processing projects, focusing on deep learning, computer vision, and hardware integration for industries like healthcare, automotive, and security."
+    answer:
+      "Narpavi Research Institute's Image Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) image processing projects focusing on deep learning, computer vision, and hardware integration."
   },
   {
     question: "What types of image processing projects are supported?",
-    answer: "We support B.Tech projects (image filtering, object detection), M.Tech projects (CNNs, GANs), and Ph.D. projects (federated learning, 3D reconstruction) for applications in medical imaging, autonomous vehicles, and surveillance."
+    answer:
+      "We support object detection, CNN-based segmentation, GANs, 3D reconstruction, medical imaging, and surveillance projects."
   },
   {
     question: "Which technologies are used in image processing project development?",
-    answer: "Our stack includes OpenCV, MATLAB, Python (scikit-image), TensorFlow, PyTorch, and hardware like Raspberry Pi, Arduino, and Jetson Nano for scalable image processing solutions."
+    answer:
+      "Our stack includes OpenCV, MATLAB, Python, TensorFlow, PyTorch, Raspberry Pi, Arduino, and Jetson Nano."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-powered vision, hyperspectral imaging, and real-time analytics, ensuring academic and industry relevance."
+    answer:
+      "All projects are selected from IEEE Transactions (2023–2025) ensuring academic and industry relevance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, dataset curation, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "We provide complete guidance including topic selection, implementation, validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const ImageProcessingProjectDevelopmentCenter = () => {
   return (
-    <div className="ImageProcessingProjectDevelopmentCenter">
-      <SEO 
-        title="Image Processing IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Image Processing projects for B.Tech, M.Tech, Ph.D. OpenCV, TensorFlow, PyTorch, computer vision, deep learning for healthcare, automotive, security."
-        keywords="Image Processing Project Development Center, IEEE Image Processing Projects, B.Tech Image Processing Projects, M.Tech Image Processing Projects, Ph.D. Image Processing Research, Narpavi Research Institute, AI-powered Image Processing, Computer Vision Project Development, 2023–2025 IEEE Image Processing Topics, Image Processing Hardware Integration, MATLAB Image Processing Projects, OpenCV-based Projects"
-        url="/department/image-processing"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Image Processing – Project Development Center in Chennai"
+        description="Image Processing – Project Development Center in Chennai offering IEEE 2023–2025 projects in computer vision, deep learning, OpenCV, MATLAB, and hardware-integrated image processing for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/image-processing-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="ImageProcessingProjectDevelopmentCenter-main">
-        <div className="ImageProcessingProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ImageProcessingProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Image Processing Project Development Center</li>
-              <li>IEEE Image Processing Projects</li>
-              <li>B.Tech Image Processing Projects</li>
-              <li>M.Tech Image Processing Projects</li>
-              <li>Ph.D. Image Processing Research</li>
-              <li>Narpavi Research Institute</li>
-              <li>AI-powered Image Processing</li>
-              <li>Computer Vision Project Development</li>
-              <li>2023–2025 IEEE Image Processing Topics</li>
-              <li>Image Processing Hardware Integration</li>
-              <li>MATLAB Image Processing Projects</li>
-              <li>OpenCV-based Projects</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="ImageProcessingProjectDevelopmentCenter-center">
-            <h1>Image Processing – Project Development Center</h1>
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Image Processing – Project Development Center in Chennai</h1>
+       
+            <section className="MobileAppDevelopmentCenter-intro">
 
-            <section className="ImageProcessingProjectDevelopmentCenter-intro">
-              <p>
+   <p>
                 <strong>Image Processing – Project Development Center</strong> is at the forefront of innovation, enabling students and researchers to transform visual data into actionable intelligence. As technology advances, Image Processing – Project Development Center plays a pivotal role in enhancing fields such as healthcare imaging, autonomous vehicles, remote sensing, and industrial automation. We at Narpavi Research Institute are proud to support engineering students from B.Tech, M.Tech, and Ph.D. programs worldwide in developing sophisticated image processing projects that integrate both software and hardware components.
               </p>
               <p>
@@ -70,7 +92,7 @@ const ImageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="ImageProcessingProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Image Processing Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational image processing projects like filtering or object detection, aligned with IEEE topics.
@@ -87,7 +109,7 @@ const ImageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="ImageProcessingProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Image Processing Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced image processing projects like CNN-based segmentation or GAN-based restoration, aligned with IEEE research.
@@ -104,7 +126,7 @@ const ImageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="ImageProcessingProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Image Processing Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering image processing research in federated learning, 3D reconstruction, and deepfake detection.
@@ -121,9 +143,9 @@ const ImageProcessingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="ImageProcessingProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table – Image Processing</h2>
-              <div className="ImageProcessingProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -210,7 +232,7 @@ const ImageProcessingProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="ImageProcessingProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Image Processing Project Titles (2023–2025)</h2>
               <ul>
                 <li>Deep Convolutional Neural Networks for Automated Medical Image Segmentation – 2023</li>
@@ -231,7 +253,7 @@ const ImageProcessingProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="ImageProcessingProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Image Processing Project Development</h2>
               <p>
                 Excellence in Image Processing Project Development with Narpavi Technology represents a premier standard in guiding and mentoring students across the globe in delivering world-class software and hardware projects in the domain of image processing. At Narpavi Research Institute, we specialize in supporting B.Tech, M.Tech, and Ph.D. students through a well-structured, IEEE-aligned project development journey, ensuring alignment with the most recent innovations in IEEE transactions from 2023 to 2025. This focus allows our learners to work on projects that are not only technically robust but also relevant to current and future industry demands.
@@ -251,28 +273,11 @@ const ImageProcessingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
-          </div>
+            </section>          </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ImageProcessingProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+            <Csesidebar/>
           </div>
         </div>
       </div>

@@ -1,65 +1,87 @@
 import "./DataScience.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Data Science – Project Development Center in Chennai",
+  "Data Engineering Project Development Center in Chennai",
+  "Data Mining Project Development Center in Chennai",
+  "IEEE Data Science Projects 2023–2025",
+  "B.Tech Data Science Projects",
+  "M.Tech Data Engineering Projects",
+  "Ph.D. Data Mining Research",
+  "Big Data Analytics Projects",
+  "Real-Time Data Processing Projects",
+  "Scalable Data Pipeline Development"
+];
 
 const faqs = [
   {
     question: "What services does the Data Science, Data Engineering & Data Mining Project Development Center offer?",
-    answer: "Narpavi Research Institute's Data Science, Data Engineering & Data Mining Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects, focusing on machine learning, big data pipelines, and data mining for industries like healthcare, finance, and smart cities."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) Data Science, Data Engineering, and Data Mining projects across healthcare, finance, and smart cities."
   },
   {
     question: "What types of projects are supported?",
-    answer: "We support B.Tech projects (predictive models, data visualization), M.Tech projects (real-time analytics, scalable pipelines), and Ph.D. projects (novel algorithms, federated learning) for applications in retail, healthcare, and transportation."
+    answer:
+      "We support predictive analytics, real-time pipelines, scalable big data systems, and advanced research projects for undergraduate, postgraduate, and doctoral scholars."
   },
   {
-    question: "Which technologies are used in project development?",
-    answer: "Our stack includes Python, R, Apache Spark, Hadoop, Kafka, TensorFlow, and cloud platforms like AWS, Azure, and GCP for scalable data solutions."
+    question: "Which technologies are used?",
+    answer:
+      "Our stack includes Python, R, Apache Spark, Hadoop, Kafka, TensorFlow, and cloud platforms like AWS, Azure, and GCP."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like federated learning, graph-based mining, and real-time analytics, ensuring academic and industry relevance."
+    answer:
+      "Projects are selected from IEEE Transactions (2023–2025), covering federated learning, graph mining, and real-time analytics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, pipeline design, algorithm implementation, validation, documentation, and IEEE/Scopus journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "We provide end-to-end guidance including topic selection, implementation, validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
   return (
-    <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter">
-      <SEO 
-        title="Data Science IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Data Science, Data Engineering & Data Mining projects for B.Tech, M.Tech, Ph.D. Machine learning, big data pipelines, Spark, Hadoop for healthcare, finance."
-        keywords="Data Science Project Development, Data Engineering IEEE Projects, Data Mining Research Topics 2023–2025, Big Data Analytics Projects for Students, M.Tech Data Science Projects, Ph.D. Data Engineering Research, IEEE Data Mining Titles, Narpavi Research Institute Data Projects, Real-Time Data Processing Projects, Scalable Data Pipeline Development"
-        url="/department/data-science"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Data Science, Data Engineering & Data Mining – Project Development Center in Chennai"
+        description="Data Science, Data Engineering & Data Mining – Project Development Center in Chennai offering IEEE 2023–2025 projects in machine learning, big data analytics, Spark, Hadoop, and real-time data pipelines for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/data-science-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-main">
-        <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+           <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Data Science Project Development</li>
-              <li>Data Engineering IEEE Projects</li>
-              <li>Data Mining Research Topics 2023–2025</li>
-              <li>Big Data Analytics Projects for Students</li>
-              <li>M.Tech Data Science Projects</li>
-              <li>Ph.D. Data Engineering Research</li>
-              <li>IEEE Data Mining Titles</li>
-              <li>Narpavi Research Institute Data Projects</li>
-              <li>Real-Time Data Processing Projects</li>
-              <li>Scalable Data Pipeline Development</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-center">
-            <h1>Data Science, Data Engineering & Data Mining – Project Development Center</h1>
-
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Data Science, Data Engineering & Data Mining – Project Development Center in Chennai</h1>
+  <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 Data Science, Data Engineering & Data Mining – Project Development Center at Narpavi Research Institute is a global hub for innovation, research, and project execution in data-driven technologies. We provide world-class project development support for B.Tech, M.Tech, and Ph.D. students worldwide, covering both software and hardware solutions. All project topics are carefully selected from IEEE Transactions (2023 to 2025) to ensure they are academically current and industry-relevant.
               </p>
@@ -68,7 +90,7 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Data Science, Data Engineering & Data Mining Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational data-driven projects like predictive analytics or data visualization, aligned with IEEE topics.
@@ -85,7 +107,7 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Data Science, Data Engineering & Data Mining Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced projects like real-time analytics or scalable data pipelines, aligned with IEEE research.
@@ -102,7 +124,7 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Data Science, Data Engineering & Data Mining Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering research in novel algorithms, federated learning, and adaptive data systems.
@@ -119,9 +141,9 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -145,7 +167,7 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Project Titles (2023–2025)</h2>
               <ul>
                 <li>Federated Learning-Based Data Mining for Privacy-Preserving Healthcare Analytics – 2023</li>
@@ -161,7 +183,7 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Data Science, Data Engineering & Data Mining Project Development</h2>
               <p>
                 Narpavi Research Institute's Data Science, Data Engineering & Data Mining – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative data-driven solutions.
@@ -181,29 +203,13 @@ const DataScienceDataEngineeringDataMiningProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>          </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+           <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="DataScienceDataEngineeringDataMiningProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

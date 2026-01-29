@@ -1,81 +1,106 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
- import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Hardware Software Co-Design Project Development Center in Chennai",
+  "IEEE Hardware Software Co-Design Projects",
+  "FPGA SoC Hardware Software Co-Design",
+  "RTOS Embedded Co-Design Projects",
+  "AI Enabled Hardware Software Co-Design",
+  "Low Power Hardware Software Co-Design",
+  "B.Tech M.Tech PhD Co-Design Projects",
+  "Narpavi Research Institute Co-Design"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Hardware-Software Co-Design Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Hardware-Software Co-Design Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FPGA-based embedded systems, SoC architectures, and AI-enabled co-design for IoT, robotics, and automotive applications."
+    question:
+      "What services does the Hardware-Software Co-Design Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Hardware-Software Co-Design Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FPGA-based embedded systems, SoC architectures, and AI-enabled co-design."
   },
   {
-    question: "What types of Hardware-Software Co-Design projects are supported?",
-    answer: "We support B.Tech projects (FPGA prototyping, IoT SoC design), M.Tech projects (hardware-software partitioning, RTOS integration), and Ph.D. projects (AI-enabled co-design, 3D SoC optimization) for applications in real-time systems and edge computing."
+    question:
+      "What types of Hardware-Software Co-Design projects are supported?",
+    answer:
+      "We support FPGA prototyping, IoT SoC design, RTOS-based systems, AI-enabled co-design, and low-power embedded architectures."
   },
   {
-    question: "Which technologies are used in Hardware-Software Co-Design project development?",
-    answer: "Our stack includes VHDL/Verilog, Xilinx Vivado, Cadence, Synopsys, MATLAB/Simulink, and ARM-based platforms for co-design, co-simulation, and prototyping."
+    question:
+      "Which technologies are used?",
+    answer:
+      "VHDL/Verilog, Xilinx Vivado, Cadence, Synopsys, MATLAB/Simulink, and ARM-based platforms are used."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like FPGA-based co-design, low-power SoC architectures, and AI-driven co-design frameworks, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are derived from IEEE Transactions (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, co-simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, IEEE, Scopus, and SCI journal publication support is provided."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Hardware–Software Co-Design – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/vlsi-design/hardware-software-co-design-project-development-center-in-chennai";
+
+const pageDescription =
+  "Hardware–Software Co-Design Project Development Center in Chennai offering IEEE-aligned FPGA, SoC, RTOS, AI-enabled co-design, and low-power embedded projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEHardwareSoftwareCoDesignProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Hardware Software Co-Design IEEE Projects | FPGA SoC RTOS AI B.Tech M.Tech PhD (2023–2025)"
-  description="Hardware-Software Co-Design project development for B.Tech, M.Tech, and Ph.D. students focusing on FPGA/SoC architectures, hardware-software partitioning, RTOS integration, AI-enabled co-design, low-power systems, and IEEE-aligned research (2023–2025)."
-  url="/department/vlsi-design/hardware-software-co-design"
-  type="article"
-  keywords={[
-    "Hardware Software Co-Design Projects",
-    "IEEE Co-Design Projects 2025",
-    "FPGA SoC Hardware Software Co-Design",
-    "RTOS Embedded Co-Design",
-    "AI Hardware Software Partitioning",
-    "Low Power Co-Design Architectures",
-    "Xilinx Vivado Co-Design Projects",
-    "Cadence Synopsys Co-Simulation",
-    "VHDL Verilog C Co-Design",
-    "B.Tech FPGA IoT Co-Design",
-    "M.Tech Hardware Software Partitioning",
-    "Ph.D. AI Co-Design Frameworks",
-    "Narpavi Research Institute Co-Design",
-    "Real-time Embedded Co-Design",
-    "3D SoC Optimization Research"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Hardware-Software Co-Design Projects</li>
-              <li>IEEE Hardware-Software Co-Design 2023–2025</li>
-              <li>FPGA-Based Co-Design Projects</li>
-              <li>SoC Co-Design for AI Applications</li>
-              <li>Low-Power Hardware-Software Co-Design</li>
-              <li>RTOS Embedded Co-Design Projects</li>
-              <li>Co-Simulation for VLSI Projects</li>
-              <li>B.Tech Co-Design Projects</li>
-              <li>M.Tech Hardware-Software Research</li>
-              <li>Ph.D. Co-Design Projects</li>
-              <li>Narpavi Research Institute Co-Design Support</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Hardware-Software Co-Design – Project Development Support</h1>
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
 
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
@@ -237,39 +262,32 @@ const ECEHardwareSoftwareCoDesignProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+            
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
-  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
-  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
-  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
-  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
-  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
-  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+              <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+              <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+              <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+              <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+              <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+              <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

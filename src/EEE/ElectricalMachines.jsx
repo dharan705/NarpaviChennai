@@ -1,65 +1,81 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT */
+const keywords = [
+  "Electrical Machines IEEE Projects",
+  "Electrical Machines Project Development",
+  "B.Tech Electrical Machines Projects",
+  "M.Tech Motor Drive Research",
+  "Ph.D. Electrical Machines IEEE Thesis Support",
+  "Energy Efficient Motor IEEE Projects",
+  "Fault Tolerant Motor Drives Research",
+  "Permanent Magnet Motor IEEE Projects",
+  "AI in Electrical Machines",
+  "Narpavi Research Institute Electrical Machines"
+];
 
 const faqs = [
   {
     question: "What services does the Electrical Machines Project Development Center offer?",
-    answer: "Narpavi Research Institute's Electrical Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in motor design, control strategies, and energy-efficient systems for applications in electric vehicles, smart manufacturing, and renewable energy."
+    answer:
+      "Narpavi Research Institute's Electrical Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in motor design, control strategies, and energy-efficient systems for applications in electric vehicles, smart manufacturing, and renewable energy."
   },
   {
     question: "What types of electrical machines projects are supported?",
-    answer: "We support B.Tech projects (induction motor analysis, BLDC drives), M.Tech projects (PMSM design, advanced control), and Ph.D. projects (AI-driven motor control, fault-tolerant drives) for applications in EVs, aerospace, and industrial automation."
+    answer:
+      "We support B.Tech projects (induction motor analysis, BLDC drives), M.Tech projects (PMSM design, advanced control), and Ph.D. projects (AI-driven motor control, fault-tolerant drives) for applications in EVs, aerospace, and industrial automation."
   },
   {
     question: "Which technologies are used in electrical machines project development?",
-    answer: "Our stack includes MATLAB/Simulink, ANSYS Maxwell, Motor-CAD, and embedded platforms like Arduino and Raspberry Pi for advanced electrical machine simulations and prototyping."
+    answer:
+      "Our stack includes MATLAB/Simulink, ANSYS Maxwell, Motor-CAD, and embedded platforms like Arduino and Raspberry Pi for advanced electrical machine simulations and prototyping."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like energy-efficient motors, fault-tolerant systems, and AI-driven control, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like energy-efficient motors, fault-tolerant systems, and AI-driven control, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEEElectricalMachinesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Electrical Machines IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Electrical Machines projects for B.Tech, M.Tech, Ph.D. MATLAB/Simulink, ANSYS Maxwell, Motor-CAD projects in EVs, smart manufacturing, renewable energy."
-        keywords="Electrical Machines IEEE Projects 2023–2025, Electrical Machines Project Development, B.Tech Electrical Machines Projects, M.Tech Motor Drive Research, Ph.D. Electrical Machines IEEE Thesis Support, Energy-Efficient Motor IEEE Projects, Fault-Tolerant Motor Drives Research, Permanent Magnet Motor IEEE Projects, AI in Electrical Machines, Narpavi Research Institute"
-        url="/department/electrical-machines"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Electrical Machines – Project Development Center in Chennai"
+        description="Electrical Machines project development center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on induction motors, PMSM, BLDC drives, AI-based motor control using MATLAB/Simulink, ANSYS Maxwell, Motor-CAD (IEEE 2023–2025)."
+        url="/electrical-machines-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Electrical Machines IEEE Projects 2023–2025</li>
-              <li>Electrical Machines Project Development</li>
-              <li>B.Tech Electrical Machines Projects</li>
-              <li>M.Tech Motor Drive Research</li>
-              <li>Ph.D. Electrical Machines IEEE Thesis Support</li>
-              <li>Energy-Efficient Motor IEEE Projects</li>
-              <li>Fault-Tolerant Motor Drives Research</li>
-              <li>Permanent Magnet Motor IEEE Projects</li>
-              <li>AI in Electrical Machines</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Electrical Machines – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>Electrical Machines – Project Development Center in Chennai</h1>
+               <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Electrical Machines – Project Development Center, a dedicated hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in motor design, control strategies, and energy-efficient systems.
               </p>
@@ -224,48 +240,26 @@ const EEEElectricalMachinesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <ul>
+              <li><a href="/department/electrical-machines">Electrical Machines</a></li>
+              <li><a href="/department/electrical-machines/electrical-machines">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

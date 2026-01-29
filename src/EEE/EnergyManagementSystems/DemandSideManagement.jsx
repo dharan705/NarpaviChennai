@@ -1,66 +1,99 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Demand Side Management Project Development Center in Chennai",
+  "DSM IEEE Projects 2023–2025",
+  "AI Based Demand Side Management",
+  "Smart Grid DSM Projects",
+  "Peak Load Prediction and Management",
+  "B.Tech Demand Side Management Projects",
+  "M.Tech AI Based DSM Systems",
+  "Ph.D Demand Side Management Research",
+  "IoT Enabled DSM Systems",
+  "Industrial Load Management AI",
+  "Narpavi Research Institute DSM Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Demand Side Management Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Demand Side Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven DSM systems, predictive load management, and IoT-enabled control for residential, commercial, and industrial applications."
+    question:
+      "What services does the Demand Side Management Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Demand Side Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven DSM systems, predictive load management, and IoT-enabled control for residential, commercial, and industrial applications."
   },
   {
-    question: "What types of Demand Side Management projects are supported?",
-    answer: "We support B.Tech projects (basic AI/ML for load shifting, IoT integration), M.Tech projects (hybrid AI models, real-time DSM), and Ph.D. projects (novel AI architectures, city-level DSM) for applications in smart grids, microgrids, and industrial load management."
+    question:
+      "What types of Demand Side Management projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering AI-based load shifting, hybrid AI models, real-time DSM, and city-level demand side management systems."
   },
   {
-    question: "Which technologies are used in Demand Side Management project development?",
-    answer: "Our stack includes MATLAB/Simulink, Python (TensorFlow, PyTorch), IoT platforms (MQTT), Arduino/Raspberry Pi for hardware, and cloud platforms for predictive analytics and real-time DSM."
+    question:
+      "Which technologies are used in Demand Side Management project development?",
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch), MQTT-based IoT platforms, Arduino, Raspberry Pi, and cloud platforms for predictive analytics."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Smart Grid, Sustainable Energy, and Industrial Electronics, focusing on AI-driven DSM, predictive load management, and real-time control."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Sustainable Energy, and Industrial Electronics."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, AI model development, simulation, optional hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, AI model development, simulation, optional hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Demand Side Management – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Demand Side Management Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-driven load shifting, predictive management, IoT-enabled control, smart grids, and industrial DSM systems.";
+
+const pageUrl =
+  "/department/energy-management-systems/demand-side-management";
 
 const EEEDemandSideManagementProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Demand Side Management DSM IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Demand Side Management DSM projects for B.Tech, M.Tech, Ph.D. AI load shifting, predictive management, IoT control using MATLAB Simulink Python TensorFlow PyTorch MQTT Arduino Raspberry Pi smart grids microgrids."
-  keywords="Demand Side Management DSM IEEE Projects 2023–2025, B.Tech AI Load Shifting, M.Tech Hybrid AI Real-time DSM, Ph.D. Novel AI City-level DSM, Smart Grid Peak Load Prediction, Narpavi Research Institute"
-  url="/department/energy-management-systems/demand-side-management"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Demand Side Management projects</li>
-              <li>AI-based DSM systems</li>
-              <li>Peak load prediction projects</li>
-              <li>Smart grid DSM AI projects</li>
-              <li>Residential energy optimization AI projects</li>
-              <li>IEEE 2023–2025 DSM projects</li>
-              <li>B.Tech AI DSM projects</li>
-              <li>M.Tech smart grid DSM projects</li>
-              <li>Ph.D. research in demand side management</li>
-              <li>Narpavi Research Institute project center</li>
-              <li>Real-time DSM AI projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Demand Side Management – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+     <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Demand Side Management (DSM) Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on AI-driven energy optimization. Our projects focus on predictive load management, real-time control, and IoT integration for residential, commercial, and industrial applications.
               </p>
@@ -227,48 +260,27 @@ const EEEDemandSideManagementProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems – Project Development Center</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand-Side Management (DSM)</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

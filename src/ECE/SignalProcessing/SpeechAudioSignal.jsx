@@ -1,79 +1,108 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Speech and Audio Signal Processing Project Development Center in Chennai",
+  "IEEE Speech and Audio Processing Projects",
+  "MFCC LPC Speech Feature Extraction",
+  "Neural Speech Synthesis IEEE",
+  "Audio Noise Cancellation Projects",
+  "FPGA Speech Enhancement",
+  "Deep Learning Speech Recognition",
+  "B.Tech M.Tech PhD Speech Processing",
+  "Narpavi Research Institute Speech Processing"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Speech and Audio Signal Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Speech and Audio Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in MFCC/LPC feature extraction, deep learning-based speech synthesis, noise cancellation, audio watermarking, and FPGA/DSP-based speech enhancement for speech recognition, hearing aids, and IoT systems."
+    question:
+      "What services does the Speech and Audio Signal Processing Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Speech and Audio Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in MFCC/LPC feature extraction, deep learning-based speech synthesis, noise cancellation, audio watermarking, and FPGA/DSP-based speech enhancement."
   },
   {
-    question: "What types of Speech and Audio Signal Processing projects are supported?",
-    answer: "We support B.Tech projects (speech enhancement, audio compression), M.Tech projects (deep learning for speech recognition, real-time translation), and Ph.D. projects (neural speech synthesis, audio cryptography) for applications in virtual assistants, media security, and healthcare."
+    question:
+      "What types of Speech and Audio Signal Processing projects are supported?",
+    answer:
+      "We support speech enhancement, speech recognition, audio compression, neural speech synthesis, and audio security projects."
   },
   {
-    question: "Which technologies are used in Speech and Audio Signal Processing project development?",
-    answer: "Our stack includes MATLAB, Python (Librosa), VHDL/Verilog for FPGA, TensorFlow for deep learning, and DSP kits for simulation, prototyping, and real-time audio processing."
+    question:
+      "Which technologies are used?",
+    answer:
+      "MATLAB, Python (Librosa), TensorFlow, FPGA (VHDL/Verilog), and DSP platforms are used."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like transformer-based speech recognition, audio watermarking, and multimodal speech processing, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are based on IEEE Transactions and Conferences (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, we provide complete IEEE, Scopus, and SCI journal publication support."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Speech and Audio Signal Processing – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/signal-processing/speech-audio-signal-processing-project-development-center-in-chennai";
+
+const pageDescription =
+  "Speech and Audio Signal Processing Project Development Center in Chennai offering IEEE-aligned MFCC, LPC, deep learning, speech recognition, noise cancellation, FPGA, and DSP-based projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECESpeechAudioSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Speech Audio Processing IEEE Projects | MFCC LPC Neural Synthesis B.Tech M.Tech PhD (2023–2025)"
-  description="Speech and Audio Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on MFCC/LPC features, deep learning speech synthesis, noise cancellation, audio watermarking, FPGA/DSP implementations, and IEEE-aligned research (2023–2025)."
-  url="/speech-audio-signal-processing-project-development"
-  type="article"
-  keywords={[
-    "Speech Audio Signal Processing Projects",
-    "IEEE Speech Recognition Projects",
-    "MFCC LPC Feature Extraction",
-    "Neural Speech Synthesis IEEE",
-    "Audio Noise Cancellation Projects",
-    "FPGA Speech Enhancement",
-    "Librosa Audio Processing",
-    "Transformer Speech Recognition",
-    "Audio Watermarking Projects",
-    "B.Tech Speech Enhancement",
-    "M.Tech Real-time Speech Translation",
-    "Ph.D. Audio Cryptography Research",
-    "Narpavi Research Institute Speech Processing",
-    "Deep Learning Speech Synthesis",
-    "IoT Audio Processing Systems"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Speech and Audio Signal Processing</li>
-              <li>IEEE Speech Projects</li>
-              <li>Audio Signal Enhancement Research</li>
-              <li>Neural Speech Synthesis Projects</li>
-              <li>Noise Cancellation Project Ideas</li>
-              <li>Speech Recognition IEEE Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Speech and Audio Signal Processing – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 TEXT UPDATED */}
+            <h1>{pageTitle}</h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Speech and Audio Signal Processing – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in MFCC/LPC feature extraction, deep learning-based speech synthesis, noise cancellation, audio watermarking, and FPGA/DSP-based speech enhancement for speech recognition systems, hearing aids, virtual assistants, and IoT devices.
               </p>
@@ -226,41 +255,27 @@ const ECESpeechAudioSignalProcessingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
-          </div>
-
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+</div>
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
-  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
-  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
-  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
-  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
-  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
-  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
-</ul>
+            <ul>
+              <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+              <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+              <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+              <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+              <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+              <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+              <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

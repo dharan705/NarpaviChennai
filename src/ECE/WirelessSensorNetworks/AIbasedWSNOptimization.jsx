@@ -1,74 +1,103 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import { BiLeftArrow } from "react-icons/bi";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "AI-Based WSN Optimization Project Development Center in Chennai",
+  "AI Wireless Sensor Network Projects",
+  "Machine Learning in WSN IEEE Projects",
+  "Deep Learning WSN Optimization",
+  "Reinforcement Learning WSN Routing",
+  "TinyML Wireless Sensor Networks",
+  "Federated Learning in WSN",
+  "AI IoT WSN Projects",
+  "6G AI-Based WSN Projects",
+  "Narpavi Research Institute WSN Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "How does AI enhance Wireless Sensor Network optimization?",
-    answer: "AI techniques enable smarter routing, energy balancing, anomaly detection, secure data transfer, and real-time optimization in WSNs across various applications."
+    answer:
+      "AI techniques enable smarter routing, energy balancing, anomaly detection, secure data transfer, and real-time optimization in WSNs."
   },
   {
     question: "What are the main application areas for AI in WSN?",
-    answer: "Major applications include energy-efficient routing, intrusion and fault detection, smart agriculture, industrial IoT monitoring, environmental sensing, and healthcare IoT systems."
+    answer:
+      "Energy-efficient routing, intrusion detection, smart agriculture, industrial IoT, environmental sensing, and healthcare IoT."
   },
   {
-    question: "Which platforms and tools support AI-based WSN project development?",
-    answer: "B.Tech uses Arduino, ESP32, Raspberry Pi with TinyML models; M.Tech involves NS3, MATLAB, TensorFlow, PyTorch, OMNeT++ for simulations and hybrid architectures."
+    question: "Which platforms support AI-based WSN projects?",
+    answer:
+      "Arduino, ESP32, Raspberry Pi with TinyML for B.Tech; NS3, MATLAB, TensorFlow, PyTorch, OMNeT++ for M.Tech and Ph.D."
   },
   {
-    question: "What challenges exist when integrating AI into WSNs?",
-    answer: "Challenges include computational overhead on sensor nodes, false positives in intrusion detection, real-time data adaptation, high processing power needs, and privacy/security concerns."
+    question: "What challenges exist in AI-based WSN?",
+    answer:
+      "Limited computation on sensor nodes, false positives, real-time adaptation issues, and security concerns."
   },
   {
-    question: "What assistance does Narpavi Research Institute provide for AI-based WSN projects?",
-    answer: "The institute offers full project support including algorithm design, simulation, sensor deployment, hardware integration, and guidance for IEEE-standard publications."
+    question: "What support does Narpavi Research Institute provide?",
+    answer:
+      "Complete project guidance including algorithm design, simulation, hardware integration, and IEEE publication support."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "AI-Based WSN Optimization – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/wireless-sensor-networks/ai-based-wsn-optimization--project-development-center-in-chennai";
+
+const pageDescription =
+  "AI-Based Wireless Sensor Network Optimization Project Development Center in Chennai offering IEEE-aligned AI, ML, DL, TinyML, reinforcement learning, and 6G WSN projects for B.Tech, M.Tech, and Ph.D. students (2023–2025).";
 
 const AIWSNOptimizationProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="AI-Based WSN Optimization IEEE Projects | ML DL Reinforcement Learning | B.Tech M.Tech PhD"
-  description="AI/ML-enhanced Wireless Sensor Networks project development for B.Tech, M.Tech, Ph.D. IEEE projects (2023–2025) using TinyML, NS3, MATLAB, TensorFlow for energy routing, fault detection, smart agriculture."
-  url="/department/wireless-sensor-networks/ai-based-wsn-optimization"
-  type="article"
-  keywords={[
-    "AI-Based WSN Optimization Projects",
-    "Machine Learning in WSN",
-    "Deep Learning WSN IEEE Projects",
-    "Reinforcement Learning WSN Routing",
-    "Federated Learning Sensor Networks",
-    "TinyML WSN Projects",
-    "NS3 MATLAB AI WSN Simulation",
-    "6G AI-WSN Projects"
-  ]}
-  faqs={faqs}
-/>
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
-      <Sidebar />
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>AI-Based WSN Optimization Projects</li>
-              <li>Machine Learning in WSN</li>
-              <li>Deep Learning for WSN IEEE Projects</li>
-              <li>Reinforcement Learning WSN Routing</li>
-              <li>IoT-WSN AI Projects</li>
-              <li>Federated Learning in Sensor Networks</li>
-              <li>Blockchain-Enabled WSN</li>
-              <li>6G WSN Projects</li>
-              <li>AI in Smart Agriculture WSN</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsider/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>AI-Based WSN Optimization – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>   <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> leads in providing IEEE-aligned (2023–2025) AI-based Wireless Sensor Network optimization projects for B.Tech, M.Tech, and Ph.D. scholars focused on intelligent, adaptive, and energy-efficient solutions.
               </p>
@@ -186,19 +215,29 @@ const AIWSNOptimizationProject = () => {
               
             </section>
           </div>
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
-  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
-  </ul>
-          </div>
+            <ul>
+              <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,63 +1,84 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* ================= FAQ ================= */
 const faqs = [
   {
-    question: "What services does the Software Defined Radio (SDR) Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Software Defined Radio (SDR) Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in GNU Radio, FPGA-based SDR, AI-driven SDR, and cloud SDR for 5G/6G, IoT, and defense applications."
+    question:
+      "What services does the Software Defined Radio (SDR) Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Software Defined Radio (SDR) Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in GNU Radio, FPGA-based SDR, AI-driven SDR, and cloud SDR for 5G/6G, IoT, and defense applications.",
   },
   {
-    question: "What types of Software Defined Radio (SDR) projects are supported?",
-    answer: "We support B.Tech projects (FM/AM signal processing, spectrum sensing), M.Tech projects (dynamic spectrum access, FPGA-based SDR), and Ph.D. projects (AI-driven cognitive radio, quantum-safe SDR) for telecom, IoT, and smart city applications."
+    question:
+      "What types of Software Defined Radio (SDR) projects are supported?",
+    answer:
+      "We support B.Tech projects (FM/AM signal processing, spectrum sensing), M.Tech projects (dynamic spectrum access, FPGA-based SDR), and Ph.D. projects (AI-driven cognitive radio, quantum-safe SDR) for telecom, IoT, and smart city applications.",
   },
   {
-    question: "Which technologies are used in Software Defined Radio (SDR) project development?",
-    answer: "Our stack includes GNU Radio, MATLAB/Simulink, VHDL/Verilog for FPGA, USRP hardware, and AI frameworks like TensorFlow for simulation, prototyping, and performance analysis."
+    question:
+      "Which technologies are used in Software Defined Radio (SDR) project development?",
+    answer:
+      "Our stack includes GNU Radio, MATLAB/Simulink, VHDL/Verilog for FPGA, USRP hardware, and AI frameworks like TensorFlow for simulation, prototyping, and performance analysis.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like cognitive radio, FPGA-based SDR, and cloud SDR, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like cognitive radio, FPGA-based SDR, and cloud SDR, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, FPGA prototyping, hardware integration, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, FPGA prototyping, hardware integration, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Software Defined Radio (SDR) Projects",
+  "SDR for B.Tech Students",
+  "FPGA-Based SDR Research",
+  "Cognitive Radio SDR Projects",
+  "IEEE SDR Topics 2023–2025",
+  "Cloud-Based SDR Systems",
+  "SDR with GNU Radio",
+  "Narpavi Research Institute",
 ];
 
 const ECESoftwareDefinedRadioProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Software Defined Radio (SDR) IEEE Projects | GNU Radio, FPGA, AI-SDR | B.Tech M.Tech Ph.D."
+        title="Software Defined Radio (SDR) – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) SDR projects using GNU Radio, USRP, FPGA-based SDR, AI-driven cognitive SDR, and cloud SDR for 5G/6G, IoT, and defense applications."
-        keywords="Software Defined Radio (SDR) Projects, SDR for B.Tech Students, FPGA-Based SDR Research, Cognitive Radio SDR Projects, IEEE SDR Topics 2023–2025, Cloud-Based SDR Systems, SDR with GNU Radio, Narpavi Research Institute"
-        url="/department/communication-systems/software-defined-radio"
+        keywords={keywords}
+        url="/department/communication-systems/software-defined-radio-sdr-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Software Defined Radio (SDR) Projects</li>
-              <li>SDR for B.Tech Students</li>
-              <li>FPGA-Based SDR Research</li>
-              <li>Cognitive Radio SDR Projects</li>
-              <li>IEEE SDR Topics 2023–2025</li>
-              <li>Cloud-Based SDR Systems</li>
-              <li>SDR with GNU Radio</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Software Defined Radio (SDR) – Project Development Support</h1>
+            <h1>Software Defined Radio (SDR) – Project Development Center in Chennai</h1>
 
-            <section className="ECEProjectDevelopmentCenter-intro">
+             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Software Defined Radio (SDR) – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in GNU Radio, FPGA-based SDR, AI-driven SDR, and cloud SDR for 5G/6G, IoT, and defense applications.[web:270][web:283]
               </p>
@@ -219,19 +240,26 @@ const ECESoftwareDefinedRadioProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/communication-systems">Communication Systems </a></li>
-  <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
-  <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
-  <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
-  <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
-  <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
-  <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/communication-systems">Communication Systems</a></li>
+              <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
+              <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
+              <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
+              <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
+              <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
+              <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

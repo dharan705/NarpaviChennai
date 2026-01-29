@@ -1,77 +1,86 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Mechatronics IEEE Projects 2023–2025",
+  "PID Control Student Projects",
+  "Industrial Automation IEEE Projects",
+  "PLC SCADA Project Development",
+  "IoT Enabled Actuator Systems",
+  "Adaptive Predictive Control Projects",
+  "Smart Manufacturing IEEE Projects",
+  "Digital Twin Control Systems",
+  "Narpavi Research Institute Automation Projects",
+  "IEEE Control System Projects",
+];
+
 const faqs = [
   {
-    question: "What services does the Mechatronics & Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Mechatronics & Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced control algorithms, IoT-enabled automation, intelligent actuators, and AI-driven predictive control for robotics, smart factories, and autonomous systems."
+    question:
+      "What services does the Mechatronics & Control Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Mechatronics & Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced control algorithms, IoT-enabled automation, intelligent actuators, and AI-driven predictive control.",
   },
   {
-    question: "What types of Mechatronics & Control Systems projects are supported?",
-    answer: "We support B.Tech projects (PID control, sensor-based automation), M.Tech projects (adaptive control, PLC/SCADA integration), and Ph.D. projects (AI-driven control, digital twins, cybersecure automation) for applications in robotics, industrial automation, and smart vehicles."
+    question:
+      "What types of Mechatronics & Control Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (PID control, sensor-based automation), M.Tech projects (adaptive control, PLC/SCADA integration), and Ph.D. projects (AI-driven control, digital twins).",
   },
   {
-    question: "Which tools and technologies are used in Mechatronics & Control Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, LabVIEW, Proteus, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, PLCs, and actuators for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Mechatronics & Control Systems projects?",
+    answer:
+      "Our stack includes MATLAB, Simulink, LabVIEW, Proteus, Python, IoT platforms, PLCs, Arduino, Raspberry Pi, and AI frameworks.",
   },
   {
     question: "How are Mechatronics & Control Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Control Systems Technology and Industrial Electronics, focusing on advanced control, IoT integration, and automation, aligned with IEEE/IEC standards."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Control Systems Technology and Industrial Electronics.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
-  }
+    answer:
+      "We provide end-to-end guidance including simulation, AI/IoT integration, hardware prototyping, documentation, and journal publication support.",
+  },
 ];
 
 const MEMechatronicsControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Mechatronics & Control Systems IEEE Projects (2023–2025)"
-        description="Mechatronics Control Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, LabVIEW, PID control, PLC SCADA, AI predictive control, IoT automation, smart actuators, digital twins for robotics & Industry 4.0."
+        title="Mechatronics & Control Systems – Project Development Center in Chennai"
+        description="Mechatronics & Control Systems project development for B.Tech, M.Tech, and Ph.D. students using MATLAB, LabVIEW, PID control, PLC SCADA, AI predictive control, IoT automation, smart actuators, and digital twins."
+        keywords={keywords}
         url="/department/mechatronics-control-systems"
-        type="article"
-        keywords={[
-          "Mechatronics IEEE 2023–2025",
-          "PID Control Student Projects",
-          "Industrial Automation IEEE Projects",
-          "PLC SCADA Project Development",
-          "IoT Enabled Actuator Systems",
-          "Adaptive Predictive Control Projects",
-          "Smart Manufacturing IEEE Projects",
-          "Digital Twin Control Systems",
-          "Narpavi Research Institute Automation Projects",
-          "IEEE Control System Projects"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Mechatronics IEEE Projects 2023–2025</li>
-              <li>PID Control Student Projects</li>
-              <li>Industrial Automation IEEE Projects</li>
-              <li>PLC and SCADA Project Development</li>
-              <li>IoT-Enabled Actuator Systems</li>
-              <li>Adaptive & Predictive Control Projects</li>
-              <li>Smart Manufacturing IEEE Projects</li>
-              <li>B.Tech/M.Tech/Ph.D. Mechatronics Projects</li>
-              <li>Narpavi Research Institute Automation Projects</li>
-              <li>IEEE 2023–2025 Control System Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Mechatronics & Control Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 FIXED */}
+            <h1>
+              Mechatronics & Control Systems – Project Development Center in Chennai
+            </h1>
+               <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Mechatronics & Control Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on advanced control algorithms, IoT-enabled automation, intelligent actuators, and AI-driven predictive control.
               </p>
@@ -255,43 +264,49 @@ const MEMechatronicsControlSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/mechatronics-control-systems">
-      Mechatronics & Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/pid-advanced-control">
-      PID & Advanced Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/automation-manufacturing">
-      Automation in Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/plc-systems">
-      PLC Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/sensor-integration">
-      Sensor Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
-      Smart Actuator Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/mechatronics-control-systems">
+                  Mechatronics & Control Systems
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechatronics-control-systems/pid-advanced-control">
+                  PID & Advanced Control
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechatronics-control-systems/automation-manufacturing">
+                  Automation in Manufacturing
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechatronics-control-systems/plc-systems">
+                  PLC Systems
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechatronics-control-systems/sensor-integration">
+                  Sensor Integration
+                </a>
+              </li>
+              <li>
+                <a href="/department/mechatronics-control-systems/smart-actuator-systems">
+                  Smart Actuator Systems
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

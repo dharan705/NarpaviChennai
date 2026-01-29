@@ -118,3 +118,50 @@
     }
   }
 }
+
+.step-guide {
+  margin-left: 100px; /* Leave space for Subsidebar */
+  min-height: 100vh;
+  position: relative;
+
+  .page-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 2rem;
+  }
+
+  aside.left-links,
+  aside.right-tags {
+    background: #ffffff;
+    position: sticky;
+    top: 100px;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid #dde8ee;
+    align-self: start;
+  }
+
+  aside h3 {
+    font-size: 1.1rem;
+    color: #005f83;
+    margin-bottom: 0.75rem;
+  }
+
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  aside ul li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  aside.left-links a {
+    color: #0079a1;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

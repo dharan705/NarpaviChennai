@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Smart Manufacturing Systems Project Development Center in Chennai",
+  "Industry 4.0 Project Development Chennai",
+  "Smart Manufacturing IEEE Projects 2023–2025",
+  "IoT Smart Factory Projects",
+  "AI Manufacturing Optimization Projects",
+  "Digital Twin Smart Manufacturing",
+  "Predictive Maintenance Industry 4.0",
+  "Cyber Physical Systems Manufacturing",
+  "Cloud Integrated Smart Factories",
+  "Narpavi Research Institute Industry 4.0"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Smart Manufacturing Systems (Industry 4.0) Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Manufacturing Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled manufacturing, AI-driven production, digital twins, and smart factory automation for industries like automotive, aerospace, and electronics."
+    question:
+      "What services does the Smart Manufacturing Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on IoT-enabled manufacturing, AI-driven production, digital twins, predictive maintenance, and Industry 4.0 smart factory automation."
   },
   {
-    question: "What types of Smart Manufacturing Systems projects are supported?",
-    answer: "We support B.Tech projects (IoT-based monitoring, PLC automation), M.Tech projects (AI-driven optimization, digital twins), and Ph.D. projects (cyber-physical systems, predictive analytics) for smart factories and Industry 4.0 applications."
+    question: "Who can apply for these projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Mechatronics, Electrical, and Manufacturing backgrounds."
   },
   {
-    question: "Which tools and technologies are used in Smart Manufacturing Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, Python, ROS, PLC simulation tools, Arduino, Raspberry Pi, AI frameworks (TensorFlow, Keras), IoT platforms, and cloud-based systems for simulations and prototyping."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB, Simulink, Python, ROS, PLC tools, Arduino, Raspberry Pi, AI frameworks, IoT platforms, and cloud systems."
   },
   {
-    question: "How are Smart Manufacturing Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Manufacturing, focusing on digital twins, AI-driven production, and IoT-enabled smart factories."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects align with IEEE Transactions (2023–2025) on Industrial Informatics and Manufacturing."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system modeling, AI/IoT integration, hardware prototyping, data analytics, documentation, and support for IEEE/Scopus/Elsevier/IEC journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier, and IEC journal and patent support is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Manufacturing Systems (Industry 4.0) – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Manufacturing Systems (Industry 4.0) Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IoT, AI optimization, digital twins, predictive maintenance, and cyber-physical systems.";
+
+const pageUrl =
+  "/department/manufacturing-production/smart-manufacturing-systems";
 
 const MESmartManufacturingSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Smart Manufacturing Systems Industry 4.0 IEEE Projects (2023–2025)"
-        description="Smart Manufacturing Industry 4.0 IEEE project development for B.Tech, M.Tech & PhD using IoT, AI optimization, digital twins, predictive maintenance, cyber-physical systems for automotive, aerospace, electronics smart factories."
-        url="/department/manufacturing-production/smart-manufacturing-systems"
-        type="article"
-        keywords={[
-          "Smart Manufacturing IEEE 2023–2025",
-          "Industry 4.0 Student Projects",
-          "IoT Smart Factory Projects",
-          "AI Manufacturing Optimization",
-          "Digital Twin Smart Factory",
-          "Predictive Maintenance Industry 4.0",
-          "Cyber Physical Systems Manufacturing",
-          "Cloud Integrated Production Systems",
-          "Narpavi Research Institute Industry 4.0",
-          "Sustainable Smart Manufacturing"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Manufacturing IEEE Projects 2023–2025</li>
-              <li>Industry 4.0 Student Projects</li>
-              <li>IoT-Enabled Smart Factory Projects</li>
-              <li>AI in Manufacturing IEEE Research</li>
-              <li>Digital Twin Smart Factory Projects</li>
-              <li>Predictive Maintenance Student Projects</li>
-              <li>Robotics and Cobots in Smart Manufacturing</li>
-              <li>Cloud-Integrated Production Systems</li>
-              <li>Narpavi Research Institute Industry 4.0 Projects</li>
-              <li>Sustainable Smart Manufacturing Research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Smart Manufacturing Systems (Industry 4.0) – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Manufacturing Systems (Industry 4.0) Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on IoT-enabled manufacturing, AI-driven production, digital twins, and smart factory automation.
               </p>
@@ -242,64 +262,29 @@ const MESmartManufacturingSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/manufacturing-production">
-      Manufacturing & Production Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/cnc-machining-optimization">
-      CNC Machining Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/additive-manufacturing">
-      Additive Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/industrial-automation-robotics">
-      Industrial Automation & Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/smart-manufacturing-systems">
-      Smart Manufacturing Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/tool-design-process">
-      Tool Design & Process
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/manufacturing-production">Manufacturing & Production Engineering</a></li>
+              <li><a href="/department/manufacturing-production/cnc-machining-optimization">CNC Machining Optimization</a></li>
+              <li><a href="/department/manufacturing-production/additive-manufacturing">Additive Manufacturing</a></li>
+              <li><a href="/department/manufacturing-production/industrial-automation-robotics">Industrial Automation & Robotics</a></li>
+              <li><a href="/department/manufacturing-production/smart-manufacturing-systems">Smart Manufacturing Systems</a></li>
+              <li><a href="/department/manufacturing-production/tool-design-process">Tool Design & Process</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

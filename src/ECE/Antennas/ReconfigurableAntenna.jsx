@@ -1,72 +1,85 @@
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Reconfigurable Antenna Design",
+  "Frequency Reconfigurable Antennas",
+  "Polarization Reconfigurable Antennas",
+  "Beam Steering Antennas",
+  "AI Controlled Antennas",
+  "Metasurface Antenna Research",
+  "HFSS CST Reconfigurable Antenna",
+  "Smart Antennas for 5G 6G",
+  "Compact Multiband Antennas",
+  "IEEE Antenna Research Projects"
+];
 
 const faqs = [
   {
     question: "What are reconfigurable antennas?",
-    answer: "Reconfigurable antennas have the ability to change frequency, polarization, or radiation pattern dynamically, allowing adaptable and efficient wireless communication."
+    answer:
+      "Reconfigurable antennas can dynamically change frequency, polarization, or radiation pattern for adaptable wireless communication."
   },
   {
     question: "What do B.Tech projects focus on in reconfigurable antenna design?",
-    answer: "Students work on conceptual understanding and prototype development of frequency and polarization reconfigurable antennas using HFSS, CST, MATLAB, and switching technologies like PIN diodes and varactors."
+    answer:
+      "Basic frequency and polarization reconfigurable antenna design using HFSS, CST, MATLAB, PIN diodes, and varactors."
   },
   {
     question: "What advanced topics are covered in M.Tech reconfigurable antenna projects?",
-    answer: "M.Tech projects emphasize AI-driven reconfiguration control, multi-band compact designs, hybrid techniques, and hardware-software integration with real-time testing environments."
+    answer:
+      "AI-driven reconfiguration control, compact multiband designs, and real-time hardware-software integration."
   },
   {
-    question: "What are the research areas for Ph.D. projects in reconfigurable antennas?",
-    answer: "Ph.D. research includes metasurface-based antennas, AI-based adaptive control, spectrum-aware systems, and space-grade technology development, supported by high-end testing and IEEE publication guidance."
+    question: "What are the research areas for Ph.D. projects?",
+    answer:
+      "Metasurface antennas, AI-based adaptive control, spectrum-aware systems, and space-grade reconfigurable antennas."
   },
   {
-    question: "Which tools are commonly used in reconfigurable antenna projects?",
-    answer: "Tools like HFSS, CST, MATLAB, and AI frameworks are commonly used for design, simulation, optimization, and implementation."
+    question: "Which tools are commonly used?",
+    answer:
+      "HFSS, CST, MATLAB, and AI-based optimization frameworks."
   }
 ];
 
 const ReconfigurableAntennaDesignProject = () => {
   return (
     <div className="ECEProjectDevelopment">
-       <SEO
-        title="Reconfigurable Antenna Design IEEE Projects 2025 | Frequency Polarization Beam Steering | B.Tech M.Tech PhD"
-        description="Reconfigurable antenna design projects (2023–2025) using HFSS CST MATLAB PIN diodes varactors for frequency reconfiguration, polarization diversity, beam steering, AI-controlled metasurface antennas."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Reconfigurable Antenna Design – Project Development Center in Chennai"
+        description="IEEE-aligned reconfigurable antenna design project development for B.Tech, M.Tech, and Ph.D. students using HFSS, CST, MATLAB covering frequency reconfiguration, polarization agility, beam steering, AI-controlled and metasurface antennas."
+        keywords={keywords}
         url="/reconfigurable-antenna-design-project-development"
-        type="article"
-        keywords={[
-          "Reconfigurable Antenna Design",
-          "Frequency Reconfigurable Antennas",
-          "Polarization Reconfigurable Antennas",
-          "Beam Steering Antennas IEEE",
-          "AI Controlled Antennas",
-          "Metasurface Antenna Research",
-          "HFSS CST Reconfigurable Antenna",
-          "5G 6G Smart Antennas"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
-          <div className="ECEProjectDevelopment-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Reconfigurable Antenna Design</li>
-              <li>Frequency Reconfigurable Antennas</li>
-              <li>Polarization Reconfigurable Antennas</li>
-              <li>Beam Steering Antennas</li>
-              <li>AI-Controlled Antennas</li>
-              <li>Compact Multi-Band Antennas</li>
-              <li>Smart Antenna Systems</li>
-              <li>IEEE Antenna Projects</li>
-              <li>5G/6G Antenna Solutions</li>
-              <li>Metasurface Antenna Research</li>
-              <li>Nano Research Institute Antenna Center</li>
-            </ul>
-          </div>
+
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
           <div className="ECEProjectDevelopment-center">
-            <h1>Reconfigurable Antenna Design – Project Development Center</h1>
-            <section className="ECEProjectDevelopment-intro">
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Reconfigurable Antenna Design – Project Development Center in Chennai
+            </h1>
+              <section className="ECEProjectDevelopment-intro">
               <p>
                 <strong>Narpavi Institute</strong> leads innovation in reconfigurable antenna design, empowering students in B.Tech, M.Tech, and Ph.D. programs with IEEE-aligned project guidance and hands-on prototyping.
               </p>
@@ -165,18 +178,27 @@ const ReconfigurableAntennaDesignProject = () => {
               ))}
             </section>
           </div>
-          <div className="ECEProjectDevelopment-right">
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>Related Services</h3>
-              <ul>
-  <li><a href="/department/antenna-design">Antenna Design</a></li>
-  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
-  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
-  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
-  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
-  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
-  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/antenna-design">Antenna Design</a></li>
+              <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+              <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+              <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+              <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+              <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+              <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,77 +1,108 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Digital Image and Video Signal Processing Project Development Center in Chennai",
+  "IEEE Image and Video Processing Projects",
+  "CNN GAN Image Processing IEEE",
+  "FPGA Image Video Processing Projects",
+  "Video Stabilization IEEE Projects",
+  "Wavelet Transform Image Coding",
+  "Medical Imaging Video Processing",
+  "B.Tech M.Tech PhD Image Video Projects",
+  "Narpavi Research Institute Image Processing"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Digital Image and Video Signal Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Digital Image and Video Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in wavelet transform-based coding, deep CNNs, video motion estimation, FPGA/DSP implementations, and GAN-based image restoration for medical imaging, surveillance, and autonomous vehicles."
+    question:
+      "What services does the Digital Image and Video Signal Processing Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Digital Image and Video Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in image enhancement, video processing, deep CNNs, GAN-based restoration, and FPGA/DSP implementations."
   },
   {
-    question: "What types of Digital Image and Video Signal Processing projects are supported?",
-    answer: "We support B.Tech projects (image enhancement, filtering, compression), M.Tech projects (video stabilization, deep learning-based classification), and Ph.D. projects (GAN-based restoration, compressive video sensing) for multimedia, biomedical, and robotics applications."
+    question:
+      "What types of Digital Image and Video Signal Processing projects are supported?",
+    answer:
+      "We support image enhancement, compression, video stabilization, deep learning-based image classification, and GAN-based restoration projects."
   },
   {
-    question: "Which technologies are used in Digital Image and Video Signal Processing project development?",
-    answer: "Our stack includes MATLAB, Python (OpenCV), VHDL/Verilog for FPGA, TensorFlow for deep learning, and DSP platforms for simulation, prototyping, and real-time processing."
+    question:
+      "Which technologies are used?",
+    answer:
+      "MATLAB, Python (OpenCV), TensorFlow, FPGA (VHDL/Verilog), and DSP platforms are used."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like video stabilization, CNN-driven tumor detection, and compressive sensing, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are based on IEEE Transactions and Conferences (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware implementation, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, we provide complete IEEE, Scopus, and SCI journal publication support."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Digital Image and Video Signal Processing – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/signal-processing/digital-image-video-signal-processing-project-development-center-in-chennai";
+
+const pageDescription =
+  "Digital Image and Video Signal Processing Project Development Center in Chennai offering IEEE-aligned image enhancement, video stabilization, CNN, GAN, FPGA, and DSP-based projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEDigitalImageVideoSignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Digital Image Video Processing IEEE Projects | CNN GAN FPGA B.Tech M.Tech PhD (2023–2025)"
-  description="Digital Image and Video Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on wavelet coding, deep CNNs, video stabilization, GAN restoration, FPGA implementations, and IEEE-aligned research (2023–2025)."
-  url="/department/signal-processing/digital-image-video-signal-processing"
-  type="article"
-  keywords={[
-    "Digital Image Processing Projects",
-    "IEEE Video Signal Processing",
-    "CNN Image Processing Projects",
-    "GAN Video Restoration IEEE",
-    "FPGA Image Processing Projects",
-    "Video Stabilization Projects",
-    "Wavelet Transform Image Coding",
-    "Medical Imaging CNN Projects",
-    "OpenCV Video Processing",
-    "B.Tech Image Enhancement",
-    "M.Tech Video Motion Estimation",
-    "Ph.D. GAN Image Restoration",
-    "Narpavi Research Institute Image Processing",
-    "Real-time Video Processing FPGA",
-    "Autonomous Vehicle Video Processing"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Digital Image and Video Signal Processing</li>
-              <li>IEEE Image Processing Projects</li>
-              <li>Video Stabilization and Tracking Projects</li>
-              <li>GAN Image Restoration Research</li>
-              <li>Deep Learning Image Processing Projects</li>
-              <li>Narpavi Research Institute</li>
-              <li>FPGA Video Processing Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Digital Image and Video Signal Processing – Project Development Support</h1>
-
+            {/* ✅ ONLY H1 TEXT UPDATED */}
+            <h1>{pageTitle}</h1>
+            
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Digital Image and Video Signal Processing – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in wavelet transform-based coding, deep CNNs, video motion estimation, FPGA/DSP implementations, and GAN-based image restoration for medical imaging, surveillance, autonomous vehicles, and augmented reality.
@@ -226,40 +257,27 @@ const ECEDigitalImageVideoSignalProcessingProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
-
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
-  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
-  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
-  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
-  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
-  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
-  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
-</ul>
+              <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+              <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+              <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+              <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+              <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+              <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+              <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

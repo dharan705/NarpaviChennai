@@ -1,65 +1,83 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "High Voltage Engineering IEEE Projects",
+  "High Voltage Engineering Project Development Center Chennai",
+  "HVDC IEEE Projects",
+  "GIS Substation IEEE Projects",
+  "High Voltage Insulation IEEE Projects",
+  "Partial Discharge Analysis IEEE Projects",
+  "B.Tech High Voltage Projects",
+  "M.Tech HVDC Projects",
+  "Ph.D. High Voltage Engineering Research",
+  "Smart Grid High Voltage Projects",
+  "Narpavi Research Institute"
+];
 
 const faqs = [
   {
     question: "What services does the High Voltage Engineering Project Development Center offer?",
-    answer: "Narpavi Research Institute's High Voltage Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in HVDC transmission, insulation systems, and smart grid diagnostics for applications in power transmission, substations, and renewable integration."
+    answer:
+      "Narpavi Research Institute's High Voltage Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in HVDC transmission, insulation systems, and smart grid diagnostics."
   },
   {
     question: "What types of high voltage engineering projects are supported?",
-    answer: "We support B.Tech projects (insulation modeling, overvoltage protection), M.Tech projects (HVDC/FACTS, GIS substations), and Ph.D. projects (AI-based diagnostics, nanodielectrics) for applications in power grids, substations, and renewable energy systems."
+    answer:
+      "We support B.Tech projects (insulation modeling, overvoltage protection), M.Tech projects (HVDC/FACTS, GIS substations), and Ph.D. projects (AI-based diagnostics, nanodielectrics)."
   },
   {
     question: "Which technologies are used in high voltage engineering project development?",
-    answer: "Our stack includes MATLAB/Simulink, COMSOL, PSCAD, and high-voltage lab equipment for advanced insulation modeling, diagnostics, and HVDC system simulations."
+    answer:
+      "Our stack includes MATLAB/Simulink, COMSOL, PSCAD, and high-voltage lab equipment for advanced insulation modeling and diagnostics."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like partial discharge analysis, HVDC protection, and nanodielectric insulation, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering partial discharge analysis, HVDC protection, and advanced insulation systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We provide topic selection, simulation, experimental validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const EEEHighVoltageEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="High Voltage Engineering IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) High Voltage Engineering projects for B.Tech, M.Tech, Ph.D. HVDC, GIS, insulation, partial discharge, nanodielectrics in power transmission, smart grids."
-        keywords="High Voltage Engineering IEEE Projects, HVDC IEEE Projects, GIS Substation IEEE Projects, Insulation IEEE Projects, Partial Discharge IEEE Projects, B.Tech High Voltage IEEE Projects, M.Tech HVDC IEEE Projects, Ph.D. High Voltage Insulation IEEE Thesis, Smart Grid High Voltage IEEE Projects, Narpavi Research Institute"
-        url="/department/high-voltage-engineering"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="High Voltage Engineering – Project Development Center in Chennai"
+        description="High Voltage Engineering project development center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on HVDC transmission, insulation systems, partial discharge analysis, and smart grid diagnostics (IEEE 2023–2025)."
+        url="/high-voltage-engineering-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>High Voltage Engineering IEEE Projects</li>
-              <li>HVDC IEEE Projects</li>
-              <li>GIS Substation IEEE Projects</li>
-              <li>Insulation IEEE Projects</li>
-              <li>Partial Discharge IEEE Projects</li>
-              <li>B.Tech High Voltage IEEE Projects</li>
-              <li>M.Tech HVDC IEEE Projects</li>
-              <li>Ph.D. High Voltage Insulation IEEE Thesis</li>
-              <li>Smart Grid High Voltage IEEE Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          
+          </aside>
+
+          {/* ❌ MAIN CONTENT (NOT CHANGED) */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>High Voltage Engineering – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>High Voltage Engineering – Project Development Center in Chennai</h1>
+              <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the High Voltage Engineering – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in HVDC transmission, insulation systems, and smart grid diagnostics.
               </p>
@@ -238,42 +256,26 @@ const EEEHighVoltageEngineeringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gis">GIS Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
+              <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
         </div>
       </div>
     </div>

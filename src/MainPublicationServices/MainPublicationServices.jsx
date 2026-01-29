@@ -1,6 +1,7 @@
+import Leftsidebar from "../assets/Leftsidebar";
 import "./MainPublicationServices.scss";
 import Sidebar from "./PublicationServicesSidebar";
-
+import { Link } from "react-router-dom";
 const MainPublicationServices = () => {
   return (
     <div className="main-publication-wrapper">
@@ -8,21 +9,47 @@ const MainPublicationServices = () => {
 
       <div className="main-publication-container">
         {/* Left Side – Quick Links */}
-        <div className="main-publication-left">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#journals">Journal Publication</a></li>
-            <li><a href="#reviews">Review Articles</a></li>
-            <li><a href="#conference">Conference Papers</a></li>
-            <li><a href="#books">Book Publication</a></li>
-            <li><a href="#process">Publication Process</a></li>
-          </ul>
-        </div>
+           <aside className="left-sidebar2">
+            <ul>
+  <li>
+    <Link to="/publication-services/conference-paper-publication-services">
+      Conference Paper Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/SCIJournal">
+      SCI Journal Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/review-article-publication">
+      Review Article Publication
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/ugc-care-journal-publication-services">
+      UGC CARE Journal Publication Services
+    </Link>
+  </li>
+  <li>
+    <Link to="/publication-services/book-isbn-publication-support">
+      Book ISBN Publication Support
+    </Link>
+  </li>
+  <li>
+   <Link to="/publication-services/scopus-journal-publication-services">
+      Scopus Journal Publication Services
+    </Link>
+  </li>
+</ul>
+        
+      </aside>
 
        
         {/* Main Content */}
         <div className="main-publication-main">
-          <h1>Research Journals, Review Articles, Conference Papers & Book Publication Services</h1>
+          <h1 className="Publicationh1">Publication Services</h1>
+          <h2>Research Journals, Review Articles, Conference Papers & Book Publication Services</h2>
           <p className="main-confidential-note">
             🔒 Excellent and Confidential Support – From Writing to Publication
           </p>
@@ -36,26 +63,121 @@ const MainPublicationServices = () => {
               Get your papers published in SCI, Scopus, IEEE, and UGC-listed journals with domain-specific writing, plagiarism control, journal formatting, and publication support.
             </p>
           </section>
+          <p>
+  The
+  {" "}
+  <Link
+    to="/publication-services/scopus-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    Scopus Journal Publication Services
+  </Link>
+  {" "}
+  focus on helping authors publish in reputed Scopus-indexed journals across all
+  quartiles. Our experts provide manuscript refinement, plagiarism correction,
+  journal targeting, peer-review response assistance, and fast-track options to
+  improve acceptance success.
+</p>
+
 
           <section id="reviews">
             <h2>📘 Review Article Publication Services</h2>
             <p>
               We create well-structured, high-quality literature reviews with deep critical analysis to publish in SCI and Scopus-indexed journals.
+              <p>
+  The
+  {" "}
+  <Link
+    to="/publication-services/review-article-publication"
+    className="internal-link highlight-link"
+  >
+    Review Article Publication
+  </Link>
+  {" "}
+  service is designed for scholars aiming to synthesize existing research into
+  high-citation review papers. We support narrative reviews, systematic reviews,
+  and meta-analyses with structured literature mapping, critical analysis, and
+  journal-ready formatting for SCI and Scopus indexed journals.
+</p>
+
             </p>
           </section>
 
           <section id="conference">
             <h2>📄 Conference Paper Publication Support</h2>
             <p>
-              Technical and research-focused IEEE, Springer, Elsevier and national conference paper writing with formatting and submission and complete publication support for proceedings.
+              Technical and research-focused IEEE, Springer, Elsevier and national conference paper writing with formatting and submission and complete publication support for proceedings.<p>
+  Our
+  {" "}
+  <Link
+    to="/publication-services/conference-paper-publication-services"
+    className="internal-link highlight-link"
+  >
+    Conference Paper Publication Services
+  </Link>
+  {" "}
+  support researchers and students in preparing high-quality papers for IEEE,
+  Springer, Elsevier, and reputed national and international conferences. We assist
+  with technical writing, plagiarism control, template-based formatting, and complete
+  submission support to ensure acceptance in conference proceedings and indexed
+  platforms.
+</p>
+<p>
+  Through our
+  {" "}
+  <Link
+    to="/publication-services/SCIJournal"
+    className="internal-link highlight-link"
+  >
+    SCI Journal Publication
+  </Link>
+  {" "}
+  services, we help researchers publish in high-impact Science Citation Index journals.
+  Our support includes manuscript writing, technical editing, plagiarism reduction,
+  journal selection, peer-review response handling, and resubmission assistance,
+  ensuring compliance with strict SCI editorial standards.
+</p>
+
             </p>
           </section>
 
           <section id="books">
             <h2>📚 Book Writing & ISBN Publication</h2>
             <p>
-              Convert your research into a professionally published book with ISBN, typesetting, cover design, and publication on academic platforms.
+              Convert your research into a professionally published book with ISBN, typesetting, cover design, and publication on academic platforms.<p>
+  With our
+  {" "}
+  <Link
+    to="/publication-services/book-isbn-publication-support"
+    className="internal-link highlight-link"
+  >
+    Book ISBN Publication Support
+  </Link>
+  {" "}
+  services, researchers can transform theses, monographs, and academic content into
+  professionally published books. We handle ISBN allocation, metadata preparation,
+  formatting, catalog registration, and publication support for both print and
+  digital books.
+</p>
+
+
             </p>
+
+            <p>
+  Our
+  {" "}
+  <Link
+    to="/publication-services/ugc-care-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    UGC CARE Journal Publication Services
+  </Link>
+  {" "}
+  assist academicians in meeting mandatory publication requirements for promotions,
+  PhD evaluations, and academic audits. We ensure verified journal selection from
+  the UGC CARE list, plagiarism compliance, formatting accuracy, and smooth
+  submission with revision support.
+</p>
           </section>
 
           <h2>📊 Comparison Table – Choose the Right Format for Your Research</h2>
@@ -107,6 +229,21 @@ const MainPublicationServices = () => {
               </tr>
             </tbody>
           </table>
+<p>
+  The
+  {" "}
+  <Link
+    to="/publication-services/scopus-journal-publication-services"
+    className="internal-link highlight-link"
+  >
+    Scopus Journal Publication Services
+  </Link>
+  {" "}
+  focus on helping authors publish in reputed Scopus-indexed journals across all
+  quartiles. Our experts provide manuscript refinement, plagiarism correction,
+  journal targeting, peer-review response assistance, and fast-track options to
+  improve acceptance success.
+</p>
 
           <section id="process">
             <h2>End-to-End Publication Process – Expert Support from Start to Finish</h2>
@@ -148,7 +285,8 @@ const MainPublicationServices = () => {
 
 
         {/* Right Side – Keywords */}
-        <div className="main-publication-right">
+        <div className="right-sidebar1">
+               <Leftsidebar/>
           <h3>Keywords</h3>
           <ul>
             <li>Research paper publication</li>

@@ -1,78 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Power System Protection and Relays Project Development Center in Chennai",
+  "Power System Protection IEEE Projects 2023–2025",
+  "Digital Relays Project Development",
+  "Adaptive Protection Projects",
+  "Relay Coordination IEEE Projects",
+  "IEC 61850 Substation Automation Projects",
+  "AI Based Relay Protection",
+  "Smart Grid Protection Systems",
+  "B.Tech Power System Protection Projects",
+  "M.Tech Relay Protection Projects",
+  "Ph.D Power System Protection Research",
+  "Narpavi Research Institute Power Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Power System Protection & Relays Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Power System Protection & Relays Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power system protection, relay coordination, and grid stability for applications in substations, smart grids, and renewable energy systems."
+    answer:
+      "Narpavi Research Institute’s Power System Protection & Relays Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in protection systems, relay coordination, and grid stability for substations, smart grids, and renewable energy systems."
   },
   {
     question: "What types of Power System Protection & Relays projects are supported?",
-    answer: "We support B.Tech projects (overcurrent, differential relays), M.Tech projects (adaptive protection, IEC 61850 automation), and Ph.D. projects (AI-based relaying, cyber-physical security) for applications in power utilities and smart grids."
+    answer:
+      "We support B.Tech projects (overcurrent, differential relays), M.Tech projects (adaptive protection, IEC 61850 automation), and Ph.D. projects (AI-based relaying and cyber-physical security)."
   },
   {
     question: "Which technologies are used in Power System Protection & Relays project development?",
-    answer: "Our stack includes MATLAB/Simulink, ETAP, PSCAD, FPGA/ARM controllers, AI frameworks (TensorFlow, PyTorch), and IEC 61850 protocols for relay design and protection studies."
+    answer:
+      "MATLAB/Simulink, ETAP, PSCAD, FPGA/ARM controllers, TensorFlow, PyTorch, and IEC 61850 protocols."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions on Power Delivery and Smart Grid (2023–2025), covering areas like adaptive protection, wide-area monitoring, and AI-driven relaying, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions on Power Delivery and Smart Grid (2023–2025), covering adaptive protection, wide-area monitoring, and AI-driven relaying."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/ETAP, hardware-in-the-loop testing, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including topic selection, algorithm design, simulation, HIL testing, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Power System Protection & Relays – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Power System Protection & Relays Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering digital relays, adaptive protection, IEC 61850, AI-based relaying, smart grids, and renewable integration.";
+
+const pageUrl =
+  "/department/power-systems/power-system-protection-relays";
 
 const EEEPowerSystemProtectionRelaysProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Power System Protection & Relays IEEE Projects (2023–2025)"
-        description="Power System Protection Relays IEEE project development for B.Tech, M.Tech & PhD using MATLAB/Simulink, ETAP, PSCAD, adaptive protection, IEC 61850, AI relaying, smart grid protection, digital relays."
-        url="/department/power-systems/power-system-protection-relays"
-        type="article"
-        keywords={[
-          "Power System Protection and Relays Projects",
-          "Digital Relays Project Center",
-          "Adaptive Protection Project Guidance",
-          "IEEE Power System Projects 2023–2025",
-          "Ph.D. Research in Relay Protection",
-          "Smart Grid Protection Project Support",
-          "AI-Based Relay Design Projects",
-          "Power System Relay Coordination",
-          "Narpavi Research Institute EEE Projects",
-          "EEE Project Development Center"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Power System Protection and Relays Projects</li>
-              <li>Digital Relays Project Center</li>
-              <li>Adaptive Protection Project Guidance</li>
-              <li>Narpavi Research Institute EEE Projects</li>
-              <li>IEEE Power System Projects 2023–2025</li>
-              <li>Ph.D. Research in Relay Protection</li>
-              <li>Smart Grid Protection Project Support</li>
-              <li>AI-Based Relay Design Projects</li>
-              <li>Power System Relay Coordination IEEE Papers</li>
-              <li>EEE Project Development Center</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Power System Protection & Relays – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Power System Protection & Relays Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to advance power system protection aligned with IEEE Transactions (2023–2025). Our projects focus on reliability, safety, and resilience in modern power systems, addressing renewable integration, smart grids, and distributed generation.
               </p>
@@ -219,43 +238,26 @@ const EEEPowerSystemProtectionRelaysProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/power-systems">
-      Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/distributed-generation-integration">
-      Distributed Generation Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/facts-power-systems">
-      FACTS Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/load-flow-analysis">
-      Load Flow Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-protection-relays">
-      Power System Protection & Relays
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-stability-control">
-      Power System Stability & Control
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/power-systems">Power Systems</a></li>
+              <li><a href="/department/power-systems/distributed-generation-integration">Distributed Generation Integration</a></li>
+              <li><a href="/department/power-systems/facts-power-systems">FACTS Power Systems</a></li>
+              <li><a href="/department/power-systems/load-flow-analysis">Load Flow Analysis</a></li>
+              <li><a href="/department/power-systems/power-system-protection-relays">Power System Protection & Relays</a></li>
+              <li><a href="/department/power-systems/power-system-stability-control">Power System Stability & Control</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

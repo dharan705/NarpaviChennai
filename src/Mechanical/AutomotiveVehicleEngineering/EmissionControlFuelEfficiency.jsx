@@ -1,75 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Emission Control & Fuel Efficiency Project Development Center in Chennai",
+  "Emission Control IEEE Projects 2023–2025",
+  "Fuel Efficiency Student Projects",
+  "AI Based Engine Emission Reduction",
+  "Hybrid Vehicle Emission Optimization",
+  "Catalytic Converter CFD Projects",
+  "VVT Engine Optimization IEEE",
+  "Alternative Fuel Engine Projects",
+  "IoT Based Engine Monitoring",
+  "Digital Twin Engine Emissions",
+  "Narpavi Research Institute Emission Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Emission Control & Fuel Efficiency Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Emission Control & Fuel Efficiency Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced combustion control, catalytic converters, alternative fuels, hybrid systems, and AI-based fuel management for sustainable automotive solutions."
+    answer:
+      "Narpavi Research Institute’s Emission Control & Fuel Efficiency Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced combustion control, catalytic converters, alternative fuels, hybrid systems, and AI-based fuel management."
   },
   {
     question: "What types of Emission Control & Fuel Efficiency projects are supported?",
-    answer: "We support B.Tech projects (basic emission analysis, fuel optimization), M.Tech projects (AI-driven combustion control, CFD modeling), and Ph.D. projects (alternative fuel engines, digital twins, predictive emission management) for applications in passenger cars, hybrid vehicles, and smart mobility."
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects covering emission analysis, AI-driven combustion control, CFD modeling, alternative fuel engines, and predictive emission management."
   },
   {
-    question: "Which tools and technologies are used in Emission Control & Fuel Efficiency projects?",
-    answer: "Our stack includes MATLAB, Simulink, GT-Power, ANSYS Fluent, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, and sensors for simulation, prototyping, and real-time monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, Simulink, GT-Power, ANSYS Fluent, Python, TensorFlow, Keras, AWS IoT, ThingSpeak, Arduino, Raspberry Pi, and sensors."
   },
   {
-    question: "How are Emission Control & Fuel Efficiency projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on emission reduction, fuel efficiency, and compliance with IEEE/ISO/SAE standards."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and IEEE/Scopus/Elsevier publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Emission Control & Fuel Efficiency – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Emission Control & Fuel Efficiency Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering combustion control, catalytic converters, alternative fuels, AI optimization, and IoT monitoring.";
+
+const pageUrl =
+  "/department/automotive-vehicle-engineering/emission-control-fuel-efficiency";
 
 const MEEmissionControlFuelEfficiencyProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Emission Control & Fuel Efficiency IEEE Projects (2023–2025)"
-        description="Emission Control Fuel Efficiency IEEE project development for B.Tech, M.Tech & PhD using MATLAB, GT-Power, ANSYS Fluent, AI combustion control, catalytic converters, alternative fuels, IoT monitoring for sustainable automotive."
-        url="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency"
-        type="article"
-        keywords={[
-          "Emission Control IEEE 2023–2025",
-          "Fuel Efficiency Student Projects",
-          "AI Based Engine Emission Reduction",
-          "Hybrid Vehicle Emission Optimization",
-          "Catalytic Converter CFD Projects",
-          "VVT Engine Optimization IEEE",
-          "Alternative Fuel Engine Projects",
-          "IoT Based Engine Monitoring",
-          "Digital Twin Engine Emissions",
-          "Narpavi Research Institute Emission Projects"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Emission Control IEEE Projects 2023–2025</li>
-              <li>Fuel Efficiency Student Projects</li>
-              <li>AI-Based Engine Emission Reduction</li>
-              <li>Hybrid Vehicle Emission Optimization</li>
-              <li>Catalytic Converter CFD Projects</li>
-              <li>VVT Engine Optimization IEEE</li>
-              <li>Alternative Fuel Engine Projects</li>
-              <li>IoT-Based Engine Monitoring</li>
-              <li>B.Tech/M.Tech/Ph.D. Automotive Projects</li>
-              <li>Narpavi Research Institute Emission Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Emission Control & Fuel Efficiency – Project Development Support</h1>
-
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Emission Control & Fuel Efficiency Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on combustion control, catalytic converters, alternative fuels, hybrid systems, and AI-based fuel management.
@@ -255,43 +275,25 @@ const MEEmissionControlFuelEfficiencyProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/automotive-vehicle-engineering">
-      Automotive & Vehicle Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
-      Electric Vehicle Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
-      Hybrid Vehicle Powertrains
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
-      Vehicle Dynamics & Stability
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
-      Engine Performance Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
-      Emission Control & Fuel Efficiency
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/automotive-vehicle-engineering">Automotive & Vehicle Engineering</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/electric-vehicle-design">Electric Vehicle Design</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">Hybrid Vehicle Powertrains</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">Vehicle Dynamics & Stability</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/engine-performance-optimization">Engine Performance Optimization</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">Emission Control & Fuel Efficiency</a></li>
+            </ul> 
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

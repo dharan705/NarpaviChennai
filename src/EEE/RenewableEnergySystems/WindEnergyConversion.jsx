@@ -1,59 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Wind Energy Conversion Systems Project Development Center in Chennai",
+  "IEEE Wind Energy Projects 2023–2025",
+  "B.Tech Wind Turbine Projects",
+  "M.Tech AI Based Wind Control Projects",
+  "Ph.D Wind Energy Research Chennai",
+  "Hybrid Wind Solar Energy Systems",
+  "IoT Based Wind Monitoring Systems",
+  "Smart Grid Wind Integration Projects",
+  "Adaptive MPPT Wind Systems",
+  "Narpavi Research Institute Wind Energy"
+];
 
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Wind Energy Conversion Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Wind Energy Conversion Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in designing, modeling, and implementing IEEE-aligned (2023–2025) projects on wind turbine systems, energy conversion techniques, intelligent control, and grid integration strategies."
+    answer:
+      "Narpavi Research Institute’s Wind Energy Conversion Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in designing, modeling, and implementing IEEE-aligned (2023–2025) projects on wind turbine systems, energy conversion techniques, intelligent control, and grid integration strategies."
   },
   {
     question: "What types of Wind Energy projects are supported?",
-    answer: "We support B.Tech projects (wind turbine design, simulation, IoT monitoring), M.Tech projects (AI-based turbine control, hybrid wind–solar systems), and Ph.D. projects (predictive maintenance, adaptive control, grid integration) for industrial, commercial, and utility-scale applications."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering wind turbine design, AI-based control, hybrid wind–solar systems, and grid integration."
   },
   {
     question: "Which technologies are used in Wind Energy project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSIM, ANSYS, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and HIL (hardware-in-the-loop) testbeds for turbine design and performance optimization."
+    answer:
+      "MATLAB/Simulink, PSIM, ANSYS, TensorFlow, PyTorch, MQTT-based IoT platforms, FPGA/DSP controllers, and HIL testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering topics like turbine blade optimization, generator dynamics, smart converters, AI-assisted control, and hybrid renewable integration to ensure both academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) focusing on turbine optimization, generator dynamics, smart converters, and AI-assisted control."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We provide guidance starting from IEEE topic selection, simulation, hardware prototyping, real-time testing, IEEE-compliant documentation, and support for IEEE/Scopus/SCI indexed journal publications."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Wind Energy Conversion Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Wind Energy Conversion Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering wind turbine design, AI-based control, IoT monitoring, hybrid wind–solar systems, and smart grid integration.";
+
+const pageUrl =
+  "/department/renewable-energy-systems/wind-energy-conversion";
 
 const EEEWindEnergyConversionSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Wind Energy Projects</li>
-              <li>IEEE Renewable Energy Projects 2023–2025</li>
-              <li>B.Tech Wind Turbine Projects</li>
-              <li>M.Tech AI-Based Wind Control</li>
-              <li>Ph.D Hybrid Wind-Solar Systems</li>
-              <li>IoT-Based Wind Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>High-Efficiency Wind Turbine Research</li>
-              <li>Smart Grid Wind Integration</li>
-              <li>Adaptive MPPT Wind Systems</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Wind Energy Conversion Systems – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+       {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Wind Energy Conversion Systems (WECS) Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance high-efficiency wind turbines, grid integration technologies, and hybrid renewable systems aligned with IEEE research (2023–2025).</p>
               <p>Our projects emphasize practical learning by combining simulation tools, hardware prototyping, IoT-enabled monitoring, AI-assisted control, and predictive maintenance for real-world renewable energy applications.</p>
@@ -186,69 +223,30 @@ const EEEWindEnergyConversionSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/renewable-energy-systems">
-      Renewable Energy Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/solar-photovoltaic">
-      Solar Photovoltaic Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/wind-energy-conversion">
-      Wind Energy Conversion Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
-      Biomass Fuel Cell Technologies
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/energy-storage-integration">
-      Energy Storage & Renewable Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
-      Hybrid Renewable Energy Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/grid-integration-renewables">
-      Grid Integration of Renewables
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/renewable-energy-systems">Renewable Energy Systems – Project Development Center</a></li>
+              <li><a href="/department/renewable-energy-systems/solar-photovoltaic">Solar Photovoltaic Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/wind-energy-conversion">Wind Energy Conversion Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/biomass-fuel-cell">Biomass Fuel Cell Technologies</a></li>
+              <li><a href="/department/renewable-energy-systems/energy-storage-integration">Energy Storage & Renewable Integration</a></li>
+              <li><a href="/department/renewable-energy-systems/hybrid-renewable-systems">Hybrid Renewable Energy Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/grid-integration-renewables">Grid Integration of Renewables</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

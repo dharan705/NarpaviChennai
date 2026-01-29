@@ -1,32 +1,46 @@
 import "./CEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Transportation Engineering IEEE Projects 2023–2025",
+  "Traffic Optimization IEEE Projects",
+  "Intelligent Transportation Systems Projects",
+  "Pavement Design Projects",
+  "EV Infrastructure Projects",
+  "AI in Transportation Engineering",
+  "Smart Mobility Civil Engineering Projects",
+  "Transportation Engineering B.Tech M.Tech Ph.D.",
+  "Narpavi Research Institute Civil Projects"
+];
 
 const faqs = [
   {
     question: "What services does the Transportation Engineering Project Development Center offer?",
     answer:
-      "Narpavi Research Institute’s Transportation Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on traffic optimization, pavement design, intelligent transportation systems, and IoT-based smart mobility solutions."
+      "Narpavi Research Institute’s Transportation Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on traffic optimization, pavement design, intelligent transportation systems, and smart mobility solutions."
   },
   {
-    question: "What types of Transportation Engineering projects are supported?",
+    question: "What types of projects are supported?",
     answer:
-      "We support B.Tech projects (traffic engineering and pavement design), M.Tech projects (smart traffic systems and sustainable pavements), and Ph.D. projects (AI-driven traffic prediction and autonomous vehicle integration) for highways, railways, and urban transit."
+      "B.Tech, M.Tech, and Ph.D. projects covering traffic engineering, pavement design, ITS, EV infrastructure, and AI-driven transportation systems."
   },
   {
-    question: "Which tools and technologies are used in Transportation Engineering projects?",
+    question: "Which tools are used?",
     answer:
-      "Our stack includes VISSIM, AIMSUN, TransCAD, MX Roads, AutoCAD, IoT sensors (GPS, UAVs), and AI frameworks (TensorFlow, Keras) for traffic simulation and pavement analysis."
+      "VISSIM, AIMSUN, TransCAD, MX Roads, AutoCAD, IoT sensors, UAVs, and AI frameworks."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
+    question: "Are projects IEEE aligned?",
     answer:
-      "Projects are based on IEEE Transactions (2023–2025) on Intelligent Transportation Systems and Civil Engineering, focusing on smart traffic, EV infrastructure, and sustainable pavements."
+      "Yes, projects are based on IEEE Transactions (2023–2025) on Intelligent Transportation Systems and Civil Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
+    question: "What academic support is provided?",
     answer:
-      "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+      "Complete support from topic selection to simulation, validation, documentation, and publication."
   }
 ];
 
@@ -34,57 +48,38 @@ const CETransportationEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
 
-      {/* ✅ SEO */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Transportation Engineering IEEE Projects (2023–2025)"
-        description="Transportation Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on traffic optimization, intelligent transportation systems, pavement design, EV infrastructure, AI-driven traffic prediction, and smart mobility solutions."
-        url="department/transportation-engineering"
-        type="article"
-        keywords={[
-          "Transportation Engineering Projects",
-          "Traffic Optimization IEEE Projects",
-          "Intelligent Transportation Systems",
-          "Pavement Design Projects",
-          "AI in Transportation Engineering",
-          "PhD Transportation Engineering Projects"
-        ]}
+        title="Transportation Engineering – Project Development Center in Chennai"
+        description="Transportation Engineering project development for B.Tech, M.Tech, and Ph.D. students focusing on traffic optimization, intelligent transportation systems, pavement design, EV infrastructure, AI-driven traffic prediction, and smart mobility solutions."
+        keywords={keywords}
+        url="/department/transportation-engineering"
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
 
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Transportation Engineering Projects</li>
-              <li>Traffic Flow Optimization IEEE Projects 2023–2025</li>
-              <li>Pavement Design Projects</li>
-              <li>Intelligent Transportation Systems</li>
-              <li>EV Infrastructure Projects</li>
-              <li>UAV in Traffic Monitoring</li>
-              <li>AI in Transportation Engineering</li>
-              <li>Civil Engineering Projects B.Tech M.Tech Ph.D.</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+           
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Transportation Engineering – Project Development Support</h1>
 
-            {/* Internal SEO Links */}
-            <p className="seo-internal-links">
-              Related services:
-              <a href="/civil-engineering-project-development"> Civil Engineering Projects</a>,
-              <a href="/phd-project-development"> PhD Project Guidance</a>,
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
-            </p>
-
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Transportation Engineering – Project Development Center in Chennai
+            </h1>
+                    <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Transportation Engineering Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on traffic systems, pavement design, and smart mobility. Our projects focus on creating efficient, safe, and sustainable transportation infrastructure for highways, railways, and urban transit.
               </p>
@@ -248,33 +243,38 @@ const CETransportationEngineeringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/transportation-engineering">
-      Transportation Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/smart-traffic-management">
-      Smart Traffic Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/pavement-analysis-design">
-      Pavement Analysis & Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/highway-safety-optimization">
-      Highway Safety Optimization
-    </a>
-  </li>
-</ul>
-
-          </div>
+              <li>
+                <a href="/department/transportation-engineering">
+                  Transportation Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/smart-traffic-management">
+                  Smart Traffic Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/pavement-analysis-design">
+                  Pavement Analysis & Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/highway-safety-optimization">
+                  Highway Safety Optimization
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

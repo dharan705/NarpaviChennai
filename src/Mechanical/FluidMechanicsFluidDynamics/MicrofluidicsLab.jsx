@@ -1,76 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Microfluidics & Lab-on-Chip Project Development Center in Chennai",
+  "Microfluidics IEEE Projects 2023–2025",
+  "Lab-on-Chip Biomedical Applications",
+  "CFD Microchannel Flow Projects",
+  "IoT Enabled Lab-on-Chip Diagnostics",
+  "Point-of-Care Microfluidic Devices",
+  "Digital Microfluidics Research",
+  "MEMS Microfluidic Projects",
+  "PDMS Microchip Fabrication",
+  "Narpavi Research Institute Microfluidics Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Microfluidics & Lab-on-Chip Applications Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Microfluidics & Lab-on-Chip Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on microfluidic chip design, CFD simulations, and IoT-integrated diagnostics for healthcare and environmental applications."
+    answer:
+      "Narpavi Research Institute’s Microfluidics & Lab-on-Chip Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) microfluidic and diagnostic system projects."
   },
   {
-    question: "What types of Microfluidics & Lab-on-Chip projects are supported?",
-    answer: "We support B.Tech projects (microchannel flow simulation, PDMS prototyping), M.Tech projects (multiphase flow CFD, biosensor integration), and Ph.D. projects (AI-driven diagnostics, wearable microfluidics) for healthcare, pharmaceuticals, and environmental monitoring."
+    question: "What types of Microfluidics projects are supported?",
+    answer:
+      "We support undergraduate, postgraduate, and doctoral projects in microchannel flow, biosensors, digital microfluidics, and AI-driven diagnostics."
   },
   {
-    question: "Which tools and technologies are used in Microfluidics & Lab-on-Chip projects?",
-    answer: "Our stack includes COMSOL Multiphysics, ANSYS Fluent, MATLAB, PDMS fabrication, soft lithography, 3D printing, MEMS technology, AI frameworks (TensorFlow, Keras), and IoT platforms."
+    question: "Which tools and technologies are used?",
+    answer:
+      "COMSOL Multiphysics, ANSYS Fluent, MATLAB, PDMS fabrication, MEMS, AI frameworks, and IoT platforms."
   },
   {
-    question: "How are Microfluidics & Lab-on-Chip projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Biomedical Engineering and Microfluidics, focusing on point-of-care diagnostics, digital microfluidics, and IoT integration."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Biomedical Engineering and Microfluidics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, prototype fabrication, AI/IoT integration, documentation, and support for IEEE/Scopus/Elsevier/Nature journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including CFD analysis, fabrication guidance, AI/IoT integration, and IEEE/Scopus/Elsevier/Nature publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Microfluidics & Lab-on-Chip Applications – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Microfluidics & Lab-on-Chip Applications Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using CFD simulations, MEMS fabrication, AI-driven diagnostics, and IoT integration.";
+
+const pageUrl =
+  "/department/fluid-mechanics-dynamics/microfluidics-lab";
 
 const MEMicrofluidicsLabOnChipProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Microfluidics & Lab-on-Chip IEEE Projects (2023–2025)"
-        description="Microfluidics Lab-on-Chip IEEE project development for B.Tech, M.Tech & PhD using COMSOL, ANSYS Fluent, PDMS fabrication, MEMS, AI diagnostics, IoT integration for healthcare, point-of-care testing, environmental monitoring."
-        url="/department/fluid-mechanics-dynamics/microfluidics-lab"
-        type="article"
-        keywords={[
-          "Microfluidics IEEE Projects 2023–2025",
-          "Lab-on-Chip Biomedical Applications",
-          "CFD Microchannel Flow Projects",
-          "IoT Lab-on-Chip Diagnostics",
-          "Point-of-Care Microfluidic Devices",
-          "Digital Microfluidics Research",
-          "MEMS Microfluidic Projects",
-          "Wearable Microfluidics Projects",
-          "PDMS Microchip Fabrication",
-          "Narpavi Research Institute Microfluidics"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Microfluidics IEEE Projects 2023–2025</li>
-              <li>Lab-on-Chip Project Ideas</li>
-              <li>Microfluidic Biomedical Applications</li>
-              <li>CFD Microchannel Projects</li>
-              <li>IoT-Enabled Lab-on-Chip Systems</li>
-              <li>Point-of-Care Diagnostics Student Projects</li>
-              <li>Digital Microfluidics Research</li>
-              <li>Personalized Medicine Lab-on-Chip</li>
-              <li>MEMS Microfluidic Projects</li>
-              <li>Narpavi Research Institute Microfluidics Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Microfluidics & Lab-on-Chip Applications – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Microfluidics & Lab-on-Chip Applications Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on microscale fluid manipulation and integrated diagnostic systems.
               </p>
@@ -244,43 +263,26 @@ const MEMicrofluidicsLabOnChipProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics">
-      Fluid Mechanics & Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
-      Computational Fluid Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
-      Turbomachinery Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
-      Aerodynamics & Wind Tunnel
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
-      Pump & Valve Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
-      Microfluidics Lab
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/fluid-mechanics-dynamics">Fluid Mechanics & Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">Computational Fluid Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/turbomachinery-design">Turbomachinery Design</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">Aerodynamics & Wind Tunnel</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">Pump & Valve Optimization</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/microfluidics-lab">Microfluidics Lab</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "Microgrid Energy Management Project Development Center in Chennai",
+  "Microgrid Energy Management IEEE Projects 2023–2025",
+  "B.Tech Microgrid Control Projects",
+  "M.Tech AI Based Microgrid Optimization",
+  "Ph.D Predictive Load Management",
+  "Distributed Generation Coordination",
+  "IoT Based Microgrid Monitoring",
+  "Smart Microgrid Systems",
+  "Renewable Integrated Microgrids",
+  "Narpavi Research Institute Microgrid Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Microgrid Energy Management Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Microgrid Energy Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on microgrid energy management, distributed generation, predictive control, renewable integration, and AI-based optimization."
+    question:
+      "What services does the Microgrid Energy Management Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Microgrid Energy Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on microgrid energy management, distributed generation, predictive control, renewable integration, and AI-based optimization."
   },
   {
     question: "What types of Microgrid Energy Management projects are supported?",
-    answer: "We support B.Tech projects (basic microgrid design, IoT-enabled monitoring), M.Tech projects (predictive load scheduling, AI/ML-based optimization), and Ph.D. projects (real-time adaptive control, distributed generation scheduling, HIL-tested experimental platforms)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering microgrid control, predictive scheduling, AI-based optimization, distributed generation coordination, and HIL-tested experimental platforms."
   },
   {
-    question: "Which technologies are used in Microgrid project development?",
-    answer: "Our stack includes MATLAB/Simulink, HOMER Pro, PSIM, IoT platforms (MQTT, SCADA), AI frameworks (TensorFlow, PyTorch), and FPGA/DSP-based controllers for real-time microgrid management development."
+    question: "Which technologies are used?",
+    answer:
+      "MATLAB/Simulink, HOMER Pro, PSIM, IoT/SCADA platforms, TensorFlow, PyTorch, and FPGA/DSP-based real-time controllers."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects reference IEEE Transactions (2023–2025) on microgrid planning, distributed generation, adaptive control, renewable scheduling, and intelligent demand response for ensuring industry-relevant academic research."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on microgrid planning, adaptive control, renewable scheduling, and intelligent demand response."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer complete guidance including IEEE topic selection, simulations, hardware prototyping, IoT integration, IEEE-format documentation, and journal publications in IEEE/Scopus/SCI-indexed outlets."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end support including IEEE topic selection, simulations, hardware prototyping, IoT integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Microgrid Energy Management – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Microgrid Energy Management Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering distributed generation scheduling, AI predictive control, renewable integration, and smart microgrid optimization.";
+
+const pageUrl =
+  "/department/smart-grid-microgrid/microgrid-energy-management";
 
 const EEEMicrogridEnergyManagementProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Microgrid Energy Management IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Microgrid Energy Management projects for B.Tech, M.Tech, Ph.D. Distributed generation scheduling, AI predictive control, renewable integration using MATLAB/Simulink, HOMER Pro, PSIM, TensorFlow for smart microgrids."
-  keywords="Microgrid Energy Management IEEE Projects 2023–2025, B.Tech Microgrid Control, M.Tech AI Microgrid Optimization, Ph.D. Predictive Load Management, IoT Microgrid Monitoring, Distributed Generation Coordination, Smart Microgrid Systems, Narpavi Research Institute"
-  url="/department/smart-grid-microgrid/microgrid-energy-management"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Microgrid Energy Management Projects</li>
-              <li>IEEE Microgrid Projects 2023–2025</li>
-              <li>B.Tech Microgrid Control Projects</li>
-              <li>M.Tech AI-Based Microgrid Optimization</li>
-              <li>Ph.D Predictive Load Management</li>
-              <li>IoT-Based Microgrid Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>Distributed Generation Coordination</li>
-              <li>Grid-Connected Microgrid Research</li>
-              <li>Smart Microgrid Systems</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Microgrid Energy Management – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Microgrid Energy Management Project Development Center, a global hub for scholars to explore IEEE-aligned (2023–2025) domains in distributed generation scheduling, renewable integration, storage coordination, and predictive AI-assisted optimization.</p>
               <p>Students gain expertise in microgrid control, IoT-based monitoring, FPGA-based prototyping, load scheduling, and demand-side energy dispatch with real-time performance validation.</p>
@@ -200,49 +230,27 @@ const EEEMicrogridEnergyManagementProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid – Project Development Center</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Integration of Distributed Generation</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA Systems</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
-          
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

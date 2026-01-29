@@ -2,6 +2,7 @@ import React from "react";
 import "./ReviewArticleWriting.scss";
 import { BookOpen, ListChecks, CheckCircle2, FileText } from "lucide-react";
 import Subsidebar from "../pages/Subsidebar";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -173,6 +174,22 @@ const ReviewArticleWriting = () => {
             <li><a href="/review-ariticle-writing/sci-review-guide">SCI Review Guide</a></li>
             <li><a href="/review-ariticle-writing/scopus-review-guide">Scopus Review Guide</a></li>
             <li><a href="/review-ariticle-writing/systematic-review-guide">Systematic Review Guide</a></li>
+          </ul>
+           <ul>
+            <li>
+              <Link to="/review-article-writing">Review Article Writing</Link>
+            </li>
+            <li>
+              <Link to="/sci-journal-paper-writing">SCI Journal Paper Writing</Link>
+            </li>
+            <li>
+              <Link to="/scopus-journal-paper-writing">Scopus Journal Paper Writing</Link>
+            </li>
+            <li>
+              <Link to="/ieee-conference-paper-writing">
+                IEEE Conference Paper Writing
+              </Link>
+            </li>
           </ul>
         </aside>
       </div>

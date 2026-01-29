@@ -1,67 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
+import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Robotic Process Automation Project Development Center in Chennai",
+  "RPA IEEE Projects 2023–2025",
+  "AI Enabled RPA Projects",
+  "Business Process Automation Projects",
+  "Enterprise RPA Automation",
+  "Cloud Based RPA Systems",
+  "Cognitive RPA Research Projects",
+  "Industry 4.0 RPA Solutions",
+  "B.Tech RPA Projects",
+  "M.Tech RPA Projects",
+  "Ph.D RPA Research",
+  "Narpavi Research Institute RPA"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Robotic Process Automation (RPA) Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in creating RPA workflows, AI-enabled bots, task automation, ERP/CRM integration, cloud-based automation systems, and support for IEEE/Scopus/SCI publications."
+    question:
+      "What services does the Robotic Process Automation (RPA) Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in creating RPA workflows, AI-enabled bots, task automation, ERP/CRM integration, cloud-based automation systems, and IEEE/Scopus/SCI publication support."
   },
   {
     question: "What types of RPA projects are supported?",
-    answer: "B.Tech projects focus on simple bots (data entry, invoice processing, report generation). M.Tech projects integrate AI/ML-enabled RPA with ERP/CRM or cloud. Ph.D. projects explore cognitive RPA, multi-agent workflows, hybrid human-AI systems, and secure industrial RPA frameworks."
+    answer:
+      "B.Tech projects focus on basic automation bots. M.Tech projects integrate AI/ML-enabled RPA with enterprise systems. Ph.D. projects focus on cognitive RPA, multi-agent automation, and secure enterprise frameworks."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "UiPath, Automation Anywhere, Blue Prism, Python, TensorFlow/PyTorch, cloud RPA platforms, ERP/CRM integrations (SAP, Salesforce), and APIs for automation workflows."
+    answer:
+      "UiPath, Automation Anywhere, Blue Prism, Python, TensorFlow, PyTorch, cloud RPA platforms, and ERP/CRM integrations."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects follow IEEE-aligned (2023–2025) topics on intelligent automation, secure RPA ecosystems, AI-based bots, and Industry 4.0 digital transformation strategies."
+    answer:
+      "Projects follow IEEE-aligned (2023–2025) research trends in intelligent automation, AI-based RPA, secure enterprise automation, and Industry 4.0 digital transformation."
   },
   {
     question: "What academic support is provided?",
-    answer: "End-to-end project guidance: IEEE topic selection, RPA tool training, AI integration, real workflow prototyping, IEEE-style documentation, and journal publication support."
+    answer:
+      "Complete project lifecycle support including IEEE topic selection, RPA tool training, AI integration, workflow deployment, documentation, and journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Robotic Process Automation – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Robotic Process Automation Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-enabled bots, workflow automation, ERP/CRM integration, and Industry 4.0 digital transformation.";
+
+const pageUrl = "/department/industrial-automation/rpa";
 
 const EEERpaProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Robotic Process Automation RPA IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Robotic Process Automation RPA projects for B.Tech, M.Tech, Ph.D. AI-enabled bots, workflow automation, ERP/CRM integration using UiPath, Automation Anywhere, Blue Prism, TensorFlow for Industry 4.0, digital transformation."
-  keywords="Robotic Process Automation RPA IEEE Projects 2023–2025, B.Tech Invoice Processing Bots, M.Tech AI ML RPA, Ph.D. Cognitive RPA Research, Cloud RPA Enterprise Systems, Industry 4.0 RPA, UiPath Automation Anywhere Blue Prism, Narpavi Research Institute"
-  url="/department/industrial-automation/rpa"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Robotic Process Automation Project Development Center</li>
-              <li>RPA IEEE Projects</li>
-              <li>Industrial Automation with RPA</li>
-              <li>Business Process Automation Projects</li>
-              <li>AI-Enabled RPA Projects</li>
-              <li>Cloud RPA for Industry</li>
-              <li>Cognitive RPA Research Projects</li>
-              <li>RPA B.Tech Projects</li>
-              <li>RPA M.Tech Projects</li>
-              <li>Ph.D. RPA Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Robotic Process Automation (RPA) – Project Development Support</h1>
-            
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 The <strong>RPA Project Development Center at Narpavi Research Institute</strong> provides researchers with 
@@ -184,53 +213,31 @@ const EEERpaProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-          <ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">DCS</a></li>
+              <li><a href="/department/industrial-automation/hmi">HMI</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">RPA</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEERpaProjectDevelopmentCenter;

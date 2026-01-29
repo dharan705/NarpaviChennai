@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar";
+import Subsidebar from ".././pages/Subsidebar"
 import SEO from "../assets/SEO";
 
 const faqs = [
@@ -46,7 +46,11 @@ const PhdThesisWriting = () => {
         faqs={faqs}
       />
 
-      <SubSiderbar />
+         <Subsidebar
+  extraLinks={[
+    { id: "service", label: "service", path: "/service" }
+  ]}
+/>
 
       <div className="phd-guidance-container">
         <h1 className="title">PhD Research Thesis Writing Services Help</h1>

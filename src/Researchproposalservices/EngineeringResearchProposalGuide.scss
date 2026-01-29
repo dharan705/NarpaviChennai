@@ -1,7 +1,55 @@
 .engineering-guide {
   background-color: #f9fcfe;
   padding: 4rem 2rem;
+  min-height: 100vh;
+  position: relative;
+  margin-left: 100px;
+  margin-top: 10px;
+  /* GRID LAYOUT */
+  .page-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr 220px;
+    gap: 2rem;
+  }
 
+  /* SIDEBARS */
+  aside.left-links,
+  aside.right-tags {
+    position: sticky;
+    top: 100px;
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #dceaf0;
+    align-self: start;
+  }
+
+  aside h3 {
+    font-size: 1.1rem;
+    color: #005f83;
+    margin-bottom: 1rem;
+  }
+
+  aside ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  aside ul li {
+    margin: 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  aside.left-links a {
+    color: #0079a1;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* MAIN CONTENT */
   .container {
     max-width: 900px;
     margin: 0 auto;
@@ -22,37 +70,22 @@
     margin-bottom: 2rem;
   }
 
-  .intro {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
+  .intro,
+  .section p,
+  .closing-message p {
     text-align: justify;
+    line-height: 1.6;
+    font-size: 1rem;
   }
 
   .key-points {
     list-style: none;
     padding: 0;
     margin-bottom: 2rem;
-
     li {
       margin: 0.5rem 0;
       font-weight: 600;
-    }
-  }
-
-  .section {
-    margin-bottom: 2rem;
-
-    h3 {
-      font-size: 1.2rem;
-      color: #0079a1;
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      text-align: justify;
+      
     }
   }
 
@@ -60,59 +93,24 @@
     background: #e8faff;
     border-left: 4px solid #30c7ec;
     padding: 1.5rem;
-    margin-top: 2rem;
     border-radius: 6px;
-
-    h3 {
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    p {
-      margin: 0;
-      font-size: 1rem;
-    }
+    margin-top: 2rem;
   }
 
   .faq-section {
-    margin-top: 3rem;
-
-    h2 {
-      font-size: 1.5rem;
-      color: #00475b;
-      margin-bottom: 1.5rem;
-    }
-
-    .faq-item {
-      margin-bottom: 1.25rem;
-
-      h4 {
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #0079a1;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #333;
-        margin-top: 0.25rem;
-      }
+    margin-top: 2rem;
+    details {
+      margin-bottom: 1rem;
+      cursor: pointer;
     }
   }
 
   .closing-message {
-    margin-top: 3rem;
-
-    h3 {
-      font-size: 1.2rem;
-      color: #00475b;
-      margin-bottom: 0.75rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .engineering-guide {
+    margin-left: 0; /* Remove space on small screens */
   }
 }

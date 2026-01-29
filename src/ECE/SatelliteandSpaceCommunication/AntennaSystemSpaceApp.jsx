@@ -1,63 +1,85 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import { BiLeftArrow } from "react-icons/bi";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What are Antenna Systems for Space Applications?",
-    answer: "These are specialized antennas designed for satellite communication, GNSS, CubeSats, and deep-space missions, focusing on reliability and high performance in harsh environments."
+    answer:
+      "These are specialized antennas designed for satellite communication, GNSS, CubeSats, and deep-space missions."
   },
   {
     question: "What do B.Tech projects in antenna systems cover?",
-    answer: "Projects focus on microstrip patch antennas for satellites, compact antennas for CubeSats, and circularly polarized antennas for GNSS, using tools like HFSS, CST Microwave Studio, and MATLAB."
+    answer:
+      "Projects focus on microstrip patch antennas, CubeSat antennas, and GNSS antennas using HFSS, CST, and MATLAB."
   },
   {
     question: "What advanced research is pursued in M.Tech antenna projects?",
-    answer: "Research includes phased array antennas, reconfigurable antennas for 5G satellite communication, high-gain antennas for inter-satellite links, and dielectric resonator antennas using HFSS, CST, FEKO, and MATLAB."
+    answer:
+      "Research includes phased arrays, reconfigurable antennas, and dielectric resonator antennas."
   },
   {
     question: "What topics are focused on in Ph.D. antenna research?",
-    answer: "Ph.D. research includes AI-optimized antenna designs, metamaterial antennas for miniaturization, reconfigurable phased arrays, and deployable antennas for nanosatellites aiming for IEEE journal publications."
+    answer:
+      "AI-optimized antennas, metamaterial antennas, deployable nanosatellite antennas, and IEEE journal research."
   },
   {
-    question: "Which tools and platforms are commonly used for antenna design projects?",
-    answer: "Tools include HFSS, CST Microwave Studio, FEKO, MATLAB, CAD tools, and AI frameworks for simulation, optimization, and prototyping."
+    question: "Which tools are used for antenna design?",
+    answer:
+      "HFSS, CST Microwave Studio, FEKO, MATLAB, CAD tools, and AI frameworks."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Satellite Antenna Projects",
+  "CubeSat Antenna Design",
+  "Phased Array Antenna Research",
+  "AI in Antenna Systems",
+  "GNSS Antenna Projects",
+  "Metamaterial Antenna Design",
+  "Reconfigurable Antennas for Space",
+  "IEEE Antenna Research Papers",
+  "Space Communication Antenna Projects",
+  "Narpavi Research Institute Antenna Guidance"
 ];
 
 const AntennaSystemsSpaceApplicationsProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Antenna Systems for Space Applications IEEE Projects | CubeSat, Phased Arrays, Metamaterials, AI | B.Tech M.Tech Ph.D."
+        title="Antenna Systems for Space Applications – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) antenna systems for space applications projects on microstrip patch and phased array antennas, GNSS and CubeSat antennas, metamaterial and dielectric resonator designs, and AI-optimized space antennas using HFSS, CST, FEKO, and MATLAB."
-        keywords="Satellite Antenna Projects, CubeSat Antenna Design, Phased Array Antenna Research, AI in Antenna Systems, GNSS Antenna Projects, Metamaterial Antenna Design, Reconfigurable Antennas for Space, IEEE Antenna Research Papers, Space Communication Antenna Projects, Narpavi Research Institute Antenna Guidance"
-        url="/department/satellite-communication/antenna-systems-space-applications"
+        keywords={keywords}
+        url="/department/satellite-communication/antenna-systems-space-applications-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Satellite Antenna Projects</li>
-              <li>CubeSat Antenna Design</li>
-              <li>Phased Array Antenna Research</li>
-              <li>AI in Antenna Systems</li>
-              <li>GNSS Antenna Projects</li>
-              <li>Metamaterial Antenna Design</li>
-              <li>Reconfigurable Antennas for Space</li>
-              <li>IEEE Antenna Research Papers</li>
-              <li>Space Communication Antenna Projects</li>
-              <li>Narpavi Research Institute Antenna Guidance</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Antenna Systems for Space Applications – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>
+              Antenna Systems for Space Applications – Project Development Center in Chennai
+            </h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> specializes in antenna system design and research for space applications, supporting projects aligned with IEEE standards (2023–2025) across satellite communication, GNSS, and CubeSat domains.
               </p>
@@ -163,37 +185,29 @@ const AntennaSystemsSpaceApplicationsProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+           </section>
           </div>
-          <div className="ECEProjectDevelopmentCenter-right">
+
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

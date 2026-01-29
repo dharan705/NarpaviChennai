@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar";
+import Subsidebar from ".././pages/Subsidebar"
 import SEO from "../assets/SEO";
 
 const faqs = [
@@ -34,7 +34,11 @@ const ConferenceWritingGuide = () => {
         keywords="Scopus indexed journals, research paper writing, Scopus publication guide, academic publishing, PhD paper writing, journal submission process"
         faqs={faqs}
       />
-      <SubSiderbar />
+         <Subsidebar
+  extraLinks={[
+    { id: "service", label: "service", path: "/service" }
+  ]}
+/>
       <div className="conference-container">
         <h2 className="conference-title">
           Writing a Paper for Scopus-Indexed Journals

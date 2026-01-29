@@ -1,74 +1,99 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Waste Heat Recovery Systems Project Development Center in Chennai",
+  "Waste Heat Recovery IEEE Projects 2023–2025",
+  "ORC Waste Heat Recovery Projects",
+  "Industrial Energy Efficiency Projects",
+  "Automotive WHRS Projects",
+  "Thermoelectric Waste Heat Recovery",
+  "Regenerative Burners Projects",
+  "CFD Waste Heat Recovery Analysis",
+  "AI Driven WHRS Optimization",
+  "Narpavi Research Institute Energy Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Waste Heat Recovery Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Waste Heat Recovery Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on heat exchangers, ORC, regenerative burners, TEGs, and absorption refrigeration for energy efficiency."
+    question:
+      "What services does the Waste Heat Recovery Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Waste Heat Recovery Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on heat exchangers, ORC, regenerative burners, thermoelectric generators, and absorption refrigeration."
   },
   {
-    question: "What types of Waste Heat Recovery Systems projects are supported?",
-    answer: "We support B.Tech projects (heat exchanger design, IC engine exhaust recovery), M.Tech projects (CFD analysis of ORC, nanofluid optimization), and Ph.D. projects (AI-driven WHRS, hybrid TEG-PCM systems) for industrial and automotive applications."
+    question:
+      "What types of Waste Heat Recovery Systems projects are supported?",
+    answer:
+      "We support B.Tech projects on heat exchanger design and IC engine exhaust recovery, M.Tech projects on CFD-based ORC analysis and nanofluid optimization, and Ph.D. projects on AI-driven and hybrid WHRS systems."
   },
   {
-    question: "Which tools and technologies are used in Waste Heat Recovery Systems projects?",
-    answer: "Our stack includes ANSYS, MATLAB, COMSOL Multiphysics, CFD software, AI frameworks (TensorFlow, Keras), and experimental setups for WHRS analysis and optimization."
+    question:
+      "Which tools and technologies are used in Waste Heat Recovery Systems projects?",
+    answer:
+      "ANSYS, MATLAB, COMSOL Multiphysics, CFD software, AI frameworks, and experimental setups are used for WHRS analysis and optimization."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Renewable Energy, focusing on advanced WHRS technologies, AI optimization, and sustainable energy recovery."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) on Mechanical Engineering and Renewable Energy."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, AI integration, prototype development, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "We provide topic selection, CFD and experimental analysis, AI integration, prototype development, documentation, and journal publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Waste Heat Recovery Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "Waste Heat Recovery Systems Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects for B.Tech, M.Tech, and Ph.D. using ORC, TEG, CFD analysis, AI optimization, and industrial energy recovery techniques.";
+
+const pageUrl =
+  "/department/thermal-engineering/waste-heat-recovery";
 
 const MEWasteHeatRecoverySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Waste Heat Recovery Systems IEEE Projects (2023–2025)"
-        description="Waste Heat Recovery Systems IEEE project development for B.Tech, M.Tech & PhD using ANSYS, ORC, TEG, CFD analysis, AI optimization, nanofluids for industrial energy efficiency and sustainability."
-        url="/department/thermal-engineering/waste-heat-recovery"
-        type="article"
-        keywords={[
-          "Waste Heat Recovery Systems IEEE 2023–2025",
-          "ORC Waste Heat Recovery Projects",
-          "Industrial Energy Efficiency Projects",
-          "Automotive WHRS Projects",
-          "Thermoelectric Waste Heat Recovery",
-          "Waste Heat Recovery Cement Plants",
-          "AI-Driven WHRS Optimization",
-          "CFD Waste Heat Recovery Analysis",
-          "Narpavi Research Institute Energy Projects",
-          "Regenerative Burners Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Waste Heat Recovery Systems Projects</li>
-              <li>IEEE Thermal Projects 2023–2025</li>
-              <li>ORC-based Waste Heat Recovery</li>
-              <li>Industrial Energy Efficiency Projects</li>
-              <li>Waste Heat Recovery in Cement Plants</li>
-              <li>Automotive WHRS Projects</li>
-              <li>Thermoelectric Waste Heat Recovery</li>
-              <li>Narpavi Research Institute Energy Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Waste Heat Recovery Systems – Project Development Support</h1>
-
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Waste Heat Recovery Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on capturing and reusing waste heat for energy efficiency and sustainability.
@@ -211,43 +236,29 @@ const MEWasteHeatRecoverySystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/thermal-engineering">
-      Thermal Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/heat-exchanger-design">
-      Heat Exchanger Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/solar-thermal-systems">
-      Solar Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/waste-heat-recovery">
-      Waste Heat Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/hvac-system-analysis">
-      HVAC System Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
-      Energy Efficiency in Thermal Systems
-    </a>
-  </li>
-</ul>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
 
-          </div>
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/thermal-engineering">Thermal Engineering</a></li>
+              <li><a href="/department/thermal-engineering/heat-exchanger-design">Heat Exchanger Design</a></li>
+              <li><a href="/department/thermal-engineering/solar-thermal-systems">Solar Thermal Systems</a></li>
+              <li><a href="/department/thermal-engineering/waste-heat-recovery">Waste Heat Recovery</a></li>
+              <li><a href="/department/thermal-engineering/hvac-system-analysis">HVAC System Analysis</a></li>
+              <li><a href="/department/thermal-engineering/energy-efficiency-in-thermal">Energy Efficiency in Thermal Systems</a></li>
+            </ul>
+
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

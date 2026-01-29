@@ -1,64 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "IoT-enabled Smart Meters Project Development Center in Chennai",
+  "IoT Smart Meters IEEE Projects 2023–2025",
+  "Smart Energy Meter IEEE Projects",
+  "AI Smart Metering Systems",
+  "Blockchain Smart Meter Projects",
+  "Edge AI Smart Metering",
+  "Cloud Smart Meter Analytics",
+  "B.Tech Smart Meter Projects",
+  "M.Tech Smart Meter Projects",
+  "Ph.D Smart Meter Research",
+  "Smart Grid Energy Management",
+  "Narpavi Research Institute Smart Meter Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the IoT-enabled Smart Meters Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT-enabled Smart Meters Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based smart metering, AI-driven demand forecasting, and secure energy management for electricity, water, and gas utilities."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) IoT-based smart metering, AI-driven demand forecasting, and secure energy management systems."
   },
   {
     question: "What types of IoT-enabled Smart Meter projects are supported?",
-    answer: "We support B.Tech projects (basic real-time monitoring), M.Tech projects (AI-driven demand response and cloud analytics), and Ph.D. projects (blockchain and 6G-enabled smart metering ecosystems) for applications in smart grids and energy management."
+    answer:
+      "B.Tech projects focus on real-time monitoring, M.Tech projects on AI-driven demand response, and Ph.D. projects on blockchain and 6G-enabled smart metering ecosystems."
   },
   {
-    question: "Which technologies are used in IoT-enabled Smart Meter projects?",
-    answer: "Our stack includes Arduino, ESP32, Raspberry Pi, ESP8266/LoRa/Wi-Fi, cloud platforms (AWS, Azure, Google Cloud), AI frameworks (TensorFlow, Keras), and blockchain for secure data management."
+    question: "Which technologies are used in smart meter projects?",
+    answer:
+      "Arduino, ESP32, Raspberry Pi, ESP8266, LoRa, Wi-Fi, cloud platforms (AWS, Azure, Google Cloud), AI frameworks (TensorFlow, Keras), and blockchain."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Smart Grid and Industrial Informatics, focusing on IoT integration, AI-driven analytics, and secure smart metering solutions."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) in Smart Grid, Industrial Informatics, AI analytics, and secure smart metering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end support including topic selection, system design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT-enabled Smart Meters – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT-enabled Smart Meters Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering real-time monitoring, AI demand forecasting, blockchain security, and smart grid integration.";
+
+const pageUrl = "/department/iot-electrical-systems/smart-meters";
 
 const EEEIoTEnabledSmartMetersProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT Smart Meters IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT-enabled Smart Meters projects for B.Tech, M.Tech, Ph.D. Real-time monitoring, AI demand forecasting, blockchain security using Arduino ESP32 Raspberry Pi ESP8266 LoRa Wi-Fi, AWS Azure Google Cloud, TensorFlow Keras."
-  keywords="IoT Smart Meters IEEE Projects 2023–2025, B.Tech Smart Energy Meters, M.Tech AI Demand Response Cloud Analytics, Ph.D. Blockchain 6G Smart Metering, Smart Grid Energy Management, Narpavi Research Institute"
-  url="/department/iot-electrical-systems/smart-meters"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT-enabled Smart Meters</li>
-              <li>Smart Energy Meter Projects</li>
-              <li>IoT Smart Meter IEEE Projects 2023–2025</li>
-              <li>AI Smart Metering Systems</li>
-              <li>Blockchain Smart Meter Projects</li>
-              <li>Edge AI Smart Metering</li>
-              <li>Cloud Smart Meter Research</li>
-              <li>Smart Meter Projects for B.Tech M.Tech Ph.D.</li>
-              <li>Narpavi Research Institute Smart Meter Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>IoT-enabled Smart Meters – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+   <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT-enabled Smart Meters Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on IoT-based smart metering solutions. Our projects focus on real-time monitoring, dynamic pricing, and demand forecasting for electricity, water, and gas utilities.
               </p>
@@ -216,17 +247,25 @@ const EEEIoTEnabledSmartMetersProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-              <li><a href="/iot-smart-grids-project-development">IoT for Smart Grids Project Development</a></li>
-              <li><a href="/iot-renewable-energy-monitoring-project-development">IoT in Renewable Energy Monitoring Project Development</a></li>
-              <li><a href="/smart-home-automation-systems-project-development">Smart Home Automation Systems Project Development</a></li>
-              <li><a href="/data-analytics-energy-savings-project-development">Data Analytics for Energy Savings Project Development</a></li>
-              <li><a href="/ai-eee-project-development">Artificial Intelligence in EEE Project Development</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-grids">IoT for Smart Grids</a></li>
+              <li><a href="/department/iot-electrical-systems/renewable-energy">IoT in Renewable Energy</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-home-automation">Smart Home Automation</a></li>
+              <li><a href="/department/iot-electrical-systems/predictive-maintenance">IoT for Predictive Maintenance</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">IoT-Based Health Monitoring</a></li>
             </ul>
-          </div>
+
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

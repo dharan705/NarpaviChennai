@@ -1,63 +1,99 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "IoT Based Health Monitoring of Machines Project Development Center in Chennai",
+  "IoT Machine Health Monitoring IEEE Projects 2023–2025",
+  "Industrial IoT Machine Condition Monitoring",
+  "AI Based Predictive Maintenance IoT Projects",
+  "Edge Computing Machine Health Monitoring",
+  "Blockchain Enabled Machine Health Monitoring",
+  "5G 6G IoT Machine Monitoring Research",
+  "B.Tech IoT Health Monitoring Projects",
+  "M.Tech AI Predictive Maintenance Projects",
+  "Ph.D Machine Health Monitoring Research",
+  "Narpavi Research Institute IoT Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the IoT-based Health Monitoring of Machines Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT-based Health Monitoring of Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled machine condition monitoring, AI-driven predictive maintenance, and secure industrial IoT systems."
+    question:
+      "What services does the IoT-based Health Monitoring of Machines Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. scholars with IEEE-aligned (2023–2025) projects in IoT-enabled machine condition monitoring, AI-driven predictive maintenance, and secure industrial IoT systems."
   },
   {
-    question: "What types of IoT-based Health Monitoring projects are supported?",
-    answer: "We support B.Tech projects (basic condition monitoring), M.Tech projects (AI-driven predictive analytics), and Ph.D. projects (blockchain and 5G/6G-enabled machine health ecosystems) for applications in manufacturing, automotive, and energy industries."
+    question:
+      "What types of IoT-based Health Monitoring projects are supported?",
+    answer:
+      "B.Tech projects focus on basic condition monitoring, M.Tech projects on AI-based predictive analytics, and Ph.D. research on blockchain and 5G/6G-enabled machine health ecosystems."
   },
   {
-    question: "Which technologies are used in IoT-based Health Monitoring projects?",
-    answer: "Our stack includes Arduino, ESP32, Raspberry Pi, Jetson Nano, vibration/temperature/current sensors, Wi-Fi/LoRa, cloud platforms (AWS, Azure, Google Cloud), AI frameworks (TensorFlow, Keras), and blockchain for secure data logging."
+    question:
+      "Which technologies are used in IoT-based Health Monitoring projects?",
+    answer:
+      "Arduino, ESP32, Raspberry Pi, Jetson Nano, industrial sensors, Wi-Fi/LoRa, cloud platforms (AWS, Azure, Google Cloud), AI frameworks, and blockchain technologies."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Industry Applications, focusing on IoT integration, AI-driven fault detection, and secure machine health monitoring."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Industrial Informatics and Industry Applications, focusing on IoT integration, AI-based fault detection, and secure monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question:
+      "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, design, simulation, hardware prototyping, documentation, IEEE/Scopus/SCI publications, and patent guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT-Based Health Monitoring of Machines – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT-Based Health Monitoring of Machines Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering predictive maintenance, AI-driven analytics, edge computing, and secure industrial IoT systems.";
+
+const pageUrl = "/department/iot-electrical-systems/health-monitoring";
 
 const EEEIoTBasedHealthMonitoringMachinesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT Machine Health Monitoring IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT-based Health Monitoring of Machines projects for B.Tech, M.Tech, Ph.D. Predictive maintenance, condition monitoring using Arduino ESP32 Raspberry Pi Jetson Nano sensors, AWS Azure Google Cloud, TensorFlow Keras blockchain."
-  keywords="IoT Machine Health Monitoring IEEE Projects 2023–2025, B.Tech IoT Condition Monitoring, M.Tech AI Predictive Maintenance, Ph.D. Blockchain 5G 6G Machine Health, Industrial IoT Edge Computing, Narpavi Research Institute"
-  url="/department/iot-electrical-systems/health-monitoring"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT-based Health Monitoring of Machines</li>
-              <li>Predictive Maintenance Projects</li>
-              <li>IoT Machine Condition Monitoring IEEE 2023–2025</li>
-              <li>AI in Machine Health Monitoring</li>
-              <li>Industrial IoT Projects for B.Tech M.Tech Ph.D.</li>
-              <li>Edge Computing Machine Monitoring</li>
-              <li>Blockchain in Industrial IoT</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>IoT-based Health Monitoring of Machines – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+   <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT-based Health Monitoring of Machines Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on IoT-enabled machine health monitoring. Our projects focus on real-time condition monitoring, predictive maintenance, and AI-driven analytics for industrial machinery.
               </p>
@@ -214,48 +250,27 @@ const EEEIoTBasedHealthMonitoringMachinesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/iot-electrical-systems">
-      IoT in Electrical Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-grids">
-      IoT for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/renewable-energy">
-      IoT in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/predictive-maintenance">
-      IoT for Predictive Maintenance
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-home-automation">
-      Smart Home Automation with IoT
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-meters">
-      IoT-Enabled Smart Meters
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/health-monitoring">
-      IoT-Based Health Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/iot-electrical-systems">IoT in Electrical Systems</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-grids">IoT for Smart Grids</a></li>
+              <li><a href="/department/iot-electrical-systems/renewable-energy">IoT in Renewable Energy</a></li>
+              <li><a href="/department/iot-electrical-systems/predictive-maintenance">IoT Predictive Maintenance</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-home-automation">Smart Home Automation</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-meters">IoT Smart Meters</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">Health Monitoring</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

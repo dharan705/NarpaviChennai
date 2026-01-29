@@ -52,7 +52,7 @@ const faqs = [
 
 const universityData = {
   fullName:
-    "PhD Admission in Chennai Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology",
+    "PhD Admission Assistance in Chennai Vel Tech | Guidances",
   shortName: "Vel Tech",
   phdEntranceExam: "Mandatory (NET / GATE / SET exemptions applicable)",
   qualificationRequired:
@@ -125,6 +125,15 @@ const Subheading = () => {
                 <b>Why Choose Vel Tech:</b> Strong industry tie-ups, advanced
                 laboratories, and experienced research guides.
               </li>
+            </ul>
+            <br />
+             <h3>Key Highlights</h3>
+            <ul>
+              <li>Structured PhD admission process</li>
+              <li>NET / GATE exemption supported</li>
+              <li>Industry-driven research environment</li>
+              <li>Strong innovation and startup culture</li>
+              <li>Excellent support for full-time & part-time scholars</li>
             </ul>
           </div>
 
@@ -210,14 +219,39 @@ const Subheading = () => {
 
           {/* Right Sidebar */}
           <div className="side-box right-box">
-            <h3>Key Highlights</h3>
-            <ul>
-              <li>Structured PhD admission process</li>
-              <li>NET / GATE exemption supported</li>
-              <li>Industry-driven research environment</li>
-              <li>Strong innovation and startup culture</li>
-              <li>Excellent support for full-time & part-time scholars</li>
-            </ul>
+          <ul class="university-links">
+  <li><a href="/phd-admission-assistance-in-anna-university">PhD Admission Assistance in Anna University</a></li>
+  <li><a href="/phd-admission-assistance-in-anna-malai-university">PhD Admission Assistance in Annamalai University</a></li>
+  <li><a href="/phd-admission-assistance-in-bharathiar-university">PhD Admission Assistance in Bharathiar University</a></li>
+  <li><a href="/phd-admission-assistance-in-vit">PhD Admission Assistance in VIT University</a></li>
+  <li><a href="/phd-admission-assistance-in-mgr-institute">PhD Admission Assistance in MGR Institute</a></li>
+  <li><a href="/phd-admission-assistance-in-sathyabama-university">PhD Admission Assistance in Sathyabama University</a></li>
+  <li><a href="/phd-admission-assistance-in-saveetha-university">PhD Admission Assistance in Saveetha University</a></li>
+  <li><a href="/phd-admission-assistance-in-srm">PhD Admission Assistance in SRM University</a></li>
+  <li><a href="/phd-admission-assistance-in-vels-vistas">PhD Admission Assistance in VELS University (VISTAS)</a></li>
+  <li><a href="/phd-admission-assistance-in-biher">PhD Admission Assistance in BIHER</a></li>
+  <li><a href="/phd-admission-assistance-in-amrita">PhD Admission Assistance in Amrita University</a></li>
+  <li><a href="/phd-admission-assistance-in-hits">PhD Admission Assistance in HITS</a></li>
+  <li><a href="/phd-admission-assistance-in-alagappa-university">PhD Admission Assistance in Alagappa University</a></li>
+  <li><a href="/phd-admission-assistance-in-manu">PhD Admission Assistance in Manonmaniam Sundaranar University</a></li>
+  <li><a href="/phd-admission-assistance-in-periyar-university">PhD Admission Assistance in Periyar University</a></li>
+  <li><a href="/phd-admission-assistance-in-madurai-kamaraj-university">PhD Admission Assistance in Madurai Kamaraj University</a></li>
+  <li><a href="/phd-admission-assistance-in-bharathidasan-university">PhD Admission Assistance in Bharathidasan University</a></li>
+  <li><a href="/phd-admission-assistance-in-sastra">PhD Admission Assistance in SASTRA University</a></li>
+  <li><a href="/phd-admission-assistance-in-sri-ramakrishna-engineering">PhD Admission Assistance in Sri Ramakrishna Engineering College</a></li>
+  <li><a href="/phd-admission-assistance-in-sns">PhD Admission Assistance in SNS College</a></li>
+  <li><a href="/phd-admission-assistance-in-cit">PhD Admission Assistance in CIT</a></li>
+  <li><a href="/phd-admission-assistance-in-psg">PhD Admission Assistance in PSG College of Technology</a></li>
+  <li><a href="/phd-admission-assistance-in-vinayaka-mission">PhD Admission Assistance in Vinayaka Missions University</a></li>
+  <li><a href="/phd-admission-assistance-in-prist-university">PhD Admission Assistance in PRIST University</a></li>
+  <li><a href="/phd-admission-assistance-in-periyar-maniammai-university">PhD Admission Assistance in Periyar Maniammai University</a></li>
+  <li><a href="/phd-admission-assistance-in-st-peters-institute">PhD Admission Assistance in St Peter’s Institute</a></li>
+  <li><a href="/phd-admission-assistance-in-scsstm">PhD Admission Assistance in Sri Chandrasekharendra Saraswathi University</a></li>
+  <li><a href="/phd-admission-assistance-in-karpagam-academy">PhD Admission Assistance in Karpagam Academy</a></li>
+  <li><a href="/phd-admission-assistance-in-karunya-university">PhD Admission Assistance in Karunya University</a></li>
+  <li><a href="/phd-admission-assistance-in-vel-tech">PhD Admission Assistance in Vel Tech</a></li>
+  <li><a href="/phd-admission-assistance-in-kalasalingam-university">PhD Admission Assistance in Kalasalingam Academy</a></li>
+</ul>
           </div>
         </div>
       </div>

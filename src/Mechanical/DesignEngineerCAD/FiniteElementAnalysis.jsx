@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Finite Element Analysis Project Development Center in Chennai",
+  "FEA IEEE Projects 2023–2025",
+  "Structural Component FEA Simulation",
+  "Multi Physics FEA Projects",
+  "AI Assisted FEA Projects",
+  "Topology Optimization Using FEA",
+  "Automotive Crash Analysis FEA",
+  "Aerospace Structural FEA",
+  "Digital Twin FEA Applications",
+  "Narpavi Research Institute FEA Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Finite Element Analysis (FEA) for Structural Components Project Development Center offer?",
-    answer: "Narpavi Research Institute’s FEA for Structural Components Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on multi-physics FEA, AI-driven simulations, topology optimization, and digital twin frameworks for industries like automotive, aerospace, and biomedical."
+    question:
+      "What services does the Finite Element Analysis (FEA) for Structural Components Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s FEA Project Development Center supports B.Tech, M.Tech, and Ph.D. students with IEEE-aligned (2023–2025) projects in multi-physics FEA, AI-driven simulations, topology optimization, and digital twin frameworks."
   },
   {
     question: "What types of FEA projects are supported?",
-    answer: "We support B.Tech projects (basic structural analysis, meshing), M.Tech projects (nonlinear FEA, topology optimization), and Ph.D. projects (AI-driven simulations, digital twins) for applications in automotive crash analysis, aerospace structures, and biomedical implants."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering structural analysis, nonlinear FEA, topology optimization, crash analysis, and AI-driven simulations."
   },
   {
-    question: "Which tools and technologies are used in FEA projects?",
-    answer: "Our stack includes ANSYS, Abaqus, SolidWorks Simulation, MATLAB, Python, AI frameworks (TensorFlow, Keras), and IoT platforms for simulations, prototyping, and real-time monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "ANSYS, Abaqus, SolidWorks Simulation, MATLAB, Python, TensorFlow, Keras, and digital twin platforms."
   },
   {
-    question: "How are FEA projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Engineering, focusing on multi-physics FEA, AI-driven simulations, and digital twin-enabled structural analysis."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Industrial Informatics and Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, FEA modeling, AI integration, topology optimization, validation, documentation, and support for IEEE/Scopus/Elsevier/ASTM journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including FEA modeling, AI integration, validation, documentation, and IEEE/Scopus/Elsevier publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Finite Element Analysis (FEA) for Structural Components – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Finite Element Analysis (FEA) Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering ANSYS, Abaqus, multi-physics simulation, AI-driven FEA, topology optimization, and digital twins.";
+
+const pageUrl =
+  "/department/design-engineering-cad/finite-element-analysis";
 
 const MEFiniteElementAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Finite Element Analysis FEA IEEE Projects (2023–2025)"
-        description="Finite Element Analysis FEA IEEE project development for B.Tech, M.Tech & PhD using ANSYS, Abaqus, multi-physics simulation, AI-driven FEA, topology optimization, digital twins for automotive, aerospace, biomedical."
-        url="/department/design-engineering-cad/finite-element-analysis"
-        type="article"
-        keywords={[
-          "Finite Element Analysis 2023–2025",
-          "FEA IEEE Project Topics",
-          "Structural FEA Simulation",
-          "Multi Physics FEA Projects",
-          "AI Assisted FEA Projects",
-          "Topology Optimization FEA",
-          "Automotive Crash FEA",
-          "Aerospace Structural FEA",
-          "Digital Twin FEA Applications",
-          "Narpavi Research Institute FEA"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Finite Element Analysis Projects 2023–2025</li>
-              <li>FEA IEEE Project Topics</li>
-              <li>Structural Component Simulation Projects</li>
-              <li>Multi-Physics FEA Projects</li>
-              <li>AI-Assisted FEA Student Projects</li>
-              <li>Topology Optimization with FEA</li>
-              <li>Automotive Crash FEA Analysis</li>
-              <li>Aerospace Structural FEA Projects</li>
-              <li>Digital Twin FEA Applications</li>
-              <li>Narpavi Research Institute FEA Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Finite Element Analysis (FEA) for Structural Components – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Finite Element Analysis (FEA) for Structural Components Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on multi-physics FEA, AI-driven simulations, topology optimization, and digital twin frameworks.
               </p>
@@ -241,48 +261,30 @@ const MEFiniteElementAnalysisProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
            
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/design-engineering-cad">
-      Design Engineering & CAD
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/finite-element-analysis">
-      Finite Element Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/cad-modeling-simulation">
-      CAD Modeling & Simulation
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/mechanism-design">
-      Mechanism Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/topology-optimization">
-      Topology Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/product-lifecycle-management">
-      Product Lifecycle Management
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/design-engineering-cad">Design Engineering & CAD</a></li>
+              <li><a href="/department/design-engineering-cad/finite-element-analysis">Finite Element Analysis</a></li>
+              <li><a href="/department/design-engineering-cad/cad-modeling-simulation">CAD Modeling & Simulation</a></li>
+              <li><a href="/department/design-engineering-cad/mechanism-design">Mechanism Design</a></li>
+              <li><a href="/department/design-engineering-cad/topology-optimization">Topology Optimization</a></li>
+              <li><a href="/department/design-engineering-cad/product-lifecycle-management">Product Lifecycle Management</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

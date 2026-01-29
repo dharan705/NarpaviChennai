@@ -1,66 +1,98 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Advanced Drives & Controllers Project Development Center in Chennai",
+  "Advanced Drives and Controllers IEEE Projects 2023–2025",
+  "Intelligent Drive Systems Projects",
+  "B.Tech Drive Control Projects",
+  "M.Tech Adaptive Drive Control Research",
+  "Ph.D AI-Based Motor Drive Optimization",
+  "Sensorless Drive IEEE Projects",
+  "Vector Control and Direct Torque Control",
+  "IoT-Based Drive Monitoring Systems",
+  "Narpavi Research Institute Drive Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Advanced Drives & Controllers Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Advanced Drives & Controllers Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced motor drives, intelligent controllers, and energy-efficient control strategies for industrial, automotive, and renewable energy applications."
+    question:
+      "What services does the Advanced Drives & Controllers Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Advanced Drives & Controllers Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on advanced motor drives, intelligent controllers, and energy-efficient control strategies for industrial, automotive, and renewable energy applications."
   },
   {
-    question: "What types of Advanced Drives & Controllers projects are supported?",
-    answer: "We support B.Tech projects (vector control, PID, IoT-based monitoring), M.Tech projects (AI-based adaptive control, sensorless drives), and Ph.D. projects (multi-objective optimization, predictive control) for applications in EVs, robotics, and smart factories."
+    question:
+      "What types of Advanced Drives & Controllers projects are supported?",
+    answer:
+      "We support B.Tech projects (vector control, PID, IoT-based monitoring), M.Tech projects (AI-based adaptive control, sensorless drives), and Ph.D. projects (multi-objective optimization, predictive control) for EVs, robotics, and smart factories."
   },
   {
-    question: "Which technologies are used in Advanced Drives & Controllers project development?",
-    answer: "Our stack includes MATLAB/Simulink, LabVIEW, ANSYS Maxwell, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for drive and control system development."
+    question:
+      "Which technologies are used in Advanced Drives & Controllers project development?",
+    answer:
+      "MATLAB/Simulink, LabVIEW, ANSYS Maxwell, TensorFlow, PyTorch, IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) systems."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like vector control, sensorless control, and AI-driven optimization, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering vector control, sensorless control, intelligent drives, and AI-based optimization."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/LabVIEW, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end support including topic selection, algorithm design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Advanced Drives & Controllers – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Advanced Drives & Controllers Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering intelligent motor drives, sensorless control, vector control, AI-based adaptive controllers, FPGA/DSP implementation, and IoT-based monitoring.";
+
+const pageUrl =
+  "/department/electrical-machines/advanced-drives-controllers";
 
 const EEEAdvancedDrivesControllersProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Advanced Drives & Controllers IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Advanced Drives & Controllers projects for B.Tech, M.Tech, and Ph.D. students. Develop intelligent drive systems, AI-based controllers, and sensorless control using MATLAB/Simulink, LabVIEW, and FPGA for EVs, robotics, and renewable energy applications."
-  keywords="Advanced Drives and Controllers IEEE Projects 2023–2025, Intelligent Drive Systems, B.Tech Drive Control Projects, M.Tech Adaptive Control Research, Ph.D. AI-Based Motor Optimization, Sensorless Drive IEEE Projects, Vector Control, Direct Torque Control, IoT-Based Drive Monitoring, Energy-Efficient Drive Systems, Narpavi Research Institute"
-  url="/department/electrical-machines/advanced-drives-controllers"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Advanced Drives & Controllers Projects</li>
-              <li>IEEE Drive Systems Projects 2023–2025</li>
-              <li>B.Tech Intelligent Drive Projects</li>
-              <li>M.Tech AI-Based Controller Research</li>
-              <li>Ph.D Advanced Motor Control Optimization</li>
-              <li>Sensorless Drive Systems Projects</li>
-              <li>Vector & Field-Oriented Control</li>
-              <li>IoT-Based Drive Monitoring</li>
-              <li>Energy-Efficient Drive Solutions</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Advanced Drives & Controllers – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Advanced Drives & Controllers Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance electrical drive systems and intelligent control strategies aligned with IEEE Transactions (2023–2025). Our projects focus on vector control, sensorless control, direct torque control, and AI/ML-assisted adaptive control for industrial, automotive, and renewable energy applications.
               </p>
@@ -208,48 +240,27 @@ const EEEAdvancedDrivesControllersProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/electrical-machines">Electrical Machines – Project Development Center</a></li>
+              <li><a href="/department/electrical-machines/advanced-drives-controllers">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

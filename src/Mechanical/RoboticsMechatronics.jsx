@@ -1,94 +1,86 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../assets/SEO"
+import Subsidebar from ".././pages/Subsidebar";
+import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Robotics & Mechatronics IEEE Projects 2023–2025",
+  "Industrial Robotics Projects",
+  "IoT-Based Mechatronics",
+  "Autonomous Vehicle Student Projects",
+  "Robotic Manipulator IEEE Projects",
+  "Embedded Control System Research",
+  "Smart Manufacturing Robotics",
+  "Swarm Robotics PhD Projects",
+  "AI Driven Robotics Systems",
+  "Narpavi Research Institute Robotics Projects",
+];
+
 const faqs = [
   {
-    question: "What services does the Robotics & Mechatronics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Robotics & Mechatronics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on industrial robotics, IoT-enabled mechatronics, autonomous vehicles, and AI-driven robotic systems for industries like manufacturing, healthcare, and aerospace."
+    question:
+      "What services does the Robotics & Mechatronics Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Robotics & Mechatronics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on industrial robotics, IoT-enabled mechatronics, autonomous vehicles, and AI-driven robotic systems.",
   },
   {
     question: "What types of Robotics & Mechatronics projects are supported?",
-    answer: "We support B.Tech projects (basic robotics, IoT prototypes), M.Tech projects (AI-driven robotics, autonomous navigation), and Ph.D. projects (swarm robotics, bio-inspired systems) for applications in smart manufacturing, healthcare, and defense."
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects for applications in smart manufacturing, healthcare, and defense.",
   },
   {
-    question: "Which tools and technologies are used in Robotics & Mechatronics projects?",
-    answer: "Our stack includes MATLAB, ROS, Gazebo, LabVIEW, Python, AI frameworks (TensorFlow, Keras), Arduino, Raspberry Pi, STM32, and IoT platforms for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Robotics & Mechatronics projects?",
+    answer:
+      "Our stack includes MATLAB, ROS, Gazebo, LabVIEW, Python, Arduino, Raspberry Pi, STM32, AI frameworks, and IoT platforms.",
   },
   {
-    question: "How are Robotics & Mechatronics projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics and Automation, focusing on AI-driven robotics, IoT-enabled mechatronics, and autonomous systems."
+    question:
+      "How are Robotics & Mechatronics projects aligned with IEEE standards?",
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Robotics and Automation.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
-  }
+    answer:
+      "We provide end-to-end guidance including simulation, AI/IoT integration, prototyping, documentation, and journal publication support.",
+  },
 ];
 
 const MERoboticsMechatronicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Robotics & Mechatronics IEEE Projects (2023–2025)"
-        description="Robotics Mechatronics IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI-driven robotics, IoT mechatronics, autonomous vehicles, swarm robotics for manufacturing, healthcare, aerospace."
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Robotics & Mechatronics – Project Development Center in Chennai"
+        description="Robotics & Mechatronics project development for B.Tech, M.Tech, and Ph.D. students using ROS, MATLAB, AI-driven robotics, IoT-enabled mechatronics, autonomous vehicles, and swarm robotics."
+        keywords={keywords}
         url="/department/robotics-mechatronics"
-        type="article"
-        keywords={[
-          "Robotics Mechatronics IEEE 2023–2025",
-          "Industrial Robotics Projects",
-          "IoT Based Mechatronics",
-          "Autonomous Vehicle Student Projects",
-          "Robotic Manipulator Control",
-          "Embedded Control Systems Research",
-          "Smart Manufacturing Robotics",
-          "Swarm Robotics PhD Projects",
-          "AI Driven Robotics Systems",
-          "Narpavi Research Institute Robotics"
-        ]}
-        faqs={faqs}
-      /> <SEO
-        title="Robotics & Mechatronics IEEE Projects (2023–2025)"
-        description="Robotics Mechatronics IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI-driven robotics, IoT mechatronics, autonomous vehicles, swarm robotics for manufacturing, healthcare, aerospace."
-        url="/department/robotics-mechatronics"
-        type="article"
-        keywords={[
-          "Robotics Mechatronics IEEE 2023–2025",
-          "Industrial Robotics Projects",
-          "IoT Based Mechatronics",
-          "Autonomous Vehicle Student Projects",
-          "Robotic Manipulator Control",
-          "Embedded Control Systems Research",
-          "Smart Manufacturing Robotics",
-          "Swarm Robotics PhD Projects",
-          "AI Driven Robotics Systems",
-          "Narpavi Research Institute Robotics"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Robotics & Mechatronics Projects</li>
-              <li>Industrial Robotics IEEE Projects 2023–2025</li>
-              <li>IoT-Based Mechatronics</li>
-              <li>Autonomous Vehicle Projects for Students</li>
-              <li>Robotic Manipulator IEEE Projects</li>
-              <li>Embedded Control System Research</li>
-              <li>Smart Manufacturing Robotics</li>
-              <li>IEEE Robotics and Mechatronics Projects</li>
-              <li>Ph.D. Robotics Project Guidance</li>
-              <li>Narpavi Research Institute Robotics Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Robotics & Mechatronics – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Robotics & Mechatronics – Project Development Center in Chennai
+            </h1>
+                <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Robotics & Mechatronics Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on industrial robotics, IoT-enabled mechatronics, autonomous vehicles, and AI-driven robotic systems.
               </p>
@@ -260,64 +252,28 @@ const MERoboticsMechatronicsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/robotics-mechatronics">
-      Robotics & Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
-      Industrial Robotics Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
-      IoT-Based Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
-      Autonomous Vehicles & Drones
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
-      Robotic Manipulator Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/embedded-control-systems">
-      Embedded Control Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/robotics-mechatronics">Robotics & Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/industrial-robotics-systems">Industrial Robotics Systems</a></li>
+              <li><a href="/department/robotics-mechatronics/iot-based-mechatronics">IoT-Based Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/autonomous-vehicles-drones">Autonomous Vehicles & Drones</a></li>
+              <li><a href="/department/robotics-mechatronics/robotic-manipulator-control">Robotic Manipulator Control</a></li>
+              <li><a href="/department/robotics-mechatronics/embedded-control-systems">Embedded Control Systems</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

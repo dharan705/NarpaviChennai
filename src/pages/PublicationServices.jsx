@@ -7,7 +7,7 @@ import {
   FaEdit,
   FaBook,
 } from "react-icons/fa";
-
+import SEO from "../assets/SEO";
 const services = [
   {
     icon: <FaMicroscope />,
@@ -62,10 +62,40 @@ const services = [
 const PublicationServices = () => {
   return (
     <section className="publication-section">
+      <SEO
+  title="Publication Services in Chennai | Journal, Conference & Book Support"
+  description="End-to-end publication support for PhD scholars and researchers: IEEE, Scopus, SCI, UGC Care papers, review articles, and ISBN book publishing from drafting to submission."
+  url="/publication-services"
+  keywords={[
+    "Publication Services Chennai",
+    "Scopus Journal Publication",
+    "SCI Journal Writing Support",
+    "UGC Care Journal Help",
+    "Conference Paper Publication",
+    "Review Article Writing",
+    "Book ISBN Publication",
+    "Research Paper Writing Services"
+  ]}
+  faqs={[
+    {
+      question: "Do you provide Scopus and SCI publication support?",
+      answer: "Yes, we assist with Scopus, SCI, UGC Care, and IEEE-indexed journal submissions including writing, editing, formatting, and rebuttal response."
+    },
+    {
+      question: "Are publication services only for PhD scholars?",
+      answer: "No. We support PhD scholars, master’s students, faculty, and researchers from all institutions globally."
+    },
+    {
+      question: "Do you help identify journals for my research area?",
+      answer: "Absolutely. We analyze your topic and recommend the best journals based on indexing, scope, publication speed, and acceptance chances."
+    }
+  ]}
+/>
+
       <div className="publication-container">
-        <h2 className="publication-heading">
-          📚 Research Journals, Review Articles, Conference Papers & Book Publication Services
-        </h2>
+        <h1 className="publication-heading">
+          📚 Research Journals, Review Articles, Conference Papers & Book Publication Services in Chennai
+        </h1>
         <p className="publication-subtext">
           <strong>Excellent and Confidential Support – From Writing to Publication</strong>
           <br />
@@ -83,7 +113,7 @@ const PublicationServices = () => {
               <a href={service.link} className="publication-cta">
                 🔗 {service.linkText}
               </a>
-            </div>
+            </div>    
           ))}
         </div>
       </div>

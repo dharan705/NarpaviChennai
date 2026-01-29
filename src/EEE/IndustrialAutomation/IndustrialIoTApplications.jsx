@@ -1,69 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Industrial IoT IIoT Applications Project Development Center in Chennai",
+  "Industrial IoT IEEE Projects 2023–2025",
+  "IIoT Applications in Industrial Automation",
+  "Smart Factory IIoT Projects",
+  "Edge Computing IIoT Projects",
+  "Cloud Based IIoT Systems",
+  "AI Driven IIoT Predictive Maintenance",
+  "Blockchain Secured IIoT Systems",
+  "Industry 4.0 IIoT Projects",
+  "B.Tech IIoT Projects",
+  "M.Tech IIoT Projects",
+  "Ph.D IIoT Research Projects",
+  "Narpavi Research Institute IIoT Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Industrial IoT (IIoT) Applications Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in IIoT system design, sensor integration, cloud/edge computing, predictive maintenance, and secure Industry 4.0 automation. Services include hardware prototyping, simulations, Industry 4.0 protocol integration, and IEEE/SCI journal publication."
+    question:
+      "What services does the Industrial IoT (IIoT) Applications Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in IIoT system design, sensor integration, cloud and edge computing, predictive maintenance, and secure Industry 4.0 automation including hardware prototyping, simulations, and IEEE/SCI publication guidance."
   },
   {
     question: "What types of IIoT projects are supported?",
-    answer: "B.Tech: basic IIoT dashboards, sensor-to-cloud monitoring, IoT-enabled energy meters. M.Tech: AI/ML-driven predictive maintenance, edge computing, smart factory automation. Ph.D: blockchain-secure IIoT architectures, autonomous IIoT operation frameworks, industrial-scale research with IEEE/SCI publication."
+    answer:
+      "B.Tech projects include IIoT dashboards and sensor-to-cloud systems. M.Tech projects focus on AI-driven predictive maintenance and edge computing. Ph.D. projects cover blockchain-secured IIoT, autonomous IIoT frameworks, and industrial-scale research."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "IoT modules (ESP32, Raspberry Pi, ARM Cortex), MQTT/CoAP/OPC-UA protocols, PLC-SCADA integration, cloud platforms (AWS IoT, Azure IoT Hub, ThingSpeak), Edge platforms (NVIDIA Jetson, Intel Edge), MATLAB/Simulink, and AI libraries like TensorFlow and PyTorch."
+    answer:
+      "ESP32, Raspberry Pi, ARM Cortex, MQTT, OPC-UA, PLC-SCADA integration, AWS IoT, Azure IoT Hub, edge platforms, MATLAB/Simulink, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Our projects follow IEEE Transactions (2023–2025) on IIoT security, edge/cloud computing, digital twins, AI-driven IIoT, and Industry 4.0 frameworks for automation, predictive analytics, and process optimization."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on IIoT security, edge and cloud computing, digital twins, AI-driven IIoT, and Industry 4.0 frameworks."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer complete IEEE, Scopus, and SCI publishing support, research topic selection, hardware/software design, IIoT protocol integration, and global mentoring to ensure impactful academic and industrial outcomes."
+    answer:
+      "Complete IEEE, Scopus, and SCI publication support, topic selection, IIoT protocol integration, hardware/software mentoring, and global research guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Industrial IoT (IIoT) Applications – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Industrial IoT (IIoT) Applications Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering sensor integration, cloud and edge computing, AI predictive maintenance, Industry 4.0 automation, and secure IIoT systems.";
+
+const pageUrl = "/department/industrial-automation/iiot-applications";
 
 const EEEIndustrialIiotApplicationsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Industrial IoT IIoT Applications IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Industrial IoT IIoT projects for B.Tech, M.Tech, Ph.D. Sensor integration, cloud/edge computing, AI predictive maintenance using ESP32, Raspberry Pi, MQTT OPC-UA, AWS IoT, TensorFlow for Industry 4.0, smart factories."
-  keywords="Industrial IoT IIoT IEEE Projects 2023–2025, B.Tech IIoT Dashboards, M.Tech AI Predictive Maintenance IIoT, Ph.D. Blockchain IIoT, Edge Computing IIoT, Smart Factory IIoT, Industry 4.0 IIoT Projects, Narpavi Research Institute"
-  url="/department/industrial-automation/iiot-applications"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
-      
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Column */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial IoT Applications Project Development Center</li>
-              <li>IIoT IEEE Projects</li>
-              <li>Smart Factory IIoT Projects</li>
-              <li>IoT in Industrial Automation</li>
-              <li>Cloud IIoT Projects</li>
-              <li>Edge Computing IIoT Projects</li>
-              <li>AI in IIoT Research</li>
-              <li>Blockchain for IIoT</li>
-              <li>IIoT B.Tech Projects</li>
-              <li>IIoT M.Tech Projects</li>
-              <li>Ph.D. IIoT Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Column */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Industrial IoT (IIoT) Applications – Project Development Support</h1>
-
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> leads the Industrial IoT (IIoT) Applications Project Development Center,
@@ -192,49 +220,27 @@ const EEEIndustrialIiotApplicationsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">DCS</a></li>
+              <li><a href="/department/industrial-automation/hmi">HMI</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">RPA</a></li>
+            </ul>
 
-          </div>
-          
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

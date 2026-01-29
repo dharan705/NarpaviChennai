@@ -1,67 +1,84 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What services does the Industrial IoT (IIoT) for Industry 4.0 Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Industrial IoT (IIoT) for Industry 4.0 Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart manufacturing, predictive maintenance, industrial automation, and real-time analytics using OPC UA, MQTT, edge computing, AI/ML, and cloud platforms."
+    answer:
+      "Narpavi Research Institute’s Industrial IoT (IIoT) for Industry 4.0 Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned projects (2023–2025)."
   },
   {
     question: "What types of IIoT for Industry 4.0 projects are supported?",
-    answer: "We support B.Tech projects (sensor-actuator interfacing, basic analytics), M.Tech projects (real-time analytics, predictive maintenance), and Ph.D. projects (AI-driven smart factories, secure cloud-edge systems) for applications in manufacturing, robotics, and energy optimization."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering smart manufacturing, predictive maintenance, and automation."
   },
   {
     question: "Which technologies are used in IIoT for Industry 4.0 project development?",
-    answer: "Our stack includes Arduino, ESP32, OPC UA, MQTT, AWS IoT, Azure IoT, Python (TensorFlow, PyTorch), PLC/SCADA, and edge/fog computing platforms for industrial automation, analytics, and secure communication."
+    answer:
+      "Technologies include Arduino, ESP32, OPC UA, MQTT, AWS IoT, Azure IoT, PLC/SCADA, and AI/ML."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like AI-driven predictive maintenance, secure IIoT communication, and edge computing, ensuring academic and industry relevance."
+    answer:
+      "Projects follow IEEE Transactions and Conferences (2023–2025)."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware-software integration, edge-cloud deployment, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including IEEE/Scopus/SCI publication support."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Industrial IoT Projects",
+  "IIoT Industry 4.0 2023–2025",
+  "Smart Factory IoT",
+  "Predictive Maintenance IIoT",
+  "Edge Computing for Industry",
+  "Cloud-Integrated IIoT",
+  "AI Industrial Automation",
+  "IEEE IIoT Projects",
+  "Narpavi Research Institute IIoT",
+  "Multi-Sensor Industrial IoT",
+  "Real-Time IoT Analytics",
+  "Fog Computing for Industry 4.0"
 ];
 
 const ECEIndustrialIoTIndustry4ProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Industrial IoT (IIoT) for Industry 4.0 IEEE Projects | Smart Factory, Predictive Maintenance, Edge/Cloud | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) Industrial IoT (IIoT) for Industry 4.0 projects on smart manufacturing, predictive maintenance, PLC/SCADA automation, edge/fog analytics, and secure cloud-connected factories using OPC UA, MQTT, AWS/Azure IoT, and AI/ML frameworks."
-        keywords="Industrial IoT Projects, IIoT Industry 4.0 2023–2025, Smart Factory IoT, Predictive Maintenance IIoT, Edge Computing for Industry, Cloud-Integrated IIoT, AI Industrial Automation, IEEE IIoT Projects, Narpavi Research Institute IIoT, Multi-Sensor Industrial IoT, Real-Time IoT Analytics, Fog Computing for Industry 4.0"
-        url="/department/iot-projects/industrial-iot-industry-4"
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Industrial IoT (IIoT) for Industry 4.0 – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) Industrial IoT (IIoT) for Industry 4.0 projects on smart manufacturing, predictive maintenance, PLC/SCADA automation, edge/fog analytics, and secure cloud-connected factories."
+        keywords={keywords}
+        url="/department/iot-projects/industrial-iot-industry-4-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial IoT Projects</li>
-              <li>IIoT Industry 4.0 2023–2025</li>
-              <li>Smart Factory IoT</li>
-              <li>Predictive Maintenance IIoT</li>
-              <li>Edge Computing for Industry</li>
-              <li>Cloud-Integrated IIoT</li>
-              <li>AI Industrial Automation</li>
-              <li>IEEE IIoT Projects</li>
-              <li>Narpavi Research Institute IIoT</li>
-              <li>Multi-Sensor Industrial IoT</li>
-              <li>Real-Time IoT Analytics</li>
-              <li>Fog Computing for Industry 4.0</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Industrial IoT (IIoT) for Industry 4.0 – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Industrial IoT (IIoT) for Industry 4.0 – Project Development Center in Chennai</h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Industrial IoT (IIoT) for Industry 4.0 – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop innovative, IEEE-aligned (2023–2025) solutions in smart manufacturing, predictive maintenance, industrial automation, and real-time analytics using OPC UA, MQTT, edge computing, and AI/ML.
               </p>
@@ -224,39 +241,29 @@ const ECEIndustrialIoTIndustry4ProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-                     <ul>
-  <li><a href="/department/iot-projects">IoT </a></li>
-  <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
-  <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
-  <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
-  <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
-  <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
-  <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/iot-projects">IoT</a></li>
+              <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
+              <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
+              <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
+              <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
+              <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
+              <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

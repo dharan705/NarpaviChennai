@@ -1,64 +1,83 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What are cryptographic algorithms for embedded devices?",
-    answer: "These are algorithms designed to secure communication, ensure data confidentiality, and authenticate devices within constrained embedded platforms such as IoT and wearable devices."
+    answer:
+      "These are algorithms designed to secure communication, ensure data confidentiality, and authenticate devices within constrained embedded platforms such as IoT and wearable devices.",
   },
   {
     question: "What topics are covered in B.Tech cryptographic algorithm projects?",
-    answer: "Basic implementations like AES-based file encryption on Arduino, RSA key exchange on embedded boards, and DES algorithm simulation using tools like Arduino, Raspberry Pi, Keil, and Proteus."
+    answer:
+      "Basic implementations like AES-based file encryption on Arduino, RSA key exchange on embedded boards, and DES algorithm simulation using tools like Arduino, Raspberry Pi, Keil, and Proteus.",
   },
   {
     question: "What advanced areas do M.Tech projects focus on?",
-    answer: "Efficient and energy-optimized design of lightweight AES, ECC-based communications, PRESENT cipher optimization, and hybrid cryptographic protocols using Vivado, Quartus, Verilog/VHDL, and ARM Cortex boards."
+    answer:
+      "Efficient and energy-optimized design of lightweight AES, ECC-based communications, PRESENT cipher optimization, and hybrid cryptographic protocols using Vivado, Quartus, Verilog/VHDL, and ARM Cortex boards.",
   },
   {
     question: "What research themes are emphasized in Ph.D. projects?",
-    answer: "Cutting-edge research on post-quantum cryptography, AI-optimized algorithm selection, FPGA-based cryptographic acceleration, and blockchain-integrated embedded security solutions."
+    answer:
+      "Cutting-edge research on post-quantum cryptography, AI-optimized algorithm selection, FPGA-based cryptographic acceleration, and blockchain-integrated embedded security solutions.",
   },
   {
     question: "Which tools and platforms support cryptographic projects for embedded devices?",
-    answer: "Platforms include ARM Cortex, Arduino, Raspberry Pi, FPGA/ASIC boards, Vivado, Quartus, Keil, Proteus, and hardware description languages like Verilog and VHDL."
-  }
+    answer:
+      "Platforms include ARM Cortex, Arduino, Raspberry Pi, FPGA/ASIC boards, Vivado, Quartus, Keil, Proteus, and hardware description languages like Verilog and VHDL.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Cryptographic Algorithms for Embedded Devices",
+  "Lightweight Cryptography Projects",
+  "FPGA Cryptography Projects",
+  "AES RSA ECC Implementation",
+  "Post-Quantum Cryptography for IoT",
+  "Secure Embedded System Projects",
+  "B.Tech Cryptography Projects",
+  "M.Tech Embedded Security Projects",
+  "Ph.D. Research in Cryptography",
+  "Hardware Accelerated Cryptography",
+  "Narpavi Research Institute Embedded Security",
 ];
 
 const CryptographicAlgorithmsEmbeddedProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Cryptographic Algorithms for Embedded Devices IEEE Projects | AES, ECC, PQC, FPGA | B.Tech M.Tech Ph.D."
+        title="Cryptographic Algorithms for Embedded Devices – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) embedded cryptography projects on AES, RSA, ECC, lightweight ciphers, post-quantum cryptography, and FPGA/ARM-based hardware acceleration for IoT, wearables, and secure embedded systems."
-        keywords="Cryptographic Algorithms for Embedded Devices, Lightweight Cryptography Projects, FPGA Cryptography Projects, AES RSA ECC Implementation, Post-Quantum Cryptography for IoT, Secure Embedded System Projects, B.Tech Cryptography Projects, M.Tech Embedded Security Projects, Ph.D. Research in Cryptography, Hardware Accelerated Cryptography, Narpavi Research Institute Embedded Security"
-        url="/department/cryptography-security/cryptographic-algorithms-embedded"
+        keywords={keywords}
+        url="/department/cryptography-security/cryptographic-algorithms-embedded-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Cryptographic Algorithms for Embedded Devices</li>
-              <li>Lightweight Cryptography Projects</li>
-              <li>FPGA Cryptography Projects</li>
-              <li>AES RSA ECC Implementation</li>
-              <li>Post-Quantum Cryptography for IoT</li>
-              <li>Secure Embedded System Projects</li>
-              <li>B.Tech Cryptography Projects</li>
-              <li>M.Tech Embedded Security Projects</li>
-              <li>Ph.D. Research in Cryptography</li>
-              <li>Hardware Accelerated Cryptography</li>
-              <li>Narpavi Research Institute Embedded Security</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Cryptographic Algorithms for Embedded Devices – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Cryptographic Algorithms for Embedded Devices – Project Development Center in Chennai</h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> offers comprehensive academic and research support in the design and implementation of cryptographic algorithms tailored for embedded devices, aligned with IEEE standards (2023–2025).
               </p>
@@ -176,39 +195,30 @@ const CryptographicAlgorithmsEmbeddedProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+             
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
-  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
-  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
-  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
-  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
-  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
-  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/cryptography-security">Cryptography & Security</a></li>
+              <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+              <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+              <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+              <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+              <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+              <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

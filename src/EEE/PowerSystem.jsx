@@ -1,64 +1,85 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
+import { Link } from "react-router-dom";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Power Systems Project Development Center Chennai",
+  "Power Systems IEEE Projects",
+  "Smart Grid IEEE Projects",
+  "Renewable Energy Power Systems",
+  "HVDC Power Systems Projects",
+  "FACTS Devices IEEE Projects",
+  "AI in Power Systems",
+  "Load Flow Analysis Projects",
+  "Power System Protection Projects",
+  "B.Tech Power Systems Projects",
+  "M.Tech Power Systems Projects",
+  "Ph.D. Power Systems Research",
+  "Narpavi Research Institute"
+];
 
 const faqs = [
   {
     question: "What services does the Power Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute's Power Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart grids, renewable energy integration, and AI-driven power management for applications in utilities, smart cities, and sustainable energy."
+    answer:
+      "Narpavi Research Institute's Power Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in smart grids, renewable energy integration, and AI-driven power management."
   },
   {
     question: "What types of power systems projects are supported?",
-    answer: "We support B.Tech projects (load flow analysis, renewable energy systems), M.Tech projects (smart grid optimization, FACTS devices), and Ph.D. projects (AI-based power trading, HVDC advancements) for applications in energy management and industrial automation."
+    answer:
+      "We support B.Tech projects (load flow analysis, renewable energy systems), M.Tech projects (smart grid optimization, FACTS devices), and Ph.D. projects (AI-based power trading, HVDC advancements)."
   },
   {
     question: "Which technologies are used in power systems project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSCAD, ETAP, Arduino, Raspberry Pi, and AI frameworks like TensorFlow for advanced power systems solutions."
+    answer:
+      "Our stack includes MATLAB/Simulink, PSCAD, ETAP, Arduino, Raspberry Pi, and AI frameworks like TensorFlow."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like smart grids, renewable energy, and HVDC systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering smart grids, renewable energy, and HVDC systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We provide topic selection, system design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEEPowerSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Power Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Power Systems projects for B.Tech, M.Tech, Ph.D. Smart grids, renewable energy, HVDC, AI power management, FACTS devices for utilities, smart cities."
-        keywords="Power Systems Project Development, Power Systems IEEE Projects 2023–2025, Smart Grid IEEE Projects, Renewable Energy IEEE Projects, Power Electronics in Power Systems Projects, HVDC IEEE Project Development, B.Tech Power Systems Projects, M.Tech Power Systems Thesis Support, Ph.D. Power Systems Research Assistance, Narpavi Research Institute"
-        url="/department/power-systems"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Power Systems – Project Development Center in Chennai"
+        description="Power Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on smart grids, renewable energy integration, HVDC systems, FACTS devices, AI-driven power systems, and IEEE-aligned research (2023–2025)."
+        url="/power-systems-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Power Systems Project Development</li>
-              <li>Power Systems IEEE Projects 2023–2025</li>
-              <li>Smart Grid IEEE Projects</li>
-              <li>Renewable Energy IEEE Projects</li>
-              <li>Power Electronics in Power Systems Projects</li>
-              <li>HVDC IEEE Project Development</li>
-              <li>B.Tech Power Systems Projects</li>
-              <li>M.Tech Power Systems Thesis Support</li>
-              <li>Ph.D. Power Systems Research Assistance</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ❌ MAIN CONTENT (UNCHANGED) */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Power Systems – Project Development Center</h1>
-
+            <h1>Power Systems – Project Development Center in Chennai</h1>
+           
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Power Systems</strong> – Project Development Center stands as a global platform where innovation meets practical application. By focusing on IEEE standards and adopting the latest topics from IEEE Transactions (2023–2025), we support students and researchers in achieving excellence in academic and industrial projects. The Power Systems – Project Development Center emphasizes advanced research methodologies, simulation environments, hardware prototyping, and end-to-end guidance, enabling scholars to deliver projects with international quality standards.
@@ -66,6 +87,38 @@ const EEEPowerSystemsProjectDevelopmentCenter = () => {
               <p>
                 The Power Systems – Project Development Center plays a vital role in bridging academic research and industry needs, ensuring that every project reflects real-world applicability and technical innovation. From renewable energy integration, smart grids, HVDC systems, load forecasting, and AI-based optimization of power networks, this center provides domain expertise across the spectrum of electrical engineering. By fostering innovation for B.Tech, M.Tech, and Ph.D. scholars, the Power Systems – Project Development Center enhances career opportunities and contributes to the sustainable growth of the energy sector.
               </p>
+              <p>
+  Research on
+  {" "}
+  <Link
+    to="/department/power-systems/distributed-generation-integration"
+    className="internal-link highlight-link"
+  >
+    Distributed Generation Integration
+  </Link>
+  {" "}
+  addresses the seamless incorporation of renewable energy sources such as solar,
+  wind, and hybrid systems into existing power grids. These projects focus on voltage
+  stability, power quality, and optimal dispatch strategies using IEEE-recommended
+  frameworks. Distributed generation integration is essential for building resilient
+  and decentralized energy systems.
+</p>
+<p>
+  Advanced transmission control is achieved through
+  {" "}
+  <Link
+    to="/department/power-systems/facts-power-systems"
+    className="internal-link highlight-link"
+  >
+    FACTS Power Systems
+  </Link>
+  {" "}
+  which enhance controllability and increase power transfer capability of modern grids.
+  Projects in this area involve devices such as STATCOM, SVC, and UPFC to improve
+  voltage regulation and system stability. FACTS-based research is highly suitable
+  for M.Tech and Ph.D. scholars targeting IEEE and SCI journal publications.
+</p>
+
             </section>
 
             <section className="EEEProjectDevelopmentCenter-btech">
@@ -118,6 +171,36 @@ const EEEPowerSystemsProjectDevelopmentCenter = () => {
                 The style emphasizes innovation, research rigor, and publication-ready outcomes.
               </p>
             </section>
+<p>
+  Fundamental analysis of electrical networks begins with
+  {" "}
+  <Link
+    to="/department/power-systems/load-flow-analysis"
+    className="internal-link highlight-link"
+  >
+    Load Flow Analysis
+  </Link>
+  {" "}
+  which evaluates voltage profiles, power losses, and line flows in power systems.
+  These projects form the backbone of planning and operational studies in utilities.
+  Load flow analysis is an ideal starting point for B.Tech students and a critical
+  component of advanced optimization and smart grid research.
+</p>
+<p>
+  System reliability and fault mitigation are ensured through
+  {" "}
+  <Link
+    to="/department/power-systems/power-system-protection-relays"
+    className="internal-link highlight-link"
+  >
+    Power System Protection & Relays
+  </Link>
+  {" "}
+  which focus on detecting abnormalities and isolating faulty sections of the grid.
+  Research in this domain includes relay coordination, fault classification, and
+  intelligent protection schemes using AI and IoT technologies, making it highly
+  relevant for modern power networks.
+</p>
 
             <section className="EEEProjectDevelopmentCenter-table">
               <h2>Comparative Table – Power Systems Technologies vs. Applications</h2>
@@ -186,6 +269,21 @@ const EEEPowerSystemsProjectDevelopmentCenter = () => {
                 </table>
               </div>
             </section>
+<p>
+  Maintaining grid performance under dynamic conditions is the focus of
+  {" "}
+  <Link
+    to="/department/power-systems/power-system-stability-control"
+    className="internal-link highlight-link"
+  >
+    Power System Stability & Control
+  </Link>
+  {" "}
+  research. These projects analyze transient, dynamic, and small-signal stability
+  issues using advanced controllers and optimization techniques. Stability and control
+  studies are crucial for large interconnected grids, renewable penetration, and
+  HVDC systems, offering strong scope for doctoral-level innovation.
+</p>
 
             <section className="EEEProjectDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Power Systems Project Titles (2023–2025)</h2>
@@ -224,43 +322,25 @@ const EEEPowerSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <ul>
-  <li>
-    <a href="/department/power-systems">
-      Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/distributed-generation-integration">
-      Distributed Generation Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/facts-power-systems">
-      FACTS Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/load-flow-analysis">
-      Load Flow Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-protection-relays">
-      Power System Protection & Relays
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-stability-control">
-      Power System Stability & Control
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/power-systems">Power Systems</a></li>
+              <li><a href="/department/power-systems/distributed-generation-integration">Distributed Generation Integration</a></li>
+              <li><a href="/department/power-systems/facts-power-systems">FACTS Power Systems</a></li>
+              <li><a href="/department/power-systems/load-flow-analysis">Load Flow Analysis</a></li>
+              <li><a href="/department/power-systems/power-system-protection-relays">Power System Protection & Relays</a></li>
+              <li><a href="/department/power-systems/power-system-stability-control">Power System Stability & Control</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

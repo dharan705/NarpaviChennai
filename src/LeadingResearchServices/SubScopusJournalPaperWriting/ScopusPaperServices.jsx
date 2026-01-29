@@ -30,7 +30,7 @@ const faqs = [
   }
 ];
 
-const ScopusPaperServices = () => {
+const ScopusPaperServices = () => { 
   return (
     <div className="scopus-layout">
       {/* Left Sidebar */}

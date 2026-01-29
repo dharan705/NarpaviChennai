@@ -1,66 +1,85 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What is Side-Channel Attack (SCA) Resistance in Hardware?",
-    answer: "It involves protecting hardware devices against attacks that exploit power consumption, electromagnetic emissions, timing, or acoustic signals to extract sensitive data like cryptographic keys."
+    answer:
+      "It involves protecting hardware devices against attacks that exploit power consumption, electromagnetic emissions, timing, or acoustic signals to extract sensitive data like cryptographic keys.",
   },
   {
     question: "What B.Tech projects focus on in SCA resistance?",
-    answer: "Introductory work includes power analysis attack demonstrations, timing attack evaluations, simple masking on AES hardware, and IoT device protection against basic side-channel attacks using Arduino, Raspberry Pi, MATLAB, and Python."
+    answer:
+      "Introductory work includes power analysis attack demonstrations, timing attack evaluations, simple masking on AES hardware, and IoT device protection against basic side-channel attacks using Arduino, Raspberry Pi, MATLAB, and Python.",
   },
   {
     question: "What advanced techniques are explored in M.Tech SCA resistance projects?",
-    answer: "Projects cover DPA-resistant FPGA AES encryption, lightweight masking for IoT, EM side-channel countermeasures, and AI-driven leakage detection using FPGA, MATLAB, Python, Cadence, and Synopsys."
+    answer:
+      "Projects cover DPA-resistant FPGA AES encryption, lightweight masking for IoT, EM side-channel countermeasures, and AI-driven leakage detection using FPGA, MATLAB, Python, Cadence, and Synopsys.",
   },
   {
     question: "What cutting-edge research is pursued in Ph.D. SCA resistance?",
-    answer: "Ph.D. research includes PQC-resistant hardware, machine learning-assisted countermeasures, secure hardware accelerators for IoT/5G/6G, and leakage-resilient FPGA/ASIC design methodologies."
+    answer:
+      "Ph.D. research includes PQC-resistant hardware, machine learning-assisted countermeasures, secure hardware accelerators for IoT/5G/6G, and leakage-resilient FPGA/ASIC design methodologies.",
   },
   {
     question: "Which tools and platforms are used for SCA resistance projects?",
-    answer: "Tools include FPGA boards, MATLAB, Python, Cadence, Synopsys, EM probes, TensorFlow, and OQS libraries for post-quantum cryptography."
-  }
+    answer:
+      "Tools include FPGA boards, MATLAB, Python, Cadence, Synopsys, EM probes, TensorFlow, and OQS libraries for post-quantum cryptography.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Side-Channel Attack Resistance in Hardware",
+  "Power Analysis Attack Mitigation",
+  "Electromagnetic SCA Countermeasures",
+  "Timing Attack Resistance in Embedded Devices",
+  "AI-Based SCA Detection",
+  "Post-Quantum SCA-Resistant Hardware",
+  "DPA-Resistant FPGA Design",
+  "Leakage-Resilient VLSI",
+  "Hardware Security Projects IEEE",
+  "Cryptographic Hardware Research",
+  "IoT Device Hardware Security",
+  "FPGA Security Projects",
+  "Narpavi Research Institute Hardware Security",
 ];
 
 const SideChannelAttackResistanceProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Side-Channel Attack Resistance in Hardware IEEE Projects | DPA, EM, AI-Based SCA | B.Tech M.Tech Ph.D."
+        title="Side-Channel Attack Resistance in Hardware – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) side-channel attack resistance projects on power, timing, and EM attacks, DPA-resistant FPGA AES, AI-based leakage detection, and post-quantum SCA-resilient hardware for IoT and embedded systems."
-        keywords="Side-Channel Attack Resistance in Hardware, Power Analysis Attack Mitigation, Electromagnetic SCA Countermeasures, Timing Attack Resistance in Embedded Devices, AI-Based SCA Detection, Post-Quantum SCA-Resistant Hardware, DPA-Resistant FPGA Design, Leakage-Resilient VLSI, Hardware Security Projects IEEE, Cryptographic Hardware Research, IoT Device Hardware Security, FPGA Security Projects, Narpavi Research Institute Hardware Security"
-        url="/department/cryptography-security/side-channel-attack-resistance"
+        keywords={keywords}
+        url="/department/cryptography-security/side-channel-attack-resistance-in-hardware-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Side-Channel Attack Resistance in Hardware</li>
-              <li>Power Analysis Attack Mitigation</li>
-              <li>Electromagnetic SCA Countermeasures</li>
-              <li>Timing Attack Resistance in Embedded Devices</li>
-              <li>AI-Based SCA Detection</li>
-              <li>Post-Quantum SCA-Resistant Hardware</li>
-              <li>DPA-Resistant FPGA Design</li>
-              <li>Leakage-Resilient VLSI</li>
-              <li>Hardware Security Projects IEEE</li>
-              <li>Cryptographic Hardware Research</li>
-              <li>IoT Device Hardware Security</li>
-              <li>FPGA Security Projects</li>
-              <li>Narpavi Research Institute Hardware Security</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Side-Channel Attack Resistance in Hardware – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Side-Channel Attack Resistance in Hardware – Project Development Center in Chennai</h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> provides specialized training and research mentorship in side-channel attack resistance, focusing on power analysis, electromagnetic and timing attacks, and AI-driven countermeasures aligned with IEEE standards (2023–2025).
               </p>
@@ -178,39 +197,29 @@ const SideChannelAttackResistanceProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
-  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
-  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
-  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
-  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
-  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
-  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
-</ul>
-          </div>
+              <li><a href="/department/cryptography-security">Cryptography & Security</a></li>
+              <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+              <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+              <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+              <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+              <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+              <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

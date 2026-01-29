@@ -1,0 +1,138 @@
+.sliding-links-fullscreen {
+  height: 100vh;                  /* Full viewport height */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  overflow: hidden;
+  padding: 40px 20px;
+  box-sizing: border-box;
+
+}
+
+.slider-container {
+  width: 100%;
+  max-width: 1400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+ background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+}
+
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);   /* Exactly 5 columns = 25 items in 5 rows */
+  gap: 20px;
+  flex: 1;
+  max-height: calc(100% - 140px); /* Leave space for title + indicators */
+  overflow: hidden;
+
+  animation: fadeInUp 0.9s ease-out;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.link-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  height: fit-content;
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 0;
+  }
+
+  &:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: rgba(59, 130, 246, 0.2);
+    border-color: #60a5fa;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    h3 {
+      color: #60a5fa;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Indicators */
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding-top: 20px;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &.active {
+    background: #60a5fa;
+    transform: scale(1.4);
+    box-shadow: 0 0 15px rgba(96, 165, 250, 0.6);
+  }
+
+  &:hover {
+    background: #93bbfc;
+  }
+}

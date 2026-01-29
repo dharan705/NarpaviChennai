@@ -1,66 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Embedded Systems for Robotics Project Development Center in Chennai",
+  "Embedded Robotics IEEE Projects 2023–2025",
+  "Robotics Embedded Systems Projects",
+  "B.Tech Embedded Robotics Projects",
+  "M.Tech AI Robotics Control",
+  "Ph.D Autonomous Robotics Research",
+  "Sensor Fusion Robotics Embedded",
+  "IoT Robotics Embedded Systems",
+  "FPGA Robotics Control Projects",
+  "Real-Time Embedded Robotics",
+  "Narpavi Research Institute Robotics Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Embedded Systems for Robotics Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students working on IEEE-aligned (2023–2025) projects such as microcontroller/FPGA-based robotics, AI-assisted robotic planning, sensor fusion, real-time embedded control, and IoT-enabled robotics integration."
+    question:
+      "What services does the Embedded Systems for Robotics Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. students working on IEEE-aligned (2023–2025) projects such as microcontroller/FPGA-based robotics, AI-assisted robotic planning, sensor fusion, real-time embedded control, and IoT-enabled robotics integration."
   },
   {
     question: "What types of robotics projects are supported?",
-    answer: "We support B.Tech projects (robotic prototypes with microcontrollers, sensors, actuators), M.Tech projects (AI-assisted path planning, multi-sensor fusion, obstacle avoidance), and Ph.D. projects (deep-learning robotics, autonomous decision-making, patents, and IEEE publications)."
+    answer:
+      "B.Tech projects include robotic prototypes with microcontrollers and sensors. M.Tech projects focus on AI-assisted path planning and sensor fusion. Ph.D. projects cover deep-learning robotics, autonomous decision-making, patents, and IEEE publications."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "Arduino, ESP32, ARM Cortex, FPGA boards, MATLAB/Simulink, Proteus, ROS (Robot Operating System), IoT platforms (MQTT, ThingSpeak), TensorFlow/PyTorch for AI-assisted robotics applications."
+    answer:
+      "Arduino, ESP32, ARM Cortex, FPGA boards, MATLAB/Simulink, Proteus, ROS, IoT platforms, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "We reference IEEE Transactions (2023–2025) for robotics embedded systems, real-time control, AI-assisted decision-making, and IoT/FPGA-based autonomous systems. All projects prepare IEEE-format documentation."
+    answer:
+      "Projects reference IEEE Transactions (2023–2025) for robotics embedded systems, real-time control, AI-assisted decision-making, and autonomous systems."
   },
   {
     question: "What academic support is provided?",
-    answer: "We assist with IEEE topic selection, embedded hardware coding, AI and IoT integration, prototyping, real-time robotics control implementation, IEEE-style report preparation, and guidance for IEEE/Scopus/SCI publications."
+    answer:
+      "We assist with IEEE topic selection, embedded coding, AI/IoT integration, prototyping, real-time robotics control, IEEE-style reports, and journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Embedded Systems for Robotics – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Embedded Systems for Robotics Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-assisted robotic control, sensor fusion, real-time embedded systems, FPGA, ROS, IoT, and autonomous robotics.";
+
+const pageUrl =
+  "/department/embedded-systems-electrical/embedded-robotics";
 
 const EEEEmbeddedRoboticsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Embedded Robotics IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Embedded Systems for Robotics projects for B.Tech, M.Tech, Ph.D. AI-assisted robotic control, sensor fusion, real-time embedded systems using Arduino, ESP32, ARM Cortex, FPGA, ROS, TensorFlow for industrial robots, drones, autonomous systems."
-  keywords="Embedded Robotics IEEE Projects 2023–2025, Robotics Embedded Systems, B.Tech Robotic Prototypes, M.Tech AI Path Planning Robotics, Ph.D. Autonomous Robotics Control, Sensor Fusion Robotics, IoT Robotics Systems, FPGA Robotics Control, Real-Time Robotics Embedded, Narpavi Research Institute"
-  url="/department/embedded-systems-electrical/embedded-robotics"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Embedded Systems Robotics Projects</li>
-              <li>IEEE Robotics Research 2023–2025</li>
-              <li>B.Tech Robotic Embedded Systems</li>
-              <li>M.Tech AI Robotics Control</li>
-              <li>Ph.D Autonomous Embedded Systems</li>
-              <li>Narpavi Research Institute</li>
-              <li>IoT Robotics Systems</li>
-              <li>Sensor Fusion Embedded Projects</li>
-              <li>Real-Time Robotics Control</li>
-              <li>Industrial Robotics Embedded Solutions</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Embedded Systems for Robotics – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> introduces the Embedded Systems for Robotics Project Development Center, 
@@ -197,53 +228,31 @@ const EEEEmbeddedRoboticsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems – Project Development Center</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM, PIC & AVR Microcontroller Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development Center</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEEmbeddedRoboticsProjectDevelopmentCenter;

@@ -1,248 +1,244 @@
-$primary-color: #1c3879;
-$accent-color: #2a9d8f;
-$background-color: #f9fafc;
-
-* {
+/* ================= MASTER LAYOUT ================= */
+.BookISBNPublicationSupport {
+  display: flex;
+  max-width: 100%;
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-left: 100px; /* space for big sidebar */
+  background: #f8fafc;
+  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: $background-color;
+/* Auto remove padding on smaller laptops */
+@media (max-width: 1400px) {
+  .BookISBNPublicationSupport {
+    padding-left: 0;
+  }
 }
 
-.BookISBNPublicationSupport {
-  display: flex;
-  min-height: 100vh;
-  padding-top: 100px;
-  width: 100%;
-}
-
- 
+/* ================= GRID WRAPPER ================= */
 .BookISBNPublicationSupport-main {
-  padding: 2rem;
-  background-color: #f9fafc;
-  color: #222;
+  max-width: 100%;
   flex: 1;
+  display: flex;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: $primary-color;
-  }
+.BookISBNPublicationSupport-grid {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  min-width: 0; /* prevents overflow */
+}
 
-  h2 {
-    font-size: 1.8rem;
-    margin: 2rem 0 1rem;
-    color: #264653;
-    border-left: 5px solid $accent-color;
-    padding-left: 0.75rem;
-  }
+/* ================= LEFT SIDEBAR ================= */
+.BookISBNPublicationSupport-left {
+  flex: 0 0 280px;
+  max-width: 280px;
+  padding: 1.75rem;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  position: sticky;
+  top: 100px;
+  height: max-content;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
 
   h3 {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-
-  h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: $primary-color;
-  }
-
-  p {
+    color: #1e3a8a;
     margin-bottom: 1rem;
-    line-height: 1.7;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 
   ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
+    list-style: none;
+    padding: 0;
 
     li {
-      margin-bottom: 0.6rem;
-    }
-  }
+      padding: 0.6rem 0.75rem;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
+      color: #334155;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s ease;
 
-  .BookISBNPublicationSupport-grid {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-    margin-left: 130px;
-    align-items: start; /* Ensure grid items align at the top */
-    max-width: 1600px; /* Prevent stretching on large screens */
-
-    @media (max-width: 1024px) {
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-  }
-
-  .BookISBNPublicationSupport-left {
-    width: 280px;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-    position: sticky;
-    top: 100px; /* Match sidebar top offset */
-    height: fit-content;
-
-    h3 {
-      margin-bottom: 1rem;
-      color: $primary-color;
-    }
-
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-
-      li {
-        margin-bottom: 0.5rem;
-        color: $primary-color;
+      &:hover {
+        background: #f1f5f9;
+        color: #1e3a8a;
       }
     }
   }
+}
 
-  .BookISBNPublicationSupport-right {
-    width: 280px;
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
-    position: sticky;
-    top: 100px; /* Match sidebar top offset */
-    height: fit-content;
+/* ================= MAIN CONTENT ================= */
+.BookISBNPublicationSupport-center {
+  flex: 1;
+  min-width: 0; /* critical for preventing overflow */
+  padding: 2.5rem 3rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
 
-    h3 {
-      margin-bottom: 1rem;
-      color: $primary-color;
-    }
+  h1 {
+    font-size: 2.4rem;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
 
-    ul {
-      list-style-type: none;
-      padding-left: 0;
+  h2 {
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+    color: #1e40af;
+    font-size: 1.5rem;
+  }
 
-      li {
-        margin-bottom: 0.5rem;
+  p {
+    line-height: 1.8;
+    color: #334155;
+    margin-bottom: 1rem;
+  }
 
-        a {
-          color: $primary-color;
-          text-decoration: none;
+  ul {
+    padding-left: 1.25rem;
 
-          &:hover {
-            text-decoration: underline;
-            color: $accent-color;
-          }
-        }
-      }
+    li {
+      margin-bottom: 0.5rem;
+      color: #334155;
     }
   }
 
-  .BookISBNPublicationSupport-center {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
-    width: 100%;
-  }
-
+  /* TABLES */
   .BookISBNPublicationSupport-table-container {
     overflow-x: auto;
-    background-color: #fefefe;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+    margin: 1.25rem 0;
 
     table {
       width: 100%;
       border-collapse: collapse;
+      font-size: 0.95rem;
       min-width: 600px;
 
-      thead {
-        background-color: $primary-color;
-        color: #fff;
+      th,
+      td {
+        border: 1px solid #e2e8f0;
+        padding: 0.75rem 1rem;
+        background: #fff;
+        white-space: nowrap;
       }
 
-      th, td {
-        border: 1px solid #ddd;
-        padding: 0.75rem;
-        text-align: center;
-        font-size: 0.95rem;
-      }
-
-      td:first-child {
-        text-align: left;
+      th {
+        background: #eff4ff;
         font-weight: 600;
+        color: #1e3a8a;
       }
 
-      tbody tr:nth-child(even) {
-        background-color: #f2f2f2;
+      tbody tr:hover {
+        background: #f8fafc;
       }
     }
   }
 
+  /* FAQ BLOCK */
   .kerala-alluniversityfaq-section {
-    margin-top: 2rem;
+    margin-top: 2.25rem;
 
-    details {
-      margin-bottom: 1.25rem;
-      padding: 1rem;
-      background-color: #f7fafd;
-      border-left: 4px solid $primary-color;
-      border-radius: 6px;
+    .kerala-faq-items details {
+      background: #ffffff;
+      border-left: 4px solid #2563eb;
+      padding: 1rem 1.25rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
 
       summary {
-        cursor: pointer;
         font-weight: 600;
-        color: $primary-color;
+        color: #1e293b;
+        cursor: pointer;
       }
 
       p {
-        margin: 0.5rem 0 0;
+        margin-top: 0.5rem;
+        color: #475569;
       }
     }
   }
+}
 
-  @media (max-width: 1024px) {
-    .BookISBNPublicationSupport-left,
-    .BookISBNPublicationSupport-right {
-      width: 100%;
-      position: static;
-    }
+/* ================= RIGHT SIDEBAR ================= */
+.BookISBNPublicationSupport-right {
+  flex: 0 0 260px;
+  max-width: 260px;
+  padding: 2rem;
+  background: #ffffff;
+  border-left: 1px solid #e5e7eb;
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 100px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+
+  h3 {
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 
-  @media (max-width: 768px) {
-    .BookISBNPublicationSupport {
-      flex-direction: column;
-      padding-left: 0;
-      padding-top: 0;
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding: 6px 0;
+      font-size: 0.95rem;
+      color: #334155;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+          color: #1e40af;
+          text-decoration: underline;
+        }
+      }
     }
+  }
+}
 
-    .BookISBNPublicationSupport-main {
-      padding: 1rem;
-      margin-left: 0;
-      width: 100%;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .BookISBNPublicationSupport {
+    padding-left: 0;
+    flex-direction: column;
+  }
 
-      h1 {
-        font-size: 2rem;
-      }
+  .BookISBNPublicationSupport-left,
+  .BookISBNPublicationSupport-right {
+    display: none;
+  }
 
-      h2 {
-        font-size: 1.5rem;
-      }
+  .BookISBNPublicationSupport-center {
+    padding: 2rem;
+    margin: 0;
+  }
+}
 
-      .BookISBNPublicationSupport-center {
-        padding: 1rem;
-      }
+@media (max-width: 768px) {
+  .BookISBNPublicationSupport-center {
+    padding: 1.5rem;
 
-      .BookISBNPublicationSupport-table-container table {
-        font-size: 0.85rem;
-        min-width: 100%;
-      }
+    h1 {
+      font-size: 1.75rem;
     }
   }
 }

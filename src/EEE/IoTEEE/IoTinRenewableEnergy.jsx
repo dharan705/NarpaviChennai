@@ -1,64 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "IoT in Renewable Energy Monitoring Project Development Center in Chennai",
+  "IoT Renewable Energy Monitoring IEEE Projects 2023–2025",
+  "IoT Solar Energy Monitoring Projects",
+  "IoT Wind Energy Monitoring Projects",
+  "IoT Hybrid Renewable Energy Systems",
+  "AI-driven Renewable Energy Forecasting",
+  "Cloud IoT Renewable Energy Analytics",
+  "Edge IoT Renewable Energy Optimization",
+  "Blockchain Renewable Energy IoT",
+  "B.Tech IoT Renewable Energy Projects",
+  "M.Tech Cloud Renewable Energy Projects",
+  "Ph.D Renewable Energy IoT Research",
+  "Narpavi Research Institute Renewable Energy IoT"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the IoT in Renewable Energy Monitoring Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT in Renewable Energy Monitoring Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based monitoring, AI-driven forecasting, and secure renewable energy systems for efficient power utilization."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based monitoring, AI-driven forecasting, and secure renewable energy systems."
   },
   {
-    question: "What types of IoT in Renewable Energy Monitoring projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-based solar/wind monitoring), M.Tech projects (cloud-integrated predictive analytics), and Ph.D. projects (blockchain and AI-driven renewable ecosystems) for applications in solar, wind, hydro, and hybrid systems."
+    question: "What types of projects are supported?",
+    answer:
+      "B.Tech projects focus on solar and wind monitoring, M.Tech projects on cloud-based predictive analytics, and Ph.D. projects on blockchain and AI-driven renewable ecosystems."
   },
   {
-    question: "Which technologies are used in IoT in Renewable Energy Monitoring projects?",
-    answer: "Our stack includes Arduino, NodeMCU, Raspberry Pi, STM32, ESP32, Wi-Fi/Zigbee/LoRaWAN, cloud platforms (AWS, Google Cloud, Azure IoT, ThingsBoard), MATLAB/Simulink, and blockchain for secure transactions."
+    question: "Which technologies are used?",
+    answer:
+      "Arduino, NodeMCU, Raspberry Pi, STM32, ESP32, Wi-Fi, Zigbee, LoRaWAN, AWS, Azure IoT, Google Cloud, ThingsBoard, MATLAB/Simulink, and blockchain."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Sustainable Energy and Smart Grid, focusing on IoT integration, AI-driven forecasting, and secure renewable energy monitoring."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Sustainable Energy and Smart Grid focusing on IoT integration, AI forecasting, and secure renewable monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT in Renewable Energy Monitoring – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT in Renewable Energy Monitoring Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering solar, wind, hybrid systems, AI forecasting, cloud analytics, and blockchain security.";
+
+const pageUrl = "/department/iot-electrical-systems/renewable-energy";
 
 const EEEIoTRenewableEnergyMonitoringProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="IoT Renewable Energy Monitoring IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) IoT in Renewable Energy Monitoring projects for B.Tech, M.Tech, Ph.D. Solar wind hydro monitoring, AI forecasting using Arduino NodeMCU Raspberry Pi STM32 ESP32 Wi-Fi Zigbee LoRaWAN, AWS Google Cloud Azure ThingsBoard MATLAB Simulink blockchain."
-  keywords="IoT Renewable Energy Monitoring IEEE Projects 2023–2025, B.Tech IoT Solar Wind Monitoring, M.Tech Cloud Predictive Analytics, Ph.D. Blockchain AI Renewable Ecosystems, Hybrid Renewable Energy IoT, Narpavi Research Institute"
-  url="/department/iot-electrical-systems/renewable-energy"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT in Renewable Energy Monitoring</li>
-              <li>IoT Solar Monitoring Project</li>
-              <li>IoT Wind Energy IEEE 2023–2025</li>
-              <li>IoT Hybrid Renewable Projects</li>
-              <li>Cloud IoT Renewable Energy</li>
-              <li>Edge IoT Renewable Energy Optimization</li>
-              <li>Blockchain Renewable IoT</li>
-              <li>Narpavi Research Institute Renewable Energy IoT</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>IoT in Renewable Energy Monitoring – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>{pageTitle}</h1>
+    <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT in Renewable Energy Monitoring Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on IoT-enabled renewable energy solutions. Our projects focus on real-time data collection, predictive maintenance, and optimized energy utilization for solar, wind, hydro, and bio-energy systems.
               </p>
@@ -214,48 +246,26 @@ const EEEIoTRenewableEnergyMonitoringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/iot-electrical-systems">
-      IoT in Electrical Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-grids">
-      IoT for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/renewable-energy">
-      IoT in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/predictive-maintenance">
-      IoT for Predictive Maintenance
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-home-automation">
-      Smart Home Automation with IoT
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/smart-meters">
-      IoT-Enabled Smart Meters
-    </a>
-  </li>
-  <li>
-    <a href="/department/iot-electrical-systems/health-monitoring">
-      IoT-Based Health Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/iot-electrical-systems">IoT in Electrical Systems</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-grids">IoT for Smart Grids</a></li>
+              <li><a href="/department/iot-electrical-systems/predictive-maintenance">IoT for Predictive Maintenance</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-home-automation">Smart Home Automation with IoT</a></li>
+              <li><a href="/department/iot-electrical-systems/smart-meters">IoT-Enabled Smart Meters</a></li>
+              <li><a href="/department/iot-electrical-systems/health-monitoring">IoT-Based Health Monitoring</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

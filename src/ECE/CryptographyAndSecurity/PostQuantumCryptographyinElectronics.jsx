@@ -1,67 +1,87 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What is Post-Quantum Cryptography (PQC)?",
-    answer: "PQC comprises quantum-resistant encryption algorithms designed to secure communications against attacks from quantum computers, ensuring robust security for IoT, embedded devices, and communication protocols."
+    answer:
+      "PQC comprises quantum-resistant encryption algorithms designed to secure communications against attacks from quantum computers, ensuring robust security for IoT, embedded devices, and communication protocols.",
   },
   {
     question: "What topics do B.Tech PQC projects cover?",
-    answer: "Foundation-level work includes PQC-based secure chat on IoT devices, lattice-based cryptography on FPGA/Arduino, and hash-based PQC for secure sensor communications."
+    answer:
+      "Foundation-level work includes PQC-based secure chat on IoT devices, lattice-based cryptography on FPGA/Arduino, and hash-based PQC for secure sensor communications.",
   },
   {
     question: "What advanced areas are targeted in M.Tech PQC projects?",
-    answer: "Advanced designs include hardware acceleration of lattice-based cryptography on FPGA, PQC-enabled VPNs, lightweight PQC protocols for WSN, and hybrid classical-PQC schemes."
+    answer:
+      "Advanced designs include hardware acceleration of lattice-based cryptography on FPGA, PQC-enabled VPNs, lightweight PQC protocols for WSN, and hybrid classical-PQC schemes.",
   },
   {
     question: "What research directions are emphasized in Ph.D. PQC projects?",
-    answer: "Leading-edge research covers AI-optimized PQC for constrained devices, secure 5G/6G communications using lattice PQC, side-channel resistance in PQC hardware, and blockchain-enabled secure systems."
+    answer:
+      "Leading-edge research covers AI-optimized PQC for constrained devices, secure 5G/6G communications using lattice PQC, side-channel resistance in PQC hardware, and blockchain-enabled secure systems.",
   },
   {
     question: "Which tools and platforms support PQC projects?",
-    answer: "Tools include FPGA boards, MATLAB, Python, Raspberry Pi, ARM Cortex, Open Quantum Safe libraries, TensorFlow, and Hyperledger."
-  }
+    answer:
+      "Tools include FPGA boards, MATLAB, Python, Raspberry Pi, ARM Cortex, Open Quantum Safe libraries, TensorFlow, and Hyperledger.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Post-Quantum Cryptography in Electronics",
+  "Quantum-Safe Cryptography Projects",
+  "Lattice-Based PQC",
+  "Hash-Based PQC",
+  "Post-Quantum Cryptography IoT",
+  "FPGA PQC Implementation",
+  "Secure Communication PQC Projects",
+  "PQC Wireless Sensor Networks",
+  "Hybrid PQC Protocols",
+  "B.Tech PQC Projects",
+  "M.Tech PQC Research",
+  "Ph.D. Post-Quantum Cryptography",
+  "IEEE PQC Projects",
+  "Narpavi Research Institute PQC",
 ];
 
 const PostQuantumCryptographyProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Post-Quantum Cryptography IEEE Projects | Lattice, Hash, Code-Based PQC | B.Tech M.Tech Ph.D."
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Post-Quantum Cryptography – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) post-quantum cryptography projects on lattice-based, hash-based, and hybrid PQC for IoT, embedded, WSN, 5G/6G, and blockchain systems with FPGA, ARM, and OQS tools."
-        keywords="Post-Quantum Cryptography in Electronics, Quantum-Safe Cryptography Projects, Lattice-Based PQC, Hash-Based PQC, Post-Quantum Cryptography IoT, FPGA PQC Implementation, Secure Communication PQC Projects, PQC Wireless Sensor Networks, Hybrid PQC Protocols, B.Tech PQC Projects, M.Tech PQC Research, Ph.D. Post-Quantum Cryptography, IEEE PQC Projects, Narpavi Research Institute PQC"
-        url="/department/cryptography-security/post-quantum-cryptography"
+        keywords={keywords}
+        url="/department/cryptography-security/post-quantum-cryptography-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Post-Quantum Cryptography in Electronics</li>
-              <li>Quantum-Safe Cryptography Projects</li>
-              <li>Lattice-Based PQC</li>
-              <li>Hash-Based PQC</li>
-              <li>Post-Quantum Cryptography IoT</li>
-              <li>FPGA PQC Implementation</li>
-              <li>Secure Communication PQC Projects</li>
-              <li>PQC Wireless Sensor Networks</li>
-              <li>Hybrid PQC Protocols</li>
-              <li>B.Tech PQC Projects</li>
-              <li>M.Tech PQC Research</li>
-              <li>Ph.D. Post-Quantum Cryptography</li>
-              <li>IEEE PQC Projects</li>
-              <li>Narpavi Research Institute PQC</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+            
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Post-Quantum Cryptography in Electronics – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Post-Quantum Cryptography in Electronics – Project Development Center in Chennai</h1>
+              <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> mentors B.Tech, M.Tech, and Ph.D. students in Post-Quantum Cryptography research and implementation, focusing on quantum-resistant encryption techniques aligned with IEEE standards (2023–2025).
               </p>
@@ -179,39 +199,29 @@ const PostQuantumCryptographyProject = () => {
                   </details>
                 ))}
               </div>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
-  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
-  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
-  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
-  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
-  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
-  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
-</ul>
-          </div>
+              <li><a href="/department/cryptography-security">Cryptography & Security</a></li>
+              <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+              <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+              <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+              <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+              <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+              <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,66 +1,99 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Intelligent Control using AI ML Project Development Center in Chennai",
+  "Intelligent Control IEEE Projects 2023–2025",
+  "AI ML Control Systems Projects",
+  "B.Tech Fuzzy Logic Control Projects",
+  "M.Tech Deep Reinforcement Learning Control",
+  "Ph.D AI Based Nonlinear Control Systems",
+  "Neural Network Control IEEE Projects",
+  "Reinforcement Learning Control Robotics",
+  "Smart Grid Intelligent Control Systems",
+  "Narpavi Research Institute Control Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Intelligent Control using AI/ML Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. scholars in IEEE-aligned (2023–2025) projects focusing on intelligent controllers using AI/ML, neural networks, fuzzy logic systems, reinforcement learning, and deep learning for advanced control applications."
+    question:
+      "What services does the Intelligent Control using AI/ML Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. scholars in IEEE-aligned (2023–2025) projects focusing on intelligent controllers using AI/ML, neural networks, fuzzy logic, reinforcement learning, and deep learning."
   },
   {
-    question: "What types of intelligent control projects are supported?",
-    answer: "We support B.Tech projects (ML-based robotic path planning, fuzzy logic for process control), M.Tech projects (deep reinforcement learning controllers, hybrid AI/ML controllers, smart grid optimization), and Ph.D. projects (AI-integrated nonlinear control, explainable AI in critical control, and IEEE/SCI publications)."
+    question:
+      "What types of intelligent control projects are supported?",
+    answer:
+      "We support B.Tech projects in fuzzy logic and ML-based control, M.Tech projects in deep reinforcement learning and hybrid AI controllers, and Ph.D. research in AI-integrated nonlinear and cyber-physical control systems."
   },
   {
-    question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, Python (TensorFlow, PyTorch, SciKit-Learn), ROS for robotics, FPGA/Microcontrollers, IoT-enabled cloud integration platforms, fuzzy logic toolboxes, reinforcement learning frameworks (OpenAI Gym, Simulink RL)."
+    question:
+      "Which tools and technologies are used?",
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch), ROS, FPGA and microcontrollers, IoT platforms, fuzzy logic toolboxes, and reinforcement learning frameworks."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "All topics are IEEE-aligned (2023–2025) focusing on deep reinforcement learning in control, autonomous robotics, smart power systems, adaptive controllers, and intelligent cyber-physical control research."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on intelligent control, reinforcement learning, autonomous systems, smart grids, and cyber-physical control."
   },
   {
-    question: "What academic support is provided?",
-    answer: "We provide end-to-end IEEE project support: AI-based simulations, model development, embedded prototyping, IoT/robotics integrations, IEEE-format technical documentation, and journal/conference publication guidance."
+    question:
+      "What academic support is provided?",
+    answer:
+      "We provide complete IEEE project support including simulations, embedded prototyping, AI model development, documentation, and journal or conference publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Intelligent Control using AI/ML – Project Development Center in Chennai";
+
+const pageDescription =
+  "Intelligent Control using AI/ML Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects for B.Tech, M.Tech, and Ph.D. using neural networks, fuzzy logic, reinforcement learning, and deep learning control systems.";
+
+const pageUrl =
+  "/department/control-systems-electrical/intelligent-control-ai-ml";
 
 const EEEIntelligentControlAiMlProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Intelligent Control AI ML IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Intelligent Control using AI/ML projects for B.Tech, M.Tech, Ph.D. Neural networks, fuzzy logic, reinforcement learning, deep learning controllers using MATLAB/Simulink, Python TensorFlow PyTorch, ROS for robotics, smart grids."
-  keywords="Intelligent Control AI ML IEEE Projects 2023–2025, B.Tech Fuzzy Logic Control, M.Tech Deep Reinforcement Learning, Ph.D. AI Nonlinear Control, Neural Network Controllers, Reinforcement Learning Control, Robotics AI Control, Narpavi Research Institute"
-  url="/department/control-systems-electrical/intelligent-control-ai-ml"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
-      
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Intelligent Control using AI/ML Project Development Center</li>
-              <li>AI Control Projects</li>
-              <li>ML-based Control Systems</li>
-              <li>Fuzzy Logic Control IEEE Projects</li>
-              <li>Neural Network Control Systems</li>
-              <li>Reinforcement Learning for Control Projects</li>
-              <li>Ph.D. Research in Intelligent Control</li>
-              <li>AI/ML Robotics Projects</li>
-              <li>Deep Learning Control Applications</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Intelligent Control using AI/ML – Project Development Support</h1>
-
+            <h1>{pageTitle}</h1>
+            
             {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Intelligent Control using AI/ML – Project Development Center, enabling B.Tech, M.Tech, and Ph.D. scholars worldwide to explore IEEE-aligned (2023–2025) innovations in adaptive, self-learning, and next-generation control systems.</p>
@@ -177,51 +210,28 @@ const EEEIntelligentControlAiMlProjectDevelopmentCenter = () => {
               </div>
 
             </section>
-          </div>
+            </div>
 
-          {/* 🔗 Right Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/control-systems-electrical">Control Systems – Project Development Center</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
+   <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
-        
         </div>
       </div>
     </div>

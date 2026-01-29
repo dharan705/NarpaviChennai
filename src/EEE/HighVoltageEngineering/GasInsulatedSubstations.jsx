@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Gas Insulated Substations Project Development Center in Chennai",
+  "Gas Insulated Substations GIS IEEE Projects 2023–2025",
+  "Compact GIS Substation Design",
+  "SF6 Insulation Optimization Projects",
+  "Partial Discharge Monitoring GIS",
+  "B.Tech GIS Projects",
+  "M.Tech AI Based GIS Monitoring",
+  "Ph.D GIS Research Projects",
+  "IoT Based GIS Substation Monitoring",
+  "Smart Grid GIS Integration",
+  "Narpavi Research Institute GIS Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Gas Insulated Substations (GIS) Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students working on IEEE-aligned (2023–2025) projects in compact GIS design, SF6 insulation optimization, partial discharge monitoring, and renewable energy integration into GIS systems."
+    question:
+      "What services does the Gas Insulated Substations (GIS) Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. students working on IEEE-aligned (2023–2025) projects in compact GIS design, SF6 insulation optimization, partial discharge monitoring, and renewable energy integration."
   },
   {
     question: "What types of GIS projects are supported?",
-    answer: "We support B.Tech projects (basic GIS layouts, PD monitoring, insulation studies), M.Tech projects (AI-assisted predictive maintenance, IoT-enabled GIS monitoring), and Ph.D. projects (smart GIS grids with renewable integration, patents, and IEEE publications)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering compact GIS layouts, AI-assisted diagnostics, IoT-based monitoring, renewable integration, and IEEE publications."
   },
   {
     question: "Which tools and technologies are used for GIS projects?",
-    answer: "We use MATLAB/Simulink, PSCAD, COMSOL Multiphysics, IoT platforms, FPGA/DSP-based controllers, and AI/ML frameworks (TensorFlow, PyTorch) for GIS simulation, monitoring, and diagnostics."
+    answer:
+      "MATLAB/Simulink, PSCAD, COMSOL Multiphysics, IoT platforms, FPGA/DSP controllers, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects comply with IEEE Transactions (2023–2025), focusing on compact GIS, SF6 gas management, partial discharge monitoring, AI-assisted diagnostics, and IEEE-standard substation integration with smart grids."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on GIS insulation, partial discharge diagnostics, smart substations, and grid integration."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide guidance in IEEE topic selection, GIS modeling, partial discharge testing, AI-based diagnostics, IEEE report preparation, and research publication in IEEE/Scopus/SCI indexed journals."
+    answer:
+      "Guidance in IEEE topic selection, GIS modeling, PD testing, AI-based diagnostics, documentation, and IEEE/Scopus/SCI publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Gas Insulated Substations – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Gas Insulated Substations Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering compact GIS design, SF6 insulation, partial discharge monitoring, AI diagnostics, and smart grid integration.";
+
+const pageUrl =
+  "/department/high-voltage-engineering/gas-insulated-substations";
 
 const EEEGISProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Gas Insulated Substations GIS IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Gas Insulated Substations GIS projects for B.Tech, M.Tech, Ph.D. Compact GIS design, SF6 insulation, partial discharge monitoring, AI predictive maintenance using MATLAB/Simulink, PSCAD, COMSOL for smart grids, renewable integration."
-  keywords="Gas Insulated Substations GIS IEEE Projects 2023–2025, Compact GIS Design, B.Tech GIS Projects, M.Tech AI GIS Monitoring, Ph.D. SF6 Insulation Research, Partial Discharge PD Monitoring GIS, IoT GIS Substation Monitoring, High Voltage GIS, Smart Grid GIS Integration, Narpavi Research Institute"
-  url="/department/high-voltage-engineering/high-voltage-testing"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Left Column */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Gas Insulated Substation Projects</li>
-              <li>IEEE GIS Research 2023–2025</li>
-              <li>B.Tech Compact GIS Projects</li>
-              <li>M.Tech AI-Based GIS Monitoring</li>
-              <li>Ph.D SF6 Insulation Studies</li>
-              <li>Narpavi Research Institute</li>
-              <li>Partial Discharge GIS Projects</li>
-              <li>IoT-Based Substation Monitoring</li>
-              <li>High Voltage GIS Design</li>
-              <li>Smart Grid GIS Integration</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Gas Insulated Substations (GIS) – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Gas Insulated Substations (GIS) Project Development Center, 
@@ -204,43 +234,27 @@ const EEEGISProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gas-insulated-substations">Gas Insulated Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing Equipment</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
-        
         </div>
       </div>
     </div>

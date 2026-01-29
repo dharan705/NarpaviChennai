@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "RTOS Project Development Center in Chennai",
+  "Real-Time Operating Systems IEEE Projects 2023–2025",
+  "FreeRTOS RTEMS VxWorks Projects",
+  "B.Tech RTOS Applications",
+  "M.Tech Real-Time Embedded Systems",
+  "Ph.D AI Assisted RTOS Scheduling",
+  "Task Scheduling Algorithms RTOS",
+  "Multi-Tasking Embedded Systems",
+  "Industrial Automation RTOS",
+  "Robotics Real-Time Control Systems",
+  "Narpavi Research Institute RTOS Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Real-Time Operating Systems (RTOS) Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) areas such as task scheduling, deterministic embedded performance, priority-based multitasking, inter-task communication, AI-optimized scheduling, and real-time monitoring systems."
+    question:
+      "What services does the Real-Time Operating Systems (RTOS) Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) areas such as task scheduling, deterministic embedded performance, priority-based multitasking, inter-task communication, AI-optimized scheduling, and real-time monitoring systems."
   },
   {
     question: "What types of RTOS projects are supported?",
-    answer: "We support B.Tech projects (FreeRTOS/RTEMS applications, scheduling basics), M.Tech projects (AI-assisted real-time task optimization, robotics automation), and Ph.D. projects (deep learning-enabled RTOS, patented task scheduling frameworks, industrial deployment)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering FreeRTOS, RTEMS, VxWorks, AI-assisted real-time optimization, robotics automation, and industrial deployment."
   },
   {
     question: "Which RTOS tools and platforms are used?",
-    answer: "FreeRTOS, RTEMS, VxWorks, ARM Cortex-based systems, FPGA with RTOS controllers, Embedded C/C++, and AI/ML frameworks (TensorFlow, PyTorch) for predictive scheduling and diagnostics."
+    answer:
+      "FreeRTOS, RTEMS, VxWorks, ARM Cortex-based systems, FPGA controllers, Embedded C/C++, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Our projects reference IEEE Transactions (2023–2025) for RTOS performance, deterministic control, embedded scheduling, event-driven architectures, and IEEE-aligned industrial automation frameworks."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on RTOS performance, deterministic scheduling, and embedded control architectures."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide IEEE topic mentoring, embedded RTOS programming support, hardware prototyping, performance validation, IEEE-style documentation, and assistance for IEEE/Scopus/SCI journal publications."
+    answer:
+      "Complete guidance including IEEE topic mentoring, RTOS programming, hardware prototyping, performance validation, and IEEE/Scopus journal publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Real-Time Operating Systems (RTOS) – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Real-Time Operating Systems (RTOS) Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering FreeRTOS, RTEMS, VxWorks, task scheduling, AI-assisted real-time optimization, and industrial automation.";
+
+const pageUrl =
+  "/department/embedded-systems-electrical/rtos";
 
 const EEERtosProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="RTOS Real-Time Operating Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) RTOS projects for B.Tech, M.Tech, Ph.D. FreeRTOS, RTEMS, VxWorks task scheduling, AI-assisted real-time optimization using ARM Cortex, FPGA, TensorFlow for industrial automation, robotics, automotive embedded systems."
-  keywords="RTOS Real-Time Operating Systems IEEE Projects 2023–2025, FreeRTOS RTEMS Projects, B.Tech RTOS Applications, M.Tech Real-Time Embedded Systems, Ph.D. AI RTOS Scheduling, Task Scheduling Algorithms, Multi-Tasking Embedded Systems, Industrial Automation RTOS, Robotics Real-Time Control, Narpavi Research Institute"
-  url="/department/embedded-systems-electrical/rtos"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Real-Time Operating Systems Projects</li>
-              <li>IEEE RTOS Research 2023–2025</li>
-              <li>B.Tech RTOS Applications</li>
-              <li>M.Tech Real-Time Embedded Systems</li>
-              <li>Ph.D AI-Assisted RTOS Control</li>
-              <li>Narpavi Research Institute</li>
-              <li>FreeRTOS RTEMS Projects</li>
-              <li>Multi-Tasking Embedded Systems</li>
-              <li>Industrial Automation RTOS</li>
-              <li>Robotics Real-Time Systems</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center: Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Real-Time Operating Systems (RTOS) – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+     {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> introduces the RTOS Project Development Center, empowering B.Tech, M.Tech, and Ph.D. scholars in IEEE-aligned (2023–2025) domains of scheduling, multitasking, real-time synchronization, and AI-enhanced embedded performance.
@@ -198,49 +228,27 @@ const EEERtosProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-          <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems – Project Development Center</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM, PIC & AVR Microcontroller Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development Center</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

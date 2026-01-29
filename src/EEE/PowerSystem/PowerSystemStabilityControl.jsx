@@ -1,78 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Power System Stability and Control Project Development Center in Chennai",
+  "Power System Stability IEEE Projects 2023–2025",
+  "Transient Stability Analysis Projects",
+  "Small Signal Stability Projects",
+  "FACTS Assisted Stability Control",
+  "Smart Grid Stability Research",
+  "AI Based Power System Control",
+  "Wide Area Monitoring Systems Projects",
+  "B.Tech Power System Stability Projects",
+  "M.Tech Stability Control Projects",
+  "Ph.D Power System Dynamics Research",
+  "Narpavi Research Institute Power Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Power System Stability & Control Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Power System Stability & Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power system dynamics, stability analysis, and control strategies for applications in smart grids, renewable energy systems, and interconnected power networks."
+    answer:
+      "Narpavi Research Institute’s Power System Stability & Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in power system dynamics, stability analysis, and advanced control strategies."
   },
   {
     question: "What types of Power System Stability & Control projects are supported?",
-    answer: "We support B.Tech projects (transient and small-signal stability), M.Tech projects (FACTS-assisted control, adaptive controllers), and Ph.D. projects (AI-based stability, wide-area monitoring) for applications in power plants, microgrids, and smart grids."
+    answer:
+      "We support B.Tech projects (transient and small-signal stability), M.Tech projects (FACTS-assisted and adaptive control), and Ph.D. projects (AI-based stability and wide-area monitoring)."
   },
   {
     question: "Which technologies are used in Power System Stability & Control project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, AI frameworks (TensorFlow, PyTorch), PMU-based tools, and hardware-in-the-loop (HIL) testbeds for stability and control studies."
+    answer:
+      "MATLAB/Simulink, PSCAD, DIgSILENT PowerFactory, TensorFlow, PyTorch, PMU tools, and hardware-in-the-loop platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions on Power Systems and Smart Grid (2023–2025), covering areas like transient stability, FACTS integration, and AI-driven control, ensuring academic and industry relevance."
+    answer:
+      "Projects follow IEEE Transactions on Power Systems and Smart Grid (2023–2025), focusing on transient stability, FACTS integration, and AI-driven control."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/PSCAD, hardware-in-the-loop testing, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end support including topic selection, simulation, HIL testing, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Power System Stability & Control – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Power System Stability & Control Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering transient stability, small-signal analysis, FACTS-assisted control, AI-based stability, and smart grid dynamics.";
+
+const pageUrl =
+  "/department/power-systems/power-system-stability-control";
 
 const EEEPowerSystemStabilityControlProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Power System Stability & Control IEEE Projects (2023–2025)"
-        description="Power System Stability Control IEEE project development for B.Tech, M.Tech & PhD using MATLAB/Simulink, PSCAD, DIgSILENT, transient stability, small-signal analysis, FACTS control, AI stability, smart grid dynamics."
-        url="/department/power-systems/power-system-stability-control"
-        type="article"
-        keywords={[
-          "Power System Stability and Control Projects",
-          "IEEE Power Stability Projects 2023–2025",
-          "Smart Grid Stability Research",
-          "B.Tech Dynamic Power System Projects",
-          "M.Tech Stability Controller Projects",
-          "Ph.D. Power System Dynamics Research",
-          "FACTS-Assisted Stability Projects",
-          "AI in Power System Control",
-          "Narpavi Research Institute EEE Projects",
-          "Wide-Area Monitoring Power System Projects"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Power System Stability and Control Projects</li>
-              <li>IEEE Power Stability Projects 2023–2025</li>
-              <li>Smart Grid Stability Research</li>
-              <li>B.Tech Dynamic Power System Projects</li>
-              <li>M.Tech Stability Controller Projects</li>
-              <li>Ph.D. Power System Dynamics Research</li>
-              <li>FACTS-Assisted Stability Projects</li>
-              <li>AI in Power System Control</li>
-              <li>Narpavi Research Institute EEE Projects</li>
-              <li>Wide-Area Monitoring Power System Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Power System Stability & Control – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+     <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Power System Stability & Control Project Development Center, a premier facility empowering B.Tech, M.Tech, and Ph.D. scholars to advance power system dynamics aligned with IEEE Transactions (2023–2025). Our projects focus on transient, small-signal, and voltage stability, addressing challenges in renewable integration, microgrids, and smart grids.
               </p>
@@ -220,43 +239,26 @@ const EEEPowerSystemStabilityControlProjectDevelopmentCenter = () => {
              </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/power-systems">
-      Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/distributed-generation-integration">
-      Distributed Generation Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/facts-power-systems">
-      FACTS Power Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/load-flow-analysis">
-      Load Flow Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-protection-relays">
-      Power System Protection & Relays
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-systems/power-system-stability-control">
-      Power System Stability & Control
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/power-systems">Power Systems</a></li>
+              <li><a href="/department/power-systems/distributed-generation-integration">Distributed Generation Integration</a></li>
+              <li><a href="/department/power-systems/facts-power-systems">FACTS Power Systems</a></li>
+              <li><a href="/department/power-systems/load-flow-analysis">Load Flow Analysis</a></li>
+              <li><a href="/department/power-systems/power-system-protection-relays">Power System Protection & Relays</a></li>
+              <li><a href="/department/power-systems/power-system-stability-control">Power System Stability & Control</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

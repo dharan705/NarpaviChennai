@@ -1,70 +1,87 @@
 import "./BigData.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Csesidebar from "../../assets/Csesidebar";
+import Leftsidebar from "../../assets/Leftsidebar";
+const keywords = [
+  "Big Data – Project Development Center in Chennai",
+  "IEEE Big Data Projects 2023–2025",
+  "B.Tech Big Data Projects",
+  "M.Tech Big Data Projects",
+  "Ph.D. Big Data Research",
+  "Hadoop Projects",
+  "Apache Spark Projects",
+  "NoSQL Big Data Applications",
+  "Cloud Big Data Solutions",
+  "Real-Time Big Data Processing"
+];
 
 const faqs = [
   {
     question: "What services does the Big Data Project Development Center offer?",
-    answer: "Narpavi Research Institute's Big Data Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) Big Data projects, focusing on real-time analytics, machine learning, and distributed architectures."
+    answer:
+      "Narpavi Research Institute's Big Data Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) Big Data projects, focusing on real-time analytics, machine learning, and distributed architectures."
   },
   {
     question: "What types of Big Data projects are supported?",
-    answer: "We support B.Tech projects (sentiment analysis, predictive models), M.Tech projects (real-time analytics, edge computing), and Ph.D. projects (federated learning, scalable data pipelines) for industries like healthcare, smart cities, and finance."
+    answer:
+      "We support B.Tech projects (sentiment analysis, predictive models), M.Tech projects (real-time analytics, edge computing), and Ph.D. projects (federated learning, scalable data pipelines) for industries like healthcare, smart cities, and finance."
   },
   {
     question: "Which technologies are used in Big Data project development?",
-    answer: "Our stack includes Apache Hadoop, Spark, Kafka, NoSQL databases (MongoDB, Cassandra), cloud platforms (AWS, Azure, GCP), and AI tools like TensorFlow for scalable data solutions."
+    answer:
+      "Our stack includes Apache Hadoop, Spark, Kafka, NoSQL databases (MongoDB, Cassandra), cloud platforms (AWS, Azure, GCP), and AI tools like TensorFlow for scalable data solutions."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like stream processing, privacy-preserving analytics, and AI-driven Big Data, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like stream processing, privacy-preserving analytics, and AI-driven Big Data."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, architecture design, implementation, testing, documentation, and IEEE/SCI journal publication support."
+    answer:
+      "We offer end-to-end guidance including topic selection, architecture design, implementation, testing, documentation, and IEEE/SCI journal publication support."
   }
 ];
 
 const BigDataProjectDevelopmentCenter = () => {
   return (
-    <div className="BigDataProjectDevelopmentCenter">
-      <SEO 
-        title="Big Data IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Big Data projects for B.Tech, M.Tech, Ph.D. Hadoop, Spark, Kafka, NoSQL, real-time analytics, federated learning for healthcare, smart cities, finance."
-        keywords="Big Data Project Development, Narpavi Technology, Narpavi Research Institute, IEEE Big Data Projects 2023–2025, B.Tech Big Data Projects, M.Tech Big Data Projects, Ph.D. Big Data Research, Hadoop Projects, Apache Spark Projects, NoSQL Big Data Applications, Cloud Big Data Solutions, Industry 4.0 Data Analytics, Real-Time Big Data Processing, AI in Big Data, IEEE Big Data Paper Support"
-        url="/department/big-data"
+    <div className="MobileAppDevelopmentCenter">
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Big Data – Project Development Center in Chennai"
+        description="Big Data – Project Development Center in Chennai offering IEEE 2023–2025 Big Data projects in Hadoop, Spark, Kafka, NoSQL, real-time analytics, and AI-driven data systems for B.Tech, M.Tech, and Ph.D. students."
+  keywords={keywords}
+        url="/department/big-data-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="BigDataProjectDevelopmentCenter-main">
-        <div className="BigDataProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="BigDataProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            
+        <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Big Data Project Development</li>
-              <li>Narpavi Technology</li>
-              <li>Narpavi Research Institute</li>
-              <li>IEEE Big Data Projects 2023–2025</li>
-              <li>B.Tech Big Data Projects</li>
-              <li>M.Tech Big Data Projects</li>
-              <li>Ph.D. Big Data Research</li>
-              <li>Hadoop Projects</li>
-              <li>Apache Spark Projects</li>
-              <li>NoSQL Big Data Applications</li>
-              <li>Cloud Big Data Solutions</li>
-              <li>Industry 4.0 Data Analytics</li>
-              <li>Real-Time Big Data Processing</li>
-              <li>AI in Big Data</li>
-              <li>IEEE Big Data Paper Support</li>
-            </ul>
+  {keywords.map((item, index) => (
+    <li key={index}>{item}</li>
+  ))}
+</ul>
+
           </div>
 
-          {/* Center: Main Content */}
-          <div className="BigDataProjectDevelopmentCenter-center">
-            <h1>Big Data – Project Development Center</h1>
-
-            <section className="BigDataProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Big Data – Project Development Center in Chennai</h1>
+             <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 <strong>Big Data – Project Development Center</strong> is at the forefront of innovation, guiding aspiring engineers and researchers toward excellence in data-driven solutions. At Narpavi Research Institute, we support B.Tech, M.Tech, and Ph.D. students from across the globe in crafting impactful projects that integrate both software and hardware dimensions of Big Data. Our specialized training and mentorship are rooted in IEEE Transactions topics from 2023 to 2025, ensuring that every project aligns with the most recent technological trends.
               </p>
@@ -76,9 +93,9 @@ const BigDataProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BigDataProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="BigDataProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -103,7 +120,7 @@ const BigDataProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="BigDataProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Big Data Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on practical Big Data projects like sentiment analysis or predictive modeling, aligned with IEEE topics.
@@ -120,7 +137,7 @@ const BigDataProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BigDataProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Big Data Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced Big Data projects in real-time analytics, edge computing, and privacy-preserving systems, aligned with IEEE research.
@@ -137,7 +154,7 @@ const BigDataProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BigDataProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Big Data Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering Big Data research in distributed systems, AI-driven analytics, and privacy-preserving frameworks.
@@ -154,7 +171,7 @@ const BigDataProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BigDataProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Big Data Project Titles (2023–2025)</h2>
               <ul>
                 <li>Real-Time Anomaly Detection in IoT-Enabled Smart Cities Using Federated Learning – 2023</li>
@@ -166,7 +183,7 @@ const BigDataProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="BigDataProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Big Data Project Development</h2>
               <p>
                 Narpavi Research Institute's Big Data – Project Development Center integrates cutting-edge IEEE research with hands-on project development, fostering scalable and innovative data-driven solutions.
@@ -189,26 +206,11 @@ const BigDataProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="BigDataProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+                <Csesidebar/>
           </div>
+
         </div>
       </div>
     </div>

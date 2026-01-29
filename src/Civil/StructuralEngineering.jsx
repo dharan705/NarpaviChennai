@@ -1,90 +1,84 @@
 import "./CEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Structural Engineering IEEE Projects 2023–2025",
+  "Structural Health Monitoring Projects",
+  "Earthquake Resistant Structures Projects",
+  "IoT Structural Engineering Projects",
+  "FEA Structural Analysis Projects",
+  "Tall Building Structural Design",
+  "Bridge Design Optimization Projects",
+  "Structural Engineering B.Tech M.Tech Ph.D.",
+  "Narpavi Research Institute Civil Projects",
+];
 
 const faqs = [
   {
     question: "What services does the Structural Engineering Project Development Center offer?",
     answer:
-      "Narpavi Research Institute’s Structural Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural analysis, earthquake-resistant design, and IoT-based structural health monitoring for safe and sustainable infrastructure."
+      "Narpavi Research Institute’s Structural Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on structural analysis, earthquake-resistant design, and IoT-based structural health monitoring.",
   },
   {
     question: "What types of Structural Engineering projects are supported?",
     answer:
-      "We support B.Tech projects (basic structural design and modeling), M.Tech projects (advanced FEA and optimization), and Ph.D. projects (IoT and AI-driven structural monitoring) for applications in buildings, bridges, and dams."
+      "We support B.Tech, M.Tech, and Ph.D. projects covering structural design, FEA, optimization, and smart monitoring systems.",
   },
   {
-    question: "Which tools and technologies are used in Structural Engineering projects?",
+    question: "Which tools and technologies are used?",
     answer:
-      "Our stack includes AutoCAD, STAAD Pro, SAP2000, ETABS, ANSYS, ABAQUS, smart sensors, IoT modules (Wi-Fi/LoRa), and AI frameworks (TensorFlow, Keras) for structural analysis and monitoring."
+      "Tools include AutoCAD, STAAD Pro, ETABS, SAP2000, ANSYS, ABAQUS, IoT sensors, and AI frameworks.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
     answer:
-      "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering and Structural Health Monitoring, focusing on seismic design, smart monitoring, and advanced materials."
+      "Projects align with IEEE Transactions (2023–2025) on Civil and Structural Engineering.",
   },
   {
-    question: "What support is provided for academic submissions?",
+    question: "What academic support is provided?",
     answer:
-      "We offer end-to-end guidance, including topic selection, system design, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
-  }
+      "Complete guidance from topic selection to simulation, validation, documentation, and publication.",
+  },
 ];
 
 const CEStructuralEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
 
-      {/* ✅ SEO (added – content untouched) */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Structural Engineering IEEE Projects (2023–2025)"
-        description="Structural Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on structural analysis, earthquake-resistant design, IoT-based structural health monitoring, AI, and sustainable infrastructure."
+        title="Structural Engineering – Project Development Center in Chennai"
+        description="Structural Engineering project development for B.Tech, M.Tech, and Ph.D. students focusing on structural analysis, earthquake-resistant design, IoT-based structural health monitoring, AI, and sustainable infrastructure."
+        keywords={keywords}
         url="/department/structural-engineering"
-        type="article"
-        keywords={[
-          "Structural Engineering Projects",
-          "Structural Health Monitoring IEEE Projects",
-          "Earthquake Resistant Structures",
-          "IoT Structural Engineering Projects",
-          "FEA Structural Analysis Projects",
-          "PhD Structural Engineering Projects"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" },
+        ]}
+      />
 
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Structural Engineering Projects</li>
-              <li>Structural Health Monitoring IEEE Projects 2023–2025</li>
-              <li>Earthquake Resistant Structures</li>
-              <li>Smart Building Design</li>
-              <li>Tall Building Analysis Projects</li>
-              <li>Bridge Design Optimization</li>
-              <li>Structural Engineering B.Tech M.Tech Ph.D.</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Structural Engineering – Project Development Support</h1>
 
-            {/* Internal links (added, original content preserved) */}
-            <p className="seo-internal-links">
-              Explore our
-              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
-              <a href="/phd-project-development"> PhD Project Guidance</a>, and
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
-              for complete academic support.
-            </p>
-
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Structural Engineering – Project Development Center in Chennai
+            </h1>
+  <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Structural Engineering Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on structural analysis, design, and health monitoring. Our projects focus on creating safe, durable, and sustainable structures like buildings, bridges, and dams.
               </p>
@@ -241,38 +235,43 @@ const CEStructuralEngineeringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/structural-engineering">
-      Structural Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/earthquake-resistant-structures">
-      Earthquake Resistant Structures
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/steel-rcc-design-optimization">
-      Steel & RCC Design Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/tall-building-analysis">
-      Tall Building Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/bridge-design-monitoring">
-      Bridge Design & Monitoring
-    </a>
-  </li>
-</ul>
-
-          </div>
+              <li>
+                <a href="/department/structural-engineering">
+                  Structural Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/earthquake-resistant-structures">
+                  Earthquake Resistant Structures
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/steel-rcc-design-optimization">
+                  Steel & RCC Design Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/tall-building-analysis">
+                  Tall Building Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/bridge-design-monitoring">
+                  Bridge Design & Monitoring
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import React from "react";
-//import ScrollToTop from './assets/ScrollToTop'
+import ScrollToTop from './assets/ScrollToTop'
 // import Fact from "./pages/Researchproposalservices"
 import "./index.css"
 import Home from './pages/Home'
@@ -481,7 +481,7 @@ import IndustrialProductionOptimization from './Mechanical/IndustrialProductionO
         import SmartFactorySystems from './Mechanical/IndustrialProductionOptimization/SmartFactorySystems'
         import CostTimeOptimization from './Mechanical/IndustrialProductionOptimization/CostTimeOptimization'
 
-// import Header from './Header'
+import Header from './Header'
 import Design from './pages/Design';
 import Footer from './Footer';
 import Departments from './pages/DepartmentList';
@@ -548,49 +548,84 @@ import EEERegenerativeBrakingSystemsProjectDevelopmentCenter from './EEE/Electri
 import Design2 from "./Design2"
 
 import ServicesCategories from "./pages/ServiceCategories"
+import MATLABProjectCenter from './services/MATLABProjectCenter';
+import LogoSlider from './pages/LogoSlider';
+import IEEEProjectCenter from './services/IEEEProjectCenter';
+import NS2NS3ProjectCenter from './services/NS2NS3ProjectCenter';
+import PhDProjectCenter from './services/PhDProjectCenter';
+import MEMTechProjectCenter from './services/ME_MTechProjectCenter';
+import BEBTechProjectCenter from './services/BE_BTechProjectCenter';
+import ConferencePaper from './services/Conferencepaperwriting';
+import PhDResearchGuidance from './services/PhDResearchGuidance';
+import IeeeMatlabProjectSupport from './services/IeeeMatlabProjectSupport';
+import RealtimeSimulationModeling from './services/RealtimeSimulationModeling';
+import FinalYearMatlabProjects from './services/FinalYearMatlabProjects';
+import NS2WirelessTraining from './services/NS2WirelessTraining';
+import NS3ProtocolImplementation from './services/NS3ProtocolImplementation';
+import FinalYearNS2NS3 from './services/FinalYearNS2NS3';
+import IEEEScopusSupport from './services/IEEEScopusSupport';
+import METechProjects from './services/ME_MTechProjectCenter';
+import MEProjectGuidance from './services/MEProjectGuidance';
+import MTechDissertationSupport from './services/MTechDissertationSupport';
+import IEEEProjectTraining from './services/IEEEProjectTraining';
+import IEEEFinalYearProjectSupport from './services/IEEEFinalYearProjectSupport';
+import RealTimeIEEEProjects from './services/RealTimeIEEEProjects';
+import ResearchProblemSupport from './services/ResearchProblemSupport';
+import EndToEndPhDGuidance from './services/EndToEndPhDGuidance';
+import JournalPaperSupport from './services/JournalPaperSupport';
+import EngineeringPhDResearchGuidance from './services/EngineeringPhDResearchGuidance';
+import AdvancedResearchGuidance from './services/AdvancedResearchGuidance';
+import EndToEndSupport from './services/EndToEndSupport';
+import JournalScopusSupport from './services/JournalScopusSupport';
+import ProposalSynopsisMentorship from './services/ProposalSynopsisMentorship';
+import PhDDissertationSupport from './services/PhDDissertationSupport';
+import HighImpactPublication from './services/HighImpactPublication';
 
 function MainPage() {
   return(
    <>
+   {/* <ScrollToTop /> */}
     {/* <Header/> */}
       <Routes>
-     
         <Route path="/" element={<Home />} /> 
         <Route path="/d" element={<Design />} /> 
         {/* <Route path="/fact" element={<Fact />} />  */}
         <Route path="/college" element={<College />} />
         <Route path="/service" element={<Service />} />
-        <Route path="/phd-admission-in-anna-university-chennai" element={<Subheading />} />
-        <Route path="/annamalai-university" element={<Annamalaiuniversity />} />
-        <Route path="/bharathiar-university" element={<Bharathiaruniversity />} />
-        <Route path="/vit-university" element={<Vituniversity />} />
-        <Route path="/mgr-institute" element={<Mgr />} />
-        <Route path="/sathyabama-university" element={<Sathyabama />} />
-        <Route path="/saveetha-university" element={<Saveetha />} />
-        <Route path="/srm-university" element={<Srm />} />
-        <Route path="/vistas" element={<Vels />} />
-        <Route path="/biher" element={<Bharath />} />
-        <Route path="/amrita" element={<Amrita />} />
-        <Route path="/hits" element={<Hindustan  />} />
-        <Route path="/alagappa-university" element={<Alagappa  />} />
-        <Route path="/manonmaniam-university" element={<Manonmaniam />} />
-        <Route path="/periyar-university" element={<Periyar />} />
-        <Route path="/madurai-kamaraj-university" element={<MaduraiKamaraj />} />
-        <Route path="/bharathidasan-university" element={<Bharathidasan />} />
-        <Route path="/sastra-university" element={<Sastra />} />
-        <Route path="/sri-ramakrishna-engineering" element={<SriRamakrishna />} />
-        <Route path="/sns" element={<Sns />} />
-        <Route path="/coimbatore-institute" element={<Cit />} />
-        <Route path="/psg" element={<Psg />} />
-        <Route path="/vinayaka-missions" element={<VinayakaMission />} />
-        <Route path="/prist-university" element={<PonnaiyahRamajayam />} />
-        <Route path="/periyar-maniammai-university" element={<PeriyarManiammai />} />
-        <Route path="/st-peter’s-institute" element={<StPeters />} />
-        <Route path="/sri-chandrasekharendra-saraswathi" element={<Srichandrasekharendra />} />
-        <Route path="/karpagam-academy" element={<Karpagam />} />
-        <Route path="/karunya" element={<Karunya />} />
-        <Route path="/vel-tech-rangarajan" element={<VelTech />} />
-        <Route path="/kalasalingam-academy" element={<Kalasalingam />} />
+        {/* Tn college */}
+        <Route path="/phd-admission-assistance-in-anna-university" element={<Subheading />} />
+<Route path="/phd-admission-assistance-in-anna-malai-university" element={<Annamalaiuniversity />} />
+<Route path="/phd-admission-assistance-in-bharathiar-university" element={<Bharathiaruniversity />} />
+<Route path="/phd-admission-assistance-in-vit" element={<Vituniversity />} />
+<Route path="/phd-admission-assistance-in-mgr-institute" element={<Mgr />} />
+<Route path="/phd-admission-assistance-in-sathyabama-university" element={<Sathyabama />} />
+<Route path="/phd-admission-assistance-in-saveetha-university" element={<Saveetha />} />
+<Route path="/phd-admission-assistance-in-srm" element={<Srm />} />
+<Route path="/phd-admission-assistance-in-vels-vistas" element={<Vels />} />
+<Route path="/phd-admission-assistance-in-biher" element={<Bharath />} />
+<Route path="/phd-admission-assistance-in-amrita" element={<Amrita />} />
+<Route path="/phd-admission-assistance-in-hits" element={<Hindustan />} />
+<Route path="/phd-admission-assistance-in-alagappa-university" element={<Alagappa />} />
+<Route path="/phd-admission-assistance-in-manu" element={<Manonmaniam />} /> 
+<Route path="/phd-admission-assistance-in-periyar-university" element={<Periyar />} />
+<Route path="/phd-admission-assistance-in-madurai-kamaraj-university" element={<MaduraiKamaraj />} />
+<Route path="/phd-admission-assistance-in-bharathidasan-university" element={<Bharathidasan />} />
+<Route path="/phd-admission-assistance-in-sastra" element={<Sastra />} />
+<Route path="/phd-admission-assistance-in-sri-ramakrishna-engineering" element={<SriRamakrishna />} />
+<Route path="/phd-admission-assistance-in-sns" element={<Sns />} />
+<Route path="/phd-admission-assistance-in-cit" element={<Cit />} />
+<Route path="/phd-admission-assistance-in-psg" element={<Psg />} />
+<Route path="/phd-admission-assistance-in-vinayaka-mission" element={<VinayakaMission />} />
+<Route path="/phd-admission-assistance-in-prist-university" element={<PonnaiyahRamajayam />} />
+<Route path="/phd-admission-assistance-in-periyar-maniammai-university" element={<PeriyarManiammai />} />
+<Route path="/phd-admission-assistance-in-st-peters-institute" element={<StPeters />} />
+<Route path="/phd-admission-assistance-in-scsstm" element={<Srichandrasekharendra />} />
+<Route path="/phd-admission-assistance-in-karpagam-academy" element={<Karpagam />} />
+<Route path="/phd-admission-assistance-in-karunya-university" element={<Karunya />} />
+<Route path="/phd-admission-assistance-in-vel-tech" element={<VelTech />} />
+<Route path="/phd-admission-assistance-in-kalasalingam-university" element={<Kalasalingam />} />
+
+
         {/* subsiderbar */}
         <Route path="/refer-guide" element={<ReferGuide />} />
         <Route path="/phd-topic-selection" element={<TopicSelection />} />
@@ -604,6 +639,7 @@ function MainPage() {
         <Route path="/service/research-paper-writing" element={<Researchpaperwriting />} />
         <Route path="/service/review-paper-writing" element={<Reviewpaperwriting />} />
         <Route path="/service/anna-university-annexture" element={<Annauniversityannexture />} />
+        <Route path="/service/conference-paper" element={<ConferencePaper />} />
         <Route path="/service/elsevier-conference-paper-publication-services" element={<ElsevierConference />} />
         <Route path="/service/ieee-conference-paper-publication-services" element={<IEEEconferencepaper />} />
         <Route path="/service/international-conference-paper-publication-services" element={<Internationalconferencepaper />} />
@@ -618,11 +654,45 @@ function MainPage() {
         <Route path="/service/springer-conference-paper-publication-services" element={<Springerconferencepaper />} />
         <Route path="/service/vit-university-paper-publication-services" element={<VITuniversitypaper />} />
         <Route path="/service/web-of-science-paper-publication-services" element={<Webofsciencepaper />} />
-
+        <Route path="/service/matlab-project-center-in-chennai" element={<MATLABProjectCenter />} />
+                 <Route path="/service/matlab-project-center-in-chennai/ieee-matlab-project-support" element={<IeeeMatlabProjectSupport />} />
+                 <Route path="/service/matlab-project-center-in-chennai/realtime-simulation-modeling" element={<RealtimeSimulationModeling />} />
+                 <Route path="/service/matlab-project-center-in-chennai/final-year-matlab-projects" element={<FinalYearMatlabProjects />} />
+        <Route path="/service/ieee-project-center-in-chennai" element={<IEEEProjectCenter />} />
+                 <Route path="/service/ieee-project-center-in-chennai/ieee-project-training-institute-for-engineering-students" element={<IEEEProjectTraining />} />
+                 <Route path="/service/ieee-project-center-in-chennai/ieee-final-year-project-support-for-be-btech-me-and-mtech" element={<IEEEFinalYearProjectSupport />} />
+                 <Route path="/service/ieee-project-center-in-chennai/real-time-ieee-projects-with-implementation-and-paper-publication" element={<RealTimeIEEEProjects />} />
+        <Route path="/service/ns2-ns3-project-center-in-chennai" element={<NS2NS3ProjectCenter />} />
+                <Route path="/service/ns2-wireless-training-in-chennai" element={<NS2WirelessTraining />} />
+                <Route path="/service/ns3-protocol-implementation-in-chennai" element={<NS3ProtocolImplementation />} />
+                <Route path="/service/final-year-ns2ns3-in-chennai" element={<FinalYearNS2NS3 />} />
+        <Route path="/service/phd-project-center-in-chennai" element={<PhDProjectCenter />} />
+                  <Route path="/service/phd-project-center-in-chennai/research-problem-identification-and-proposal-development-support" element={<ResearchProblemSupport />} />
+                  <Route path="/service/phd-project-center-in-chennai/end-to-end-phd-guidance-with-publication-and-thesis-writing" element={<EndToEndPhDGuidance />} />
+                  <Route path="/service/phd-project-center-in-chennai/journal-paper-writing-review-and-publication-for-phd-scholars" element={<JournalPaperSupport />} />
+        <Route path="/service/me-mtech-project-center-in-chennai" element={<MEMTechProjectCenter />} />
+                <Route path="/service/me-mtech-project-center-in-chennai/ieee-and-scopus-research-paper-support" element={<IEEEScopusSupport />} />
+                <Route path="/service/me-mtech-project-center-in-chennai/mtech-dissertation-support" element={<MTechDissertationSupport />} />
+                <Route path="/service/me-mtech-project-center-in-chennai/me-project-guidance" element={<MEProjectGuidance />} />
+        <Route path="/service/be-btech-project-center-in-chennai" element={<BEBTechProjectCenter />} />
+                {/* <Route path="/service/be-btech-project-center-in-chennai" element={<BEBTechProjectCenter />} /> */}
+                {/* <Route path="/service/be-btech-project-center-in-chennai" element={<BEBTechProjectCenter />} /> */}
+                {/* <Route path="/service/be-btech-project-center-in-chennai" element={<BEBTechProjectCenter />} /> */}
+        <Route path="/service/engineering-phd-research-guidance-chennai" element={<EngineeringPhDResearchGuidance />} />
+                  <Route path="/service/engineering-phd-research-guidance-chennai/advanced-research-guidance-for-all-engineering-disciplines" element={<AdvancedResearchGuidance />} />
+                  <Route path="/service/engineering-phd-research-guidance-chennai/end-to-end-support-proposal,-implementation-and-thesis-completion" element={<EndToEndSupport />} />
+                  <Route path="/service/engineering-phd-research-guidance-chennai/sci-scopus-ieee-journal-and-conference-publication-assistance" element={<JournalScopusSupport />} />
+        <Route path="/service/phd-research-guidance-chennai" element={<PhDResearchGuidance />} />
+                <Route path="/service/phd-research-guidance-chennai/expert-mentorship-for-proposal-synopsis-and-research-framework" element={<ProposalSynopsisMentorship />} />
+                <Route path="/service/phd-research-guidance-chennai/phd-dissertation-support-with-implementation-and-documentation" element={<PhDDissertationSupport />} />
+                <Route path="/service/phd-research-guidance-chennai/high-impact-journal-and-conference-publication-support" element={<HighImpactPublication />} />
+      
+        {/* Research proposal service */}
         <Route path="/research-proposal-services/how-to-write-research-proposal" element={<EngineeringResearchProposalGuide />} />
         <Route path="/research-proposal-services/trending-research-topics" element={<TrendingResearchTopics />} />
         <Route path="/research-proposal-services/research-proposal-for-funding" element={<ResearchFundingGuide />} />
         <Route path="/research-proposal-services/engineering-research-proposal-guide" element={<ProposalStepGuide />} />
+       
         {/* Leading research Services */} 
         <Route path="/review-article-writing" element={<ReviewArticleWriting />} />
                 <Route path="/review-ariticle-writing/engineering-literature-guide" element={<EngineeringLiteratureGuide />} />
@@ -642,7 +712,6 @@ function MainPage() {
         <Route path="/scopus-journal-paper-writing" element={<ScopusPaperWriting />} />
         <Route path="/ieee-conference-paper-writing" element={<IEEEPaperWriting />} />
 
-    
         {/* main publication service */}
         <Route path="/publication-services" element={<MainPublicationServices />} />
               {/* conference-paper-publication-services */}
@@ -767,7 +836,7 @@ function MainPage() {
         {/* cs */}
 <Route path="department/static-web-application" element={<StaticWebApplication />} />
 <Route path="department/dynamic-web-applications" element={<DynamicWebApplications />} />
-<Route path="department/mobile-app" element={<MobileApp />} />
+<Route path="/department/mobile-app-development-project-development-center-in-chennai" element={<MobileApp />} />
 <Route path="department/animations-project" element={<AnimationsProject />} />
 <Route path="department/ai-project" element={<AIProject />} />
 <Route path="department/data-science" element={<DataScience />} />
@@ -1067,7 +1136,7 @@ function MainPage() {
                 <Route path="/department/mechanical-properties-materials/tribology-wear-analysis" element={<TribologyWearAnalysis />} />
                 <Route path="/department/mechanical-properties-materials/nanomaterials-mechanical" element={<NanomaterialsMechanical />} />
                 <Route path="/department/mechanical-properties-materials/fatigue-fracture-analysis" element={<FatigueFractureAnalysis />} />
-
+ 
 <Route path="department/industrial-production-optimization" element={<IndustrialProductionOptimization />} />
                 <Route path="/department/industrial-production-optimization/lean-manufacturing" element={<LeanManufacturing />} />
                 <Route path="/department/industrial-production-optimization/supply-chain-process" element={<SupplyChainProcess />} />
@@ -1081,14 +1150,10 @@ function MainPage() {
 
         <Route path="/se" element={<ServicesCategories/>} /> 
 
-
-
-
-
       </Routes>
+      <LogoSlider/>
       <Footer />
-   
-  </>
+     </>
   );
 }
 

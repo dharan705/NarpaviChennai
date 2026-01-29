@@ -1,64 +1,83 @@
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import { Link } from "react-router-dom";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Biomedical Signal Acquisition Projects",
+  "Biomedical Signal Processing IEEE Projects",
+  "ECG EEG EMG Signal Processing",
+  "AI in Biomedical Signal Processing",
+  "IoT Biomedical Signal Acquisition",
+  "Real Time Healthcare Monitoring Projects",
+  "Blockchain in Biomedical Data",
+  "Wearable Biomedical Signal Devices",
+  "IEEE Biomedical Electronics Projects",
+  "Biomedical Signal Processing Project Development Chennai"
+];
 
 const faqs = [
   {
-    question: "What are the typical biomedical signals acquired and processed in projects?",
-    answer: "Signals include ECG, EEG, EMG, PPG, GSR, SpO₂, and blood pressure, acquired via electrodes or optical sensors for medical analysis."
+    question: "What are the typical biomedical signals acquired?",
+    answer:
+      "Signals include ECG, EEG, EMG, PPG, GSR, SpO₂, and blood pressure using electrodes or optical sensors."
   },
   {
-    question: "Which signal processing techniques are commonly applied?",
-    answer: "Techniques include filtering, R-peak detection, FFT, wavelet transforms, machine learning models, normalization, feature extraction, and AI-driven predictive modeling."
+    question: "Which signal processing techniques are applied?",
+    answer:
+      "Filtering, FFT, wavelet transforms, feature extraction, machine learning, and AI-based predictive modeling."
   },
   {
-    question: "What project platforms and tools are used for biomedical signal acquisition?",
-    answer: "B.Tech utilizes Arduino, Raspberry Pi, MATLAB, Proteus, LabVIEW; M.Tech employs MATLAB Simulink, TensorFlow, Python, LabVIEW, COMSOL for advanced systems."
+    question: "What platforms are used?",
+    answer:
+      "Arduino, Raspberry Pi, MATLAB, Proteus, LabVIEW for B.Tech and MATLAB Simulink, Python, TensorFlow, COMSOL for advanced work."
   },
   {
-    question: "What advanced areas do Ph.D. projects focus on in biomedical signal processing?",
-    answer: "Ph.D. research explores AI-driven signal processing, secure data transmission via blockchain, multimodal fusion for diagnosis, edge computing for real-time monitoring, and advanced noise cancellation."
+    question: "What are Ph.D. research areas?",
+    answer:
+      "AI-driven signal processing, blockchain-secured data, multimodal fusion, and edge computing for real-time monitoring."
   },
   {
-    question: "How does Narpavi Research Institute support biomedical signal acquisition projects?",
-    answer: "The institute offers end-to-end guidance including hardware integration, signal preprocessing, AI modeling, and IEEE-standard publication support."
+    question: "How does Narpavi Research Institute support projects?",
+    answer:
+      "Through hardware integration, signal preprocessing, AI modeling, and IEEE-standard publication guidance."
   }
 ];
 
 const BiomedicalSignalAcquisitionProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Biomedical Signal Processing IEEE Projects | ECG EEG EMG | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) biomedical signal acquisition and processing projects using ECG, EEG, EMG, PPG, AI, IoT, and edge computing for real-time healthcare monitoring."
-        keywords="Biomedical Signal Processing Projects, ECG EEG EMG Signal Projects, AI in Biomedical Signal Processing, IoT Biomedical Signal Acquisition, Real-Time Healthcare Monitoring Projects, Blockchain in Biomedical Data, Wearable Biomedical Signal Devices, IEEE Biomedical Signal Projects, Narpavi Research Institute"
-        url="/department/biomedical-electronics/biomedical-signal-acquisition"
+        title="Biomedical Signal Acquisition and Processing – Project Development Center in Chennai"
+        description="IEEE-aligned biomedical signal acquisition and processing project development for B.Tech, M.Tech, and Ph.D. students using ECG, EEG, EMG, PPG, AI, IoT, blockchain, and edge computing for healthcare monitoring."
+        keywords={keywords}
+        url="/department/biomedical-electronics/biomedical-signal-acquisition-and-processing–project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Biomedical Signal Processing Projects</li>
-              <li>ECG EEG EMG Signal Projects</li>
-              <li>AI in Biomedical Signal Processing</li>
-              <li>IoT Biomedical Signal Acquisition</li>
-              <li>Real-Time Healthcare Monitoring Projects</li>
-              <li>Blockchain in Biomedical Data</li>
-              <li>Wearable Biomedical Signal Devices</li>
-              <li>IEEE Biomedical Signal Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 🔒 CENTER CONTENT */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Biomedical Signal Acquisition and Processing – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>
+              Biomedical Signal Acquisition and Processing – Project Development Center in Chennai
+            </h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> supports IEEE-aligned (2023–2025) projects in biomedical signal acquisition and processing, focusing on capturing ECG, EEG, EMG, PPG, GSR, SpO₂, and blood pressure signals for advanced healthcare monitoring and diagnostics.[web:40][web:45]
               </p>
@@ -183,19 +202,26 @@ const BiomedicalSignalAcquisitionProject = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
-  <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics </a></li>
-  <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition </a></li>
-  <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface </a></li>
-  <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices </a></li>
-  <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics </a></li>
-  <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices </a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/biomedical-electronics">Biomedical Electronics</a></li>
+              <li><a href="/department/biomedical-electronics/ai-biomedical-diagnostics">AI Biomedical Diagnostics</a></li>
+              <li><a href="/department/biomedical-electronics/biomedical-signal-acquisition">Biomedical Signal Acquisition</a></li>
+              <li><a href="/department/biomedical-electronics/brain-computer-interface">Brain Computer Interface</a></li>
+              <li><a href="/department/biomedical-electronics/iot-enabled-healthcare-devices">IoT Enabled Healthcare Devices</a></li>
+              <li><a href="/department/biomedical-electronics/implantable-medical-electronics">Implantable Medical Electronics</a></li>
+              <li><a href="/department/biomedical-electronics/wearable-biomedical-devices">Wearable Biomedical Devices</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

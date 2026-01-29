@@ -1,93 +1,85 @@
 import "./CEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Remote Sensing & GIS IEEE Projects 2023–2025",
+  "GIS Civil Engineering Projects",
+  "UAV Based GIS Projects",
+  "LiDAR Civil Engineering Projects",
+  "AI in Remote Sensing",
+  "IoT GIS Civil Engineering Projects",
+  "Cloud GIS Projects",
+  "Satellite Image Processing Projects",
+  "Smart City GIS Projects",
+  "Narpavi Research Institute Civil Projects",
+];
 
 const faqs = [
   {
     question: "What services does the Remote Sensing & GIS Project Development Center offer?",
     answer:
-      "Narpavi Research Institute’s Remote Sensing & GIS Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on spatial analysis, urban planning, disaster management, and smart infrastructure monitoring."
+      "Narpavi Research Institute’s Remote Sensing & GIS Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on spatial analysis, urban planning, disaster management, and smart infrastructure monitoring.",
   },
   {
     question: "What types of Remote Sensing & GIS projects are supported?",
     answer:
-      "We support B.Tech projects (basic mapping and land use analysis), M.Tech projects (AI-based spatial analytics and flood modeling), and Ph.D. projects (deep learning and IoT-integrated geospatial systems) for civil engineering applications."
+      "We support B.Tech, M.Tech, and Ph.D. projects including mapping, flood modeling, AI-based spatial analytics, and IoT-integrated GIS systems.",
   },
   {
     question: "Which tools and technologies are used in Remote Sensing & GIS projects?",
     answer:
-      "Our stack includes QGIS, ArcGIS, Google Earth Engine, ERDAS Imagine, LiDAR, UAVs, Python scripting, AI frameworks (TensorFlow, Keras), and IoT for geospatial analysis."
+      "Tools include QGIS, ArcGIS, Google Earth Engine, ERDAS Imagine, UAVs, LiDAR, Python, and AI frameworks.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
     answer:
-      "Projects are based on IEEE Transactions (2023–2025) on Remote Sensing and GIS, focusing on satellite imagery, AI-driven analytics, and cloud-based geospatial systems."
+      "Projects align with IEEE Transactions (2023–2025) on Remote Sensing and GIS.",
   },
   {
     question: "What support is provided for academic submissions?",
     answer:
-      "We offer end-to-end guidance, including topic selection, data processing, model validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
-  }
+      "We provide complete support from topic selection to validation, documentation, and publication.",
+  },
 ];
 
 const CERemoteSensingGISProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
 
-      {/* ✅ SEO (added – content untouched) */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Remote Sensing & GIS IEEE Projects (2023–2025)"
-        description="Remote Sensing & GIS IEEE project development for B.Tech, M.Tech & PhD scholars focusing on spatial analysis, urban planning, disaster management, AI, IoT, UAVs, LiDAR, and smart infrastructure monitoring."
+        title="Remote Sensing & GIS – Project Development Center in Chennai"
+        description="Remote Sensing & GIS project development for B.Tech, M.Tech, and Ph.D. students focusing on spatial analysis, urban planning, disaster management, AI, IoT, UAVs, LiDAR, and smart infrastructure monitoring."
+        keywords={keywords}
         url="/department/remote-sensing-gis"
-        type="article"
-        keywords={[
-          "Remote Sensing Civil Engineering Projects",
-          "GIS IEEE Projects",
-          "UAV GIS Projects",
-          "LiDAR Civil Engineering Projects",
-          "AI in Remote Sensing",
-          "IoT GIS Projects",
-          "PhD Remote Sensing GIS Projects"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" },
+        ]}
+      />
 
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Remote Sensing Civil Engineering Projects</li>
-              <li>GIS IEEE Projects 2023–2025</li>
-              <li>UAV-based Surveying Civil Projects</li>
-              <li>LiDAR Civil Project Ideas</li>
-              <li>Cloud GIS Projects</li>
-              <li>AI in Remote Sensing Projects</li>
-              <li>IoT GIS Civil Engineering Projects</li>
-              <li>Satellite Image Processing Projects</li>
-              <li>Smart City GIS Projects</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Remote Sensing & GIS – Project Development Support</h1>
 
-            {/* Internal links (added, original content preserved) */}
-            <p className="seo-internal-links">
-              Explore our
-              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
-              <a href="/phd-project-development"> PhD Project Guidance</a>, and
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
-              for complete academic support.
-            </p>
-
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Remote Sensing & GIS – Project Development Center in Chennai
+            </h1>
+                 <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Remote Sensing & GIS Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on spatial analysis, urban planning, disaster management, and smart infrastructure monitoring.
               </p>
@@ -265,28 +257,33 @@ const CERemoteSensingGISProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/remote-sensing-gis">
-      Remote Sensing & GIS
-    </a>
-  </li>
-  <li>
-    <a href="/department/remote-sensing-gis/gis-based-urban-planning">
-      GIS-Based Urban Planning
-    </a>
-  </li>
-  <li>
-    <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
-      Remote Sensing for Disaster Management
-    </a>
-  </li>
-</ul>
-
-          </div>
+            <ul>
+              <li>
+                <a href="/department/remote-sensing-gis">
+                  Remote Sensing & GIS
+                </a>
+              </li>
+              <li>
+                <a href="/department/remote-sensing-gis/gis-based-urban-planning">
+                  GIS-Based Urban Planning
+                </a>
+              </li>
+              <li>
+                <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
+                  Remote Sensing for Disaster Management
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

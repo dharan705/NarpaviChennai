@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar";
+import Subsidebar from ".././pages/Subsidebar"
 import SEO from "../assets/SEO";
 
 const faqs = [
@@ -35,7 +35,11 @@ const WebOfSciencePublication = () => {
         faqs={faqs}
         url="/service/web-of-science-paper-publication-services"
       />
-      <SubSiderbar />
+         <Subsidebar
+  extraLinks={[
+    { id: "service", label: "service", path: "/service" }
+  ]}
+/>
       <section className="phd-guidance-container">
         <h1 className="title">Web of Science Paper Publication Services</h1>
 

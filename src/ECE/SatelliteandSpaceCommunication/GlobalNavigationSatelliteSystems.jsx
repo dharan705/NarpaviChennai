@@ -1,63 +1,87 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What are Global Navigation Satellite Systems (GNSS)?",
-    answer: "GNSS are satellite-based systems providing global positioning, navigation, and timing services with constellations like GPS, GLONASS, Galileo, BeiDou, and NavIC."
+    answer:
+      "GNSS are satellite-based systems providing global positioning, navigation, and timing services."
   },
   {
     question: "What do B.Tech projects in GNSS focus on?",
-    answer: "Fundamental projects include GNSS receiver design, navigation systems for drones, tracking for logistics, and weather data collection using Arduino, MATLAB, and GPS modules."
+    answer:
+      "GNSS receiver design, drone navigation, logistics tracking, and weather data collection."
   },
   {
     question: "What advanced studies are covered in M.Tech GNSS projects?",
-    answer: "Advanced topics include multi-constellation integration, anti-spoofing algorithms, smart transportation systems, and GNSS-IoT integration using MATLAB, Python, NS3, and GNSS-SDR."
+    answer:
+      "Multi-constellation integration, anti-spoofing algorithms, and GNSS–IoT integration."
   },
   {
     question: "What areas do Ph.D. GNSS research projects emphasize?",
-    answer: "Research focuses on AI-enabled error correction, GNSS integration with 5G/6G for low latency, high-precision timing, and resilient GNSS communication."
+    answer:
+      "AI-enabled error correction, GNSS with 5G/6G, high-precision timing, and resilient GNSS."
   },
   {
-    question: "Which tools and platforms are commonly used in GNSS projects?",
-    answer: "Tools include MATLAB, Python, NS3, GNSS-SDR, MQTT, LoRaWAN, TensorFlow, and GPS modules."
+    question: "Which tools are commonly used in GNSS projects?",
+    answer:
+      "MATLAB, Python, NS3, GNSS-SDR, MQTT, LoRaWAN, TensorFlow, and GPS modules."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "GNSS",
+  "GPS",
+  "GLONASS",
+  "Galileo",
+  "BeiDou",
+  "NavIC",
+  "GNSS Security",
+  "GNSS IoT",
+  "GNSS 5G/6G",
+  "Navigation Systems",
+  "AI-based GNSS",
+  "IEEE GNSS Research",
+  "Narpavi Research Institute GNSS"
 ];
 
 const GnssProjectCenter = () => {
   return (
     <div className="ECEProjectCenter">
-       <SEO
-        title="GNSS IEEE Projects | GPS, NavIC, Multi-Constellation, IoT & 5G/6G | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) GNSS projects on GPS/GLONASS/Galileo/BeiDou/NavIC receivers, multi-constellation fusion, anti-spoofing, GNSS–IoT integration, and AI-enhanced positioning with MATLAB, Python, NS3, GNSS-SDR, MQTT, LoRaWAN, and TensorFlow."
-        keywords="GNSS, GPS, GLONASS, Galileo, BeiDou, NavIC, GNSS Security, GNSS IoT, GNSS 5G/6G, Navigation Systems, AI-based GNSS, IEEE GNSS Research, Narpavi Research Institute GNSS"
-        url="/department/satellite-communication/gnss-project"
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="GNSS (Global Navigation Satellite Systems) – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) GNSS projects on GPS, NavIC, multi-constellation fusion, anti-spoofing, GNSS–IoT integration, and AI-enhanced positioning."
+        keywords={keywords}
+        url="/department/satellite-communication/gnss-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectCenter-main">
         <div className="ECEProjectCenter-grid">
-          <div className="ECEProjectCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>GNSS</li>
-              <li>GPS</li>
-              <li>GLONASS</li>
-              <li>Galileo</li>
-              <li>BeiDou</li>
-              <li>NavIC</li>
-              <li>GNSS Security</li>
-              <li>GNSS IoT</li>
-              <li>GNSS 5G/6G</li>
-              <li>Navigation Systems</li>
-              <li>AI-based GNSS</li>
-              <li>IEEE GNSS Research</li>
-              <li>Narpavi Research Institute GNSS</li>
-            </ul>
-          </div>
+
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT ================= */}
           <div className="ECEProjectCenter-center">
-            <h1>GNSS (Global Navigation Satellite Systems) – Project Development Center</h1>
-            <section className="ECEProjectCenter-intro">
+            <h1>
+              GNSS (Global Navigation Satellite Systems) – Project Development Center in Chennai
+            </h1>
+              <section className="ECEProjectCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> specializes in GNSS-related project guidance and research, covering GPS, GLONASS, Galileo, BeiDou, and NavIC technologies, with a focus on integration with IoT and 5G/6G networks.
               </p>
@@ -170,18 +194,26 @@ const GnssProjectCenter = () => {
             </section>
           </div>
 
-          <div className="ECEProjectCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

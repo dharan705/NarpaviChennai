@@ -1,76 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Supply Chain & Process Optimization Project Development Center in Chennai",
+  "Supply Chain IEEE Projects 2023–2025",
+  "AI Supply Chain Forecasting Projects",
+  "Blockchain Supply Chain Transparency",
+  "IoT Enabled Logistics Tracking",
+  "Digital Twin Supply Chain Optimization",
+  "Green Supply Chain Projects",
+  "B.Tech Supply Chain Projects",
+  "M.Tech Logistics Optimization",
+  "Narpavi Research Institute SCM Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Supply Chain & Process Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Supply Chain & Process Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-powered demand forecasting, blockchain-enabled transparency, IoT-based tracking, digital twins, and green logistics for applications in e-commerce, automotive, pharmaceutical, and manufacturing industries."
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on AI-driven demand forecasting, blockchain transparency, IoT tracking, digital twins, and green logistics."
   },
   {
-    question: "What types of Supply Chain & Process Optimization projects are supported?",
-    answer: "We support B.Tech projects (inventory modeling, IoT tracking), M.Tech projects (AI-driven forecasting, blockchain integration), and Ph.D. projects (digital twins, cybersecure supply chains) for applications in logistics, retail, and smart factories."
+    question: "Who can apply for these projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Industrial, Production, and Manufacturing disciplines."
   },
   {
-    question: "Which tools and technologies are used in Supply Chain & Process Optimization projects?",
-    answer: "Our stack includes MATLAB, ARENA, Python, Arduino, Raspberry Pi, cloud platforms, blockchain frameworks, and digital twin systems for simulation, IoT integration, and optimization."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB, ARENA, Python, Arduino, Raspberry Pi, cloud platforms, blockchain frameworks, and digital twin systems."
   },
   {
-    question: "How are Supply Chain & Process Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics, Logistics, and Systems Engineering, focusing on AI, IoT, blockchain, and digital twins, aligned with IEEE standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects are aligned with IEEE Transactions (2023–2025) on Industrial Informatics and Logistics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier journal and patent support is available."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Supply Chain & Process Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Supply Chain & Process Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI forecasting, blockchain transparency, IoT logistics, digital twins, and green supply chains.";
+
+const pageUrl =
+  "/department/industrial-production-optimization/supply-chain-process";
 
 const MESupplyChainProcessOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Supply Chain & Process Optimization IEEE Projects (2023–2025)"
-        description="Supply Chain Process Optimization IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ARENA, AI forecasting, blockchain transparency, IoT tracking, digital twins, green logistics for e-commerce, automotive, pharma."
-        url="/department/industrial-production-optimization/supply-chain-process"
-        type="article"
-        keywords={[
-          "Supply Chain IEEE Projects",
-          "AI Supply Chain Forecasting",
-          "Blockchain Supply Chain Transparency",
-          "IoT Enabled Logistics Tracking",
-          "Digital Twin Supply Chain Optimization",
-          "B.Tech Supply Chain Projects",
-          "M.Tech Logistics Optimization",
-          "Ph.D. Supply Chain Resilience",
-          "Smart Factory Supply Chain",
-          "Narpavi Research Institute SCM Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Supply Chain IEEE Projects</li>
-              <li>AI in Supply Chain Forecasting</li>
-              <li>Blockchain Supply Chain Transparency Projects</li>
-              <li>IoT-Enabled Logistics Tracking</li>
-              <li>Digital Twin Supply Chain Optimization</li>
-              <li>B.Tech Supply Chain Projects</li>
-              <li>M.Tech Logistics Optimization</li>
-              <li>Ph.D. Supply Chain Resilience Research</li>
-              <li>Smart Factory Supply Chain IEEE Projects</li>
-              <li>Narpavi Research Institute SCM Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Supply Chain & Process Optimization – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Supply Chain & Process Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on AI-powered demand forecasting, blockchain-enabled transparency, IoT-based tracking, digital twins, and green logistics.
               </p>
@@ -262,43 +281,26 @@ const MESupplyChainProcessOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/industrial-production-optimization">
-      Industrial Production Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/lean-manufacturing">
-      Lean Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/supply-chain-process">
-      Supply Chain Process Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
-      Industrial Safety & Ergonomics
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/smart-factory-systems">
-      Smart Factory Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/cost-time-optimization">
-      Cost & Time Optimization
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-production-optimization">Industrial Production Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/lean-manufacturing">Lean Manufacturing</a></li>
+              <li><a href="/department/industrial-production-optimization/supply-chain-process">Supply Chain Process Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/industrial-safety-ergonomics">Industrial Safety & Ergonomics</a></li>
+              <li><a href="/department/industrial-production-optimization/smart-factory-systems">Smart Factory Systems</a></li>
+              <li><a href="/department/industrial-production-optimization/cost-time-optimization">Cost & Time Optimization</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

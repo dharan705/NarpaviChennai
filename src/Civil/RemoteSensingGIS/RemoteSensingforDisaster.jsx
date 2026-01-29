@@ -1,77 +1,88 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Remote Sensing for Disaster Management IEEE Projects 2023–2025",
+  "Satellite Disaster Monitoring Projects",
+  "UAV GIS Disaster Risk Mapping",
+  "Flood and Landslide Remote Sensing",
+  "AI Remote Sensing Disaster Forecasting",
+  "Cloud GIS Disaster Mitigation",
+  "Civil Engineering Disaster Projects",
+  "Remote Sensing PhD Projects",
+  "GIS Disaster Management Research",
+  "Narpavi Research Institute Civil Projects"
+];
 
 const faqs = [
   {
-    question: "What services does the Remote Sensing for Disaster Management Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Remote Sensing for Disaster Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on satellite-based disaster monitoring, UAV applications, and AI-driven disaster prediction."
+    question:
+      "What services does the Remote Sensing for Disaster Management Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Remote Sensing for Disaster Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on satellite-based disaster monitoring, UAV applications, and AI-driven disaster prediction."
   },
   {
-    question: "What types of Remote Sensing for Disaster Management projects are supported?",
-    answer: "We support B.Tech projects (flood mapping, earthquake damage visualization), M.Tech projects (cyclone prediction, landslide zonation), and Ph.D. projects (AI-assisted flood forecasting, Cloud GIS for earthquake risk) for disaster management."
+    question:
+      "What types of Remote Sensing for Disaster Management projects are supported?",
+    answer:
+      "B.Tech projects on flood mapping and earthquake damage visualization, M.Tech projects on cyclone prediction and landslide zonation, and Ph.D. projects on AI-assisted flood forecasting and Cloud GIS-based earthquake risk assessment."
   },
   {
-    question: "Which tools and technologies are used in Remote Sensing for Disaster Management projects?",
-    answer: "Our stack includes Google Earth Engine, QGIS, ArcGIS, MATLAB, SAR, UAVs, and AI frameworks (TensorFlow, Keras) for disaster analysis and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "Google Earth Engine, QGIS, ArcGIS, MATLAB, SAR data, UAVs, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering, focusing on remote sensing, GIS, and AI for disaster management and resilience."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) focusing on remote sensing, GIS, and AI for disaster management and resilience."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, remote sensing data analysis, AI and GIS integration, simulation-based modeling, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, remote sensing data analysis, GIS and AI integration, simulation-based modeling, documentation, and IEEE/Scopus/Elsevier/Springer publication assistance."
   }
 ];
 
 const CERemoteSensingDisasterManagementProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Remote Sensing for Disaster Management IEEE Projects (2023–2025)"
-        description="Remote Sensing for Disaster Management IEEE project development for B.Tech, M.Tech & PhD scholars using Google Earth Engine, SAR, UAVs, AI, Cloud GIS for flood mapping, earthquake assessment, cyclone prediction, and landslide monitoring."
+        title="Remote Sensing for Disaster Management – Project Development Center in Chennai"
+        description="Remote Sensing for Disaster Management project development for B.Tech, M.Tech, and Ph.D. students using Google Earth Engine, SAR, UAVs, AI, and Cloud GIS for flood mapping, earthquake assessment, cyclone prediction, and landslide monitoring."
+        keywords={keywords}
         url="/department/remote-sensing-gis/remote-sensing-for-disaster"
-        type="article"
-        keywords={[
-          "Remote Sensing Disaster Management",
-          "Satellite Disaster Monitoring IEEE 2023–2025",
-          "UAV GIS Disaster Risk Mapping",
-          "Flood Landslide Remote Sensing Projects",
-          "AI Remote Sensing Disaster Forecasting",
-          "Cloud GIS Disaster Mitigation",
-          "Civil Engineering Disaster Projects",
-          "Remote Sensing PhD Projects",
-          "GIS Disaster Management Research",
-          "Narpavi Research Institute Civil Projects"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Remote Sensing for Disaster Management</li>
-              <li>Satellite Disaster Monitoring Projects</li>
-              <li>UAV GIS Disaster Risk Mapping</li>
-              <li>Flood and Landslide Remote Sensing Projects</li>
-              <li>AI Remote Sensing Disaster Forecasting</li>
-              <li>Cloud GIS Disaster Mitigation</li>
-              <li>Civil Engineering Disaster Projects IEEE</li>
-              <li>Remote Sensing Ph.D. Projects</li>
-              <li>GIS Disaster Management Research</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Remote Sensing for Disaster Management – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Remote Sensing for Disaster Management – Project Development Center in Chennai
+            </h1>
+
+   <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Remote Sensing for Disaster Management Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on disaster prediction, monitoring, and mitigation using satellite imagery, UAVs, GIS, and AI.
               </p>
@@ -234,28 +245,34 @@ const CERemoteSensingDisasterManagementProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/remote-sensing-gis">
-      Remote Sensing & GIS
-    </a>
-  </li>
-  <li>
-    <a href="/department/remote-sensing-gis/gis-based-urban-planning">
-      GIS-Based Urban Planning
-    </a>
-  </li>
-  <li>
-    <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
-      Remote Sensing for Disaster Management
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/remote-sensing-gis">
+                  Remote Sensing & GIS
+                </a>
+              </li>
+              <li>
+                <a href="/department/remote-sensing-gis/gis-based-urban-planning">
+                  GIS-Based Urban Planning
+                </a>
+              </li>
+              <li>
+                <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
+                  Remote Sensing for Disaster Management
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

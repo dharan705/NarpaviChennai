@@ -1,76 +1,100 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "IoT Based Mechatronics Systems Project Development Center in Chennai",
+  "IoT Mechatronics IEEE Projects 2023–2025",
+  "Smart Mechatronic Systems",
+  "IoT Enabled Robotics Projects",
+  "Digital Twin Mechatronics",
+  "Industry 4.0 IoT Mechatronics",
+  "AI Driven IoT Automation",
+  "Predictive Maintenance IoT Projects",
+  "Edge Computing Mechatronics",
+  "Narpavi Research Institute IoT Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the IoT-based Mechatronics Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT-based Mechatronics Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled robotics, predictive maintenance, digital twins, and AI-driven automation for industries like manufacturing, healthcare, and smart cities."
+    question:
+      "What services does the IoT-based Mechatronics Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s IoT-based Mechatronics Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled robotics, predictive maintenance, digital twins, and AI-driven automation for manufacturing, healthcare, and smart cities."
   },
   {
-    question: "What types of IoT-based Mechatronics projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-controlled robotics), M.Tech projects (AI-driven IoT systems, predictive maintenance), and Ph.D. projects (digital twins, edge computing) for applications in Industry 4.0 and smart automation."
+    question:
+      "What types of IoT-based Mechatronics projects are supported?",
+    answer:
+      "We support B.Tech projects in IoT-controlled robotics, M.Tech projects in AI-driven IoT systems and predictive maintenance, and Ph.D. research in digital twins and edge computing for Industry 4.0."
   },
   {
-    question: "Which tools and technologies are used in IoT-based Mechatronics projects?",
-    answer: "Our stack includes Arduino IDE, MATLAB, ROS, Proteus, Python, AI frameworks (TensorFlow, Keras), Raspberry Pi, ESP32, and IoT cloud platforms like AWS IoT and ThingSpeak for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in IoT-based Mechatronics projects?",
+    answer:
+      "Arduino IDE, MATLAB, ROS, Proteus, Python, TensorFlow, Keras, Raspberry Pi, ESP32, and IoT cloud platforms such as AWS IoT and ThingSpeak."
   },
   {
-    question: "How are IoT-based Mechatronics projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Automation, focusing on IoT-enabled mechatronics, AI integration, and digital twin frameworks."
+    question:
+      "How are IoT-based Mechatronics projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Industrial Informatics and Automation, focusing on IoT-enabled mechatronics, AI integration, and digital twin frameworks."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, IoT system design, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "Complete guidance including topic selection, IoT system design, AI/IoT integration, hardware prototyping, IEEE documentation, and Scopus/SCI/Elsevier publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "IoT-based Mechatronics Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) IoT-based Mechatronics Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering Arduino, ESP32, Raspberry Pi, AI-driven automation, predictive maintenance, digital twins, and Industry 4.0 applications.";
+
+const pageUrl =
+  "/department/robotics-mechatronics/iot-based-mechatronics";
 
 const MEIoTBasedMechatronicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="IoT-based Mechatronics Systems IEEE Projects (2023–2025)"
-        description="IoT Mechatronics IEEE project development for B.Tech, M.Tech & PhD using Arduino, ESP32, Raspberry Pi, AWS IoT, AI-driven automation, predictive maintenance, digital twins for manufacturing, healthcare, smart cities."
-        url="/department/robotics-mechatronics/iot-based-mechatronics"
-        type="article"
-        keywords={[
-          "IoT Mechatronics IEEE 2023–2025",
-          "Smart Mechatronic Systems",
-          "IoT Enabled Robotics Projects",
-          "Digital Twin Mechatronics",
-          "Industry 4.0 IoT Mechatronics",
-          "AI Driven IoT Automation",
-          "Predictive Maintenance IoT",
-          "Embedded IoT Mechatronic Systems",
-          "Edge Computing Mechatronics",
-          "Narpavi Research Institute IoT"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT-Mechatronics IEEE Projects 2023–2025</li>
-              <li>Smart Mechatronic Systems</li>
-              <li>IoT-Enabled Robotics Projects</li>
-              <li>Digital Twin Mechatronics</li>
-              <li>Industry 4.0 IoT-Mechatronics</li>
-              <li>AI-Driven IoT Automation</li>
-              <li>Predictive Maintenance IoT Projects</li>
-              <li>Embedded IoT-Mechatronic Systems</li>
-              <li>Ph.D. Mechatronics Research Projects</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>IoT-based Mechatronics Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+     <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT-based Mechatronics Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on IoT-enabled robotics, predictive maintenance, digital twins, and AI-driven automation.
               </p>
@@ -263,43 +287,29 @@ const MEIoTBasedMechatronicsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/robotics-mechatronics">
-      Robotics & Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
-      Industrial Robotics Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
-      IoT-Based Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
-      Autonomous Vehicles & Drones
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
-      Robotic Manipulator Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/embedded-control-systems">
-      Embedded Control Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/robotics-mechatronics">Robotics & Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/industrial-robotics-systems">Industrial Robotics Systems</a></li>
+              <li><a href="/department/robotics-mechatronics/iot-based-mechatronics">IoT-Based Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/autonomous-vehicles-drones">Autonomous Vehicles & Drones</a></li>
+              <li><a href="/department/robotics-mechatronics/robotic-manipulator-control">Robotic Manipulator Control</a></li>
+              <li><a href="/department/robotics-mechatronics/embedded-control-systems">Embedded Control Systems</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

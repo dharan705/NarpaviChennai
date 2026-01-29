@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY
+========================= */
+const keywords = [
+  "EV Charging in Microgrids Project Development Center in Chennai",
+  "IEEE EV Charging Projects 2023–2025",
+  "Smart EV Charging Station Projects",
+  "B.Tech Microgrid EV Charging Projects",
+  "M.Tech V2G Integration Projects",
+  "Ph.D AI Based EV Load Management",
+  "Renewable Integrated EV Charging",
+  "Predictive EV Charging Optimization",
+  "Smart Grid EV Charging Systems",
+  "Narpavi Research Institute EV Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Electric Vehicle Charging in Microgrids Project Development Center offer?",
-    answer: "Narpavi Research Institute’s EV Charging in Microgrids Center supports B.Tech, M.Tech, and Ph.D. scholars in IEEE-aligned (2023–2025) projects on smart charging stations, microgrid integration, V2G frameworks, predictive load optimization, and renewable energy-based EV charging."
+    question:
+      "What services does the Electric Vehicle Charging in Microgrids Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s EV Charging in Microgrids Project Development Center supports B.Tech, M.Tech, and Ph.D. scholars in IEEE-aligned (2023–2025) projects on smart charging stations, microgrid integration, V2G frameworks, predictive load optimization, and renewable energy-based EV charging."
   },
   {
     question: "What types of EV charging projects are supported?",
-    answer: "We support B.Tech projects (basic smart EV chargers and IoT-based charging monitoring), M.Tech projects (AI-assisted charging optimization and V2G integration), and Ph.D. projects (deep learning predictive charging, intelligent microgrid-V2G systems with renewable coordination)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering smart EV chargers, AI-assisted charging optimization, V2G integration, and renewable-powered EV charging systems."
   },
   {
-    question: "Which technologies are used in EV charging development?",
-    answer: "Our stack includes MATLAB/Simulink, HOMER Pro, PSIM, Python, AI/ML frameworks (TensorFlow, PyTorch), FPGA/DSP prototyping, IoT protocols (MQTT, Modbus), and HIL (Hardware-in-the-loop) testing for EV-microgrid charging solutions."
+    question: "Which technologies are used in EV charging project development?",
+    answer:
+      "MATLAB/Simulink, HOMER Pro, PSIM, Python, AI frameworks (TensorFlow, PyTorch), FPGA/DSP platforms, IoT protocols, and HIL testing."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects reference IEEE Transactions (2023–2025) covering EV charging optimization, V2G standards, secure communication protocols, renewable integration, and scalable grid-interfacing charging solutions."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) focusing on EV charging optimization, V2G systems, renewable integration, and grid-interactive charging."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We provide IEEE topic identification, charging system simulation & hardware prototyping, IoT integration, V2G testing, IEEE-style report documentation, and guidance for Scopus/SCI/IEEE publications."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including IEEE topic selection, simulations, hardware prototyping, V2G testing, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "EV Charging in Microgrids – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) EV Charging in Microgrids Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering smart charging stations, V2G frameworks, AI-based load optimization, and renewable-integrated microgrid charging.";
+
+const pageUrl =
+  "/department/smart-grid-microgrid/ev-charging-microgrids";
 
 const EEEEVChargingMicrogridsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="EV Charging Microgrids IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) EV Charging in Microgrids projects for B.Tech, M.Tech, Ph.D. Smart charging stations, V2G frameworks, AI predictive load optimization using MATLAB/Simulink, HOMER Pro, PSIM, TensorFlow for renewable-integrated microgrids."
-  keywords="EV Charging Microgrids IEEE Projects 2023–2025, Smart EV Charging Stations, B.Tech Microgrid EV Projects, M.Tech V2G Integration, Ph.D. AI EV Load Management, IoT EV Monitoring, Renewable EV Charging, Predictive Charging Optimization, Narpavi Research Institute"
-  url="/department/smart-grid-microgrid/ev-charging-microgrids"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Column */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Electric Vehicle Charging Projects</li>
-              <li>IEEE EV Charging Projects 2023–2025</li>
-              <li>B.Tech Microgrid EV Projects</li>
-              <li>M.Tech AI-Based EV Charging</li>
-              <li>Ph.D V2G Microgrid Systems</li>
-              <li>IoT-Based EV Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>Smart Charging Research</li>
-              <li>Renewable Integrated EV Charging</li>
-              <li>Predictive Load Management</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Column */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>EV Charging in Microgrids – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the EV Charging in Microgrids Project Development Center, offering global scholars IEEE-aligned (2023–2025) research opportunities in smart EV charging, renewable integration, V2G frameworks, and predictive load optimization.</p>
               <p>Students gain hands-on experience with AI-optimized charging, IoT-enabled monitoring, simulation, hardware prototypes, and real-time adaptive charging management in microgrids.</p>
@@ -191,69 +221,29 @@ const EEEEVChargingMicrogridsProjectDevelopmentCenter = () => {
                 ))}
               </div>
               
-              {/* FAQ Schema for SEO */}
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+      </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/smart-grid-microgrid">
-      Smart Grid & Microgrid – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">
-      Cybersecurity for Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/ev-charging-microgrids">
-      EV Charging & Microgrids
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/integration-distributed-generation">
-      Integration of Distributed Generation
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/microgrid-energy-management">
-      Microgrid Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/real-time-monitoring-scada">
-      Real-Time Monitoring & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/smart-grid-microgrid/smart-metering-demand-response">
-      Smart Metering & Demand Response
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/smart-grid-microgrid">Smart Grid & Microgrid – Project Development Center</a></li>
+              <li><a href="/department/smart-grid-microgrid/cybersecurity-smart-grids">Cybersecurity for Smart Grids</a></li>
+              <li><a href="/department/smart-grid-microgrid/ev-charging-microgrids">EV Charging & Microgrids</a></li>
+              <li><a href="/department/smart-grid-microgrid/integration-distributed-generation">Integration of Distributed Generation</a></li>
+              <li><a href="/department/smart-grid-microgrid/microgrid-energy-management">Microgrid Energy Management</a></li>
+              <li><a href="/department/smart-grid-microgrid/real-time-monitoring-scada">Real-Time Monitoring & SCADA Systems</a></li>
+              <li><a href="/department/smart-grid-microgrid/smart-metering-demand-response">Smart Metering & Demand Response</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

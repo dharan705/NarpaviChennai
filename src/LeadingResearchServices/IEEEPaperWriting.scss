@@ -1,14 +1,65 @@
 .ieee-paper {
-  padding: 4rem 1rem;
+  min-height: 100vh;
   background: #f4f9ff;
-  color: #1e1e1e;
-  margin-top: 1.5rem;
 
-  .container {
-    max-width: 1100px;
-    margin: auto;
+  /* leave space for fixed top bar + left bar */
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+
+  overflow-x: hidden;
+}
+
+/* GRID LAYOUT */
+.page-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr 260px;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* LEFT SIDEBAR */
+.left-links {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dde8ee;
+  height: fit-content;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #003b7e;
   }
 
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.6rem;
+
+      a {
+        text-decoration: none;
+        color: #0079a1;
+        font-size: 0.95rem;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* MAIN CONTENT */
+.container {
+  background: transparent;
   h2 {
     font-size: 2rem;
     text-align: center;
@@ -17,127 +68,144 @@
   }
 
   .intro {
-    font-size: 1.05rem;
     text-align: center;
     max-width: 850px;
     margin: 0 auto 2rem;
     color: #333;
+    font-size: 1.05rem;
   }
 
   h3 {
-    color: #00509e;
     margin-top: 2rem;
     font-size: 1.35rem;
+    color: #00509e;
+  }
+}
+
+/* LISTS */
+.benefits,
+.audience,
+.conferences {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+
+    svg {
+      color: #008f53;
+    }
+  }
+}
+
+/* TABLE */
+.comparison-table {
+  overflow-x: auto;
+  margin-top: 1rem;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+
+    th,
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #ddd;
+      font-size: 0.95rem;
+      text-align: left;
+    }
+
+    th {
+      background: #00509e;
+      color: #ffffff;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+  }
+}
+
+/* FLOWCHART */
+.flowchart {
+  background: #ffffff;
+  padding: 1.5rem;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  margin: 2rem 0;
+  font-family: monospace;
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  margin-top: 1.5rem;
+
+  blockquote {
+    background: #ffffff;
+    padding: 1.2rem 1.5rem;
+    border-left: 4px solid #00509e;
+    margin-bottom: 1.2rem;
+    font-style: italic;
+
+    footer {
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: #555;
+    }
+  }
+}
+
+/* RIGHT SIDEBAR */
+.right-tags {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #dde8ee;
+  height: fit-content;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #003b7e;
   }
 
-  .benefits,
-  .audience,
-  .conferences {
+  ul {
     list-style: none;
-    padding-left: 0;
-    margin: 1rem 0;
+    padding: 0;
 
     li {
-      display: flex;
-      gap: 0.6rem;
       font-size: 0.95rem;
-      align-items: center;
-      margin-bottom: 0.6rem;
-
-      svg {
-        color: #008f53;
-      }
-    }
-  }
-
-  .comparison-table {
-    overflow-x: auto;
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-
-      th,
-      td {
-        padding: 1rem;
-        font-size: 0.95rem;
-        border-bottom: 1px solid #ddd;
-        text-align: left;
-      }
-
-      th {
-        background: #00509e;
-        color: #fff;
-      }
-
-      tr:last-child td {
-        border-bottom: none;
-      }
-    }
-  }
-
-  .flowchart {
-    background: #fff;
-    padding: 1.5rem;
-    border: 1px dashed #ccc;
-    font-family: monospace;
-    font-size: 0.9rem;
-    white-space: pre-wrap;
-    border-radius: 8px;
-    margin: 2rem 0;
-  }
-
-  .testimonials {
-    margin: 1rem 0;
-
-    blockquote {
-      background: #fff;
-      padding: 1rem 1.5rem;
-      border-left: 4px solid #00509e;
-      margin-bottom: 1.2rem;
-      font-style: italic;
-
-      footer {
-        font-size: 0.85rem;
-        color: #555;
-        margin-top: 0.5rem;
-      }
-    }
-  }
-
-  .cta-box {
-    text-align: center;
-    margin-top: 3rem;
-    padding: 2rem;
-    background: #e6f0ff;
-    border-radius: 10px;
-
-    h4 {
-      font-size: 1.2rem;
-      color: #003b7e;
       margin-bottom: 0.5rem;
+      color: #333;
     }
+  }
+}
 
-    p {
-      margin-bottom: 1rem;
-      font-size: 0.95rem;
-    }
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 1fr;
+  }
 
-    .cta-button {
-      background: #00509e;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.3s;
+  .left-links,
+  .right-tags {
+    display: none;
+  }
 
-      &:hover {
-        background: #003b7e;
-      }
-    }
+  .ieee-paper {
+    padding-left: 1.5rem;
+    padding-top: 80px;
   }
 }

@@ -1,64 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Process Control in Industries Project Development Center in Chennai",
+  "Process Control IEEE Projects 2023–2025",
+  "Industrial Automation Control Projects",
+  "PID Control Industrial Projects",
+  "Model Predictive Control Industry Projects",
+  "Adaptive Process Control Systems",
+  "IIoT and SCADA Process Control",
+  "Industry 4.0 Process Automation Projects",
+  "Ph.D Research in Process Control",
+  "Narpavi Research Institute Process Control"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Process Control in Industries Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in simulations, prototyping, and publications on PID, MPC, adaptive, fuzzy, and AI/ML process control methods. Services include project guidance, hardware implementation, real-time integration with SCADA/IIoT, and IEEE documentation."
+    question:
+      "What services does the Process Control in Industries Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. scholars IEEE-aligned (2023–2025) support in simulations, prototyping, and publications on PID, MPC, adaptive, fuzzy, and AI/ML process control methods, including SCADA and IIoT integration."
   },
   {
     question: "What types of process control projects are supported?",
-    answer: "We support B.Tech projects (PID controllers, fuzzy regulation, Arduino/PLC-based prototypes), M.Tech projects (MPC, adaptive process control, IoT/SCADA integration), and Ph.D. projects (AI/ML-driven process control, digital twins, Industry 4.0 automation with IEEE/SCI publications)."
+    answer:
+      "B.Tech projects include PID and fuzzy controllers. M.Tech projects focus on MPC, adaptive control, and IoT-SCADA integration. Ph.D. projects explore AI-driven process control, digital twins, and Industry 4.0 automation."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, LabVIEW, Proteus, PLC/SCADA systems, Arduino, Raspberry Pi, Python, IIoT protocols (Modbus, OPC-UA, MQTT), and AI/ML frameworks (TensorFlow, PyTorch)."
+    answer:
+      "MATLAB/Simulink, LabVIEW, PLC/SCADA systems, Arduino, Raspberry Pi, Python, IIoT protocols, and AI/ML frameworks."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are aligned to IEEE Transactions (2023–2025) on industrial automation, process optimization, adaptive/robust control, secure IIoT integration, and AI-based predictive control for Industry 4.0."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on industrial automation, adaptive control, AI-based predictive systems, and secure IIoT frameworks."
   },
   {
     question: "What academic support is provided?",
-    answer: "We guide students with IEEE project ideation, simulation and prototyping, controller design, IIoT/SCADA integration, technical documentation, and submission to IEEE, Scopus, and SCI-indexed journals."
+    answer:
+      "Complete support including topic selection, simulation, controller design, hardware prototyping, IIoT integration, and IEEE/SCI publication assistance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Process Control in Industries – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Process Control in Industries Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PID, MPC, adaptive control, SCADA, IIoT, digital twins, and AI-driven industrial automation.";
+
+const pageUrl =
+  "/department/control-systems-electrical/process-control-industries";
 
 const EEEProcessControlIndustriesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="PID Advanced Controllers IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) PID & Advanced Controllers projects for B.Tech, M.Tech, Ph.D. Adaptive PID, MPC, sliding mode, AI/ML intelligent controllers using MATLAB/Simulink, FPGA, TensorFlow for process industries, robotics, EVs."
-  keywords="PID Advanced Controllers IEEE Projects 2023–2025, B.Tech PID Tuning Projects, M.Tech Adaptive MPC Controllers, Ph.D. AI Intelligent Control, Sliding Mode Controllers, Nonlinear Robust Control, Industrial Process Control, Narpavi Research Institute"
-  url="/department/control-systems-electrical/pid-advanced-controllers"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Process Control in Industries Project Development Center</li>
-              <li>Industrial Automation Projects</li>
-              <li>Process Control IEEE Projects</li>
-              <li>PID Control Projects</li>
-              <li>Model Predictive Control Research</li>
-              <li>Adaptive Process Control Projects</li>
-              <li>IIoT Process Automation Projects</li>
-              <li>Ph.D. Research in Process Control</li>
-              <li>Industry 4.0 Process Control Systems</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Process Control in Industries – Project Development Support</h1>
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
 
             {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
@@ -178,54 +209,31 @@ const EEEProcessControlIndustriesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/control-systems-electrical">Control Systems – Project Development Center</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEProcessControlIndustriesProjectDevelopmentCenter;

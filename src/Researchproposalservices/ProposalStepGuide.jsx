@@ -1,62 +1,80 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import "./ProposalStepGuide.scss"
+import "./ProposalStepGuide.scss";
+import Subsidebar from "../pages/Subsidebar";
+import Leftsidebar from "../assets/Leftsidebar";
+
 const faqs = [
   {
     question: "What should be included in a strong engineering proposal?",
-    answer: "A strong proposal includes a clear title, background context, SMART objectives, technical methodology, expected impact, timeline, budget (if needed), and references."
+    answer:
+      "A strong proposal includes a clear title, background context, SMART objectives, technical methodology, expected impact, timeline, budget (if needed), and references."
   },
   {
     question: "How do I write SMART research objectives?",
-    answer: "SMART stands for Specific, Measurable, Achievable, Relevant, and Time-bound. Break complex goals into achievable milestones with defined timelines."
+    answer:
+      "SMART stands for Specific, Measurable, Achievable, Relevant, and Time-bound. Break complex goals into achievable milestones with defined timelines."
   },
   {
     question: "What tools should I mention in the methodology?",
-    answer: "Mention engineering tools relevant to your domain — e.g., MATLAB, ANSYS, Python, Simulink, CAD, CAE, microcontrollers, sensors, or lab equipment."
+    answer:
+      "Mention engineering tools relevant to your domain — e.g., MATLAB, ANSYS, Python, Simulink, CAD, CAE, microcontrollers, sensors, or lab equipment."
   }
 ];
 
 const EngineeringProposalStepGuide = () => {
   return (
-    <section className="step-guide">
-      <Helmet>
-        <title>Step-by-Step Engineering Proposal Writing Guide | Narpavi</title>
-        <meta
-          name="description"
-          content="A comprehensive guide to writing engineering research proposals. Learn key sections, SMART objectives, methodology, and more."
-        />
-        <meta
-          name="keywords"
-          content="engineering proposal writing, PhD proposal help, methodology for research, engineering research guidance, Narpavi proposal support"
-        />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
-      </Helmet>
+    <div className="ieee-page">
+      <Subsidebar />
 
-      <div className="container">
+    
+
+      {/* LEFT SIDEBAR */}
+      <aside className="left-sidebar2">
+        <ul>
+          <li><a href="/research-proposal-services/how-to-write-research-proposal">How to Write a Research Proposal</a></li>
+          <li><a href="/research-proposal-services/trending-research-topics">Trending Research Topics</a></li>
+          <li><a href="/research-proposal-services/research-proposal-for-funding">Research Proposal for Funding</a></li>
+          <li><a href="/research-proposal-services/engineering-research-proposal-guide">Engineering Research Proposal Guide</a></li>
+        </ul>
+      </aside>
+
+      {/* MAIN CONTENT */}
+      <main className="main-content">
         <h1>🛠 Step-by-Step Guide for Research Proposal Writing</h1>
         <h2>For Engineering Scholars & PhD Applicants</h2>
 
         <p className="intro">
-          Engineering research proposals aren't just documents — they are blueprints for innovation. Whether you're working on AI systems, renewable energy, or materials engineering, a strong proposal can set your research apart and secure approvals, funding, or admission.
+          Engineering research proposals aren't just documents — they are blueprints for innovation.
+          Whether you're working on AI systems, renewable energy, or materials engineering,
+          a strong proposal can set your research apart and secure approvals, funding, or admission.
+          If you are just starting, refer to our
+          {" "}
+          <a
+            href="/research-proposal-services/how-to-write-research-proposal"
+            className="internal-link highlight-link"
+          >
+            complete guide on how to write a research proposal
+          </a>
+          {" "}
+          to understand the full structure and expectations.
         </p>
 
         <div className="section">
           <h3>🔧 Section 1: What Is a Research Proposal?</h3>
           <p>
-            A research proposal is a structured plan that outlines what you want to research, why it's important, and how you intend to carry it out. It should:
+            A research proposal is a structured plan that outlines what you want to research,
+            why it's important, and how you intend to carry it out. Identifying a strong proposal idea
+            often begins by reviewing
+            {" "}
+            <a
+              href="/research-proposal-services/trending-research-topics"
+              className="internal-link highlight-link"
+            >
+              trending research topics
+            </a>
+            {" "}
+            in your engineering domain.
           </p>
           <ul>
             <li>Address a real-world engineering problem</li>
@@ -104,6 +122,16 @@ const EngineeringProposalStepGuide = () => {
             </li>
             <li>
               <strong>💵 Budget & Tools (Optional):</strong> Hardware, software licenses, consumables, etc.
+              This section is mandatory when preparing a
+              {" "}
+              <a
+                href="/research-proposal-services/research-proposal-for-funding"
+                className="internal-link highlight-link"
+              >
+                research proposal for funding
+              </a>
+              {" "}
+              or sponsored projects.
             </li>
             <li>
               <strong>📎 References:</strong> Use IEEE or APA style. Prefer high-quality journals and conferences.
@@ -124,10 +152,23 @@ const EngineeringProposalStepGuide = () => {
           </ul>
         </div>
 
+        <div className="section">
+          <h3>📘 Engineering-Focused Proposal Guidance</h3>
+          <p>
+            Engineering proposals require strong technical articulation and system-level clarity.
+            For discipline-specific examples and formats, explore our
+          
+              Engineering Research Proposal Guide
+            
+            designed for PhD scholars and engineering researchers.
+          </p>
+        </div>
+
         <div className="section cta">
           <h3>📥 Need Help Drafting Yours?</h3>
           <p>
-            We offer engineering-focused research proposal writing from topic selection to formatting — for IITs, NITs, and universities across India.
+            We offer engineering-focused research proposal writing from topic selection to formatting —
+            for IITs, NITs, and universities across India.
           </p>
           <p>📞 <strong>Talk to an Expert Today!</strong></p>
         </div>
@@ -143,8 +184,22 @@ const EngineeringProposalStepGuide = () => {
             ))}
           </div>
         </section>
-      </div>
-    </section>
+      </main>
+
+      {/* RIGHT SIDEBAR */}
+      <aside className="right-sidebar1">
+       <Leftsidebar/>
+
+        <h3>Popular Keywords</h3>
+        <ul>
+          <li>Engineering Proposal Writing</li>
+          <li>Research Methodology Help</li>
+          <li>SMART Objectives</li>
+          <li>PhD Proposal Assistance</li>
+          <li>Narpavi Research Institute</li>
+        </ul>
+      </aside>
+    </div>
   );
 };
 

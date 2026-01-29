@@ -1,65 +1,82 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS AS ARRAY OBJECT */
+const keywords = [
+  "Embedded Systems IEEE Projects",
+  "Embedded Systems Project Development",
+  "FPGA Embedded Systems Projects",
+  "IoT Embedded Systems IEEE Projects",
+  "Real Time Embedded Systems Projects",
+  "B.Tech Embedded Systems Projects",
+  "M.Tech FPGA Embedded Projects",
+  "Ph.D. Embedded Systems Research",
+  "Embedded Systems for Smart Grids",
+  "Embedded Systems for Electric Vehicles",
+  "Narpavi Research Institute Embedded Systems"
+];
 
 const faqs = [
   {
     question: "What services does the Embedded Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute's Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in microcontroller systems, FPGA-based control, and IoT-enabled embedded platforms for applications in smart grids, EVs, and industrial automation."
+    answer:
+      "Narpavi Research Institute's Embedded Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in microcontroller systems, FPGA-based control, and IoT-enabled embedded platforms for applications in smart grids, EVs, and industrial automation."
   },
   {
     question: "What types of embedded systems projects are supported?",
-    answer: "We support B.Tech projects (Arduino-based energy monitoring, motor control), M.Tech projects (FPGA-based power control, RTOS applications), and Ph.D. projects (AI-integrated embedded systems, cyber-physical security) for EEE applications in smart grids and EVs."
+    answer:
+      "We support B.Tech projects (Arduino-based energy monitoring, motor control), M.Tech projects (FPGA-based power control, RTOS applications), and Ph.D. projects (AI-integrated embedded systems, cyber-physical security) for EEE applications in smart grids and EVs."
   },
   {
     question: "Which technologies are used in embedded systems project development?",
-    answer: "Our stack includes MATLAB/Simulink, VHDL/Verilog, Xilinx, Arduino, Raspberry Pi, and RTOS frameworks for advanced embedded design and prototyping."
+    answer:
+      "Our stack includes MATLAB/Simulink, VHDL/Verilog, Xilinx, Arduino, Raspberry Pi, and RTOS frameworks for advanced embedded design and prototyping."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like embedded control in power electronics, IoT for smart grids, and FPGA-based motor drives, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like embedded control in power electronics, IoT for smart grids, and FPGA-based motor drives, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEEEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Embedded Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Embedded Systems projects for B.Tech, M.Tech, Ph.D. MATLAB/Simulink, FPGA, VHDL/Verilog, Arduino, Raspberry Pi projects in smart grids, EVs, automation."
-        keywords="Embedded Systems IEEE Projects, FPGA IEEE Projects, IoT Embedded IEEE Projects, Real-Time Systems IEEE Projects, B.Tech Embedded IEEE Projects, M.Tech FPGA IEEE Projects, Ph.D. Embedded IEEE Thesis, Industrial Automation Embedded IEEE Projects, EV Embedded Systems IEEE Projects, Narpavi Research Institute"
-        url="/department/embedded-systems-electrical"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Embedded Systems – Project Development Center in Chennai"
+        description="Embedded Systems project development center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on FPGA-based control, IoT embedded systems, RTOS, microcontroller platforms, and IEEE-aligned research (2023–2025)."
+        url="/embedded-systems-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Embedded Systems IEEE Projects</li>
-              <li>FPGA IEEE Projects</li>
-              <li>IoT Embedded IEEE Projects</li>
-              <li>Real-Time Systems IEEE Projects</li>
-              <li>B.Tech Embedded IEEE Projects</li>
-              <li>M.Tech FPGA IEEE Projects</li>
-              <li>Ph.D. Embedded IEEE Thesis</li>
-              <li>Industrial Automation Embedded IEEE Projects</li>
-              <li>EV Embedded Systems IEEE Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          </aside>
+
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Embedded Systems – Project Development Center</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            <h1>Embedded Systems – Project Development Center in Chennai</h1>
+             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Embedded Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in embedded hardware and software for smart grids, electric vehicles, and industrial automation.
               </p>
@@ -238,48 +255,26 @@ const EEEEmbeddedSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM, PIC & AVR Microcontroller Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

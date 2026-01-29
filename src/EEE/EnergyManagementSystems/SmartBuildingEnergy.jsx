@@ -1,66 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Smart Building Energy Management Project Development Center in Chennai",
+  "Smart Building Energy Management IEEE Projects 2023–2025",
+  "AI Based HVAC and Lighting Optimization",
+  "IoT Smart Building Energy Systems",
+  "Predictive Analytics for Building Energy",
+  "B.Tech Smart Building Energy Projects",
+  "M.Tech AI Based Building Energy Optimization",
+  "Ph.D Smart Building Energy Research",
+  "Deep Learning Smart Building Control",
+  "Smart City Building Energy Management",
+  "Narpavi Research Institute Smart Building Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Smart Building Energy Management Project Development Center offer?",
-    answer: "We offer IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students in HVAC optimization, lighting control, predictive energy analytics, IoT-based monitoring, and publication assistance in IEEE/Scopus/SCI journals."
+    question:
+      "What services does the Smart Building Energy Management Project Development Center offer?",
+    answer:
+      "We offer IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students in HVAC optimization, lighting control, predictive energy analytics, IoT-based monitoring, and publication assistance in IEEE/Scopus/SCI journals."
   },
   {
     question: "What kinds of projects are supported?",
-    answer: "B.Tech: AI models for HVAC and lighting simulations with Arduino/Raspberry Pi integration. M.Tech: Hybrid CNN-LSTM, RL-driven control with IoT-enabled embedded systems. Ph.D: GANs, Transformers, RL-DL hybrids for multi-building and smart city energy optimization, with IEEE/SCI publications."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering AI-based HVAC and lighting optimization, hybrid CNN-LSTM and RL-driven control, multi-building and smart city energy optimization, and IEEE/SCI publications."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), Arduino, Raspberry Pi, IoT sensors, SCADA/BACnet systems, AWS/Azure cloud platforms for real-time analytics."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), Arduino, Raspberry Pi, IoT sensors, SCADA/BACnet systems, and AWS/Azure cloud platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions on Smart Grid, Sustainable Energy, and Industrial Electronics (2023–2025), implementing hybrid AI models for HVAC, lighting, occupancy-based forecasting, and smart building IoT frameworks."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Sustainable Energy, and Industrial Electronics."
   },
   {
     question: "What academic support is provided?",
-    answer: "We guide students through IEEE topic selection, AI/ML/DL model development, simulation+hardware integration, validation with real-time metrics, IEEE-format reporting, and Scopus/SCI publication."
+    answer:
+      "We guide students through IEEE topic selection, AI/ML/DL model development, simulation and hardware integration, validation, IEEE-format reporting, and Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Building Energy Management – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Building Energy Management Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering HVAC and lighting optimization, IoT monitoring, predictive analytics, and AI-driven smart building control.";
+
+const pageUrl =
+  "/department/energy-management-systems/smart-building-energy";
 
 const EEESmartBuildingEnergyManagementProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Smart Building Energy Management IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Smart Building Energy Management projects for B.Tech, M.Tech, Ph.D. HVAC lighting optimization, predictive analytics using MATLAB Simulink Python TensorFlow PyTorch Scikit-learn Arduino Raspberry Pi IoT SCADA BACnet AWS Azure."
-  keywords="Smart Building Energy Management IEEE Projects 2023–2025, B.Tech AI HVAC Lighting, M.Tech CNN LSTM RL Building Control, Ph.D. GAN Transformer Smart Cities, IoT Building Energy Optimization, Narpavi Research Institute"
-  url="/department/energy-management-systems/smart-building-energy"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords Sidebar */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Building Energy Management projects</li>
-              <li>AI building energy optimization</li>
-              <li>HVAC control AI projects</li>
-              <li>IoT smart building energy projects</li>
-              <li>IEEE 2023–2025 smart building projects</li>
-              <li>B.Tech smart building AI projects</li>
-              <li>M.Tech AI energy optimization projects</li>
-              <li>Ph.D. research in smart building energy</li>
-              <li>Deep learning smart building energy projects</li>
-              <li>Narpavi Research Institute project center</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Content Center */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Smart Building Energy Management – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>The <strong>Smart Building Energy Management Project Development Center</strong> at Narpavi Research Institute helps students implement IEEE-aligned (2023–2025) projects for intelligent energy control. Projects cover HVAC, lighting, appliances, IoT sensor integration, predictive AI, and cloud analytics to minimize waste while maintaining comfort.</p>
             </section>
@@ -186,53 +217,31 @@ const EEESmartBuildingEnergyManagementProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Centers */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems – Project Development Center</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand-Side Management (DSM)</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEESmartBuildingEnergyManagementProjectDevelopmentCenter;

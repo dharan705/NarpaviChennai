@@ -1,75 +1,85 @@
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Antenna Miniaturization Techniques",
+  "Fractal Antenna Design",
+  "Metamaterial Antennas",
+  "Dielectric Loading Antennas",
+  "Slot Antenna Miniaturization",
+  "Substrate Integrated Antennas SIW",
+  "Compact Antennas for IoT",
+  "Biomedical Miniaturized Antennas",
+  "CubeSat Compact Antennas",
+  "CST HFSS Antenna Simulation"
+];
 
 const faqs = [
   {
     question: "What are antenna miniaturization techniques?",
-    answer: "Methods to reduce antenna size while maintaining performance, such as using fractal geometries, metamaterials, dielectric loading, slotting, and substrate integrated techniques."
+    answer:
+      "Methods to reduce antenna size while maintaining performance, such as fractal geometries, metamaterials, dielectric loading, slotting, and substrate integrated techniques."
   },
   {
     question: "What do B.Tech projects focus on in antenna miniaturization?",
-    answer: "Fundamental designs of compact monopole, microstrip, and slot antennas using CST, HFSS, and MATLAB, emphasizing dielectric selection and patch modification."
+    answer:
+      "Compact monopole, microstrip, and slot antenna designs using CST, HFSS, and MATLAB."
   },
   {
     question: "What advanced topics are covered in M.Tech antenna miniaturization projects?",
-    answer: "Designs involving fractal and metamaterial-inspired antennas, multi-band compact antennas, and optimization for biomedical and wearable applications."
+    answer:
+      "Fractal and metamaterial antennas, multiband compact designs, and biomedical optimization."
   },
   {
     question: "What are the research areas in Ph.D. antenna miniaturization projects?",
-    answer: "Exploration of metasurface integration, dielectric resonator miniaturization, machine learning optimization, and CubeSat-ready antenna designs with IEEE publication support."
+    answer:
+      "Metasurfaces, dielectric resonator miniaturization, ML optimization, and CubeSat antennas."
   },
   {
-    question: "Which tools and platforms are used for antenna miniaturization projects?",
-    answer: "Common tools include CST, HFSS, MATLAB, CAD software, and optimization frameworks."
+    question: "Which tools are used for antenna miniaturization projects?",
+    answer:
+      "CST, HFSS, MATLAB, CAD tools, and optimization frameworks."
   }
 ];
 
 const AntennaMiniaturizationProject = () => {
   return (
     <div className="ECEProjectDevelopment">
-        <SEO
-        title="Antenna Miniaturization IEEE Projects 2025 | Fractal Metamaterial SIW | B.Tech M.Tech PhD"
-        description="Antenna miniaturization techniques projects (2023–2025) using CST HFSS MATLAB for fractal geometry, metamaterial antennas, dielectric loading, slot antennas, substrate integrated waveguide SIW."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Antenna Miniaturization Techniques – Project Development Center in Chennai"
+        description="IEEE-aligned antenna miniaturization project development for B.Tech, M.Tech, and Ph.D. students using CST, HFSS, MATLAB covering fractal antennas, metamaterials, dielectric loading, slot antennas, SIW and CubeSat designs."
+        keywords={keywords}
         url="/antenna-miniaturization-project-development"
-        type="article"
-        keywords={[
-          "Antenna Miniaturization Techniques",
-          "Fractal Antenna Design IEEE",
-          "Metamaterial Antennas",
-          "Dielectric Loading Antennas",
-          "Slot Antenna Miniaturization",
-          "Substrate Integrated Antennas SIW",
-          "CST HFSS Antenna Simulation",
-          "CubeSat Compact Antennas"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
 
-          <div className="ECEProjectDevelopment-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Antenna Miniaturization Techniques</li>
-              <li>Fractal Antenna Design</li>
-              <li>Metamaterial Antennas</li>
-              <li>Dielectric Loading Methods</li>
-              <li>Slot Antenna Design</li>
-              <li>Substrate Integrated Antennas</li>
-              <li>Compact Antennas for IoT</li>
-              <li>Biomedical Antennas</li>
-              <li>CubeSat Antennas</li>
-              <li>Wireless Communication Antennas</li>
-              <li>IEEE Antenna Projects</li>
-              <li>Nano Research Institute Antenna Labs</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
 
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
           <div className="ECEProjectDevelopment-center">
-            <h1>Antenna Miniaturization Techniques – Project Development Center</h1>
-            <section className="ECEProjectDevelopment-intro">
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Antenna Miniaturization Techniques – Project Development Center in Chennai
+            </h1>
+                <section className="ECEProjectDevelopment-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> fosters innovation in antenna miniaturization, guiding students through compact, efficient design techniques vital for modern IoT, biomedical, and satellite communication systems.
               </p>
@@ -168,18 +178,25 @@ const AntennaMiniaturizationProject = () => {
             </section>
           </div>
 
-          <div className="ECEProjectDevelopment-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>Related Services</h3>
-              <ul>
-  <li><a href="/department/antenna-design">Antenna Design</a></li>
-  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
-  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
-  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
-  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
-  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
-  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/antenna-design">Antenna Design</a></li>
+              <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+              <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+              <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+              <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+              <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+              <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

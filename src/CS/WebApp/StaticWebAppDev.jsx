@@ -1,60 +1,79 @@
 import "./StaticWebAppDev.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Static Web Application – Project Development Center in Chennai",
+  "IEEE 2023–2025 Static Web Project Topics",
+  "Static Website Project Support for B.Tech",
+  "M.Tech Static Web Project Development",
+  "Ph.D. Static Web Research Guidance",
+  "GatsbyJS Student Projects",
+  "Jekyll Academic Projects",
+  "Hugo Static Site for Research",
+  "IEEE-based Web Application Development",
+  "HTML CSS Static Website Projects",
+  "Narpavi Research Institute Static Web Projects"
+];
 
 const faqs = [
   {
     question: "What are Static Web Application Development Services?",
-    answer: "Narpavi Research Institute's Static Web Application Development Services support B.Tech, M.Tech, and Ph.D. students in developing innovative static web applications aligned with IEEE transactions (2023–2025), focusing on responsive design, optimized performance, and academic excellence for educational and research purposes."
+    answer:
+      "Narpavi Research Institute supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) static web applications focusing on responsive design and optimized performance."
   },
   {
     question: "What types of static web projects are supported?",
-    answer: "We support B.Tech projects (HTML/CSS-based educational sites), M.Tech projects (GatsbyJS/Jekyll dashboards with API integration), and Ph.D. projects (blockchain-enhanced static systems, semantic web applications) across domains like education, research, and smart systems."
+    answer:
+      "Educational websites, academic dashboards, semantic web applications, and blockchain-enhanced static systems."
   },
   {
-    question: "Which technologies are used in static web project development?",
-    answer: "Our technology stack includes HTML5, CSS3, JavaScript, Jekyll, Hugo, GatsbyJS, and tools like GitHub Pages, Netlify, and Firebase, tailored for scalable and high-performance static web solutions."
+    question: "Which technologies are used?",
+    answer:
+      "HTML5, CSS3, JavaScript, Jekyll, Hugo, GatsbyJS, GitHub Pages, Netlify, and Firebase."
   }
 ];
 
 const StaticWebApplicationDevelopmentServices = () => {
   return (
-    <div className="StaticWebApplicationDevelopmentServices">
-      <SEO 
-        title="Static Web IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Static Web projects for B.Tech, M.Tech, Ph.D. HTML5, CSS3, GatsbyJS, Jekyll, Hugo for education, research, responsive static websites."
-        keywords="Excellence in Static Web Application Development Services, IEEE 2023–2025 Static Web Project Topics, Static Website Project Support for B.Tech, M.Tech Static Web Project Development, Ph.D. Static Web Research Guidance, GatsbyJS Student Projects, Jekyll Academic Projects, Hugo Static Site for Research, IEEE-based Web Application Development, HTML/CSS Project Development Services, Global Project Center for Static Web Applications, Narpavi Research Institute Project Services, Academic Static Web Applications IEEE 2023 2024 2025"
-        url="/department/static-web-application"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Static Web Application – Project Development Center in Chennai"
+        description="Static Web Application – Project Development Center in Chennai offering IEEE 2023–2025 static web projects using HTML5, CSS3, GatsbyJS, Jekyll, and Hugo for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/static-web-application-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="StaticWebApplicationDevelopmentServices-main">
-        <div className="StaticWebApplicationDevelopmentServices-grid">
-          {/* Left: Keywords */}
-          <div className="StaticWebApplicationDevelopmentServices-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Excellence in Static Web Application Development Services</li>
-              <li>IEEE 2023–2025 Static Web Project Topics</li>
-              <li>Static Website Project Support for B.Tech</li>
-              <li>M.Tech Static Web Project Development</li>
-              <li>Ph.D. Static Web Research Guidance</li>
-              <li>GatsbyJS Student Projects</li>
-              <li>Jekyll Academic Projects</li>
-              <li>Hugo Static Site for Research</li>
-              <li>IEEE-based Web Application Development</li>
-              <li>HTML/CSS Project Development Services</li>
-              <li>Global Project Center for Static Web Applications</li>
-              <li>Narpavi Research Institute Project Services</li>
-              <li>Academic Static Web Applications IEEE 2023 2024 2025</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="StaticWebApplicationDevelopmentServices-center">
-            <h1>Static Web Application Development Services</h1>
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Static Web Application – Project Development Center in Chennai</h1>
 
-            <section className="StaticWebApplicationDevelopmentServices-intro">
+            <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 At <strong>Narpavi Research Institute</strong>, we embody Excellence in Static Web Application Development Services by empowering engineering students and researchers to build innovative, future-ready static web applications. Our solutions are rigorously aligned with topics published in IEEE Transactions from 2023 to 2025, ensuring every project reflects the latest global research trends and technological standards.
               </p>
@@ -69,7 +88,7 @@ const StaticWebApplicationDevelopmentServices = () => {
               </p>
             </section>
 
-            <section className="StaticWebApplicationDevelopmentServices-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Static Web Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational static web projects like educational websites or portfolio pages, aligned with IEEE topics.
@@ -86,7 +105,7 @@ const StaticWebApplicationDevelopmentServices = () => {
               </p>
             </section>
 
-            <section className="StaticWebApplicationDevelopmentServices-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Static Web Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced static web projects using frameworks like GatsbyJS, Jekyll, or Hugo, aligned with IEEE research.
@@ -103,7 +122,7 @@ const StaticWebApplicationDevelopmentServices = () => {
               </p>
             </section>
 
-            <section className="StaticWebApplicationDevelopmentServices-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Static Web Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering static web research in semantic web, blockchain-enhanced systems, and decentralized data models.
@@ -120,9 +139,9 @@ const StaticWebApplicationDevelopmentServices = () => {
               </p>
             </section>
 
-            <section className="StaticWebApplicationDevelopmentServices-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="StaticWebApplicationDevelopmentServices-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -144,7 +163,7 @@ const StaticWebApplicationDevelopmentServices = () => {
               </div>
             </section>
 
-            <section className="StaticWebApplicationDevelopmentServices-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Static Web Project Titles (2023–2025)</h2>
               <ul>
                 <li>Energy-Efficient Static Web Framework for Edge Content Delivery Using CDN Optimization – 2023</li>
@@ -165,7 +184,7 @@ const StaticWebApplicationDevelopmentServices = () => {
               </ul>
             </section>
 
-            <section className="StaticWebApplicationDevelopmentServices-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Static Web Application Development Services</h2>
               <p>
                 Narpavi Research Institute's Static Web Application Development Services integrate cutting-edge IEEE research with hands-on project development, fostering scalable and innovative static web solutions.
@@ -185,29 +204,13 @@ const StaticWebApplicationDevelopmentServices = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>          </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+                <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="StaticWebApplicationDevelopmentServices-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

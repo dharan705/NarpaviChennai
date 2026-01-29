@@ -1,77 +1,82 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
-import SEO from "../assets/SEO"
+import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT (single source of truth) */
+const keywords = [
+  "Wireless Sensor Networks Projects",
+  "WSN IEEE Projects 2025",
+  "IoT and WSN Research Support",
+  "Energy Efficient WSN Projects",
+  "Secure Wireless Sensor Networks",
+  "NS2 NS3 WSN Simulation Projects",
+  "MATLAB WSN Projects",
+  "Blockchain Enabled WSN",
+  "AI Driven Wireless Sensor Networks",
+  "Underwater WSN Projects",
+  "Cluster Based Routing WSN Projects",
+  "Narpavi Research Institute WSN"
+];
+
 const faqs = [
   {
     question: "What services does the Wireless Sensor Networks Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Wireless Sensor Networks Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in energy-efficient routing, secure WSNs, and AI-driven sensor networks for applications in smart cities, healthcare, and agriculture."
+    answer:
+      "Narpavi Research Institute’s Wireless Sensor Networks Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in energy-efficient routing, secure WSNs, and AI-driven sensor networks for applications in smart cities, healthcare, and agriculture."
   },
   {
     question: "What types of WSN projects are supported?",
-    answer: "We support B.Tech projects (IoT sensor networks, routing protocols), M.Tech projects (secure data aggregation, clustering), and Ph.D. projects (blockchain-enabled WSNs, federated learning) for applications in disaster management, military surveillance, and Industry 4.0."
+    answer:
+      "We support B.Tech projects (IoT sensor networks, routing protocols), M.Tech projects (secure data aggregation, clustering), and Ph.D. projects (blockchain-enabled WSNs, federated learning) for applications in disaster management, military surveillance, and Industry 4.0."
   },
   {
     question: "Which technologies are used in WSN project development?",
-    answer: "Our stack includes NS2, NS3, MATLAB, OMNeT++, Contiki (Cooja), Python, Arduino, and Raspberry Pi for advanced WSN simulations and real-time implementations."
+    answer:
+      "Our stack includes NS2, NS3, MATLAB, OMNeT++, Contiki (Cooja), Python, Arduino, and Raspberry Pi for advanced WSN simulations and real-time implementations."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like energy-efficient WSNs, AI-driven optimization, and IoT integration, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like energy-efficient WSNs, AI-driven optimization, and IoT integration, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, protocol design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, protocol design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const ECEWirelessSensorNetworksProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Wireless Sensor Networks IEEE Projects | NS2 NS3 MATLAB Contiki | B.Tech M.Tech PhD"
-        description="Wireless Sensor Networks (WSN) project development center for B.Tech, M.Tech, Ph.D. IEEE projects (2023–2025) in energy-efficient routing, secure WSNs, AI-driven sensor networks using NS2, NS3, MATLAB, OMNeT++, Contiki."
-        url="/department/wireless-sensor-networks"
-        type="article"
-        keywords={[
-          "Wireless Sensor Networks Projects",
-          "WSN IEEE Projects 2025",
-          "IoT WSN Research Support",
-          "Energy-Efficient WSN Projects",
-          "Secure Wireless Sensor Networks",
-          "NS2 NS3 WSN Simulation",
-          "MATLAB WSN Projects",
-          "Blockchain WSN Projects",
-          "AI-Driven WSN",
-          "B.Tech M.Tech PhD WSN"
-        ]}
-        faqs={faqs}  // Reuse existing faqs array
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Wireless Sensor Networks – Project Development Center in Chennai"
+        description="Wireless Sensor Networks (WSN) project development center for B.Tech, M.Tech, and Ph.D. students focusing on energy-efficient routing, secure WSNs, AI-driven sensor networks using NS2, NS3, MATLAB, OMNeT++, and Contiki (2023–2025)."
+        url="/wireless-sensor-networks-project-development-center-chennai"
+        keywords={keywords}
+        faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Wireless Sensor Networks Projects</li>
-              <li>WSN IEEE Projects 2025</li>
-              <li>IoT and WSN Research Support</li>
-              <li>Energy-Efficient WSN Projects</li>
-              <li>Secure Wireless Sensor Networks</li>
-              <li>NS2 NS3 WSN Simulation Projects</li>
-              <li>MATLAB WSN Projects</li>
-              <li>Blockchain-Enabled WSN</li>
-              <li>AI-Driven Wireless Sensor Networks</li>
-              <li>Underwater WSN Projects</li>
-              <li>Cluster-Based Routing WSN Projects</li>
-              <li>Narpavi Research Institute Project Center</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Wireless Sensor Networks (WSN) – Project Development Center</h1>
-
+            <h1>Wireless Sensor Networks (WSN) – Project Development Center in Chennai</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Wireless Sensor Networks – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in sensing, communication, and distributed networking systems.
@@ -252,20 +257,33 @@ const ECEWirelessSensorNetworksProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-  <ul>
-  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
-  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
-  </ul>
+            <ul>
+              <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">
+                Environmental Disaster Monitoring using WSN
+              </a></li>
+              <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">
+                Underwater Wireless Sensor Networks
+              </a></li>
+              <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">
+                AI-Based WSN Optimization
+              </a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

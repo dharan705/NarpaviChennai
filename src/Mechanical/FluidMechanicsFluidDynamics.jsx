@@ -1,64 +1,81 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Fluid Mechanics Project Development Center Chennai",
+  "Fluid Dynamics Project Development Center Chennai",
+  "CFD Project Development Chennai",
+  "Fluid Dynamics IEEE Projects 2023–2025",
+  "Turbomachinery Design Projects",
+  "Aerodynamics Student Projects",
+  "Microfluidics IEEE Projects",
+  "Energy Efficient Fluid Systems",
+  "Experimental Fluid Mechanics Projects",
+  "Narpavi Research Institute Fluid Mechanics Projects"
+];
 
 const faqs = [
   {
     question: "What services does the Fluid Mechanics / Fluid Dynamics Project Development Center offer?",
-    answer: "Narpavi Research Institute's Fluid Mechanics / Fluid Dynamics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CFD, turbomachinery, microfluidics, and fluid flow optimization for aerospace, automotive, and biomedical applications."
+    answer:
+      "Narpavi Research Institute's Fluid Mechanics / Fluid Dynamics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on CFD, turbomachinery, microfluidics, and fluid flow optimization."
   },
   {
     question: "What types of Fluid Mechanics / Fluid Dynamics projects are supported?",
-    answer: "We support B.Tech projects (pipe flow analysis, wind tunnel testing), M.Tech projects (CFD-based turbine optimization, multiphase flow), and Ph.D. projects (AI-driven CFD, biofluid modeling) for aerospace, energy, and biomedical industries."
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects covering CFD, multiphase flows, turbomachinery, aerodynamics, and biofluid applications."
   },
   {
-    question: "Which tools and technologies are used in Fluid Mechanics / Fluid Dynamics projects?",
-    answer: "Our stack includes ANSYS Fluent, COMSOL Multiphysics, MATLAB, OpenFOAM, CFD software, AI frameworks (TensorFlow, Keras), and experimental setups like wind tunnels and flow meters."
+    question: "Which tools are used in Fluid Mechanics projects?",
+    answer:
+      "Tools include ANSYS Fluent, COMSOL, MATLAB, OpenFOAM, CFD software, AI frameworks, and experimental fluid dynamics setups."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering and Fluid Dynamics, focusing on CFD, turbulence modeling, and biofluid applications."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) focusing on CFD, turbulence modeling, and advanced fluid dynamics."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, AI integration, prototype development, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including CFD simulations, experimental validation, documentation, and IEEE/Scopus publication support."
   }
 ];
 
 const MEFluidMechanicsFluidDynamicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-      <SEO 
-        title="Fluid Dynamics IEEE Projects | CFD, Turbomachinery | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023-2025) Fluid Mechanics projects. ANSYS Fluent, COMSOL, OpenFOAM, CFD analysis, turbomachinery, microfluidics for aerospace, automotive, biomedical."
-        keywords="Fluid Mechanics Projects, Fluid Dynamics IEEE Projects 2023–2025, CFD Project Development, Turbomachinery Design Projects, Aerodynamics Student Projects, Microfluidics IEEE Projects, Energy-Efficient Fluid Systems, Experimental Fluid Mechanics Projects, Narpavi Research Institute Fluid Mechanics Projects"
-        url="/department/fluid-mechanics-dynamics"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Fluid Mechanics / Fluid Dynamics – Project Development Center in Chennai"
+        description="Fluid Mechanics / Fluid Dynamics Project Development Center in Chennai offering IEEE-aligned (2023–2025) CFD, turbomachinery, aerodynamics, microfluidics, and experimental fluid mechanics projects for B.Tech, M.Tech, and Ph.D. students."
+        url="/fluid-mechanics-fluid-dynamics-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" }
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Fluid Mechanics Projects</li>
-              <li>Fluid Dynamics IEEE Projects 2023–2025</li>
-              <li>CFD Project Development</li>
-              <li>Turbomachinery Design Projects</li>
-              <li>Aerodynamics Student Projects</li>
-              <li>Microfluidics IEEE Projects</li>
-              <li>Energy-Efficient Fluid Systems</li>
-              <li>Experimental Fluid Mechanics Projects</li>
-              <li>Narpavi Research Institute Fluid Mechanics Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          </aside>
+
+          {/* ❌ MAIN CONTENT (UNCHANGED) */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Fluid Mechanics / Fluid Dynamics – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            <h1>Fluid Mechanics / Fluid Dynamics – Project Development Center in Chennai</h1>
+                <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Fluid Mechanics / Fluid Dynamics Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on fluid flow optimization, CFD, turbomachinery, and microfluidics.
               </p>
@@ -222,43 +239,25 @@ const MEFluidMechanicsFluidDynamicsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics">
-      Fluid Mechanics & Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">
-      Computational Fluid Dynamics
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/turbomachinery-design">
-      Turbomachinery Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">
-      Aerodynamics & Wind Tunnel
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">
-      Pump & Valve Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/fluid-mechanics-dynamics/microfluidics-lab">
-      Microfluidics Lab
-    </a>
-  </li>
-</ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <ul>
+              <li><a href="/department/fluid-mechanics-dynamics">Fluid Mechanics & Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/computational-fluid-dynamics">Computational Fluid Dynamics</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/turbomachinery-design">Turbomachinery Design</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/aerodynamics-wind-tunnel">Aerodynamics & Wind Tunnel</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/pump-valve-optimization">Pump & Valve Optimization</a></li>
+              <li><a href="/department/fluid-mechanics-dynamics/microfluidics-lab">Microfluidics Lab</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,75 +1,108 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Energy-Efficient Routing in WSN Project Development Center in Chennai",
+  "Energy Efficient WSN Projects",
+  "LEACH PEGASIS TEEN Routing Protocols",
+  "AI-Based WSN Routing IEEE Projects",
+  "Wireless Sensor Network Energy Optimization",
+  "NS2 NS3 MATLAB WSN Projects",
+  "Hybrid Routing Protocols in WSN",
+  "Blockchain Secured WSN Routing",
+  "Underwater Wireless Sensor Network Routing",
+  "Narpavi Research Institute WSN Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What is the focus of the Energy-Efficient Routing in WSN Project Development Center?",
-    answer: "The Energy-Efficient Routing in WSN Project Development Center at Narpavi Research Institute delivers IEEE-aligned (2023–2025) project solutions focusing on sustainable and power-aware communication protocols in wireless sensor networks."
+    question:
+      "What is the focus of the Energy-Efficient Routing in WSN Project Development Center?",
+    answer:
+      "The center focuses on IEEE-aligned (2023–2025) energy-aware and sustainable routing protocols for Wireless Sensor Networks."
   },
   {
-    question: "What types of projects are supported for different academic levels?",
-    answer: "B.Tech projects cover simulation of LEACH, PEGASIS, and TEEN protocols, M.Tech projects focus on hybrid routing, adaptive clustering, and cross-layer design, while Ph.D. projects involve AI-optimized routing, blockchain-secured protocols, and underwater WSN energy models."
+    question:
+      "What projects are supported at different academic levels?",
+    answer:
+      "B.Tech covers LEACH, PEGASIS, TEEN simulations; M.Tech focuses on hybrid and adaptive routing; Ph.D. includes AI-optimized, blockchain-secured, and underwater WSN routing."
   },
   {
-    question: "Which tools and technologies are used for Energy-Efficient Routing projects?",
-    answer: "We use NS2/NS3, MATLAB, OMNeT++, Python, TensorFlow/Keras, and blockchain platforms for simulation, AI-driven optimization, and secure routing protocol development."
+    question:
+      "Which tools are used for Energy-Efficient Routing projects?",
+    answer:
+      "NS2, NS3, MATLAB, OMNeT++, Python, TensorFlow/Keras, and blockchain frameworks."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are aligned with IEEE Transactions and Conferences (2023–2025) focusing on sustainable IoT, energy-aware routing, and scalable WSN design to meet academic and industrial research needs."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects follow IEEE Transactions and Conferences (2023–2025) on energy-aware IoT and scalable WSN design."
   },
   {
-    question: "What academic support is provided?",
-    answer: "We provide end-to-end support including topic selection, algorithm design, simulation, hardware prototyping, IEEE-format documentation, and publication in Scopus/SCI/IEEE journals."
+    question:
+      "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, algorithm design, simulation, prototyping, documentation, and IEEE/Scopus/SCI publication."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Energy-Efficient Routing in WSN – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/wireless-sensor-networks/energy-eff-routing-wsn-project-development-center-in-chennai";
+
+const pageDescription =
+  "Energy-Efficient Routing in Wireless Sensor Networks Project Development Center in Chennai offering IEEE-aligned LEACH, PEGASIS, TEEN, AI-based and blockchain-secured WSN routing projects for B.Tech, M.Tech, and Ph.D. students (2023–2025).";
 
 const ECEEnergyEfficientRoutingWSNProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Energy-Efficient WSN Routing IEEE Projects | LEACH PEGASIS TEEN | B.Tech M.Tech PhD"
-  description="Energy-efficient routing protocols in Wireless Sensor Networks project development for B.Tech, M.Tech, Ph.D. IEEE projects (2023–2025) using NS2 NS3 MATLAB OMNeT++ for LEACH, PEGASIS, AI-optimized routing."
-  url="/department/wireless-sensor-networks/energy-eff-routing-wsn"
-  type="article"
-  keywords={[
-    "Energy-Efficient WSN Projects",
-    "LEACH PEGASIS WSN Projects",
-    "Routing Protocols WSN IEEE",
-    "AI-Based WSN Routing",
-    "NS2 NS3 WSN Simulation",
-    "Hybrid LEACH-PEGASIS",
-    "Underwater WSN Energy Protocols",
-    "Blockchain WSN Routing"
-  ]}
-  faqs={faqs}
-/>
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
-      <Sidebar />
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy-Efficient WSN Projects</li>
-              <li>Routing Protocols in WSN</li>
-              <li>LEACH and PEGASIS Projects</li>
-              <li>IoT-Enabled WSN Projects</li>
-              <li>AI-Based Routing in WSN</li>
-              <li>IEEE WSN Projects 2023–2025</li>
-              <li>Wireless Sensor Network Energy Optimization</li>
-              <li>Smart City WSN Projects</li>
-              <li>Narpavi Research Institute WSN Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Energy-Efficient Routing in WSN – Project Development Center</h1>
-
+            {/* ✅ ONLY H1 CHANGED */}
+            <h1>{pageTitle}</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> introduces the <em>Excellence in Energy-Efficient Routing in WSN Project Development</em>, dedicated to sustainable communication protocols in Wireless Sensor Networks (WSN). Our projects align with IEEE standards (2023–2025) and support B.Tech, M.Tech, and Ph.D. scholars in developing energy-aware and scalable WSNs.
@@ -203,19 +236,28 @@ const ECEEnergyEfficientRoutingWSNProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
-  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
-  </ul>
-          </div>
+              <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

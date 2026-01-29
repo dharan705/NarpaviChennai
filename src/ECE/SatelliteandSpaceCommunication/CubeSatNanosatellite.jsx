@@ -1,63 +1,86 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What are CubeSats and Nanosatellites?",
-    answer: "CubeSats and Nanosatellites are small, modular satellites enabling cost-effective and rapid space missions, used for Earth observation, communication, navigation, and defense."
+    answer:
+      "CubeSats and Nanosatellites are small, modular satellites enabling cost-effective and rapid space missions."
   },
   {
     question: "What do B.Tech projects in CubeSat and Nanosatellite Technologies focus on?",
-    answer: "They focus on basic communication modules using SDR, Earth imaging payloads, low-power IoT sensors for nanosatellites, and design of CubeSat ground stations."
+    answer:
+      "They focus on SDR-based communication modules, Earth imaging payloads, and CubeSat ground stations."
   },
   {
     question: "What advanced topics are covered in M.Tech projects?",
-    answer: "Advanced projects include inter-CubeSat communication protocols, nanosatellite IoT relay systems, AI-enabled data compression on payloads, and adaptive attitude control."
+    answer:
+      "Inter-CubeSat communication, IoT relay systems, AI-enabled payloads, and adaptive attitude control."
   },
   {
     question: "What are the research directions for Ph.D. scholars?",
-    answer: "Researches include CubeSat constellations for global IoT, deep learning for payload optimization, swarm intelligence for satellite coordination, and quantum communication experiments."
+    answer:
+      "CubeSat constellations, swarm intelligence, AI payload optimization, and quantum communication."
   },
   {
-    question: "What tools and platforms are used in CubeSat and Nanosatellite projects?",
-    answer: "Common tools are MATLAB, Python, GNURadio, STK, Simulink, Ansys HFSS, CST, TensorFlow, PyTorch, and Qiskit."
+    question: "What tools are used in CubeSat and Nanosatellite projects?",
+    answer:
+      "MATLAB, Python, GNURadio, STK, Simulink, HFSS, CST, TensorFlow, PyTorch, and Qiskit."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "CubeSat and Nanosatellite Technologies",
+  "CubeSat Design and Communication",
+  "Nanosatellite IoT Applications",
+  "Inter-Satellite Links",
+  "AI in CubeSat Payloads",
+  "Swarm Intelligence for Satellites",
+  "Quantum Communication via CubeSats",
+  "Satellite IoT Networks",
+  "LEO Satellite Constellations",
+  "IEEE CubeSat Projects",
+  "Nanosatellite Research Projects",
+  "NanoSatellites for Disaster Management"
 ];
 
 const CubeSatNanosatelliteProject = () => {
   return (
     <div className="ECEProjectCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="CubeSat and Nanosatellite Technologies IEEE Projects | IoT Relay, Swarm, Quantum & AI | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) CubeSat and nanosatellite projects on SDR-based links, IoT data relay, inter-satellite networking, AI-enabled payloads, swarm coordination, and quantum communication using MATLAB, Python, GNURadio, STK, Simulink, HFSS, CST, TensorFlow, and Qiskit."
-        keywords="CubeSat and Nanosatellite Technologies, CubeSat Design and Communication, Nanosatellite IoT Applications, Inter-Satellite Links, AI in CubeSat Payloads, Swarm Intelligence for Satellites, Quantum Communication via CubeSats, Satellite IoT Networks, LEO Satellite Constellations, IEEE CubeSat Projects, Nanosatellite Research Projects, NanoSatellites for Disaster Management"
-        url="/department/satellite-communication/cubesat-nanosatellite"
+        title="CubeSat and Nanosatellite Technologies – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) CubeSat and nanosatellite projects on SDR-based links, IoT data relay, inter-satellite networking, AI-enabled payloads, swarm coordination, and quantum communication."
+        keywords={keywords}
+        url="/department/satellite-communication/cubesat-nanosatellite-technologies-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectCenter-main">
         <div className="ECEProjectCenter-grid">
-          <div className="ECEProjectCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>CubeSat and Nanosatellite Technologies</li>
-              <li>CubeSat Design and Communication</li>
-              <li>Nanosatellite IoT Applications</li>
-              <li>Inter-Satellite Links</li>
-              <li>AI in CubeSat Payloads</li>
-              <li>Swarm Intelligence for Satellites</li>
-              <li>Quantum Communication via CubeSats</li>
-              <li>Satellite IoT Networks</li>
-              <li>LEO Satellite Constellations</li>
-              <li>IEEE CubeSat Projects</li>
-              <li>Nanosatellite Research Projects</li>
-              <li>NanoSatellites for Disaster Management</li>
-            </ul>
-          </div>
 
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT ================= */}
           <div className="ECEProjectCenter-center">
-            <h1>CubeSat and Nanosatellite Technologies – Project Development Center</h1>
-            <section className="ECEProjectCenter-intro">
+            <h1>
+              CubeSat and Nanosatellite Technologies – Project Development Center in Chennai
+            </h1>
+               <section className="ECEProjectCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> leads academic and research guidance in CubeSat and Nanosatellite technologies, focusing on rapid development and deployment of modular satellites supporting IoT and next-gen 5G/6G connectivity.
               </p>
@@ -171,18 +194,26 @@ const CubeSatNanosatelliteProject = () => {
             </section>
           </div>
 
-          <div className="ECEProjectCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

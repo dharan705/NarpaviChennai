@@ -1,65 +1,86 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What is the significance of Satellite Communication in 5G/6G networks?",
-    answer: "It enables global connectivity with ultra-low latency and high-speed data transfer by integrating satellites into 5G/6G infrastructures, extending coverage to remote and oceanic areas."
+    answer:
+      "It enables global connectivity with ultra-low latency and high-speed data transfer by integrating satellites into 5G/6G infrastructures."
   },
   {
     question: "What B.Tech projects focus on satellite communication for 5G/6G?",
-    answer: "Fundamentals such as LEO satellite communication, satellite backhaul simulation, smart antenna beam-switching, and network slicing for satellite-assisted IoT using MATLAB, NS3, Python, and GNURadio."
+    answer:
+      "LEO satellite communication, satellite backhaul simulation, smart antenna beam-switching, and satellite-assisted IoT."
   },
   {
     question: "What advanced research do M.Tech projects undertake?",
-    answer: "Satellite-terrestrial integration, QoS-aware resource allocation, AI/ML beamforming, handover optimization, and channel modeling for mmWave satellite links using CST, Ansys HFSS, NS3, and OPNET."
+    answer:
+      "Satellite–terrestrial integration, AI beamforming, handover optimization, and mmWave satellite channel modeling."
   },
   {
     question: "What are the Ph.D. research themes in satellite 5G/6G?",
-    answer: "Non-Terrestrial Network architectures, LEO mega-constellation models, terahertz-band satellite systems, and quantum key distribution over satellite 6G networks aligned with IEEE publications."
+    answer:
+      "NTN architectures, LEO mega-constellations, terahertz satellite systems, and quantum-secure satellite networks."
   },
   {
-    question: "Which tools and platforms support research in satellite 5G/6G communication?",
-    answer: "Tools like MATLAB, NS3, Python, GNURadio, CST, Ansys HFSS, OPNET, TensorFlow, and Qiskit are widely used for modeling, simulation, and AI/quantum experimentation."
+    question: "Which tools are used for satellite 5G/6G research?",
+    answer:
+      "MATLAB, NS3, Python, GNURadio, CST, Ansys HFSS, OPNET, TensorFlow, and Qiskit."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Satellite Communication for 5G Networks",
+  "Satellite Communication for 6G Networks",
+  "Non-Terrestrial Networks Research",
+  "LEO Satellite Communication Projects",
+  "Beamforming in Satellite 5G",
+  "AI in Satellite Communication",
+  "Terahertz Satellite Links",
+  "Quantum-Secure 6G Communication",
+  "Satellite IoT Integration",
+  "Satellite 5G/6G Project Ideas",
+  "IEEE Satellite Communication Projects",
+  "Narpavi Research Institute Space Communication"
 ];
 
 const SatelliteCommunication5G6GProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Satellite Communication for 5G/6G IEEE Projects | NTN, LEO, mmWave/THz, AI & QKD | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) satellite communication for 5G/6G projects on NTN architectures, LEO constellations, satellite–5G backhaul, AI-driven beamforming, mmWave/THz links, resource allocation, and quantum key distribution using MATLAB, NS3, GNURadio, CST, HFSS, OPNET, TensorFlow, and Qiskit."
-        keywords="Satellite Communication for 5G Networks, Satellite Communication for 6G Networks, Non-Terrestrial Networks Research, LEO Satellite Communication Projects, Beamforming in Satellite 5G, AI in Satellite Communication, Terahertz Satellite Links, Quantum-Secure 6G Communication, Satellite IoT Integration, Satellite 5G/6G Project Ideas, IEEE Satellite Communication Projects, Narpavi Research Institute Space Communication"
-        url="/department/satellite-communication/satellite-communication-5g-6g"
+        title="Satellite Communication for 5G & 6G – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) satellite communication for 5G/6G projects on NTN architectures, LEO constellations, AI-driven beamforming, mmWave/THz links, and quantum-secure communication."
+        keywords={keywords}
+        url="/department/satellite-communication/satellite-communication-5g-6g-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Satellite Communication for 5G Networks</li>
-              <li>Satellite Communication for 6G Networks</li>
-              <li>Non-Terrestrial Networks Research</li>
-              <li>LEO Satellite Communication Projects</li>
-              <li>Beamforming in Satellite 5G</li>
-              <li>AI in Satellite Communication</li>
-              <li>Terahertz Satellite Links</li>
-              <li>Quantum-Secure 6G Communication</li>
-              <li>Satellite IoT Integration</li>
-              <li>Satellite 5G/6G Project Ideas</li>
-              <li>IEEE Satellite Communication Projects</li>
-              <li>Narpavi Research Institute Space Communication</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>  
+          </aside>
+
+          {/* ================= CENTER CONTENT ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Satellite Communication for 5G/6G Networks – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>
+              Satellite Communication for 5G & 6G – Project Development Center in Chennai
+            </h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> specializes in advanced satellite communication research for next-generation 5G/6G networks, focusing on NTN architectures, LEO constellations, beamforming, and quantum-secure communication.
               </p>
@@ -177,39 +198,29 @@ const SatelliteCommunication5G6GProject = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map(faq => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

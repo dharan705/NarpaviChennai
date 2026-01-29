@@ -1,75 +1,99 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Industrial Robotics Systems Project Development Center in Chennai",
+  "Industrial Robotics IEEE Projects 2023–2025",
+  "Robotic Arm Automation Projects",
+  "IoT Enabled Robotic Systems",
+  "Machine Vision Robotics Projects",
+  "Collaborative Robots Cobots",
+  "Smart Manufacturing Robotics",
+  "Digital Twin Robotics IEEE",
+  "AI Based Industrial Robots",
+  "Narpavi Research Institute Robotics Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Industrial Robotics Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Industrial Robotics Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on robotic arms, IoT-enabled robotics, machine vision, collaborative robots, and AI-driven automation for industries like automotive, manufacturing, and aerospace."
+    question:
+      "What services does the Industrial Robotics Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Industrial Robotics Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on robotic arms, IoT-enabled robotics, machine vision, collaborative robots, and AI-driven automation for automotive, manufacturing, and aerospace industries."
   },
   {
-    question: "What types of Industrial Robotics Systems projects are supported?",
-    answer: "We support B.Tech projects (basic robotic arms, IoT prototypes), M.Tech projects (AI-driven robotics, machine vision), and Ph.D. projects (collaborative robots, digital twins) for applications in smart manufacturing and industrial automation."
+    question:
+      "What types of Industrial Robotics Systems projects are supported?",
+    answer:
+      "We support B.Tech projects in basic robotic arms and IoT prototypes, M.Tech projects in AI-driven robotics and machine vision, and Ph.D. research in collaborative robots and digital twin-based automation."
   },
   {
-    question: "Which tools and technologies are used in Industrial Robotics Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, ROS, Gazebo, LabVIEW, Python, AI frameworks (TensorFlow, Keras), Arduino, Raspberry Pi, and IoT platforms for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Industrial Robotics Systems projects?",
+    answer:
+      "MATLAB, Simulink, ROS, Gazebo, LabVIEW, Python, TensorFlow, Keras, Arduino, Raspberry Pi, and IoT platforms for simulation, prototyping, and real-time robotic control."
   },
   {
-    question: "How are Industrial Robotics Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics and Automation, focusing on AI-integrated robotics, IoT-enabled systems, and collaborative robots for Industry 4.0."
+    question:
+      "How are Industrial Robotics Systems projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Robotics and Automation, focusing on AI-integrated robotics, IoT-enabled systems, and collaborative robots for Industry 4.0."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, IEEE documentation, and Scopus/SCI/Elsevier publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Industrial Robotics Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Industrial Robotics Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering robotic arms, machine vision, collaborative robots, AI-driven automation, IoT integration, and smart manufacturing.";
+
+const pageUrl =
+  "/department/robotics-mechatronics/industrial-robotics-systems";
 
 const MEIndustrialRoboticsSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Industrial Robotics Systems IEEE Projects (2023–2025)"
-        description="Industrial Robotics Systems IEEE project development for B.Tech, M.Tech & PhD using ROS, MATLAB, AI-driven robotics, machine vision, collaborative robots (cobots), IoT integration for automotive, manufacturing, aerospace."
-        url="/department/robotics-mechatronics/industrial-robotics-systems"
-        type="article"
-        keywords={[
-          "Industrial Robotics IEEE 2023–2025",
-          "Robotic Arm Automation Projects",
-          "IoT Enabled Robotic Systems",
-          "Machine Vision Robotics Projects",
-          "Collaborative Robots Cobots",
-          "Smart Manufacturing Robotics",
-          "Digital Twin Robotics IEEE",
-          "AI Based Industrial Robots",
-          "Industrial Automation Robotics",
-          "Narpavi Research Institute Robotics"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial Robotics IEEE Projects 2023–2025</li>
-              <li>Robotic Arm Automation Projects</li>
-              <li>IoT-Enabled Robotic Systems</li>
-              <li>Machine Vision Robotics Projects</li>
-              <li>Collaborative Robots (Cobots)</li>
-              <li>Smart Manufacturing Robotics</li>
-              <li>Digital Twin Robotics IEEE Projects</li>
-              <li>AI-Based Industrial Robots</li>
-              <li>Ph.D. Robotics Project Support</li>
-              <li>Narpavi Research Institute Robotics Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Industrial Robotics Systems – Project Development Support</h1>
-
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Industrial Robotics Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on robotic arms, IoT-enabled robotics, machine vision, collaborative robots, and AI-driven automation.
@@ -242,64 +266,32 @@ const MEIndustrialRoboticsSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/robotics-mechatronics">
-      Robotics & Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
-      Industrial Robotics Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
-      IoT-Based Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
-      Autonomous Vehicles & Drones
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
-      Robotic Manipulator Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/embedded-control-systems">
-      Embedded Control Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/robotics-mechatronics">Robotics & Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/industrial-robotics-systems">Industrial Robotics Systems</a></li>
+              <li><a href="/department/robotics-mechatronics/iot-based-mechatronics">IoT-Based Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/autonomous-vehicles-drones">Autonomous Vehicles & Drones</a></li>
+              <li><a href="/department/robotics-mechatronics/robotic-manipulator-control">Robotic Manipulator Control</a></li>
+              <li><a href="/department/robotics-mechatronics/embedded-control-systems">Embedded Control Systems</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

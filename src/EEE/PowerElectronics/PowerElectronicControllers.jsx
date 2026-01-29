@@ -1,66 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Power Electronic Controllers for Renewable Energy Project Development Center in Chennai",
+  "Renewable Energy Power Electronics IEEE Projects 2023–2025",
+  "MPPT Solar Controller Projects",
+  "B.Tech Renewable Energy Controller Projects",
+  "M.Tech AI Based Wind Energy Controllers",
+  "Ph.D Hybrid Renewable Energy Management",
+  "Grid Tied Inverter Controller Projects",
+  "IoT Based Energy Monitoring Systems",
+  "Intelligent MPPT Algorithms",
+  "Narpavi Research Institute Power Electronics"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Power Electronic Controllers for Renewable Energy Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Power Electronic Controllers for Renewable Energy Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on intelligent controller design, MPPT algorithms, grid integration, and IoT-enabled monitoring for solar, wind, and hybrid energy systems."
+    answer:
+      "Narpavi Research Institute’s Power Electronic Controllers for Renewable Energy Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on intelligent controller design, MPPT algorithms, grid integration, and IoT-enabled monitoring for solar, wind, and hybrid energy systems."
   },
   {
     question: "What types of Power Electronic Controllers projects are supported?",
-    answer: "We support B.Tech projects (MPPT-based solar controllers, IoT monitoring), M.Tech projects (AI-based wind/hybrid controllers), and Ph.D. projects (predictive control, multi-source integration) for applications in microgrids, smart grids, and renewable energy platforms."
+    answer:
+      "We support B.Tech projects (MPPT-based solar controllers, IoT monitoring), M.Tech projects (AI-based wind and hybrid controllers), and Ph.D. projects (predictive control and multi-source energy integration)."
   },
   {
     question: "Which technologies are used in Power Electronic Controllers project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSIM, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for controller design and energy management."
+    answer:
+      "MATLAB/Simulink, PSIM, TensorFlow, PyTorch, MQTT, FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like MPPT algorithms, grid-tied controllers, and AI-driven energy management, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on MPPT algorithms, grid-tied controllers, and AI-driven renewable energy management."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/PSIM, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "Complete end-to-end guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Power Electronic Controllers for Renewable Energy – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Power Electronic Controllers for Renewable Energy Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering MPPT solar controllers, AI-based wind and hybrid energy control, grid integration, and IoT monitoring.";
+
+const pageUrl =
+  "/department/power-electronics/renewable-energy-controllers";
 
 const EEEPowerElectronicControllersRenewableEnergyProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Renewable Energy Power Electronic Controllers IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Power Electronic Controllers for Renewable Energy projects for B.Tech, M.Tech, Ph.D. MPPT solar controllers, AI-based wind/hybrid controllers, grid integration using MATLAB/Simulink, PSIM, TensorFlow for microgrids, smart grids, solar/wind systems."
-  keywords="Power Electronic Controllers Renewable Energy IEEE Projects 2023–2025, MPPT Solar Controller Projects, B.Tech Renewable Energy Controllers, M.Tech AI Wind Controller, Ph.D. Hybrid Energy Management, Grid-Tied Inverter Controllers, IoT Energy Monitoring, Intelligent MPPT Algorithms, Renewable Energy Optimization, Narpavi Research Institute"
-  url="/department/power-electronics/renewable-energy-controllers"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Power Electronic Controllers Projects</li>
-              <li>Renewable Energy Controller Research</li>
-              <li>IEEE Power Electronics Projects 2023–2025</li>
-              <li>B.Tech MPPT Solar Controller Projects</li>
-              <li>M.Tech AI-Based Wind Controller</li>
-              <li>Ph.D Hybrid Renewable Energy Management</li>
-              <li>IoT-Based Energy Monitoring</li>
-              <li>Intelligent Grid-Tied Controller Projects</li>
-              <li>Renewable Energy System Optimization</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Power Electronic Controllers for Renewable Energy – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+              <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Power Electronic Controllers for Renewable Energy Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance intelligent controller design aligned with IEEE Transactions (2023–2025). Our projects focus on MPPT algorithms, grid integration, and energy management for solar, wind, and hybrid energy systems.
               </p>
@@ -208,48 +237,27 @@ const EEEPowerElectronicControllersRenewableEnergyProjectDevelopmentCenter = () 
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/power-electronics">
-      Power Electronics – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/dc-dc-converters">
-      DC–DC Converters & Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/multilevel-inverters">
-      Multilevel Inverters
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/renewable-energy-controllers">
-      Power Electronic Controllers for Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/power-factor-correction">
-      Power Factor Correction Circuits
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/solid-state-drives">
-      Solid State Drives
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/wireless-power-transfer">
-      Wireless Power Transfer Circuits
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/power-electronics">Power Electronics</a></li>
+              <li><a href="/department/power-electronics/dc-dc-converters">DC–DC Converters & Applications</a></li>
+              <li><a href="/department/power-electronics/multilevel-inverters">Multilevel Inverters</a></li>
+              <li><a href="/department/power-electronics/renewable-energy-controllers">Renewable Energy Controllers</a></li>
+              <li><a href="/department/power-electronics/power-factor-correction">Power Factor Correction</a></li>
+              <li><a href="/department/power-electronics/solid-state-drives">Solid State Drives</a></li>
+              <li><a href="/department/power-electronics/wireless-power-transfer">Wireless Power Transfer</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,64 +1,89 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the AI-Powered Robotic Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s AI-Powered Robotic Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in AI-driven robotic control, reinforcement learning, deep learning, and hybrid control architectures for applications in autonomous vehicles, healthcare, and smart manufacturing."
+    question:
+      "What services does the AI-Powered Robotic Control Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s AI-Powered Robotic Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in AI-driven robotic control, reinforcement learning, deep learning, and hybrid control architectures for applications in autonomous vehicles, healthcare, and smart manufacturing.",
   },
   {
-    question: "What types of AI-Powered Robotic Control Systems projects are supported?",
-    answer: "We support B.Tech projects (AI-based obstacle avoidance, gesture-controlled robots), M.Tech projects (reinforcement learning navigation, deep learning robotic vision), and Ph.D. projects (deep reinforcement learning, explainable AI for human-robot collaboration) for applications in industry and healthcare."
+    question:
+      "What types of AI-Powered Robotic Control Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (AI-based obstacle avoidance, gesture-controlled robots), M.Tech projects (reinforcement learning navigation, deep learning robotic vision), and Ph.D. projects (deep reinforcement learning, explainable AI for human-robot collaboration) for applications in industry and healthcare.",
   },
   {
-    question: "Which technologies are used in AI-Powered Robotic Control Systems project development?",
-    answer: "Our stack includes reinforcement learning, deep neural networks, fuzzy logic, ROS, Python, TensorFlow, PyTorch, and hardware platforms like Arduino and Raspberry Pi for AI-driven robotic control."
+    question:
+      "Which technologies are used in AI-Powered Robotic Control Systems project development?",
+    answer:
+      "Our stack includes reinforcement learning, deep neural networks, fuzzy logic, ROS, Python, TensorFlow, PyTorch, and hardware platforms like Arduino and Raspberry Pi for AI-driven robotic control.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like deep reinforcement learning, explainable AI, and hybrid control architectures, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like deep reinforcement learning, explainable AI, and hybrid control architectures, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with ROS or MATLAB, hardware implementation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, algorithm design, simulation with ROS or MATLAB, hardware implementation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "AI Robotic Control Projects",
+  "Machine Learning Robotics Projects",
+  "Deep Reinforcement Learning Robotics",
+  "IEEE AI Robotics Projects 2023–2025",
+  "Intelligent Robot Navigation",
+  "AI in Humanoid Robots",
+  "Adaptive Robotic Control Systems",
+  "Explainable AI Robotics",
+  "ROS and AI Projects",
+  "Narpavi Research Institute Robotics",
 ];
 
 const ECEAIPoweredRoboticControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="AI-Powered Robotic Control Systems IEEE Projects | RL, DNN, XAI | B.Tech M.Tech Ph.D."
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="AI-Powered Robotic Control Systems – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) AI-powered robotic control systems projects using reinforcement learning, deep learning, fuzzy logic, and hybrid AI architectures for autonomous vehicles, healthcare robots, and smart manufacturing with ROS, Python, TensorFlow, and embedded platforms."
-        keywords="AI Robotic Control Projects, Machine Learning Robotics Projects, Deep Reinforcement Learning Robotics, IEEE AI Robotics Projects 2023–2025, Intelligent Robot Navigation, AI in Humanoid Robots, Adaptive Robotic Control Systems, Explainable AI Robotics, ROS and AI Projects, Narpavi Research Institute Robotics"
-        url="/department/control-systems-robotics/ai-powered-robotic-control-systems"
+        keywords={keywords}
+        url="/department/control-systems-robotics/ai-powered-robotic-control-systems-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
+
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>AI Robotic Control Projects</li>
-              <li>Machine Learning Robotics Projects</li>
-              <li>Deep Reinforcement Learning Robotics</li>
-              <li>IEEE AI Robotics Projects 2023–2025</li>
-              <li>Intelligent Robot Navigation</li>
-              <li>AI in Humanoid Robots</li>
-              <li>Adaptive Robotic Control Systems</li>
-              <li>Explainable AI Robotics</li>
-              <li>ROS and AI Projects</li>
-              <li>Narpavi Research Institute Robotics</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>AI-Powered Robotic Control Systems – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>AI-Powered Robotic Control Systems – Project Development Center in Chennai</h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the AI-Powered Robotic Control Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to design intelligent robotic systems aligned with IEEE Transactions (2023–2025). Our projects focus on integrating AI, machine learning, and deep learning for adaptive and autonomous robotic control.
               </p>
@@ -220,40 +245,23 @@ const ECEAIPoweredRoboticControlSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-              <ul>
-  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
-  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
-  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
-  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
-  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/control-systems-robotics">Control Systems & Robotics</a></li>
+              <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+              <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+              <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+              <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

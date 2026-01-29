@@ -1,67 +1,99 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Adaptive & Robust Control Project Development Center in Chennai",
+  "Adaptive Robust Control IEEE Projects 2023–2025",
+  "B.Tech Adaptive PID MRAC Projects",
+  "M.Tech H Infinity Sliding Mode Control",
+  "Ph.D AI ML Adaptive Control Systems",
+  "Fuzzy Adaptive Control Projects",
+  "Nonlinear Robust Control IEEE",
+  "Aerospace EV Smart Grid Control Systems",
+  "Adaptive Robust Control MATLAB Simulink",
+  "Narpavi Research Institute Control Systems"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Adaptive & Robust Control Project Development Center offer?",
-    answer: "We provide project support for B.Tech, M.Tech, and Ph.D. students worldwide in IEEE-aligned (2023–2025) areas such as adaptive control, H∞ robust control, sliding mode controllers, fuzzy adaptive systems, and AI-based predictive controllers. Services include simulation assistance, hardware prototyping, algorithm design, and IEEE publication guidance."
+    question:
+      "What services does the Adaptive & Robust Control Project Development Center offer?",
+    answer:
+      "We provide project support for B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) adaptive control, H∞ robust control, sliding mode, fuzzy adaptive systems, and AI-based predictive controllers."
   },
   {
-    question: "What types of Adaptive & Robust Control projects are supported?",
-    answer: "We support B.Tech projects (adaptive PID, MRAC, simple robust controllers), M.Tech projects (H∞ control, sliding mode adaptive control, fuzzy adaptive controllers), and Ph.D. projects (hybrid adaptive-robust designs, nonlinear AI/ML adaptive control for real-world autonomous and industrial systems)."
+    question:
+      "What types of Adaptive & Robust Control projects are supported?",
+    answer:
+      "We support B.Tech adaptive PID and MRAC projects, M.Tech H∞ and sliding mode control projects, and Ph.D. research in hybrid adaptive-robust and AI-based nonlinear control systems."
   },
   {
-    question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, LabVIEW, Arduino/PIC/ARM microcontrollers, FPGA for real-time adaptive-robust control, Python with TensorFlow/PyTorch for AI-based adaptive strategies, and HIL (Hardware-in-the-loop) test setups."
+    question:
+      "Which tools and platforms are used?",
+    answer:
+      "MATLAB/Simulink, LabVIEW, microcontrollers, FPGA, Python with TensorFlow/PyTorch, and Hardware-in-the-loop (HIL) platforms."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) on adaptive systems, robust nonlinear control, predictive optimization, sliding mode, fuzzy adaptive control, and applications in aerospace, smart grids, and process industries."
+    question:
+      "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) on adaptive systems, robust control, predictive optimization, and nonlinear intelligent control."
   },
   {
-    question: "What academic support is provided?",
-    answer: "We provide full-cycle support including project ideation, simulation, real-time hardware implementation, performance validation, IEEE report preparation, and publication in IEEE/Scopus/SCI-indexed journals."
+    question:
+      "What academic support is provided?",
+    answer:
+      "We provide end-to-end support including simulation, hardware implementation, validation, IEEE documentation, and journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Adaptive & Robust Control – Project Development Center in Chennai";
+
+const pageDescription =
+  "Adaptive & Robust Control Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects for B.Tech, M.Tech, and Ph.D. using adaptive PID, H∞ control, sliding mode, fuzzy adaptive, and AI-based control systems.";
+
+const pageUrl =
+  "/department/control-systems-electrical/adaptive-robust-control";
 
 const EEEAdaptiveRobustControlProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Adaptive Robust Control IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Adaptive & Robust Control projects for B.Tech, M.Tech, Ph.D. H∞ robust control, sliding mode, fuzzy adaptive, AI predictive controllers using MATLAB/Simulink, FPGA, TensorFlow for aerospace, smart grids, robotics."
-  keywords="Adaptive Robust Control IEEE Projects 2023–2025, B.Tech Adaptive PID MRAC, M.Tech H∞ Sliding Mode Control, Ph.D. AI ML Adaptive Control, Fuzzy Adaptive Controllers, Nonlinear Robust Control, Aerospace EV Renewables Control, Narpavi Research Institute"
-  url="/department/control-systems-electrical/adaptive-robust-control"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
-      
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Adaptive & Robust Control Project Development Center</li>
-              <li>Adaptive Control Projects for B.Tech</li>
-              <li>Robust Control Systems Projects for M.Tech</li>
-              <li>Ph.D. Research in Adaptive Control</li>
-              <li>Sliding Mode Control Projects</li>
-              <li>H∞ Control Projects IEEE</li>
-              <li>Adaptive Control IEEE 2023–2025 Projects</li>
-              <li>Robust Control in Aerospace Systems</li>
-              <li>Adaptive Fuzzy Control Research</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Adaptive & Robust Control – Project Development Support</h1>
-
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+   {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> drives innovation in Adaptive & Robust Control – Project Development Center, 
@@ -188,53 +220,34 @@ const EEEAdaptiveRobustControlProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+         
+            {/* 🔗 Related Services */}
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/control-systems-electrical">Control Systems – Project Development Center</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
+  {/* 🔑 Keywords */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
 
-          </div>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEAdaptiveRobustControlProjectDevelopmentCenter;

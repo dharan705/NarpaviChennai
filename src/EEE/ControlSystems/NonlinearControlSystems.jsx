@@ -1,67 +1,97 @@
-import "../EEEProjectDevelopmentCenter.scss";  
+import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Nonlinear Control Systems Project Development Center in Chennai",
+  "Nonlinear Control Systems IEEE Projects 2023–2025",
+  "Sliding Mode Control Projects",
+  "Feedback Linearization Research",
+  "Adaptive Nonlinear Control M.Tech Projects",
+  "Ph.D. Research in Nonlinear Control",
+  "AI-based Nonlinear Control IEEE",
+  "Fuzzy Nonlinear Control Projects",
+  "Lyapunov Stability Analysis Projects",
+  "Narpavi Research Institute Nonlinear Control"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Nonlinear Control Systems Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) domains of nonlinear modeling, Lyapunov stability analysis, sliding mode, feedback linearization, backstepping, and AI-assisted nonlinear controllers."
+    question:
+      "What services does the Nonlinear Control Systems Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) domains of nonlinear modeling, Lyapunov stability analysis, sliding mode, feedback linearization, backstepping, and AI-assisted nonlinear controllers."
   },
   {
-    question: "What types of nonlinear control projects are supported?",
-    answer: "We support B.Tech projects (MATLAB-based simulations, robotic arms, inverted pendulum control), M.Tech projects (sliding mode, fuzzy control of renewable systems, FPGA-based implementations), and Ph.D. projects (AI-augmented nonlinear strategies, adaptive systems, patents, SCI-indexed IEEE publications)."
+    question:
+      "What types of nonlinear control projects are supported?",
+    answer:
+      "We support B.Tech projects (MATLAB simulations, robotic arms), M.Tech projects (sliding mode, fuzzy nonlinear control, FPGA implementations), and Ph.D. projects (AI-augmented adaptive nonlinear strategies, patents, SCI-indexed IEEE publications)."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, PSCAD, Python (SciPy), FPGA/ARM microcontrollers, LabVIEW, COMSOL, TensorFlow/PyTorch for intelligent control solutions."
+    answer:
+      "MATLAB/Simulink, PSCAD, Python (SciPy), FPGA/ARM microcontrollers, LabVIEW, COMSOL, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects integrate IEEE Transactions (2023–2025) in nonlinear dynamics, AI-based adaptive controllers, stability control, aerospace robotics, smart EV control, and Industry 4.0 implementations."
+    answer:
+      "Projects integrate IEEE Transactions (2023–2025) on nonlinear dynamics, adaptive control, robotics, EVs, aerospace, and Industry 4.0 systems."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide support with topic selection, algorithm development, nonlinear modeling, adaptive hardware prototypes, IEEE-style reports, and IEEE/Scopus/SCI publication guidance."
+    answer:
+      "Complete guidance including topic selection, nonlinear modeling, simulation, hardware prototyping, IEEE documentation, and publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Nonlinear Control Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Nonlinear Control Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering sliding mode control, feedback linearization, Lyapunov stability, AI-assisted nonlinear controllers using MATLAB, FPGA, and real-time systems.";
+
+const pageUrl =
+  "/department/control-systems-electrical/nonlinear-control-systems";
 
 const EEENonlinearControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Nonlinear Control Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Nonlinear Control Systems projects for B.Tech, M.Tech, Ph.D. Sliding mode control, feedback linearization, backstepping, Lyapunov stability, AI nonlinear controllers using MATLAB/Simulink, FPGA for robotics, EVs, aerospace."
-  keywords="Nonlinear Control Systems IEEE Projects 2023–2025, Sliding Mode Control Projects, B.Tech Robotic Arm Control, M.Tech Fuzzy Nonlinear Control, Ph.D. AI Adaptive Nonlinear Control, Feedback Linearization, Lyapunov Stability Analysis, Narpavi Research Institute"
-  url="/department/control-systems-electrical/nonlinear-control-systems"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Nonlinear Control Systems Project Development Center</li>
-              <li>Sliding Mode Control Projects</li>
-              <li>Feedback Linearization Research</li>
-              <li>Adaptive Nonlinear Control M.Tech Projects</li>
-              <li>Ph.D. Research in Nonlinear Control</li>
-              <li>AI-based Nonlinear Control IEEE 2023–2025</li>
-              <li>Fuzzy Nonlinear Control Projects</li>
-              <li>Lyapunov Stability Analysis Projects</li>
-              <li>Smart Grid Nonlinear Control</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* 📑 Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Nonlinear Control Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> drives the Nonlinear Control Systems Project Development Center, providing IEEE-aligned (2023–2025) research opportunities in nonlinear modeling, advanced control algorithms, and intelligent adaptive strategies for robotics, aerospace, EVs, power electronics, and biomedical systems.</p>
               <p>Researchers gain advanced training in modeling nonlinear dynamics, stability proofs, FPGA/MCU implementations, AI-augmented controllers, and real-time robotic/industrial systems validation.</p>
@@ -177,55 +207,46 @@ const EEENonlinearControlSystemsProjectDevelopmentCenter = () => {
               </div>
               
             </section>
+
+            {/* ❓ FAQs */}
+            <section className="kerala-alluniversityfaq-section">
+              <h2>FAQs</h2>
+              <div className="kerala-faq-items">
+                {faqs.map((item, idx) => (
+                  <details key={idx}>
+                    <summary>{item.question}</summary>
+                    <p>{item.answer}</p>
+                  </details>
+                ))}
+              </div>
+            </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/control-systems-electrical">Control Systems – Project Development Center</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEENonlinearControlSystemsProjectDevelopmentCenter;

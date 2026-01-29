@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Industrial Automation & Robotics Project Development Center in Chennai",
+  "Industrial Automation IEEE Projects 2023–2025",
+  "Robotics Project Development Chennai",
+  "AI Enabled Robotics Projects",
+  "PLC Automation Student Projects",
+  "IoT Integrated Industrial Automation",
+  "Collaborative Robots Cobot Projects",
+  "Digital Twin Robotics Projects",
+  "Swarm Robotics PhD Projects",
+  "Narpavi Research Institute Robotics"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Industrial Automation & Robotics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Industrial Automation & Robotics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on PLC automation, AI-driven robotics, IoT-integrated systems, and collaborative robots for industries like automotive, aerospace, and healthcare."
+    question:
+      "What services does the Industrial Automation & Robotics Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on PLC automation, AI-driven robotics, IoT-integrated systems, collaborative robots, and smart factory solutions."
   },
   {
-    question: "What types of Industrial Automation & Robotics projects are supported?",
-    answer: "We support B.Tech projects (PLC-based automation, pick-and-place robots), M.Tech projects (AI-based control, machine vision), and Ph.D. projects (digital twins, swarm robotics) for applications in smart factories, logistics, and healthcare."
+    question: "Who can apply for these projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Mechatronics, Electrical, and Robotics backgrounds."
   },
   {
-    question: "Which tools and technologies are used in Industrial Automation & Robotics projects?",
-    answer: "Our stack includes MATLAB, ROS, Python, LabVIEW, PLC simulation tools, Arduino, Raspberry Pi, AI frameworks (TensorFlow, Keras), IoT platforms, and robotic hardware (arms, cobots, AMRs)."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, ROS, Python, PLC tools, LabVIEW, Arduino, Raspberry Pi, AI frameworks, IoT platforms, and robotic hardware."
   },
   {
-    question: "How are Industrial Automation & Robotics projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics and Industrial Engineering, focusing on AI-driven robotics, IoT integration, and smart factory solutions."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects align with IEEE Transactions (2023–2025) on Robotics and Industrial Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system modeling, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier/IEC journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, IEEE, IEC, Scopus, Elsevier journal and patent support is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Industrial Automation & Robotics – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Industrial Automation & Robotics Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PLC automation, AI robotics, IoT systems, cobots, digital twins, and smart factories.";
+
+const pageUrl =
+  "/department/manufacturing-production/industrial-automation-robotics";
 
 const MEIndustrialAutomationRoboticsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Industrial Automation & Robotics IEEE Projects (2023–2025)"
-        description="Industrial Automation Robotics IEEE project development for B.Tech, M.Tech & PhD using PLC, ROS, AI control, IoT integration, cobots, digital twins, swarm robotics for smart factories, automotive, aerospace, healthcare."
-        url="/department/manufacturing-production/industrial-automation-robotics"
-        type="article"
-        keywords={[
-          "Industrial Automation IEEE 2023–2025",
-          "Robotics Project Development",
-          "AI Enabled Robotics Projects",
-          "PLC Automation Student Projects",
-          "Industry 4.0 Robotics Research",
-          "IoT Industrial Robots",
-          "Digital Twin Robotics Projects",
-          "Swarm Robotics PhD Projects",
-          "Collaborative Robots Cobots",
-          "Narpavi Research Institute Robotics"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial Automation IEEE Projects 2023–2025</li>
-              <li>Robotics Project Development</li>
-              <li>AI-Enabled Robotics IEEE Projects</li>
-              <li>PLC Automation Projects</li>
-              <li>Industry 4.0 Robotics Research</li>
-              <li>IoT-Based Industrial Robots</li>
-              <li>Digital Twin Robotics IEEE Projects</li>
-              <li>Swarm Robotics Ph.D. Projects</li>
-              <li>Narpavi Research Institute Robotics Projects</li>
-              <li>Collaborative Robots IEEE Aligned Research</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Industrial Automation & Robotics – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Industrial Automation & Robotics Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on PLC automation, AI-driven robotics, IoT-integrated systems, and collaborative robots.
               </p>
@@ -242,63 +262,29 @@ const MEIndustrialAutomationRoboticsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/manufacturing-production">
-      Manufacturing & Production Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/cnc-machining-optimization">
-      CNC Machining Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/additive-manufacturing">
-      Additive Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/industrial-automation-robotics">
-      Industrial Automation & Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/smart-manufacturing-systems">
-      Smart Manufacturing Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/tool-design-process">
-      Tool Design & Process
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/manufacturing-production">Manufacturing & Production Engineering</a></li>
+              <li><a href="/department/manufacturing-production/cnc-machining-optimization">CNC Machining Optimization</a></li>
+              <li><a href="/department/manufacturing-production/additive-manufacturing">Additive Manufacturing</a></li>
+              <li><a href="/department/manufacturing-production/industrial-automation-robotics">Industrial Automation & Robotics</a></li>
+              <li><a href="/department/manufacturing-production/smart-manufacturing-systems">Smart Manufacturing Systems</a></li>
+              <li><a href="/department/manufacturing-production/tool-design-process">Tool Design & Process</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

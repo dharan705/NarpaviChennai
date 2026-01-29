@@ -1,68 +1,96 @@
-import "../EEEProjectDevelopmentCenter.scss";  
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
+import "../EEEProjectDevelopmentCenter.scss";
+import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Battery Management Systems Project Development Center in Chennai",
+  "Battery Management Systems BMS IEEE Projects 2023–2025",
+  "EV Battery Management System Projects",
+  "SoC SoH Estimation IEEE Projects",
+  "IoT Enabled Battery Monitoring Systems",
+  "AI Based Battery Management Systems",
+  "B.Tech BMS Projects",
+  "M.Tech Smart BMS Research",
+  "Ph.D Predictive BMS Algorithms",
+  "Narpavi Research Institute BMS Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Battery Management Systems (BMS) Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. students IEEE-aligned (2023–2025) support in BMS hardware design, monitoring circuits, SoC/SoH estimation, IoT-enabled analytics, AI-based predictive diagnostics, and IEEE/Scopus/SCI paper publication."
+    question:
+      "What services does the Battery Management Systems (BMS) Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. students IEEE-aligned (2023–2025) support in BMS hardware design, monitoring circuits, SoC/SoH estimation, IoT-enabled analytics, AI-based predictive diagnostics, and IEEE/Scopus/SCI paper publication."
   },
   {
     question: "What types of BMS projects are supported?",
-    answer: "B.Tech: basic voltage/temperature monitoring, cell balancing, battery protection circuits. M.Tech: IoT-enabled predictive diagnostics, AI/ML SoC-SoH estimation, real-time Smart BMS dashboards. Ph.D: AI-augmented predictive health algorithms, integration with smart grids, large-scale EV fleet BMS optimization, publications & patents."
+    answer:
+      "B.Tech projects include basic voltage and temperature monitoring, cell balancing, and battery protection circuits. M.Tech projects focus on IoT-enabled predictive diagnostics, AI-based SoC/SoH estimation, and smart BMS dashboards. Ph.D. projects involve predictive health algorithms, EV fleet optimization, patents, and IEEE publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, LabVIEW, Arduino/STM32 microcontrollers, IoT cloud (AWS, Azure IoT, ThingSpeak), CAN bus protocols, thermal sensors, and AI/ML libraries such as TensorFlow, PyTorch for predictive BMS modeling."
+    answer:
+      "MATLAB/Simulink, LabVIEW, Arduino/STM32 microcontrollers, IoT cloud platforms (AWS, Azure IoT, ThingSpeak), CAN bus, thermal sensors, TensorFlow, and PyTorch."
   },
   {
     question: "How are BMS projects aligned with IEEE standards?",
-    answer: "All projects align with IEEE Transactions (2023–2025) on BMS algorithms, predictive diagnostics, energy optimization in EVs, smart charging integration, and AI-driven fault prediction frameworks."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on BMS algorithms, predictive diagnostics, EV energy optimization, smart charging integration, and AI-driven fault prediction."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer end-to-end project guidance: IEEE topic selection, hardware circuit design, embedded firmware development, IoT/AI integration for monitoring, IEEE report preparation, and global publication assistance."
+    answer:
+      "End-to-end guidance including IEEE topic selection, hardware and firmware development, IoT/AI integration, documentation, and global publication assistance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Battery Management Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Battery Management Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering SoC/SoH estimation, IoT-enabled battery monitoring, AI-based predictive diagnostics, EV battery safety, and smart energy optimization.";
+
+const pageUrl =
+  "/department/electric-vehicles/bms";
 
 const EEEBmsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Battery Management Systems BMS IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Battery Management Systems BMS projects for B.Tech, M.Tech, Ph.D. SoC SoH estimation, IoT monitoring, AI predictive diagnostics using MATLAB/Simulink, Arduino STM32, TensorFlow for EV batteries, smart grids."
-  keywords="Battery Management Systems BMS IEEE Projects 2023–2025, B.Tech BMS Monitoring, M.Tech AI SoC SoH Estimation, Ph.D. Predictive BMS Algorithms, IoT EV Battery Management, Li-ion BMS Projects, EV Energy Optimization, Narpavi Research Institute"
-  url="/department/electric-vehicles/bms"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 SEO Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Battery Management Systems Project Development Center</li>
-              <li>BMS IEEE Projects</li>
-              <li>EV Battery Monitoring Projects</li>
-              <li>AI-Based BMS Research</li>
-              <li>IoT-Enabled Battery Management</li>
-              <li>Li-ion Battery Management Systems</li>
-              <li>B.Tech BMS Projects</li>
-              <li>M.Tech EV Battery Projects</li>
-              <li>Ph.D. BMS Research</li>
-              <li>EV Energy Management IEEE Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
-          
-          {/* 📑 Center Content */}
+
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Battery Management Systems (BMS) – Project Development Support</h1>
-            
-            {/* Introduction */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+   {/* Introduction */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> provides IEEE 2023–2025 aligned support in Battery Management Systems (BMS), enabling students to build advanced EV battery technologies, from SoC/SoH estimation to IoT-enabled predictive monitoring and AI-driven optimization.</p>
               <p>BMS lies at the heart of EV safety and performance, ensuring range optimization, thermal safety, and integration with EV drives and chargers.</p>
@@ -177,58 +205,34 @@ const EEEBmsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              
-       
             </section>
           </div>
-          
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
 
-          </div>
-        
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/electric-vehicles">Electric Vehicles – Project Development Center</a></li>
+              <li><a href="/department/electric-vehicles/bms">Battery Management Systems (BMS)</a></li>
+              <li><a href="/department/electric-vehicles/ev-charging-infrastructure">EV Charging Infrastructure</a></li>
+              <li><a href="/department/electric-vehicles/ev-motor-drive-systems">EV Motor Drive Systems</a></li>
+              <li><a href="/department/electric-vehicles/hev">Hybrid Electric Vehicles (HEV)</a></li>
+              <li><a href="/department/electric-vehicles/power-electronics-evs">Power Electronics for EVs</a></li>
+              <li><a href="/department/electric-vehicles/regenerative-braking-systems">Regenerative Braking Systems</a></li>
+            </ul>
+
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEBmsProjectDevelopmentCenter;

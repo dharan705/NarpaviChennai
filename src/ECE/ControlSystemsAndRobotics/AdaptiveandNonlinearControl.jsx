@@ -1,66 +1,87 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the Adaptive and Nonlinear Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Adaptive and Nonlinear Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in adaptive control, nonlinear system modeling, and real-time control for robotics, industrial automation, and UAVs."
+    question:
+      "What services does the Adaptive and Nonlinear Control Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Adaptive and Nonlinear Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in adaptive control, nonlinear system modeling, and real-time control for robotics, industrial automation, and UAVs.",
   },
   {
-    question: "What types of Adaptive and Nonlinear Control Systems projects are supported?",
-    answer: "We support B.Tech projects (PID-controlled robotic arms, temperature regulation), M.Tech projects (model predictive control, multi-input systems), and Ph.D. projects (nonlinear dynamics, cyber-physical systems) for applications in robotics, aerospace, and smart factories."
+    question:
+      "What types of Adaptive and Nonlinear Control Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (PID-controlled robotic arms, temperature regulation), M.Tech projects (model predictive control, multi-input systems), and Ph.D. projects (nonlinear dynamics, cyber-physical systems) for applications in robotics, aerospace, and smart factories.",
   },
   {
-    question: "Which technologies are used in Adaptive and Nonlinear Control Systems project development?",
-    answer: "Our stack includes PID controllers, model predictive control, sensor fusion, Kalman filtering, MATLAB/Simulink, real-time embedded controllers, and AI frameworks like TensorFlow for advanced control applications."
+    question:
+      "Which technologies are used in Adaptive and Nonlinear Control Systems project development?",
+    answer:
+      "Our stack includes PID controllers, model predictive control, sensor fusion, Kalman filtering, MATLAB/Simulink, real-time embedded controllers, and AI frameworks like TensorFlow for advanced control applications.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like adaptive control for UAVs, nonlinear robotic control, and digital twin-based systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like adaptive control for UAVs, nonlinear robotic control, and digital twin-based systems, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware-software integration, algorithm development, simulation, experimental validation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, hardware-software integration, algorithm development, simulation, experimental validation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Adaptive Control Projects",
+  "Nonlinear Control Systems 2023–2025",
+  "Robotics Control Projects",
+  "Model Predictive Control",
+  "AI-Powered Robotic Systems",
+  "Cyber-Physical Systems Control",
+  "Sensor Fusion Robotics",
+  "Narpavi Research Institute Control Systems",
+  "Industrial Automation Projects",
+  "UAV Control Algorithms",
+  "Robotic Arm Adaptive Control",
+  "IEEE Control Systems Projects",
 ];
 
 const ECEAdaptiveNonlinearControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Adaptive and Nonlinear Control Systems IEEE Projects | Robotics, UAV, MPC | B.Tech M.Tech Ph.D."
+        title="Adaptive and Nonlinear Control Systems – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) adaptive and nonlinear control systems projects for robotics, UAVs, cyber-physical systems, and industrial automation using PID, MPC, sensor fusion, Kalman filtering, MATLAB/Simulink, and embedded controllers."
-        keywords="Adaptive Control Projects, Nonlinear Control Systems 2023–2025, Robotics Control Projects, Model Predictive Control, AI-Powered Robotic Systems, Cyber-Physical Systems Control, Sensor Fusion Robotics, Narpavi Research Institute Control Systems, Industrial Automation Projects, UAV Control Algorithms, Robotic Arm Adaptive Control, IEEE Control Systems Projects"
-        url="/department/control-systems-robotics/adaptive-nonlinear-control-systems"
+        keywords={keywords}
+        url="/department/control-systems-robotics/adaptive-nonlinear-control-systems-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Adaptive Control Projects</li>
-              <li>Nonlinear Control Systems 2023–2025</li>
-              <li>Robotics Control Projects</li>
-              <li>Model Predictive Control</li>
-              <li>AI-Powered Robotic Systems</li>
-              <li>Cyber-Physical Systems Control</li>
-              <li>Sensor Fusion Robotics</li>
-              <li>Narpavi Research Institute Control Systems</li>
-              <li>Industrial Automation Projects</li>
-              <li>UAV Control Algorithms</li>
-              <li>Robotic Arm Adaptive Control</li>
-              <li>IEEE Control Systems Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Adaptive and Nonlinear Control Systems – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Adaptive and Nonlinear Control Systems – Project Development Center in chennai</h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Adaptive and Nonlinear Control Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop high-performance control systems aligned with IEEE Transactions (2023–2025). Our projects focus on real-time controllers, robotics platforms, and industrial automation systems.
               </p>
@@ -223,39 +244,30 @@ const ECEAdaptiveNonlinearControlSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
-  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
-  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
-  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
-  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/control-systems-robotics">Control Systems & Robotics</a></li>
+              <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+              <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+              <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+              <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+            </ul>
+
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

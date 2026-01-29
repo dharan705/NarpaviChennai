@@ -1,129 +1,149 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "PLC & SCADA Systems Project Development Center in Chennai",
+  "PLC SCADA IEEE Projects 2023–2025",
+  "Industrial Automation Student Projects",
+  "IoT Enabled SCADA Projects",
+  "AI Based PLC Automation",
+  "Cloud Based SCADA Systems",
+  "Cybersecurity in SCADA Projects",
+  "Digital Twin PLC SCADA Systems",
+  "Smart Factory Automation Projects",
+  "Narpavi Research Institute PLC SCADA Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Sensor Integration & IoT Control Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Sensor Integration & IoT Control Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on sensor fusion, IoT-enabled control systems, AI-driven analytics, edge computing, and cybersecure IoT networks for applications in smart factories, healthcare, transportation, and energy systems."
+    question:
+      "What services does the PLC & SCADA Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on PLC automation, SCADA monitoring, IoT integration, AI-driven predictive maintenance, cybersecurity, and digital twin-enabled industrial control systems."
   },
   {
-    question: "What types of Sensor Integration & IoT Control projects are supported?",
-    answer: "We support B.Tech projects (basic sensor-IoT integration, home automation), M.Tech projects (AI-driven sensor fusion, edge computing), and Ph.D. projects (cybersecure IoT, digital twins, 5G/6G IoT systems) for applications in smart cities, healthcare, automotive, and renewable energy."
+    question: "Who can apply for PLC & SCADA projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechatronics, EEE, ECE, and Mechanical disciplines."
   },
   {
-    question: "Which tools and technologies are used in Sensor Integration & IoT Control projects?",
-    answer: "Our stack includes MATLAB, Simulink, Python, AI frameworks (TensorFlow, Keras), IoT platforms (ThingSpeak, Blynk, Node-RED), and hardware like Arduino, ESP32, Raspberry Pi, and LoRa modules for sensor integration, data communication, and real-time control."
+    question: "Which tools are used in PLC & SCADA projects?",
+    answer:
+      "Siemens TIA Portal, Allen Bradley RSLogix, MATLAB, Python, IoT platforms, and AI frameworks."
   },
   {
-    question: "How are Sensor Integration & IoT Control projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Internet of Things and Industrial Informatics, focusing on sensor fusion, edge computing, and cybersecurity, aligned with IEEE/IEC standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes. All projects follow IEEE Transactions (2023–2025) and IEEE/IEC standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support available?",
+    answer:
+      "Yes. Support is provided for IEEE, Scopus, Elsevier journals and patents."
   }
 ];
 
-const MESensorIntegrationIoTControlProjectDevelopmentCenter = () => {
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "PLC & SCADA Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) PLC & SCADA Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on PLC automation, SCADA monitoring, IoT integration, AI-driven predictive maintenance, cybersecurity, and digital twin-based industrial control.";
+
+const pageUrl =
+  "/department/mechatronics-control-systems/plc-systems";
+
+const MEPLCSCADASystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Sensor Integration & IoT Control IEEE Projects (2023–2025)"
-        description="Sensor Integration IoT Control IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ESP32, Arduino, sensor fusion, edge computing, AI analytics, cybersecure IoT, digital twins for smart cities, healthcare, industrial IoT."
-        url="/department/mechatronics-control-systems/sensor-integration"
-        type="article"
-        keywords={[
-          "IoT Sensor IEEE 2023–2025",
-          "Sensor Integration in IoT Networks",
-          "AI Enabled IoT Control Projects",
-          "Edge Computing IoT Projects",
-          "Blockchain IoT Sensor Security",
-          "Smart City IoT IEEE Projects",
-          "Healthcare IoT Sensors",
-          "Digital Twin IoT Projects",
-          "Cybersecure IoT Networks",
-          "Narpavi Research Institute IoT Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT Sensor IEEE Projects 2023–2025</li>
-              <li>Sensor Integration in IoT Networks</li>
-              <li>AI-Enabled IoT Control Projects</li>
-              <li>Edge Computing IoT Projects</li>
-              <li>Blockchain IoT Sensor Security</li>
-              <li>Smart City IoT IEEE Projects</li>
-              <li>Healthcare IoT Sensors</li>
-              <li>Digital Twin IoT Projects</li>
-              <li>Ph.D. IoT Research Projects</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Sensor Integration & IoT Control – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
-                <strong>Narpavi Research Institute</strong> presents the Sensor Integration & IoT Control Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on sensor fusion, IoT-enabled control systems, AI-driven analytics, edge computing, and cybersecure IoT networks.
+                <strong>Narpavi Research Institute</strong> presents the PLC & SCADA Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on PLC automation, SCADA monitoring, IoT integration, AI-driven predictive maintenance, cybersecurity, and digital twin-enabled industrial control systems.
               </p>
               <p>
-                Our projects leverage MATLAB, Python, IoT platforms, and hardware like Arduino and ESP32 to address challenges in smart factories, healthcare, transportation, and energy systems, ensuring high-impact research and industrial applicability.
+                Our projects leverage Siemens TIA Portal, Allen Bradley RSLogix, MATLAB, Python, AI, and IoT platforms to address challenges in industrial automation, smart factories, and Industry 4.0, ensuring high-impact research and industrial applicability.
               </p>
             </section>
 
             <section className="MEProjectDevelopmentCenter-importance">
-              <h2>Importance of Sensor Integration & IoT Control</h2>
+              <h2>Importance of PLC & SCADA Systems</h2>
               <ul>
-                <li><strong>Real-Time Monitoring</strong>: Enables instant data insights for smart systems (IEEE 2024).</li>
-                <li><strong>Efficiency</strong>: Reduces resource usage by 30% in applications like agriculture.</li>
-                <li><strong>Scalability</strong>: Supports large-scale IoT deployments in smart cities.</li>
-                <li><strong>Intelligence</strong>: AI-driven analytics for predictive control.</li>
-                <li><strong>Security</strong>: Blockchain and encryption for tamper-proof IoT networks.</li>
+                <li><strong>Reliability</strong>: Reduces downtime by 20% in industrial systems (IEEE 2024).</li>
+                <li><strong>Efficiency</strong>: Improves energy efficiency by 15% with real-time monitoring.</li>
+                <li><strong>Real-Time Control</strong>: Enables precise automation and fault detection.</li>
+                <li><strong>Smart Integration</strong>: IoT and AI for predictive maintenance and cloud connectivity.</li>
+                <li><strong>Industry 4.0</strong>: Drives smart factory and sustainable automation solutions.</li>
               </ul>
             </section>
 
             <section className="MEProjectDevelopmentCenter-btech">
-              <h2>B.Tech Sensor Integration & IoT Control Project Development</h2>
-              <p>For undergraduate students, our center focuses on foundational sensor and IoT projects aligned with IEEE topics.</p>
+              <h2>B.Tech PLC & SCADA Systems Project Development</h2>
+              <p>For undergraduate students, our center focuses on foundational PLC and SCADA projects aligned with IEEE topics.</p>
               <ul>
-                <li>Learn sensor types (temperature, motion, LiDAR) and IoT platforms</li>
-                <li>Integrate sensors with Arduino or ESP32 for home automation</li>
-                <li>Implement MQTT or Wi-Fi for data communication</li>
-                <li>Visualize sensor data on cloud dashboards like ThingSpeak</li>
+                <li>Learn ladder logic programming and SCADA interfaces</li>
+                <li>Simulate automation using Siemens TIA Portal or RSLogix</li>
+                <li>Prototype water tank control or conveyor systems with Arduino/PLC</li>
+                <li>Validate real-time monitoring and system efficiency</li>
               </ul>
-              <p>Example: IoT-based smart parking system with sensor integration.</p>
+              <p>Example: PLC-based conveyor belt automation with SCADA dashboard.</p>
             </section>
 
             <section className="MEProjectDevelopmentCenter-mtech">
-              <h2>M.Tech Sensor Integration & IoT Control Project Development</h2>
-              <p>For postgraduate students, projects focus on advanced sensor-IoT integration challenges.</p>
+              <h2>M.Tech PLC & SCADA Systems Project Development</h2>
+              <p>For postgraduate students, projects focus on advanced PLC and SCADA challenges.</p>
               <ul>
-                <li>Develop AI-based sensor fusion and noise filtering algorithms</li>
-                <li>Implement edge computing for low-latency IoT control</li>
-                <li>Integrate IoT with PLC/SCADA for industrial applications</li>
-                <li>Benchmark against IEEE standards for latency and reliability</li>
+                <li>Develop AI-based fault prediction and adaptive PID controllers</li>
+                <li>Integrate IoT-enabled SCADA with cloud connectivity</li>
+                <li>Co-simulate with MATLAB and Python for real-time monitoring</li>
+                <li>Benchmark against IEEE/IEC standards for reliability</li>
               </ul>
-              <p>Example: AI-driven sensor fusion for smart grid monitoring.</p>
+              <p>Example: IoT-enabled SCADA for predictive fault detection in manufacturing.</p>
             </section>
 
             <section className="MEProjectDevelopmentCenter-phd">
-              <h2>Ph.D. Sensor Integration & IoT Control Project Development</h2>
-              <p>For doctoral scholars, our center supports cutting-edge IoT and sensor research.</p>
+              <h2>Ph.D. PLC & SCADA Systems Project Development</h2>
+              <p>For doctoral scholars, our center supports cutting-edge PLC and SCADA research.</p>
               <ul>
-                <li>Explore gaps in cybersecurity, 5G/6G IoT, or digital twins</li>
-                <li>Develop novel architectures for energy-aware sensor networks</li>
-                <li>Implement prototypes for smart cities or autonomous vehicles</li>
+                <li>Identify gaps in cybersecurity, digital twins, or blockchain-based SCADA</li>
+                <li>Develop multi-agent control systems with AI-driven SCADA</li>
+                <li>Implement smart plant prototypes with IoT and cloud integration</li>
                 <li>Publish in IEEE, SCI, or Scopus-indexed journals</li>
               </ul>
-              <p>Example: Digital twin-enabled IoT sensor ecosystem for smart cities.</p>
+              <p>Example: Digital twin-integrated SCADA for smart factory optimization.</p>
             </section>
 
             <section className="MEProjectDevelopmentCenter-table">
@@ -141,43 +161,43 @@ const MESensorIntegrationIoTControlProjectDevelopmentCenter = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>Basic Sensor Integration</td>
-                      <td>Home Automation</td>
-                      <td>Cost-effective, easy to deploy</td>
-                      <td>Limited scalability</td>
-                      <td>B.Tech</td>
-                    </tr>
-                    <tr>
-                      <td>IoT Cloud Connectivity</td>
-                      <td>Healthcare, Smart Homes</td>
-                      <td>Remote monitoring, real-time alerts</td>
-                      <td>Network dependency</td>
+                      <td>PLC Automation</td>
+                      <td>Manufacturing, Automotive</td>
+                      <td>Reliable, fast control</td>
+                      <td>Complex programming</td>
                       <td>B.Tech/M.Tech</td>
                     </tr>
                     <tr>
-                      <td>Edge IoT Processing</td>
-                      <td>Industrial Control, Robotics</td>
-                      <td>Low latency, local decisions</td>
-                      <td>Hardware constraints</td>
-                      <td>M.Tech</td>
+                      <td>SCADA Monitoring</td>
+                      <td>Utilities, Oil & Gas, Power</td>
+                      <td>Remote supervision, real-time visibility</td>
+                      <td>High setup cost</td>
+                      <td>B.Tech/M.Tech</td>
                     </tr>
                     <tr>
-                      <td>Sensor Fusion + AI</td>
-                      <td>Autonomous Vehicles, Defense</td>
-                      <td>Accurate perception, fault-tolerant</td>
-                      <td>Computational complexity</td>
+                      <td>IoT-Enabled SCADA</td>
+                      <td>Smart Factories, Energy</td>
+                      <td>Cloud connectivity, global monitoring</td>
+                      <td>Data security</td>
                       <td>M.Tech/Ph.D.</td>
                     </tr>
                     <tr>
-                      <td>Blockchain-Enabled Sensor Networks</td>
-                      <td>Finance, Energy</td>
-                      <td>Secure, tamper-proof records</td>
+                      <td>AI-Integrated PLC</td>
+                      <td>Predictive Maintenance</td>
+                      <td>Intelligent fault detection</td>
+                      <td>AI training complexity</td>
+                      <td>M.Tech/Ph.D.</td>
+                    </tr>
+                    <tr>
+                      <td>Blockchain in SCADA</td>
+                      <td>Critical Infrastructure</td>
+                      <td>Secure, tamper-proof logs</td>
                       <td>Implementation complexity</td>
                       <td>Ph.D.</td>
                     </tr>
                     <tr>
-                      <td>Digital Twin + IoT Sensors</td>
-                      <td>Smart Cities, Power Grids</td>
+                      <td>Digital Twin + SCADA</td>
+                      <td>Aerospace, Process Industries</td>
                       <td>Predictive optimization</td>
                       <td>Data integration</td>
                       <td>Ph.D.</td>
@@ -190,54 +210,54 @@ const MESensorIntegrationIoTControlProjectDevelopmentCenter = () => {
             <section className="MEProjectDevelopmentCenter-keyareas">
               <h2>Key Research & Project Areas</h2>
               <ul>
-                <li><strong>Basic Sensor Integration:</strong> Cost-effective IoT solutions.</li>
-                <li><strong>IoT Cloud Connectivity:</strong> Real-time remote monitoring.</li>
-                <li><strong>Edge IoT Processing:</strong> Low-latency local control.</li>
-                <li><strong>Sensor Fusion + AI:</strong> Enhanced perception and analytics.</li>
-                <li><strong>Blockchain-Enabled Sensor Networks:</strong> Secure data logging.</li>
-                <li><strong>Digital Twin + IoT Sensors:</strong> Predictive optimization for smart systems.</li>
+                <li><strong>PLC Automation:</strong> Reliable and deterministic control.</li>
+                <li><strong>SCADA Monitoring:</strong> Real-time industrial supervision.</li>
+                <li><strong>IoT-Enabled SCADA:</strong> Cloud-based remote monitoring.</li>
+                <li><strong>AI-Integrated PLC:</strong> Predictive maintenance and fault detection.</li>
+                <li><strong>Blockchain in SCADA:</strong> Secure data transactions.</li>
+                <li><strong>Digital Twin + SCADA:</strong> Virtual optimization for smart factories.</li>
               </ul>
             </section>
 
             <section className="MEProjectDevelopmentCenter-casestudy">
-              <h2>Case Study – IoT-Based Smart Agriculture</h2>
+              <h2>Case Study – PLC-SCADA in Power Plants</h2>
               <p>
-                A 2024 IEEE study deployed IoT-based sensor systems for precision agriculture, using soil moisture, temperature, and pH sensors with LoRa gateways. Machine learning models reduced water usage by 30% and increased crop yield by 18%.
+                A 2024 IEEE study demonstrated IoT-enabled SCADA in a thermal power plant, achieving a 20% reduction in downtime and 15% increased efficiency using AI-driven predictive fault diagnosis and digital twin modeling.
               </p>
             </section>
 
             <section className="MEProjectDevelopmentCenter-projecttitles">
               <h2>IEEE-Aligned Project Titles (2023–2025)</h2>
               <ul>
-                <li>IoT-Enabled Smart Healthcare with Multi-Sensor Data Fusion (2023)</li>
-                <li>AI-Based Fault Detection in Sensor-Integrated IoT Systems (2023)</li>
-                <li>Blockchain-Assisted Secure IoT Sensor Networks (2024)</li>
-                <li>Edge Computing for Low-Latency IoT Control Systems (2024)</li>
-                <li>5G-Enabled Smart Transportation with IoT Sensor Control (2024)</li>
-                <li>IoT-Based Predictive Maintenance in Industrial Machinery (2025)</li>
-                <li>Digital Twin-Driven IoT Sensor Ecosystems (2025)</li>
-                <li>Renewable Energy Monitoring Using IoT & Sensor Fusion (2025)</li>
-                <li>Cybersecurity Framework for IoT Sensor Data Transmission (2025)</li>
-                <li>Wearable IoT Sensor Integration for Real-Time Health Tracking (2025)</li>
+                <li>IoT-Enabled PLC-SCADA System for Smart Manufacturing (2023)</li>
+                <li>AI-Based Predictive Fault Detection in PLC-Controlled Systems (2023)</li>
+                <li>Digital Twin-Integrated SCADA for Industrial Automation (2024)</li>
+                <li>Cybersecure PLC-SCADA Architecture for Power Grids (2024)</li>
+                <li>Cloud-Connected SCADA with Real-Time Remote Monitoring (2024)</li>
+                <li>Blockchain-Based SCADA for Critical Infrastructure Protection (2025)</li>
+                <li>Smart Water Distribution Control Using PLC & SCADA Integration (2025)</li>
+                <li>PLC-SCADA Automation in Renewable Energy Power Plants (2025)</li>
+                <li>Adaptive PID Control in PLC-SCADA Industrial Systems (2025)</li>
+                <li>AI-Supported HMI for Next-Gen Industrial Automation (2025)</li>
               </ul>
             </section>
 
             <section className="MEProjectDevelopmentCenter-futurescope">
               <h2>Future Scope & Research Opportunities</h2>
               <ul>
-                <li><strong>5G/6G IoT Systems:</strong> Ultra-reliable, low-latency communication.</li>
-                <li><strong>AI-Enhanced IoT:</strong> Predictive analytics and adaptive control.</li>
-                <li><strong>Energy-Efficient IoT Sensors:</strong> Long-life power optimization.</li>
-                <li><strong>Cybersecure IoT Networks:</strong> Blockchain and post-quantum cryptography.</li>
-                <li><strong>Digital Twins for IoT Ecosystems:</strong> Virtual testing for critical systems.</li>
-                <li><strong>Cross-Domain IoT:</strong> Applications in homes, healthcare, and energy.</li>
+                <li><strong>Smart Factories (Industry 4.0):</strong> Digitalized PLC-SCADA networks.</li>
+                <li><strong>AI & Machine Learning:</strong> Self-correcting control loops.</li>
+                <li><strong>Cybersecurity:</strong> Blockchain and encrypted SCADA systems.</li>
+                <li><strong>Cloud & Edge Computing:</strong> Hybrid SCADA architectures.</li>
+                <li><strong>Digital Twin Factories:</strong> Predictive optimization with virtual replicas.</li>
+                <li><strong>Green Automation:</strong> Energy-efficient control solutions.</li>
               </ul>
             </section>
 
             <section className="MEProjectDevelopmentCenter-about">
               <h2>About Narpavi Research Institute</h2>
               <p>
-                Narpavi Research Institute is a global leader in Sensor Integration & IoT Control project development for B.Tech, M.Tech, and Ph.D. students. With expertise in MATLAB, Python, IoT platforms, and hardware like Arduino and ESP32, we provide IEEE-aligned (2023–2025) project support and publication services in high-impact journals (IEEE, SCI, Scopus). Our projects empower students to contribute to smart cities, healthcare, and industrial IoT systems.
+                Narpavi Research Institute is a global leader in PLC & SCADA Systems project development for B.Tech, M.Tech, and Ph.D. students. With expertise in Siemens TIA Portal, Allen Bradley RSLogix, MATLAB, Python, AI, and IoT, we provide IEEE-aligned (2023–2025) project support and publication services in high-impact journals (IEEE, SCI, Scopus). Our projects empower students to contribute to smart factories, industrial automation, and sustainable control systems.
               </p>
             </section>
 
@@ -255,47 +275,30 @@ const MESensorIntegrationIoTControlProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/mechatronics-control-systems">
-      Mechatronics & Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/pid-advanced-control">
-      PID & Advanced Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/automation-manufacturing">
-      Automation in Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/plc-systems">
-      PLC Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/sensor-integration">
-      Sensor Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
-      Smart Actuator Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/mechatronics-control-systems">Mechatronics & Control Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/pid-advanced-control">PID & Advanced Control</a></li>
+              <li><a href="/department/mechatronics-control-systems/automation-manufacturing">Automation in Manufacturing</a></li>
+              <li><a href="/department/mechatronics-control-systems/plc-systems">PLC Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/sensor-integration">Sensor Integration</a></li>
+              <li><a href="/department/mechatronics-control-systems/smart-actuator-systems">Smart Actuator Systems</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
   );
 };
 
-export default MESensorIntegrationIoTControlProjectDevelopmentCenter;
+export default MEPLCSCADASystemsProjectDevelopmentCenter;

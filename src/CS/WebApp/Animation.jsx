@@ -1,65 +1,87 @@
 import "./Animation.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Animations – Project Development Center in Chennai",
+  "IEEE Animation Project Topics 2023–2025",
+  "Unity Animation Projects for B.Tech M.Tech Ph.D.",
+  "Blender 3D Animation Projects",
+  "OpenGL Shader Projects",
+  "AI-based Animation Generation",
+  "Real-Time 3D Animation IEEE Projects",
+  "AR/VR Animation Project Development",
+  "Narpavi Research Institute Animation Services",
+  "IEEE Academic Animation Development Center"
+];
 
 const faqs = [
   {
     question: "What services does the Animations Project Development Center offer?",
-    answer: "Narpavi Research Institute's Animations Project Development Center supports B.Tech, M.Tech, and Ph.D. students in creating IEEE-aligned (2023–2025) animation projects, including 2D/3D animations, AR/VR simulations, and AI-powered animation systems."
+    answer:
+      "Narpavi Research Institute's Animations Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) animation projects including 2D/3D animation, AR/VR, and AI-driven animation systems."
   },
   {
     question: "What types of animation projects are supported?",
-    answer: "We support B.Tech projects (2D storytelling, educational animations), M.Tech projects (real-time simulations, AR/VR apps), and Ph.D. projects (AI-driven avatars, biomechanical modeling) for education, healthcare, and simulations."
+    answer:
+      "We support 2D storytelling, educational animation, real-time simulation, AR/VR applications, and AI-powered animation systems."
   },
   {
     question: "Which technologies are used in animation project development?",
-    answer: "Our technology stack includes Unity, Blender, Maya, Unreal Engine, Adobe After Effects, OpenGL, and AI tools like TensorFlow for creating scalable and innovative animations."
+    answer:
+      "Unity, Blender, Maya, Unreal Engine, OpenGL, Adobe After Effects, and AI frameworks like TensorFlow."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering topics like real-time rendering, AI animation, and XR simulations, ensuring academic and industry relevance."
+    answer:
+      "Projects are selected from IEEE Transactions (2023–2025) ensuring academic and industry relevance."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, animation development, rendering, documentation, and publication assistance for IEEE/SCI journals."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, animation development, rendering, documentation, and IEEE/SCI publication support."
   }
 ];
 
 const AnimationsProjectDevelopmentCenter = () => {
   return (
-    <div className="AnimationsProjectDevelopmentCenter">
-      <SEO 
-        title="Animations IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Animation projects for B.Tech, M.Tech, Ph.D. Unity, Blender, Unreal Engine, AR/VR, AI animation for education, healthcare, simulations."
-        keywords="Animations – Project Development Center, IEEE Animation Project Topics 2023–2025, Unity Animation Projects for B.Tech M.Tech Ph.D., Blender 3D Animation Projects, OpenGL Shader Projects, AI-based Animation Generation, Real-Time 3D Animation IEEE Projects, AR/VR Animation Project Development, Narpavi Research Institute Animation Services, IEEE Academic Animation Development Center"
-        url="/department/animations-project"
+    <div className="MobileAppDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Animations – Project Development Center in Chennai"
+        description="Animations – Project Development Center in Chennai offering IEEE 2023–2025 animation projects in Unity, Blender, AR/VR, OpenGL, and AI-based animation for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/animations-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="AnimationsProjectDevelopmentCenter-main">
-        <div className="AnimationsProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="AnimationsProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Animations – Project Development Center</li>
-              <li>IEEE Animation Project Topics 2023–2025</li>
-              <li>Unity Animation Projects for B.Tech M.Tech Ph.D.</li>
-              <li>Blender 3D Animation Projects</li>
-              <li>OpenGL Shader Projects</li>
-              <li>AI-based Animation Generation</li>
-              <li>Real-Time 3D Animation IEEE Projects</li>
-              <li>AR/VR Animation Project Development</li>
-              <li>Narpavi Research Institute Animation Services</li>
-              <li>IEEE Academic Animation Development Center</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="AnimationsProjectDevelopmentCenter-center">
-            <h1>Animations – Project Development Center</h1>
-
-            <section className="AnimationsProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Animations – Project Development Center in Chennai</h1>
+ <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> - Project Development Center at Narpavi Research Institute provides an elite platform for students and scholars to explore, develop, and showcase high-quality animation-based academic projects aligned with recent innovations published in IEEE Transactions (2023–2025). Our center offers technical and creative guidance in developing 2D/3D animations, motion graphics, interactive animations, AR/VR simulations, and AI-powered animation systems.
               </p>
@@ -71,7 +93,7 @@ const AnimationsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="AnimationsProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Animation Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on visual simulations, 2D/3D animations, or educational explainer videos aligned with IEEE topics.
@@ -88,7 +110,7 @@ const AnimationsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="AnimationsProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Animation Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced animation projects like real-time simulations, AR animations, or game-based learning modules, aligned with IEEE research.
@@ -105,7 +127,7 @@ const AnimationsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="AnimationsProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Animation Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering animation research in AI-driven avatars, biomechanical modeling, and XR simulations.
@@ -122,9 +144,9 @@ const AnimationsProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="AnimationsProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="AnimationsProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -146,7 +168,7 @@ const AnimationsProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="AnimationsProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Animation Project Titles (2023–2025)</h2>
               <ul>
                 <li>Real-Time Virtual Reality Animation for Interactive Learning Environments – 2023</li>
@@ -162,7 +184,7 @@ const AnimationsProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="AnimationsProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Animations Project Development</h2>
               <p>
                 Narpavi Research Institute's Animations – Project Development Center integrates cutting-edge IEEE research with hands-on animation development, fostering scalable and innovative visual solutions.
@@ -182,29 +204,13 @@ const AnimationsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>          </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+              <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="AnimationsProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

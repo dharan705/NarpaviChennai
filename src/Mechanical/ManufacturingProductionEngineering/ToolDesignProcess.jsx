@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Tool Design & Process Optimization Project Development Center in Chennai",
+  "Tool Design IEEE Projects 2023–2025",
+  "Process Optimization Student Projects",
+  "AI Enabled Tool Design Projects",
+  "IoT Smart Tooling Projects",
+  "Digital Twin Tool Simulation",
+  "Hybrid Manufacturing Tooling",
+  "Predictive Maintenance Tooling",
+  "Smart Factory Tool Design",
+  "Narpavi Research Institute Tooling Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Tool Design & Process Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Tool Design & Process Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven tool design, IoT-enabled smart tooling, process optimization, and hybrid manufacturing for industries like automotive, aerospace, and electronics."
+    question:
+      "What services does the Tool Design & Process Optimization Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on AI-driven tool design, IoT-enabled smart tooling, process optimization, and hybrid manufacturing."
   },
   {
-    question: "What types of Tool Design & Process Optimization projects are supported?",
-    answer: "We support B.Tech projects (CAD-based tool design, basic process optimization), M.Tech projects (AI-driven optimization, generative design), and Ph.D. projects (digital twins, smart tooling systems) for applications in smart factories and precision manufacturing."
+    question: "Who can apply for these projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Manufacturing, and Production Engineering backgrounds."
   },
   {
-    question: "Which tools and technologies are used in Tool Design & Process Optimization projects?",
-    answer: "Our stack includes SolidWorks, AutoCAD, CATIA, ANSYS, MATLAB, Python, AI frameworks (TensorFlow, Keras), IoT platforms, and CNC/additive manufacturing hardware for simulations and prototyping."
+    question: "Which tools are used?",
+    answer:
+      "SolidWorks, AutoCAD, CATIA, ANSYS, MATLAB, Python, AI frameworks, IoT platforms, CNC and additive manufacturing systems."
   },
   {
-    question: "How are Tool Design & Process Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Manufacturing and Industrial Engineering, focusing on AI-driven tool design, IoT-enabled monitoring, and sustainable process optimization."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects align with IEEE Transactions (2023–2025) on Manufacturing and Industrial Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD/FEM modeling, AI/IoT integration, hardware prototyping, process validation, documentation, and support for IEEE/Scopus/Elsevier/ASTM journal publications and patents."
+    question: "Is publication support available?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier, ASTM journal and patent support is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Tool Design & Process Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Tool Design & Process Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students covering AI-driven tool design, IoT smart tooling, digital twins, and hybrid manufacturing.";
+
+const pageUrl =
+  "/department/manufacturing-production/tool-design-process";
 
 const METoolDesignProcessOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Tool Design & Process Optimization IEEE Projects (2023–2025)"
-        description="Tool Design Process Optimization IEEE project development for B.Tech, M.Tech & PhD using AI tool design, IoT smart tooling, digital twins, generative design, hybrid manufacturing for automotive, aerospace, electronics."
-        url="/department/manufacturing-production/tool-design-process"
-        type="article"
-        keywords={[
-          "Tool Design IEEE 2023–2025",
-          "Process Optimization Student Projects",
-          "AI Enabled Tool Design",
-          "IoT Smart Tooling Projects",
-          "Digital Twin Tool Simulation",
-          "High Speed Machining Optimization",
-          "Hybrid Manufacturing Tooling",
-          "Predictive Maintenance Tooling",
-          "Smart Factory Tool Design",
-          "Narpavi Research Institute Tooling"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Tool Design IEEE Projects 2023–2025</li>
-              <li>Process Optimization Student Projects</li>
-              <li>AI-Enabled Tool Design Research</li>
-              <li>IoT-Based Smart Tooling Projects</li>
-              <li>Digital Twin Tool Simulation</li>
-              <li>High-Speed Machining Optimization Projects</li>
-              <li>Hybrid Manufacturing Tooling Research</li>
-              <li>Narpavi Research Institute Tooling Projects</li>
-              <li>Predictive Maintenance in Manufacturing IEEE Projects</li>
-              <li>Smart Factory Tooling Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Tool Design & Process Optimization – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Tool Design & Process Optimization Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on AI-driven tool design, IoT-enabled smart tooling, process optimization, and hybrid manufacturing.
               </p>
@@ -241,64 +261,29 @@ const METoolDesignProcessOptimizationProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/manufacturing-production">
-      Manufacturing & Production Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/cnc-machining-optimization">
-      CNC Machining Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/additive-manufacturing">
-      Additive Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/industrial-automation-robotics">
-      Industrial Automation & Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/smart-manufacturing-systems">
-      Smart Manufacturing Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/manufacturing-production/tool-design-process">
-      Tool Design & Process
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/manufacturing-production">Manufacturing & Production Engineering</a></li>
+              <li><a href="/department/manufacturing-production/cnc-machining-optimization">CNC Machining Optimization</a></li>
+              <li><a href="/department/manufacturing-production/additive-manufacturing">Additive Manufacturing</a></li>
+              <li><a href="/department/manufacturing-production/industrial-automation-robotics">Industrial Automation & Robotics</a></li>
+              <li><a href="/department/manufacturing-production/smart-manufacturing-systems">Smart Manufacturing Systems</a></li>
+              <li><a href="/department/manufacturing-production/tool-design-process">Tool Design & Process</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,65 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Insulation Materials & Techniques Project Development Center in Chennai",
+  "Insulation Materials IEEE Projects 2023–2025",
+  "High Voltage Insulation Techniques",
+  "Dielectric Materials Projects",
+  "B.Tech Insulation Materials Projects",
+  "M.Tech Composite Insulation Systems",
+  "Ph.D AI Based Insulation Diagnostics",
+  "Nanocomposite Insulation Research",
+  "Partial Discharge Insulation Analysis",
+  "Narpavi Research Institute Insulation Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Insulation Materials & Techniques Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Insulation Materials & Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) research on dielectric materials, high-voltage insulation, thermal-resistant composites, and predictive insulation performance systems."
+    question:
+      "What services does the Insulation Materials & Techniques Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Insulation Materials & Techniques Project Development Center supports B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) research on dielectric materials, high-voltage insulation, thermal-resistant composites, and predictive insulation performance systems."
   },
   {
     question: "What types of insulation projects are supported?",
-    answer: "We support B.Tech projects (dielectric testing, thermal stress evaluation, insulation resistance), M.Tech projects (AI-assisted insulation modeling, nanocomposite system design), and Ph.D. projects (deep learning predictive diagnostics, high-durability composite solutions, and industrial standardization)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering dielectric testing, nanocomposite insulation systems, AI-assisted diagnostics, and IEEE publications."
   },
   {
     question: "Which tools are used in insulation system research?",
-    answer: "Our toolkit includes MATLAB/Simulink, COMSOL Multiphysics, ANSYS, PSIM, IoT monitoring platforms, and AI frameworks (TensorFlow, PyTorch) for predictive diagnostics and insulation performance modeling."
+    answer:
+      "MATLAB/Simulink, COMSOL Multiphysics, ANSYS, PSIM, IoT platforms, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025), focusing on dielectric materials, composite insulation, predictive diagnostics, partial discharge management, and industrial high-voltage insulation standards."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) focusing on dielectric materials, composite insulation, predictive diagnostics, and HV insulation standards."
   },
   {
     question: "What academic support is provided?",
-    answer: "We assist in IEEE topic selection, simulation and laboratory testing, insulation design optimization, technical documentation, and IEEE/Scopus/SCI publication of innovative research outcomes."
+    answer:
+      "We support IEEE topic selection, simulation, lab testing, insulation optimization, and IEEE/Scopus/SCI publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Insulation Materials & Techniques – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Insulation Materials & Techniques Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering dielectric materials, nanocomposites, AI-based insulation diagnostics, and high-voltage applications.";
+
+const pageUrl =
+  "/department/high-voltage-engineering/insulation-materials";
 
 const EEEInsulationMaterialsTechniquesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Insulation Materials Techniques IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Insulation Materials & Techniques projects for B.Tech, M.Tech, Ph.D. Dielectric materials, nanocomposite insulation, AI predictive diagnostics using MATLAB/Simulink, COMSOL Multiphysics, ANSYS for HV transformers, cables, switchgear."
-  keywords="Insulation Materials IEEE Projects 2023–2025, High Voltage Insulation Techniques, B.Tech Dielectric Testing, M.Tech Composite Insulation Systems, Ph.D. AI Insulation Diagnostics, Nanocomposite Insulation, Thermal-Resistant Insulation, Partial Discharge Insulation, Electrical Equipment Safety, Narpavi Research Institute"
-  url="/department/high-voltage-engineering/insulation-materials"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Column */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Insulation Materials Projects</li>
-              <li>High Voltage Insulation Techniques</li>
-              <li>IEEE Insulation Research 2023–2025</li>
-              <li>B.Tech Dielectric Testing Projects</li>
-              <li>M.Tech Composite Insulation Systems</li>
-              <li>Ph.D AI-Based Insulation Diagnostics</li>
-              <li>Narpavi Research Institute</li>
-              <li>Thermal-Resistant Insulation</li>
-              <li>Partial Discharge Analysis</li>
-              <li>Electrical Equipment Safety</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Column */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Insulation Materials & Techniques – Project Development Support</h1>
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
 
             {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
@@ -206,42 +236,26 @@ const EEEInsulationMaterialsTechniquesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-            <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gas-insulated-substations">Gas Insulated Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing Equipment</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

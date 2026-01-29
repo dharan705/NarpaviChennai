@@ -1,62 +1,80 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What services does the IoT-enabled Embedded Devices Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT-enabled Embedded Devices Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in Wi-Fi/BLE microcontrollers, LoRa/NB-IoT modules, and AI-integrated IoT devices for smart healthcare, industrial automation, and agriculture."
+    answer:
+      "Narpavi Research Institute’s IoT-enabled Embedded Devices Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in Wi-Fi/BLE microcontrollers, LoRa/NB-IoT modules, and AI-integrated IoT devices for smart healthcare, industrial automation, and agriculture."
   },
   {
     question: "What types of IoT-enabled Embedded Devices projects are supported?",
-    answer: "We support B.Tech projects (Wi-Fi/BLE sensor integration, mobile app interfacing), M.Tech projects (multi-protocol gateways, secure cloud integration), and Ph.D. projects (blockchain-enabled IoT security, 6G-integrated IoT) for applications in smart cities, healthcare, and robotics."
+    answer:
+      "We support B.Tech projects (Wi-Fi/BLE sensor integration, mobile app interfacing), M.Tech projects (multi-protocol gateways, secure cloud integration), and Ph.D. projects (blockchain-enabled IoT security, 6G-integrated IoT) for applications in smart cities, healthcare, and robotics."
   },
   {
     question: "Which technologies are used in IoT-enabled Embedded Devices project development?",
-    answer: "Our stack includes ESP32, ARM Cortex-M, LoRaWAN, NB-IoT, FreeRTOS, TensorFlow Lite, and tools like Keil, IAR Embedded Workbench, and Xilinx Vivado for IoT hardware and software integration."
+    answer:
+      "Our stack includes ESP32, ARM Cortex-M, LoRaWAN, NB-IoT, FreeRTOS, TensorFlow Lite, and tools like Keil, IAR Embedded Workbench, and Xilinx Vivado for IoT hardware and software integration."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like energy-efficient IoT, secure gateways, and AI-driven IoT devices, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like energy-efficient IoT, secure gateways, and AI-driven IoT devices, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware prototyping, software integration, validation, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, hardware prototyping, software integration, validation, documentation, and IEEE/Scopus/SCI journal publication support."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "IoT-enabled Embedded Devices",
+  "Embedded IoT Projects",
+  "IoT Gateways and Edge Devices",
+  "IEEE IoT Projects 2023–2025",
+  "Secure IoT Embedded Systems",
+  "AI IoT Devices",
+  "Low-Power IoT Development",
+  "Narpavi Research Institute IoT Projects"
 ];
 
 const ECEIoTEnabledEmbeddedDevicesProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="IoT-enabled Embedded Devices IEEE Projects | ESP32, LoRa/NB-IoT, AIoT | B.Tech M.Tech Ph.D."
+        title="IoT-enabled Embedded Devices – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) IoT-enabled embedded devices projects using ESP32, ARM Cortex-M, LoRaWAN, NB-IoT, FreeRTOS, and TensorFlow Lite for smart healthcare, industrial automation, smart cities, and agriculture with secure, low-power IoT architectures."
-        keywords="IoT-enabled Embedded Devices, Embedded IoT Projects, IoT Gateways and Edge Devices, IEEE IoT Projects 2023–2025, Secure IoT Embedded Systems, AI IoT Devices, Low-Power IoT Development, Narpavi Research Institute IoT Projects"
-        url="/department/embedded-systems/iot-enabled-embedded-devices"
+        keywords={keywords}
+        url="/department/embedded-systems/iot-enabled-embedded-devices-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT-enabled Embedded Devices</li>
-              <li>Embedded IoT Projects</li>
-              <li>IoT Gateways and Edge Devices</li>
-              <li>IEEE IoT Projects 2023–2025</li>
-              <li>Secure IoT Embedded Systems</li>
-              <li>AI IoT Devices</li>
-              <li>Low-Power IoT Development</li>
-              <li>Narpavi Research Institute IoT Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>IoT-enabled Embedded Devices – Project Development Support</h1>
-
+            <h1>IoT-enabled Embedded Devices - Project Development Center in Chennai</h1>
+              
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT-enabled Embedded Devices – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in Wi-Fi/BLE microcontrollers, LoRa/NB-IoT modules, and AI-integrated IoT devices for smart healthcare, industrial automation, and agriculture.
@@ -209,40 +227,29 @@ const ECEIoTEnabledEmbeddedDevicesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
-  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
-  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
-  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
-  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+              <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+              <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+              <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+              <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

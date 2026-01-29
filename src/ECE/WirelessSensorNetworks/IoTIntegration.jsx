@@ -1,73 +1,108 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "IoT Integration with Wireless Sensor Networks Project Development Center in Chennai",
+  "IoT WSN Integration Projects",
+  "MQTT CoAP 6LoWPAN WSN",
+  "Smart City IoT WSN Projects",
+  "Healthcare IoT WSN Integration",
+  "Precision Agriculture IoT WSN",
+  "Edge Fog Computing IoT WSN",
+  "Blockchain IoT WSN Projects",
+  "IEEE IoT WSN Projects 2023–2025",
+  "Narpavi Research Institute IoT WSN"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What is the significance of integrating IoT with Wireless Sensor Networks?",
-    answer: "Integrating IoT with WSN enables seamless connectivity between physical environments and cloud analytics, expanding applications across smart cities, healthcare, agriculture, and industrial IoT while addressing challenges like low latency, security, scalability, and energy efficiency."
+    answer:
+      "Integrating IoT with WSN enables seamless connectivity between physical environments and cloud analytics, expanding applications across smart cities, healthcare, agriculture, and industrial IoT."
   },
   {
     question: "What are the major approaches for IoT and WSN integration?",
-    answer: "Key approaches include MQTT/CoAP over WSN, 6LoWPAN, cloud-centric integration, edge/fog computing, and blockchain-enabled IoT–WSN integration, each with distinct advantages and challenges."
+    answer:
+      "Approaches include MQTT/CoAP, 6LoWPAN, cloud-centric models, edge/fog computing, and blockchain-enabled IoT–WSN integration."
   },
   {
-    question: "Which tools and platforms are commonly used for IoT–WSN projects?",
-    answer: "Common tools include Arduino, ESP32, Raspberry Pi, NS3, Contiki Cooja, MATLAB, OMNeT++, and Python IoT libraries for simulation, development, and cloud connectivity."
+    question: "Which tools are commonly used for IoT–WSN projects?",
+    answer:
+      "Arduino, ESP32, Raspberry Pi, NS3, Contiki Cooja, MATLAB, OMNeT++, and Python IoT libraries."
   },
   {
-    question: "What applications benefit most from IoT and WSN integration?",
-    answer: "Applications range from smart homes and environmental monitoring, healthcare IoT, precision agriculture, to industrial IoT and autonomous systems."
+    question: "What applications benefit from IoT–WSN integration?",
+    answer:
+      "Smart cities, healthcare IoT, precision agriculture, industrial IoT, and autonomous systems."
   },
   {
-    question: "How does Narpavi Research Institute support IoT–WSN integration projects?",
-    answer: "We offer end-to-end project development including sensor deployment, cloud connectivity, AI-driven analytics, secure communication, hardware prototyping, and assistance with IEEE-standard publications."
+    question: "How does Narpavi Research Institute support IoT–WSN projects?",
+    answer:
+      "We provide sensor deployment, cloud connectivity, AI analytics, secure communication, hardware prototyping, and IEEE publication support."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "IoT Integration with Wireless Sensor Networks – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/wireless-sensor-networks/iot-wsn-project-development-center-in-chennai";
+
+const pageDescription =
+  "IoT Integration with Wireless Sensor Networks Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects using MQTT, CoAP, 6LoWPAN, edge computing, blockchain, and AI for smart cities, healthcare, and agriculture.";
 
 const IoTIntegrationWSNProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO
+      ========================= */}
       <SEO
-  title="IoT WSN Integration IEEE Projects | MQTT 6LoWPAN Edge Computing | B.Tech M.Tech PhD"
-  description="IoT integration with Wireless Sensor Networks projects (2023–2025) using MQTT CoAP 6LoWPAN, Arduino ESP32 Raspberry Pi, NS3 Contiki MATLAB for smart cities healthcare agriculture."
-  url="/department/wireless-sensor-networks/iot-wsn"
-  type="article"
-  keywords={[
-    "IoT WSN Integration Projects",
-    "MQTT CoAP 6LoWPAN WSN",
-    "Smart City IoT WSN Projects",
-    "Blockchain IoT WSN",
-    "Edge Fog Computing IoT WSN",
-    "Arduino ESP32 IoT WSN",
-    "NS3 Contiki IoT Simulation"
-  ]}
-  faqs={faqs}
-/>
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
-      <Sidebar />
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
+
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>IoT WSN Integration Projects</li>
-              <li>Wireless Sensor Networks IoT Applications</li>
-              <li>Smart City IoT WSN Projects</li>
-              <li>6LoWPAN and MQTT in IoT</li>
-              <li>IoT–WSN for Healthcare and Agriculture</li>
-              <li>Blockchain IoT–WSN Projects</li>
-              <li>AI and Edge Computing in IoT–WSN</li>
-              <li>IEEE IoT WSN Projects 2023–2025</li>
-              <li>Narpavi Research Institute IoT Research</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>IoT Integration with Wireless Sensor Networks (WSN) – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
+              <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the <em>Excellence in IoT Integration with WSN Project Development</em>, offering IEEE-aligned (2023–2025) innovative solutions targeting B.Tech, M.Tech, and Ph.D. scholars focused on expanding WSN capabilities within IoT ecosystems.
               </p>
@@ -178,23 +213,27 @@ const IoTIntegrationWSNProject = () => {
               
             </section>
           </div>
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
-  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
-  </ul>
-          </div>
+            <ul>
+              <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default IoTIntegrationWSNProject;

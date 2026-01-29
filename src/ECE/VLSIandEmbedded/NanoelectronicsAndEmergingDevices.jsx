@@ -1,83 +1,108 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
- import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Nanoelectronics and Emerging Devices Project Development Center in Chennai",
+  "IEEE Nanoelectronics Projects",
+  "CNTFET FinFET Nanoelectronics Projects",
+  "Spintronics Research Projects",
+  "Graphene Transistor Projects",
+  "Quantum Dot Nanoelectronics",
+  "Nanowire Electronics Projects",
+  "Beyond CMOS Nano Devices",
+  "B.Tech M.Tech PhD Nanoelectronics Projects",
+  "Narpavi Research Institute Nanoelectronics"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Nanoelectronics and Emerging Devices Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Nanoelectronics and Emerging Devices Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in nano-scale transistor design, quantum devices, spintronics, and graphene-based electronics for applications in IoT, biomedical, and AI accelerators."
+    question:
+      "What services does the Nanoelectronics and Emerging Devices Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Nanoelectronics and Emerging Devices Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in nano-scale transistor design, quantum devices, spintronics, and graphene-based electronics."
   },
   {
-    question: "What types of Nanoelectronics and Emerging Devices projects are supported?",
-    answer: "We support B.Tech projects (FinFET modeling, CNTFET simulations), M.Tech projects (graphene transistors, nanowire devices), and Ph.D. projects (quantum-dot devices, spintronic memory) for applications in wearables, sensors, and high-speed processors."
+    question:
+      "What types of Nanoelectronics projects are supported?",
+    answer:
+      "We support FinFET, CNTFET, graphene transistors, nanowire devices, spintronic memory, and quantum-dot device research."
   },
   {
-    question: "Which technologies are used in Nanoelectronics and Emerging Devices project development?",
-    answer: "Our stack includes MATLAB, COMSOL, Cadence, Synopsys, and TCAD for nano-scale simulations, device modeling, and fabrication analysis."
+    question:
+      "Which tools are used?",
+    answer:
+      "MATLAB, COMSOL, Cadence, Synopsys, and TCAD are used for nano-scale simulations and device modeling."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like CNTFETs, spintronics, and quantum-dot devices, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are derived from IEEE Transactions (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, device prototyping, validation, documentation, and IEEE/Scopus/SCI journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, IEEE, Scopus, and SCI journal publication support is provided."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Nanoelectronics and Emerging Devices – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/vlsi-design/nanoelectronics-emerging-devices-project-development-center-in-chennai";
+
+const pageDescription =
+  "Nanoelectronics and Emerging Devices Project Development Center in Chennai offering IEEE-aligned CNTFET, FinFET, spintronics, graphene, quantum-dot, nanowire, and beyond-CMOS nanoelectronics projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECENanoelectronicsEmergingDevicesProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Nanoelectronics IEEE Projects | CNTFET Spintronics Graphene Quantum Dot B.Tech M.Tech PhD (2023–2025)"
-  description="Nanoelectronics and Emerging Devices project development for B.Tech, M.Tech, and Ph.D. students focusing on FinFET/CNTFET modeling, spintronics, graphene transistors, quantum dots, nanowire devices, and IEEE-aligned research (2023–2025)."
-  url="/department/vlsi-design/nanoelectronics-emerging-devices"
-  type="article"
-  keywords={[
-    "Nanoelectronics Projects IEEE",
-    "CNTFET FinFET Projects 2025",
-    "Spintronics Research Projects",
-    "Graphene Transistor Projects",
-    "Quantum Dot Device Projects",
-    "Nanowire Electronics Projects",
-    "TCAD Nanoelectronics Simulation",
-    "COMSOL Nano Device Modeling",
-    "Cadence Synopsys Nanoelectronics",
-    "B.Tech FinFET Modeling",
-    "M.Tech Graphene Transistors",
-    "Ph.D. Quantum Dot Devices",
-    "Narpavi Research Institute Nanoelectronics",
-    "Beyond CMOS Nano Devices",
-    "Spintronic Memory Projects"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Nanoelectronics and Emerging Devices Projects</li>
-              <li>IEEE Nanoelectronics Projects 2023–2025</li>
-              <li>CNTFET Projects</li>
-              <li>Spintronics Research Projects</li>
-              <li>Graphene Device Projects</li>
-              <li>Quantum Dot Device Projects</li>
-              <li>Nanowire-Based Electronics</li>
-              <li>Low-Power Nanoelectronics Projects</li>
-              <li>B.Tech Nanoelectronics Projects</li>
-              <li>M.Tech Nanoelectronics Projects</li>
-              <li>Ph.D. Nanoelectronics Research</li>
-              <li>Narpavi Research Institute Nanoelectronics Support</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Nanoelectronics and Emerging Devices – Project Development Support</h1>
-
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Nanoelectronics and Emerging Devices – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in nano-scale transistor design, quantum devices, spintronics, and graphene-based electronics for applications in wearables, biomedical implants, IoT sensors, and AI accelerators.
@@ -238,39 +263,32 @@ const ECENanoelectronicsEmergingDevicesProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
-            </section>
+           </section>
+
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
-  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
-  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
-  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
-  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
-  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
-  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+              <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+              <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+              <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+              <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+              <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+              <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

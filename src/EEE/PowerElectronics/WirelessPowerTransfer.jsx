@@ -1,66 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Wireless Power Transfer Circuits Project Development Center in Chennai",
+  "Wireless Power Transfer IEEE Projects 2023–2025",
+  "Inductive Wireless Power Transfer Projects",
+  "Resonant Wireless Power Transfer Systems",
+  "B.Tech Wireless Power Transfer Projects",
+  "M.Tech AI Based Wireless Power Control",
+  "Ph.D EV Wireless Charging Research",
+  "Capacitive Coupling WPT Circuits",
+  "IoT Based Wireless Power Monitoring",
+  "Narpavi Research Institute Power Electronics"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Wireless Power Transfer Circuits Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Wireless Power Transfer Circuits Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency wireless power transfer systems, adaptive control algorithms, and IoT-enabled monitoring for EV charging, industrial automation, and consumer electronics applications."
+    answer:
+      "Narpavi Research Institute’s Wireless Power Transfer Circuits Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency wireless power transfer systems, adaptive control algorithms, and IoT-enabled monitoring for EV charging, industrial automation, and consumer electronics applications."
   },
   {
     question: "What types of Wireless Power Transfer projects are supported?",
-    answer: "We support B.Tech projects (inductive/resonant WPT circuits, IoT monitoring), M.Tech projects (AI-based adaptive control, high-power WPT), and Ph.D. projects (misalignment tolerance, predictive control) for applications in EVs, medical devices, and smart grids."
+    answer:
+      "We support B.Tech projects (inductive and resonant WPT circuits, IoT monitoring), M.Tech projects (AI-based adaptive control, high-power WPT), and Ph.D. projects (misalignment tolerance and predictive control)."
   },
   {
     question: "Which technologies are used in Wireless Power Transfer project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSIM, LTSpice, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for WPT circuit design and control."
+    answer:
+      "MATLAB/Simulink, PSIM, LTSpice, TensorFlow, PyTorch, MQTT, FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like resonant WPT, efficiency optimization, and AI-driven control, ensuring academic and industry relevance."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on resonant wireless power transfer, efficiency optimization, and AI-driven control."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/PSIM/LTSpice, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "Complete end-to-end guidance including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Wireless Power Transfer Circuits – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Wireless Power Transfer Circuits Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering inductive, resonant, capacitive WPT systems, AI-based adaptive control, EV wireless charging, and IoT monitoring.";
+
+const pageUrl =
+  "/department/power-electronics/wireless-power-transfer";
 
 const EEEWirelessPowerTransferCircuitsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Wireless Power Transfer Circuits IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Wireless Power Transfer WPT projects for B.Tech, M.Tech, Ph.D. Inductive/resonant/capacitive WPT circuits, AI-based adaptive control, EV wireless charging using MATLAB/Simulink, PSIM, LTSpice, TensorFlow for EVs, medical devices, industrial automation."
-  keywords="Wireless Power Transfer WPT IEEE Projects 2023–2025, Inductive Resonant WPT Circuits, B.Tech WPT Projects, M.Tech AI Wireless Power Control, Ph.D. EV Wireless Charging Research, Capacitive Coupling WPT, IoT WPT Monitoring, Magnetic Resonance WPT, High-Power Wireless Transfer, Narpavi Research Institute"
-  url="/department/power-electronics/wireless-power-transfer"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Wireless Power Transfer Projects</li>
-              <li>IEEE Power Electronics Projects 2023–2025</li>
-              <li>B.Tech WPT Circuit Projects</li>
-              <li>M.Tech AI-Based Wireless Power Control</li>
-              <li>Ph.D High-Power Wireless Transfer Research</li>
-              <li>IoT-Based Wireless Power Monitoring</li>
-              <li>Inductive and Resonant WPT Systems</li>
-              <li>EV Wireless Charging Research</li>
-              <li>Adaptive WPT Circuit Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Wireless Power Transfer Circuits – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Wireless Power Transfer Circuits Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance high-efficiency wireless power transfer systems aligned with IEEE Transactions (2023–2025). Our projects focus on inductive, resonant, capacitive, and magnetic coupling-based WPT circuits for electric vehicles, industrial automation, and consumer electronics.
               </p>
@@ -208,48 +237,27 @@ const EEEWirelessPowerTransferCircuitsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/power-electronics">
-      Power Electronics – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/dc-dc-converters">
-      DC–DC Converters & Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/multilevel-inverters">
-      Multilevel Inverters
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/renewable-energy-controllers">
-      Power Electronic Controllers for Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/power-factor-correction">
-      Power Factor Correction Circuits
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/solid-state-drives">
-      Solid State Drives
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/wireless-power-transfer">
-      Wireless Power Transfer Circuits
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/power-electronics">Power Electronics</a></li>
+              <li><a href="/department/power-electronics/dc-dc-converters">DC–DC Converters & Applications</a></li>
+              <li><a href="/department/power-electronics/multilevel-inverters">Multilevel Inverters</a></li>
+              <li><a href="/department/power-electronics/renewable-energy-controllers">Renewable Energy Controllers</a></li>
+              <li><a href="/department/power-electronics/power-factor-correction">Power Factor Correction Circuits</a></li>
+              <li><a href="/department/power-electronics/solid-state-drives">Solid State Drives</a></li>
+              <li><a href="/department/power-electronics/wireless-power-transfer">Wireless Power Transfer Circuits</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

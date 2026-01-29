@@ -1,76 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Industrial Safety & Ergonomics Project Development Center in Chennai",
+  "Industrial Safety IEEE Projects 2023–2025",
+  "Ergonomics Based Design Projects",
+  "IoT Workplace Safety Systems",
+  "Wearable Safety Monitoring Projects",
+  "AI Accident Prediction Systems",
+  "Exoskeleton Design Student Projects",
+  "Digital Twin Safety Simulation",
+  "Industry 4.0 Safety Automation",
+  "Narpavi Research Institute Safety Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Industrial Safety & Ergonomics Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Industrial Safety & Ergonomics Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled safety systems, AI-driven risk assessment, ergonomic design, wearable technologies, and digital twins for manufacturing, automotive, construction, and aerospace applications."
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on IoT-enabled safety systems, AI-driven risk assessment, ergonomic design, wearables, and digital twins."
   },
   {
-    question: "What types of Industrial Safety & Ergonomics projects are supported?",
-    answer: "We support B.Tech projects (IoT safety monitoring, ergonomic CAD), M.Tech projects (AI risk prediction, wearable tech), and Ph.D. projects (digital twins, cybersecure safety systems) for applications in smart factories, construction, and heavy industries."
+    question: "What types of projects are supported?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. projects covering smart factories, construction, and heavy industries."
   },
   {
-    question: "Which tools and technologies are used in Industrial Safety & Ergonomics projects?",
-    answer: "Our stack includes MATLAB, CATIA, Python, Arduino, Raspberry Pi, IoT sensors, AR/VR platforms, and digital twin systems for simulation, prototyping, and safety analysis."
+    question: "Which tools are used?",
+    answer:
+      "MATLAB, CATIA, Python, Arduino, Raspberry Pi, IoT sensors, AR/VR platforms, and digital twins."
   },
   {
-    question: "How are Industrial Safety & Ergonomics projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics, Automation, and Safety, focusing on IoT, AI, and ergonomic design, aligned with IEEE/ISO/OSHA standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes, projects align with IEEE Transactions (2023–2025) and ISO/OSHA safety standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes, IEEE, Scopus, Elsevier journal and patent support is provided."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Industrial Safety & Ergonomics – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Industrial Safety & Ergonomics Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. using IoT safety systems, AI risk assessment, ergonomic CAD, wearables, and digital twins.";
+
+const pageUrl =
+  "/department/industrial-production-optimization/industrial-safety-ergonomics";
 
 const MEIndustrialSafetyErgonomicsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Industrial Safety & Ergonomics IEEE Projects (2023–2025)"
-        description="Industrial Safety Ergonomics IEEE project development for B.Tech, M.Tech & PhD using MATLAB, CATIA, IoT safety systems, AI risk assessment, wearable tech, digital twins, exoskeletons for manufacturing, automotive, construction."
-        url="/department/industrial-production-optimization/industrial-safety-ergonomics"
-        type="article"
-        keywords={[
-          "Industrial Safety IEEE Projects",
-          "Ergonomics Based Design Projects",
-          "IoT Workplace Safety",
-          "Wearable Safety Monitoring Systems",
-          "AI Accident Prediction Projects",
-          "Exoskeleton Student Projects",
-          "Digital Twin Safety Simulation",
-          "Industrial Safety Automation",
-          "Narpavi Research Institute Safety Projects",
-          "PhD Industrial Safety Research"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Industrial Safety IEEE Projects</li>
-              <li>Ergonomics-Based Design Projects</li>
-              <li>IoT in Workplace Safety</li>
-              <li>Wearable Safety Monitoring Systems</li>
-              <li>AI Accident Prediction Projects</li>
-              <li>Exoskeleton Student Projects</li>
-              <li>Ergonomic Workstation CAD Models</li>
-              <li>Digital Twin Safety Simulation IEEE Projects</li>
-              <li>Industrial Safety Automation</li>
-              <li>Narpavi Research Institute Safety Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Industrial Safety & Ergonomics – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Industrial Safety & Ergonomics Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on IoT-enabled safety systems, AI-driven risk assessment, ergonomic design, wearable technologies, and digital twins.
               </p>
@@ -260,43 +279,26 @@ const MEIndustrialSafetyErgonomicsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/industrial-production-optimization">
-      Industrial Production Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/lean-manufacturing">
-      Lean Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/supply-chain-process">
-      Supply Chain Process Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/industrial-safety-ergonomics">
-      Industrial Safety & Ergonomics
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/smart-factory-systems">
-      Smart Factory Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-production-optimization/cost-time-optimization">
-      Cost & Time Optimization
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/industrial-production-optimization">Industrial Production Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/lean-manufacturing">Lean Manufacturing</a></li>
+              <li><a href="/department/industrial-production-optimization/supply-chain-process">Supply Chain Process Optimization</a></li>
+              <li><a href="/department/industrial-production-optimization/industrial-safety-ergonomics">Industrial Safety & Ergonomics</a></li>
+              <li><a href="/department/industrial-production-optimization/smart-factory-systems">Smart Factory Systems</a></li>
+              <li><a href="/department/industrial-production-optimization/cost-time-optimization">Cost & Time Optimization</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

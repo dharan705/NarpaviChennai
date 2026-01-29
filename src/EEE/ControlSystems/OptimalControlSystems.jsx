@@ -1,67 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Optimal Control Systems Project Development Center in Chennai",
+  "Optimal Control Systems IEEE Projects 2023–2025",
+  "LQR Projects for B.Tech",
+  "MPC Control Projects M.Tech",
+  "Ph.D Research in Optimal Control",
+  "Dynamic Programming Control Projects",
+  "Pontryagin Minimum Principle Projects",
+  "AI-based Optimal Control IEEE",
+  "Renewable Energy Optimization Control",
+  "Narpavi Research Institute Optimal Control"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Optimal Control Systems Project Development Center offer?",
-    answer: "We provide B.Tech, M.Tech, and Ph.D. students end-to-end support for IEEE-aligned (2023–2025) projects in LQR, MPC, dynamic programming, Pontryagin’s principle, and AI-based optimal control, covering simulations, prototyping, algorithm design, and IEEE publication."
+    question:
+      "What services does the Optimal Control Systems Project Development Center offer?",
+    answer:
+      "We provide B.Tech, M.Tech, and Ph.D. students end-to-end support for IEEE-aligned (2023–2025) projects in LQR, MPC, dynamic programming, Pontryagin’s principle, and AI-based optimal control, covering simulations, prototyping, algorithm design, and IEEE publication."
   },
   {
     question: "What types of projects are supported?",
-    answer: "B.Tech projects include fundamentals such as LQR-based designs, real-time robotic optimization, and small-scale embedded prototypes. M.Tech projects focus on MPC, energy-efficient EV control, and renewable grid integration. Ph.D. projects explore AI-integrated optimal control, nonlinear strategies, and patents in IEEE/Scopus/SCI publishing."
+    answer:
+      "B.Tech projects include LQR-based designs and robotic optimization. M.Tech projects focus on MPC, EV energy optimization, and renewable integration. Ph.D. projects explore AI-integrated optimal control, nonlinear strategies, and patents in IEEE/Scopus/SCI publishing."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "Mathematical modeling and simulation via MATLAB/Simulink, PSCAD, Python with SciPy/CVX, hardware-in-loop testing, microcontroller integration (ARM, Arduino), and AI frameworks (TensorFlow, PyTorch)."
+    answer:
+      "MATLAB/Simulink, PSCAD, Python (SciPy/CVX), ARM/Arduino microcontrollers, HIL systems, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are mapped with IEEE Transactions (2023–2025) focusing on trajectory control, smart grids, AI-based optimization, robotics path planning, EV energy optimization, and resilient industrial automation."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on trajectory control, smart grids, robotics optimization, EV energy management, and AI-based optimal control."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide IEEE topic mentoring, algorithm design, system simulation, HIL testing, technical documentation, and international publication assistance."
+    answer:
+      "We provide topic mentoring, algorithm design, simulation, HIL testing, documentation, and international IEEE publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Optimal Control Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Optimal Control Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering LQR, MPC, dynamic programming, Pontryagin’s principle, and AI-based optimal control using MATLAB, PSCAD, and Python.";
+
+const pageUrl =
+  "/department/control-systems-electrical/optimal-control-systems";
 
 const EEEOptimalControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Optimal Control Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Optimal Control Systems projects for B.Tech, M.Tech, Ph.D. LQR, MPC, dynamic programming, Pontryagin's principle, AI optimal control using MATLAB/Simulink, PSCAD, Python CVX for aerospace, smart grids, EV optimization."
-  keywords="Optimal Control Systems IEEE Projects 2023–2025, LQR Projects B.Tech, MPC Control M.Tech, Ph.D. AI Optimal Control, Dynamic Programming Control, Renewable Energy Optimization, Aerospace Trajectory Control, Narpavi Research Institute"
-  url="/department/control-systems-electrical/optimal-control-systems"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Left – Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Optimal Control Systems Project Development Center</li>
-              <li>LQR Projects for B.Tech</li>
-              <li>MPC Control Projects M.Tech</li>
-              <li>Ph.D. Research in Optimal Control</li>
-              <li>Dynamic Programming Control Projects</li>
-              <li>IEEE Optimal Control 2023–2025</li>
-              <li>Aerospace Optimal Control Projects</li>
-              <li>Renewable Energy Optimization Control</li>
-              <li>AI-based Optimal Control Research</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Optimal Control Systems – Project Development Support</h1>
-            
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Optimal Control Systems Project Development Center, offering global researchers IEEE-aligned (2023–2025) support in formulating optimization-based control strategies to minimize cost, maximize efficiency, and ensure stability across advanced industrial and academic systems.</p>
               <p>Our scholars focus on smart grids, aerospace trajectory optimization, robotics, EV drives, and Industry 4.0 systems bridging rigorous mathematical theory with real-world implementations.</p>
@@ -180,53 +209,31 @@ const EEEOptimalControlSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/control-systems-electrical">
-      Control Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/adaptive-robust-control">
-      Adaptive & Robust Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/intelligent-control-ai-ml">
-      Intelligent Control (AI/ML)
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/nonlinear-control-systems">
-      Nonlinear Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/optimal-control-systems">
-      Optimal Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/pid-advanced-controllers">
-      PID & Advanced Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/control-systems-electrical/process-control-industries">
-      Process Control in Industries
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/control-systems-electrical">Control Systems – Project Development Center</a></li>
+              <li><a href="/department/control-systems-electrical/adaptive-robust-control">Adaptive & Robust Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/intelligent-control-ai-ml">Intelligent Control (AI/ML)</a></li>
+              <li><a href="/department/control-systems-electrical/nonlinear-control-systems">Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/optimal-control-systems">Optimal Control Systems</a></li>
+              <li><a href="/department/control-systems-electrical/pid-advanced-controllers">PID & Advanced Controllers</a></li>
+              <li><a href="/department/control-systems-electrical/process-control-industries">Process Control in Industries</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEOptimalControlSystemsProjectDevelopmentCenter;

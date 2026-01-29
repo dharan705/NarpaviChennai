@@ -2,6 +2,8 @@ import React from "react";
 import "./SCIPaperWriting.scss";
 import { CheckCircle, BookOpenCheck, Brain, ClipboardCheck, FileEdit } from "lucide-react";
 import Subsidebar from "../pages/Subsidebar";
+import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -35,6 +37,43 @@ const SCIPaperWriting = () => {
   return (
     <section className="sci-writing">
       <Subsidebar />
+       <aside className="left-sidebar2">
+        <ul>
+          <li><a href="/service">Our PhD Support Services in Chennai</a></li>
+          <li><a href="/review-article-writing">Review Article Writing in Chennai</a></li>
+          <li><a href="/sci-journal-paper-writing">SCI Journal Paper Writing in Chennai</a></li>
+          <li><a href="/scopus-journal-paper-writing">Scopus Journal Paper Writing in Chennai</a></li>
+          <li><a href="/ieee-conference-paper-writing">IEEE Conference Paper Writing in Chennai</a></li>
+
+          <li><a href="/publication-services">Publication Services in Chennai</a></li>
+          <li><a href="/publication-services/conference-paper-publication-services">Conference Paper Publication in Chennai</a></li>
+          <li><a href="/publication-services/SCIJournal">SCI Journal Publication in Chennai</a></li>
+          <li><a href="/publication-services/scopus-journal-publication-services">Scopus Journal Publication in Chennai</a></li>
+          <li><a href="/publication-services/review-article-publication">Review Article Publication in Chennai</a></li>
+          <li><a href="/publication-services/ugc-care-journal-publication-services">UGC Care Journal Publication in Chennai</a></li>
+          <li><a href="/publication-services/book-isbn-publication-support">Book ISBN Publication Support in Chennai</a></li>
+
+          <li><a href="/research-proposal-services/how-to-write-research-proposal">How to Write Research Proposal in Chennai</a></li>
+          <li><a href="/research-proposal-services/trending-research-topics">Trending Research Topics in Chennai</a></li>
+          <li><a href="/research-proposal-services/research-proposal-for-funding">Research Proposal For Funding in Chennai</a></li>
+          <li><a href="/research-proposal-services/engineering-research-proposal-guide">Engineering Research Proposal Guide in Chennai</a></li>
+
+          <li><a href="/scopus-journal-paper-writing/scopus-services">Scopus Services in Chennai</a></li>
+
+          <li><a href="/service/ieee-project-center-in-chennai">IEEE Project Centers in Chennai</a></li>
+          <li><a href="/service/matlab-project-center-in-chennai">Matlab Project Centers in Chennai</a></li>
+          <li><a href="/service/ns2-ns3-project-center-in-chennai">NS2 NS3 Project Centers in Chennai</a></li>
+          <li><a href="/service/phd-project-center-in-chennai">PhD Project Centers in Chennai</a></li>
+          <li><a href="/service/me-mtech-project-center-in-chennai">M.E M.Tech Project Centers in Chennai</a></li>
+          <li><a href="/service/be-btech-project-center-in-chennai">B.E B.Tech Project Centers in Chennai</a></li>
+          <li><a href="/service/engineering-phd-research-guidance-chennai">Engineering PhD Research Project Guidance Centers in Chennai</a></li>
+          <li><a href="/service/phd-research-thesis-writing-services-help">PhD Thesis Writing Services in Chennai</a></li>
+          <li><a href="/service/research-paper-writing">Research Paper Writing Service in Chennai</a></li>
+          <li><a href="/service/conference-paper">Conference Paper Writing Services in Chennai</a></li>
+          <li><a href="/service/research-paper-publication-help-and-services">Research Paper Publication Support Services in Chennai</a></li>
+          <li><a href="/service/phd-research-guidance-chennai">PhD Research Guidance in Chennai</a></li>
+        </ul>
+      </aside>
       <div className="sci-layout">
       <div className="container">
         <h2>📘 SCI Journal Paper Writing</h2>
@@ -130,7 +169,22 @@ CopyEdit
           <li><FileEdit size={20} /> 45+ research domains handled</li>
         </ul>
       </div>
-      <aside className="right-sidebar">
+<aside className="right-sidebar">
+ 
+<ul>
+  <li>
+    <NavLink to="/review-article-writing">Review Article Writing</NavLink>
+  </li>
+  <li>
+    <NavLink to="/sci-journal-paper-writing">SCI Journal Paper Writing</NavLink>
+  </li>
+  <li>
+    <NavLink to="/scopus-journal-paper-writing">Scopus Journal Paper Writing</NavLink>
+  </li>
+  <li>
+    <NavLink to="/ieee-conference-paper-writing">IEEE Conference Paper Writing</NavLink>
+  </li>
+</ul>
           <h4>📌 SCI Writing Guides</h4>
           <ul className="relative-services">
             <li><a href="/sci-journal-paper-writing/sci-writing-guide">SCI Writing Guide</a></li>
@@ -152,20 +206,7 @@ CopyEdit
             </details>
           ))}
         </div>
-         <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map((faq) => ({
-              "@type": "Question",
-              "name": faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-              }
-            }))
-          })}
-        </script>
+
         
           </section>
           

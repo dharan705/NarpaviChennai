@@ -1,66 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "DC-DC Converters Project Development Center in Chennai",
+  "DC-DC Converters IEEE Projects 2023–2025",
+  "Buck Boost Converter Projects",
+  "B.Tech Power Electronics Projects",
+  "M.Tech AI Based DC-DC Control",
+  "Ph.D Resonant Converter Research",
+  "Multi-Phase DC-DC Converters",
+  "IoT Based Converter Monitoring",
+  "Renewable Energy Power Electronics",
+  "Narpavi Research Institute Power Electronics"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the DC-DC Converters & Applications Project Development Center offer?",
-    answer: "Narpavi Research Institute’s DC-DC Converters & Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency DC-DC converters, intelligent control strategies, and IoT-enabled monitoring for industrial, automotive, and renewable energy applications."
+    answer:
+      "Narpavi Research Institute’s DC-DC Converters & Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency DC-DC converters, intelligent control strategies, and IoT-enabled monitoring for industrial, automotive, and renewable energy applications."
   },
   {
     question: "What types of DC-DC Converters projects are supported?",
-    answer: "We support B.Tech projects (buck/boost converters, IoT monitoring), M.Tech projects (AI-based control, multi-phase converters), and Ph.D. projects (resonant converters, predictive optimization) for applications in EVs, solar systems, and industrial drives."
+    answer:
+      "We support B.Tech projects (buck/boost converters, IoT monitoring), M.Tech projects (AI-based control, multi-phase converters), and Ph.D. projects (resonant converters, predictive optimization) for EVs, solar systems, and industrial drives."
   },
   {
     question: "Which technologies are used in DC-DC Converters project development?",
-    answer: "Our stack includes MATLAB/Simulink, PSIM, LTSpice, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for converter design and control."
+    answer:
+      "MATLAB/Simulink, PSIM, LTSpice, TensorFlow, PyTorch, MQTT, FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like high-efficiency converters, AI-driven control, and renewable energy integration, ensuring academic and industry relevance."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) focusing on high-efficiency converters, AI-driven control, and renewable energy integration."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/PSIM, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end support including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "DC-DC Converters & Applications – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) DC-DC Converters & Applications Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering buck, boost, resonant converters, AI-based control, IoT monitoring, and renewable energy systems.";
+
+const pageUrl =
+  "/department/power-electronics/dc-dc-converters";
 
 const EEEDcDcConvertersApplicationsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="DC-DC Converters IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) DC-DC Converters projects for B.Tech, M.Tech, Ph.D. High-efficiency buck/boost/resonant converters, AI-based control, multi-phase design using MATLAB/Simulink, PSIM, LTSpice, TensorFlow for EVs, solar systems, industrial power electronics."
-  keywords="DC-DC Converters IEEE Projects 2023–2025, Buck Boost Converter Projects, B.Tech High-Efficiency Converter Projects, M.Tech AI DC-DC Control, Ph.D. Resonant Converter Research, Multi-Phase Converters, IoT Converter Monitoring, Renewable Energy Power Electronics, Step-Up Step-Down Converters, Narpavi Research Institute"
-  url="/department/power-electronics/dc-dc-converters"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>DC-DC Converters Projects</li>
-              <li>IEEE Power Electronics Projects 2023–2025</li>
-              <li>B.Tech High-Efficiency Converter Projects</li>
-              <li>M.Tech AI-Based DC-DC Control</li>
-              <li>Ph.D Intelligent Power Conversion Research</li>
-              <li>IoT-Based Converter Monitoring</li>
-              <li>Renewable Energy Power Electronics</li>
-              <li>Step-Up Step-Down Converter Projects</li>
-              <li>Multi-Phase DC-DC Converters</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>DC-DC Converters & Applications – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the DC-DC Converters & Applications Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance high-efficiency DC-DC converter design aligned with IEEE Transactions (2023–2025). Our projects focus on buck, boost, buck-boost, and resonant converters, with applications in electric vehicles, renewable energy, and industrial systems.
               </p>
@@ -208,48 +237,27 @@ const EEEDcDcConvertersApplicationsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/power-electronics">
-      Power Electronics – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/dc-dc-converters">
-      DC–DC Converters & Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/multilevel-inverters">
-      Multilevel Inverters
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/renewable-energy-controllers">
-      Power Electronic Controllers for Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/power-factor-correction">
-      Power Factor Correction Circuits
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/solid-state-drives">
-      Solid State Drives
-    </a>
-  </li>
-  <li>
-    <a href="/department/power-electronics/wireless-power-transfer">
-      Wireless Power Transfer Circuits
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/power-electronics">Power Electronics</a></li>
+              <li><a href="/department/power-electronics/dc-dc-converters">DC–DC Converters & Applications</a></li>
+              <li><a href="/department/power-electronics/multilevel-inverters">Multilevel Inverters</a></li>
+              <li><a href="/department/power-electronics/renewable-energy-controllers">Renewable Energy Controllers</a></li>
+              <li><a href="/department/power-electronics/power-factor-correction">Power Factor Correction</a></li>
+              <li><a href="/department/power-electronics/solid-state-drives">Solid State Drives</a></li>
+              <li><a href="/department/power-electronics/wireless-power-transfer">Wireless Power Transfer</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,6 +1,21 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT (single source of truth) */
+const keywords = [
+  "Signal Processing Project Development",
+  "IEEE Signal Processing Projects",
+  "DSP Project Development",
+  "Image Processing IEEE 2025",
+  "MATLAB DSP Projects",
+  "FPGA Signal Processing",
+  "AI in Signal Processing",
+  "B.Tech DSP Projects",
+  "M.Tech Signal Processing",
+  "PhD Signal Processing Research"
+];
 
 const faqs = [
   {
@@ -34,55 +49,33 @@ const ECESignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ================= SEO ================= */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Signal Processing IEEE Projects | B.Tech M.Tech PhD DSP (2023–2025)"
+        title="Signal Processing – Project Development Center in Chennai"
         description="Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on DSP, image processing, audio processing, biomedical signals, AI-based signal analysis, and IEEE-aligned research (2023–2025)."
-        url="/department/signal-processing"
-        type="article"
-        keywords={[
-          "Signal Processing Project Development",
-          "IEEE Signal Processing Projects",
-          "DSP Projects 2025",
-          "Image Processing IEEE Projects",
-          "Audio Signal Processing Projects",
-          "Biomedical Signal Processing",
-          "FPGA DSP Projects",
-          "AI in Signal Processing",
-          "MATLAB DSP Projects",
-          "Narpavi Research Institute Signal Processing"
-        ]}
+        url="/signal-processing-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      {/* ======================================= */}
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Signal Processing Project Development</li>
-              <li>IEEE Signal Processing Projects</li>
-              <li>DSP Project Development</li>
-              <li>Image Processing IEEE 2025</li>
-              <li>MATLAB DSP Projects</li>
-              <li>FPGA Signal Processing</li>
-              <li>AI in Signal Processing</li>
-              <li>B.Tech DSP Projects</li>
-              <li>M.Tech Signal Processing</li>
-              <li>Ph.D. Signal Processing Research</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR (ONLY CHANGE) */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Signal Processing – Project Development Center</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Signal Processing – Project Development Center in Chennai</h1>
+  <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Signal Processing – Project Development Center</strong> is a
                 specialized initiative by Narpavi Research Institute, delivering
@@ -185,22 +178,28 @@ const ECESignalProcessingProjectDevelopmentCenter = () => {
                 ))}
               </div>
             </section>
-          </div>
+                      </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR (ONLY CHANGE) */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
-  <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
-  <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
-  <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
-  <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
-  <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
-  <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
-</ul>
+              <li><a href="/department/signal-processing">Signal Processing Project Development Center</a></li>
+              <li><a href="/department/signal-processing/adaptive-filtering-applications">Adaptive Filtering Applications</a></li>
+              <li><a href="/department/signal-processing/ai-driven-signal-enhancement">AI-Driven Signal Enhancement Techniques</a></li>
+              <li><a href="/department/signal-processing/biomedical-signal-processing">Biomedical Signal Processing</a></li>
+              <li><a href="/department/signal-processing/compressive-sensing-signal-processing">Compressive Sensing Signal Processing</a></li>
+              <li><a href="/department/signal-processing/digital-image-video-signal-processing">Digital Image & Video Signal Processing</a></li>
+              <li><a href="/department/signal-processing/speech-audio-signal-processing">Speech & Audio Signal Processing</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

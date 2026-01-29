@@ -1,82 +1,107 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
- import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Embedded VLSI Signal Processing Project Development Center in Chennai",
+  "IEEE Embedded VLSI DSP Projects",
+  "FPGA ASIC Signal Processing Projects",
+  "AI Hardware Accelerators VLSI",
+  "Low Power VLSI DSP Projects",
+  "Neuromorphic Signal Processing VLSI",
+  "B.Tech M.Tech PhD VLSI DSP Projects",
+  "Narpavi Research Institute Embedded VLSI"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Embedded VLSI Signal Processing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Embedded VLSI Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FPGA/ASIC-based DSP, AI hardware accelerators, and neuromorphic signal processing for multimedia, biomedical, and communication systems."
+    question:
+      "What services does the Embedded VLSI Signal Processing Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Embedded VLSI Signal Processing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FPGA/ASIC DSP, AI hardware accelerators, and neuromorphic signal processing."
   },
   {
-    question: "What types of Embedded VLSI Signal Processing projects are supported?",
-    answer: "We support B.Tech projects (FPGA-based digital filters, audio/image processing), M.Tech projects (low-power DSP, CNN accelerators), and Ph.D. projects (neuromorphic DSP, quantum-inspired processors) for applications in IoT, robotics, and 5G/6G systems."
+    question:
+      "What types of Embedded VLSI Signal Processing projects are supported?",
+    answer:
+      "We support FPGA-based DSP, low-power ASIC designs, CNN accelerators, neuromorphic DSP, and reconfigurable VLSI architectures."
   },
   {
-    question: "Which technologies are used in Embedded VLSI Signal Processing project development?",
-    answer: "Our stack includes MATLAB, Verilog, Xilinx Vivado, Cadence, Synopsys, and FPGA/ASIC platforms for DSP design, simulation, and prototyping."
+    question:
+      "Which technologies are used?",
+    answer:
+      "MATLAB, Verilog, Xilinx Vivado, Cadence, Synopsys, and FPGA/ASIC platforms are used."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like FPGA-based DSP, low-power ASIC designs, and AI-driven signal processing, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are derived from IEEE Transactions (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus/SCI journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, complete IEEE, Scopus, and SCI journal publication support is provided."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Embedded VLSI Signal Processing – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/vlsi-design/embedded-vlsi-signal-processing-project-development-center-in-chennai";
+
+const pageDescription =
+  "Embedded VLSI Signal Processing Project Development Center in Chennai offering IEEE-aligned FPGA, ASIC, AI accelerator, low-power VLSI, and neuromorphic DSP projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEEmbeddedVLSISignalProcessingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="Embedded VLSI Signal Processing IEEE Projects | FPGA ASIC AI Accelerators B.Tech M.Tech PhD (2023–2025)"
-  description="Embedded VLSI Signal Processing project development for B.Tech, M.Tech, and Ph.D. students focusing on FPGA/ASIC DSP, AI hardware accelerators, neuromorphic processing, low-power VLSI, and IEEE-aligned research (2023–2025)."
-  url="/department/vlsi-design/embedded-vlsi-signal-processing"
-  type="article"
-  keywords={[
-    "Embedded VLSI Signal Processing Projects",
-    "IEEE FPGA DSP Projects 2025",
-    "ASIC Signal Processing Projects",
-    "AI Hardware Accelerators VLSI",
-    "Neuromorphic DSP Architectures",
-    "Low Power VLSI DSP Projects",
-    "Xilinx Vivado Signal Processing",
-    "Cadence Synopsys DSP Projects",
-    "Verilog DSP Implementation",
-    "B.Tech FPGA Digital Filters",
-    "M.Tech CNN VLSI Accelerators",
-    "Ph.D. Neuromorphic Signal Processing",
-    "Narpavi Research Institute VLSI DSP",
-    "Real-time Embedded DSP Systems",
-    "5G 6G VLSI Signal Processing"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Embedded VLSI Signal Processing Projects</li>
-              <li>IEEE Embedded VLSI Projects 2023–2025</li>
-              <li>FPGA DSP Projects</li>
-              <li>Low Power VLSI DSP Projects</li>
-              <li>AI Accelerators for Signal Processing</li>
-              <li>Neuromorphic DSP Architectures</li>
-              <li>B.Tech Embedded Signal Processing Projects</li>
-              <li>M.Tech VLSI DSP Projects</li>
-              <li>Ph.D. Signal Processing Research</li>
-              <li>Narpavi Research Institute Embedded DSP Support</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Embedded VLSI Signal Processing – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
+                 <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Embedded VLSI Signal Processing – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in FPGA/ASIC-based DSP, AI hardware accelerators, and neuromorphic signal processing for multimedia, biomedical, communication, and AI-driven systems.
               </p>
@@ -235,40 +260,31 @@ const ECEEmbeddedVLSISignalProcessingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
-  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
-  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
-  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
-  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
-  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
-  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+              <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+              <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+              <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+              <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+              <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+              <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

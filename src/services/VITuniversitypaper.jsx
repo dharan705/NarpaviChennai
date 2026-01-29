@@ -1,5 +1,5 @@
 import "./Phdservices.scss";
-import SubSiderbar from "../pages/Subsidebar";
+import Subsidebar from ".././pages/Subsidebar"
 import SEO from "../assets/SEO";
 
 const faqs = [
@@ -35,7 +35,11 @@ const VitPublication = () => {
         faqs={faqs}
         url="/service/vit-university-paper-publication-services"
       />
-      <SubSiderbar />
+         <Subsidebar
+  extraLinks={[
+    { id: "service", label: "service", path: "/service" }
+  ]}
+/>
       <section className="phd-guidance-container">
         <h1 className="title">VIT University Paper Publication Services</h1>
 

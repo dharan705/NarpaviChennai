@@ -1,81 +1,108 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-  import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "FPGA-Based System Prototyping Project Development Center in Chennai",
+  "IEEE FPGA System Prototyping Projects",
+  "VHDL Verilog FPGA Design",
+  "Zynq SoC FPGA Prototyping",
+  "High Level Synthesis FPGA Projects",
+  "Partial Reconfiguration FPGA",
+  "FPGA Hardware Software Co-Design",
+  "B.Tech M.Tech PhD FPGA Projects",
+  "Narpavi Research Institute FPGA"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the FPGA-Based System Prototyping Project Development Center offer?",
-    answer: "Narpavi Research Institute’s FPGA-Based System Prototyping Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FPGA-based digital design, hardware/software co-design, and real-time system prototyping."
+    question:
+      "What services does the FPGA-Based System Prototyping Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s FPGA-Based System Prototyping Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in FPGA-based digital design, hardware/software co-design, and real-time system prototyping."
   },
   {
-    question: "What types of FPGA-Based System Prototyping projects are supported?",
-    answer: "We support B.Tech projects (digital logic, signal processing), M.Tech projects (hardware/software co-design, AI acceleration), and Ph.D. projects (partial reconfiguration, cloud FPGA) for applications in IoT, 5G, and biomedical systems."
+    question:
+      "What types of FPGA-Based System Prototyping projects are supported?",
+    answer:
+      "We support digital logic design, signal processing, hardware/software co-design, AI acceleration, partial reconfiguration, and cloud FPGA projects."
   },
   {
-    question: "Which technologies are used in FPGA-Based System Prototyping project development?",
-    answer: "Our stack includes VHDL/Verilog, SystemVerilog, Xilinx Vivado/ISE, Intel Quartus, Zynq SoCs, and high-level synthesis tools for FPGA prototyping and validation."
+    question:
+      "Which technologies are used?",
+    answer:
+      "VHDL, Verilog, SystemVerilog, Xilinx Vivado, Intel Quartus, Zynq SoCs, and HLS tools are used."
   },
   {
-    question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like FPGA-based DSP, AI acceleration, and reconfigurable architectures, ensuring academic and industry relevance."
+    question:
+      "Are projects IEEE aligned?",
+    answer:
+      "Yes, all projects are derived from IEEE Transactions (2023–2025)."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    question:
+      "Is publication support available?",
+    answer:
+      "Yes, complete IEEE, Scopus, and SCI journal publication support is provided."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "FPGA-Based System Prototyping – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/vlsi-design/fpga-system-prototyping-project-development-center-in-chennai";
+
+const pageDescription =
+  "FPGA-Based System Prototyping Project Development Center in Chennai offering IEEE-aligned VHDL, Verilog, Zynq SoC, HLS, partial reconfiguration, and real-time FPGA projects for B.Tech, M.Tech, and Ph.D. students.";
 
 const ECEFPGASystemPrototypingProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="FPGA System Prototyping IEEE Projects | VHDL Verilog Zynq HLS B.Tech M.Tech PhD (2023–2025)"
-  description="FPGA-Based System Prototyping project development for B.Tech, M.Tech, and Ph.D. students focusing on VHDL/Verilog design, hardware/software co-design, partial reconfiguration, high-level synthesis, Zynq SoCs, and IEEE-aligned research (2023–2025)."
-  url="/department/vlsi-design/fpga-system-prototyping"
-  type="article"
-  keywords={[
-    "FPGA System Prototyping Projects",
-    "IEEE FPGA Projects 2025",
-    "VHDL Verilog FPGA Design",
-    "Zynq SoC Prototyping",
-    "High Level Synthesis HLS FPGA",
-    "Partial Reconfiguration FPGA",
-    "Xilinx Vivado Projects",
-    "Intel Quartus FPGA Projects",
-    "FPGA Hardware Software Co-Design",
-    "B.Tech FPGA Digital Logic",
-    "M.Tech FPGA AI Acceleration",
-    "Ph.D. Cloud FPGA Research",
-    "Narpavi Research Institute FPGA",
-    "Real-time FPGA Prototyping",
-    "FPGA DSP 5G Applications"
-  ]}
-  faqs={faqs}
-/>
-      <Sidebar />
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>FPGA-Based System Prototyping Projects</li>
-              <li>IEEE FPGA Projects 2023–2025</li>
-              <li>FPGA Digital Design Projects</li>
-              <li>FPGA Embedded System Development</li>
-              <li>FPGA Signal Processing Projects</li>
-              <li>B.Tech FPGA Project Support</li>
-              <li>M.Tech FPGA Research Projects</li>
-              <li>Ph.D. FPGA-Based Prototyping</li>
-              <li>Narpavi Research Institute FPGA Projects</li>
-              <li>FPGA for AI and IoT Applications</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>FPGA-Based System Prototyping – Project Development Support</h1>
-
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
+            
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the FPGA-Based System Prototyping – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) FPGA-based solutions for digital design, embedded systems, and real-time applications.
@@ -235,40 +262,31 @@ const ECEFPGASystemPrototypingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
-  <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
-  <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
-  <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
-  <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
-  <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
-  <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/vlsi-design">VLSI Design & Embedded Systems</a></li>
+              <li><a href="/department/vlsi-design/low-power-vlsi">Low Power VLSI Design</a></li>
+              <li><a href="/department/vlsi-design/fpga-system-prototyping">FPGA-Based System Prototyping</a></li>
+              <li><a href="/department/vlsi-design/embedded-vlsi-signal-processing">Embedded VLSI Signal Processing</a></li>
+              <li><a href="/department/vlsi-design/hardware-software-co-design">Hardware–Software Co-Design</a></li>
+              <li><a href="/department/vlsi-design/nanoelectronics-emerging-devices">Nanoelectronics & Emerging Devices</a></li>
+              <li><a href="/department/vlsi-design/vlsi-ai">VLSI for AI Applications</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,67 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEo from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "High Voltage Testing of Equipment Project Development Center in Chennai",
+  "High Voltage Testing IEEE Projects 2023–2025",
+  "Dielectric Testing Projects",
+  "AC DC Withstand Voltage Testing",
+  "Impulse Testing High Voltage",
+  "Partial Discharge Analysis Projects",
+  "B.Tech High Voltage Testing Projects",
+  "M.Tech AI Based HV Diagnostics",
+  "Ph.D Predictive High Voltage Monitoring",
+  "IoT Based HV Equipment Monitoring",
+  "Narpavi Research Institute High Voltage Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the High Voltage Testing of Equipment Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) research on dielectric testing, withstand voltage analysis, partial discharge diagnostics, AI-assisted monitoring, and predictive high voltage testing systems."
+    question:
+      "What services does the High Voltage Testing of Equipment Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) research on dielectric testing, withstand voltage analysis, partial discharge diagnostics, AI-assisted monitoring, and predictive high voltage testing systems."
   },
   {
     question: "What types of projects are supported?",
-    answer: "We support B.Tech projects (dielectric testing, AC/DC withstand, impulse simulation), M.Tech projects (advanced PD analysis, AI-assisted fault detection), and Ph.D. projects (predictive testing frameworks, IoT-based HV monitoring, patents and IEEE publications)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering AC/DC withstand testing, impulse simulations, partial discharge diagnostics, AI-assisted fault detection, and IEEE publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, COMSOL Multiphysics, LabVIEW, IoT platforms, FPGA/DSP-based controllers, and AI/ML frameworks such as TensorFlow and PyTorch for predictive analysis."
+    answer:
+      "MATLAB/Simulink, PSCAD, COMSOL Multiphysics, LabVIEW, IoT platforms, FPGA/DSP controllers, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects reference IEEE Transactions (2023–2025) on dielectric testing, withstand/impulse diagnostics, PD monitoring, condition analysis, and standard-compliant HV equipment testing methodologies."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on dielectric testing, partial discharge diagnostics, and standard-compliant high voltage equipment testing."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We support IEEE topic selection, high voltage lab testing setups, AI-based analysis, technical documentation in IEEE format, and publication guidance for IEEE/Scopus/SCI journals."
+    question: "What academic support is provided?",
+    answer:
+      "We provide IEEE topic selection, HV lab testing guidance, AI-based diagnostics, IEEE-format documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "High Voltage Testing of Equipment – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) High Voltage Testing of Equipment Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering dielectric testing, AC/DC withstand, impulse testing, partial discharge diagnostics, and AI-based predictive monitoring.";
+
+const pageUrl =
+  "/department/high-voltage-engineering/high-voltage-testing";
 
 const EEEHighVoltageTestingEquipmentProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="High Voltage Testing Equipment IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) High Voltage Testing projects for B.Tech, M.Tech, Ph.D. Dielectric testing, AC/DC withstand, impulse testing, partial discharge PD analysis, AI predictive monitoring using MATLAB/Simulink, PSCAD, COMSOL for transformers, switchgear, HVDC."
-  keywords="High Voltage Testing IEEE Projects 2023–2025, Dielectric Testing Projects, B.Tech HV Withstand Testing, M.Tech Partial Discharge Analysis, Ph.D. AI HV Monitoring, AC DC Impulse Testing, IoT HV Equipment Monitoring, Industrial HV Test Systems, PSCAD COMSOL HV Simulation, Narpavi Research Institute"
-  url="/department/high-voltage-engineering/high-voltage-testing"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
-      
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>High Voltage Testing Projects</li>
-              <li>IEEE HV Equipment Testing 2023–2025</li>
-              <li>B.Tech Dielectric Testing Projects</li>
-              <li>M.Tech Partial Discharge Analysis</li>
-              <li>Ph.D AI-Based HV Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>AC/DC Withstand Voltage Projects</li>
-              <li>Impulse Testing Research</li>
-              <li>IoT-Based HV Equipment Monitoring</li>
-              <li>Industrial HV Test Systems</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>High Voltage Testing of Equipment – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the High Voltage Testing of Equipment Project Development Center, supporting global scholars in IEEE-aligned (2023–2025) testing, diagnostic, and predictive analysis of high voltage systems.</p>
               <p>This center trains students in AC/DC withstand tests, impulse testing, PD diagnostics, and real-time IoT/AI-based HV monitoring for transformers, switchgear, HVDC links, and renewable-integrated systems.</p>
@@ -198,42 +228,26 @@ const EEEHighVoltageTestingEquipmentProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <Route path="department/high-voltage-engineering" element={<EEEHighVoltageEngineeringProjectDevelopmentCenter />} />
+            <ul>
+              <li><a href="/department/high-voltage-engineering">High Voltage Engineering</a></li>
+              <li><a href="/department/high-voltage-engineering/gas-insulated-substations">Gas Insulated Substations</a></li>
+              <li><a href="/department/high-voltage-engineering/high-voltage-testing">High Voltage Testing Equipment</a></li>
+              <li><a href="/department/high-voltage-engineering/hvdc-transmission">HVDC Transmission Systems</a></li>
+              <li><a href="/department/high-voltage-engineering/insulation-materials">Insulation Materials & Techniques</a></li>
+              <li><a href="/department/high-voltage-engineering/overvoltage-surge-protection">Overvoltage & Surge Protection</a></li>
+              <li><a href="/department/high-voltage-engineering/partial-discharge-analysis">Partial Discharge Analysis</a></li>
+            </ul>
 
-<Route
-  path="department/high-voltage-engineering/gis"
-  element={<EEEGISProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/high-voltage-testing"
-  element={<EEEHighVoltageTestingEquipmentProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/hvdc-transmission"
-  element={<EEEHVDCTransmissionSystemsProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/insulation-materials"
-  element={<EEEInsulationMaterialsTechniquesProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/overvoltage-surge-protection"
-  element={<EEEOvervoltageSurgeProtectionProjectDevelopmentCenter />}
-/>
-
-<Route
-  path="department/high-voltage-engineering/partial-discharge-analysis"
-  element={<EEEPartialDischargeAnalysisProjectDevelopmentCenter />}
-/>
-
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

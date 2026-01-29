@@ -1,76 +1,87 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Waste Management Systems IEEE Projects 2023–2025",
+  "Smart Waste Collection Systems",
+  "IoT Waste Monitoring",
+  "AI Based Waste Optimization",
+  "Circular Economy Waste Management",
+  "Anaerobic Digestion Biogas Projects",
+  "Smart City Waste Management",
+  "Industrial Municipal Recycling Systems",
+  "Environmental Engineering B.Tech M.Tech Ph.D.",
+  "Narpavi Research Institute Waste Projects"
+];
+
 const faqs = [
   {
     question: "What services does the Waste Management Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Waste Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on smart waste collection, treatment, and recycling."
+    answer:
+      "Narpavi Research Institute’s Waste Management Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on smart waste collection, treatment, and recycling."
   },
   {
     question: "What types of Waste Management Systems projects are supported?",
-    answer: "We support B.Tech projects (basic collection and recycling), M.Tech projects (advanced treatment and optimization), and Ph.D. projects (smart monitoring and circular economy integration) for sustainable waste management."
+    answer:
+      "We support B.Tech projects (basic collection and recycling), M.Tech projects (advanced treatment and optimization), and Ph.D. projects (smart monitoring and circular economy integration)."
   },
   {
-    question: "Which tools and technologies are used in Waste Management Systems projects?",
-    answer: "Our stack includes MATLAB, Aspen Plus, GIS tools, IoT sensors, GPS systems, and AI frameworks (TensorFlow, Keras) for modeling and monitoring waste management systems."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, Aspen Plus, GIS tools, IoT sensors, GPS systems, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Environmental Engineering, focusing on smart waste management, IoT monitoring, and AI-driven optimization."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) focusing on smart waste management, IoT monitoring, and AI-driven optimization."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, laboratory experiments, simulation, IoT integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, laboratory experiments, simulation, IoT integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CEWasteManagementSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Waste Management Systems IEEE Projects (2023–2025)"
-        description="Waste Management Systems IEEE project development for B.Tech, M.Tech & PhD scholars focusing on smart waste collection, IoT monitoring, AI optimization, circular economy, biogas generation, and sustainable recycling."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Waste Management Systems – Project Development Center in Chennai"
+        description="Waste Management Systems project development for B.Tech, M.Tech, and Ph.D. students using smart waste collection, IoT monitoring, AI optimization, circular economy models, biogas generation, and sustainable recycling."
+        keywords={keywords}
         url="/department/environmental-engineering/waste-management-system"
-        type="article"
-        keywords={[
-          "Waste Management Projects",
-          "Smart Waste Collection IEEE 2023–2025",
-          "IoT Waste Monitoring",
-          "AI-Based Waste Optimization",
-          "Circular Economy Waste Systems",
-          "Anaerobic Digestion Biogas Projects",
-          "B.Tech M.Tech PhD Environmental Projects",
-          "Narpavi Research Institute Waste Projects",
-          "Smart City Waste Management",
-          "Industrial Municipal Recycling Systems"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Waste Management Projects</li>
-              <li>Smart Waste Collection IEEE 2023–2025</li>
-              <li>IoT Waste Monitoring</li>
-              <li>AI-Based Waste Optimization</li>
-              <li>Circular Economy Waste Systems</li>
-              <li>Anaerobic Digestion & Biogas Projects</li>
-              <li>B.Tech M.Tech Ph.D. Environmental Projects</li>
-              <li>Narpavi Research Institute Waste Projects</li>
-              <li>Smart City Waste Management</li>
-              <li>Industrial and Municipal Recycling Systems</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+           
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Waste Management Systems – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Waste Management Systems – Project Development Center in Chennai
+            </h1>
+
+                  <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Waste Management Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on sustainable waste collection, treatment, and recycling.
               </p>
@@ -230,54 +241,42 @@ const CEWasteManagementSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/environmental-engineering">
-      Environmental Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/environmental-engineering/water-treatment-recycling">
-      Water Treatment & Recycling
-    </a>
-  </li>
-  <li>
-    <a href="/department/environmental-engineering/air-pollution-modeling">
-      Air Pollution Modeling
-    </a>
-  </li>
-  <li>
-    <a href="/department/environmental-engineering/waste-management-system">
-      Waste Management System
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/environmental-engineering">
+                  Environmental Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/water-treatment-recycling">
+                  Water Treatment & Recycling
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/air-pollution-modeling">
+                  Air Pollution Modeling
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/waste-management-system">
+                  Waste Management System
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

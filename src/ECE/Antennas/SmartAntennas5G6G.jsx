@@ -1,76 +1,89 @@
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Smart Antennas for 5G 6G",
+  "Beamforming Antennas IEEE",
+  "Adaptive Smart Antennas",
+  "Massive MIMO 5G Projects",
+  "AI Driven Antenna Optimization",
+  "Hybrid Antenna Architectures",
+  "HFSS CST Smart Antenna Design",
+  "6G Reconfigurable Antennas",
+  "Metasurface Smart Antennas",
+  "Next Generation Wireless Antennas"
+];
 
 const faqs = [
   {
     question: "What are Smart Antennas for 5G/6G Applications?",
-    answer: "Smart antennas are advanced antenna systems that utilize beamforming, MIMO, reconfigurability, and AI-based optimization to provide reliable, high-capacity, and energy-efficient communication for 5G and upcoming 6G networks."
+    answer:
+      "Smart antennas use beamforming, MIMO, reconfigurability, and AI-based optimization to provide high-capacity and energy-efficient communication."
   },
   {
-    question: "What is the focus of B.Tech projects in smart antennas?",
-    answer: "B.Tech projects focus on foundational training in antenna design, simulation, and implementation using HFSS, CST, and MATLAB, with hands-on prototyping of beamforming and array pattern antennas."
+    question: "What is the focus of B.Tech projects?",
+    answer:
+      "B.Tech projects focus on antenna fundamentals, simulation, and beamforming array prototyping using HFSS, CST, and MATLAB."
   },
   {
-    question: "What are the key aspects of M.Tech projects in this domain?",
-    answer: "M.Tech students work on advanced algorithm integration, adaptive beam management, hybrid antenna designs, IoT integration, and hardware-software co-design for real-time validation."
+    question: "What are the key aspects of M.Tech projects?",
+    answer:
+      "Adaptive beam management, AI integration, hybrid antenna designs, IoT integration, and real-time validation."
   },
   {
-    question: "What research are Ph.D. students engaged in at this center?",
-    answer: "Ph.D. research emphasizes AI-driven smart antennas, metasurfaces, cognitive spectrum utilization, and development of novel system architectures with IEEE-standard publications and collaborations."
+    question: "What research are Ph.D. students engaged in?",
+    answer:
+      "AI-driven smart antennas, metasurfaces, cognitive spectrum utilization, and novel antenna architectures."
   },
   {
-    question: "Which tools and platforms are used for smart antenna development?",
-    answer: "The tools commonly used include HFSS, CST, MATLAB for simulation, and AI frameworks for optimization of antenna systems."
+    question: "Which tools are used?",
+    answer:
+      "HFSS, CST, MATLAB, and AI-based optimization frameworks."
   }
 ];
 
 const SmartAntennas5G6GProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-      <SEO
-  title="Smart Antennas 5G 6G IEEE Projects 2025 | Beamforming Massive MIMO AI | B.Tech M.Tech PhD"
-  description="Smart antennas for 5G/6G applications projects (2023–2025) using HFSS CST MATLAB for beamforming, adaptive antennas, massive MIMO, AI-optimized hybrid architectures, metasurface antennas."
-  url="/smart-antennas-5g-6g-project-development"
-  type="article"
-  keywords={[
-    "Smart Antennas 5G 6G",
-    "Beamforming Antennas IEEE",
-    "Adaptive Smart Antennas",
-    "Massive MIMO 5G Projects",
-    "AI Driven Antenna Optimization",
-    "Hybrid Antenna Architectures",
-    "HFSS CST Smart Antenna Design",
-    "6G Reconfigurable Antennas"
-  ]}
-  faqs={faqs}
-/>
 
-      <Sidebar />
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Smart Antennas for 5G 6G – Project Development Center in Chennai"
+        description="IEEE-aligned smart antenna project development for B.Tech, M.Tech, and Ph.D. students using HFSS, CST, and MATLAB covering beamforming, adaptive antennas, massive MIMO, AI-optimized hybrid architectures, and metasurface antennas for 5G and 6G."
+        keywords={keywords}
+        url="/smart-antennas-5g-6g-project-development"
+        faqs={faqs}
+      />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          <div className="ECEProjectDevelopmentCenter-left">
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Smart Antennas 5G/6G</li>
-              <li>Beamforming Antennas</li>
-              <li>Adaptive Smart Antennas</li>
-              <li>Massive MIMO</li>
-              <li>AI-driven Antenna Optimization</li>
-              <li>Hybrid Antenna Architectures</li>
-              <li>Reconfigurable Antennas</li>
-              <li>5G Antenna Design</li>
-              <li>6G Antenna Technology</li>
-              <li>IEEE Antenna Projects</li>
-              <li>Nanosatellite and Aerospace Antennas</li>
-              <li>Nano Research Institute Smart Antennas</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Smart Antennas for 5G/6G Applications – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Smart Antennas for 5G 6G – Project Development Center in Chennai
+            </h1>
+              <section className="ECEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> nurtures innovation in smart antenna systems for 5G and 6G networks, providing research and development guidance aligned with IEEE trends (2023-2025).</p>
               <p>The center emphasizes hands-on prototyping, AI optimization, and comprehensive simulation methodologies for beamforming, massive MIMO, and adaptable antenna architectures.</p>
             </section>
@@ -165,18 +178,19 @@ const SmartAntennas5G6GProject = () => {
             </section>
           </div>
 
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar">
             <h3>Related Services</h3>
-           <ul>
-  <li><a href="/department/antenna-design">Antenna Design</a></li>
-  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
-  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
-  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
-  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
-  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
-  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/antenna-design">Antenna Design</a></li>
+              <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+              <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+              <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+              <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+              <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+              <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+            </ul>
+          </aside>
 
         </div>
       </div>

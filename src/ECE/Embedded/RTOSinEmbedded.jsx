@@ -1,64 +1,83 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What services does the RTOS in Embedded Applications Project Development Center offer?",
-    answer: "Narpavi Research Institute’s RTOS in Embedded Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in real-time scheduling, kernel customization, and fault-tolerant RTOS designs for automotive, aerospace, and IoT applications."
+    answer:
+      "Narpavi Research Institute’s RTOS in Embedded Applications Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in real-time scheduling, kernel customization, and fault-tolerant RTOS designs for automotive, aerospace, and IoT applications."
   },
   {
     question: "What types of RTOS in Embedded Applications projects are supported?",
-    answer: "We support B.Tech projects (real-time scheduling, IoT device OS), M.Tech projects (kernel optimization, cryptographic protocols), and Ph.D. projects (AI-enhanced schedulers, energy-aware RTOS) for applications in smart healthcare, industrial robotics, and autonomous systems."
+    answer:
+      "We support B.Tech projects (real-time scheduling, IoT device OS), M.Tech projects (kernel optimization, cryptographic protocols), and Ph.D. projects (AI-enhanced schedulers, energy-aware RTOS) for applications in smart healthcare, industrial robotics, and autonomous systems."
   },
   {
     question: "Which technologies are used in RTOS in Embedded Applications project development?",
-    answer: "Our stack includes FreeRTOS, VxWorks, QNX, ARM-based processors, RISC-V cores, and tools like Keil, IAR Embedded Workbench, and Xilinx Vivado for RTOS development and hardware integration."
+    answer:
+      "Our stack includes FreeRTOS, VxWorks, QNX, ARM-based processors, RISC-V cores, and tools like Keil, IAR Embedded Workbench, and Xilinx Vivado for RTOS development and hardware integration."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-driven RTOS, low-power kernels, and fault-tolerant designs, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like AI-driven RTOS, low-power kernels, and fault-tolerant designs, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, RTOS implementation, hardware prototyping, validation, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, RTOS implementation, hardware prototyping, validation, documentation, and IEEE/Scopus/SCI journal publication support."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Real-Time Operating Systems in Embedded Applications",
+  "RTOS project development",
+  "RTOS IEEE projects 2023–2025",
+  "Embedded system RTOS projects",
+  "B.Tech RTOS projects",
+  "M.Tech RTOS research",
+  "Ph.D. RTOS project support",
+  "RTOS academic project guidance",
+  "Narpavi Research Institute Embedded Systems",
+  "IEEE RTOS-based project topics"
 ];
 
 const ECERTOSinEmbeddedApplicationsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="RTOS in Embedded Applications IEEE Projects | FreeRTOS, VxWorks, QNX | B.Tech M.Tech Ph.D."
+        title="RTOS in Embedded Applications – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) RTOS in embedded applications projects on real-time scheduling, kernel customization, low-power and fault-tolerant RTOS, and AI-enhanced schedulers using FreeRTOS, VxWorks, QNX on ARM and RISC-V for automotive, aerospace, IoT, and industrial systems."
-        keywords="Real-Time Operating Systems in Embedded Applications, RTOS project development, RTOS IEEE projects 2023–2025, Embedded system RTOS projects, B.Tech RTOS projects, M.Tech RTOS research, Ph.D. RTOS project support, RTOS academic project guidance, Narpavi Research Institute Embedded Systems, IEEE RTOS-based project topics"
-        url="/department/embedded-systems/rtos-in-embedded-applications"
+        keywords={keywords}
+        url="/department/embedded-systems/rtos-in-embedded-applications-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Real-Time Operating Systems in Embedded Applications</li>
-              <li>RTOS project development</li>
-              <li>RTOS IEEE projects 2023–2025</li>
-              <li>Embedded system RTOS projects</li>
-              <li>B.Tech RTOS projects</li>
-              <li>M.Tech RTOS research</li>
-              <li>Ph.D. RTOS project support</li>
-              <li>RTOS academic project guidance</li>
-              <li>Narpavi Research Institute Embedded Systems</li>
-              <li>IEEE RTOS-based project topics</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Real-Time Operating Systems (RTOS) in Embedded Applications – Project Development Support</h1>
-
+            <h1>
+              Real-Time Operating Systems (RTOS) in Embedded Applications - Project Development Center in Chennai
+            </h1>
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Real-Time Operating Systems (RTOS) in Embedded Applications – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) solutions in real-time scheduling, fault-tolerant RTOS designs, and hardware-software integration for automotive, aerospace, and IoT applications.
@@ -211,40 +230,29 @@ const ECERTOSinEmbeddedApplicationsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/embedded-systems">Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
-  <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
-  <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
-  <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
-  <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
-  <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
-</ul>
-          </div>
+              <li><a href="/department/embedded-systems">Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/arm-risc-v-system">ARM & RISC-V System</a></li>
+              <li><a href="/department/embedded-systems/embedded-system-security-cryptography">Embedded System Security & Cryptography</a></li>
+              <li><a href="/department/embedded-systems/energy-efficient-embedded">Energy-Efficient Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems/iot-enabled-embedded-devices">IoT-Enabled Embedded Devices</a></li>
+              <li><a href="/department/embedded-systems/machine-learning-embedded-platforms">Machine Learning on Embedded Platforms</a></li>
+              <li><a href="/department/embedded-systems/rtos-in-embedded-applications">RTOS in Embedded Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

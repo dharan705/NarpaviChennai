@@ -1,59 +1,95 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Biomass & Fuel Cell Technologies Project Development Center in Chennai",
+  "Biomass Energy IEEE Projects 2023–2025",
+  "Hydrogen Fuel Cell Project Development",
+  "Hybrid Biomass Fuel Cell Systems",
+  "AI Based Bioenergy Management",
+  "IoT Based Renewable Energy Monitoring",
+  "B.Tech Biomass Energy Projects",
+  "M.Tech Fuel Cell Systems Projects",
+  "Ph.D Hybrid Renewable Energy Research",
+  "Narpavi Research Institute Renewable Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Biomass & Fuel Cell Technologies Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Biomass & Fuel Cell Technologies Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on biomass energy conversion, hydrogen fuel cell technologies, bio-electrochemical systems, and hybrid energy integration."
+    answer:
+      "Narpavi Research Institute’s Biomass & Fuel Cell Technologies Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on biomass energy conversion, hydrogen fuel cells, and hybrid renewable systems."
   },
   {
     question: "What types of Biomass & Fuel Cell projects are supported?",
-    answer: "We support B.Tech projects (biomass gasifiers, basic hydrogen cell stacks), M.Tech projects (AI-based energy management, hybrid biomass-fuel cell systems), and Ph.D. projects (predictive maintenance, high-efficiency hydrogen storage integration, grid-connected hybrid systems)."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering biomass gasification, hydrogen fuel cells, AI-based energy management, and grid-connected hybrid systems."
   },
   {
     question: "Which technologies are used in Biomass & Fuel Cell project development?",
-    answer: "Our stack includes MATLAB/Simulink, COMSOL, PSIM for system simulation, AI/ML frameworks (TensorFlow, PyTorch) for predictive energy management, IoT platforms (MQTT), and FPGA/DSP controllers for real-time energy control prototyping."
+    answer:
+      "MATLAB/Simulink, COMSOL, PSIM, TensorFlow, PyTorch, IoT platforms, and FPGA/DSP controllers."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are designed in line with IEEE Transactions (2023–2025) covering biomass gasification, hydrogen fuel cells, hybrid renewable integration, and intelligent grid technologies to ensure both academic and industrial relevance."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) covering biomass systems, fuel cells, hybrid renewables, and intelligent grid integration."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We provide complete academic support covering IEEE topic selection, algorithm simulation, hardware prototyping, IEEE-style documentation, and journal publications (IEEE/Scopus/SCI indexed)."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including IEEE topic selection, simulation, prototyping, documentation, and journal publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Biomass & Fuel Cell Technologies – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Biomass & Fuel Cell Technologies Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering biomass gasification, hydrogen fuel cells, hybrid renewable systems, AI-based energy optimization, and IoT monitoring.";
+
+const pageUrl =
+  "/department/renewable-energy-systems/biomass-fuel-cell";
 
 const EEEBiomassFuelCellTechnologiesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Biomass Energy Projects</li>
-              <li>Fuel Cell Projects</li>
-              <li>IEEE Renewable Energy Projects 2023–2025</li>
-              <li>B.Tech Bioenergy Projects</li>
-              <li>M.Tech Hydrogen Fuel Cell Systems</li>
-              <li>Ph.D Hybrid Biomass-Fuel Cell Systems</li>
-              <li>IoT-Based Renewable Monitoring</li>
-              <li>Narpavi Research Institute</li>
-              <li>High-Efficiency Bioenergy Systems</li>
-              <li>Intelligent Renewable Energy Research</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            
-            <h1>Biomass & Fuel Cell Technologies – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> introduces the Biomass & Fuel Cell Technologies Project Development Center, 
@@ -197,68 +233,30 @@ const EEEBiomassFuelCellTechnologiesProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+          
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/renewable-energy-systems">
-      Renewable Energy Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/solar-photovoltaic">
-      Solar Photovoltaic Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/wind-energy-conversion">
-      Wind Energy Conversion Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
-      Biomass Fuel Cell Technologies
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/energy-storage-integration">
-      Energy Storage & Renewable Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
-      Hybrid Renewable Energy Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/grid-integration-renewables">
-      Grid Integration of Renewables
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/renewable-energy-systems">Renewable Energy Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/solar-photovoltaic">Solar Photovoltaic Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/wind-energy-conversion">Wind Energy Conversion Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/biomass-fuel-cell">Biomass Fuel Cell Technologies</a></li>
+              <li><a href="/department/renewable-energy-systems/energy-storage-integration">Energy Storage & Renewable Integration</a></li>
+              <li><a href="/department/renewable-energy-systems/hybrid-renewable-systems">Hybrid Renewable Energy Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/grid-integration-renewables">Grid Integration of Renewables</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

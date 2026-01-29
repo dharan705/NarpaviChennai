@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Fatigue & Fracture Analysis Project Development Center in Chennai",
+  "IEEE Fatigue Analysis Projects 2023–2025",
+  "Crack Growth Modeling Projects",
+  "AI Based Fatigue Monitoring",
+  "Digital Twin Fatigue Life Prediction",
+  "Fracture Mechanics Student Projects",
+  "B.Tech Fatigue Analysis Projects",
+  "M.Tech Fracture Mechanics Projects",
+  "PhD Fatigue Research",
+  "Narpavi Research Institute Fatigue Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Fatigue & Fracture Analysis Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Fatigue & Fracture Analysis Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on fatigue life prediction, crack growth modeling, fracture toughness evaluation, AI-driven fatigue monitoring, and digital twin simulations for aerospace, automotive, energy, and biomedical applications."
+    question:
+      "What services does the Fatigue & Fracture Analysis Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on fatigue life prediction, crack growth modeling, fracture toughness evaluation, AI-driven fatigue monitoring, and digital twin simulations."
   },
   {
-    question: "What types of Fatigue & Fracture Analysis projects are supported?",
-    answer: "We support B.Tech projects (basic fatigue analysis, S-N curves), M.Tech projects (crack growth modeling, AI/ML applications), and Ph.D. projects (digital twins, nanostructured alloys for fatigue resistance) for applications in EVs, aerospace, wind turbines, and civil infrastructure."
+    question: "Who can apply for fatigue and fracture analysis projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Materials, and Civil Engineering disciplines."
   },
   {
-    question: "Which tools and technologies are used in Fatigue & Fracture Analysis projects?",
-    answer: "Our stack includes ANSYS, ABAQUS, MATLAB, Python, UTM, fatigue test rigs, and digital twin platforms for simulation, experimental testing, and AI-driven fatigue prediction."
+    question: "Which tools are used for fatigue and fracture analysis?",
+    answer:
+      "ANSYS, ABAQUS, MATLAB, Python, fatigue test rigs, UTM machines, and digital twin platforms."
   },
   {
-    question: "How are Fatigue & Fracture Analysis projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Materials Science, Mechanics, and Industrial Applications, focusing on AI-driven fatigue prediction, digital twins, and nanostructured materials, aligned with IEEE/ASTM standards."
+    question: "Are projects aligned with IEEE standards?",
+    answer:
+      "Yes. All projects align with IEEE Transactions (2023–2025) and IEEE/ASTM standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is journal and patent support provided?",
+    answer:
+      "Yes. Support is provided for IEEE, SCI, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Fatigue & Fracture Analysis – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Fatigue & Fracture Analysis Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on fatigue life prediction, crack growth modeling, AI-driven monitoring, and digital twin simulations.";
+
+const pageUrl =
+  "/department/mechanical-properties-materials/fatigue-fracture-analysis";
 
 const MEFatigueFractureAnalysisProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Fatigue & Fracture Analysis IEEE Projects (2023–2025)"
-        description="Fatigue Fracture Analysis IEEE project development for B.Tech, M.Tech & PhD using ANSYS, ABAQUS, crack growth modeling, AI fatigue prediction, digital twins for aerospace, automotive, energy, biomedical applications."
-        url="/department/mechanical-properties-materials/fatigue-fracture-analysis"
-        type="article"
-        keywords={[
-          "Fatigue Fracture Analysis Projects",
-          "Crack Growth Simulation IEEE Projects",
-          "AI Based Fatigue Monitoring",
-          "Digital Twin Fatigue Life Prediction",
-          "Fatigue in Aerospace Materials",
-          "Nanocomposites Fatigue Resistance",
-          "B.Tech Fatigue Analysis Projects",
-          "M.Tech Fracture Mechanics Projects",
-          "Narpavi Research Institute Fatigue Projects",
-          "PhD Fatigue Research"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Fatigue & Fracture Analysis Projects</li>
-              <li>Crack Growth Simulation IEEE Projects</li>
-              <li>Fatigue in Aerospace Materials</li>
-              <li>AI-Based Fatigue Monitoring</li>
-              <li>Digital Twin for Fatigue Life Prediction</li>
-              <li>Nanocomposites Fatigue Resistance</li>
-              <li>B.Tech Fatigue Analysis Projects</li>
-              <li>M.Tech Fracture Mechanics Projects</li>
-              <li>Ph.D. Fatigue Research Center</li>
-              <li>Narpavi Research Institute Fatigue Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Fatigue & Fracture Analysis – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Fatigue & Fracture Analysis Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on fatigue life prediction, crack growth modeling, fracture toughness evaluation, AI-driven fatigue monitoring, and digital twin simulations.
               </p>
@@ -272,43 +292,26 @@ const MEFatigueFractureAnalysisProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/mechanical-properties-materials">
-      Mechanical Properties & Materials
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/composite-materials-analysis">
-      Composite Materials Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/advanced-alloy-development">
-      Advanced Alloy Development
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/tribology-wear-analysis">
-      Tribology & Wear Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/nanomaterials-mechanical">
-      Nanomaterials – Mechanical Properties
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">
-      Fatigue & Fracture Analysis
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/mechanical-properties-materials">Mechanical Properties & Materials</a></li>
+              <li><a href="/department/mechanical-properties-materials/composite-materials-analysis">Composite Materials Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/advanced-alloy-development">Advanced Alloy Development</a></li>
+              <li><a href="/department/mechanical-properties-materials/tribology-wear-analysis">Tribology & Wear Analysis</a></li>
+              <li><a href="/department/mechanical-properties-materials/nanomaterials-mechanical">Nanomaterials – Mechanical Properties</a></li>
+              <li><a href="/department/mechanical-properties-materials/fatigue-fracture-analysis">Fatigue & Fracture Analysis</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,68 +1,88 @@
 import "./Cybersecurity.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Cybersecurity – Project Development Center in Chennai",
+  "IEEE Cybersecurity Projects 2023–2025",
+  "AI in Cybersecurity Projects",
+  "Blockchain Cybersecurity Projects",
+  "B.Tech Cybersecurity Projects",
+  "M.Tech Cybersecurity Projects",
+  "Ph.D. Cybersecurity Research",
+  "Quantum Cryptography Projects",
+  "Zero Trust Security Architecture",
+  "IoT Security Frameworks",
+  "Intrusion Detection System Projects",
+  "Privacy-Preserving AI Security"
+];
 
 const faqs = [
   {
     question: "What services does the Cybersecurity Project Development Center offer?",
-    answer: "Narpavi Research Institute's Cybersecurity Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) cybersecurity projects, focusing on blockchain, AI-driven threat detection, quantum cryptography, and IoT security."
+    answer:
+      "Narpavi Research Institute's Cybersecurity Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) cybersecurity projects, focusing on blockchain, AI-driven threat detection, quantum cryptography, and IoT security."
   },
   {
     question: "What types of cybersecurity projects are supported?",
-    answer: "We support B.Tech projects (intrusion detection, malware analysis), M.Tech projects (blockchain-based security, AI monitoring), and Ph.D. projects (quantum-safe encryption, zero-knowledge proofs) for industries like healthcare, finance, and smart cities."
+    answer:
+      "We support B.Tech projects (intrusion detection, malware analysis), M.Tech projects (blockchain-based security, AI monitoring), and Ph.D. projects (quantum-safe encryption, zero-knowledge proofs)."
   },
   {
     question: "Which technologies are used in cybersecurity project development?",
-    answer: "Our stack includes Kali Linux, Wireshark, NS3, Ethereum, Hyperledger, TensorFlow, and quantum cryptography tools for secure and scalable solutions."
+    answer:
+      "Our stack includes Kali Linux, Wireshark, NS3, Ethereum, Hyperledger, TensorFlow, and quantum cryptography tools."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like blockchain security, AI-driven defense, and quantum cryptography, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering blockchain security, AI-driven defense, and quantum cryptography."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, protocol design, simulation, testing, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance including topic selection, protocol design, simulation, testing, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const CybersecurityProjectDevelopmentCenter = () => {
   return (
-    <div className="CybersecurityProjectDevelopmentCenter">
-      <SEO 
-        title="Cybersecurity IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Cybersecurity projects for B.Tech, M.Tech, Ph.D. AI threat detection, blockchain security, quantum cryptography, IoT security for healthcare, finance."
-        keywords="Cybersecurity Project Development, IEEE Cybersecurity Projects 2023–2025, AI in Cybersecurity, Blockchain Cybersecurity Projects, Narpavi Research Institute Cybersecurity, B.Tech Cybersecurity Projects, M.Tech Cybersecurity Projects, Ph.D. Cybersecurity Research, Quantum Cryptography, Zero Trust Security, Intrusion Detection System Projects, IoT Security Frameworks, Privacy-Preserving AI Security"
-        url="/department/cybersecurity"
+    <div className="MobileAppDevelopmentCenter">
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Cybersecurity – Project Development Center in Chennai"
+        description="Cybersecurity – Project Development Center in Chennai offering IEEE 2023–2025 cybersecurity projects in AI threat detection, blockchain security, quantum cryptography, and IoT security for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/cybersecurity-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="CybersecurityProjectDevelopmentCenter-main">
-        <div className="CybersecurityProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CybersecurityProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Cybersecurity Project Development</li>
-              <li>IEEE Cybersecurity Projects 2023–2025</li>
-              <li>AI in Cybersecurity</li>
-              <li>Blockchain Cybersecurity Projects</li>
-              <li>Narpavi Research Institute Cybersecurity</li>
-              <li>B.Tech Cybersecurity Projects</li>
-              <li>M.Tech Cybersecurity Projects</li>
-              <li>Ph.D. Cybersecurity Research</li>
-              <li>Quantum Cryptography</li>
-              <li>Zero Trust Security</li>
-              <li>Intrusion Detection System Projects</li>
-              <li>IoT Security Frameworks</li>
-              <li>Privacy-Preserving AI Security</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="CybersecurityProjectDevelopmentCenter-center">
-            <h1>Cybersecurity – Project Development Center</h1>
-
-            <section className="CybersecurityProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Cybersecurity – Project Development Center in Chennai</h1>
+            <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 At Cybersecurity – Project Development Center, we specialize in delivering advanced academic project development services tailored to meet the ever-growing demands of digital security. The field of Cybersecurity – Project Development Center has become a global necessity, protecting individuals, enterprises, and governments from sophisticated cyber threats. Our expertise ensures that students from B.Tech, M.Tech, and Ph.D. levels gain industry-standard knowledge, hands-on skills, and IEEE-aligned research experience.
               </p>
@@ -71,7 +91,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CybersecurityProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Cybersecurity Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational cybersecurity projects like intrusion detection or malware analysis, aligned with IEEE topics.
@@ -88,7 +108,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CybersecurityProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Cybersecurity Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced cybersecurity projects like blockchain-based identity management or AI-assisted monitoring, aligned with IEEE research.
@@ -105,7 +125,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CybersecurityProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Cybersecurity Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering cybersecurity research in quantum-safe encryption, zero-knowledge proofs, and federated learning.
@@ -122,9 +142,9 @@ const CybersecurityProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CybersecurityProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="CybersecurityProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -149,7 +169,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="CybersecurityProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Cybersecurity Project Titles (2023–2025)</h2>
               <ul>
                 <li>Blockchain-Integrated Multi-Factor Authentication for Cloud Services – 2023</li>
@@ -170,7 +190,7 @@ const CybersecurityProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="CybersecurityProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Cybersecurity Project Development</h2>
               <p>
                 Narpavi Technology stands as a global benchmark for advanced, research-driven, and industry-aligned project development support. At Narpavi Research Institute, we empower engineering students from B.Tech, M.Tech, and Ph.D. streams worldwide, providing end-to-end guidance for both software and hardware-based cybersecurity innovations.
@@ -191,28 +211,13 @@ const CybersecurityProjectDevelopmentCenter = () => {
                 ))}
               </div>
             </section>
+            </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+           <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CybersecurityProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

@@ -1,66 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Special Electrical Machines Project Development Center in Chennai",
+  "Special Electrical Machines IEEE Projects 2023–2025",
+  "SRM BLDC PMSM Project Development",
+  "Switched Reluctance Machine Projects",
+  "Brushless DC Motor IEEE Projects",
+  "Permanent Magnet Synchronous Motor PMSM Projects",
+  "B.Tech Advanced Electrical Machines Projects",
+  "M.Tech Sensorless Control Research",
+  "Ph.D Torque Ripple Minimization and AI Optimization",
+  "Narpavi Research Institute Special Electrical Machines"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Special Electrical Machines Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Special Electrical Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on SRM, BLDC, and PMSM, focusing on motor design, control, and optimization for applications in electric vehicles, robotics, and industrial automation."
+    question:
+      "What services does the Special Electrical Machines Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Special Electrical Machines Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on SRM, BLDC, and PMSM focusing on motor design, control strategies, and performance optimization for EVs, robotics, and industrial automation."
   },
   {
     question: "What types of Special Electrical Machines projects are supported?",
-    answer: "We support B.Tech projects (SRM/BLDC/PMSM modeling, sensorless control), M.Tech projects (AI-based optimization, torque ripple minimization), and Ph.D. projects (multi-objective optimization, predictive maintenance) for applications in EVs, robotics, and renewable energy systems."
+    answer:
+      "We support B.Tech projects (SRM/BLDC/PMSM modeling and sensorless control), M.Tech projects (AI-based optimization and torque ripple minimization), and Ph.D. projects (multi-objective optimization and predictive maintenance)."
   },
   {
     question: "Which technologies are used in Special Electrical Machines project development?",
-    answer: "Our stack includes MATLAB/Simulink, ANSYS Maxwell, LabVIEW, AI frameworks (TensorFlow, PyTorch), IoT platforms, FPGA/ARM controllers, and hardware-in-the-loop (HIL) testbeds for motor design and control."
+    answer:
+      "MATLAB/Simulink, ANSYS Maxwell, LabVIEW, TensorFlow, PyTorch, IoT platforms, FPGA/ARM controllers, and hardware-in-the-loop (HIL) systems."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like torque ripple minimization, sensorless control, and AI-driven motor optimization, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering torque ripple minimization, sensorless control, AI-driven motor optimization, and intelligent drive systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/ANSYS, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end support including topic selection, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Special Electrical Machines – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Special Electrical Machines Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering SRM, BLDC, PMSM motor design, sensorless control, torque ripple minimization, AI-based optimization, and intelligent drive systems.";
+
+const pageUrl =
+  "/department/electrical-machines/special-electrical-machines";
 
 const EEESpecialElectricalMachinesProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Special Electrical Machines IEEE Projects SRM BLDC PMSM | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Special Electrical Machines projects for B.Tech, M.Tech, Ph.D. SRM, BLDC, PMSM design, sensorless control, torque ripple minimization, AI optimization using MATLAB/Simulink, ANSYS Maxwell, TensorFlow for EVs, robotics, industrial automation."
-  keywords="Special Electrical Machines IEEE Projects 2023–2025, SRM BLDC PMSM Projects, B.Tech Advanced Motor Projects, M.Tech Sensorless Control Research, Ph.D. Torque Ripple Minimization, Switched Reluctance Machine SRM, Brushless DC BLDC Motor, Permanent Magnet PMSM, AI Motor Optimization, Narpavi Research Institute"
-  url="/department/electrical-machines/special-electrical-machines"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Special Electrical Machines Projects</li>
-              <li>SRM BLDC PMSM Project Development</li>
-              <li>IEEE Electrical Machines Projects 2023–2025</li>
-              <li>B.Tech Advanced Motor Projects</li>
-              <li>M.Tech Intelligent Drive Research</li>
-              <li>Ph.D High-Performance Motor Optimization</li>
-              <li>IoT-Based Motor Monitoring</li>
-              <li>AI-Controlled Electrical Machines</li>
-              <li>Energy-Efficient Electrical Machines</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Special Electrical Machines (SRM, BLDC, PMSM) – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Special Electrical Machines Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance Switched Reluctance Machines (SRM), Brushless DC (BLDC) motors, and Permanent Magnet Synchronous Machines (PMSM) aligned with IEEE Transactions (2023–2025). Our projects focus on motor design, control strategies, and performance optimization for electric vehicles, robotics, and industrial automation.
               </p>
@@ -207,48 +237,27 @@ const EEESpecialElectricalMachinesProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/electrical-machines">Electrical Machines – Project Development Center</a></li>
+              <li><a href="/department/electrical-machines/advanced-drives-controllers">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,76 +1,86 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../assets/SEO"
+import Subsidebar from ".././pages/Subsidebar";
+import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Thermal Engineering IEEE Projects 2023–2025",
+  "Heat Transfer Projects",
+  "CFD Thermal Analysis Projects",
+  "Nanofluid Heat Transfer Projects",
+  "Phase Change Material Projects",
+  "Waste Heat Recovery Projects",
+  "Renewable Energy Thermal Storage Projects",
+  "Thermal Engineering Ph.D. Projects",
+  "AI Thermal Management Systems",
+  "Narpavi Research Institute Mechanical Projects",
+];
+
 const faqs = [
   {
-    question: "What services does the Thermal Engineering / Heat Transfer Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Thermal Engineering / Heat Transfer Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on heat exchangers, nanofluids, CFD modeling, and thermal management for energy systems."
+    question:
+      "What services does the Thermal Engineering / Heat Transfer Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Thermal Engineering / Heat Transfer Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on heat exchangers, nanofluids, CFD modeling, and thermal management.",
   },
   {
-    question: "What types of Thermal Engineering / Heat Transfer projects are supported?",
-    answer: "We support B.Tech projects (heat exchanger design, thermal conductivity measurement), M.Tech projects (nanofluid CFD analysis, radiator optimization), and Ph.D. projects (AI-based thermal prediction, solar thermal collectors) for energy and industrial applications."
+    question:
+      "What types of Thermal Engineering / Heat Transfer projects are supported?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering heat exchangers, nanofluids, CFD analysis, and solar thermal systems.",
   },
   {
-    question: "Which tools and technologies are used in Thermal Engineering / Heat Transfer projects?",
-    answer: "Our stack includes ANSYS, MATLAB, COMSOL Multiphysics, CFD software, and AI frameworks (TensorFlow, Keras) for thermal analysis and optimization."
+    question:
+      "Which tools and technologies are used in Thermal Engineering / Heat Transfer projects?",
+    answer:
+      "Our stack includes ANSYS, MATLAB, COMSOL Multiphysics, CFD tools, and AI frameworks.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Mechanical Engineering, focusing on thermal management, energy efficiency, and advanced heat transfer solutions."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Mechanical and Thermal Engineering.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CFD and experimental analysis, AI integration, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
-  }
+    answer:
+      "We provide full guidance including simulation, experimentation, AI integration, documentation, and publication support.",
+  },
 ];
 
 const METhermalEngineeringHeatTransferProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-        <SEO
-        title="Thermal Engineering / Heat Transfer IEEE Projects (2023–2025)"
-        description="Thermal Engineering Heat Transfer IEEE project development for B.Tech, M.Tech & PhD using ANSYS, COMSOL, CFD modeling, nanofluids, PCM, AI thermal prediction, waste heat recovery for energy systems."
-        url="department/thermal-engineering"
-        type="article"
-        keywords={[
-          "Thermal Engineering Projects IEEE 2023–2025",
-          "Heat Transfer Projects",
-          "CFD Thermal Analysis Projects",
-          "Nanofluid Heat Transfer",
-          "Phase Change Material Projects",
-          "Waste Heat Recovery Projects",
-          "Renewable Energy Thermal Storage",
-          "Thermal Engineering PhD Projects",
-          "Narpavi Research Institute Mechanical Projects",
-          "AI Thermal Management Systems"
-        ]}
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Thermal Engineering & Heat Transfer – Project Development Center in Chennai"
+        description="Thermal Engineering & Heat Transfer project development for B.Tech, M.Tech, and Ph.D. students using ANSYS, COMSOL, CFD modeling, nanofluids, PCM, AI-based thermal prediction, and waste heat recovery systems."
+        keywords={keywords}
+        url="/department/thermal-engineering"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" },
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Thermal Engineering Projects</li>
-              <li>Heat Transfer Projects</li>
-              <li>CFD Thermal Analysis</li>
-              <li>Nanofluid Heat Transfer Projects</li>
-              <li>Phase Change Material Projects</li>
-              <li>IEEE Thermal Projects 2023–2025</li>
-              <li>Renewable Energy Thermal Storage Projects</li>
-              <li>Waste Heat Recovery Projects</li>
-              <li>Thermal Engineering Ph.D. Projects</li>
-              <li>Narpavi Research Institute Mechanical Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+        <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Thermal Engineering / Heat Transfer – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Thermal Engineering & Heat Transfer – Project Development Center in Chennai
+            </h1>
+                  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Thermal Engineering / Heat Transfer Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on energy conversion, thermal management, and efficiency enhancement.
               </p>
@@ -229,64 +239,29 @@ const METhermalEngineeringHeatTransferProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/thermal-engineering">
-      Thermal Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/heat-exchanger-design">
-      Heat Exchanger Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/solar-thermal-systems">
-      Solar Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/waste-heat-recovery">
-      Waste Heat Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/hvac-system-analysis">
-      HVAC System Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/thermal-engineering/energy-efficiency-in-thermal">
-      Energy Efficiency in Thermal Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/thermal-engineering">Thermal Engineering</a></li>
+              <li><a href="/department/thermal-engineering/heat-exchanger-design">Heat Exchanger Design</a></li>
+              <li><a href="/department/thermal-engineering/solar-thermal-systems">Solar Thermal Systems</a></li>
+              <li><a href="/department/thermal-engineering/waste-heat-recovery">Waste Heat Recovery</a></li>
+              <li><a href="/department/thermal-engineering/hvac-system-analysis">HVAC System Analysis</a></li>
+              <li><a href="/department/thermal-engineering/energy-efficiency-in-thermal">Energy Efficiency in Thermal Systems</a></li>
+            </ul>
+            
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

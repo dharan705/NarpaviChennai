@@ -1,76 +1,86 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "GIS Based Urban Planning IEEE Projects 2023–2025",
+  "Smart City GIS Projects",
+  "Remote Sensing Urban Planning",
+  "AI GIS City Planning Projects",
+  "Cloud GIS Smart Infrastructure",
+  "IoT Integrated GIS Projects",
+  "Urban Heat Island GIS Mapping",
+  "B.Tech M.Tech PhD GIS Projects",
+  "GIS Urban Development Projects",
+  "Narpavi Research Institute Civil Projects"
+];
+
 const faqs = [
   {
-    question: "What services does the GIS-Based Urban Planning Project Development Center offer?",
-    answer: "Narpavi Research Institute’s GIS-Based Urban Planning Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on GIS, remote sensing, AI, and IoT for smart city planning and sustainable urban development."
+    question:
+      "What services does the GIS-Based Urban Planning Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s GIS-Based Urban Planning Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on GIS, remote sensing, AI, and IoT for smart city planning and sustainable urban development."
   },
   {
     question: "What types of GIS-Based Urban Planning projects are supported?",
-    answer: "We support B.Tech projects (land-use mapping, road network analysis), M.Tech projects (3D city models, IoT-AI integration), and Ph.D. projects (AI-driven geospatial models, Cloud GIS for smart cities) for urban planning."
+    answer:
+      "B.Tech projects on land-use mapping and road network analysis, M.Tech projects on 3D city models and IoT-AI integration, and Ph.D. projects on AI-driven geospatial models and Cloud GIS for smart cities."
   },
   {
-    question: "Which tools and technologies are used in GIS-Based Urban Planning projects?",
-    answer: "Our stack includes ArcGIS, QGIS, Google Earth Engine, MATLAB, IoT sensors, and AI frameworks (TensorFlow, Keras) for geospatial analysis and urban modeling."
+    question: "Which tools and technologies are used?",
+    answer:
+      "ArcGIS, QGIS, Google Earth Engine, MATLAB, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Civil Engineering, focusing on GIS-based smart city planning, remote sensing, and AI-driven urban modeling."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) focusing on GIS-based smart city planning, remote sensing, and AI-driven urban modeling."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, GIS and AI integration, real-time dataset analysis, simulation-based modeling, documentation, and support for IEEE/Scopus/Elsevier/Springer journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, GIS and AI integration, dataset analysis, simulation-based modeling, and IEEE/Scopus/Elsevier/Springer publication assistance."
   }
 ];
 
 const CEGISBasedUrbanPlanningProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="GIS-Based Urban Planning IEEE Projects (2023–2025)"
-        description="GIS-Based Urban Planning IEEE project development for B.Tech, M.Tech & PhD scholars using ArcGIS, QGIS, remote sensing, AI, IoT, Cloud GIS for smart city planning, land-use analysis, and sustainable urban development."
+        title="GIS-Based Urban Planning – Project Development Center in Chennai"
+        description="GIS-Based Urban Planning project development for B.Tech, M.Tech, and Ph.D. students using ArcGIS, QGIS, remote sensing, AI, IoT, and Cloud GIS for smart city planning, land-use analysis, and sustainable urban development."
+        keywords={keywords}
         url="/department/remote-sensing-gis/gis-based-urban-planning"
-        type="article"
-        keywords={[
-          "GIS-Based Urban Planning",
-          "Smart City GIS Projects IEEE 2023–2025",
-          "Remote Sensing Urban Planning",
-          "AI-GIS City Planning Projects",
-          "Cloud GIS Smart Infrastructure",
-          "IoT Integrated GIS Projects",
-          "Urban Heat Island GIS Mapping",
-          "B.Tech M.Tech PhD GIS Projects",
-          "Narpavi Research Institute Civil Projects",
-          "GIS Urban Development Projects"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>GIS-Based Urban Planning</li>
-              <li>Smart City GIS Projects</li>
-              <li>GIS Urban Development IEEE Projects</li>
-              <li>Remote Sensing in Urban Planning</li>
-              <li>AI-GIS for City Planning</li>
-              <li>Cloud GIS Smart Infrastructure Projects</li>
-              <li>IoT Integrated GIS Projects</li>
-              <li>Urban Heat Island GIS Mapping</li>
-              <li>B.Tech M.Tech Ph.D. GIS Projects</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>GIS-Based Urban Planning – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              GIS-Based Urban Planning – Project Development Center in Chennai
+            </h1>
+               <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the GIS-Based Urban Planning Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on smart city planning, environmental conservation, and optimized urban resource utilization.
               </p>
@@ -229,49 +239,37 @@ const CEGISBasedUrbanPlanningProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/remote-sensing-gis">
-      Remote Sensing & GIS
-    </a>
-  </li>
-  <li>
-    <a href="/department/remote-sensing-gis/gis-based-urban-planning">
-      GIS-Based Urban Planning
-    </a>
-  </li>
-  <li>
-    <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
-      Remote Sensing for Disaster Management
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/remote-sensing-gis">
+                  Remote Sensing & GIS
+                </a>
+              </li>
+              <li>
+                <a href="/department/remote-sensing-gis/gis-based-urban-planning">
+                  GIS-Based Urban Planning
+                </a>
+              </li>
+              <li>
+                <a href="/department/remote-sensing-gis/remote-sensing-for-disaster">
+                  Remote Sensing for Disaster Management
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

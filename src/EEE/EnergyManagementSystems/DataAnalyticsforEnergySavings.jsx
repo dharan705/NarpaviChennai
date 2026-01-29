@@ -1,65 +1,99 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Data Analytics for Energy Savings Project Development Center in Chennai",
+  "Energy Savings IEEE Projects 2023–2025",
+  "Smart Grid Energy Analytics",
+  "IoT Based Energy Monitoring Projects",
+  "Machine Learning Energy Forecasting",
+  "B.Tech Energy Analytics Projects",
+  "M.Tech Energy Optimization Projects",
+  "Ph.D Energy Data Analytics Research",
+  "Renewable Energy Data Analytics",
+  "Industrial Energy Optimization",
+  "Narpavi Research Institute Energy Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Data Analytics for Energy Savings Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Data Analytics for Energy Savings Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven energy optimization, IoT-based monitoring, and data-driven strategies for smart grids, homes, and industries."
+    question:
+      "What services does the Data Analytics for Energy Savings Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Data Analytics for Energy Savings Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven energy optimization, IoT-based monitoring, and data-driven strategies for smart grids, homes, and industries."
   },
   {
-    question: "What types of Data Analytics for Energy Savings projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-based energy monitoring), M.Tech projects (machine learning for forecasting and optimization), and Ph.D. projects (federated learning, blockchain-based analytics) for applications in smart homes, industries, and smart grids."
+    question:
+      "What types of Data Analytics for Energy Savings projects are supported?",
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects covering IoT-based monitoring, machine learning forecasting, federated learning, and blockchain-based energy analytics."
   },
   {
-    question: "Which technologies are used in Data Analytics for Energy Savings projects?",
-    answer: "Our stack includes MATLAB/Simulink, Python (TensorFlow, Keras, Pandas), LabVIEW, IoT platforms (MQTT), cloud platforms (AWS), and hardware like Raspberry Pi/Arduino for real-time analytics."
+    question:
+      "Which technologies are used in Data Analytics for Energy Savings projects?",
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, Keras, Pandas), LabVIEW, MQTT-based IoT platforms, AWS cloud services, Raspberry Pi, and Arduino."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Smart Grid, Industrial Informatics, and Sustainable Energy, focusing on AI-driven analytics, predictive maintenance, and renewable integration."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Industrial Informatics, and Sustainable Energy."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm development, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "End-to-end support including topic selection, algorithm development, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication assistance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Data Analytics for Energy Savings – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Data Analytics for Energy Savings Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-driven optimization, IoT-based monitoring, smart grids, homes, and industrial energy efficiency.";
+
+const pageUrl =
+  "/department/energy-management-systems/data-analytics-energy-savings";
 
 const EEEDataAnalyticsEnergySavingsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Data Analytics Energy Savings IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Data Analytics for Energy Savings projects for B.Tech, M.Tech, Ph.D. AI optimization, IoT monitoring using MATLAB Simulink Python TensorFlow Keras Pandas LabVIEW MQTT AWS Raspberry Pi Arduino smart grids homes industries."
-  keywords="Data Analytics Energy Savings IEEE Projects 2023–2025, B.Tech IoT Energy Monitoring, M.Tech ML Energy Forecasting Optimization, Ph.D. Federated Learning Blockchain Energy Analytics, Smart Grid Home Industrial Energy Efficiency, Narpavi Research Institute"
-  url="/department/energy-management-systems/data-analytics-energy-savings"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Data Analytics for Energy Savings</li>
-              <li>Smart Grid Analytics Projects</li>
-              <li>Energy Efficiency Optimization</li>
-              <li>IoT in Energy Management</li>
-              <li>Machine Learning for Energy Savings</li>
-              <li>IEEE Projects 2023–2025</li>
-              <li>Renewable Energy Data Analytics</li>
-              <li>Home Energy Efficiency Projects</li>
-              <li>Industrial Energy Optimization</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Data Analytics for Energy Savings – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+      <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Data Analytics for Energy Savings Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on advanced energy optimization. Our projects focus on AI-driven analytics, IoT-based monitoring, and data-driven strategies for smart grids, homes, and industries.
               </p>
@@ -231,48 +265,27 @@ const EEEDataAnalyticsEnergySavingsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems – Project Development Center</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand-Side Management (DSM)</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

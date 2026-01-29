@@ -1,78 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Hybrid Vehicle Powertrains Project Development Center in Chennai",
+  "Hybrid Vehicle IEEE Projects 2023–2025",
+  "Plug In Hybrid IEEE Projects",
+  "Hybrid Vehicle Control Projects",
+  "Fuel Cell Hybrid Research",
+  "Battery Supercapacitor Hybrid Projects",
+  "Hybrid EV IEEE Standards",
+  "AI in Hybrid Vehicle Projects",
+  "Smart Hybrid Energy Management",
+  "Digital Twin Hybrid Powertrains",
+  "Narpavi Research Institute Hybrid Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Hybrid Vehicle Powertrains Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Hybrid Vehicle Powertrains Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on hybrid vehicle architectures, AI-driven energy management, fuel-cell hybrids, battery–supercapacitor systems, and regenerative braking for sustainable mobility."
+    answer:
+      "Narpavi Research Institute’s Hybrid Vehicle Powertrains Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on hybrid vehicle architectures, AI-driven energy management, fuel-cell hybrids, battery–supercapacitor systems, and regenerative braking."
   },
   {
     question: "What types of Hybrid Vehicle Powertrains projects are supported?",
-    answer: "We support B.Tech projects (mini hybrid prototypes, energy balance), M.Tech projects (AI-based hybrid control, renewable integration), and Ph.D. projects (fuel-cell hybrids, digital twins, V2G systems) for applications in passenger vehicles, commercial fleets, and smart mobility."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering hybrid architectures, AI-based energy routing, renewable integration, fuel-cell hybrids, and digital twin optimization."
   },
   {
-    question: "Which tools and technologies are used in Hybrid Vehicle Powertrains projects?",
-    answer: "Our stack includes MATLAB, Simulink, ANSYS, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, DC motors, and battery systems for simulation, prototyping, and real-time control."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, Simulink, ANSYS, Python, TensorFlow, Keras, AWS IoT, ThingSpeak, Arduino, Raspberry Pi, DC motors, and battery systems."
   },
   {
-    question: "How are Hybrid Vehicle Powertrains projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on hybrid powertrain optimization, regenerative braking, and smart grid integration."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on hybrid optimization, regenerative braking, and smart grid integration."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and IEEE/Scopus/SCI publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Hybrid Vehicle Powertrains – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Hybrid Vehicle Powertrains Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering hybrid architectures, AI energy management, fuel-cell hybrids, regenerative braking, and smart grid integration.";
+
+const pageUrl =
+  "/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains";
 
 const MEHybridVehiclePowertrainsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-      
-       <SEO
-        title="Hybrid Vehicle Powertrains IEEE Projects (2023–2025)"
-        description="Hybrid Vehicle Powertrains IEEE project development for B.Tech, M.Tech & PhD using MATLAB, ANSYS, AI energy management, fuel-cell hybrids, battery-supercapacitor systems, regenerative braking, V2G integration for sustainable mobility."
-        url="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains"
-        type="article"
-        keywords={[
-          "Hybrid Vehicle IEEE 2023–2025",
-          "Plug In Hybrid IEEE Projects",
-          "Hybrid Vehicle Control Projects",
-          "Fuel Cell Hybrid Research",
-          "Battery Supercapacitor Hybrid Projects",
-          "Hybrid EV IEEE Standards",
-          "AI in Hybrid Vehicle Projects",
-          "Smart Hybrid Energy Management",
-          "Digital Twin Hybrid Powertrains",
-          "Narpavi Research Institute Hybrid Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Hybrid Vehicle IEEE Projects 2023–2025</li>
-              <li>Plug-In Hybrid IEEE Projects</li>
-              <li>Hybrid Vehicle Control Projects</li>
-              <li>Fuel-Cell Hybrid Research</li>
-              <li>Battery–Supercapacitor Hybrid Projects</li>
-              <li>Hybrid EV IEEE Standards</li>
-              <li>AI in Hybrid Vehicle Projects</li>
-              <li>Hybrid Automotive Engineering Projects</li>
-              <li>Smart Hybrid Energy Management</li>
-              <li>Narpavi Research Institute Hybrid Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Hybrid Vehicle Powertrains – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+    <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Hybrid Vehicle Powertrains Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on hybrid vehicle architectures, AI-driven energy management, fuel-cell hybrids, battery–supercapacitor systems, and regenerative braking.
               </p>
@@ -255,43 +273,26 @@ const MEHybridVehiclePowertrainsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/automotive-vehicle-engineering">
-      Automotive & Vehicle Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
-      Electric Vehicle Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
-      Hybrid Vehicle Powertrains
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
-      Vehicle Dynamics & Stability
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
-      Engine Performance Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
-      Emission Control & Fuel Efficiency
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/automotive-vehicle-engineering">Automotive & Vehicle Engineering</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/electric-vehicle-design">Electric Vehicle Design</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">Hybrid Vehicle Powertrains</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">Vehicle Dynamics & Stability</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/engine-performance-optimization">Engine Performance Optimization</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">Emission Control & Fuel Efficiency</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

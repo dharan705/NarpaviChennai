@@ -1,62 +1,86 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What are Deep Space Communication Systems?",
-    answer: "Systems designed to enable communication over vast distances in planetary missions, dealing with challenges like long propagation delays, low SNR, and signal attenuation."
+    answer:
+      "Systems designed to enable communication over vast distances in planetary missions."
   },
   {
     question: "What topics are covered in B.Tech deep space communication projects?",
-    answer: "Fundamentals such as error-correcting codes, basic DSN simulation using MATLAB/Simulink, antenna models, and signal detection algorithms under low SNR."
+    answer:
+      "Error-correcting codes, DSN simulation, antenna models, and low-SNR signal detection."
   },
   {
     question: "What advanced subjects do M.Tech projects focus on?",
-    answer: "Ka-band communication models, optical laser communications, AI-based modulation classification, adaptive coding, and modulation for deep space links."
+    answer:
+      "Ka-band models, optical laser communications, AI-based modulation classification."
   },
   {
-    question: "What research areas are pursued in Ph.D. deep space communication projects?",
-    answer: "Machine learning optimizations, quantum communication techniques, delay-tolerant networking, and ultra-high gain antenna arrays for interplanetary communications."
+    question: "What research areas are pursued in Ph.D. projects?",
+    answer:
+      "Machine learning optimization, quantum communication, DTN, and ultra-high gain antennas."
   },
   {
-    question: "Which tools and platforms are frequently used?",
-    answer: "Tools include MATLAB, Simulink, STK, GNU Radio, Ansys HFSS, Python, NS3, TensorFlow, and Qiskit."
+    question: "Which tools are frequently used?",
+    answer:
+      "MATLAB, Simulink, STK, GNU Radio, HFSS, NS3, TensorFlow, and Qiskit."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Deep Space Communication Systems",
+  "Interplanetary Communication",
+  "X-band and Ka-band Links",
+  "Optical Laser Communication",
+  "Error Correction Codes",
+  "Delay-Tolerant Networking",
+  "AI-Driven Space Communication",
+  "Quantum Space Links",
+  "NASA Artemis Communication",
+  "ESA Mars Communications",
+  "IEEE Deep Space Projects",
+  "Nanosatellite Space Communications"
 ];
 
 const DeepSpaceCommunicationProject = () => {
   return (
     <div className="ECEProjectDeveloperCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Deep Space Communication Systems IEEE Projects | Ka-Band, Optical, DTN, AI & Quantum | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) deep space communication projects on X/Ka-band RF links, optical laser communication, LDPC/turbo coding, delay-tolerant networking, AI-based modulation recognition, and quantum key distribution using MATLAB, Simulink, STK, GNU Radio, HFSS, NS3, TensorFlow, and Qiskit."
-        keywords="Deep Space Communication Systems, Interplanetary Communication, X-band and Ka-band Links, Optical Laser Communication, Error Correction Codes, Delay-Tolerant Networking, AI-Driven Space Communication, Quantum Space Links, NASA Artemis Communication, ESA Mars Communications, IEEE Deep Space Projects, Nanosatellite Space Communications"
-        url="/department/satellite-communication/deep-space-communication"
+        title="Deep Space Communication Systems – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) deep space communication projects on Ka-band RF links, optical laser communication, LDPC/turbo coding, delay-tolerant networking, AI-based modulation recognition, and quantum communication."
+        keywords={keywords}
+        url="/department/satellite-communication/deep-space-communication-system-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDeveloperCenter-main">
         <div className="ECEProjectDeveloperCenter-grid">
-          <div className="ECEProjectDeveloperCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Deep Space Communication Systems</li>
-              <li>Interplanetary Communication</li>
-              <li>X-band and Ka-band Links</li>
-              <li>Optical Laser Communication</li>
-              <li>Error Correction Codes</li>
-              <li>Delay-Tolerant Networking</li>
-              <li>AI-Driven Space Communication</li>
-              <li>Quantum Space Links</li>
-              <li>NASA Artemis Communication</li>
-              <li>ESA Mars Communications</li>
-              <li>IEEE Deep Space Projects</li>
-              <li>Nanosatellite Space Communications</li>
-            </ul>
-          </div>
+
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT ================= */}
           <div className="ECEProjectDeveloperCenter-center">
-            <h1>Deep Space Communication Systems – Project Development Center</h1>
-            <section className="ECEProjectDeveloperCenter-intro">
+            <h1>
+              Deep Space Communication Systems – Project Development Center in Chennai
+            </h1>
+              <section className="ECEProjectDeveloperCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> specializes in deep space communication technologies, focusing on overcoming challenges of long-distance space comms through advanced error correction, AI optimization, and quantum communication methods.
               </p>
@@ -165,20 +189,30 @@ const DeepSpaceCommunicationProject = () => {
                 </details>
               ))}
             </section>
+         
+
           </div>
 
-          <div className="ECEProjectDeveloperCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

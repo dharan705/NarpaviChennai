@@ -1,62 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Home Energy Management Systems Project Development Center in Chennai",
+  "HEMS IEEE Projects 2023–2025",
+  "Smart Home Energy Management",
+  "IoT Based Home Energy Monitoring",
+  "AI Driven Home Energy Optimization",
+  "Renewable Integration in HEMS",
+  "B.Tech Home Energy Projects",
+  "M.Tech AI Based HEMS",
+  "Ph.D Blockchain Based Energy Trading",
+  "Smart City Home Energy Systems",
+  "Narpavi Research Institute HEMS Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Home Energy Management Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s HEMS Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based energy monitoring, AI-driven optimization, and renewable integration for smart homes."
+    question:
+      "What services does the Home Energy Management Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s HEMS Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-based energy monitoring, AI-driven optimization, and renewable integration for smart homes."
   },
   {
     question: "What types of HEMS projects are supported?",
-    answer: "We support B.Tech projects (basic IoT-based load control), M.Tech projects (AI/ML-based scheduling and renewable integration), and Ph.D. projects (blockchain-based energy trading, multi-agent systems) for applications in smart homes and smart cities."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering IoT-based load control, AI-driven scheduling, renewable integration, blockchain-based energy trading, and multi-agent HEMS systems."
   },
   {
     question: "Which technologies are used in HEMS project development?",
-    answer: "Our stack includes MATLAB/Simulink, Python (TensorFlow, PyTorch), LabVIEW, IoT platforms (MQTT), Arduino/Raspberry Pi for hardware, and blockchain for secure energy trading."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch), LabVIEW, MQTT-based IoT platforms, Arduino, Raspberry Pi, and blockchain technologies."
   },
   {
     question: "How are HEMS projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Smart Grid, Power Systems, and Sustainable Energy, focusing on IoT, AI, and renewable integration for residential energy management."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Smart Grid, Power Systems, and Sustainable Energy."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm development, simulation, hardware prototyping, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    answer:
+      "End-to-end guidance including topic selection, algorithm development, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI publication and patent support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Home Energy Management Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Home Energy Management Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering IoT monitoring, AI optimization, renewable integration, blockchain-based trading, and smart home energy solutions.";
+
+const pageUrl =
+  "/department/energy-management-systems/home-energy-management";
 
 const EEEHomeEnergyManagementSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Home Energy Management HEMS IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Home Energy Management Systems HEMS projects for B.Tech, M.Tech, Ph.D. IoT monitoring, AI optimization, renewable integration using MATLAB Simulink Python TensorFlow PyTorch LabVIEW MQTT Arduino Raspberry Pi blockchain smart homes."
-  keywords="Home Energy Management HEMS IEEE Projects 2023–2025, B.Tech IoT Load Control, M.Tech AI Renewable Scheduling, Ph.D. Blockchain Multi-agent HEMS, Smart Home Energy Optimization, Narpavi Research Institute"
-  url="/department/energy-management-systems/home-energy-management"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Home Energy Management Systems projects</li>
-              <li>HEMS IEEE projects 2023–2025</li>
-              <li>Smart home energy optimization</li>
-              <li>IoT-based HEMS projects</li>
-              <li>Renewable scheduling for homes</li>
-              <li>AI in HEMS</li>
-              <li>Energy efficiency student projects</li>
-              <li>Smart building automation IEEE projects</li>
-              <li>Narpavi Research Institute HEMS projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Home Energy Management Systems – Project Development Support</h1>
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
@@ -214,48 +248,27 @@ const EEEHomeEnergyManagementSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/energy-management-systems">
-      Energy Management Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/smart-building-energy">
-      Smart Building Energy Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/demand-side-management">
-      Demand-Side Management (DSM)
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/energy-efficiency-industries">
-      Energy Efficiency in Industries
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/renewable-energy-scheduling">
-      Renewable Energy Scheduling
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/home-energy-management">
-      Home Energy Management Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/energy-management-systems/data-analytics-energy-savings">
-      Data Analytics for Energy Savings
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/energy-management-systems">Energy Management Systems – Project Development Center</a></li>
+              <li><a href="/department/energy-management-systems/smart-building-energy">Smart Building Energy Management</a></li>
+              <li><a href="/department/energy-management-systems/demand-side-management">Demand-Side Management (DSM)</a></li>
+              <li><a href="/department/energy-management-systems/energy-efficiency-industries">Energy Efficiency in Industries</a></li>
+              <li><a href="/department/energy-management-systems/renewable-energy-scheduling">Renewable Energy Scheduling</a></li>
+              <li><a href="/department/energy-management-systems/home-energy-management">Home Energy Management Systems</a></li>
+              <li><a href="/department/energy-management-systems/data-analytics-energy-savings">Data Analytics for Energy Savings</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

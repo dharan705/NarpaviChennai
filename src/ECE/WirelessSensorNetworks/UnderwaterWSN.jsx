@@ -1,93 +1,104 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Underwater Wireless Sensor Networks Project Development Center in Chennai",
+  "UWSN IEEE Projects",
+  "Acoustic Communication in UWSN",
+  "NS3-UAN Aqua-Sim UWSN",
+  "Tsunami Detection Underwater WSN",
+  "Marine Biodiversity Monitoring UWSN",
+  "AUV Integrated UWSN Systems",
+  "Ocean Pollution Monitoring WSN",
+  "Blockchain Enabled Underwater WSN",
+  "Narpavi Research Institute UWSN"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What distinguishes Underwater Wireless Sensor Networks from terrestrial WSNs?",
-    answer: "UWSNs require acoustic communication, pressure-tolerant nodes, and adaptive routing to function in harsh underwater environments, unlike terrestrial WSNs that use RF communication."
+    answer:
+      "UWSNs use acoustic communication, pressure-tolerant nodes, and adaptive routing to function in harsh underwater environments."
   },
   {
     question: "What are the key applications of Underwater Wireless Sensor Networks?",
-    answer: "Applications include ocean pollution monitoring, tsunami and earthquake alerts, oil and gas pipeline monitoring, naval surveillance, marine biodiversity studies, and underwater robotics."
+    answer:
+      "Applications include ocean pollution monitoring, tsunami alerts, oil & gas pipeline monitoring, naval surveillance, and marine biodiversity studies."
   },
   {
-    question: "What tools and platforms are used for UWSN project development?",
-    answer: "Common platforms are Arduino, Raspberry Pi, ESP32, hydrophone sensors, and cloud dashboards for B.Tech projects; advanced simulators like NS3-UAN, Aqua-Sim, MATLAB, OMNeT++ with AI optimization for higher research levels."
+    question: "What tools are used for UWSN project development?",
+    answer:
+      "NS3-UAN, Aqua-Sim, MATLAB, OMNeT++, Arduino, ESP32, Raspberry Pi, and hydrophone sensors."
   },
   {
     question: "What challenges are unique to UWSNs?",
-    answer: "Challenges include sensor fouling and bio-corrosion, deployment difficulties in deep-sea environments, limited bandwidth of acoustic channels, high energy consumption, and secure communication in dynamic waters."
+    answer:
+      "Challenges include limited bandwidth, high energy consumption, bio-corrosion, deep-sea deployment issues, and secure communication."
   },
   {
-    question: "What support does Narpavi Research Institute provide for UWSN projects?",
-    answer: "The institute offers sensor integration, AI-based analysis, secure communication protocol design, project development assistance, and publication support for IEEE transactions."
+    question: "What support does Narpavi Research Institute provide?",
+    answer:
+      "We provide sensor integration, AI optimization, secure protocol design, project guidance, and IEEE publication support."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "Underwater Wireless Sensor Networks - Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/wireless-sensor-networks/underwater-wireless-sensor-networks-project-development-center-in-chennai";
+
+const pageDescription =
+  "Underwater Wireless Sensor Networks Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects using acoustic communication, NS3-UAN, Aqua-Sim, MATLAB, Arduino, ESP32 for ocean monitoring, tsunami detection, and naval surveillance.";
 
 const UWSNProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO (ONLY ONCE)
+      ========================= */}
       <SEO
-  title="Underwater WSN UWSN IEEE Projects | Acoustic NS3-UAN Aqua-Sim | B.Tech M.Tech PhD"
-  description="Underwater Wireless Sensor Networks projects (2023–2025) using acoustic communication, NS3-UAN Aqua-Sim MATLAB, Arduino ESP32 hydrophones for ocean monitoring, tsunami detection, naval surveillance."
-  url="/underwater-wsn-project-development"
-  type="article"
-  keywords={[
-    "Underwater Wireless Sensor Networks",
-    "UWSN IEEE Projects",
-    "Acoustic Communication UWSN",
-    "Tsunami Detection UWSN",
-    "NS3-UAN Aqua-Sim Simulation",
-    "Marine Biodiversity UWSN",
-    "AUV UWSN Integration",
-    "Ocean Pollution Monitoring WSN"
-  ]}
-  faqs={faqs}
-/>
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
-      <Sidebar />
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
-        <SEO
-  title="Underwater WSN UWSN IEEE Projects | Acoustic NS3-UAN Aqua-Sim | B.Tech M.Tech PhD"
-  description="Underwater Wireless Sensor Networks projects (2023–2025) using acoustic communication, NS3-UAN Aqua-Sim MATLAB, Arduino ESP32 hydrophones for ocean monitoring, tsunami detection, naval surveillance."
-  url="/department/wireless-sensor-networks/underwater-wireless-sensor-networks"
-  type="article"
-  keywords={[
-    "Underwater Wireless Sensor Networks",
-    "UWSN IEEE Projects",
-    "Acoustic Communication UWSN",
-    "Tsunami Detection UWSN",
-    "NS3-UAN Aqua-Sim Simulation",
-    "Marine Biodiversity UWSN",
-    "AUV UWSN Integration",
-    "Ocean Pollution Monitoring WSN"
-  ]}
-  faqs={faqs}
-/>
-
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Underwater Wireless Sensor Network Projects</li>
-              <li>UWSN IEEE Projects</li>
-              <li>Acoustic Communication in UWSN</li>
-              <li>Tsunami Detection UWSN</li>
-              <li>Ocean Monitoring Sensor Networks</li>
-              <li>Marine Biodiversity Tracking with UWSN</li>
-              <li>IoT-Enabled UWSN Projects</li>
-              <li>Blockchain in Underwater WSN</li>
-              <li>AUV-Integrated UWSN Systems</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Underwater Wireless Sensor Networks (UWSN) – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 UPDATED */}
+            <h1>{pageTitle}</h1>
+             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> offers specialized IEEE-aligned (2023–2025) project development for B.Tech, M.Tech, and Ph.D. scholars in Underwater Wireless Sensor Networks, focusing on marine research, environmental monitoring, and defense applications.
               </p>
@@ -204,19 +215,29 @@ const UWSNProjectDevelopmentCenter = () => {
              
             </section>
           </div>
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
-  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
-  </ul>
-          </div>
+              <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

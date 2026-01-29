@@ -1,78 +1,97 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Energy Storage & Recovery Systems Project Development Center in Chennai",
+  "Energy Storage IEEE Projects 2023–2025",
+  "Hybrid Battery Supercapacitor Projects",
+  "Waste Heat Recovery IEEE Projects",
+  "AI Based Energy Scheduling",
+  "Regenerative Braking Student Projects",
+  "Renewable Energy Storage Systems",
+  "Smart Grid Energy Storage Projects",
+  "Digital Twin Energy Storage",
+  "Narpavi Research Institute Energy Storage Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Energy Storage & Recovery Systems Project Development Center offer?",
-    answer: "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects in battery/supercapacitor integration, thermal/pumped hydro storage, regenerative braking, AI-driven scheduling, hybrid recovery systems, simulations, hardware prototyping, and IEEE/SCI/Scopus publication guidance."
+    question:
+      "What services does the Energy Storage & Recovery Systems Project Development Center offer?",
+    answer:
+      "We provide IEEE-aligned (2023–2025) support for B.Tech, M.Tech, and Ph.D. projects in battery/supercapacitor integration, thermal and pumped hydro storage, regenerative braking, AI-driven scheduling, hybrid recovery systems, simulations, hardware prototyping, and IEEE/SCI/Scopus publication guidance."
   },
   {
-    question: "What types of energy storage and recovery projects are supported?",
-    answer: "B.Tech projects: basic battery modeling, regenerative braking prototypes with MATLAB/Simulink. M.Tech projects: hybrid battery-supercapacitor systems, AI predictive management. Ph.D projects: blockchain peer-to-peer sharing, digital twin hybrid storage, advanced recovery mechanisms, patents, and SCI/IEEE publications."
+    question:
+      "What types of energy storage and recovery projects are supported?",
+    answer:
+      "B.Tech projects focus on basic battery modeling and regenerative braking prototypes. M.Tech projects include hybrid storage systems and AI-based predictive management. Ph.D. research covers digital twins, blockchain energy sharing, advanced recovery mechanisms, patents, and high-impact publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, COMSOL, Python for AI/ML, Arduino/Raspberry Pi for IoT prototypes, Li-ion battery packs, supercapacitors, thermoelectric generators, and digital twins for system modeling."
+    answer:
+      "MATLAB/Simulink, PSCAD, COMSOL, Python (AI/ML), Arduino/Raspberry Pi, Li-ion battery packs, supercapacitors, thermoelectric generators, and digital twins."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects align with IEEE Transactions on Power Systems, Sustainable Energy, and Industrial Electronics (2023–2025), focusing on hybrid storage optimization, AI-driven energy recovery, V2G integration, and fault-tolerant designs."
+    answer:
+      "Projects align with IEEE Transactions on Power Systems, Sustainable Energy, and Industrial Electronics (2023–2025)."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide end-to-end guidance: IEEE topic selection, charge-discharge cycle simulations, hardware integration, performance validation (efficiency, response time), IEEE-format reporting, and Scopus/SCI publication support."
+    answer:
+      "End-to-end guidance including topic selection, simulations, hardware integration, validation, IEEE documentation, and Scopus/SCI publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Energy Storage & Recovery Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Energy Storage & Recovery Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering hybrid batteries, supercapacitors, regenerative braking, AI scheduling, IoT monitoring, and smart grid applications.";
+
+const pageUrl =
+  "/department/renewable-thermal-energy/energy-storage-recovery";
 
 const EEEEnergyStorageRecoverySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-       <SEO
-        title="Energy Storage & Recovery IEEE Projects (2023–2025)"
-        description="Energy Storage Recovery IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PSCAD, hybrid battery-supercapacitor systems, AI scheduling, regenerative braking, IoT monitoring for EVs, smart grids, microgrids."
-        url="/department/renewable-thermal-energy/energy-storage-recovery"
-        type="article"
-        keywords={[
-          "Energy Storage IEEE 2023–2025",
-          "Hybrid Storage Optimization Projects",
-          "Battery Supercapacitor Integration",
-          "Waste Heat Recovery IEEE Projects",
-          "IoT Enabled Battery Monitoring",
-          "Energy Recovery Electric Vehicles",
-          "Renewable Energy Storage Projects",
-          "Smart Grid Energy Storage Projects",
-          "Digital Twin Hybrid Storage",
-          "Narpavi Research Institute Energy Storage"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Energy storage IEEE projects 2023–2025</li>
-              <li>Hybrid storage optimization projects</li>
-              <li>Battery-supercapacitor integration projects</li>
-              <li>Waste heat recovery IEEE projects</li>
-              <li>IoT-enabled battery monitoring student projects</li>
-              <li>Energy recovery in electric vehicles</li>
-              <li>Renewable energy storage projects</li>
-              <li>Ph.D. research in energy storage</li>
-              <li>Smart grid energy storage projects</li>
-              <li>Narpavi Research Institute energy projects</li>
-            </ul>
-          </div>
 
-          {/* 📑 Center Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Energy Storage & Recovery Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+     {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> offers the Energy Storage & Recovery Systems Project Development Center, enabling B.Tech, M.Tech, and Ph.D. students to design IEEE-aligned (2023–2025) systems for capturing, storing, and recovering energy from renewable/conventional sources using batteries, supercapacitors, thermal storage, and regenerative mechanisms.</p>
               <p>Students gain expertise in AI-driven scheduling, hybrid integration, and predictive control for efficient, sustainable energy solutions in EVs, smart grids, and microgrids.</p>
@@ -187,48 +206,33 @@ const EEEEnergyStorageRecoverySystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/renewable-thermal-energy">
-      Renewable & Thermal Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/solar-pv-thermal">
-      Solar PV & Thermal Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/wind-turbine-design">
-      Wind Turbine Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/biomass-biofuel-energy">
-      Biomass & Biofuel Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/energy-storage-recovery">
-      Energy Storage & Recovery
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-thermal-energy/smart-grid-integration">
-      Smart Grid Integration
-    </a>
-  </li>
-</ul>
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
 
-          </div>
+            <h3>🔗 Related Services</h3>
+            <ul>
+              <li><a href="/department/renewable-thermal-energy">Renewable & Thermal Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/solar-pv-thermal">Solar PV & Thermal Systems</a></li>
+              <li><a href="/department/renewable-thermal-energy/wind-turbine-design">Wind Turbine Design</a></li>
+              <li><a href="/department/renewable-thermal-energy/biomass-biofuel-energy">Biomass & Biofuel Energy</a></li>
+              <li><a href="/department/renewable-thermal-energy/energy-storage-recovery">Energy Storage & Recovery</a></li>
+              <li><a href="/department/renewable-thermal-energy/smart-grid-integration">Smart Grid Integration</a></li>
+            </ul>
+
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEEnergyStorageRecoverySystemsProjectDevelopmentCenter;

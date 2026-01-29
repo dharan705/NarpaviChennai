@@ -1,74 +1,95 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Engine Performance Optimization Project Development Center in Chennai",
+  "Engine Optimization IEEE Projects 2023–2025",
+  "AI Based Engine Performance Projects",
+  "Hybrid Engine Optimization IEEE",
+  "Fuel Injection Control Projects",
+  "Combustion Modeling Student Projects",
+  "CFD Engine Simulation Projects",
+  "Emission Reduction Engine Projects",
+  "Smart Engine Control IEEE Projects",
+  "Digital Twin Engine Optimization",
+  "Narpavi Research Institute Automotive Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Engine Performance Optimization Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Engine Performance Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on engine efficiency, AI-based combustion control, hybrid engine optimization, alternative fuel systems, and emission reduction for automotive and industrial applications."
+    answer:
+      "Narpavi Research Institute’s Engine Performance Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on engine efficiency, AI-based combustion control, hybrid engine optimization, alternative fuels, and emission reduction."
   },
   {
     question: "What types of Engine Performance Optimization projects are supported?",
-    answer: "We support B.Tech projects (basic engine experiments, fuel efficiency), M.Tech projects (AI-driven combustion control, CFD modeling), and Ph.D. projects (digital twins, alternative fuel engines, hybrid optimization) for applications in passenger cars, hybrid vehicles, and sustainable mobility."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering engine experiments, AI-driven combustion control, CFD modeling, digital twins, alternative fuels, and hybrid optimization."
   },
   {
-    question: "Which tools and technologies are used in Engine Performance Optimization projects?",
-    answer: "Our stack includes MATLAB, Simulink, GT-Power, ANSYS Fluent, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, and sensors for simulation, prototyping, and real-time control."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, Simulink, GT-Power, ANSYS Fluent, Python, TensorFlow, Keras, AWS IoT, ThingSpeak, Arduino, Raspberry Pi, and engine sensors."
   },
   {
-    question: "How are Engine Performance Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on combustion optimization, alternative fuels, and emission reduction aligned with IEEE/ISO/SAE standards."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Vehicular Technology and Sustainable Energy, focusing on combustion optimization, alternative fuels, and emission reduction."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and IEEE/Scopus/SCI publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Engine Performance Optimization – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Engine Performance Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering combustion optimization, hybrid engines, alternative fuels, AI control, and digital twin simulation.";
+
+const pageUrl =
+  "/department/automotive-vehicle-engineering/engine-performance-optimization";
 
 const MEEnginePerformanceOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-         <SEO
-        title="Engine Performance Optimization IEEE Projects (2023–2025)"
-        description="Engine Performance Optimization IEEE project development for B.Tech, M.Tech & PhD using MATLAB, GT-Power, ANSYS Fluent, AI combustion control, hybrid engine optimization, alternative fuels, IoT monitoring for automotive applications."
-        url="/department/automotive-vehicle-engineering/engine-performance-optimization"
-        type="article"
-        keywords={[
-          "Engine Optimization IEEE 2023–2025",
-          "AI Based Engine Performance Projects",
-          "Hybrid Engine Optimization IEEE",
-          "Fuel Injection Control Projects",
-          "Combustion Modeling Student Projects",
-          "CFD Engine Simulation Projects",
-          "Emission Reduction Engine Projects",
-          "Smart Engine Control IEEE Projects",
-          "Digital Twin Engine Optimization",
-          "Narpavi Research Institute Automotive Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Engine Optimization IEEE Projects 2023–2025</li>
-              <li>AI-Based Engine Performance Projects</li>
-              <li>Hybrid Engine Optimization IEEE</li>
-              <li>Fuel Injection Control Projects</li>
-              <li>Combustion Modeling Student Projects</li>
-              <li>CFD Engine Simulation Projects</li>
-              <li>Emission Reduction Engine Projects</li>
-              <li>B.Tech/M.Tech/Ph.D. Engine Projects</li>
-              <li>Smart Engine Control IEEE Projects</li>
-              <li>Narpavi Research Institute Automotive Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Engine Performance Optimization – Project Development Support</h1>
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
@@ -255,43 +276,26 @@ const MEEnginePerformanceOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/automotive-vehicle-engineering">
-      Automotive & Vehicle Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
-      Electric Vehicle Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
-      Hybrid Vehicle Powertrains
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
-      Vehicle Dynamics & Stability
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
-      Engine Performance Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
-      Emission Control & Fuel Efficiency
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/automotive-vehicle-engineering">Automotive & Vehicle Engineering</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/electric-vehicle-design">Electric Vehicle Design</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">Hybrid Vehicle Powertrains</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">Vehicle Dynamics & Stability</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/engine-performance-optimization">Engine Performance Optimization</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">Emission Control & Fuel Efficiency</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

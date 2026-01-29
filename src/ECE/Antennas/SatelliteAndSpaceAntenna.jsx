@@ -1,76 +1,85 @@
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Satellite and Space Antenna Technologies",
+  "Phased Array Satellite Antennas",
+  "Deployable Antennas CubeSat",
+  "Deep Space Antennas IEEE",
+  "MIMO Satellite Communication",
+  "HFSS CST Satellite Antenna Design",
+  "LEO GEO Satellite Antennas",
+  "AI Optimized Space Antennas",
+  "CubeSat Antenna Design",
+  "Satellite Communication Systems"
+];
 
 const faqs = [
   {
     question: "What are Satellite and Space Antenna Technologies?",
-    answer: "These technologies involve designing deployable, phased array, reflector, and MIMO antennas for satellite and deep-space communication, enabling global connectivity and space exploration."
+    answer:
+      "These technologies involve designing deployable, phased array, reflector, and MIMO antennas for satellite and deep-space communication."
   },
   {
     question: "What do B.Tech projects focus on in this area?",
-    answer: "Students work on fundamental antenna designs including patch arrays, horn antennas, and reflectors for applications such as CubeSats, GPS, and weather satellites."
+    answer:
+      "Fundamental antenna designs including patch arrays, horn antennas, and reflectors for CubeSats, GPS, and weather satellites."
   },
   {
     question: "What advanced topics are covered in M.Tech projects?",
-    answer: "M.Tech projects include phased array antennas, reconfigurable designs, beam-steering for LEO and GEO satellites, compact deployable antennas, and dual-band systems."
+    answer:
+      "Phased arrays, reconfigurable designs, beam steering, deployable antennas, and dual-band satellite systems."
   },
   {
     question: "What research areas do Ph.D. projects cover?",
-    answer: "Ph.D. researchers explore high-gain deployable reflectors, AI-optimized phased arrays, satellite-to-ground MIMO, and deep-space communication architectures."
+    answer:
+      "AI-optimized phased arrays, satellite-to-ground MIMO, deployable reflectors, and deep-space communication antennas."
   },
   {
-    question: "What tools are commonly used for these projects?",
-    answer: "Common tools include HFSS, CST, link budget analysis software, and hardware prototyping platforms."
+    question: "What tools are commonly used?",
+    answer:
+      "HFSS, CST, link budget analysis software, and antenna prototyping platforms."
   }
 ];
 
 const SatelliteSpaceAntennaTechProject = () => {
   return (
     <div className="ECEProjectDevelopment">
-       <SEO
-        title="Satellite Space Antenna IEEE Projects 2025 | Phased Array Deployable CubeSat | B.Tech M.Tech PhD"
-        description="Satellite space antenna technologies projects (2023–2025) using HFSS CST for patch reflector phased array, deployable antennas, MIMO satellite, deep-space communication, CubeSat missions."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Satellite and Space Antenna Technologies – Project Development Center in Chennai"
+        description="IEEE-aligned satellite and space antenna project development for B.Tech, M.Tech, and Ph.D. students using HFSS and CST covering phased arrays, deployable antennas, CubeSat missions, MIMO satellite communication, and deep-space antenna systems."
+        keywords={keywords}
         url="/satellite-space-antenna-technologies-project-development"
-        type="article"
-        keywords={[
-          "Satellite Space Antenna Technologies",
-          "Phased Array Satellite Antennas",
-          "Deployable Antennas CubeSat",
-          "Deep Space Antennas IEEE",
-          "MIMO Satellite Communication",
-          "HFSS CST Satellite Antenna Design",
-          "LEO GEO Satellite Antennas",
-          "AI Optimized Space Antennas"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopment-main">
         <div className="ECEProjectDevelopment-grid">
 
-          <div className="ECEProjectDevelopment-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Satellite and Space Antenna Technologies</li>
-              <li>Patch and Reflector Antennas</li>
-              <li>Phased Array Antennas</li>
-              <li>Deployable Antennas</li>
-              <li>MIMO Satellite Antennas</li>
-              <li>Deep-Space Antennas</li>
-              <li>CubeSat Antenna Design</li>
-              <li>Satellite Communication Systems</li>
-              <li>AI-Optimized Antenna Arrays</li>
-              <li>Earth Observation Satellites</li>
-              <li>Telemetry and Space Communications</li>
-              <li>IEEE Satellite Antenna Research</li>
-              <li>Nano Space Research Institute</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
 
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
           <div className="ECEProjectDevelopment-center">
-            <h1>Satellite and Space Antenna Technologies – Project Development Center</h1>
-            <section className="ECEProjectDevelopment-intro">
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Satellite and Space Antenna Technologies – Project Development Center in Chennai
+            </h1>
+                <section className="ECEProjectDevelopment-intro">
               <p>
                 The Satellite and Space Antenna Technologies – Project Development Center at Narpavi Research Institute focuses on advancing satellite and space antenna systems aligned with IEEE standards (2023–2025), supporting global research and development.
               </p>
@@ -177,18 +186,25 @@ const SatelliteSpaceAntennaTechProject = () => {
             </section>
           </div>
 
-          <div className="ECEProjectDevelopment-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>Related Services</h3>
-             <ul>
-  <li><a href="/department/antenna-design">Antenna Design</a></li>
-  <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
-  <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
-  <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
-  <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
-  <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
-  <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/antenna-design">Antenna Design</a></li>
+              <li><a href="/department/antenna-design/iot-wearable-antennas">IoT & Wearable Antennas</a></li>
+              <li><a href="/department/antenna-design/mimo-antenna-systems">MIMO Antenna Systems</a></li>
+              <li><a href="/department/antenna-design/antenna-miniaturization">Antenna Miniaturization Techniques</a></li>
+              <li><a href="/department/antenna-design/reconfigurable-antenna-design">Reconfigurable Antenna Design</a></li>
+              <li><a href="/department/antenna-design/satellite-space-antenna-technology">Satellite & Space Antenna Technology</a></li>
+              <li><a href="/department/antenna-design/smart-antennas-5g-6g">Smart Antennas for 5G & 6G</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

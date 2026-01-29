@@ -1,77 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Smart Actuator Systems Project Development Center in Chennai",
+  "Smart Actuator IEEE Projects 2023–2025",
+  "IoT Based Actuator Control Projects",
+  "AI Driven Smart Actuators",
+  "Shape Memory Alloy Actuator Research",
+  "Piezoelectric Actuator Projects",
+  "Electroactive Polymer Actuators",
+  "Digital Twin Actuator Systems",
+  "Bio Inspired Smart Actuators",
+  "Narpavi Research Institute Actuator Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Smart Actuator Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Smart Actuator Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on smart actuators, including electromechanical, piezoelectric, shape-memory alloy, and electroactive polymer systems, with IoT, AI, and sensor integration for robotics, aerospace, and biomedical applications."
+    question:
+      "What services does the Smart Actuator Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on smart actuators including piezoelectric, shape-memory alloy, electroactive polymer, and AI-IoT enabled actuator systems."
   },
   {
-    question: "What types of Smart Actuator Systems projects are supported?",
-    answer: "We support B.Tech projects (basic actuator control, robotic prototypes), M.Tech projects (smart materials, IoT-enabled actuators), and Ph.D. projects (AI-driven control, bio-inspired actuators, digital twins) for applications in robotics, prosthetics, aerospace, and Industry 4.0."
+    question: "Who can apply for Smart Actuator Systems projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students in Mechatronics, Mechanical, EEE, ECE, and Robotics."
   },
   {
-    question: "Which tools and technologies are used in Smart Actuator Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, Python, AI frameworks (TensorFlow, Keras), IoT platforms (ThingSpeak, Node-RED), and hardware like Arduino, ESP32, Raspberry Pi, and smart materials for simulation, prototyping, and real-time control."
+    question: "Which tools are used in smart actuator projects?",
+    answer:
+      "MATLAB, Simulink, Python, Arduino, ESP32, Raspberry Pi, IoT platforms, and AI frameworks."
   },
   {
-    question: "How are Smart Actuator Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Robotics, Mechatronics, and Industrial Electronics, focusing on smart actuators, AI-driven control, and IoT integration, aligned with IEEE/IEC standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes. All projects follow IEEE Transactions (2023–2025) and IEEE/IEC standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes. Complete support for IEEE, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Smart Actuator Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Smart Actuator Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on piezoelectric actuators, shape-memory alloys, electroactive polymers, AI-driven control, IoT integration, and digital twin actuator systems.";
+
+const pageUrl =
+  "/department/mechatronics-control-systems/smart-actuator-systems";
 
 const MESmartActuatorSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Smart Actuator Systems IEEE Projects (2023–2025)"
-        description="Smart Actuator Systems IEEE project development for B.Tech, M.Tech & PhD using MATLAB, piezoelectric, shape-memory alloy, electroactive polymers, IoT AI control for robotics, prosthetics, aerospace, Industry 4.0 applications."
-        url="/department/mechatronics-control-systems/smart-actuator-systems"
-        type="article"
-        keywords={[
-          "Smart Actuator IEEE 2023–2025",
-          "IoT Based Actuator Control Projects",
-          "AI Driven Smart Actuators",
-          "Shape Memory Alloy Actuator Research",
-          "Piezoelectric Actuator Projects",
-          "Electroactive Polymer Actuators",
-          "Smart Actuator Prosthetics",
-          "Digital Twin Actuator Systems",
-          "Narpavi Research Institute Actuator Projects",
-          "Bio Inspired Smart Actuators"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Smart Actuator IEEE Projects 2023–2025</li>
-              <li>IoT-Based Actuator Control Projects</li>
-              <li>AI-Driven Smart Actuators</li>
-              <li>Shape-Memory Alloy Actuator Research</li>
-              <li>Piezoelectric Actuator Projects</li>
-              <li>Electroactive Polymer Actuators</li>
-              <li>Ph.D. Actuator Projects</li>
-              <li>Smart Actuator Prosthetics</li>
-              <li>Industry 4.0 Actuator Integration</li>
-              <li>Narpavi Research Institute Actuator Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Smart Actuator Systems – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+     <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Smart Actuator Systems Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on smart actuators, including electromechanical, piezoelectric, shape-memory alloy, and electroactive polymer systems, with IoT, AI, and sensor integration.
               </p>
@@ -256,43 +275,26 @@ const MESmartActuatorSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/mechatronics-control-systems">
-      Mechatronics & Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/pid-advanced-control">
-      PID & Advanced Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/automation-manufacturing">
-      Automation in Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/plc-systems">
-      PLC Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/sensor-integration">
-      Sensor Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
-      Smart Actuator Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/mechatronics-control-systems">Mechatronics & Control Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/pid-advanced-control">PID & Advanced Control</a></li>
+              <li><a href="/department/mechatronics-control-systems/automation-manufacturing">Automation in Manufacturing</a></li>
+              <li><a href="/department/mechatronics-control-systems/plc-systems">PLC Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/sensor-integration">Sensor Integration</a></li>
+              <li><a href="/department/mechatronics-control-systems/smart-actuator-systems">Smart Actuator Systems</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

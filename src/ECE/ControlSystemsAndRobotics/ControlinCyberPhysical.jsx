@@ -1,64 +1,85 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the Control in Cyber-Physical Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Control in Cyber-Physical Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in CPS control, including Model Predictive Control, AI-augmented control, blockchain-enabled security, and edge computing for applications in smart grids, autonomous vehicles, and smart cities."
+    question:
+      "What services does the Control in Cyber-Physical Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Control in Cyber-Physical Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in CPS control, including Model Predictive Control, AI-augmented control, blockchain-enabled security, and edge computing for applications in smart grids, autonomous vehicles, and smart cities.",
   },
   {
-    question: "What types of Control in Cyber-Physical Systems projects are supported?",
-    answer: "We support B.Tech projects (IoT-integrated smart controllers), M.Tech projects (Model Predictive Control, blockchain-enabled control), and Ph.D. projects (digital twins, AI-enhanced CPS security) for applications in healthcare, Industry 4.0, and smart cities."
+    question:
+      "What types of Control in Cyber-Physical Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (IoT-integrated smart controllers), M.Tech projects (Model Predictive Control, blockchain-enabled control), and Ph.D. projects (digital twins, AI-enhanced CPS security) for applications in healthcare, Industry 4.0, and smart cities.",
   },
   {
-    question: "Which technologies are used in Control in Cyber-Physical Systems project development?",
-    answer: "Our stack includes Model Predictive Control, AI frameworks (TensorFlow, PyTorch), blockchain platforms (Ethereum, Hyperledger), ROS, MATLAB/Simulink, and edge computing platforms for real-time CPS control."
+    question:
+      "Which technologies are used in Control in Cyber-Physical Systems project development?",
+    answer:
+      "Our stack includes Model Predictive Control, AI frameworks (TensorFlow, PyTorch), blockchain platforms (Ethereum, Hyperledger), ROS, MATLAB/Simulink, and edge computing platforms for real-time CPS control.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like blockchain-enabled CPS control, fog/edge computing, and AI-augmented control, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like blockchain-enabled CPS control, fog/edge computing, and AI-augmented control, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with ROS or MATLAB, hardware implementation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, algorithm design, simulation with ROS or MATLAB, hardware implementation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Cyber-Physical Systems Projects",
+  "IEEE CPS Control Projects",
+  "Secure Control Systems",
+  "CPS with Blockchain Projects",
+  "Smart Grid CPS Control",
+  "AI-Augmented CPS Projects",
+  "Model Predictive Control in CPS",
+  "CPS Project Development 2023–2025",
+  "Resilient Control in CPS",
+  "Narpavi Research Institute CPS Projects",
 ];
 
 const ECEControlCyberPhysicalSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Control in Cyber-Physical Systems IEEE Projects | MPC, AI, Blockchain, Edge | B.Tech M.Tech Ph.D."
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Control in Cyber-Physical Systems – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) control in cyber-physical systems projects on Model Predictive Control, AI-augmented control, blockchain-enabled secure CPS, and edge/fog computing for smart grids, autonomous vehicles, and Industry 4.0."
-        keywords="Cyber-Physical Systems Projects, IEEE CPS Control Projects, Secure Control Systems, CPS with Blockchain Projects, Smart Grid CPS Control, AI-Augmented CPS Projects, Model Predictive Control in CPS, CPS Project Development 2023–2025, Resilient Control in CPS, Narpavi Research Institute CPS Projects"
-        url="/department/control-systems-robotics/control-cyber-physical-systems"
+        keywords={keywords}
+        url="/department/control-systems-robotics/control-cyber-physical-systems-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Cyber-Physical Systems Projects</li>
-              <li>IEEE CPS Control Projects</li>
-              <li>Secure Control Systems</li>
-              <li>CPS with Blockchain Projects</li>
-              <li>Smart Grid CPS Control</li>
-              <li>AI-Augmented CPS Projects</li>
-              <li>Model Predictive Control in CPS</li>
-              <li>CPS Project Development 2023–2025</li>
-              <li>Resilient Control in CPS</li>
-              <li>Narpavi Research Institute CPS Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Control in Cyber-Physical Systems – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Control in Cyber-Physical Systems – Project Development Center in Chennai</h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Control in Cyber-Physical Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to design intelligent and secure CPS control systems aligned with IEEE Transactions (2023–2025). Our projects focus on real-time control, secure communication, and AI-driven coordination for applications in smart grids, autonomous vehicles, and Industry 4.0.
               </p>
@@ -221,39 +242,29 @@ const ECEControlCyberPhysicalSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
-  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
-  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
-  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
-  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/control-systems-robotics">Control Systems & Robotics</a></li>
+              <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+              <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+              <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+              <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

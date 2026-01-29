@@ -1,76 +1,88 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Bridge Design & Monitoring IEEE Projects 2023–2025",
+  "Smart Bridge Health Monitoring",
+  "IoT-Based Bridge Monitoring",
+  "Digital Twin for Bridges",
+  "Seismic Bridge Design Projects",
+  "RCC and Steel Bridge Analysis",
+  "Structural Engineering Research",
+  "Civil Engineering Projects IEEE",
+  "Structural Monitoring Systems",
+  "Narpavi Research Institute Civil Projects"
+];
+
 const faqs = [
   {
-    question: "What services does the Bridge Design & Monitoring Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Bridge Design & Monitoring Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on bridge design, structural dynamics, and smart monitoring systems."
+    question:
+      "What services does the Bridge Design & Monitoring Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Bridge Design & Monitoring Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on bridge design, structural dynamics, and smart monitoring systems."
   },
   {
-    question: "What types of Bridge Design & Monitoring projects are supported?",
-    answer: "We support B.Tech projects (basic bridge design and monitoring), M.Tech projects (advanced dynamics and IoT integration), and Ph.D. projects (AI-driven monitoring and digital twins) for safe and resilient bridges."
+    question:
+      "What types of Bridge Design & Monitoring projects are supported?",
+    answer:
+      "B.Tech projects on basic bridge design and monitoring, M.Tech projects on advanced dynamics and IoT integration, and Ph.D. projects on AI-driven monitoring and digital twins for resilient bridges."
   },
   {
-    question: "Which tools and technologies are used in Bridge Design & Monitoring projects?",
-    answer: "Our stack includes STAAD.Pro, ANSYS, SAP2000, IoT sensors, Wireless Sensor Networks, and AI frameworks (TensorFlow, Keras) for design and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "STAAD.Pro, ANSYS, SAP2000, IoT sensors, Wireless Sensor Networks, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Structural Engineering, focusing on finite element analysis, IoT monitoring, and AI-based deterioration prediction."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Structural Engineering focusing on finite element analysis, IoT monitoring, and AI-based deterioration prediction."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, hardware integration, documentation, and IEEE/Scopus/SCI publication assistance."
   }
 ];
 
 const CEBridgeDesignMonitoringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Bridge Design & Monitoring IEEE Projects (2023–2025)"
-        description="Bridge Design & Monitoring IEEE project development for B.Tech, M.Tech & PhD scholars using STAAD.Pro, ANSYS, SAP2000, IoT sensors, AI, digital twins for smart bridge health monitoring and structural analysis."
+        title="Bridge Design & Monitoring – Project Development Center in Chennai"
+        description="Bridge Design & Monitoring project development for B.Tech, M.Tech, and Ph.D. students using STAAD.Pro, ANSYS, SAP2000, IoT sensors, AI, and digital twin technologies for smart bridge health monitoring and structural analysis."
+        keywords={keywords}
         url="/department/structural-engineering/bridge-design-monitoring"
-        type="article"
-        keywords={[
-          "Bridge Design Projects IEEE 2023–2025",
-          "Smart Bridge Health Monitoring",
-          "IoT-based Bridge Monitoring",
-          "Digital Twin for Bridges",
-          "Seismic Bridge Design Projects",
-          "RCC Steel Bridge Analysis",
-          "Structural Engineering Research",
-          "Civil Engineering Projects IEEE",
-          "Narpavi Research Institute Civil Projects",
-          "Structural Monitoring Systems"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Bridge Design Projects</li>
-              <li>Structural Monitoring Systems</li>
-              <li>Smart Bridge Health Monitoring</li>
-              <li>Civil Engineering Projects IEEE 2023–2025</li>
-              <li>IoT-based Bridge Monitoring</li>
-              <li>Structural Engineering Research</li>
-              <li>Digital Twin for Bridges</li>
-              <li>Seismic Bridge Design Projects</li>
-              <li>RCC & Steel Bridge Analysis</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Bridge Design & Monitoring – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Bridge Design & Monitoring – Project Development Center in Chennai
+            </h1>
+
+                <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Bridge Design & Monitoring Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on bridge engineering and smart monitoring solutions.
               </p>
@@ -223,58 +235,47 @@ const CEBridgeDesignMonitoringProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/structural-engineering">
-      Structural Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/earthquake-resistant-structures">
-      Earthquake Resistant Structures
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/steel-rcc-design-optimization">
-      Steel & RCC Design Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/tall-building-analysis">
-      Tall Building Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/bridge-design-monitoring">
-      Bridge Design & Monitoring
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li>
+                <a href="/department/structural-engineering">
+                  Structural Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/earthquake-resistant-structures">
+                  Earthquake Resistant Structures
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/steel-rcc-design-optimization">
+                  Steel & RCC Design Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/tall-building-analysis">
+                  Tall Building Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/bridge-design-monitoring">
+                  Bridge Design & Monitoring
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

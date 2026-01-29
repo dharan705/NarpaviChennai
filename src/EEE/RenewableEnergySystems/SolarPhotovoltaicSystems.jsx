@@ -1,57 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Solar Photovoltaic Systems Project Development Center in Chennai",
+  "IEEE Solar PV Projects 2023–2025",
+  "B.Tech Solar Photovoltaic Projects",
+  "M.Tech AI Based MPPT Projects",
+  "Ph.D Solar PV Research Chennai",
+  "Hybrid Solar PV Storage Systems",
+  "Grid Connected Solar Photovoltaic Projects",
+  "IoT Based Solar Monitoring Systems",
+  "Smart Inverter Solar Projects",
+  "Narpavi Research Institute Solar PV"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Solar Photovoltaic Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Solar Photovoltaic Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency solar PV systems, MPPT algorithms, and IoT-enabled monitoring for residential, industrial, and commercial applications."
+    answer:
+      "Narpavi Research Institute’s Solar Photovoltaic Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on high-efficiency solar PV systems, MPPT algorithms, and IoT-enabled monitoring for residential, industrial, and commercial applications."
   },
   {
     question: "What types of Solar Photovoltaic projects are supported?",
-    answer: "We support B.Tech projects (PV array design, basic MPPT algorithms, IoT monitoring), M.Tech projects (AI-based MPPT, hybrid PV-storage systems), and Ph.D. projects (predictive energy forecasting, grid integration) for applications in microgrids, smart solar farms, and residential installations."
+    answer:
+      "We support B.Tech projects, M.Tech projects, and Ph.D. projects covering PV array design, AI-based MPPT, hybrid PV-storage systems, and grid integration."
   },
   {
     question: "Which technologies are used in Solar Photovoltaic project development?",
-    answer: "Our stack includes MATLAB/Simulink, PVSyst, PSIM, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/DSP controllers, and hardware-in-the-loop (HIL) testbeds for PV system design and control."
+    answer:
+      "MATLAB/Simulink, PVSyst, PSIM, TensorFlow, PyTorch, MQTT-based IoT platforms, FPGA/DSP controllers, and HIL testbeds."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like PV array optimization, smart inverters, and hybrid storage integration, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) focusing on PV optimization, smart inverters, and hybrid storage integration."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation with MATLAB/PVSyst/PSIM, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulations, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Solar Photovoltaic Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Solar Photovoltaic Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering PV array design, MPPT algorithms, smart inverters, IoT-based monitoring, hybrid PV-storage systems, and grid-connected solar solutions.";
+
+const pageUrl =
+  "/department/renewable-energy-systems/solar-photovoltaic";
 
 const EEESolarPhotovoltaicSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Solar PV Projects</li>
-              <li>IEEE Renewable Energy Projects 2023–2025</li>
-              <li>B.Tech Solar PV Projects</li>
-              <li>M.Tech AI-Based PV Energy Management</li>
-              <li>Ph.D Hybrid Solar Storage Systems</li>
-              <li>IoT-Based Solar Monitoring</li>
-              <li>High-Efficiency Solar PV Systems</li>
-              <li>Smart Grid Solar Integration</li>
-              <li>Adaptive MPPT Algorithm Research</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Solar Photovoltaic Systems – Project Development Support</h1>
 
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+        <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Solar Photovoltaic Systems Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance high-efficiency solar energy systems aligned with IEEE Transactions (2023–2025). Our projects focus on PV array design, maximum power point tracking (MPPT), and grid integration for residential, industrial, and commercial applications.
               </p>
@@ -195,69 +234,30 @@ const EEESolarPhotovoltaicSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/renewable-energy-systems">
-      Renewable Energy Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/solar-photovoltaic">
-      Solar Photovoltaic Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/wind-energy-conversion">
-      Wind Energy Conversion Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
-      Biomass Fuel Cell Technologies
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/energy-storage-integration">
-      Energy Storage & Renewable Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
-      Hybrid Renewable Energy Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/grid-integration-renewables">
-      Grid Integration of Renewables
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/renewable-energy-systems">Renewable Energy Systems – Project Development Center</a></li>
+              <li><a href="/department/renewable-energy-systems/solar-photovoltaic">Solar Photovoltaic Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/wind-energy-conversion">Wind Energy Conversion Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/biomass-fuel-cell">Biomass Fuel Cell Technologies</a></li>
+              <li><a href="/department/renewable-energy-systems/energy-storage-integration">Energy Storage & Renewable Integration</a></li>
+              <li><a href="/department/renewable-energy-systems/hybrid-renewable-systems">Hybrid Renewable Energy Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/grid-integration-renewables">Grid Integration of Renewables</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

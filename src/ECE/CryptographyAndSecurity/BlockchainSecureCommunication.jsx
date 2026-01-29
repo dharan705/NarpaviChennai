@@ -1,65 +1,84 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What is the role of blockchain in secure communication?",
-    answer: "Blockchain ensures decentralized, tamper-proof, and transparent communication, enhancing trust, eliminating single points of failure, and providing immutable audit trails in distributed networks."
+    answer:
+      "Blockchain ensures decentralized, tamper-proof, and transparent communication, enhancing trust, eliminating single points of failure, and providing immutable audit trails in distributed networks.",
   },
   {
     question: "What projects are included in B.Tech blockchain communication?",
-    answer: "Fundamental projects include peer-to-peer blockchain for secure file sharing, blockchain-based messaging on IoT devices, and data integrity verification using mini-blockchains on Raspberry Pi."
+    answer:
+      "Fundamental projects include peer-to-peer blockchain for secure file sharing, blockchain-based messaging on IoT devices, and data integrity verification using mini-blockchains on Raspberry Pi.",
   },
   {
     question: "What advanced topics are covered in M.Tech blockchain communication?",
-    answer: "Projects include blockchain authentication for IoT, energy-efficient consensus for wireless networks, vehicular blockchain security, and smart contract-enabled healthcare data transmission."
+    answer:
+      "Projects include blockchain authentication for IoT, energy-efficient consensus for wireless networks, vehicular blockchain security, and smart contract-enabled healthcare data transmission.",
   },
   {
     question: "What research areas are emphasized in Ph.D. blockchain communication?",
-    answer: "Cutting-edge research focuses on blockchain-integrated secure 5G/6G communications, AI-blockchain intrusion detection, lightweight protocols for embedded devices, and blockchain for satellite/UAV communication."
+    answer:
+      "Cutting-edge research focuses on blockchain-integrated secure 5G/6G communications, AI-blockchain intrusion detection, lightweight protocols for embedded devices, and blockchain for satellite/UAV communication.",
   },
   {
     question: "Which tools and platforms support blockchain communication projects?",
-    answer: "Common tools include Ethereum, Hyperledger Fabric, Raspberry Pi, ARM Cortex Boards, MATLAB, FPGA, Python, and Simulink."
-  }
+    answer:
+      "Common tools include Ethereum, Hyperledger Fabric, Raspberry Pi, ARM Cortex Boards, MATLAB, FPGA, Python, and Simulink.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Blockchain in Secure Communication",
+  "Blockchain IoT Security Projects",
+  "Blockchain Vehicular Communication",
+  "Lightweight Blockchain Protocols",
+  "Blockchain in Embedded Systems",
+  "Blockchain-based Healthcare Data Security",
+  "Secure IoT Communication Projects",
+  "B.Tech Blockchain Projects",
+  "M.Tech Blockchain Research",
+  "Ph.D. Blockchain Communication Projects",
+  "IEEE Blockchain Projects",
+  "Narpavi Research Institute Blockchain",
 ];
 
 const BlockchainSecureCommunicationProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="Blockchain in Secure Communication IEEE Projects | IoT, 5G/6G, Embedded | B.Tech M.Tech Ph.D."
+        title="Blockchain in Secure Communication – Project Development Center in Chennai"
         description="IEEE-aligned (2023–2025) blockchain secure communication projects on IoT, vehicular networks, 5G/6G, wireless, healthcare, and UAV/satellite systems using Ethereum, Hyperledger, FPGA, Raspberry Pi, and ARM platforms."
-        keywords="Blockchain in Secure Communication, Blockchain IoT Security Projects, Blockchain Vehicular Communication, Lightweight Blockchain Protocols, Blockchain in Embedded Systems, Blockchain-based Healthcare Data Security, Secure IoT Communication Projects, B.Tech Blockchain Projects, M.Tech Blockchain Research, Ph.D. Blockchain Communication Projects, IEEE Blockchain Projects, Narpavi Research Institute Blockchain"
-        url="/department/cryptography-security/blockchain-secure-communication"
+        keywords={keywords}
+        url="/department/cryptography-security/blockchain-secure-communication-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Blockchain in Secure Communication</li>
-              <li>Blockchain IoT Security Projects</li>
-              <li>Blockchain Vehicular Communication</li>
-              <li>Lightweight Blockchain Protocols</li>
-              <li>Blockchain in Embedded Systems</li>
-              <li>Blockchain-based Healthcare Data Security</li>
-              <li>Secure IoT Communication Projects</li>
-              <li>B.Tech Blockchain Projects</li>
-              <li>M.Tech Blockchain Research</li>
-              <li>Ph.D. Blockchain Communication Projects</li>
-              <li>IEEE Blockchain Projects</li>
-              <li>Narpavi Research Institute Blockchain</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Blockchain in Secure Communication – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Blockchain in Secure Communication – Project Development Center in Chennai</h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> leads research and project development in Blockchain-based secure communication systems for B.Tech, M.Tech, and Ph.D. scholars, aligned with IEEE standards (2023–2025).
               </p>
@@ -181,19 +200,26 @@ const BlockchainSecureCommunicationProject = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
-  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
-  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
-  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
-  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
-  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
-  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
-</ul>
-          </div>
+              <li><a href="/department/cryptography-security">Cryptography & Security</a></li>
+              <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+              <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+              <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+              <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+              <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+              <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

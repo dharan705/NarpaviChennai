@@ -1,76 +1,86 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Air Pollution Modeling IEEE Projects 2023–2025",
+  "IoT Air Quality Monitoring",
+  "AI Based Air Quality Prediction",
+  "CFD Air Pollution Modeling",
+  "GIS Based Air Quality Mapping",
+  "Urban Air Pollution Management",
+  "Industrial Emission Control Projects",
+  "Environmental Engineering B.Tech M.Tech Ph.D.",
+  "Smart City Air Quality Solutions",
+  "Narpavi Research Institute Air Pollution Projects"
+];
+
 const faqs = [
   {
     question: "What services does the Air Pollution Modeling Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Air Pollution Modeling Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on air quality modeling, prediction, and mitigation."
+    answer:
+      "Narpavi Research Institute’s Air Pollution Modeling Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on air quality modeling, prediction, and mitigation."
   },
   {
     question: "What types of Air Pollution Modeling projects are supported?",
-    answer: "We support B.Tech projects (basic modeling and sensor data analysis), M.Tech projects (advanced modeling and AI prediction), and Ph.D. projects (smart monitoring and policy integration) for sustainable air quality management."
+    answer:
+      "We support B.Tech projects (basic modeling and sensor data analysis), M.Tech projects (advanced modeling and AI prediction), and Ph.D. projects (smart monitoring and policy integration)."
   },
   {
-    question: "Which tools and technologies are used in Air Pollution Modeling projects?",
-    answer: "Our stack includes AERMOD, CALPUFF, ANSYS Fluent, MATLAB, IoT sensors, and AI frameworks (TensorFlow, Keras) for modeling and monitoring air quality."
+    question: "Which tools and technologies are used?",
+    answer:
+      "AERMOD, CALPUFF, ANSYS Fluent, MATLAB, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Environmental Engineering, focusing on air quality modeling, IoT monitoring, and AI-driven forecasting."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) focusing on air quality modeling, IoT monitoring, and AI-driven forecasting."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, computational modeling, IoT integration, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, computational modeling, IoT integration, documentation, and IEEE/Scopus/SCI publication guidance."
   }
 ];
 
 const CEAirPollutionModelingProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
+
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Air Pollution Modeling IEEE Projects (2023–2025)"
-        description="Air Pollution Modeling IEEE project development for B.Tech, M.Tech & PhD scholars focusing on air quality simulation, IoT-based monitoring, CFD analysis, AI-driven prediction, and smart city emission control."
-        url="/department/environmental-engineering/water-treatment-recycling"
-        type="article"
-        keywords={[
-          "Air Pollution Modeling Projects",
-          "IoT Air Quality Monitoring IEEE 2023–2025",
-          "AI-Based Air Quality Prediction",
-          "CFD Air Pollution Modeling",
-          "GIS-Based Air Quality Mapping",
-          "Urban Air Quality Management",
-          "B.Tech M.Tech PhD Environmental Projects",
-          "Narpavi Research Institute Air Pollution Projects",
-          "Smart City Air Pollution Solutions",
-          "Industrial Emission Control Projects"
-        ]}
+        title="Air Pollution Modeling – Project Development Center in Chennai"
+        description="Air Pollution Modeling project development for B.Tech, M.Tech, and Ph.D. students using CFD simulation, IoT air quality monitoring, AI-driven prediction, GIS mapping, and smart city emission control."
+        keywords={keywords}
+        url="/department/environmental-engineering/air-pollution-modeling"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Air Pollution Modeling Projects</li>
-              <li>IoT Air Quality Monitoring IEEE 2023–2025</li>
-              <li>AI-Based Air Quality Prediction</li>
-              <li>CFD Air Pollution Modeling</li>
-              <li>GIS-Based Air Quality Mapping</li>
-              <li>Urban Air Quality Management</li>
-              <li>B.Tech M.Tech Ph.D. Environmental Projects</li>
-              <li>Narpavi Research Institute Air Pollution Projects</li>
-              <li>Smart City Air Pollution Solutions</li>
-              <li>Industrial Emission Control Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Air Pollution Modeling – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Air Pollution Modeling – Project Development Center in Chennai
+            </h1>
+
+                <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Air Pollution Modeling Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on air quality modeling, prediction, and mitigation.
               </p>
@@ -232,54 +242,42 @@ const CEAirPollutionModelingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/environmental-engineering">
-      Environmental Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/environmental-engineering/water-treatment-recycling">
-      Water Treatment & Recycling
-    </a>
-  </li>
-  <li>
-    <a href="/department/environmental-engineering/air-pollution-modeling">
-      Air Pollution Modeling
-    </a>
-  </li>
-  <li>
-    <a href="/department/environmental-engineering/waste-management-system">
-      Waste Management System
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/environmental-engineering">
+                  Environmental Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/water-treatment-recycling">
+                  Water Treatment & Recycling
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/air-pollution-modeling">
+                  Air Pollution Modeling
+                </a>
+              </li>
+              <li>
+                <a href="/department/environmental-engineering/waste-management-system">
+                  Waste Management System
+                </a>
+              </li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

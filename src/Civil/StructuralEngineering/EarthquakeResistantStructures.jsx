@@ -1,72 +1,87 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Earthquake Resistant Structures IEEE Projects 2023–2025",
+  "Seismic Design Projects",
+  "Base Isolation and Damping Techniques",
+  "Structural Engineering Seismic Projects",
+  "IoT Earthquake Monitoring",
+  "AI Seismic Damage Prediction",
+  "Seismic Retrofitting Projects",
+  "Tall Building Earthquake Analysis",
+  "Civil Engineering IEEE Projects",
+  "Narpavi Research Institute Civil Projects"
+];
+
 const faqs = [
   {
-    question: "What services does the Earthquake Resistant Structures Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Earthquake Resistant Structures Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on seismic design, base isolation, structural health monitoring, and retrofitting."
+    question:
+      "What services does the Earthquake Resistant Structures Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Earthquake Resistant Structures Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on seismic design, base isolation, structural health monitoring, and retrofitting."
   },
   {
-    question: "What types of Earthquake Resistant Structures projects are supported?",
-    answer: "We support B.Tech projects (basic seismic design and modeling), M.Tech projects (nonlinear analysis and material innovation), and Ph.D. projects (AI-driven seismic prediction and hybrid systems) for earthquake-resistant infrastructure."
+    question:
+      "What types of Earthquake Resistant Structures projects are supported?",
+    answer:
+      "B.Tech projects on basic seismic design, M.Tech projects on nonlinear analysis and materials, and Ph.D. projects on AI-driven seismic prediction and hybrid systems."
   },
   {
-    question: "Which tools and technologies are used in Earthquake Resistant Structures projects?",
-    answer: "Our stack includes STAAD.Pro, ETABS, ANSYS, MATLAB, OpenSees, IoT sensors, and AI frameworks (TensorFlow, Keras) for seismic analysis and monitoring."
+    question: "Which tools and technologies are used?",
+    answer:
+      "STAAD.Pro, ETABS, ANSYS, MATLAB, OpenSees, IoT sensors, and AI frameworks such as TensorFlow and Keras."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Structural Engineering, focusing on base isolation, smart materials, and IoT-enabled monitoring."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) on Structural Engineering, focusing on base isolation, smart materials, and IoT-enabled monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete support including topic selection, simulation, experimental validation, documentation, and IEEE/Scopus/SCI publication assistance."
   }
 ];
 
 const CEEarthquakeResistantStructuresProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-       <SEO
-        title="Earthquake Resistant Structures IEEE Projects (2023–2025)"
-        description="Earthquake Resistant Structures IEEE project development for B.Tech, M.Tech & PhD scholars using STAAD.Pro, ETABS, ANSYS, base isolation, dampers, IoT monitoring, AI seismic prediction, and smart materials."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Earthquake Resistant Structures – Project Development Center in Chennai"
+        description="Earthquake Resistant Structures project development for B.Tech, M.Tech, and Ph.D. students using STAAD.Pro, ETABS, ANSYS, base isolation, dampers, IoT monitoring, AI seismic prediction, and smart materials."
+        keywords={keywords}
         url="/department/structural-engineering/earthquake-resistant-structures"
-        type="article"
-        keywords={[
-          "Earthquake Resistant Structures IEEE 2023–2025",
-          "Seismic Design Projects",
-          "Base Isolation Damping Techniques",
-          "Structural Engineering Seismic Projects",
-          "IoT Earthquake Monitoring",
-          "AI Seismic Damage Prediction",
-          "B.Tech M.Tech PhD Earthquake Projects",
-          "Narpavi Research Institute Civil Projects",
-          "Seismic Retrofitting Projects",
-          "Tall Building Earthquake Analysis"
-        ]}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Earthquake Resistant Structures projects</li>
-              <li>Structural Engineering seismic projects</li>
-              <li>Base isolation and damping techniques</li>
-              <li>IEEE earthquake engineering projects 2023–2025</li>
-              <li>B.Tech M.Tech Ph.D. earthquake project support</li>
-              <li>Narpavi Research Institute Civil projects</li>
-              <li>Seismic retrofitting project guidance</li>
-              <li>Tall building earthquake analysis projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Earthquake Resistant Structures – Project Development Support</h1>
+
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Earthquake Resistant Structures – Project Development Center in Chennai
+            </h1>
+            
 
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
@@ -210,42 +225,47 @@ const CEEarthquakeResistantStructuresProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/structural-engineering">
-      Structural Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/earthquake-resistant-structures">
-      Earthquake Resistant Structures
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/steel-rcc-design-optimization">
-      Steel & RCC Design Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/tall-building-analysis">
-      Tall Building Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/structural-engineering/bridge-design-monitoring">
-      Bridge Design & Monitoring
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/structural-engineering">
+                  Structural Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/earthquake-resistant-structures">
+                  Earthquake Resistant Structures
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/steel-rcc-design-optimization">
+                  Steel & RCC Design Optimization
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/tall-building-analysis">
+                  Tall Building Analysis
+                </a>
+              </li>
+              <li>
+                <a href="/department/structural-engineering/bridge-design-monitoring">
+                  Bridge Design & Monitoring
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

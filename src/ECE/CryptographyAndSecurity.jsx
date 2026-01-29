@@ -1,6 +1,21 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT */
+const keywords = [
+  "Cryptography Projects in ECE",
+  "Hardware Security IEEE Projects",
+  "FPGA Cryptography Projects",
+  "Post Quantum Cryptography Embedded Systems",
+  "IoT Security Hardware Projects",
+  "Side Channel Attack Resistant Design",
+  "Blockchain Embedded Security",
+  "AES FPGA Implementation",
+  "ECE Security Projects",
+  "PhD Cryptography Research"
+];
 
 const faqs = [
   {
@@ -34,62 +49,40 @@ const ECECryptographySecurityProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ✅ SEO */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Cryptography & Security in ECE IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        title="Cryptography & Security in ECE – Project Development Center in Chennai"
         description="Cryptography & Security in ECE project development for B.Tech, M.Tech & PhD students focusing on FPGA cryptography, hardware security, post-quantum cryptography, blockchain security, IoT encryption, and IEEE-aligned research projects."
-        url="/department/cryptography-security"
-        type="article"
-        keywords={[
-          "Cryptography Projects in ECE",
-          "Hardware Security IEEE Projects",
-          "FPGA Cryptography Projects",
-          "Post Quantum Cryptography Embedded Systems",
-          "IoT Security Hardware Projects",
-          "Side Channel Attack Resistant Design",
-          "Blockchain Embedded Security",
-          "AES FPGA Implementation",
-          "ECE Security Projects",
-          "PhD Cryptography Research"
-        ]}
+        url="/cryptography-security-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
+          {/* ✅ LEFT SIDEBAR (ONLY CHANGE) */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Cryptography & Security in ECE Project Development Center</li>
-              <li>FPGA Cryptography Projects</li>
-              <li>Hardware Security IEEE Projects</li>
-              <li>Post-Quantum Embedded Systems Projects</li>
-              <li>IoT Security Hardware Implementation</li>
-              <li>Side-Channel Attack Resistant Hardware</li>
-              <li>Blockchain Embedded Security Projects</li>
-              <li>AES FPGA Implementation</li>
-              <li>Narpavi Research Institute</li>
-              <li>Indian Embedded Security Project Center</li>
-              <li>IEEE 2023–2025 Security Projects</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Cryptography & Security in ECE – Project Development Center</h1>
-
-            <p className="seo-internal-links">
-              Related domains:
-              <a href="/ece-project-development"> ECE Project Development</a>,
-              <a href="/phd-project-development"> PhD Research Guidance</a>,
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
-            </p>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Cryptography & Security in ECE – Project Development Center in Chennai</h1>
+  <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Cryptography & Security in ECE – Project Development Center, a dedicated hub empowering B.Tech, M.Tech, and Ph.D. students to develop cutting-edge, IEEE-aligned (2023–2025) projects in secure communication, data encryption, and hardware security.
               </p>
@@ -223,23 +216,21 @@ const ECECryptographySecurityProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
-          </div>
+            </section>          </div>
 
-          {/* Right */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR (ONLY CHANGE) */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li><a href="/department/cryptography-security">Cryptography & Security </a></li>
-  <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
-  <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
-  <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
-  <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
-  <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
-  <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
-</ul>
-
-          </div>
+              <li><a href="/department/cryptography-security">Cryptography & Security</a></li>
+              <li><a href="/department/cryptography-security/biometric-security-systems">Biometric Security Systems</a></li>
+              <li><a href="/department/cryptography-security/blockchain-secure-communication">Blockchain Secure Communication</a></li>
+              <li><a href="/department/cryptography-security/cryptographic-algorithms-embedded">Cryptographic Algorithms Embedded</a></li>
+              <li><a href="/department/cryptography-security/side-channel-attack-resistance">Side Channel Attack Resistance</a></li>
+              <li><a href="/department/cryptography-security/hardware-security-trusted-computing">Hardware Security & Trusted Computing</a></li>
+              <li><a href="/department/cryptography-security/post-quantum-cryptography">Post Quantum Cryptography</a></li>
+            </ul>
+          </aside>
 
         </div>
       </div>

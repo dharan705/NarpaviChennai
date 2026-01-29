@@ -1,66 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Fault Diagnosis of Motors & Generators Project Development Center in Chennai",
+  "Fault Diagnosis of Motors and Generators IEEE Projects 2023–2025",
+  "Motor Fault Detection IEEE Projects",
+  "Generator Fault Diagnosis Research",
+  "B.Tech Predictive Maintenance Projects",
+  "M.Tech AI-Based Fault Diagnosis Research",
+  "Ph.D RUL Prediction for Motors and Generators",
+  "Vibration Thermal Current Analysis Projects",
+  "IoT-Based Motor and Generator Diagnostics",
+  "Narpavi Research Institute Fault Diagnosis Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Fault Diagnosis of Motors & Generators Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Fault Diagnosis of Motors & Generators Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on fault detection, predictive diagnostics, vibration/current monitoring, and intelligent control for motors and generators."
+    question:
+      "What services does the Fault Diagnosis of Motors & Generators Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Fault Diagnosis of Motors & Generators Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on fault detection, predictive diagnostics, vibration and current monitoring, and intelligent control for motors and generators."
   },
   {
     question: "What types of Fault Diagnosis projects are supported?",
-    answer: "We support B.Tech projects (vibration/thermal/current monitoring, IoT-based diagnostics), M.Tech projects (AI/ML-based fault prediction, real-time monitoring), and Ph.D. projects (RUL prediction, advanced diagnostic controllers) for applications in industrial drives and renewable energy systems."
+    answer:
+      "We support B.Tech projects (vibration, thermal, and current monitoring), M.Tech projects (AI/ML-based fault prediction and real-time diagnostics), and Ph.D. projects (RUL prediction and advanced diagnostic controllers) for industrial and renewable energy systems."
   },
   {
     question: "Which technologies are used in Fault Diagnosis project development?",
-    answer: "Our stack includes MATLAB/Simulink, LabVIEW, ANSYS Maxwell, AI frameworks (TensorFlow, PyTorch), IoT platforms (MQTT), FPGA/ARM controllers, and hardware-in-the-loop (HIL) testbeds for fault diagnosis and monitoring."
+    answer:
+      "MATLAB/Simulink, LabVIEW, ANSYS Maxwell, TensorFlow, PyTorch, IoT platforms (MQTT), FPGA/ARM controllers, and hardware-in-the-loop (HIL) systems."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like predictive fault diagnosis, AI-driven monitoring, and IoT integration, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) covering predictive fault diagnosis, AI-driven monitoring, and IoT integration."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with MATLAB/LabVIEW, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end support including topic selection, algorithm design, simulation, hardware prototyping, documentation, and IEEE/Scopus/SCI journal publication guidance."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Fault Diagnosis of Motors & Generators – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Fault Diagnosis of Motors & Generators Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering vibration analysis, thermal monitoring, current signature analysis, AI-based fault prediction, IoT diagnostics, and predictive maintenance.";
+
+const pageUrl =
+  "/department/electrical-machines/fault-diagnosis-motor-generators";
 
 const EEEFaultDiagnosisMotorsGeneratorsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Fault Diagnosis Motors Generators IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Fault Diagnosis of Motors & Generators projects for B.Tech, M.Tech, Ph.D. Vibration analysis, thermal monitoring, current signature analysis, AI/ML fault prediction, IoT-based diagnostics using MATLAB/Simulink, LabVIEW, TensorFlow for industrial drives and renewable energy."
-  keywords="Fault Diagnosis Motors Generators IEEE Projects 2023–2025, Motor Fault Detection, Generator Fault Diagnosis, B.Tech Predictive Maintenance Projects, M.Tech AI Fault Diagnosis Research, Ph.D. RUL Prediction Motors, Vibration Analysis Motors, Current Signature Analysis Generators, IoT Motor Diagnostics, Industrial Motor Fault Detection, Narpavi Research Institute"
-  url="/department/electrical-machines/fault-diagnosis-motor-generators"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Fault Diagnosis of Motors & Generators Projects</li>
-              <li>IEEE Motor Fault Detection Projects 2023–2025</li>
-              <li>B.Tech Predictive Maintenance Projects</li>
-              <li>M.Tech AI-Based Fault Diagnosis Research</li>
-              <li>Ph.D IoT-Enabled Motor Monitoring</li>
-              <li>Smart Industrial Motor Diagnostics</li>
-              <li>Vibration Thermal Current Analysis</li>
-              <li>Narpavi Research Institute</li>
-              <li>Intelligent Fault Detection Systems</li>
-              <li>Predictive Maintenance Solutions</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Fault Diagnosis of Motors & Generators – Project Development Support</h1>
-
-            <section className="EEEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Fault Diagnosis of Motors & Generators Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to advance fault detection and diagnostics aligned with IEEE Transactions (2023–2025). Our projects focus on vibration analysis, thermal monitoring, current signature analysis, and AI/ML-based fault prediction for motors, generators, and industrial drives.
               </p>
@@ -208,48 +238,27 @@ const EEEFaultDiagnosisMotorsGeneratorsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/electrical-machines">
-      Electrical Machines – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/electrical-machines">
-      Advanced Drives & Controllers
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/condition-monitoring-machines">
-      Condition Monitoring of Machines
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/energy-efficient-motors">
-      Energy Efficient Motors
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/fault-diagnosis-motor-generators">
-      Fault Diagnosis of Motors & Generators
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/loss-minimization-techniques">
-      Loss Minimization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/electrical-machines/special-electrical-machines">
-      Special Electrical Machines
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/electrical-machines">Electrical Machines – Project Development Center</a></li>
+              <li><a href="/department/electrical-machines/advanced-drives-controllers">Advanced Drives & Controllers</a></li>
+              <li><a href="/department/electrical-machines/condition-monitoring-machines">Condition Monitoring of Machines</a></li>
+              <li><a href="/department/electrical-machines/energy-efficient-motors">Energy Efficient Motors</a></li>
+              <li><a href="/department/electrical-machines/fault-diagnosis-motor-generators">Fault Diagnosis of Motors & Generators</a></li>
+              <li><a href="/department/electrical-machines/loss-minimization-techniques">Loss Minimization Techniques</a></li>
+              <li><a href="/department/electrical-machines/special-electrical-machines">Special Electrical Machines</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

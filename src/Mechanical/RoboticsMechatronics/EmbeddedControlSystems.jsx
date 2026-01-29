@@ -1,74 +1,99 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Embedded Control Systems Project Development Center in Chennai",
+  "Embedded Control IEEE Projects 2023–2025",
+  "IoT Enabled Embedded Systems",
+  "AI Based Embedded Control",
+  "PID Fuzzy MPC Robotics Projects",
+  "Real Time Embedded Systems",
+  "Industrial Embedded Controllers",
+  "Digital Twin Embedded Control",
+  "Edge AI Embedded Projects",
+  "Narpavi Research Institute Embedded Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Embedded Control Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Embedded Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled embedded controllers, AI-driven control, real-time robotics, and digital twin systems for industries like manufacturing, automotive, and smart cities."
+    question:
+      "What services does the Embedded Control Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Embedded Control Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on IoT-enabled embedded controllers, AI-driven control, real-time robotics, and digital twin systems for manufacturing, automotive, and smart city applications."
   },
   {
-    question: "What types of Embedded Control Systems projects are supported?",
-    answer: "We support B.Tech projects (basic embedded controllers, IoT prototypes), M.Tech projects (AI-driven control, predictive maintenance), and Ph.D. projects (edge AI, digital twins) for applications in robotics, autonomous systems, and Industry 4.0."
+    question:
+      "What types of Embedded Control Systems projects are supported?",
+    answer:
+      "We support B.Tech projects in basic embedded controllers and IoT prototypes, M.Tech projects in AI-driven control and predictive maintenance, and Ph.D. research in edge AI and digital twin systems."
   },
   {
-    question: "Which tools and technologies are used in Embedded Control Systems projects?",
-    answer: "Our stack includes MATLAB, Simulink, ROS, Proteus, LabVIEW, Python, AI frameworks (TensorFlow, Keras), Arduino, Raspberry Pi, STM32, and IoT platforms like AWS IoT for simulation, prototyping, and real-time control."
+    question:
+      "Which tools and technologies are used in Embedded Control Systems projects?",
+    answer:
+      "MATLAB, Simulink, ROS, Proteus, LabVIEW, Python, TensorFlow, Keras, Arduino, Raspberry Pi, STM32, and IoT platforms for simulation, prototyping, and real-time control."
   },
   {
-    question: "How are Embedded Control Systems projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Electronics and Automation, focusing on real-time embedded control, AI integration, and IoT-enabled systems."
+    question:
+      "How are Embedded Control Systems projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Industrial Electronics and Automation, focusing on real-time embedded control, AI integration, and IoT-enabled systems."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question:
+      "What support is provided for academic submissions?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, IEEE documentation, and Scopus/SCI/Elsevier publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Embedded Control Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Embedded Control Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering Arduino, STM32, Raspberry Pi, AI-driven control, IoT integration, real-time robotics, and digital twin systems.";
+
+const pageUrl =
+  "/department/robotics-mechatronics/embedded-control-systems";
 
 const MEEmbeddedControlSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Embedded Control Systems IEEE Projects (2023–2025)"
-        description="Embedded Control Systems IEEE project development for B.Tech, M.Tech & PhD using Arduino, STM32, Raspberry Pi, AI-driven control, IoT integration, real-time robotics, digital twins for manufacturing, automotive, smart cities."
-        url="/department/robotics-mechatronics/embedded-control-systems"
-        type="article"
-        keywords={[
-          "Embedded Control IEEE 2023–2025",
-          "IoT Enabled Embedded Systems",
-          "AI Based Embedded Control",
-          "PID Fuzzy MPC Robotics",
-          "Real Time Embedded Systems",
-          "Industrial Embedded Controllers",
-          "Digital Twin Embedded Control",
-          "Edge AI Embedded Projects",
-          "Autonomous Embedded Robotics",
-          "Narpavi Research Institute Embedded"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Embedded Control IEEE Projects 2023–2025</li>
-              <li>IoT-Enabled Embedded Systems</li>
-              <li>AI-Based Embedded Control</li>
-              <li>PID/Fuzzy/MPC Robotics Projects</li>
-              <li>Real-Time Embedded Systems</li>
-              <li>Industrial Embedded Controllers</li>
-              <li>Autonomous Embedded Robotics Projects</li>
-              <li>Digital Twin Embedded Control</li>
-              <li>Ph.D. Embedded System Research Projects</li>
-              <li>Narpavi Research Institute Embedded Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Embedded Control Systems – Project Development Support</h1>
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
 
             <section className="MEProjectDevelopmentCenter-intro">
               <p>
@@ -243,63 +268,33 @@ const MEEmbeddedControlSystemsProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
+             
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/robotics-mechatronics">
-      Robotics & Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/industrial-robotics-systems">
-      Industrial Robotics Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/iot-based-mechatronics">
-      IoT-Based Mechatronics
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/autonomous-vehicles-drones">
-      Autonomous Vehicles & Drones
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/robotic-manipulator-control">
-      Robotic Manipulator Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/robotics-mechatronics/embedded-control-systems">
-      Embedded Control Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/robotics-mechatronics">Robotics & Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/industrial-robotics-systems">Industrial Robotics Systems</a></li>
+              <li><a href="/department/robotics-mechatronics/iot-based-mechatronics">IoT-Based Mechatronics</a></li>
+              <li><a href="/department/robotics-mechatronics/autonomous-vehicles-drones">Autonomous Vehicles & Drones</a></li>
+              <li><a href="/department/robotics-mechatronics/robotic-manipulator-control">Robotic Manipulator Control</a></li>
+              <li><a href="/department/robotics-mechatronics/embedded-control-systems">Embedded Control Systems</a></li>
+            </ul>
 
-          </div>
+            {/* 🔑 KEYWORDS */}
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+
+          </aside>
+
         </div>
       </div>
     </div>

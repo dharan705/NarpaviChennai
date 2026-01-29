@@ -1,77 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Vehicle Dynamics & Stability Project Development Center in Chennai",
+  "Vehicle Dynamics IEEE Projects 2023–2025",
+  "Automotive Stability Control Projects",
+  "AI Based Vehicle Control Systems",
+  "Autonomous Vehicle Stability IEEE",
+  "Suspension Optimization Projects",
+  "Rollover Prevention IEEE Projects",
+  "Traction Control Simulation",
+  "Vehicle Digital Twin Modeling",
+  "Smart Vehicle Stability Systems",
+  "Narpavi Research Institute Vehicle Engineering Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Vehicle Dynamics & Stability Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Vehicle Dynamics & Stability Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-based stability control, vehicle dynamics simulation, autonomous driving stability, and IoT-enabled systems for automotive safety and performance."
+    answer:
+      "Narpavi Research Institute’s Vehicle Dynamics & Stability Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-based stability control, vehicle dynamics simulation, autonomous driving stability, and IoT-enabled safety systems."
   },
   {
     question: "What types of Vehicle Dynamics & Stability projects are supported?",
-    answer: "We support B.Tech projects (ABS/ESC prototypes, vehicle dynamics modeling), M.Tech projects (AI-driven stability algorithms, adaptive suspensions), and Ph.D. projects (digital twins, V2V stability, autonomous vehicle control) for applications in passenger cars, EVs, and autonomous vehicles."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering ABS/ESC systems, AI-driven stability algorithms, adaptive suspensions, digital twins, and autonomous vehicle control."
   },
   {
-    question: "Which tools and technologies are used in Vehicle Dynamics & Stability projects?",
-    answer: "Our stack includes MATLAB, Simulink, CarSim, TruckSim, ADAMS, Ansys Motion, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, and sensors for simulation, prototyping, and real-time control."
+    question: "Which tools and technologies are used?",
+    answer:
+      "MATLAB, Simulink, CarSim, TruckSim, ADAMS, Ansys Motion, Python, TensorFlow, Keras, AWS IoT, ThingSpeak, Arduino, Raspberry Pi, and sensors."
   },
   {
-    question: "How are Vehicle Dynamics & Stability projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Vehicular Technology and ISO 26262 standards, focusing on AI-driven stability, autonomous driving, and vehicle safety systems."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Vehicular Technology and ISO 26262 functional safety standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and IEEE/Scopus/SCI publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Vehicle Dynamics & Stability – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Vehicle Dynamics & Stability Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI stability control, ABS/ESC systems, autonomous vehicle dynamics, digital twins, and IoT-based safety monitoring.";
+
+const pageUrl =
+  "/department/automotive-vehicle-engineering/vehicle-dynamics-stability";
 
 const MEVehicleDynamicsStabilityProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-       <SEO
-        title="Vehicle Dynamics & Stability IEEE Projects (2023–2025)"
-        description="Vehicle Dynamics Stability IEEE project development for B.Tech, M.Tech & PhD using MATLAB, CarSim, AI stability control, ABS/ESC systems, autonomous vehicle dynamics, IoT monitoring, digital twin modeling for automotive safety."
-        url="/department/automotive-vehicle-engineering/vehicle-dynamics-stability"
-        type="article"
-        keywords={[
-          "Vehicle Dynamics IEEE 2023–2025",
-          "Automotive Stability Projects",
-          "AI Based Vehicle Control Systems",
-          "Autonomous Vehicle Stability IEEE",
-          "Suspension Optimization Projects",
-          "Rollover Prevention IEEE Projects",
-          "Traction Control Simulation",
-          "Vehicle Digital Twin Modeling",
-          "Smart Vehicle Stability Systems",
-          "Narpavi Research Institute Vehicle Engineering Projects"
-        ]}
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
 
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Vehicle Dynamics IEEE Projects 2023–2025</li>
-              <li>Automotive Stability Projects</li>
-              <li>AI-Based Vehicle Control Systems</li>
-              <li>Autonomous Vehicle Stability IEEE</li>
-              <li>Suspension Optimization Projects</li>
-              <li>Rollover Prevention IEEE Projects</li>
-              <li>Traction Control Simulation</li>
-              <li>Vehicle Digital Twin Modeling</li>
-              <li>B.Tech/M.Tech/Ph.D. Automotive Projects</li>
-              <li>Narpavi Research Institute Vehicle Engineering Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Vehicle Dynamics & Stability – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+  <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Vehicle Dynamics & Stability Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on AI-based stability control, autonomous driving, vehicle dynamics modeling, and IoT-enabled safety systems.
               </p>
@@ -256,43 +275,26 @@ const MEVehicleDynamicsStabilityProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/automotive-vehicle-engineering">
-      Automotive & Vehicle Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/electric-vehicle-design">
-      Electric Vehicle Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">
-      Hybrid Vehicle Powertrains
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">
-      Vehicle Dynamics & Stability
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/engine-performance-optimization">
-      Engine Performance Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">
-      Emission Control & Fuel Efficiency
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/automotive-vehicle-engineering">Automotive & Vehicle Engineering</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/electric-vehicle-design">Electric Vehicle Design</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/hybrid-vehicle-powertrains">Hybrid Vehicle Powertrains</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/vehicle-dynamics-stability">Vehicle Dynamics & Stability</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/engine-performance-optimization">Engine Performance Optimization</a></li>
+              <li><a href="/department/automotive-vehicle-engineering/emission-control-fuel-efficiency">Emission Control & Fuel Efficiency</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,75 +1,104 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "WSN Environmental and Disaster Monitoring Project Development Center in Chennai",
+  "Wireless Sensor Network Environmental Monitoring Projects",
+  "Disaster Monitoring using WSN",
+  "Flood Monitoring WSN IoT Projects",
+  "Forest Fire Detection using WSN",
+  "Earthquake Prediction using WSN",
+  "Landslide Detection WSN Projects",
+  "Tsunami Warning Systems WSN",
+  "AI-Based Disaster Monitoring Systems",
+  "Narpavi Research Institute WSN Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What roles do WSNs play in environmental and disaster monitoring?",
-    answer: "WSNs enable early detection, real-time monitoring, and management of natural disasters and environmental hazards using sensor data, IoT integration, and AI-based predictive models."
+    answer:
+      "WSNs enable early detection, real-time monitoring, and management of natural disasters and environmental hazards using sensor data, IoT integration, and AI-based predictive models."
   },
   {
     question: "Which applications benefit from WSN environmental and disaster monitoring?",
-    answer: "Key applications include flood monitoring, forest fire detection, earthquake prediction, air quality monitoring, landslide detection, and tsunami warning systems."
+    answer:
+      "Applications include flood monitoring, forest fire detection, earthquake prediction, air quality monitoring, landslide detection, and tsunami warning systems."
   },
   {
-    question: "What are the common tools used in project development for WSN disaster monitoring?",
-    answer: "Tools include Arduino, ESP32, LoRa modules for sensor deployment, alongside cloud platforms like ThingSpeak, AWS IoT, and Blynk for data integration, as well as NS3, Contiki Cooja, MATLAB, and OMNeT++ for simulation."
+    question: "Which tools are used for WSN disaster monitoring projects?",
+    answer:
+      "Arduino, ESP32, LoRa modules, ThingSpeak, AWS IoT, Blynk, NS3, Contiki Cooja, MATLAB, and OMNeT++."
   },
   {
-    question: "What are the challenges in deploying WSNs for disaster monitoring?",
-    answer: "Challenges include sensor durability in harsh environments, network coverage in dense forests, deployment costs, real-time data transmission in remote areas, and underwater sensor resilience."
+    question: "What challenges exist in WSN disaster monitoring?",
+    answer:
+      "Challenges include harsh environments, limited coverage, real-time transmission in remote areas, sensor durability, and underwater deployment constraints."
   },
   {
-    question: "How does Narpavi Research Institute support research in this field?",
-    answer: "Narpavi Research Institute provides full support in sensor integration, IoT platform connectivity, AI analytics, secure communications, and guidance for IEEE-standard publications."
+    question: "How does Narpavi Research Institute support these projects?",
+    answer:
+      "The institute provides sensor integration, IoT connectivity, AI analytics, secure communication, and IEEE-standard publication guidance."
   }
 ];
+
+/* =========================
+   📌 TITLE (SAME EVERYWHERE)
+========================= */
+const pageTitle =
+  "WSN Environmental and Disaster Monitoring – Project Development Center in Chennai";
+
+const pageUrl =
+  "/department/wireless-sensor-networks/environmental-disaster-monitoring-project-development-center-in-chennai";
+
+const pageDescription =
+  "WSN Environmental and Disaster Monitoring Project Development Center in Chennai offering IEEE-aligned (2023–2025) projects on flood monitoring, forest fire detection, earthquake prediction, landslide detection, tsunami warning systems using IoT, AI, and Wireless Sensor Networks.";
 
 const WSNNvironmentDisasterMonitoringProject = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+      {/* =========================
+          🔍 SEO TAG
+      ========================= */}
       <SEO
-  title="WSN Environmental Disaster Monitoring IEEE Projects | Flood Fire Earthquake | B.Tech M.Tech PhD"
-  description="Wireless Sensor Networks for environmental & disaster monitoring projects (2023–2025) using Arduino ESP32 LoRa, ThingSpeak AWS IoT, NS3 MATLAB for flood, forest fire, earthquake, tsunami detection."
-  url="/department/wireless-sensor-networks/environmental-disaster-monitoring"
-  type="article"
-  keywords={[
-    "WSN Environmental Monitoring Projects",
-    "Disaster Detection WSN IoT",
-    "Flood Monitoring WSN",
-    "Forest Fire Detection IoT",
-    "Earthquake Prediction WSN",
-    "Landslide Detection Projects",
-    "Tsunami Warning WSN",
-    "Arduino ESP32 LoRa WSN"
-  ]}
-  faqs={faqs}
-/>
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
-      <Sidebar />
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Wireless Sensor Network Environmental Monitoring Projects</li>
-              <li>Disaster Detection WSN</li>
-              <li>Flood Monitoring WSN IoT</li>
-              <li>Forest Fire Detection with IoT</li>
-              <li>Landslide Detection WSN Projects</li>
-              <li>Earthquake Prediction Using WSN</li>
-              <li>Tsunami Warning IoT–WSN Projects</li>
-              <li>AI-Driven Disaster Management Systems</li>
-              <li>IEEE WSN Environmental Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* =========================
+              ⬅ LEFT SIDEBAR
+          ========================= */}
+          <aside className="left-sidebar2">
+         <Leftsidebar/>
+          </aside>
+
+          {/* =========================
+              🧠 MAIN CONTENT
+          ========================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>WSN for Environmental and Disaster Monitoring – Project Development Center</h1>
-            <section className="ECEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY H1 CHANGED */}
+            <h1>{pageTitle}</h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the <em>Excellence in WSN for Environmental and Disaster Monitoring</em>, delivering IEEE-aligned project solutions (2023–2025) for B.Tech, M.Tech, and Ph.D. scholars focused on real-time sensing and AI-powered disaster resilience.
               </p>
@@ -186,19 +215,29 @@ const WSNNvironmentDisasterMonitoringProject = () => {
               
             </section>
           </div>
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+
+          {/* =========================
+              ➡ RIGHT SIDEBAR
+          ========================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN </a></li>
-  <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
-  <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
-  <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
-  </ul>
-          </div>
+            <ul>
+              <li><a href="/department/wireless-sensor-networks">Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/energy-eff-routing-wsn">Energy Efficient Routing in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/secure-data-transmission-wsn">Secure Data Transmission in WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/iot-wsn">IoT Based Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/environmental-disaster-monitoring">Environmental Disaster Monitoring using WSN</a></li>
+              <li><a href="/department/wireless-sensor-networks/underwater-wireless-sensor-networks">Underwater Wireless Sensor Networks</a></li>
+              <li><a href="/department/wireless-sensor-networks/ai-based-wsn-optimization">AI-Based WSN Optimization</a></li>
+            </ul>
+               <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

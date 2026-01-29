@@ -1,77 +1,93 @@
 import "../CEProjectDevelopmentCenter.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import Subsidebar from "../../pages/Subsidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Pavement Analysis Design IEEE 2023–2025",
+  "Flexible Rigid Pavements Projects",
+  "Smart Pavement Monitoring IoT",
+  "AI Pavement Performance Prediction",
+  "Sustainable Asphalt Concrete Pavements",
+  "Recycled Material Pavements",
+  "Mechanistic-Empirical Pavement Design",
+  "B.Tech M.Tech PhD Transportation Projects",
+  "Narpavi Research Institute Transportation Projects",
+  "Climate-Resilient Road Design"
+];
+
 const faqs = [
   {
-    question: "What services does the Pavement Analysis & Design Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Pavement Analysis & Design Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on pavement design, material optimization, and smart monitoring."
+    question:
+      "What services does the Pavement Analysis & Design Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Pavement Analysis & Design Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on pavement design, material optimization, and smart monitoring."
   },
   {
-    question: "What types of Pavement Analysis & Design projects are supported?",
-    answer: "We support B.Tech projects (basic pavement design and testing), M.Tech projects (mechanistic-empirical design and material optimization), and Ph.D. projects (AI-driven performance prediction and smart pavement systems) for resilient infrastructure."
+    question:
+      "What types of Pavement Analysis & Design projects are supported?",
+    answer:
+      "B.Tech projects on basic pavement design, M.Tech projects on mechanistic-empirical design, and Ph.D. projects on AI-driven performance prediction and smart pavement systems."
   },
   {
-    question: "Which tools and technologies are used in Pavement Analysis & Design projects?",
-    answer: "Our stack includes KENPAVE, AASHTOWare Pavement ME, ABAQUS, MATLAB, and IoT sensors for pavement design and monitoring."
+    question:
+      "Which tools are used in Pavement Analysis & Design projects?",
+    answer:
+      "KENPAVE, AASHTOWare Pavement ME, ABAQUS, MATLAB, and IoT sensors."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Transportation Engineering, focusing on mechanistic-empirical design, sustainable materials, and IoT monitoring."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) on Transportation Engineering focusing on sustainable pavements and IoT monitoring."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, experimental testing, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "Complete guidance including topic selection, simulation, experimental testing, documentation, and IEEE/Scopus/SCI publication support."
   }
 ];
 
 const CEPavementAnalysisDesignProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
-            <SEO
-        title="Pavement Analysis & Design IEEE Projects (2023–2025)"
-        description="Pavement Analysis & Design IEEE project development for B.Tech, M.Tech & PhD scholars using KENPAVE, AASHTOWare, ABAQUS, mechanistic-empirical design, IoT monitoring, AI performance prediction for sustainable pavements."
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Pavement Analysis & Design – Project Development Center in Chennai"
+        description="Pavement Analysis & Design project development for B.Tech, M.Tech, and Ph.D. students using KENPAVE, AASHTOWare, ABAQUS, mechanistic-empirical design, IoT monitoring, and AI performance prediction for sustainable pavements."
+        keywords={keywords}
         url="/department/transportation-engineering/pavement-analysis-design"
-        type="article"
-        keywords={[
-          "Pavement Analysis Design IEEE 2023–2025",
-          "Flexible Rigid Pavements Projects",
-          "Smart Pavement Monitoring IoT",
-          "AI Pavement Performance Prediction",
-          "Sustainable Asphalt Concrete Pavements",
-          "Recycled Material Pavements",
-          "Mechanistic-Empirical Pavement Design",
-          "B.Tech M.Tech PhD Transportation Projects",
-          "Narpavi Research Institute Transportation Projects",
-          "Climate-Resilient Road Design"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          {
+            id: "transport",
+            label: "transportation",
+            path: "/department?dept=transportation"
+          }
+        ]}
+      />
+
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Pavement Analysis & Design Projects</li>
-              <li>Flexible and Rigid Pavements IEEE 2023–2025</li>
-              <li>Smart Pavement Monitoring IoT</li>
-              <li>AI-Based Pavement Performance Prediction</li>
-              <li>Sustainable Asphalt & Concrete Pavements</li>
-              <li>Recycled Material Pavements</li>
-              <li>B.Tech M.Tech Ph.D. Transportation Projects</li>
-              <li>Narpavi Research Institute Transportation Projects</li>
-              <li>Mechanistic-Empirical Pavement Design</li>
-              <li>Climate-Resilient Road Design</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+           
+          </aside>
+
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Pavement Analysis & Design – Project Development Support</h1>
 
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Pavement Analysis & Design – Project Development Center in Chennai
+            </h1>
+                  <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Pavement Analysis & Design Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on durable, sustainable, and smart pavement systems.
               </p>
@@ -240,33 +256,39 @@ const CEPavementAnalysisDesignProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/transportation-engineering">
-      Transportation Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/smart-traffic-management">
-      Smart Traffic Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/pavement-analysis-design">
-      Pavement Analysis & Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/transportation-engineering/highway-safety-optimization">
-      Highway Safety Optimization
-    </a>
-  </li>
-</ul>
+              <li>
+                <a href="/department/transportation-engineering">
+                  Transportation Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/smart-traffic-management">
+                  Smart Traffic Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/pavement-analysis-design">
+                  Pavement Analysis & Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/transportation-engineering/highway-safety-optimization">
+                  Highway Safety Optimization
+                </a>
+              </li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
-          </div>
         </div>
       </div>
     </div>

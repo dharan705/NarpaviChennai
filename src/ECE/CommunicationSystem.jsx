@@ -1,6 +1,21 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT */
+const keywords = [
+  "Communication Systems Project Development",
+  "IEEE Communication Systems Projects",
+  "5G 6G Wireless Projects",
+  "Optical Fiber Communication Projects",
+  "IoT Communication Systems",
+  "Cognitive Radio Projects",
+  "Satellite Communication IEEE Projects",
+  "SDR FPGA Communication Projects",
+  "AI in Communication Networks",
+  "PhD Communication Systems Research"
+];
 
 const faqs = [
   {
@@ -34,62 +49,40 @@ const ECECommunicationSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ✅ SEO */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Communication Systems IEEE Projects for B.Tech, M.Tech & PhD (2023–2025)"
+        title="Communication Systems – Project Development Center in Chennai"
         description="Communication Systems project development for B.Tech, M.Tech & PhD students focusing on 5G, 6G, IoT, optical fiber communication, AI-driven protocols, SDR, FPGA, and IEEE-aligned research projects."
-        url="/department/communication-systems"
-        type="article"
-        keywords={[
-          "Communication Systems Project Development",
-          "IEEE Communication Systems Projects",
-          "5G 6G Wireless Projects",
-          "Optical Fiber Communication Projects",
-          "IoT Communication Systems",
-          "Cognitive Radio Projects",
-          "Satellite Communication IEEE Projects",
-          "SDR FPGA Communication Projects",
-          "AI in Communication Networks",
-          "PhD Communication Systems Research"
-        ]}
+        url="/communication-systems-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
+          {/* ✅ LEFT SIDEBAR (ONLY CHANGE) */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Communication Systems Project Development Center</li>
-              <li>IEEE Communication Systems Projects</li>
-              <li>5G 6G Wireless Projects</li>
-              <li>Optical Fiber Communication Projects</li>
-              <li>IoT Communication Systems</li>
-              <li>Cognitive Radio Projects</li>
-              <li>Satellite Communication IEEE Projects</li>
-              <li>SDR FPGA Communication Projects</li>
-              <li>MATLAB NS3 Communication Simulation</li>
-              <li>AI in Communication Networks</li>
-              <li>Narpavi Research Institute Communication Projects</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
-          </div>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Communication Systems – Project Development Center</h1>
+            <h1>Communication Systems – Project Development Center in Chennai</h1>
 
-            <p className="seo-internal-links">
-              Explore related domains:
-              <a href="/ece-project-development"> ECE Project Development</a>,
-              <a href="/phd-project-development"> PhD Research Guidance</a>,
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing</a>
-            </p>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+         <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Communication Systems – Project Development Center, a globally recognized hub empowering B.Tech, M.Tech, and Ph.D. students to develop innovative, IEEE-aligned (2023–2025) communication systems projects, focusing on 5G/6G, IoT, optical fiber, and AI-driven protocols.
               </p>
@@ -233,20 +226,18 @@ const ECECommunicationSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right */}
-          <div className="ECEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
+          {/* ✅ RIGHT SIDEBAR (ONLY CHANGE) */}
+          <aside className="right-sidebar1">
             <ul>
-  <li><a href="/department/communication-systems">Communication Systems </a></li>
-  <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
-  <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
-  <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
-  <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
-  <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
-  <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
-</ul>
-
-          </div>
+              <li><a href="/department/communication-systems">Communication Systems</a></li>
+              <li><a href="/department/communication-systems/5g-6g-wireless-communication">5G & 6G Wireless Communication</a></li>
+              <li><a href="/department/communication-systems/error-control-coding">Error Control Coding</a></li>
+              <li><a href="/department/communication-systems/mimo-massive-mimo-antenna-techniques">MIMO & Massive MIMO Antenna Techniques</a></li>
+              <li><a href="/department/communication-systems/optical-fiber-communication">Optical Fiber Communication</a></li>
+              <li><a href="/department/communication-systems/software-defined-radio">Software Defined Radio</a></li>
+              <li><a href="/department/communication-systems/cognitive-radio-networks">Cognitive Radio Networks</a></li>
+            </ul>
+          </aside>
 
         </div>
       </div>

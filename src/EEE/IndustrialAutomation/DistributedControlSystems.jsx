@@ -1,67 +1,94 @@
-import "../EEEProjectDevelopmentCenter.scss";  
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";  
-import SEO from "../../assets/SEO"
+import "../EEEProjectDevelopmentCenter.scss";
+import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Distributed Control Systems Project Development Center in Chennai",
+  "DCS IEEE Projects 2023–2025",
+  "Industrial Automation DCS Projects",
+  "Process Automation DCS Systems",
+  "B.Tech DCS Mini Projects",
+  "M.Tech IoT Enabled DCS",
+  "Ph.D AI Cyber Physical DCS",
+  "Industry 4.0 Distributed Control Systems",
+  "Profibus Modbus OPC DCS",
+  "Narpavi Research Institute DCS Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Distributed Control Systems (DCS) Project Development Center offer?",
-    answer: "We guide B.Tech, M.Tech, and Ph.D. students through IEEE-aligned (2023–2025) projects in DCS, covering simulation, hardware setup, communication integration, AI/ML-based DCS, and publication support."
+    question:
+      "What services does the Distributed Control Systems (DCS) Project Development Center offer?",
+    answer:
+      "We guide B.Tech, M.Tech, and Ph.D. students through IEEE-aligned (2023–2025) projects in DCS, covering simulation, hardware setup, communication integration, AI/ML-based DCS, and publication support."
   },
   {
     question: "What types of DCS projects are supported?",
-    answer: "B.Tech projects include mini-DCS setups like water treatment, process plant simulations, and small-scale automation. M.Tech projects involve industrial communication protocols (Profibus, Modbus, OPC) and IoT-enabled DCS. Ph.D. projects focus on AI-integrated DCS, cyber-physical architectures, Industry 4.0 compliance, patents, and IEEE/SCI publications."
+    answer:
+      "B.Tech projects include mini-DCS setups and plant simulations. M.Tech projects focus on industrial protocols and IoT-enabled DCS. Ph.D. projects cover AI-integrated cyber-physical DCS and Industry 4.0 architectures."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, LabVIEW, PLC/DCS trainers, Wonderware/Emerson DeltaV SCADA software, Modbus/Profibus/OPC networking, edge IoT devices, and Python AI/ML frameworks such as TensorFlow & PyTorch."
+    answer:
+      "MATLAB/Simulink, LabVIEW, PLC/DCS trainers, Wonderware, DeltaV, Modbus, Profibus, OPC, IoT devices, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are aligned with IEEE Transactions (2023–2025) on industrial communication, distributed multi-loop process automation, AI for predictive DCS monitoring, and Industry 4.0 IoT-DCS integrations."
+    answer:
+      "Projects are aligned with IEEE Transactions (2023–2025) on industrial automation, distributed control, AI-based monitoring, and Industry 4.0 systems."
   },
   {
     question: "What academic support is provided?",
-    answer: "End-to-end guidance is provided: topic selection, simulations, hardware prototyping, industrial communication networking, analysis, IEEE-style documentation, and Scopus/SCI publication support."
+    answer:
+      "End-to-end support including topic selection, simulations, hardware prototyping, networking, IEEE documentation, and Scopus/SCI publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Distributed Control Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Distributed Control Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering industrial automation, IoT-enabled DCS, AI predictive monitoring, and Industry 4.0 compliant control systems.";
+
+const pageUrl = "/department/industrial-automation/dcs";
 
 const EEEDcsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Distributed Control Systems DCS IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Distributed Control Systems DCS projects for B.Tech, M.Tech, Ph.D. Process automation, IoT-enabled DCS, AI predictive monitoring using MATLAB/Simulink, LabVIEW, Modbus Profibus OPC for power plants, refineries, Industry 4.0."
-  keywords="Distributed Control Systems DCS IEEE Projects 2023–2025, B.Tech Mini-DCS Projects, M.Tech IoT DCS Integration, Ph.D. AI Cyber-Physical DCS, Profibus Modbus OPC DCS, Smart Factory DCS, Industry 4.0 DCS Projects, Narpavi Research Institute"
-  url="/department/industrial-automation/dcs"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🔑 Left Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Distributed Control Systems Project Development Center</li>
-              <li>DCS Projects IEEE</li>
-              <li>Industrial Automation with DCS</li>
-              <li>Process Automation DCS Projects</li>
-              <li>Smart Factory DCS Projects</li>
-              <li>IoT-DCS Integration Projects</li>
-              <li>AI in Distributed Control Systems</li>
-              <li>Industrial Control IEEE Projects</li>
-              <li>Industry 4.0 DCS Projects</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Center */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Distributed Control Systems (DCS) – Project Development Support</h1>
-
-            {/* Intro */}
+            <h1>{pageTitle}</h1>
+ {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Distributed Control Systems (DCS) Project Development Center, guiding scholars worldwide in developing IEEE-aligned (2023–2025) projects on process automation, multi-loop control, IIoT-enabled DCS, and cyber-secure Industry 4.0 DCS systems.</p>
               <p>DCS is widely deployed in power plants, chemical refineries, energy industries, and smart factories where fault tolerance, scalability, and reliability are non-negotiable.</p>
@@ -178,53 +205,31 @@ const EEEDcsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Column */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/industrial-automation">
-      Industrial Automation – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/dcs">
-      DCS (Distributed Control Systems)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/hmi">
-      HMI (Human-Machine Interface)
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/iiot-applications">
-      IIoT Applications in Industrial Automation
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/plc-scada">
-      PLC & SCADA Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/predictive-maintenance">
-      Predictive Maintenance Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/industrial-automation/rpa">
-      RPA (Robotic Process Automation)
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/industrial-automation">Industrial Automation</a></li>
+              <li><a href="/department/industrial-automation/dcs">Distributed Control Systems</a></li>
+              <li><a href="/department/industrial-automation/hmi">Human Machine Interface</a></li>
+              <li><a href="/department/industrial-automation/iiot-applications">IIoT Applications</a></li>
+              <li><a href="/department/industrial-automation/plc-scada">PLC & SCADA</a></li>
+              <li><a href="/department/industrial-automation/predictive-maintenance">Predictive Maintenance</a></li>
+              <li><a href="/department/industrial-automation/rpa">Robotic Process Automation</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEDcsProjectDevelopmentCenter;

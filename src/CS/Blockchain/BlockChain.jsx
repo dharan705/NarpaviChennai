@@ -1,65 +1,86 @@
 import "./Blockchain.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Csesidebar from "../../assets/Csesidebar";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+const keywords = [
+  "Blockchain – Project Development Center in Chennai",
+  "Blockchain IEEE Projects 2023–2025",
+  "Smart Contract Development for Students",
+  "Blockchain IoT Integration",
+  "B.Tech Blockchain Project Support",
+  "M.Tech Blockchain IEEE Topics",
+  "Ph.D. Blockchain Research Guidance",
+  "Narpavi Research Institute Blockchain Services",
+  "Decentralized Applications Development",
+  "Blockchain IEEE Paper Publication Support"
+];
 
 const faqs = [
   {
     question: "What services does the Blockchain Project Development Center offer?",
-    answer: "Narpavi Research Institute's Blockchain Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) blockchain projects, focusing on smart contracts, DApps, and enterprise solutions."
+    answer:
+      "Narpavi Research Institute's Blockchain Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) blockchain projects, focusing on smart contracts, DApps, and enterprise solutions."
   },
   {
     question: "What types of blockchain projects are supported?",
-    answer: "We support B.Tech projects (wallets, voting systems), M.Tech projects (DApps, cross-chain protocols), and Ph.D. projects (novel consensus algorithms, privacy mechanisms) for industries like healthcare, finance, and supply chain."
+    answer:
+      "We support B.Tech projects (wallets, voting systems), M.Tech projects (DApps, cross-chain protocols), and Ph.D. projects (novel consensus algorithms, privacy mechanisms) for industries like healthcare, finance, and supply chain."
   },
   {
     question: "Which technologies are used in blockchain project development?",
-    answer: "Our stack includes Ethereum, Hyperledger Fabric, Polygon, Solidity, Web3.js, and integrations with AI, IoT, and cloud platforms for scalable blockchain solutions."
+    answer:
+      "Our stack includes Ethereum, Hyperledger Fabric, Polygon, Solidity, Web3.js, and integrations with AI, IoT, and cloud platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like blockchain scalability, interoperability, and privacy, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like blockchain scalability, interoperability, and privacy."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, architecture design, implementation, testing, documentation, and IEEE/SCI journal publication support."
+    answer:
+      "We offer end-to-end guidance including topic selection, architecture design, implementation, testing, documentation, and IEEE/SCI journal publication support."
   }
 ];
 
 const BlockchainProjectDevelopmentCenter = () => {
   return (
-    <div className="BlockchainProjectDevelopmentCenter">
-      <SEO 
-        title="Blockchain IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Blockchain projects for B.Tech, M.Tech, Ph.D. Smart contracts, DApps, Ethereum, Hyperledger, Solidity for healthcare, finance, supply chain."
-        keywords="Blockchain Project Development Center, Blockchain IEEE 2023–2025 Projects, Smart Contract Development for Students, Blockchain IoT Integration, B.Tech Blockchain Project Support, M.Tech Blockchain IEEE Topics, Ph.D. Blockchain Research Guidance, Narpavi Research Institute Blockchain Services, Decentralized Applications Development, Blockchain IEEE Paper Publication Support"
-        url="/blockchain-project-development"
+    <div className="MobileAppDevelopmentCenter">
+      {/* ✅ SEO FIXED (KEYWORDS AS ARRAY) */}
+      <SEO
+        title="Blockchain – Project Development Center in Chennai"
+        description="Blockchain – Project Development Center in Chennai offering IEEE 2023–2025 blockchain projects in smart contracts, DApps, Ethereum, Hyperledger, and decentralized systems for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/blockchain-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="BlockchainProjectDevelopmentCenter-main">
-        <div className="BlockchainProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="BlockchainProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+            <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Blockchain Project Development Center</li>
-              <li>Blockchain IEEE 2023–2025 Projects</li>
-              <li>Smart Contract Development for Students</li>
-              <li>Blockchain IoT Integration</li>
-              <li>B.Tech Blockchain Project Support</li>
-              <li>M.Tech Blockchain IEEE Topics</li>
-              <li>Ph.D. Blockchain Research Guidance</li>
-              <li>Narpavi Research Institute Blockchain Services</li>
-              <li>Decentralized Applications Development</li>
-              <li>Blockchain IEEE Paper Publication Support</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="BlockchainProjectDevelopmentCenter-center">
-            <h1>Blockchain – Project Development Center</h1>
-
-            <section className="BlockchainProjectDevelopmentCenter-intro">
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Blockchain – Project Development Center in Chennai</h1>
+<section className="MobileAppDevelopmentCenter-intro">
               <p>
                 The <strong>Blockchain – Project Development Center</strong> at Narpavi Research Institute is dedicated to fostering cutting-edge blockchain innovations that align with global industry trends and IEEE research advancements from 2023 to 2025. Through our expertise, students from B.Tech, M.Tech, and Ph.D. programs receive end-to-end guidance in developing blockchain-powered software and hardware projects, ensuring academic excellence and real-world applicability. The Blockchain – Project Development Center thrives on innovation, security, and scalability, supporting learners across the globe with both technical and research-driven project execution. By integrating blockchain topics sourced from recent IEEE Transactions, our projects maintain industry relevance and future readiness. The Blockchain – Project Development Center offers unparalleled support in areas like smart contracts, decentralized applications (DApps), and enterprise blockchain solutions.
               </p>
@@ -68,9 +89,9 @@ const BlockchainProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BlockchainProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="BlockchainProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -94,7 +115,7 @@ const BlockchainProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="BlockchainProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Blockchain Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on fundamental blockchain applications like wallets or voting systems, aligned with IEEE topics.
@@ -111,7 +132,7 @@ const BlockchainProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BlockchainProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Blockchain Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced blockchain projects like DApps or cross-chain protocols, aligned with IEEE research.
@@ -128,7 +149,7 @@ const BlockchainProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BlockchainProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Blockchain Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering blockchain research in novel consensus algorithms, privacy mechanisms, and hybrid models.
@@ -145,7 +166,7 @@ const BlockchainProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="BlockchainProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Blockchain Project Titles (2023–2025)</h2>
               <ul>
                 <li>Blockchain-Enabled Secure Supply Chain Management for Global Trade – 2023</li>
@@ -166,7 +187,7 @@ const BlockchainProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="BlockchainProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Blockchain Project Development</h2>
               <p>
                 Narpavi Technology stands as a beacon of innovation, technical expertise, and academic integrity. By aligning with IEEE's most recent blockchain research, we ensure every project embodies world-class standards. Students and researchers receive the finest mentorship, advanced tools, and structured workflows that transform ideas into fully functional blockchain solutions. At Narpavi Research Institute, Excellence in Blockchain Project Development with Narpavi Technology is not just a service — it is a commitment to delivering industry-ready, research-backed, and future-proof blockchain innovations.
@@ -183,29 +204,13 @@ const BlockchainProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>          </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+                <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="BlockchainProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

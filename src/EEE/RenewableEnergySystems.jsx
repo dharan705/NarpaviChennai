@@ -1,64 +1,83 @@
 import "./EEEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Renewable Energy Systems Project Development Center Chennai",
+  "Renewable Energy IEEE Projects",
+  "Solar PV IEEE Projects",
+  "Wind Energy IEEE Projects",
+  "Hybrid Renewable Microgrid Projects",
+  "Fuel Cell IEEE Projects",
+  "Energy Storage Integration Projects",
+  "AI in Renewable Energy Systems",
+  "B.Tech Renewable Energy Projects",
+  "M.Tech Renewable Energy Projects",
+  "Ph.D. Renewable Energy Research",
+  "Narpavi Research Institute"
+];
 
 const faqs = [
   {
     question: "What services does the Renewable Energy Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute's Renewable Energy Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in solar, wind, fuel cell, and hybrid energy systems for applications in smart grids, rural electrification, and green mobility."
+    answer:
+      "Narpavi Research Institute's Renewable Energy Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in solar, wind, fuel cell, and hybrid energy systems."
   },
   {
     question: "What types of renewable energy projects are supported?",
-    answer: "We support B.Tech projects (solar PV MPPT, wind converters), M.Tech projects (hybrid microgrids, energy storage), and Ph.D. projects (AI-based forecasting, V2G integration) for applications in smart cities, industrial power, and sustainable transport."
+    answer:
+      "We support B.Tech projects (solar PV MPPT, wind converters), M.Tech projects (hybrid microgrids, energy storage), and Ph.D. projects (AI-based forecasting, V2G integration)."
   },
   {
     question: "Which technologies are used in renewable energy project development?",
-    answer: "Our stack includes MATLAB/Simulink, HOMER, PVSyst, and embedded platforms like Arduino and Raspberry Pi for advanced renewable energy simulations and prototyping."
+    answer:
+      "Our stack includes MATLAB/Simulink, HOMER, PVSyst, Arduino, and Raspberry Pi."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like solar PV MPPT, hybrid microgrids, and AI-driven forecasting, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering solar PV MPPT, hybrid microgrids, and AI-driven forecasting."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We provide topic selection, simulation, hardware prototyping, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const EEERenewableEnergySystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-        title="Renewable Energy IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Renewable Energy projects for B.Tech, M.Tech, Ph.D. Solar PV, wind, hybrid microgrids, fuel cells, V2G for smart grids, rural electrification, green mobility."
-        keywords="Renewable Energy IEEE Projects 2023–2025, Solar PV IEEE Projects, Wind Energy IEEE Research, Hybrid Renewable Microgrid IEEE Projects, B.Tech Renewable Energy Projects, M.Tech Sustainable Energy IEEE Projects, Ph.D. Renewable Energy Thesis, Hydrogen Fuel Cell IEEE Projects, AI in Renewable Systems, Narpavi Research Institute"
-        url="/renewable-energy-systems-project-development"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Renewable Energy Systems – Project Development Center in Chennai"
+        description="Renewable Energy Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on solar PV, wind energy, hybrid microgrids, fuel cells, energy storage, V2G, and IEEE-aligned research (2023–2025)."
+        url="/renewable-energy-systems-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "eee", label: "eee", path: "/department?dept=eee" }
+        ]}
+      />
+
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Renewable Energy IEEE Projects 2023–2025</li>
-              <li>Solar PV IEEE Projects</li>
-              <li>Wind Energy IEEE Research</li>
-              <li>Hybrid Renewable Microgrid IEEE Projects</li>
-              <li>B.Tech Renewable Energy Projects</li>
-              <li>M.Tech Sustainable Energy IEEE Projects</li>
-              <li>Ph.D. Renewable Energy Thesis</li>
-              <li>Hydrogen Fuel Cell IEEE Projects</li>
-              <li>AI in Renewable Systems</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ❌ MAIN CONTENT (UNCHANGED) */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Renewable Energy Systems – Project Development Center</h1>
-
+            <h1>Renewable Energy Systems – Project Development Center in Chennai</h1>
+            
             <section className="EEEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Renewable Energy Systems – Project Development Center, a dedicated hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in solar, wind, fuel cell, and hybrid energy systems.
@@ -224,48 +243,26 @@ const EEERenewableEnergySystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="EEEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/renewable-energy-systems">
-      Renewable Energy Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/solar-photovoltaic">
-      Solar Photovoltaic Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/wind-energy-conversion">
-      Wind Energy Conversion Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/biomass-fuel-cell">
-      Biomass Fuel Cell Technologies
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/energy-storage-integration">
-      Energy Storage & Renewable Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/hybrid-renewable-systems">
-      Hybrid Renewable Energy Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/renewable-energy-systems/grid-integration-renewables">
-      Grid Integration of Renewables
-    </a>
-  </li>
-</ul>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
+            <ul>
+              <li><a href="/department/renewable-energy-systems">Renewable Energy Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/solar-photovoltaic">Solar Photovoltaic Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/wind-energy-conversion">Wind Energy Conversion Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/biomass-fuel-cell">Biomass & Fuel Cell Technologies</a></li>
+              <li><a href="/department/renewable-energy-systems/energy-storage-integration">Energy Storage Integration</a></li>
+              <li><a href="/department/renewable-energy-systems/hybrid-renewable-systems">Hybrid Renewable Systems</a></li>
+              <li><a href="/department/renewable-energy-systems/grid-integration-renewables">Grid Integration of Renewables</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

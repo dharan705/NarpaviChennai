@@ -1,90 +1,86 @@
 import "./CEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Geotechnical Engineering IEEE Projects 2023–2025",
+  "Soil Mechanics IEEE Projects",
+  "Slope Stability Analysis Projects",
+  "Foundation Design Projects",
+  "Ground Improvement Techniques",
+  "AI in Geotechnical Engineering",
+  "IoT Geotechnical Monitoring",
+  "Geotechnical Engineering PhD Projects",
+  "Landslide Prediction using AI",
+  "Narpavi Research Institute Civil Projects",
+];
 
 const faqs = [
   {
     question: "What services does the Geotechnical Engineering Project Development Center offer?",
     answer:
-      "Narpavi Research Institute’s Geotechnical Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on soil mechanics, foundation design, slope stability, and IoT-based geotechnical monitoring for robust infrastructure solutions."
+      "Narpavi Research Institute’s Geotechnical Engineering Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on soil mechanics, foundation design, slope stability, and IoT-based geotechnical monitoring.",
   },
   {
     question: "What types of Geotechnical Engineering projects are supported?",
     answer:
-      "We support B.Tech projects (basic soil mechanics and foundation design), M.Tech projects (advanced geotechnical simulations), and Ph.D. projects (AI and IoT-driven geotechnical systems) for applications in tunnels, embankments, and dams."
+      "We support B.Tech, M.Tech, and Ph.D. projects covering soil mechanics, slope stability, foundation design, AI, and IoT-based monitoring.",
   },
   {
     question: "Which tools and technologies are used in Geotechnical Engineering projects?",
     answer:
-      "Our stack includes Plaxis 2D/3D, GeoStudio, FLAC3D, ANSYS, IoT sensors (piezometers, accelerometers), and AI frameworks (TensorFlow, Keras) for soil-structure analysis and monitoring."
+      "Tools include Plaxis 2D/3D, GeoStudio, FLAC3D, ANSYS, IoT sensors, and AI frameworks.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
     answer:
-      "Projects are based on IEEE Transactions (2023–2025) on Geotechnical Engineering and Civil Infrastructure, focusing on soil stabilization, seismic geotechnics, and smart monitoring."
+      "Projects are aligned with IEEE Transactions (2023–2025) on Geotechnical Engineering and Civil Infrastructure.",
   },
   {
     question: "What support is provided for academic submissions?",
     answer:
-      "We offer end-to-end guidance, including topic selection, numerical modeling, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
-  }
+      "We provide complete guidance from topic selection to modeling, validation, documentation, and publication.",
+  },
 ];
 
 const CEGeotechnicalEngineeringProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
 
-      {/* ✅ SEO (added – content untouched) */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Geotechnical Engineering IEEE Projects (2023–2025)"
-        description="Geotechnical Engineering IEEE project development for B.Tech, M.Tech & PhD scholars focusing on soil mechanics, foundation design, slope stability, AI, IoT monitoring, and resilient infrastructure."
+        title="Geotechnical Engineering – Project Development Center in Chennai"
+        description="Geotechnical Engineering project development for B.Tech, M.Tech, and Ph.D. students focusing on soil mechanics, foundation design, slope stability, AI, IoT monitoring, and resilient infrastructure."
+        keywords={keywords}
         url="/department/geotechnical-engineering"
-        type="article"
-        keywords={[
-          "Geotechnical Engineering Projects",
-          "Soil Mechanics IEEE Projects",
-          "Slope Stability Analysis Projects",
-          "Foundation Design Projects",
-          "AI in Geotechnical Engineering",
-          "IoT Geotechnical Monitoring",
-          "PhD Geotechnical Engineering Projects"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" },
+        ]}
+      />
 
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Geotechnical Engineering Projects</li>
-              <li>Soil Mechanics IEEE Projects 2023–2025</li>
-              <li>Slope Stability Analysis Projects</li>
-              <li>Tunnel and Foundation Design</li>
-              <li>Ground Improvement Techniques</li>
-              <li>Geotechnical B.Tech M.Tech Ph.D. Projects</li>
-              <li>Landslide Prediction using AI</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
-            <h1>Geotechnical Engineering – Project Development Support</h1>
 
-            {/* Internal links (added, content preserved) */}
-            <p className="seo-internal-links">
-              Explore our
-              <a href="/civil-engineering-project-development"> Civil Engineering Project Development</a>,
-              <a href="/phd-project-development"> PhD Project Guidance</a>, and
-              <a href="/journal-writing-services"> IEEE & SCI Journal Writing Services</a>
-              for complete academic support.
-            </p>
-
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Geotechnical Engineering – Project Development Center in Chennai
+            </h1>
+              
             <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Geotechnical Engineering Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on soil mechanics, foundation design, and geotechnical monitoring. Our projects focus on creating stable and resilient foundations for infrastructure like tunnels, embankments, and dams.
@@ -242,33 +238,38 @@ const CEGeotechnicalEngineeringProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Related Services */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/geotechnical-engineering">
-      Geotechnical Engineering
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
-      Soil Stabilization Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/foundation-design">
-      Foundation Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/geotechnical-engineering/slope-stability-analysis">
-      Slope Stability Analysis
-    </a>
-  </li>
-</ul>
-
-          </div>
+              <li>
+                <a href="/department/geotechnical-engineering">
+                  Geotechnical Engineering
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/soil-stabilization-techniques">
+                  Soil Stabilization Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/foundation-design">
+                  Foundation Design
+                </a>
+              </li>
+              <li>
+                <a href="/department/geotechnical-engineering/slope-stability-analysis">
+                  Slope Stability Analysis
+                </a>
+              </li>
+            </ul>
+              <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

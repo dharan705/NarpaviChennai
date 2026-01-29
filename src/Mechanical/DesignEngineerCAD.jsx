@@ -1,65 +1,83 @@
 import "./MEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Design Engineering Project Development Center Chennai",
+  "CAD CAM Project Development Center Chennai",
+  "CAD CAM IEEE Projects 2023–2025",
+  "FEA Project Development",
+  "Topology Optimization Student Projects",
+  "Mechanism Design IEEE Research",
+  "PLM Project Ideas",
+  "AI-Assisted CAD Modeling",
+  "Multi-Physics Simulation Projects",
+  "CAD CAM Integration Student Projects",
+  "Smart Manufacturing Design Projects",
+  "Narpavi Research Institute CAD CAM Projects"
+];
 
 const faqs = [
   {
     question: "What services does the Design Engineering / CAD & CAM Project Development Center offer?",
-    answer: "Narpavi Research Institute's Design Engineering / CAD & CAM Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on FEA, topology optimization, mechanism design, AI-driven CAD, and PLM for industries like automotive, aerospace, and manufacturing."
+    answer:
+      "Narpavi Research Institute's Design Engineering / CAD & CAM Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on FEA, topology optimization, mechanism design, AI-driven CAD, and PLM."
   },
   {
     question: "What types of CAD & CAM projects are supported?",
-    answer: "We support B.Tech projects (basic CAD modeling, FEA), M.Tech projects (topology optimization, CAM integration), and Ph.D. projects (AI-driven design, digital twins) for applications in smart manufacturing and precision engineering."
+    answer:
+      "We support B.Tech projects (basic CAD modeling, FEA), M.Tech projects (topology optimization, CAM integration), and Ph.D. projects (AI-driven design, digital twins)."
   },
   {
     question: "Which tools and technologies are used in CAD & CAM projects?",
-    answer: "Our stack includes SolidWorks, AutoCAD, CATIA, ANSYS, Abaqus, MATLAB, Python, AI frameworks (TensorFlow, Keras), PLM platforms, and CAM tools (Fusion 360, Siemens NX) for design, simulation, and prototyping."
+    answer:
+      "Our stack includes SolidWorks, AutoCAD, CATIA, ANSYS, Abaqus, MATLAB, Python, AI frameworks, PLM platforms, and CAM tools."
   },
   {
     question: "How are CAD & CAM projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Manufacturing, focusing on AI-driven design, topology optimization, and digital twin-enabled product development."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Manufacturing."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD/FEA modeling, AI integration, CAM simulations, prototyping, documentation, and support for IEEE/Scopus/Elsevier/ASTM journal publications and patents."
+    answer:
+      "We provide end-to-end guidance including CAD/FEA modeling, AI integration, CAM simulations, documentation, and IEEE/Scopus journal support."
   }
 ];
 
 const MEDesignEngineeringCADCAMProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
-      <SEO 
-        title="CAD/CAM IEEE Projects | FEA, Topology Optimization | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023-2025) Design Engineering / CAD & CAM projects. SolidWorks, ANSYS, CATIA, AI-driven design, topology optimization, digital twins for automotive, aerospace."
-        keywords="CAD/CAM IEEE Projects 2023–2025, FEA Project Development, Topology Optimization Student Projects, Mechanism Design IEEE Research, PLM Project Ideas, AI-Assisted CAD Modeling, Multi-Physics Simulation Projects, CAD-CAM Integration Student Projects, Narpavi Research Institute CAD & CAM Projects, Smart Manufacturing Design Projects"
-        url="/department/design-engineering-cad"
+
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Design Engineering / CAD & CAM – Project Development Center in Chennai"
+        description="Design Engineering / CAD & CAM Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on FEA, topology optimization, AI-driven CAD, CAM integration, PLM, and smart manufacturing (2023–2025)."
+        url="/design-engineering-cad-cam-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Subsidebar
+        extraLinks={[
+          { id: "mech", label: "mech", path: "/department?dept=mech" }
+        ]}
+      />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>CAD/CAM IEEE Projects 2023–2025</li>
-              <li>FEA Project Development</li>
-              <li>Topology Optimization Student Projects</li>
-              <li>Mechanism Design IEEE Research</li>
-              <li>PLM Project Ideas</li>
-              <li>AI-Assisted CAD Modeling</li>
-              <li>Multi-Physics Simulation Projects</li>
-              <li>CAD-CAM Integration Student Projects</li>
-              <li>Narpavi Research Institute CAD & CAM Projects</li>
-              <li>Smart Manufacturing Design Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>              
+          </aside>
+
+          {/* ❌ MAIN CONTENT (UNCHANGED) */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Design Engineering / CAD & CAM – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            <h1>Design Engineering / CAD & CAM – Project Development Center in Chennai</h1>
+                   <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Design Engineering / CAD & CAM Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on FEA, topology optimization, mechanism design, AI-driven CAD, and PLM.
               </p>
@@ -234,43 +252,25 @@ const MEDesignEngineeringCADCAMProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <ul>
-  <li>
-    <a href="/department/design-engineering-cad">
-      Design Engineering & CAD
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/finite-element-analysis">
-      Finite Element Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/cad-modeling-simulation">
-      CAD Modeling & Simulation
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/mechanism-design">
-      Mechanism Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/topology-optimization">
-      Topology Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/product-lifecycle-management">
-      Product Lifecycle Management
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/design-engineering-cad">Design Engineering & CAD</a></li>
+              <li><a href="/department/design-engineering-cad/finite-element-analysis">Finite Element Analysis</a></li>
+              <li><a href="/department/design-engineering-cad/cad-modeling-simulation">CAD Modeling & Simulation</a></li>
+              <li><a href="/department/design-engineering-cad/mechanism-design">Mechanism Design</a></li>
+              <li><a href="/department/design-engineering-cad/topology-optimization">Topology Optimization</a></li>
+              <li><a href="/department/design-engineering-cad/product-lifecycle-management">Product Lifecycle Management</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,64 +1,86 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
-    question: "What services does the Swarm Robotics and Multi-Agent Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Swarm Robotics and Multi-Agent Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in swarm intelligence, multi-agent coordination, and decentralized robotic systems for applications in warehouse automation, UAVs, and smart cities."
+    question:
+      "What services does the Swarm Robotics and Multi-Agent Systems Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Swarm Robotics and Multi-Agent Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in swarm intelligence, multi-agent coordination, and decentralized robotic systems for applications in warehouse automation, UAVs, and smart cities.",
   },
   {
-    question: "What types of Swarm Robotics and Multi-Agent Systems projects are supported?",
-    answer: "We support B.Tech projects (multi-robot formations, collaborative obstacle avoidance), M.Tech projects (swarm intelligence, distributed AI), and Ph.D. projects (AI-driven swarm navigation, blockchain-enabled trust systems) for applications in search and rescue, agriculture, and defense."
+    question:
+      "What types of Swarm Robotics and Multi-Agent Systems projects are supported?",
+    answer:
+      "We support B.Tech projects (multi-robot formations, collaborative obstacle avoidance), M.Tech projects (swarm intelligence, distributed AI), and Ph.D. projects (AI-driven swarm navigation, blockchain-enabled trust systems) for applications in search and rescue, agriculture, and defense.",
   },
   {
-    question: "Which technologies are used in Swarm Robotics and Multi-Agent Systems project development?",
-    answer: "Our stack includes swarm intelligence algorithms (PSO, ACO), ROS, MATLAB/Simulink, wireless communication protocols (MQTT, Zigbee), distributed AI frameworks (TensorFlow, PyTorch), and blockchain platforms like Ethereum for multi-agent systems."
+    question:
+      "Which technologies are used in Swarm Robotics and Multi-Agent Systems project development?",
+    answer:
+      "Our stack includes swarm intelligence algorithms (PSO, ACO), ROS, MATLAB/Simulink, wireless communication protocols (MQTT, Zigbee), distributed AI frameworks (TensorFlow, PyTorch), and blockchain platforms like Ethereum for multi-agent systems.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like decentralized path planning, swarm-based UAV coordination, and bio-inspired algorithms, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like decentralized path planning, swarm-based UAV coordination, and bio-inspired algorithms, ensuring academic and industry relevance.",
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, algorithm design, simulation with ROS or MATLAB, hardware implementation, documentation, and IEEE/Scopus/SCI journal publication support."
-  }
+    answer:
+      "We offer end-to-end guidance, including topic selection, algorithm design, simulation with ROS or MATLAB, hardware implementation, documentation, and IEEE/Scopus/SCI journal publication support.",
+  },
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Swarm Robotics Projects",
+  "Multi-Agent Systems Project Support",
+  "IEEE Robotics Projects 2023–2025",
+  "Swarm Intelligence Algorithms",
+  "Multi-Robot Coordination Projects",
+  "Blockchain Multi-Agent Robotics",
+  "ROS Swarm Simulation Projects",
+  "UAV Swarm Robotics",
+  "Decentralized Robotics Systems",
+  "Narpavi Research Institute Robotics",
+  "Bio-Inspired Robotics Projects",
 ];
 
 const ECESwarmRoboticsMultiAgentSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Swarm Robotics and Multi-Agent Systems IEEE Projects | Swarm Intelligence, Blockchain, MARL | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) swarm robotics and multi-agent systems projects using swarm intelligence (PSO, ACO), ROS, MQTT/Zigbee, distributed AI with TensorFlow/PyTorch, and blockchain (Ethereum, Hyperledger) for warehouse automation, UAVs, search and rescue, and smart cities."
-        keywords="Swarm Robotics Projects, Multi-Agent Systems Project Support, IEEE Robotics Projects 2023–2025, Swarm Intelligence Algorithms, Multi-Robot Coordination Projects, Blockchain Multi-Agent Robotics, ROS Swarm Simulation Projects, UAV Swarm Robotics, Decentralized Robotics Systems, Narpavi Research Institute Robotics, Bio-Inspired Robotics Projects"
-        url="/department/control-systems-robotics/swarm-robotics-multi-agent-systems"
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Swarm Robotics and Multi-Agent Systems – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) swarm robotics and multi-agent systems projects using swarm intelligence (PSO, ACO), ROS, MQTT/Zigbee, distributed AI with TensorFlow/PyTorch, and blockchain for warehouse automation, UAVs, search and rescue, and smart cities."
+        keywords={keywords}
+        url="/department/control-systems-robotics/swarm-robotics-multi-agent-systems-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" },
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Swarm Robotics Projects</li>
-              <li>Multi-Agent Systems Project Support</li>
-              <li>IEEE Robotics Projects 2023–2025</li>
-              <li>Swarm Intelligence Algorithms</li>
-              <li>Multi-Robot Coordination Projects</li>
-              <li>Blockchain Multi-Agent Robotics</li>
-              <li>ROS Swarm Simulation Projects</li>
-              <li>UAV Swarm Robotics</li>
-              <li>Decentralized Robotics Systems</li>
-              <li>Narpavi Research Institute Robotics</li>
-              <li>Bio-Inspired Robotics Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Swarm Robotics and Multi-Agent Systems – Project Development Support</h1>
-
+            <h1>Swarm Robotics and Multi-Agent Systems – Project Development Center in Chennai</h1>
+              
             <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Swarm Robotics and Multi-Agent Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to design collaborative robotic systems aligned with IEEE Transactions (2023–2025). Our projects focus on swarm intelligence, multi-agent coordination, and decentralized control for applications in warehouse automation, UAVs, and smart cities.
@@ -221,40 +243,29 @@ const ECESwarmRoboticsMultiAgentSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-             <ul>
-  <li><a href="/department/control-systems-robotics">Control Systems & Robotics Project </a></li>
-  <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
-  <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
-  <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
-  <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
-  <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/control-systems-robotics">Control Systems & Robotics</a></li>
+              <li><a href="/department/control-systems-robotics/adaptive-nonlinear-control-systems">Adaptive Nonlinear Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/ai-powered-robotic-control-systems">AI-Powered Robotic Control Systems</a></li>
+              <li><a href="/department/control-systems-robotics/autonomous-robot-navigation-path-planning">Autonomous Robot Navigation & Path Planning</a></li>
+              <li><a href="/department/control-systems-robotics/swarm-robotics-multi-agent-systems">Swarm Robotics & Multi-Agent Systems</a></li>
+              <li><a href="/department/control-systems-robotics/control-cyber-physical-systems">Control in Cyber-Physical Systems</a></li>
+              <li><a href="/department/control-systems-robotics/robotic-vision-sensor-fusion">Robotic Vision & Sensor Fusion</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

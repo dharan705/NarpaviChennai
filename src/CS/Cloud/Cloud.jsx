@@ -1,65 +1,88 @@
 import "./Cloud.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar";
 import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
+
+const keywords = [
+  "Cloud Computing – Project Development Center in Chennai",
+  "IEEE Cloud Computing Projects 2023–2025",
+  "Hybrid Cloud Architecture Projects",
+  "Cloud Computing for B.Tech Projects",
+  "M.Tech Cloud Computing Research",
+  "Ph.D. Cloud Computing Dissertation",
+  "Narpavi Research Institute Cloud Projects",
+  "Serverless Computing IEEE Topics",
+  "Cloud Security Research 2024",
+  "AI in Cloud Computing 2025"
+];
 
 const faqs = [
   {
     question: "What services does the Cloud Computing Project Development Center offer?",
-    answer: "Narpavi Research Institute's Cloud Computing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) cloud computing projects, focusing on virtualization, containerization, serverless computing, and hybrid cloud solutions."
+    answer:
+      "Narpavi Research Institute's Cloud Computing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) cloud computing projects, focusing on virtualization, containerization, serverless computing, and hybrid cloud solutions."
   },
   {
     question: "What types of cloud computing projects are supported?",
-    answer: "We support B.Tech projects (containerized apps, cloud-hosted databases), M.Tech projects (hybrid cloud systems, AI-integrated platforms), and Ph.D. projects (federated security, energy-efficient architectures) for industries like healthcare, finance, and telecom."
+    answer:
+      "We support B.Tech projects (containerized apps, cloud-hosted databases), M.Tech projects (hybrid cloud systems, AI-integrated platforms), and Ph.D. projects (federated security, energy-efficient architectures)."
   },
   {
     question: "Which technologies are used in cloud computing project development?",
-    answer: "Our stack includes VMware, Hyper-V, Docker, Kubernetes, AWS Lambda, Azure Functions, and AI tools like TensorFlow for scalable cloud solutions."
+    answer:
+      "Our stack includes VMware, Hyper-V, Docker, Kubernetes, AWS Lambda, Azure Functions, and AI tools like TensorFlow."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like cloud security, multi-cloud orchestration, and AI-driven cloud systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like cloud security, multi-cloud orchestration, and AI-driven cloud systems."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, architecture design, implementation, testing, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance including topic selection, architecture design, implementation, testing, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
 const CloudComputingProjectDevelopmentCenter = () => {
   return (
-    <div className="CloudComputingProjectDevelopmentCenter">
-      <SEO 
-        title="Cloud Computing IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-        description="IEEE-aligned (2023-2025) Cloud Computing projects for B.Tech, M.Tech, Ph.D. Docker, Kubernetes, AWS Lambda, hybrid cloud, serverless for healthcare, finance, telecom."
-        keywords="Cloud Computing Project Development Center, IEEE Cloud Computing Projects 2023–2025, Hybrid Cloud Architecture, Cloud Computing for B.Tech Projects, M.Tech Cloud Research, Ph.D. Cloud Computing Dissertation, Narpavi Research Institute Cloud Projects, Serverless Computing IEEE Topics, Cloud Security Research 2024, AI in Cloud 2025"
-        url="/department/cloud-computing"
+    <div className="MobileAppDevelopmentCenter">
+      {/* ✅ SEO FIXED */}
+      <SEO
+        title="Cloud Computing – Project Development Center in Chennai"
+        description="Cloud Computing – Project Development Center in Chennai offering IEEE 2023–2025 cloud computing projects in Docker, Kubernetes, AWS Lambda, hybrid cloud, and serverless architectures for B.Tech, M.Tech, and Ph.D. students."
+        keywords={keywords}
+        url="/department/cloud-computing-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="CloudComputingProjectDevelopmentCenter-main">
-        <div className="CloudComputingProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="CloudComputingProjectDevelopmentCenter-left">
+
+      <Subsidebar
+        extraLinks={[
+          { id: "cse", label: "CSE", path: "/department?dept=cse" }
+        ]}
+      />
+
+      <div className="MobileAppDevelopmentCenter-main">
+        <div className="MobileAppDevelopmentCenter-grid">
+
+          {/* ✅ LEFT SIDEBAR */}
+          <div className="left-sidebar2">
+           <Leftsidebar/>
+
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Cloud Computing Project Development Center</li>
-              <li>IEEE Cloud Computing Projects 2023–2025</li>
-              <li>Hybrid Cloud Architecture</li>
-              <li>Cloud Computing for B.Tech Projects</li>
-              <li>M.Tech Cloud Research</li>
-              <li>Ph.D. Cloud Computing Dissertation</li>
-              <li>Narpavi Research Institute Cloud Projects</li>
-              <li>Serverless Computing IEEE Topics</li>
-              <li>Cloud Security Research 2024</li>
-              <li>AI in Cloud 2025</li>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </div>
 
-          {/* Center: Main Content */}
-          <div className="CloudComputingProjectDevelopmentCenter-center">
-            <h1>Cloud Computing – Project Development Center</h1>
+          {/* 🔒 CENTER CONTENT (UNCHANGED) */}
+          <div className="MobileAppDevelopmentCenter-center">
+            <h1>Cloud Computing – Project Development Center in Chennai</h1>
 
-            <section className="CloudComputingProjectDevelopmentCenter-intro">
+            <section className="MobileAppDevelopmentCenter-intro">
               <p>
                 <strong>Cloud Computing – Project Development</strong> Center at Narpavi Research Institute stands as a global hub for innovative research and development, providing unmatched expertise in both software and hardware projects for engineering students worldwide. With a focus on excellence, the Cloud Computing – Project Development Center supports B.Tech, M.Tech, and Ph.D. scholars in building projects aligned with IEEE Transactions between 2023 and 2025. Through cutting-edge methodologies, collaborative research practices, and advanced technological integration, the Cloud Computing – Project Development Center delivers solutions that meet modern industry demands while fostering academic brilliance.
               </p>
@@ -68,9 +91,9 @@ const CloudComputingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CloudComputingProjectDevelopmentCenter-table">
+            <section className="MobileAppDevelopmentCenter-table">
               <h2>Technology vs. Industry Comparative Table</h2>
-              <div className="CloudComputingProjectDevelopmentCenter-table-container">
+              <div className="MobileAppDevelopmentCenter-table-container">
                 <table>
                   <thead>
                     <tr>
@@ -95,7 +118,7 @@ const CloudComputingProjectDevelopmentCenter = () => {
               </div>
             </section>
 
-            <section className="CloudComputingProjectDevelopmentCenter-btech">
+            <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Cloud Computing Project Development</h2>
               <p>
                 For undergraduate students, our center focuses on foundational cloud computing projects like containerized applications or cloud-hosted databases, aligned with IEEE topics.
@@ -112,7 +135,7 @@ const CloudComputingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CloudComputingProjectDevelopmentCenter-mtech">
+            <section className="MobileAppDevelopmentCenter-mtech">
               <h2>M.Tech Cloud Computing Project Development</h2>
               <p>
                 For postgraduate students, we develop advanced cloud computing projects like hybrid cloud systems or AI-integrated platforms, aligned with IEEE research.
@@ -129,7 +152,7 @@ const CloudComputingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CloudComputingProjectDevelopmentCenter-phd">
+            <section className="MobileAppDevelopmentCenter-phd">
               <h2>Ph.D. Cloud Computing Project Development</h2>
               <p>
                 For doctoral scholars, our center focuses on pioneering cloud computing research in federated security, energy-efficient architectures, and multi-cloud orchestration.
@@ -146,7 +169,7 @@ const CloudComputingProjectDevelopmentCenter = () => {
               </p>
             </section>
 
-            <section className="CloudComputingProjectDevelopmentCenter-project-titles">
+            <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Cloud Computing Project Titles (2023–2025)</h2>
               <ul>
                 <li>Federated Cloud Security Framework for Multi-Cloud Environments – 2023</li>
@@ -162,7 +185,7 @@ const CloudComputingProjectDevelopmentCenter = () => {
               </ul>
             </section>
 
-            <section className="CloudComputingProjectDevelopmentCenter-excellence">
+            <section className="MobileAppDevelopmentCenter-excellence">
               <h2>Excellence in Cloud Computing Project Development</h2>
               <p>
                 Narpavi Research Institute initiative represents a world-class approach to delivering cutting-edge academic project solutions for engineering students globally. At Narpavi Research Institute, we are committed to empowering B.Tech, M.Tech, and Ph.D. scholars with innovative project development that blends both software and hardware implementations. By aligning our work with IEEE Transactions from 2023 to 2025, we ensure that every Cloud Computing project is based on the latest research breakthroughs, industrial applications, and technological trends.
@@ -182,29 +205,14 @@ const CloudComputingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
+            </section>     
+           </div>
+
+          {/* ✅ RIGHT SIDEBAR */}
+          <div className="right-sidebar1">
+            <Csesidebar/>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CloudComputingProjectDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

@@ -1,68 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Machine Learning for Fault Detection Project Development Center in Chennai",
+  "Machine Learning Fault Detection IEEE Projects 2023–2025",
+  "AI-Based Electrical Fault Detection",
+  "Smart Grid Anomaly Detection Projects",
+  "Predictive Maintenance using Machine Learning",
+  "Industrial IoT Fault Detection Projects",
+  "B.Tech Machine Learning Fault Detection Projects",
+  "M.Tech Smart Grid Fault Diagnosis Projects",
+  "Ph.D Machine Learning Fault Detection Research",
+  "GAN Reinforcement Learning Fault Diagnosis",
+  "Narpavi Research Institute ML Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the Machine Learning for Fault Detection Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students worldwide with IEEE-aligned (2023–2025) projects in intelligent diagnostic systems. Students are guided in developing ML/DL-based algorithms for anomaly detection, predictive maintenance, and real-time fault diagnosis."
+    answer:
+      "IEEE-aligned (2023–2025) project support for B.Tech, M.Tech, and Ph.D. students in anomaly detection, predictive maintenance, and intelligent fault diagnosis systems."
   },
   {
     question: "What types of fault detection projects are supported?",
-    answer: "B.Tech: dataset collection & ML models in Python/MATLAB with Arduino-based prototypes. M.Tech: smart grid monitoring, live IoT-sensor integration, optimization, hybrid ML algorithms. Ph.D: custom ML/DL architectures, GANs/RL-based detection, utility-scale validations, Scopus/SCI publications."
+    answer:
+      "B.Tech focuses on basic ML models and prototypes, M.Tech on smart grid and IoT-integrated fault detection, and Ph.D. on advanced ML/DL architectures with large-scale validation."
   },
   {
     question: "Which tools and platforms are used?",
-    answer: "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), Arduino, Raspberry Pi, LabVIEW, smart meters/IoT sensors, SCADA integration, and cloud-based monitoring dashboards."
+    answer:
+      "MATLAB/Simulink, Python (TensorFlow, PyTorch, Scikit-learn), Arduino, Raspberry Pi, LabVIEW, SCADA, and cloud monitoring platforms."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "All projects reference IEEE Transactions (2023–2025) in fault detection, anomaly diagnosis, predictive maintenance, and Industry 4.0 smart grid reliability frameworks."
+    answer:
+      "Projects follow IEEE Transactions (2023–2025) in fault diagnosis, predictive maintenance, and Industry 4.0 smart grid reliability."
   },
   {
     question: "What academic support is provided?",
-    answer: "We provide end-to-end IEEE guidance, including topic selection, dataset preparation, algorithm development, hardware testing, IEEE-format reporting, and SCI/Scopus publication mentorship."
+    answer:
+      "End-to-end guidance including topic selection, dataset preparation, algorithm development, hardware testing, IEEE documentation, and SCI/Scopus publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Machine Learning for Fault Detection – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Machine Learning for Fault Detection Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering anomaly detection, predictive maintenance, smart grid diagnosis, and industrial IoT fault analysis.";
+
+const pageUrl =
+  "/department/ai-electrical-engineering/machine-learning-fault-detection";
 
 const EEEMlFaultDetectionProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Machine Learning Fault Detection IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Machine Learning Fault Detection projects for B.Tech, M.Tech, Ph.D. Anomaly detection, predictive maintenance, smart grid diagnosis using MATLAB/Simulink, TensorFlow PyTorch Scikit-learn, Arduino Raspberry Pi LabVIEW SCADA."
-  keywords="Machine Learning Fault Detection IEEE Projects 2023–2025, B.Tech ML Electrical Faults, M.Tech Smart Grid Anomaly Detection, Ph.D. GAN RL Fault Diagnosis, Predictive Maintenance IoT, Industrial Fault Detection, Narpavi Research Institute"
-  url="/department/ai-electrical-engineering/machine-learning-fault-detection"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Machine Learning for Fault Detection projects</li>
-              <li>AI-based fault diagnosis</li>
-              <li>Electrical fault detection projects</li>
-              <li>Smart grid anomaly detection</li>
-              <li>Predictive maintenance projects</li>
-              <li>Industrial IoT fault detection</li>
-              <li>IEEE 2023–2025 ML projects</li>
-              <li>B.Tech ML projects</li>
-              <li>M.Tech smart grid fault detection projects</li>
-              <li>Ph.D. ML-based fault detection research</li>
-              <li>Narpavi Research Institute project center</li>
-            </ul>
-          </div>
-          
-          {/* 📑 Center */}
+
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+           <Leftsidebar/>
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Machine Learning for Fault Detection – Project Development Support</h1>
-            
-            {/* Intro */}
+            {/* ✅ H1 ONLY */}
+            <h1>{pageTitle}</h1>
+             {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>The Machine Learning for Fault Detection</strong> – Project Development Center at Narpavi Research Institute is dedicated to advancing intelligent diagnostic systems for electrical, industrial, and smart grid systems. Fault detection is a critical aspect of EEE because unplanned downtime, equipment damage, or power failures can lead to substantial financial and operational losses. Our center empowers B.Tech, M.Tech, and Ph.D. students worldwide with IEEE-aligned projects (2023–2025), combining machine learning algorithms, predictive analytics, and hardware-software integration to create cutting-edge solutions.</p>
               <p>The Machine Learning for Fault Detection – Project Development Center trains students to implement classification algorithms, anomaly detection frameworks, and predictive maintenance systems that enhance system reliability. These projects ensure timely identification of electrical and industrial faults, improve operational efficiency, and maintain safety standards.</p>
@@ -180,53 +208,30 @@ const EEEMlFaultDetectionProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/ai-electrical-engineering">
-      Artificial Intelligence in Electrical Engineering – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/power-load-forecasting">
-      AI-Based Power Load Forecasting
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/machine-learning-fault-detection">
-      Machine Learning for Fault Detection
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/deep-learning-renewables">
-      Deep Learning in Renewable Energy
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-smart-grids">
-      AI in Smart Grids
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/neural-networks-motor">
-      Neural Networks for Motor Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/ai-electrical-engineering/ai-energy-optimization">
-      AI-Based Energy Optimization
-    </a>
-  </li>
-</ul>
-
-          </div>
+            <ul>
+              <li><a href="/department/ai-electrical-engineering">Artificial Intelligence in Electrical Engineering</a></li>
+              <li><a href="/department/ai-electrical-engineering/power-load-forecasting">AI-Based Power Load Forecasting</a></li>
+              <li><a href="/department/ai-electrical-engineering/machine-learning-fault-detection">Machine Learning for Fault Detection</a></li>
+              <li><a href="/department/ai-electrical-engineering/deep-learning-renewables">Deep Learning in Renewable Energy</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-smart-grids">AI in Smart Grids</a></li>
+              <li><a href="/department/ai-electrical-engineering/neural-networks-motor">Neural Networks for Motor Control</a></li>
+              <li><a href="/department/ai-electrical-engineering/ai-energy-optimization">AI-Based Energy Optimization</a></li>
+            </ul>
+             <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EEEMlFaultDetectionProjectDevelopmentCenter;

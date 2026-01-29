@@ -1,67 +1,96 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "EV Motor Drive Systems Project Development Center in Chennai",
+  "EV Motor Drive Systems IEEE Projects 2023–2025",
+  "BLDC PMSM IM SRM EV Drives",
+  "Electric Vehicle Propulsion Systems",
+  "EV Inverter and Motor Control Projects",
+  "Regenerative Braking EV Projects",
+  "AI Based EV Motor Drive Control",
+  "B.Tech EV Motor Drive Projects",
+  "M.Tech EV Drive Optimization",
+  "Ph.D EV Motor Drive Research",
+  "Narpavi Research Institute EV Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
     question: "What services does the EV Motor Drive Systems Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on EV propulsion, BLDC/PMSM/IM/SRM drives, inverter design, regenerative braking integration, AI-based predictive control, and IEEE/Scopus/SCI publication guidance."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. students in IEEE-aligned (2023–2025) projects on EV propulsion systems, BLDC/PMSM/IM/SRM drives, inverter design, regenerative braking integration, AI-based predictive control, and IEEE/Scopus/SCI publication guidance."
   },
   {
     question: "What types of EV Motor Drive projects are supported?",
-    answer: "B.Tech projects include basic motor speed regulation, BLDC/PMSM drive simulations, and microcontroller-based EV drive prototypes. M.Tech projects involve inverter design, regenerative braking, BLDC/PMSM optimization. Ph.D. research addresses AI/ML-based drive control, multi-motor coordination, torque prediction, and EV ecosystem optimization."
+    answer:
+      "B.Tech projects include basic motor speed control and BLDC/PMSM simulations. M.Tech projects focus on inverter design, regenerative braking, and optimization. Ph.D research covers AI/ML-based drive control, multi-motor coordination, torque prediction, and EV ecosystem optimization."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, PSCAD, PLECS, DSP/FPGA controllers, Arduino/STM32 microcontrollers, IoT-based EV telemetry, AI frameworks (TensorFlow, PyTorch), and hardware-in-the-loop (HIL) testing setups."
+    answer:
+      "MATLAB/Simulink, PSCAD, PLECS, DSP/FPGA controllers, Arduino/STM32, IoT-based EV telemetry, AI frameworks (TensorFlow, PyTorch), and hardware-in-the-loop (HIL) testing setups."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are aligned with IEEE Transactions (2023–2025), focusing on electric drives, predictive algorithms, motor control stability, AI-enhanced traction optimization, and integration with EV battery management systems."
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) focusing on electric drives, predictive algorithms, motor control stability, AI-enhanced traction optimization, and integration with EV battery management systems."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer assistance in IEEE topic finalization, simulations, real-time inverter/drive lab setups, optimization algorithm design, IEEE-format technical reports, and SCI/Scopus/IEEE-indexed publishing."
+    answer:
+      "Complete support including IEEE topic finalization, simulation, real-time drive lab setups, optimization algorithm design, IEEE-format documentation, and SCI/Scopus/IEEE-indexed publishing."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "EV Motor Drive Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) EV Motor Drive Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering BLDC, PMSM, induction and SRM drives, inverter design, regenerative braking, AI-based predictive control, and EV propulsion optimization.";
+
+const pageUrl = "/department/electric-vehicles/ev-motor-drive-systems";
 
 const EeeEvMotorDriveSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="EV Motor Drive Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) EV Motor Drive Systems projects for B.Tech, M.Tech, Ph.D. BLDC PMSM IM SRM drives, inverter design, regenerative braking, AI predictive control using MATLAB/Simulink, PSCAD, PLECS, FPGA DSP for EV propulsion."
-  keywords="EV Motor Drive Systems IEEE Projects 2023–2025, B.Tech BLDC PMSM Drives, M.Tech EV Inverter Regenerative Braking, Ph.D. AI ML EV Drive Control, EV Propulsion Systems, Electric Vehicle Motor Control, Narpavi Research Institute"
-  url="/department/electric-vehicles/ev-motor-drive-systems"
-  faqs={faqs}
-/>
 
-      <Sidebar/>
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
+
+      <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
 
-          {/* 🚀 SEO Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>EV Motor Drive Systems Project Development Center</li>
-              <li>BLDC Motor Drive Projects</li>
-              <li>PMSM Drives for EVs</li>
-              <li>EV Propulsion System Projects</li>
-              <li>Electric Vehicle Motor Control</li>
-              <li>B.Tech EV Motor Projects</li>
-              <li>M.Tech EV Drive Research</li>
-              <li>Ph.D. EV Motor Drive Projects</li>
-              <li>IEEE EV Motor Drives 2023–2025</li>
-              <li>Narpavi Research Institute</li>
-            </ul>
-          </div>
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
 
-          {/* 📑 Main Content */}
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>EV Motor Drive Systems – Project Development Support</h1>
 
-            {/* Intro */}
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+      {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> hosts the EV Motor Drive Systems Project Development Center, equipping researchers with IEEE-aligned (2023–2025) projects in electric propulsion drives like BLDC, PMSM, induction, and switched reluctance machines.</p>
               <p>We enable students to explore energy-efficient designs, inverter optimization, torque control, and AI-assisted predictive algorithms for future-ready EVs.</p>
@@ -174,94 +203,35 @@ const EeeEvMotorDriveSystemsProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-<ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
 
             </section>
           </div>
 
-          {/* 🔗 Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/electric-vehicles">
-      Electric Vehicles – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/bms">
-      Battery Management Systems (BMS)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-charging-infrastructure">
-      EV Charging Infrastructure
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/ev-motor-drive-systems">
-      EV Motor Drive Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/hev">
-      Hybrid Electric Vehicles (HEV)
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/power-electronics-evs">
-      Power Electronics for EVs
-    </a>
-  </li>
-  <li>
-    <a href="/department/electric-vehicles/regenerative-braking-systems">
-      Regenerative Braking Systems
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/electric-vehicles">Electric Vehicles – Project Development Center</a></li>
+              <li><a href="/department/electric-vehicles/bms">Battery Management Systems (BMS)</a></li>
+              <li><a href="/department/electric-vehicles/ev-charging-infrastructure">EV Charging Infrastructure</a></li>
+              <li><a href="/department/electric-vehicles/ev-motor-drive-systems">EV Motor Drive Systems</a></li>
+              <li><a href="/department/electric-vehicles/hev">Hybrid Electric Vehicles (HEV)</a></li>
+              <li><a href="/department/electric-vehicles/power-electronics-evs">Power Electronics for EVs</a></li>
+              <li><a href="/department/electric-vehicles/regenerative-braking-systems">Regenerative Braking Systems</a></li>
+            </ul>
 
-          </div>
-        
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default EeeEvMotorDriveSystemsProjectDevelopmentCenter;

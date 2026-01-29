@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Topology Optimization Project Development Center in Chennai",
+  "Topology Optimization IEEE Projects 2023–2025",
+  "Structural Optimization Student Projects",
+  "AI Based Topology Optimization",
+  "Generative Design Projects",
+  "Additive Manufacturing Topology Design",
+  "Multi Physics Optimization IEEE",
+  "Aerospace Lightweight Optimization",
+  "Biomedical Implant Optimization Projects",
+  "Narpavi Research Institute Topology Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Topology Optimization of Components Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Topology Optimization of Components Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on AI-driven topology optimization, generative design, multi-physics optimization, and digital twin frameworks for industries like aerospace, automotive, and biomedical."
+    question:
+      "What services does the Topology Optimization of Components Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute’s Topology Optimization Project Development Center supports B.Tech, M.Tech, and Ph.D. students with IEEE-aligned (2023–2025) projects in AI-driven topology optimization, generative design, multi-physics optimization, and digital twin frameworks."
   },
   {
     question: "What types of Topology Optimization projects are supported?",
-    answer: "We support B.Tech projects (basic topology optimization, FEA), M.Tech projects (generative design, multi-objective optimization), and Ph.D. projects (AI-driven optimization, digital twins) for applications in lightweight structural design and smart manufacturing."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering structural optimization, generative design, AI-driven optimization, and digital twin-based design."
   },
   {
-    question: "Which tools and technologies are used in Topology Optimization projects?",
-    answer: "Our stack includes SolidWorks, CATIA, Fusion 360, ANSYS, Altair OptiStruct, MATLAB, Python, AI frameworks (TensorFlow, Keras), and additive manufacturing tools for design, simulation, and prototyping."
+    question: "Which tools and technologies are used?",
+    answer:
+      "ANSYS, Altair OptiStruct, SolidWorks, CATIA, MATLAB, Python, AI frameworks, and additive manufacturing tools."
   },
   {
-    question: "How are Topology Optimization projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Informatics and Engineering, focusing on AI-driven topology optimization, generative design, and digital twin-enabled structural design."
+    question: "How are projects aligned with IEEE standards?",
+    answer:
+      "Projects align with IEEE Transactions (2023–2025) on Industrial Informatics and Engineering."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, CAD/FEA modeling, AI integration, optimization, prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "What academic support is provided?",
+    answer:
+      "End-to-end guidance including CAD/FEA modeling, AI integration, optimization, prototyping, and IEEE/Scopus/Elsevier publications."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Topology Optimization of Components – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Topology Optimization Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering AI-driven topology optimization, generative design, multi-physics optimization, additive manufacturing, and digital twin frameworks.";
+
+const pageUrl =
+  "/department/design-engineering-cad/topology-optimization";
 
 const METopologyOptimizationProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Topology Optimization IEEE Projects (2023–2025)"
-        description="Topology Optimization IEEE project development for B.Tech, M.Tech & PhD using ANSYS, Altair OptiStruct, AI-driven optimization, generative design, multi-physics, digital twins for aerospace, automotive, biomedical lightweight structures."
-        url="/department/design-engineering-cad/topology-optimization"
-        type="article"
-        keywords={[
-          "Topology Optimization IEEE 2023–2025",
-          "Structural Optimization Projects",
-          "AI Based Topology Optimization",
-          "Generative Design Projects",
-          "Additive Manufacturing Topology",
-          "Aerospace Lightweight Optimization",
-          "Biomedical Implant Optimization",
-          "Multi Physics Optimization IEEE",
-          "CAD CAE Optimization Integration",
-          "Narpavi Research Institute Topology"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Topology Optimization IEEE Projects 2023–2025</li>
-              <li>Structural Optimization Student Projects</li>
-              <li>CAD-CAE Integrated Optimization</li>
-              <li>Additive Manufacturing Topology Design</li>
-              <li>AI-Based Topology Optimization</li>
-              <li>Generative Design Projects</li>
-              <li>Aerospace Lightweight Design Optimization</li>
-              <li>Biomedical Implant Optimization Projects</li>
-              <li>Multi-Physics Optimization IEEE</li>
-              <li>Narpavi Research Institute Design Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Topology Optimization of Components – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ ONLY ONE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Topology Optimization of Components Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on AI-driven topology optimization, generative design, multi-physics optimization, and digital twin frameworks.
               </p>
@@ -246,43 +266,26 @@ const METopologyOptimizationProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/design-engineering-cad">
-      Design Engineering & CAD
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/finite-element-analysis">
-      Finite Element Analysis
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/cad-modeling-simulation">
-      CAD Modeling & Simulation
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/mechanism-design">
-      Mechanism Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/topology-optimization">
-      Topology Optimization
-    </a>
-  </li>
-  <li>
-    <a href="/department/design-engineering-cad/product-lifecycle-management">
-      Product Lifecycle Management
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/design-engineering-cad">Design Engineering & CAD</a></li>
+              <li><a href="/department/design-engineering-cad/finite-element-analysis">Finite Element Analysis</a></li>
+              <li><a href="/department/design-engineering-cad/cad-modeling-simulation">CAD Modeling & Simulation</a></li>
+              <li><a href="/department/design-engineering-cad/mechanism-design">Mechanism Design</a></li>
+              <li><a href="/department/design-engineering-cad/topology-optimization">Topology Optimization</a></li>
+              <li><a href="/department/design-engineering-cad/product-lifecycle-management">Product Lifecycle Management</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

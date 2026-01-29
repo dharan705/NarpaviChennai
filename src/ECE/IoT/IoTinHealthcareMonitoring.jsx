@@ -1,67 +1,84 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What services does the IoT in Healthcare Monitoring Systems Project Development Center offer?",
-    answer: "Narpavi Research Institute’s IoT in Healthcare Monitoring Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in wearable sensors, real-time patient monitoring, predictive analytics, and telemedicine using IoT devices, cloud platforms, AI/ML, and edge computing."
+    answer:
+      "Narpavi Research Institute’s IoT in Healthcare Monitoring Systems Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in wearable sensors, real-time patient monitoring, predictive analytics, and telemedicine."
   },
   {
     question: "What types of IoT in Healthcare Monitoring Systems projects are supported?",
-    answer: "We support B.Tech projects (basic vital monitoring, wearable sensors), M.Tech projects (AI-driven analytics, cloud-edge integration), and Ph.D. projects (predictive diagnostics, secure telemedicine frameworks) for applications in patient monitoring, chronic disease management, and smart hospitals."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects for patient monitoring, chronic disease management, and smart hospitals."
   },
   {
     question: "Which technologies are used in IoT in Healthcare Monitoring Systems project development?",
-    answer: "Our stack includes Arduino, ESP32, MQTT/HTTP protocols, AWS IoT, Azure IoT, Python (TensorFlow, PyTorch), wearable sensors, edge/fog computing, and mobile/web dashboards for real-time monitoring and secure data management."
+    answer:
+      "Our stack includes Arduino, ESP32, MQTT/HTTP, AWS IoT, Azure IoT, edge computing, and AI/ML frameworks."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like AI-powered patient monitoring, secure IoT platforms, and edge-enabled healthcare systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions and Conferences (2023–2025)."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware-software integration, wearable sensor deployment, AI/cloud implementation, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "We provide end-to-end guidance including IEEE/Scopus/SCI publication support."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "IoT Healthcare Projects",
+  "IEEE IoT Healthcare 2023–2025",
+  "Smart Health Monitoring",
+  "Wearable IoT Devices",
+  "Predictive Health Analytics",
+  "Telemedicine IoT",
+  "Edge IoT in Healthcare",
+  "Cloud-Based Health Monitoring",
+  "AI-Driven Patient Monitoring",
+  "Narpavi Research Institute Healthcare IoT",
+  "Remote Patient Monitoring Projects",
+  "Smart Hospital IoT Solutions"
 ];
 
 const ECEIoTHealthcareMonitoringProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
+
+      {/* ================= SEO ================= */}
       <SEO
-        title="IoT in Healthcare Monitoring Systems IEEE Projects | Wearables, Edge & AI | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) IoT in healthcare monitoring projects on wearable vital sensors, real-time patient tracking, edge/cloud analytics, predictive diagnostics, and secure telemedicine using Arduino, ESP32, MQTT/HTTP, AWS/Azure IoT, and AI/ML frameworks."
-        keywords="IoT Healthcare Projects, IEEE IoT Healthcare 2023–2025, Smart Health Monitoring, Wearable IoT Devices, Predictive Health Analytics, Telemedicine IoT, Edge IoT in Healthcare, Cloud-Based Health Monitoring, AI-Driven Patient Monitoring, Narpavi Research Institute Healthcare IoT, Remote Patient Monitoring Projects, Smart Hospital IoT Solutions"
-        url="/department/iot-projects/iot-healthcare-monitoring"
+        title="IoT in Healthcare Monitoring Systems – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) IoT in healthcare monitoring projects on wearable vital sensors, real-time patient tracking, edge/cloud analytics, predictive diagnostics, and secure telemedicine."
+        keywords={keywords}
+        url="/department/iot-projects/iot-healthcare-monitoring-system-project-development-center-in-chennai"
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>IoT Healthcare Projects</li>
-              <li>IEEE IoT Healthcare 2023–2025</li>
-              <li>Smart Health Monitoring</li>
-              <li>Wearable IoT Devices</li>
-              <li>Predictive Health Analytics</li>
-              <li>Telemedicine IoT</li>
-              <li>Edge IoT in Healthcare</li>
-              <li>Cloud-Based Health Monitoring</li>
-              <li>AI-Driven Patient Monitoring</li>
-              <li>Narpavi Research Institute Healthcare IoT</li>
-              <li>Remote Patient Monitoring Projects</li>
-              <li>Smart Hospital IoT Solutions</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>IoT in Healthcare Monitoring Systems – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>IoT in Healthcare Monitoring Systems – Project Development Center in Chennai</h1>
+                <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the IoT in Healthcare Monitoring Systems – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop innovative, IEEE-aligned (2023–2025) solutions in wearable sensors, real-time patient monitoring, predictive analytics, and telemedicine using IoT devices, cloud platforms, and AI algorithms.
               </p>
@@ -223,40 +240,29 @@ const ECEIoTHealthcareMonitoringProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar">
             <h3>🔗 Related Services</h3>
-                     <ul>
-  <li><a href="/department/iot-projects">IoT </a></li>
-  <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
-  <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
-  <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
-  <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
-  <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
-  <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/iot-projects">IoT</a></li>
+              <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
+              <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
+              <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
+              <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
+              <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
+              <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
+            </ul>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

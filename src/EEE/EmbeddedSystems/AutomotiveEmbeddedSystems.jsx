@@ -1,68 +1,97 @@
 import "../EEEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
 
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Automotive Embedded Systems Project Development Center in Chennai",
+  "Automotive Embedded Systems IEEE Projects 2023–2025",
+  "EV Embedded Controller Projects",
+  "ADAS Embedded Systems Research",
+  "Autonomous Vehicle Embedded Systems",
+  "Automotive ECU Design Projects",
+  "CAN LIN Automotive Embedded Projects",
+  "B.Tech Automotive Embedded Projects",
+  "M.Tech EV Embedded Systems",
+  "Ph.D Autonomous Vehicle Control Research",
+  "Narpavi Research Institute Automotive Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Automotive Embedded Systems Project Development Center offer?",
-    answer: "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) research areas such as electric vehicles, autonomous driving systems, ADAS, vehicle energy management, FPGA/MCU-based ECUs, and IoT-enabled automotive control."
+    question:
+      "What services does the Automotive Embedded Systems Project Development Center offer?",
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects in IEEE-aligned (2023–2025) research areas such as electric vehicles, autonomous driving systems, ADAS, vehicle energy management, FPGA/MCU-based ECUs, and IoT-enabled automotive control."
   },
   {
     question: "What types of projects are supported?",
-    answer: "We support B.Tech projects (vehicle control prototypes, ECU design, CAN/LIN implementation), M.Tech projects (EV controllers, AI-assisted ADAS systems, autonomous navigation), and Ph.D. projects (deep learning autonomous driving, predictive energy management, patents, and IEEE publications)."
+    answer:
+      "B.Tech projects include vehicle control prototypes and ECU design. M.Tech projects focus on EV controllers and AI-assisted ADAS. Ph.D. projects cover deep learning-based autonomous driving, predictive energy management, patents, and IEEE publications."
   },
   {
     question: "Which tools and technologies are used?",
-    answer: "MATLAB/Simulink, Proteus, LabVIEW, Embedded C/C++, ARM Cortex, FPGA, RTOS (FreeRTOS, AUTOSAR), CAN/LIN communication protocols, IoT platforms, TensorFlow and PyTorch for AI in automotive systems."
+    answer:
+      "MATLAB/Simulink, Proteus, LabVIEW, Embedded C/C++, ARM Cortex, FPGA, RTOS (FreeRTOS, AUTOSAR), CAN/LIN protocols, IoT platforms, TensorFlow, and PyTorch."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are referenced from IEEE Transactions (2023–2025) on automotive embedded hardware, autonomous driving, energy management, ADAS, and smart vehicle networking to ensure international technical relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025) on automotive embedded systems, ADAS, autonomous driving, energy management, and smart vehicle networking."
   },
   {
     question: "What academic support is provided?",
-    answer: "We offer end-to-end IEEE support: topic selection, embedded programming, ECU prototyping, IoT/AI integration, performance validation, IEEE-style reporting, and international publishing guidance."
+    answer:
+      "End-to-end guidance including IEEE topic selection, embedded programming, ECU prototyping, IoT/AI integration, validation, IEEE-format documentation, and international publication support."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Automotive Embedded Systems – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Automotive Embedded Systems Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. covering EV controllers, ADAS, autonomous driving, ECU design, CAN/LIN protocols, FPGA, IoT, and AI-based vehicle systems.";
+
+const pageUrl =
+  "/department/embedded-systems-electrical/automotive-embedded-systems";
 
 const EEEAutomotiveEmbeddedSystemsProjectDevelopmentCenter = () => {
   return (
     <div className="EEEProjectDevelopmentCenter">
-      <SEO 
-  title="Automotive Embedded Systems IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
-  description="IEEE-aligned (2023–2025) Automotive Embedded Systems projects for B.Tech, M.Tech, Ph.D. EV controllers, ADAS, autonomous driving, ECU design using MATLAB/Simulink, Proteus, ARM Cortex, FPGA, TensorFlow for electric vehicles, vehicle energy management."
-  keywords="Automotive Embedded Systems IEEE Projects 2023–2025, EV Embedded Systems, B.Tech Vehicle Control Projects, M.Tech ADAS Research, Ph.D. Autonomous Driving Control, Automotive ECU Design, CAN LIN Protocols, AI Automotive Systems, Electric Vehicle Controllers, Narpavi Research Institute"
-  url="/department/embedded-systems-electrical/automotive-embedded-systems"
-  faqs={faqs}
-/>
+
+      {/* 🔍 SEO */}
+      <SEO
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
+        faqs={faqs}
+      />
 
       <Sidebar />
 
       <div className="EEEProjectDevelopmentCenter-main">
         <div className="EEEProjectDevelopmentCenter-grid">
-          
-          {/* 🔑 Keywords */}
-          <div className="EEEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Automotive Embedded Systems Projects</li>
-              <li>IEEE Automotive Research 2023–2025</li>
-              <li>B.Tech Vehicle Control Systems</li>
-              <li>M.Tech EV Embedded Systems</li>
-              <li>Ph.D Autonomous Vehicle Control</li>
-              <li>Narpavi Research Institute</li>
-              <li>AI Automotive Embedded Systems</li>
-              <li>Embedded ADAS Solutions</li>
-              <li>Electric Vehicle Control Projects</li>
-              <li>Robotics Automotive Embedded Systems</li>
-            </ul>
-          </div>
 
-          {/* 📑 Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="EEEProjectDevelopmentCenter-center">
-            <h1>Automotive Embedded Systems – Project Development Support</h1>
-
-            {/* Intro */}
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+    {/* Intro */}
             <section className="EEEProjectDevelopmentCenter-intro">
               <p><strong>Narpavi Research Institute</strong> presents the Automotive Embedded Systems Project Development Center where B.Tech, M.Tech, and Ph.D. scholars explore IEEE-aligned (2023–2025) automotive research in EVs, ADAS, autonomous driving, vehicle energy management, and smart embedded vehicle systems.</p>
               <p>Our center emphasizes practical learning: scholars implement ECU prototypes, AI-assisted control systems, FPGA/ARM/RISC-V controllers, and IoT-enabled automotive data monitoring platforms with IEEE compliance.</p>
@@ -193,49 +222,27 @@ const EEEAutomotiveEmbeddedSystemsProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* 🔗 Right Related Services */}
-          <div className="EEEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/embedded-systems-electrical">
-      Embedded Systems – Project Development Center
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">
-      ARM, PIC & AVR Microcontroller Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/automotive-embedded-systems">
-      Automotive Embedded Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/embedded-robotics">
-      Embedded Robotics
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/fpga-control-applications">
-      FPGA Control Applications
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">
-      IoT Embedded Hardware Design
-    </a>
-  </li>
-  <li>
-    <a href="/department/embedded-systems-electrical/rtos">
-      RTOS Project Development Center
-    </a>
-  </li>
-</ul>
+            <ul>
+              <li><a href="/department/embedded-systems-electrical">Embedded Systems – Project Development Center</a></li>
+              <li><a href="/department/embedded-systems-electrical/arm-pic-avr-microcontroller">ARM PIC AVR Microcontroller Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/automotive-embedded-systems">Automotive Embedded Systems</a></li>
+              <li><a href="/department/embedded-systems-electrical/embedded-robotics">Embedded Robotics</a></li>
+              <li><a href="/department/embedded-systems-electrical/fpga-control-applications">FPGA Control Applications</a></li>
+              <li><a href="/department/embedded-systems-electrical/iot-embedded-hardware-design">IoT Embedded Hardware Design</a></li>
+              <li><a href="/department/embedded-systems-electrical/rtos">RTOS Project Development Center</a></li>
+            </ul>
 
-          </div>
-          
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,0 +1,63 @@
+.logo-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 30px 0;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: transform 0.8s ease-in-out;
+  will-change: transform;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hexagon Border automatically wraps image */
+.hexagon-border {
+  display: inline-flex;
+  padding: 8px; /* Border thickness */
+  background: #0f6ab4;
+  
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+}
+
+/* Image takes natural size */
+.hexagon-img {
+  width: auto;
+  height: auto;
+  max-width: 110px;   /* optional limit – remove if you want full size */
+  max-height: 110px;  /* optional limit – remove if you want full size */
+  object-fit: contain;
+  background: #fff;
+  
+  clip-path: polygon(
+    25% 0%,
+    75% 0%,
+    100% 50%,
+    75% 100%,
+    25% 100%,
+    0% 50%
+  );
+
+  filter: grayscale(20%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+  }
+}

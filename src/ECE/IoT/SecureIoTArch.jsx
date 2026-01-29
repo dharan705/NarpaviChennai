@@ -1,67 +1,85 @@
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
 import "../ECEProjectDevelopmentCenter.scss";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* ================= FAQs ================= */
 const faqs = [
   {
     question: "What services does the Secure IoT Architectures Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Secure IoT Architectures Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in secure IoT solutions, including encryption, blockchain, AI-driven intrusion detection, and secure cloud-edge frameworks for smart grids, healthcare, and smart cities."
+    answer:
+      "Narpavi Research Institute’s Secure IoT Architectures Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) secure IoT solutions."
   },
   {
     question: "What types of Secure IoT Architectures projects are supported?",
-    answer: "We support B.Tech projects (encrypted sensor networks, authentication), M.Tech projects (blockchain-enabled IoT, secure edge computing), and Ph.D. projects (AI-driven intrusion detection, quantum-resistant cryptography) for applications in industrial IoT, smart homes, and critical infrastructure."
+    answer:
+      "We support B.Tech, M.Tech, and Ph.D. projects covering encrypted networks, blockchain IoT, AI-based IDS, and quantum-resistant cryptography."
   },
   {
     question: "Which technologies are used in Secure IoT Architectures project development?",
-    answer: "Our stack includes TLS/SSL, HTTPS, blockchain, lightweight cryptography (ECC, AES), IAM, secure firmware updates, intrusion detection systems, Arduino, ESP32, and cloud platforms like AWS IoT and Azure IoT for secure IoT systems."
+    answer:
+      "Technologies include TLS/SSL, ECC, AES, blockchain, AI intrusion detection, AWS IoT, Azure IoT, Arduino, and ESP32."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions and Conferences (2023–2025), covering areas like blockchain-enabled IoT, lightweight cryptography, and AI-driven security, ensuring academic and industry relevance."
+    answer:
+      "Projects follow IEEE Transactions and Conferences (2023–2025)."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, hardware-software integration, blockchain and cryptography implementation, performance analysis, documentation, and IEEE/Scopus/SCI journal publication support."
+    answer:
+      "End-to-end guidance including IEEE/Scopus/SCI publication support."
   }
+];
+
+/* ================= KEYWORDS ARRAY ================= */
+const keywords = [
+  "Secure IoT Projects",
+  "IoT Security 2023–2025",
+  "Blockchain IoT",
+  "Lightweight Cryptography IoT",
+  "AI Intrusion Detection IoT",
+  "Edge Security IoT",
+  "Quantum-Resistant IoT",
+  "Narpavi Research Institute IoT Security",
+  "IEEE IoT Security Projects",
+  "Industrial IoT Security Solutions",
+  "Smart City IoT Security",
+  "Secure Healthcare IoT",
+  "IoT Authentication & Encryption"
 ];
 
 const ECESecureIoTArchitecturesProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
-       <SEO
-        title="Secure IoT Architectures IEEE Projects | Blockchain, Lightweight Crypto, AI IDS | B.Tech M.Tech Ph.D."
-        description="IEEE-aligned (2023–2025) Secure IoT Architectures projects on TLS/SSL, ECC/AES-based lightweight cryptography, blockchain-enabled IoT, AI-driven intrusion detection, secure firmware updates, and cloud–edge security for smart grids, healthcare, smart homes, and industrial IoT."
-        keywords="Secure IoT Projects, IoT Security 2023–2025, Blockchain IoT, Lightweight Cryptography IoT, AI Intrusion Detection IoT, Edge Security IoT, Quantum-Resistant IoT, Narpavi Research Institute IoT Security, IEEE IoT Security Projects, Industrial IoT Security Solutions, Smart City IoT Security, Secure Healthcare IoT, IoT Authentication & Encryption"
-        url="/department/iot-projects/secure-iot-architectures"
+
+      {/* ================= SEO ================= */}
+      <SEO
+        title="Secure IoT Architectures – Project Development Center in Chennai"
+        description="IEEE-aligned (2023–2025) Secure IoT Architectures projects covering blockchain IoT, lightweight cryptography, AI-driven intrusion detection, secure firmware updates, and cloud–edge security."
+        keywords={keywords}
+        url="/department/iot-projects/secure-iot-architectures-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
+
+      <Sidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
+
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Secure IoT Projects</li>
-              <li>IoT Security 2023–2025</li>
-              <li>Blockchain IoT</li>
-              <li>Lightweight Cryptography IoT</li>
-              <li>AI Intrusion Detection IoT</li>
-              <li>Edge Security IoT</li>
-              <li>Quantum-Resistant IoT</li>
-              <li>Narpavi Research Institute IoT Security</li>
-              <li>IEEE IoT Security Projects</li>
-              <li>Industrial IoT Security Solutions</li>
-              <li>Smart City IoT Security</li>
-              <li>Secure Healthcare IoT</li>
-              <li>IoT Authentication & Encryption</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ================= LEFT SIDEBAR ================= */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          </aside>
+
+          {/* ================= CENTER CONTENT (UNCHANGED) ================= */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Secure IoT Architectures – Project Development Support</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Secure IoT Architectures - Project Development Center in Chennai</h1>
+               <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Secure IoT Architectures – Project Development Center, a specialized hub empowering B.Tech, M.Tech, and Ph.D. scholars to develop robust, cyber-secure IoT solutions aligned with IEEE Transactions (2023–2025). Our projects integrate encryption, authentication, blockchain, and secure cloud-edge frameworks for applications in smart grids, healthcare, and smart cities.
               </p>
@@ -224,39 +242,29 @@ const ECESecureIoTArchitecturesProjectDevelopmentCenter = () => {
                 ))}
               </div>
 
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ================= RIGHT SIDEBAR ================= */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-                     <ul>
-  <li><a href="/department/iot-projects">IoT </a></li>
-  <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
-  <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
-  <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
-  <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
-  <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
-  <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
-</ul>
-          </div>
+            <ul>
+              <li><a href="/department/iot-projects">IoT</a></li>
+              <li><a href="/department/iot-projects/edge-fog-computing-in-iot">Edge & Fog Computing in IoT</a></li>
+              <li><a href="/department/iot-projects/industrial-iot-industry-4">Industrial IoT & Industry 4.0</a></li>
+              <li><a href="/department/iot-projects/iot-precision-agriculture">IoT for Precision Agriculture</a></li>
+              <li><a href="/department/iot-projects/iot-healthcare-monitoring">IoT Healthcare Monitoring</a></li>
+              <li><a href="/department/iot-projects/secure-iot-architectures">Secure IoT Architectures</a></li>
+              <li><a href="/department/iot-projects/iot-smart-home">IoT-Based Smart Home</a></li>
+            </ul>
+              <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

@@ -1,27 +1,47 @@
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import "./ECEProjectDevelopmentCenter.scss";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ Keywords as ARRAY OBJECT (single source) */
+const keywords = [
+  "Satellite Communication Projects",
+  "Space Communication Project Development",
+  "IEEE Satellite Projects 2025",
+  "CubeSat Project Development",
+  "LEO Satellite Communication",
+  "Antenna Design IEEE Projects",
+  "SDR Satellite Communication",
+  "FPGA Satellite Systems",
+  "Optical Satellite Communication",
+  "Narpavi Research Institute Satellite Projects"
+];
 
 const faqs = [
   {
     question: "What services does the Satellite & Space Communication Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Satellite & Space Communication Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in satellite internet, inter-satellite communication, and RF systems for industries like aerospace, defense, and global broadband."
+    answer:
+      "Narpavi Research Institute’s Satellite & Space Communication Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects in satellite internet, inter-satellite communication, and RF systems for industries like aerospace, defense, and global broadband."
   },
   {
     question: "What types of satellite and space communication projects are supported?",
-    answer: "We support B.Tech projects (CubeSat systems, antenna design), M.Tech projects (adaptive beamforming, SDR-based terminals), and Ph.D. projects (AI-based routing, optical satellite communication) for applications in deep-space missions, LEO constellations, and smart cities."
+    answer:
+      "We support B.Tech projects (CubeSat systems, antenna design), M.Tech projects (adaptive beamforming, SDR-based terminals), and Ph.D. projects (AI-based routing, optical satellite communication) for applications in deep-space missions, LEO constellations, and smart cities."
   },
   {
     question: "Which technologies are used in satellite and space communication project development?",
-    answer: "Our stack includes MATLAB, HFSS, ADS, SDRs, FPGA, and AI frameworks like TensorFlow for advanced satellite communication solutions."
+    answer:
+      "Our stack includes MATLAB, HFSS, ADS, SDRs, FPGA, and AI frameworks like TensorFlow for advanced satellite communication solutions."
   },
   {
     question: "How are projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025), covering areas like satellite internet, optical communication, and AI-driven space systems, ensuring academic and industry relevance."
+    answer:
+      "Projects are based on IEEE Transactions (2023–2025), covering areas like satellite internet, optical communication, and AI-driven space systems, ensuring academic and industry relevance."
   },
   {
     question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, system design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
+    answer:
+      "We offer end-to-end guidance, including topic selection, system design, simulation, hardware implementation, validation, documentation, and IEEE/Scopus journal publication support."
   }
 ];
 
@@ -29,57 +49,33 @@ const ECESatelliteSpaceCommunicationProjectDevelopmentCenter = () => {
   return (
     <div className="ECEProjectDevelopmentCenter">
 
-      {/* ================= SEO ================= */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Satellite & Space Communication IEEE Projects | B.Tech M.Tech PhD (2023–2025)"
+        title="Satellite & Space Communication – Project Development Center in Chennai"
         description="Satellite and space communication project development for B.Tech, M.Tech, and Ph.D. students focusing on CubeSat, LEO satellite internet, inter-satellite communication, RF systems, antenna design, and IEEE-aligned research (2023–2025)."
-        url="/department/satellite-communication"
-        type="article"
-        keywords={[
-          "Satellite Communication Projects",
-          "Space Communication Project Development",
-          "IEEE Satellite Projects 2025",
-          "CubeSat Project Development",
-          "LEO Satellite Communication",
-          "Antenna Design IEEE Projects",
-          "SDR Satellite Communication",
-          "FPGA Satellite Systems",
-          "Optical Satellite Communication",
-          "Narpavi Research Institute Satellite Projects"
-        ]}
+        url="/satellite-space-communication-project-development-center-chennai"
+        keywords={keywords}
         faqs={faqs}
       />
-      {/* ======================================= */}
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "ece", label: "ece", path: "/department?dept=ece" }
+        ]}
+      />
 
       <div className="ECEProjectDevelopmentCenter-main">
         <div className="ECEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="ECEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Satellite Communication Projects</li>
-              <li>Space Communication Project Development</li>
-              <li>IEEE Satellite Projects 2025</li>
-              <li>CubeSat Project Development</li>
-              <li>LEO Satellite Communication Projects</li>
-              <li>Antenna Design IEEE Projects</li>
-              <li>Narpavi Research Institute Projects</li>
-              <li>SDR Satellite Projects</li>
-              <li>FPGA Satellite Communication</li>
-              <li>Deep-Space Communication Research</li>
-              <li>Optical Satellite IEEE Projects</li>
-              <li>Space-Based IoT Communication</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR (ONLY CHANGE) */}
+          <aside className="left-sidebar2">
+            <Leftsidebar/>
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* ❌ CENTER CONTENT — NOT MODIFIED */}
           <div className="ECEProjectDevelopmentCenter-center">
-            <h1>Satellite & Space Communication – Project Development Center</h1>
-
-            <section className="ECEProjectDevelopmentCenter-intro">
+            <h1>Satellite & Space Communication – Project Development Center in Chennai</h1>
+   <section className="ECEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Satellite & Space Communication – Project Development Center, an advanced initiative empowering B.Tech, M.Tech, and Ph.D. scholars to develop cutting-edge, IEEE-aligned (2023–2025) projects in satellite internet, inter-satellite communication, and deep-space systems.
               </p>
@@ -242,23 +238,28 @@ const ECESatelliteSpaceCommunicationProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-            </section>
-          </div>
+            </section>          </div>
 
-          {/* Right: Related Services */}
-          <div className="ECEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR (ONLY CHANGE) */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
-  <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
-  <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
-  <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
-  <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
-  <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
-  <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
-</ul>
+            <ul>
+              <li><a href="/department/satellite-communication">Satellite & Space Communication</a></li>
+              <li><a href="/department/satellite-communication/antenna-systems-space-applications">Antenna Systems for Space Applications</a></li>
+              <li><a href="/department/satellite-communication/cubesat-nanosatellite">CubeSat & Nanosatellite Projects</a></li>
+              <li><a href="/department/satellite-communication/deep-space-communication">Deep Space Communication</a></li>
+              <li><a href="/department/satellite-communication/gnss-project">GNSS Projects</a></li>
+              <li><a href="/department/satellite-communication/satellite-communication-5g-6g">Satellite Communication for 5G & 6G</a></li>
+              <li><a href="/department/satellite-communication/satellite-iot-applications">Satellite IoT Applications</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

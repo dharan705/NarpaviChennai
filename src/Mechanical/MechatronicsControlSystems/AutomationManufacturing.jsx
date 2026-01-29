@@ -1,76 +1,96 @@
 import "../MEProjectDevelopmentCenter.scss";
 import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
-import SEO from "../../assets/SEO"
+import SEO from "../../assets/SEO";
+import Leftsidebar from "../../assets/Leftsidebar";
+
+/* =========================
+   🔑 KEYWORDS ARRAY OBJECT
+========================= */
+const keywords = [
+  "Automation in Manufacturing Project Development Center in Chennai",
+  "Industry 4.0 Automation IEEE Projects 2023–2025",
+  "Smart Factory IoT Automation Projects",
+  "AI Driven Manufacturing Automation",
+  "PLC SCADA Student Projects",
+  "Predictive Maintenance IEEE Projects",
+  "Digital Twin Automation Projects",
+  "Robotics in Manufacturing Projects",
+  "Cybersecure Smart Factory Projects",
+  "Narpavi Research Institute Automation Projects"
+];
+
+/* =========================
+   ❓ FAQs
+========================= */
 const faqs = [
   {
-    question: "What services does the Automation in Manufacturing Project Development Center offer?",
-    answer: "Narpavi Research Institute’s Automation in Manufacturing Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on industrial robotics, IoT-enabled automation, AI-driven predictive maintenance, digital twin technology, and cybersecure smart factories for Industry 4.0 applications."
+    question:
+      "What services does the Automation in Manufacturing Project Development Center offer?",
+    answer:
+      "Narpavi Research Institute supports IEEE-aligned (2023–2025) projects on industrial robotics, IoT-enabled automation, AI-driven predictive maintenance, digital twins, and cybersecure smart factories."
   },
   {
-    question: "What types of Automation in Manufacturing projects are supported?",
-    answer: "We support B.Tech projects (PLC-based automation, robotic prototypes), M.Tech projects (AI-driven process control, IoT integration), and Ph.D. projects (digital twins, blockchain-based automation, cybersecure IIoT) for applications in automotive, aerospace, and smart manufacturing."
+    question: "Who can apply for automation projects?",
+    answer:
+      "B.Tech, M.Tech, and Ph.D. students from Mechanical, Mechatronics, and Control Systems backgrounds."
   },
   {
-    question: "Which tools and technologies are used in Automation in Manufacturing projects?",
-    answer: "Our stack includes MATLAB, Simulink, Automation Studio, Proteus, Python, AI frameworks (TensorFlow, Keras), IoT platforms (AWS IoT, ThingSpeak), and hardware like Arduino, Raspberry Pi, PLCs, and SCADA systems for simulation, prototyping, and real-time control."
+    question: "Which tools are used in automation projects?",
+    answer:
+      "MATLAB, Simulink, Automation Studio, Python, PLC, SCADA, IoT platforms, and AI frameworks."
   },
   {
-    question: "How are Automation in Manufacturing projects aligned with IEEE standards?",
-    answer: "Projects are based on IEEE Transactions (2023–2025) on Industrial Electronics and Automation Science, focusing on smart manufacturing, IoT integration, and Industry 4.0, aligned with IEEE/IEC standards."
+    question: "Are projects IEEE aligned?",
+    answer:
+      "Yes. All projects follow IEEE Transactions (2023–2025) and IEEE/IEC standards."
   },
   {
-    question: "What support is provided for academic submissions?",
-    answer: "We offer end-to-end guidance, including topic selection, simulation, AI/IoT integration, hardware prototyping, documentation, and support for IEEE/Scopus/Elsevier journal publications and patents."
+    question: "Is publication support provided?",
+    answer:
+      "Yes. Support is available for IEEE, Scopus, Elsevier journals and patents."
   }
 ];
+
+/* =========================
+   📌 PAGE CONSTANTS
+========================= */
+const pageTitle =
+  "Automation in Manufacturing – Project Development Center in Chennai";
+
+const pageDescription =
+  "IEEE-aligned (2023–2025) Automation in Manufacturing Project Development Center in Chennai for B.Tech, M.Tech, and Ph.D. students focusing on Industry 4.0, PLC SCADA, AI-driven automation, IoT smart factories, and digital twins.";
+
+const pageUrl =
+  "/department/mechatronics-control-systems/automation-manufacturing";
 
 const MEAutomationInManufacturingProjectDevelopmentCenter = () => {
   return (
     <div className="MEProjectDevelopmentCenter">
+
+      {/* 🔍 SEO */}
       <SEO
-        title="Automation in Manufacturing IEEE Projects (2023–2025)"
-        description="Automation in Manufacturing IEEE project development for B.Tech, M.Tech & PhD using MATLAB, PLC SCADA, AI predictive maintenance, IoT smart factories, digital twins, Industry 4.0 robotics, cybersecure IIoT for automotive & aerospace."
-        url="/department/mechatronics-control-systems/automation-manufacturing"
-        type="article"
-        keywords={[
-          "Automation in Manufacturing IEEE 2023–2025",
-          "Industry 4.0 Automation Projects",
-          "Smart Factory IoT Projects",
-          "AI Driven Manufacturing Automation",
-          "PLC SCADA Student Projects",
-          "Predictive Maintenance IEEE Projects",
-          "Digital Twin Automation Projects",
-          "Robotics in Manufacturing Projects",
-          "Cybersecure Smart Factory Projects",
-          "Narpavi Research Institute Industry 4.0 Projects"
-        ]}
+        title={pageTitle}
+        description={pageDescription}
+        keywords={keywords}
+        url={pageUrl}
         faqs={faqs}
       />
+
       <Sidebar />
+
       <div className="MEProjectDevelopmentCenter-main">
         <div className="MEProjectDevelopmentCenter-grid">
-          {/* Left: Keywords */}
-          <div className="MEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Automation in Manufacturing IEEE Projects 2023–2025</li>
-              <li>Industry 4.0 Automation Projects</li>
-              <li>Smart Factory IoT Projects</li>
-              <li>AI-Driven Manufacturing Automation</li>
-              <li>PLC & SCADA Student Projects</li>
-              <li>Predictive Maintenance IEEE Projects</li>
-              <li>Digital Twin Automation Projects</li>
-              <li>Robotics in Manufacturing Projects</li>
-              <li>Ph.D. Automation Projects</li>
-              <li>Narpavi Research Institute Industry 4.0 Projects</li>
-            </ul>
-          </div>
 
-          {/* Center: Main Content */}
+          {/* ⬅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+            <Leftsidebar />
+          </aside>
+
+          {/* 📑 CENTER CONTENT */}
           <div className="MEProjectDevelopmentCenter-center">
-            <h1>Automation in Manufacturing – Project Development Support</h1>
-
-            <section className="MEProjectDevelopmentCenter-intro">
+            {/* ✅ SINGLE H1 */}
+            <h1>{pageTitle}</h1>
+ <section className="MEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Automation in Manufacturing Project Development Center, a global platform for B.Tech, M.Tech, and Ph.D. students to develop IEEE-aligned (2023–2025) projects on industrial robotics, IoT-enabled automation, AI-driven predictive maintenance, digital twin technology, and cybersecure smart factories.
               </p>
@@ -251,64 +271,29 @@ const MEAutomationInManufacturingProjectDevelopmentCenter = () => {
                   </details>
                 ))}
               </div>
-
-              <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqs.map((faq) => ({
-                      "@type": "Question",
-                      "name": faq.question,
-                      "acceptedAnswer": {
-                        "@type": "Answer",
-                        "text": faq.answer
-                      }
-                    }))
-                  })
-                }}
-              />
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="MEProjectDevelopmentCenter-right">
+          {/* ➡ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
             <ul>
-  <li>
-    <a href="/department/mechatronics-control-systems">
-      Mechatronics & Control Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/pid-advanced-control">
-      PID & Advanced Control
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/automation-manufacturing">
-      Automation in Manufacturing
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/plc-systems">
-      PLC Systems
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/sensor-integration">
-      Sensor Integration
-    </a>
-  </li>
-  <li>
-    <a href="/department/mechatronics-control-systems/smart-actuator-systems">
-      Smart Actuator Systems
-    </a>
-  </li>
-</ul>
+              <li><a href="/department/mechatronics-control-systems">Mechatronics & Control Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/pid-advanced-control">PID & Advanced Control</a></li>
+              <li><a href="/department/mechatronics-control-systems/automation-manufacturing">Automation in Manufacturing</a></li>
+              <li><a href="/department/mechatronics-control-systems/plc-systems">PLC Systems</a></li>
+              <li><a href="/department/mechatronics-control-systems/sensor-integration">Sensor Integration</a></li>
+              <li><a href="/department/mechatronics-control-systems/smart-actuator-systems">Smart Actuator Systems</a></li>
+            </ul>
 
-          </div>
+            <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
+
         </div>
       </div>
     </div>

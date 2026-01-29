@@ -1,86 +1,89 @@
 import "./CEProjectDevelopmentCenter.scss";
-import Sidebar from "../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from ".././pages/Subsidebar";
 import SEO from "../assets/SEO";
+import Leftsidebar from "../assets/Leftsidebar";
+
+/* ✅ KEYWORDS ARRAY OBJECT */
+const keywords = [
+  "Construction Management IEEE Projects 2023–2025",
+  "Project Scheduling Civil Projects",
+  "BIM Construction Projects",
+  "IoT Construction Monitoring",
+  "AI in Construction Management",
+  "Blockchain Construction Projects",
+  "Digital Twin Civil Engineering",
+  "Construction Robotics Projects",
+  "Smart City Construction Projects",
+  "Narpavi Research Institute Civil Projects",
+];
 
 const faqs = [
   {
-    question: "What services does the Construction & Project Management Project Development Center offer?",
+    question:
+      "What services does the Construction & Project Management Project Development Center offer?",
     answer:
-      "Narpavi Research Institute’s Construction & Project Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on project scheduling, BIM integration, IoT-based monitoring, and AI-driven construction management."
+      "Narpavi Research Institute’s Construction & Project Management Project Development Center supports B.Tech, M.Tech, and Ph.D. students in developing IEEE-aligned (2023–2025) projects on project scheduling, BIM integration, IoT-based monitoring, and AI-driven construction management.",
   },
   {
-    question: "What types of Construction & Project Management projects are supported?",
+    question:
+      "What types of Construction & Project Management projects are supported?",
     answer:
-      "We support B.Tech projects (basic planning and scheduling), M.Tech projects (smart construction and risk management), and Ph.D. projects (AI, IoT, and blockchain-based construction systems) for efficient project delivery."
+      "We support B.Tech, M.Tech, and Ph.D. projects covering planning, smart construction, AI, IoT, and blockchain-based systems.",
   },
   {
-    question: "Which tools and technologies are used in Construction & Project Management projects?",
+    question:
+      "Which tools and technologies are used in Construction & Project Management projects?",
     answer:
-      "Our stack includes BIM (Revit), Primavera, MS Project, MATLAB, IoT sensors, AI frameworks (TensorFlow, Keras), blockchain, and drones for project planning and monitoring."
+      "Our stack includes BIM (Revit), Primavera, MS Project, MATLAB, IoT sensors, AI frameworks, blockchain, and drones.",
   },
   {
     question: "How are projects aligned with IEEE standards?",
     answer:
-      "Projects are based on IEEE Transactions (2023–2025) on Construction Management and Civil Engineering, focusing on AI-driven scheduling, digital twins, and smart contract systems."
+      "Projects are based on IEEE Transactions (2023–2025) on Construction Management and Civil Engineering.",
   },
   {
     question: "What support is provided for academic submissions?",
     answer:
-      "We offer end-to-end guidance, including topic selection, simulation, experimental validation, documentation, and support for IEEE/Scopus/SCI journal publications and patents."
-  }
+      "We provide end-to-end guidance including simulation, validation, documentation, and publication support.",
+  },
 ];
 
 const CEConstructionProjectManagementProjectDevelopmentCenter = () => {
   return (
     <div className="CEProjectDevelopmentCenter">
 
-      {/* ✅ SEO (added only, no content removed) */}
+      {/* ✅ SEO FIXED */}
       <SEO
-        title="Construction & Project Management IEEE Projects (2023–2025)"
-        description="Construction & Project Management IEEE project development for B.Tech, M.Tech & PhD scholars using BIM, AI, IoT, blockchain and digital twin technologies at Narpavi Research Institute."
+        title="Construction & Project Management – Project Development Center in Chennai"
+        description="Construction & Project Management project development for B.Tech, M.Tech, and Ph.D. students using BIM, AI, IoT, blockchain, and digital twin technologies."
+        keywords={keywords}
         url="/department/construction-project-management"
-        type="article"
-        keywords={[
-          "Construction Management IEEE Projects",
-          "Project Scheduling Civil Projects",
-          "BIM Construction Projects",
-          "IoT Construction Monitoring",
-          "AI in Construction Management",
-          "Blockchain Construction Projects",
-          "Digital Twin Civil Engineering",
-          "PhD Construction Management Projects"
-        ]}
         faqs={faqs}
       />
 
-      <Sidebar />
+      <Subsidebar
+        extraLinks={[
+          { id: "civil", label: "civil", path: "/department?dept=civil" },
+        ]}
+      />
 
       <div className="CEProjectDevelopmentCenter-main">
         <div className="CEProjectDevelopmentCenter-grid">
 
-          {/* Left: Keywords */}
-          <div className="CEProjectDevelopmentCenter-left">
-            <h3>🔑 Keywords</h3>
-            <ul>
-              <li>Construction Management IEEE Projects 2023–2025</li>
-              <li>Project Scheduling Civil Projects</li>
-              <li>BIM in Construction Projects</li>
-              <li>IoT-enabled Construction Monitoring</li>
-              <li>AI in Construction Management</li>
-              <li>Blockchain Smart Contract Projects</li>
-              <li>Digital Twin in Civil Projects</li>
-              <li>Construction Robotics Projects</li>
-              <li>Smart City Construction Projects</li>
-              <li>Narpavi Research Institute Civil Projects</li>
-            </ul>
-          </div>
+          {/* ✅ LEFT SIDEBAR */}
+          <aside className="left-sidebar2">
+          <Leftsidebar/>
+          
+          </aside>
 
-          {/* Center: Main Content */}
+          {/* CENTER CONTENT */}
           <div className="CEProjectDevelopmentCenter-center">
 
-            <h1>Construction & Project Management – Project Development Support</h1>
-
-            <section className="CEProjectDevelopmentCenter-intro">
+            {/* ✅ H1 MATCHES SEO */}
+            <h1>
+              Construction & Project Management – Project Development Center in Chennai
+            </h1>
+                 <section className="CEProjectDevelopmentCenter-intro">
               <p>
                 <strong>Narpavi Research Institute</strong> presents the Construction & Project Management Project Development Center, a global platform empowering B.Tech, M.Tech, and Ph.D. scholars to develop IEEE-aligned (2023–2025) projects on project scheduling, BIM integration, IoT-based monitoring, and smart construction management.
               </p>
@@ -251,33 +254,38 @@ const CEConstructionProjectManagementProjectDevelopmentCenter = () => {
             </section>
           </div>
 
-          {/* Right: Subpage Links */}
-          <div className="CEProjectDevelopmentCenter-right">
+          {/* ✅ RIGHT SIDEBAR */}
+          <aside className="right-sidebar1">
             <h3>🔗 Related Services</h3>
-           <ul>
-  <li>
-    <a href="/department/construction-project-management">
-      Construction Project Management
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/smart-construction-techniques">
-      Smart Construction Techniques
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/cost-optimization-in-projects">
-      Cost Optimization in Projects
-    </a>
-  </li>
-  <li>
-    <a href="/department/construction-project-management/project-scheduling-planning">
-      Project Scheduling & Planning
-    </a>
-  </li>
-</ul>
-
-          </div>
+            <ul>
+              <li>
+                <a href="/department/construction-project-management">
+                  Construction Project Management
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/smart-construction-techniques">
+                  Smart Construction Techniques
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/cost-optimization-in-projects">
+                  Cost Optimization in Projects
+                </a>
+              </li>
+              <li>
+                <a href="/department/construction-project-management/project-scheduling-planning">
+                  Project Scheduling & Planning
+                </a>
+              </li>
+            </ul>
+              <h3>🔑 Keywords</h3>
+            <ul>
+              {keywords.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </aside>
 
         </div>
       </div>

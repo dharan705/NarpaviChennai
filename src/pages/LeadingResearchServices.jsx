@@ -46,7 +46,7 @@ const ResearchServices = () => {
   return (
     <section className="research-services">
       <div className="container">
-        <h2 className="main-heading">Leading Research Paper, Journal and Manuscript Writing Services<br />– Full Support till Publication</h2>
+        <h2 className="main-heading">Leading Research Paper, Journal and Manuscript Writing Services<br />– Full Support till Publication in Chennai</h2>
         <p className="subtext">
             📌 Empowering scholars and researchers with expert manuscript writing, end-to-end editing, journal selection, and seamless publication guidance across top international and SCI/Scopus-indexed journals.
         </p>

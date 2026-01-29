@@ -1,7 +1,19 @@
 import "./MobileAppDev.scss";
-import Sidebar from "../../MainPublicationServices/PublicationServicesSidebar";
+import Subsidebar from "../../pages/Subsidebar"
 import SEO from "../../assets/SEO";
+import { Link } from "react-router-dom";
+import Leftsidebar from "../../assets/Leftsidebar";
+import Csesidebar from "../../assets/Csesidebar";
 
+  const keywords = [
+    "Mobile app development project development center in Chennai ",
+    "Best mobile app development project development center in Chennai",
+    "App development course in Chennai",
+    "Mobile app development Chennai",
+    "Top 10 mobile app development companies in Chennai",
+    "Best mobile app development company in Chennai",
+    "Mobile App Development course near me"
+  ];
 const faqs = [
   {
     question: "What services does the Mobile App Development Center offer?",
@@ -29,35 +41,32 @@ const MobileAppDevelopmentCenter = () => {
   return (
     <div className="MobileAppDevelopmentCenter">
       <SEO 
-        title="Mobile App IEEE Projects | B.Tech M.Tech Ph.D. | Narpavi Research Institute"
+        title="Mobile App Development – Project Development Center in Chennai"
         description="IEEE-aligned (2023-2025) Mobile App projects for B.Tech, M.Tech, Ph.D. Flutter, React Native, Firebase, AI mobile apps for healthcare, agriculture, smart cities."
-        keywords="Mobile App Development – Project Development Center, IEEE 2023–2025 Mobile App Project Topics, Mobile Application Development for B.Tech M.Tech Ph.D., Flutter Firebase Mobile Apps, AI-based Mobile Applications, Android Development Projects, Cross-Platform Mobile App Projects, Real-Time Mobile Computing IEEE Projects, Secure Mobile Apps with Blockchain, Narpavi Research Institute Mobile App Project Services"
-        url="/department/mobile-app"
+        keywords={keywords}
+        url="/department/mobile-app-development-project-development-center-in-chennai"
         faqs={faqs}
       />
-      <Sidebar />
-      <div className="MobileAppDevelopmentCenter-main">
+   <Subsidebar
+  extraLinks={[
+    { id: "cse", label: "CSE", path: "/department?dept=cse" }
+  ]}
+/>      <div className="MobileAppDevelopmentCenter-main">
         <div className="MobileAppDevelopmentCenter-grid">
           {/* Left: Keywords */}
-          <div className="MobileAppDevelopmentCenter-left">
+          <div className="left-sidebar2">
+               <Leftsidebar/>
             <h3>🔑 Keywords</h3>
             <ul>
-              <li>Mobile App Development – Project Development Center</li>
-              <li>IEEE 2023–2025 Mobile App Project Topics</li>
-              <li>Mobile Application Development for B.Tech M.Tech Ph.D.</li>
-              <li>Flutter Firebase Mobile Apps</li>
-              <li>AI-based Mobile Applications</li>
-              <li>Android Development Projects</li>
-              <li>Cross-Platform Mobile App Projects</li>
-              <li>Real-Time Mobile Computing IEEE Projects</li>
-              <li>Secure Mobile Apps with Blockchain</li>
-              <li>Narpavi Research Institute Mobile App Project Services</li>
-            </ul>
+          {keywords.map((keyword, index) => (
+            <li key={index}>{keyword}</li>
+          ))}
+        </ul>
           </div>
 
           {/* Center: Main Content */}
           <div className="MobileAppDevelopmentCenter-center">
-            <h1>Mobile App Development – Project Development Center</h1>
+            <h1>Mobile App Development – Project Development Center in Chennai</h1>
 
             <section className="MobileAppDevelopmentCenter-intro">
               <p>
@@ -69,8 +78,51 @@ const MobileAppDevelopmentCenter = () => {
               <p>
                 Our methodology integrates IEEE research with industry best practices, utilizing tools like Flutter, React Native, Firebase, and TensorFlow Lite. From concept to Play Store deployment, we provide complete lifecycle support including testing, optimization, and publication-ready documentation.
               </p>
+              <p>
+  Many advanced mobile applications today are tightly integrated with artificial
+  intelligence, making the
+  {" "}
+  <Link
+    to="/department/ai-project"
+    className="internal-link highlight-link"
+  >
+    Artificial Intelligence Project
+  </Link>
+  {" "}
+  domain highly relevant to mobile app research. AI-powered mobile applications enable
+  intelligent decision-making directly on edge devices, supporting features such as
+  image recognition, speech processing, recommendation systems, and predictive
+  analytics. At Narpavi Research Institute, mobile app projects often incorporate AI
+  models using TensorFlow Lite and on-device machine learning to ensure low latency and
+  data privacy. This interdisciplinary approach allows students to explore IEEE-aligned
+  research topics such as edge AI, federated learning, and secure AI inference on mobile
+  platforms. Linking mobile app development with AI projects enhances research value,
+  publication potential, and real-world impact across healthcare, agriculture, and smart
+  infrastructure.
+</p>
+<p>
+  Security, transparency, and data integrity are increasingly important in modern
+  mobile applications, which makes the
+  {" "}
+  <Link
+    to="/department/blockchain"
+    className="internal-link highlight-link"
+  >
+    Blockchain
+  </Link>
+  {" "}
+  domain a powerful extension of mobile app development. Blockchain-enabled mobile apps
+  are widely researched for secure payments, decentralized identity management, supply
+  chain tracking, and healthcare data protection. At Narpavi Research Institute, students
+  develop blockchain-integrated mobile apps using smart contracts, distributed ledgers,
+  and secure APIs, ensuring tamper-proof data handling. These projects align with IEEE
+  research trends focused on decentralized applications (DApps), mobile blockchain
+  security, and trust-based digital ecosystems. By integrating blockchain with mobile
+  applications, students gain exposure to cutting-edge research areas that enhance both
+  academic publications and industry readiness.
+</p>
             </section>
-
+            
             <section className="MobileAppDevelopmentCenter-btech">
               <h2>B.Tech Mobile App Project Development</h2>
               <p>
@@ -145,6 +197,27 @@ const MobileAppDevelopmentCenter = () => {
                 </table>
               </div>
             </section>
+  <p>
+  Data-driven decision-making is a core requirement for intelligent mobile applications,
+  making the
+  {" "}
+  <Link
+    to="/department/data-science"
+    className="internal-link highlight-link"
+  >
+    Data Science
+  </Link>
+  {" "}
+  domain closely connected to mobile app development. Mobile apps often serve as data
+  collection and visualization platforms, while data science techniques transform raw
+  data into actionable insights. At Narpavi Research Institute, mobile app projects
+  integrate analytics dashboards, real-time data processing, and predictive models to
+  support applications such as health monitoring, smart agriculture, and user behavior
+  analysis. These projects align with IEEE research themes like big data analytics,
+  mobile data mining, and real-time decision support systems. Connecting mobile apps with
+  data science enhances research depth, improves publication scope, and strengthens the
+  overall academic value of student projects.
+</p>
 
             <section className="MobileAppDevelopmentCenter-project-titles">
               <h2>IEEE-Aligned Mobile App Project Titles (2023–2025)</h2>
@@ -186,24 +259,9 @@ const MobileAppDevelopmentCenter = () => {
           </div>
 
           {/* Right: Subpage Links */}
-          <div className="MobileAppDevelopmentCenter-right">
-            <h3>🔗 Related Services</h3>
-            <ul>
-              <li><a href="/department/static-web-application">Static Web Application</a></li>
-              <li><a href="/department/dynamic-web-applications">Dynamic Web Applications</a></li>
-              <li><a href="/department/mobile-app">Mobile App Development</a></li>
-              <li><a href="/department/animations-project">Animations Project</a></li>
-              <li><a href="/department/ai-project">AI Project</a></li>
-              <li><a href="/department/data-science">Data Science</a></li>
-              <li><a href="/department/big-data">Big Data</a></li>
-              <li><a href="/department/blockchain">Blockchain</a></li>
-              <li><a href="/department/devops">DevOps</a></li>
-              <li><a href="/department/networking">Networking</a></li>
-              <li><a href="/department/image-processing">Image Processing</a></li>
-              <li><a href="/department/nlp">Natural Language Processing (NLP)</a></li>
-              <li><a href="/department/cloud-computing">Cloud Computing</a></li>
-              <li><a href="/department/cybersecurity">Cybersecurity</a></li>
-            </ul>
+          <div className="right-sidebar1">
+           
+           <Csesidebar/>
           </div>
         </div>
       </div>
